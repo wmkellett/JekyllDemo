@@ -1,6 +1,7 @@
 ---
 layout:  post
-title:  A Great First Post
+title:  A Pretty Good First Post
 ---
 
-This is my first post.
+This is my first post.  
+And it's pretty good...
