@@ -1,0 +1,89 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Before you can use Cleo Trust , you must enable it and specify some basic configuration values. If necessary, start the Cleo VLNavigator application. Go to Applications &gt; Unify . Note: If the Unify ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configure Cleo Trust"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_vlnavigator_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_tbc_kvh_kv"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configure Cleo Trust</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_tbc_kvh_kv">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_vlnavigator.html" title="Cleo VLNavigator">Cleo VLNavigator</a> / <a class="navheader_parent_path" href="../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application">Configuring the Cleo VLNavigator application</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring the Cleo VLNavigator application</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Configure <span class="ph">Cleo Trust</span></h1>
+
+  <div class="body taskbody">
+    <div class="section context">Before you can use <span class="ph">Cleo Trust</span>, you must enable it and
+      specify some basic configuration values. </div>
+
+    <ol class="ol steps" id="task_tbc_kvh_kv__steps_ffn_kvh_kv"><li class="li step stepexpand">
+        <span class="ph cmd">If necessary, start the <span class="ph">Cleo VLNavigator</span> application.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Go to <span class="ph menucascade"><span class="ph uicontrol">Applications &gt; Unify</span></span>.</span>
+        <div class="itemgroup info">
+          <div class="note note"><span class="notetitle">Note:</span> If the <span class="ph uicontrol">Unify</span> option is not available, it could mean <span class="ph">Cleo Trust</span> is not correctly
+            installed.  Contact your system administrator.</div>
+
+        </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">In the <span class="keyword wintitle">Settings</span> tab, select the <span class="ph uicontrol">Application
+            enabled</span> check box.</span>
+        
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Specify values for the following fields:</span>
+        <ul class="ul choices" id="task_tbc_kvh_kv__choices_rkc_nwh_kv">
+          <li class="li choice"><span class="ph uicontrol">Primary file repository</span> and <span class="ph uicontrol">Maximum
+              size</span> – a local directory where files you upload to <span class="ph">Cleo Trust</span> will be stored.
+            Maximum size is a limit on the size of the directory, not any one file.  You must
+            specify values for these fields.</li>
+
+          <li class="li choice"><span class="ph uicontrol">Overflow file repository</span> and <span class="ph uicontrol">Maximum
+              size</span> –  a local directory where uploaded files that do not fit in the
+              <span class="ph uicontrol">Primary file repository</span> are stored.  Maximum size is a limit on
+            the size of the directory, not any one file.  These fields are optional.</li>
+
+          <li class="li choice"><span class="ph uicontrol">From email address for user notifications</span> – the email
+            address <span class="ph">Cleo Trust</span> will use
+            to send notification email to users. You must specify a value for this field.</li>
+
+          <li class="li choice"><span class="ph uicontrol">Permanently remove trash after <var class="keyword varname">n</var> day(s)</span>
+            – the number of days after which <span class="ph">Cleo Trust</span> will permanently
+            delete any files you delete from a <span class="ph">Cleo Trust</span> folder.  <div class="cautiontitle">CAUTION:</div><div class="note caution">When you delete a file from a <span class="ph">Cleo Trust</span> folder, it is not
+              immediately removed from your system.  It remains in the <span class="ph uicontrol">Primary file
+                repository</span> folder until the number of days you specify elapse.
+              Specifying a large number of days could cause you to exceed the maximum size for your
+              folder with no recourse except to wait for the number of days to
+            elapse.</div>
+</li>
+
+        </ul>
+
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click the <span class="keyword wintitle">User Groups</span> tab.</span>
+        <div class="itemgroup info">The <span class="keyword wintitle">User Groups</span> tab provides a list of user groups who have
+          access the <span class="ph">Cleo Trust</span>
+          application. See <a class="xref" href="../Topics/t_User_Group_VLNav.html">User Group</a> for information about user groups.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the user groups that should have access to the application and deselect those
+          user groups that should not have access.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Apply</span>.</span>
+      </li>
+</ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring the Cleo VLNavigator application</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

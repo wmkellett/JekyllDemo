@@ -1,0 +1,84 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Home Directory The default home path for each user in the group. The %username% macro, which resolves dynamically, is included in the path. You can override this path, however, using settings in the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Users: General Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_UsersHost_HostConfig.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_z5b_sst_g5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Users: General Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_z5b_sst_g5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_UsersHost_HeaderPage.html" title="Users Host">Users Host</a> / <a class="navheader_parent_path" href="../Topics/t_UsersHost_HostConfig.html" title="Users host configuration">Users host configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_UsersHost_HostConfig.html" title="Users host configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users host configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Users: General Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <dl class="dl">
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Home Directory</span></dt>
+
+        <dd class="dd">The default home path for each user in the group. The <samp class="ph codeph">%username%</samp> macro,
+          which resolves dynamically, is included in the path. You can override this path, however,
+          using settings in the mailbox <span class="keyword wintitle">Login</span> tab. See <a class="xref" href="../Topics/t_UsersHost_Mailbox_LoginTab.html">Users Mailbox: Login Tab</a>. </dd>
+
+        <dd class="dd">Click the <span class="ph uicontrol">[...]</span> button to browse and select a directory.
+          Alternatively, select a custom macro variable from the drop-down menu.  See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> (Default Root Directory context) for a
+          list of the applicable macros.  Once the change is applied, users that are already
+          configured to use the default home are switched over to the new default home
+          location.</dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">User Folders</span></dt>
+
+        <dd class="dd">The paths and names of folders for users of this group. These folders are automatically
+          created under each user's home directory.  You must use relative paths.  <div class="note note"><span class="notetitle">Note:</span> The
+            configured user upload and download folders reflect the perspective of the <em class="ph i">user</em>,
+            while the <samp class="ph codeph">%inbox%</samp> and <samp class="ph codeph">%outbox%</samp> macros (if used
+            elsewhere) reflect the perspective of the <em class="ph i">server</em>. This means that the
+              <samp class="ph codeph">%outbox%</samp> macro resolves to the configured user <em class="ph i">download folder</em>
+            and the <samp class="ph codeph">%inbox%</samp> macro resolves to the configured user <em class="ph i">upload
+              folder</em>. </div>
+</dd>
+
+        <dd class="dd">In addition to the <strong class="ph b">User Download Folder</strong> and <strong class="ph b">User Upload Folder</strong> folders,
+          you can specify additional folders in the <span class="ph uicontrol">Other Folders</span> field. You
+          can add multiple paths to <span class="ph uicontrol">Other Folders</span>, separated by commas,
+          semi-colons or carriage returns. Note that all paths must be relative and cannot include
+          reserved macro variables (for example, <samp class="ph codeph">%mailbox%</samp>).</dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Archive Directories</span></dt>
+
+        <dd class="dd">The location where you can save a copy of the sent and received files.</dd>
+
+        <dd class="dd">Click the <span class="ph uicontrol">[…]</span> button to browse to and select a valid local or
+          network location.  Alternatively, select a custom macro variable from the drop-down list. 
+          See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> (Default Local User Archive Directory context) for a list
+          of the applicable macros. See 
+          and <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for information about setting up
+          system-level directories and custom directory macro variables. Typically, the archive
+          directory locations are set up outside of the Home Directory path to protect the archives
+          from access by the configured users. <p class="p">You can use the <samp class="ph codeph">%mailbox%</samp> macro
+            as part of these directory definitions to filter files for non-LDAP users into separate
+            subdirectories. Files written to these directories are retained with unique file names
+            and are archived if the <span class="ph uicontrol">Sent/Received Box Archive</span> option is
+            enabled on the <span class="ph menucascade"><span class="ph uicontrol">System Options &gt; Other</span></span> tab. See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Other.html">Other System Options</a>. </p>
+</dd>
+
+      
+    </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_UsersHost_HostConfig.html" title="Users host configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users host configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

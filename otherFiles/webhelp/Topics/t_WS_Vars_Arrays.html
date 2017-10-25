@@ -1,0 +1,66 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="When the return value of a method call is an array, the array is stored in the specified variable. The array's size is stored in a special member &#34;._count&#34;. The items in the array can be indexed using ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Arrays"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ws_variables.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_oqm_m12_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Arrays</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_oqm_m12_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_ws_hosts.html" title="WS Hosts">WS Hosts</a> / <a class="navheader_parent_path" href="../Topics/t_ws_variables.html" title="WS Variables">WS Variables</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ws_variables.html" title="WS Variables"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">WS Variables</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Arrays</h1>
+
+  <div class="body">
+    <p class="p">When the return value of a method call is an array, the array is stored in the specified
+      variable. The array's size is stored in a special member "._count". The items in the array can
+      be indexed using brackets.</p>
+
+    <p class="p">For example, if the result of a call returns a string array (string[]) and %result% is
+      specified as the variable to store the returned value, the following table illustrates the
+      variable definitions: </p>
+
+    <table cellpadding="4" cellspacing="0" summary="" id="topic_oqm_m12_b5__simpletable_hnw_ldg_v5" border="1" class="simpletable"><tr class="sthead">
+        <th valign="bottom" align="left" id="d252048e22" class="stentry" width="50%">Variable</th>
+
+        <th valign="bottom" align="left" id="d252048e25" class="stentry" width="50%">Definition</th>
+
+      </tr>
+<tr class="strow">
+        <td valign="top" headers="d252048e22" class="stentry">%result% </td>
+
+        <td valign="top" headers="d252048e25" class="stentry">Contains the array of values</td>
+
+      </tr>
+<tr class="strow">
+        <td valign="top" headers="d252048e22" class="stentry">%result%._count</td>
+
+        <td valign="top" headers="d252048e25" class="stentry">An integer stating the number of items in the array.</td>
+
+      </tr>
+<tr class="strow">
+        <td valign="top" headers="d252048e22" class="stentry">%result%[0]</td>
+
+        <td valign="top" headers="d252048e25" class="stentry">The first item in the array.</td>
+
+      </tr>
+<tr class="strow">
+        <td valign="top" headers="d252048e22" class="stentry">%result%[1]</td>
+
+        <td valign="top" headers="d252048e25" class="stentry">The second item in the array; the bracketed number is n-1 of the defined
+          item.</td>
+
+      </tr>
+</table>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ws_variables.html" title="WS Variables"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">WS Variables</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

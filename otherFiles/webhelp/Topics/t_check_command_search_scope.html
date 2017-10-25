@@ -1,0 +1,39 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The CHECK -TRA command is available within any host, including the local user and local commands hosts.  When run, its scope of search is determined by the host\mailbox from which it is run.  For ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="CHECK Command Search Scope"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_check_command.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_ett_c2w_4t"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>CHECK Command Search Scope</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_ett_c2w_4t">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_extended_commands.html" title="Extended Commands">Extended Commands</a> / <a class="navheader_parent_path" href="../Topics/t_check_command.html" title="CHECK Command">CHECK Command</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">CHECK Command Search Scope</h1>
+
+  <div class="body">
+    <p class="p">The <span class="keyword cmdname">CHECK -TRA</span> command is available within any host, including the local
+      user and local commands hosts.  When run, its scope of search is determined by the
+      host\mailbox from which it is run.  For example, a <span class="keyword cmdname">CHECK -TRA</span> command run
+      from a mailbox-based action within '<samp class="ph codeph">Looptest FTP\myMailbox</samp>' will search for
+      transfers occurring within host, 'Looptest FTP', and mailbox, 'myMailbox'.  Likewise, a
+        <span class="keyword cmdname">CHECK -TRA</span> command run from a host-based action within '<samp class="ph codeph">Looptest
+        FTP</samp>' will search for transfers occurring within <var class="keyword varname">any</var> mailbox of
+      host, '<samp class="ph codeph">Looptest FTP</samp>'.</p>
+
+    <p class="p">The <span class="keyword cmdname">CHECK -FIL</span> or <span class="keyword cmdname">CHECK -DIR</span> commands are also
+      available in any host, including local user and local commands hosts.  However, <span class="keyword cmdname">CHECK
+        -FIL/-DIR</span> commands are not tied to any specific host or mailbox.  They may check
+      for any file or directory within the file system.</p>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

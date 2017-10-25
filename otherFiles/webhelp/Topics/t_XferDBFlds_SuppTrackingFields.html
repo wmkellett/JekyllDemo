@@ -1,0 +1,421 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="When logging tracking data to a database, summary data is also stored in the VLTracked table.  This table contains data for all tracking types:  EDI, XML, and Text. VLTracked database table ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Supplemental Tracking Fields"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_transfer_database_fields.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_mw5_zkl_p5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Supplemental Tracking Fields</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_mw5_zkl_p5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_database_definitions.html" title="Database Definitions">Database Definitions</a> / <a class="navheader_parent_path" href="../Topics/t_transfer_database_fields.html" title="Transfer Database Fields">Transfer Database Fields</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_transfer_database_fields.html" title="Transfer Database Fields"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfer Database Fields</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Supplemental Tracking Fields </h1>
+
+  <div class="body">
+    <p class="p">When logging tracking data to a database, summary data is
+      also stored in the <span class="ph filepath">VLTracked</span> table.  This table contains data for all
+      tracking types:  EDI, XML, and Text.</p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_mw5_zkl_p5__table_zk2_bxy_st" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="4" valign="top" id="d285275e42"> VLTracked database table </th>
+
+          </tr>
+
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d285275e48"> Column/Field Name </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d285275e51"> Data Type </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d285275e54"> Length </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d285275e57"> Source </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> TransferID </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 30 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.TransferID</p>
+
+              <p class="p">VLXMLExtractedData.TransferID</p>
+
+              <p class="p">VLTextExtractedData.TransferID</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> VLSerial </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 6 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.VLSerial</p>
+
+              <p class="p">VLXMLExtractedData.VLSerial</p>
+
+              <p class="p">VLTextExtractedData.VLSerial</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> Interchange </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> INTEGER </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.Interchange</p>
+
+              <p class="p">0 (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> FunctionalGroup </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> INTEGER </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIFunctionalGroup.FunctionalGroup</p>
+
+              <p class="p">0 (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> SetID </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> INTEGER </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.TransactionSet</p>
+
+              <p class="p">VLXMLExtractedData.SetID</p>
+
+              <p class="p">VLTextExtractedData.SetID</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> TradingPartnerAlias </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.TradingPartnerAlias</p>
+
+              <p class="p">VLXMLExtractedData.TradingPartnerAlias</p>
+
+              <p class="p">VLTextExtractedData.TradingPartnerAlias</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> Type </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.TransactionType (X12/Edifact)</p>
+
+              <p class="p">VLEDITransactionSet.MessageType (Tradacoms)</p>
+
+              <p class="p">VLXMLExtractedData.DocumentType</p>
+
+              <p class="p">VLTextExtractedData.DocumentType</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> Description </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.TransactionDesc</p>
+
+              <p class="p">Description from XML</p>
+
+              <p class="p">Description from Text</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> DocumentID </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.ControlNum</p>
+
+              <p class="p">VLXMLExtractedData.DocumentID</p>
+
+              <p class="p">VLTextExtractedData.DocumentID</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> Ref1 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 500 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.Ref1</p>
+
+              <p class="p">VLXMLExtractedData.Ref1</p>
+
+              <p class="p">VLTextExtractedData.Ref1</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> Ref2 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 500 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.Ref2</p>
+
+              <p class="p">VLXMLExtractedData.Ref2</p>
+
+              <p class="p">VLTextExtractedData.Ref2</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> SenderID </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.Sender [+ “:” + VLEDIInterchange.SenderQualifier]</p>
+
+              <p class="p">VLXMLExtractedData.SenderID</p>
+
+              <p class="p">VLTextExtractedData.SenderID</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> ReceiverID </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.Receiver [+ “:” + VLEDIInterchange.ReceiverQualifier]</p>
+
+              <p class="p">VLXMLExtractedData.ReceiverID</p>
+
+              <p class="p">VLTextExtractedData.ReceiverID</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> DocumentDateTime </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.InterchangeDT (formatted as yyyy/MM/dd HH:mm:ss)
+                VLXMLExtractedData.DocumentDateTime</p>
+
+              <p class="p">VLTextExtractedData.DocumentDateTime</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> SetControlNum </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 14 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.ControlNum</p>
+
+              <p class="p">NULL (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> DataSegmentCount </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> INTEGER </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.DataSegmentCount</p>
+
+              <p class="p">NULL (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> AckStatus </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 3 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.AckStatus</p>
+
+              <p class="p">NULL (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> AckIControlNum </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 "> 14 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDITransactionSet.AckIControlNum</p>
+
+              <p class="p">NULL (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> isX12 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> BIT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.isX12</p>
+
+              <p class="p">NULL (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> isEDIFACT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> BIT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange.isEDIFACT</p>
+
+              <p class="p">NULL (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e48 "> isTRADACOMS </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e51 "> BIT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e54 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d285275e42 d285275e57 ">
+              <p class="p">VLEDIInterchange. isTRADACOMS</p>
+
+              <p class="p">NULL (for XML and Text)</p>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_transfer_database_fields.html" title="Transfer Database Fields"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfer Database Fields</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

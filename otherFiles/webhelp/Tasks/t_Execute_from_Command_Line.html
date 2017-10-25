@@ -1,0 +1,679 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="In Unix, the backward slash character ( \ ) is a special escape character. In order to use the backward slash character in a host\mailbox\action path as shown below, you will need to use two backward ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Execute from Command Line"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ExecutingFromCL.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="Execute_from_Command_Line"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Execute from Command Line</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="Execute_from_Command_Line">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_Basics.html" title="Basics">Basics</a> / <a class="navheader_parent_path" href="../Topics/t_ExecutingFromCL.html" title="Using the command line">Using the command line</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ExecutingFromCL.html" title="Using the command line"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Using the command line</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Execute from Command Line</h1>
+
+   
+   <div class="body taskbody">
+      <div class="section context">
+         <ul class="ul" id="Execute_from_Command_Line__ul_czv_4wg_ct">
+            <li class="li">In Unix, the
+               backward slash character (<samp class="ph codeph">\</samp>) is a special escape character. In order
+               to use the backward slash character in a host\mailbox\action path as shown below, you
+               will need to use two backward slashes (<samp class="ph codeph">\\</samp>) or more instead of one.
+               An alternative is to just use the forward slash (<samp class="ph codeph">/</samp>) instead of the
+               backward slash (\). If, however, the actual host, mailbox, or action name has a
+               forward slash in its name, then use two forward slashes (<samp class="ph codeph">//</samp>) in its
+               place. </li>
+
+            <li class="li">Host actions are available only within the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications
+               and, therefore, all references to <em class="ph i">hostaction</em> should be ignored if you use the
+                  <span class="ph">Cleo LexiCom</span>
+               application.</li>
+
+            <li class="li">Since the special characters, <samp class="ph codeph">&lt;</samp>, <samp class="ph codeph">&gt;</samp>,
+                  <samp class="ph codeph">@</samp>, <samp class="ph codeph">/</samp>, and <samp class="ph codeph">\</samp>, can be used to
+               construct a host, mailbox, action, or hostaction string, it is advised that these
+               characters should <u class="ph u">not</u> be used in the actual name of any of these objects.</li>
+
+            <li class="li">Command line operations do cause extra system overhead. The system has to start up
+               another JVM (Java Virtual Machine) as well as starting up another copy of the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> application.
+               So, this startup process will use additional disk, memory, and CPU resources to run
+               each command line. It may also use extra database resources depending on the command.
+               The additional database connections are only active while the command line process is
+               active. Please also consider use of the API or web service to reduce the additional
+               system overhead.</li>
+
+         </ul>
+
+         <p class="p">You can run the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> application from
+            the command line (absent a GUI) to do the following:</p>
+
+         <ul class="ul" id="Execute_from_Command_Line__ul_nv3_pgf_cr">
+            <li class="li">Import and activate a host</li>
+
+            <li class="li">Enable or disable one or more actions</li>
+
+            <li class="li">Run one or more actions</li>
+
+            <li class="li">Run as a service</li>
+
+            <li class="li">Print current license and version information</li>
+
+         </ul>
+
+      </div>
+
+      <ul class="ul steps-unordered" id="Execute_from_Command_Line__steps_erv_ngf_cr"><li class="li step stepexpand">
+            <span class="ph cmd">Usage of command line <span class="ph"><span class="keyword cmdname">Harmony</span></span>, <span class="ph"><span class="keyword cmdname">VLTrader</span></span>, or <span class="ph"><span class="keyword cmdname">LexiCom</span></span> is as
+               follows:</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> usage: <span class="ph"><span class="keyword cmdname">Harmony</span></span>c [Import][Enable][Disable][Run][String] </pre>
+
+               <pre class="pre codeblock"> usage: <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c [Import][Enable][Disable][Run][String] </pre>
+
+               <pre class="pre codeblock"> usage: <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c [Import][Enable][Disable][Run][String] </pre>
+
+               
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="Execute_from_Command_Line__table_b4b_tkc_ks" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. General options</span></caption>
+                     
+                     
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-?</samp></td>
+
+                           <td class="entry" valign="top" width="50%">show command line options</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-f "path"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">process command line options specified in a file</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-m</samp></td>
+
+                           <td class="entry" valign="top" width="50%">show all messages; default is false</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-x</samp></td>
+
+                           <td class="entry" valign="top" width="50%">show error messages only; default is false</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-l "path" </samp></td>
+
+                           <td class="entry" valign="top" width="50%">generate log file; replaces existing log file</td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+
+               
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="Execute_from_Command_Line__table_amh_2lc_ks" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2. Import options</span></caption>
+                     
+                     
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-i "path"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Import host; replaces existing host</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-e "&lt;action&gt;mailbox@host"</samp> or
+                                 <samp class="ph codeph">"host\mailbox\action" </samp></td>
+
+                           <td class="entry" valign="top" width="50%">Enable action(s); * and ? supported </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-d "&lt;action&gt;mailbox@host"</samp> or
+                                 <samp class="ph codeph">"host\mailbox\action" </samp></td>
+
+                           <td class="entry" valign="top" width="50%">Disable action(s); * and ? supported</td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+
+               
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="Execute_from_Command_Line__table_xfy_jlc_ks" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3. Run options</span></caption>
+                     
+                     
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-r "&lt;action&gt;mailbox@host"</samp> or
+                                 <samp class="ph codeph">"host\mailbox\action" </samp></td>
+
+                           <td class="entry" valign="top" width="50%">Run action(s); * and ? supported </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-c "command" </samp></td>
+
+                           <td class="entry" valign="top" width="50%">can have multiple -c; replaces existing commands </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-t "&lt;Host&gt;&lt;tag&gt;value"</samp> or
+                                 <samp class="ph codeph">"&lt;Mailbox&gt;&lt;tag&gt;value"</samp> or
+                                 <samp class="ph codeph">"&lt;Action&gt;&lt;tag&gt;value"</samp>
+                           </td>
+
+                           <td class="entry" valign="top" width="50%">can have multiple -t; replaces existing values</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-n "value" </samp></td>
+
+                           <td class="entry" valign="top" width="50%">next line of tagged value; can only follow
+                              <samp class="ph codeph">-t</samp></td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+
+               
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="Execute_from_Command_Line__table_avr_xzd_ks" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 4. String options</span></caption>
+                     
+                     
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "service"</samp>
+                           </td>
+
+                           <td class="entry" valign="top" width="50%">Run the Cleo Harmony, Cleo VLTrader, or Cleo LexiCom application
+                              as a service.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "license"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Displays license information.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "version"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Displays version information.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "service, stop"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Waits for ongoing transfers to complete and then stops the
+                              service.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "service, kill"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Stops the service immediately without waiting for ongoing
+                              transfers to complete.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "scheduler, start"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Starts the scheduler.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "scheduler, stop"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Stops the scheduler.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "router, start"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Starts the router.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "router, stop"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Stops the router.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" valign="top" width="50%"><samp class="ph codeph">-s "transfers"</samp></td>
+
+                           <td class="entry" valign="top" width="50%">Generates a transfer report.</td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Be sure to run ‘<span class="ph"><span class="keyword cmdname">Harmony</span></span><span class="keyword cmdname">.exe</span>’, <span class="ph"><span class="keyword cmdname">VLTrader</span></span><span class="keyword cmdname">.exe</span>’, or <span class="ph"><span class="keyword cmdname">LexiCom</span></span><span class="keyword cmdname">.exe</span>’ in the <span class="ph"><span class="keyword cmdname">Harmony</span></span>, <span class="ph"><span class="keyword cmdname">VLTrader</span></span>, or <span class="ph"><span class="keyword cmdname">LexiCom</span></span> home
+               directory.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To print the command line options ( <span class="ph">-?</span>):</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">Harmony</span></span>c –?</pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –?</pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –?</pre>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To print all messages ( <samp class="ph codeph">-m</samp>) or just error messages
+                  (<samp class="ph codeph">-x</samp>) while processing command line: </span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">Harmony</span></span>c –m ... </pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –m ... </pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –m ... </pre>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd"> or </span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">Harmony</span></span>c –x ... </pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –x ... </pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –x ... </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <p class="p">Either of these options can be used with <samp class="ph codeph">–i</samp>, <samp class="ph codeph">-e</samp>,
+                     <samp class="ph codeph">-d</samp>, <samp class="ph codeph">-r</samp>, or <samp class="ph codeph">–s</samp>.</p>
+
+               <p class="p">If desired, increase your screen buffer width to ~160 characters to avoid message
+                  line wrapping.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To generate a log file ( <samp class="ph codeph">-l</samp>) while processing command line: </span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">Harmony</span></span>c –l “<var class="keyword varname">path</var>” ...</pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –l “<var class="keyword varname">path</var>” ...</pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –l “<var class="keyword varname">path</var>” ...</pre>
+
+            </div>
+            <div class="itemgroup info">
+               <p class="p">This option can be used with <samp class="ph codeph">–i</samp>, <samp class="ph codeph">-e</samp>,
+                     <samp class="ph codeph">-d</samp>, <samp class="ph codeph">-r</samp>, or <samp class="ph codeph">–s</samp>.</p>
+
+               <p class="p">If the log file already exists, it is overwritten.</p>
+
+               <p class="p">The system log file is not affected by this option.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To import and activate a host ( <samp class="ph codeph">-i</samp>):</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">Harmony</span></span>c –i “<var class="keyword varname">path</var>”</pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –i “<var class="keyword varname">path</var>”</pre>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –i “<var class="keyword varname">path</var>”</pre>
+
+            </div>
+            <div class="itemgroup info">
+               <p class="p"><var class="keyword varname">path</var> must point to a valid <span class="ph filepath">.zip</span> file.  The
+                     <span class="ph filepath">.zip</span> should be structured to match the directory structure
+                  of Versalex. If it is a just file in a <span class="ph filepath">.zip</span>, it is placed in
+                  the VersaLex home directory.</p>
+
+               <p class="p">If the active host alias already exists, it is overwritten.</p>
+
+               <p class="p">You can use the <samp class="ph codeph">-i</samp> option to import patch files (usually in
+                  conjunction with <samp class="ph codeph">-m</samp>):</p>
+
+               <pre class="pre codeblock"><span class="ph"><span class="keyword cmdname">Harmony</span></span>c –i “<var class="keyword varname">path_to_patch_file/0.1.zip</var>”</pre>
+
+               <p class="p">The <span class="keyword">-r</span> option can follow this option to run a newly imported
+                  host.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To enable ( <samp class="ph codeph">-e</samp>) or disable ( <samp class="ph codeph">-d</samp>) one or more
+               actions:</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –e “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –e “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –e “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –e “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –e “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –e “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –d “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –d “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –d “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –d “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –d “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –d “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+               <p class="p">Either action path format can be specified.  <samp class="ph codeph">*</samp> and
+                     <samp class="ph codeph">?</samp> can be used to wildcard the path and possibly match more
+                  than one action.  A <samp class="ph codeph">/</samp> may be used instead of a
+                  <samp class="ph codeph">\</samp>.</p>
+
+               <p class="p">A partial path (for example, <samp class="ph codeph">“<var class="keyword varname">host</var>”</samp> or
+                        <samp class="ph codeph">“<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>”</samp> or
+                        <samp class="ph codeph">“<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>”</samp>) can
+                  be specified which indicates to enable or disable ALL actions within the path. 
+                     <samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp> can also be used to wildcard the
+                  partial path.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To run one or more actions ( <samp class="ph codeph">-r</samp>):</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –r “&lt;<var class="keyword varname">action</var>&gt; <var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –r “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –r “&lt;<var class="keyword varname">action</var>&gt; <var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –r “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+            </div>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –r “&lt;<var class="keyword varname">action</var>&gt; <var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” or </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –r “<var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var>\<var class="keyword varname">action</var>” </pre>
+
+               <p class="p">Either action path format can be specified.  <samp class="ph codeph">*</samp> and
+                     <samp class="ph codeph">?</samp> can be used to wildcard the path and possibly match more
+                  than one action. A <samp class="ph codeph">/</samp> may be used instead of a
+                  <samp class="ph codeph">\</samp>.</p>
+
+               <p class="p">A partial path (for example, <var class="keyword varname">host</var> or
+                     <var class="keyword varname">host</var>\<var class="keyword varname">mailbox</var> or
+                     <var class="keyword varname">mailbox</var><span class="keyword">@</span><var class="keyword varname">host</var>) can be
+                  specified which indicates to run ALL actions within the path.  <samp class="ph codeph">*</samp>
+                  and <samp class="ph codeph">?</samp> can also be used to wildcard the partial path.</p>
+
+               <p class="p">If more than one action is matched, the actions are run sequentially
+                  one-by-one. </p>
+
+               <p class="p">See <span class="ph filepath">sample.bat</span> in the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> home
+                  directory for an example.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To supply new property values while running one or more actions (
+                  <span class="keyword">-r</span> with <span class="keyword">-t</span>/ <span class="keyword">-n</span>):</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –r “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” –t “&lt;Action&gt;&lt;<var class="keyword varname">Commands</var>&gt;PUT ...” –n “GET ...” ... </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –r “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” –t “&lt;Action&gt;&lt;<var class="keyword varname">Commands</var>&gt;PUT ...” –n “GET ...” ... </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –r “&lt;<var class="keyword varname">action</var>&gt;<var class="keyword varname">mailbox</var>@<var class="keyword varname">host</var>” –t “&lt;Action&gt;&lt;<var class="keyword varname">Commands</var>&gt;PUT ...” –n “GET ...” ... </pre>
+
+               <p class="p">The first <samp class="ph codeph">&lt; &gt;</samp> section of the tagged value specifies the
+                  property level, either <samp class="ph codeph">&lt;Host&gt;</samp> or <samp class="ph codeph">&lt;Mailbox&gt;</samp>
+                  or <samp class="ph codeph">&lt;Action&gt;</samp>.</p>
+
+               <p class="p">The second <samp class="ph codeph">&lt; &gt;</samp> section of the tagged value specifies the
+                  property name. The property names correspond to the tagged values in the host XML
+                  file. See <a class="xref" href="../Topics/t_xml_file_formats.html">XML file formats</a>for information about the layout
+                  of a host XML file.</p>
+
+               <p class="p">To specify a multi-line value, use <samp class="ph codeph">–t</samp> to specify the first line,
+                  and then immediately following specify each remaining line with
+                     <samp class="ph codeph">–n</samp> values.</p>
+
+               <p class="p">More than one <samp class="ph codeph">–t</samp> value (followed by <samp class="ph codeph">–n</samp> values)
+                  can be specified to update multiple properties.</p>
+
+               <p class="p">The <samp class="ph codeph">–c “<var class="keyword varname">command</var>”</samp> option is equivalent
+                     to <samp class="ph codeph">–t
+                     “&lt;Action&gt;&lt;Commands&gt;<var class="keyword varname">command</var>”</samp>
+               </p>
+
+               <p class="p">If more than one action is being run, the tagged values are applied to each action
+                  as it is run.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To run the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> application
+               as a service ( <span class="ph">-s</span>):  </span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="ph"><span class="keyword cmdname">Harmony</span></span>c –s “service”</span> </pre>
+
+               <p class="p"> Running the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span>
+                  application as a service is identical to how they run when installed as a Windows
+                  service.  Installing and running as a service has the following advantages: </p>
+
+               <ul class="ul" id="Execute_from_Command_Line__ul_m5r_4kf_cr">
+                  <li class="li">The service can run continuously.  A user does not have to be logged into the
+                     computer to start the application. This is important for users wanting to
+                     schedule actions to run automatically.  This is even more important for users
+                     who must have a local host always running listening for incoming messages.</li>
+
+                  <li class="li">The GUI can still be started while the application is running as a service. 
+                     When the GUI is exited, the service continues to run.</li>
+
+                  <li class="li">Command line can also be used while the application is running as a
+                     service.</li>
+
+               </ul>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To run remotely ( <samp class="ph codeph">-s</samp>):</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –s “remote,target” ... </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –s “remote,target” ... </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –s “remote,target” ... </pre>
+
+               <p class="p">This option can be used with <samp class="ph codeph">-e</samp>, <samp class="ph codeph">-d</samp>, or
+                     <samp class="ph codeph">–r</samp>.  The action paths specified with these options must exist
+                  within <span class="ph">Cleo Harmony</span>,
+                     <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> on the
+                  target computer.</p>
+
+               <p class="p">The <span class="keyword">target</span> can be specified as a computer name or IP
+                  address. The <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span>
+                  application must be installed and/or running as a service ( <samp class="ph codeph">–s
+                     “service”</samp>) on the target server for the remote command to be
+                  accepted. </p>
+
+               <p class="p">The <samp class="ph codeph">-l</samp> option can be used to generate a local log file.</p>
+
+               <p class="p">This option only requires a license on the target computer. </p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To print current license information ( <samp class="ph codeph">-s</samp>):</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –s “license” </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –s “license” </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –s “license” </pre>
+
+               <p class="p">This will generate output similar to the following: </p>
+
+               <pre class="pre codeblock"> License Key                 = eb]|-y{8R-LyLo-GGjd-M{42-GkE4-QI7B-mqL^
+License Owner               = Cleo Communications
+Serial Number               = LX9012
+Host ID                     = LO6354 
+Key Expires                 = 2003/01/08 (evaluation) 
+Max # of Hosts              = Unlimited
+Max # of Mailboxes per Host = 5 
+Translator Integration      = Yes
+AS2                         = Yes
+FTP                         = Yes
+FTP/S                       = Yes
+HTTP                        = Yes
+HTTP/S                      = Yes 
+API                         = Yes </pre>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To print current version information ( <samp class="ph codeph">–s</samp>):</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –s “version” </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –s “version” </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –s “version” </pre>
+
+               <p class="p"> This will generate output similar to the following: </p>
+
+               <pre class="pre codeblock"> Version = 2.0.03 
+ 2002/05/08 07:48:28 CDT   as2bean.jar 
+ 2002/04/29 16:31:22 CDT   dcebmxhttpsbean.jar 
+ 2002/05/09 09:48:54 CDT   ftp.jar 
+ 2002/05/09 09:48:58 CDT   ftps.jar 
+ 2002/05/06 16:57:26 CDT   httpbean.jar 
+ 2002/04/26 16:37:54 CDT   HTTPClient.jar 
+ 2002/05/06 16:57:30 CDT   httpsbean.jar 
+ 2002/05/06 16:57:20 CDT   lexbean.jar 
+ 2002/05/08 09:53:38 CDT   LexiCom.jar </pre>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To process command line options specified in a file ( <samp class="ph codeph">–f</samp>) :</span>
+            <div class="itemgroup info">
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">Harmony</span></span>c –f “<var class="keyword varname">path</var>” </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">VLTrader</span></span>c –f “<var class="keyword varname">path</var>” </pre>
+
+               <pre class="pre codeblock"> <span class="ph"><span class="keyword cmdname">LexiCom</span></span>c –f “<var class="keyword varname">path</var>” </pre>
+
+               <p class="p"> And an example file: </p>
+
+               <pre class="pre codeblock"> -m 
+-l log.xml 
+-i "hosts\preconfigured\ABC VAN.xml" 
+-r "ABC VAN\myMailbox\send+receive" 
+-t "&lt;Host&gt;&lt;Inbox&gt;G:\edi\in\" 
+-t "&lt;Host&gt;&lt;Outbox&gt;G:\edi\out\" 
+-c "CONNECT user=test,*pswd=test" 
+-c "PUT -DEL .\ receiver=EDI,type=X12" 
+-c "GET -DIR -CON -UNI .\[type]=X12" </pre>
+
+               <p class="p">The contents the file can contain any of the other command line options besides
+                     <samp class="ph codeph">–f</samp>. Within the file, arguments can be separated by spaces
+                  and/or exist on separate lines.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">To import a file originally exported from the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span>
+               application:</span>
+            <div class="itemgroup info">
+               <div class="p">
+                  <pre class="pre codeblock"><span class="keyword cmdname">VersaLexc</span> <span class="keyword option">-i</span> <span class="ph filepath">VersaLexConfig.zip</span> <span class="keyword option">-pp</span> <kbd class="ph userinput">cleocleo</kbd> <span class="keyword option">-cp</span> <kbd class="ph userinput">keypswd1</kbd> <span class="keyword option">-cp</span> <kbd class="ph userinput">keypswd2</kbd> <span class="keyword option">-m</span></pre>
+
+               </div>
+
+               <div class="p">where:<ul class="ul" id="Execute_from_Command_Line__ul_rh2_cq1_vx">
+                     <li class="li"><samp class="ph codeph"><span class="keyword option">-i</span></samp>
+                        <span class="ph filepath">VersaLexConfig.zip</span> is the command to import the file,
+                           <span class="ph filepath">VersaLexConfig.zip</span>.</li>
+
+                     <li class="li"><span class="keyword option">-pp</span>
+                        <kbd class="ph userinput">cleocleo</kbd> specifies that cleocleo is the passphrase
+                        used when the data was exported.</li>
+
+                     <li class="li"><span class="keyword option">-cp</span>
+                        <kbd class="ph userinput">cleo</kbd>
+                        <span class="keyword option">-cp</span>
+                        <kbd class="ph userinput">keypswd1</kbd>
+                        <span class="keyword option">-cp</span>
+                        <kbd class="ph userinput">keypswd2</kbd> provides certificate private key passwords
+                        the system attempts to use in rotation until one matches.</li>
+
+                     <li class="li"><span class="keyword option">-m</span> - shows the output of the import on the console.</li>
+
+                  </ul>
+</div>
+
+            </div>
+         </li>
+</ul>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ExecutingFromCL.html" title="Using the command line"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Using the command line</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

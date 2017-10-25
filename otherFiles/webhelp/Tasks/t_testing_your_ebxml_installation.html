@@ -1,0 +1,121 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="You can test your ebXML installation by configuring a host that will send messages to your Local Listener, therefore looping the messages back to yourself. Before attempting a trading relationship, ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Testing Your ebXML Installation"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ebxml_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="testing_your_ebxml_installation"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Testing Your ebXML Installation</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="testing_your_ebxml_installation">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_ebxml_hosts.html" title="ebXML Hosts">ebXML Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ebxml_hosts.html" title="ebXML Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Testing Your ebXML
+                    Installation</h1>
+
+   <div class="body taskbody">
+      <div class="section context">You can test your ebXML installation by configuring a host that will send messages to
+         your Local Listener, therefore looping the messages back to yourself. Before attempting a
+         trading relationship, you should test and validate that you can send and receive messages
+         at your local installation. This will help narrow down connectivity issues that are due to
+         firewall problems and not due to improper installation and configuration. </div>
+
+      <ol class="ol steps" id="testing_your_ebxml_installation__steps_fcm_1mg_1t"><li class="li step stepexpand">
+            <span class="ph cmd">Configure the ebXML Message Service in the Local Listener. See <a class="xref" href="../Topics/t_Configure_Local_Listener_ebXML_Msg_Svc.html#topic_rfr_p4s_gr" title="Configure your local listener to handle inbound ebXML messages.">Local Listener ebXML Message Service</a>.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Clone and activate the Generic ebXML preconfigured host and rename it to
+                  <span class="ph uicontrol">Looptest ebXML</span>.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Configure the ebXML Looptest host:</span>
+            <ol type="a" class="ol substeps" id="testing_your_ebxml_installation__substeps_c52_gmg_1t">
+               <li class="li substep">
+                  <span class="ph cmd">In the host <span class="keyword wintitle">General</span> tab, set the <span class="ph uicontrol">Server
+                        Address</span> to "localhost" and the <span class="ph uicontrol">Port #</span> to
+                     the Local Listener's HTTP port (usually 5080).</span>
+               </li>
+
+               <li class="li substep">
+                  <span class="ph cmd">In the <img class="image" id="testing_your_ebxml_installation__image_pcv_1mg_1t" src="../Images/image021.gif"></img> host
+                        <span class="keyword wintitle">CPA</span> tab, set the <span class="ph uicontrol">CPA Id</span> to
+                     "looptest" and set the <span class="ph uicontrol">To Party Id(s)</span> to match the Local
+                     Listener\ebMS CPA <span class="ph uicontrol">My Party Id(s)</span>.</span>
+               </li>
+
+               <li class="li substep">
+                  <span class="ph cmd">In the mailbox <span class="keyword wintitle">CPA</span> tab, set the <span class="ph uicontrol">To
+                        Role</span> to match the Local Listener\ebMS CPA <span class="ph uicontrol">My
+                        Role</span>. Also set the <span class="ph uicontrol">To Service</span> and
+                        <span class="ph uicontrol">To Action</span> to match one of the Local Listener\ebMS
+                        CPA<span class="ph uicontrol"> My Service(s)</span> and <span class="ph uicontrol">My
+                        Action(s)</span>.</span>
+               </li>
+
+               <li class="li substep">
+                  <span class="ph cmd">In the action <span class="keyword wintitle">Action</span> tab, change the PUT command's
+                     source file to be "test\test.edi" and remove the -DEL option.</span>
+               </li>
+
+            </ol>
+
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">In the action <span class="keyword wintitle">Action</span> tab, run the action. Messages similar to
+               the ones shown below will appear in the messages pane in the lower portion of your
+                  <span class="ph">Cleo Harmony</span> application.</span>
+            <div class="itemgroup info">
+               <p class="p">
+                  <img class="image" id="testing_your_ebxml_installation__image_q2v_1mg_1t" src="../Images/image1021.jpg"></img>
+               </p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If signing and encryption is desired:</span>
+            <ol type="a" class="ol substeps" id="testing_your_ebxml_installation__substeps_jwn_qmg_1t">
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">First export the Local Listener Signing and Encryption Certificate(s) into
+                     the <span class="ph">Cleo Harmony</span>
+                     <span class="ph filepath">certs\</span> directory.</span>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Then in the mailbox <span class="keyword wintitle">Certificates</span> tab, set the Trading
+                     Partner's Certificates to these certificates.</span>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">In the mailbox <span class="keyword wintitle">ebXML</span> tab, select
+                        <span class="ph uicontrol">Signed</span> and <span class="ph uicontrol">Encrypted</span>.</span>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">In the action <span class="keyword wintitle">Action</span> tab, rerun the action. Messages
+                     similar to the ones shown below should now appear.</span>
+                  <div class="itemgroup info">
+                     <p class="p">
+                        <img class="image" id="testing_your_ebxml_installation__image_mhv_1mg_1t" src="../Images/image1023.jpg"></img>
+                     </p>
+
+                  </div>
+               </li>
+
+            </ol>
+
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Set other ebXML options as desired.</span>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ebxml_hosts.html" title="ebXML Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

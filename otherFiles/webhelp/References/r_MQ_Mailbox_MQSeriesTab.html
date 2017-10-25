@@ -1,0 +1,151 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use Same Channel for Sender and Receiver Select the check box to indicate the same Server-Connection channel is being used for sending and receiving messages from queues on the Queue Manager. Force ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="MQ Mailbox: MQSeries Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_MQ_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_wyl_w3d_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>MQ Mailbox: MQSeries Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_wyl_w3d_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_mq_configuration.html" title="Configure an MQ host starting with the generic OFTP pre-configured host.">MQ Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_MQ_Mailbox.html" title="MQ Mailbox">MQ Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_MQ_Mailbox.html" title="MQ Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MQ Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">MQ Mailbox: MQSeries Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Use Same Channel for Sender and Receiver</dt>
+
+          <dd class="dd">Select the check box to indicate the same Server-Connection channel is being used for
+            sending and receiving messages from queues on the Queue Manager.</dd>
+
+        
+        
+          <dt class="dt dlterm">Force Upper Case on Queues and Channels</dt>
+
+          <dd class="dd">Select the check box to automatically convert all queue and channel names to upper
+            case. Queue and channel names are case-sensitive and must be entered exactly as they
+            have been defined in the Queue Manager.</dd>
+
+        
+        
+          <dt class="dt dlterm">Sender</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Queue</dt>
+
+                <dd class="dd">The name of the queue from which you will send messages. </dd>
+
+              
+              
+                <dt class="dt dlterm">Channel</dt>
+
+                <dd class="dd">The name of the channel used to connect to the Queue Manager. This channel must
+                  be a <em class="ph i">Server-Connection</em> channel in order to successfully connect to the
+                  Queue Manager from the <span class="ph">Cleo Harmony</span> application. If you selected <span class="ph uicontrol">Use Same Channel for Sender and
+                    Receiver</span>, the same channel name is used for both sending and
+                  receiving.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">User Name</span></dt>
+
+                <dt class="dt dlterm"><span class="ph uicontrol">Password</span></dt>
+
+                <dd class="dd">Optional. These values can be provided to you by the administrator of MQSeries
+                  Queue Manager.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Receiver</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Queue</span></dt>
+
+                <dd class="dd">The name of the queue where you will receive messages.</dd>
+
+              
+              
+                <dt class="dt dlterm">Channel</dt>
+
+                <dd class="dd">The name of the channel used to connect to the Queue Manager. This channel must
+                  be a <em class="ph i">Server-Connection</em> channel in order to successfully connect to the
+                  Queue Manager from the <span class="ph">Cleo Harmony</span> application. If you selected <span class="ph uicontrol">Use Same Channel for
+                    Sender and Receiver</span>, the same channel name is used for both sending
+                  and receiving.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Message Priority</span></dt>
+
+                <dd class="dd">The message priority to be applied when you <span class="keyword cmdname">PUT</span> a message on
+                  a queue. By default, the message priority is <kbd class="ph userinput">0</kbd> and all
+                  messages are written to the queue in a first in first out (FIFO) order. However,
+                  messages with a higher priority are placed ahead of lower priority messages in the
+                  queue.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Populate ReplyToQ Field</span></dt>
+
+                <dd class="dd">Select the check box to set the specified queue name (either the
+                    <span class="ph uicontrol">Receiver Queue</span> name or any other queue name) in the
+                    <span class="ph uicontrol">ReplyToQ</span> field of the message descriptor of messages sent
+                  by the <span class="ph">Cleo Harmony</span> application. Since the application only sends datagram
+                  messages, typically this field is used to notify your trading partner of your
+                  configured <span class="ph uicontrol">Receiver Queue</span> and is not intended for receipt
+                  of report messages. The application does not monitor this field and will not issue
+                  report or reply messages. </dd>
+
+                <dd class="dd">
+                  <div class="note note"><span class="notetitle">Note:</span>  The <span class="ph">Cleo Harmony</span> application always leaves the
+                      <span class="ph uicontrol">ReplyToQMgr</span> field in the message descriptor blank. When
+                    this occurs the queue manager will set the contents of the following fields in
+                    the message descriptor on the queue:<ul class="ul" id="reference_wyl_w3d_b5__ul_lp4_5js_zw">
+                      <li class="li"><span class="ph uicontrol">ReplyToQ</span> - If the queue is a local definition of a
+                        remote queue, the <span class="ph uicontrol">ReplyToQ</span> field is set to the name
+                        of the remote queue; otherwise this field is not changed.</li>
+
+                      <li class="li"><span class="ph uicontrol">ReplyToQMgr</span> - If value in the
+                          <span class="ph uicontrol">ReplyToQ</span> field is a local definition of a remote
+                        queue, the <span class="ph uicontrol">ReplyToQMgr</span> field is set to the name of
+                        the queue manager that owns the remote queue; otherwise the
+                          <span class="ph uicontrol">ReplyToQMgr</span> field is set to the name of the queue
+                        manager to which the <span class="ph">Cleo Harmony</span> application is connected.</li>
+
+                    </ul>
+</div>
+
+                </dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_MQ_Mailbox.html" title="MQ Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MQ Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

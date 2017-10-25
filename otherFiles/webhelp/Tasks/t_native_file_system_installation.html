@@ -1,0 +1,78 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="If this is the first time you have installed on the AS/400 or you are installing a release and not a patch, you must follow the procedure in this step to complete the LexiCom NFS installation on the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Native File System Installation"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_as_400_install.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_d1j_vcx_ds"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Native File System Installation</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_d1j_vcx_ds">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation">AS/400 Setup and Installation</a> / <a class="navheader_parent_path" href="../Tasks/t_WebUI_as_400_install.html" title="AS/400 Install">AS/400 Install</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_WebUI_as_400_install.html" title="AS/400 Install"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Install</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Native File System Installation</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <div class="section context">
+            <p class="p">If this is the first time you have installed on the AS/400 or you are installing a
+                release and not a patch, you must follow the procedure in this step to complete the
+                LexiCom NFS installation on the AS/400.  <var class="keyword varname">If you are not installing a major
+                    release, you may skip this step.</var>
+            </p>
+
+            <p class="p"> </p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Verify that the "LexiCom.savf" file has been copied (or unzipped from the
+                    AS400.zip file) to the /LexiCom folder in the IFS.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Sign on to the AS/400 "green screen" as QSECOFR and type the following
+                    command:</span>
+                <div class="itemgroup info">
+                    <p class="p"><samp class="ph codeph">CPYFRMSTMF FROMSTMF('/LexiCom/LEXICOM.savf')
+                            TOMBR('/QSYS.LIB/QGPL.LIB/LEXICOM.file')  CVTDTA(*NONE)</samp></p>
+
+                    <p class="p">(Verify that the message: <strong class="ph b">Stream file copied to object</strong> is
+                        displayed.)</p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Restore all the objects required to complete the installation:</span>
+                <div class="itemgroup info">
+                    <p class="p"><samp class="ph codeph">RSTOBJ OBJ(*ALL) SAVLIB(QGPL) DEV(*SAVF)
+                        SAVF(QGPL/LEXICOM)</samp></p>
+
+                    <p class="p">(Verify that the message:  <strong class="ph b">7 objects restored from QGPL to QGPL</strong> is
+                        displayed.)</p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Type the following command to install all the necessary LexiCom commands and
+                    objects on the AS/400:</span>
+                <div class="itemgroup info">
+                    <p class="p"><samp class="ph codeph">CALL INSTLEX</samp></p>
+
+                    <p class="p">(Verify that the message: <strong class="ph b">LexiCom AS/400 Installation Complete</strong> is
+                        displayed.)</p>
+
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_WebUI_as_400_install.html" title="AS/400 Install"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Install</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

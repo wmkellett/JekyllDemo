@@ -1,0 +1,639 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo Harmony and Cleo VLTrader applications only. The FTP Server allows users to log into the Cleo Harmony or Cleo VLTrader application and store and retrieve files ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="FTP Server Command Reference"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_ftp_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_rbq_l5p_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>FTP Server Command Reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_rbq_l5p_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users">Configuring Local FTP Users</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">FTP Server Command Reference</h1>
+
+  <div class="body">
+    <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only. </div>
+
+    <p class="p">The FTP Server allows users to log into the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application and store and
+      retrieve files using standard FTP (File Transfer Protocol) commands. A full description of the
+      FTP commands is available in the RFC 959 specification. More detail on the FTP Security
+      Extensions is available in RFC 2228. </p>
+
+    <p class="p">The following FTP commands are accepted and processed by the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> FTP server.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Access Control Commands</h2>
+      
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_rbq_l5p_3r__table_fkb_xcj_3r" class="table" frame="border" border="1" rules="all">
+          
+          
+          <thead class="thead" align="left">
+            <tr class="row">
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e56">Command </th>
+
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e59">Description </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e56 ">
+                <span class="keyword cmdname">USER</span>
+                <span class="keyword parmname">&lt;username&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e59 ">Identifies the user to the FTP
+                server. The <span class="keyword parmname">&lt;username&gt;</span> parameter is a string that must match
+                one of the users previously entered into the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e56 "><span class="keyword cmdname">PASS</span>
+                <span class="keyword parmname">&lt;password&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e59 ">Verifies the identity of the user, since only
+                specified user should know the password. The <span class="keyword parmname">&lt;password&gt;</span>
+                parameter is a string specifying the user’s password. This command must be
+                immediately preceded by the <span class="keyword cmdname">USER</span> command. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e56 "><span class="keyword cmdname">PASS</span>
+                <span class="keyword parmname">&lt;password&gt;/&lt;newPassword&gt;/&lt;newPassword&gt;/ </span>  </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e59 ">Verifies the identity of the user and
+                changes the user’s password. The <span class="keyword parmname">&lt;password&gt;</span> parameter is a
+                string specifying the user’s current password and
+                  <span class="keyword parmname">&lt;newPassword&gt;</span> is a string specifying the user’s new
+                password. This command must be immediately preceded by the <span class="keyword cmdname">USER</span>
+                command. The password must follow the configured password policy or the login will
+                be considered a failure. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e56 "><span class="keyword cmdname">ACCT</span>
+                <span class="keyword parmname">&lt;account&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e59 ">Specifies the user’s account. This command is not
+                required, and has no effect on the logon process. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e56 "><span class="keyword cmdname">CWD</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e59 ">Changes the current working directory to that
+                specified by <span class="keyword parmname">&lt;pathname&gt;</span>. If
+                  <span class="keyword parmname">&lt;pathname&gt;</span> starts with a slash, the path is considered to
+                be an absolute path. Otherwise, it is a path relative to the current working
+                directory. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e56 "><span class="keyword cmdname">CDUP</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e59 ">Changes the current working directory to the parent
+                of the current working directory. This can also be accomplished with the
+                  <span class="keyword cmdname">CWD</span> command. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e56 "><span class="keyword cmdname">QUIT</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e59 ">Terminates the USER and closes the connection. </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+</div>
+
+      
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Transfer Parameter Commands</h2>
+      
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_rbq_l5p_3r__table_fcr_1vp_3r" class="table" frame="border" border="1" rules="all">
+          
+          
+          <thead class="thead" align="left">
+            <tr class="row">
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e214">Command </th>
+
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e217">Description </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e214 "><span class="keyword cmdname">PORT</span>
+                <span class="keyword parmname">&lt;host-port&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e217 ">This command and the
+                  <span class="keyword parmname">&lt;host-port&gt;</span> argument specify the data port to be used in
+                data connection. The <span class="keyword parmname">&lt;host-port&gt;</span> argument is the
+                concatenation of a 32-bit internet host address and a 16-bit TCP port address. This
+                address information is broken into 8-bit fields and the value of each field is
+                transmitted as a decimal number in character string representation. The fields are
+                separated by commas. An example <span class="keyword cmdname">PORT</span> command might
+                    be:<p class="p"><samp class="ph codeph">PORT h1,h2,h3,h4,p1,p2</samp></p>
+<p class="p">where <samp class="ph codeph">h1</samp> is
+                  the high order 8 bits of the internet host address. This address and port are
+                  created by the client side and the server connects to the client’s data
+                port.</p>
+</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e214 "><span class="keyword cmdname">PASV</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e217 ">Requests the server to "listen" on a
+                data port and to wait for a connection. The response to this command includes the
+                host and port address this server is listening on. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e214 "><span class="keyword cmdname">TYPE</span>
+                <span class="keyword parmname">&lt;type-code&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e217 ">Specifies the data representation
+                type. The <span class="keyword parmname">&lt;type-code&gt;</span> is either <kbd class="ph userinput">A</kbd>
+                (for ASCII) or <kbd class="ph userinput">I</kbd> (for Image). Other values for
+                  <span class="keyword parmname">&lt;type-code&gt;</span> are not supported. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e214 "><span class="keyword cmdname">STRU</span>
+                <span class="keyword parmname">&lt;structure-code&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e217 ">Specifies the structure of the
+                transferred file. The <span class="keyword parmname">&lt;structure-code&gt;</span> is either
+                  <kbd class="ph userinput">F</kbd> (for File) or <kbd class="ph userinput">R</kbd> (for Record).
+                Other values for <span class="keyword parmname">&lt;structure-code&gt;</span> are not supported. This
+                command has no effect on the files stored. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e214 "><span class="keyword cmdname">MODE</span>
+                <span class="keyword parmname">&lt;mode-code&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e217 ">Specifies the data transfer mode.
+                Only <kbd class="ph userinput">S</kbd> (for Stream) is supported. </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+</div>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Service Commands</h2>
+      
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_rbq_l5p_3r__table_hny_2vp_3r" class="table" frame="border" border="1" rules="all">
+          
+          
+          <thead class="thead" align="left">
+            <tr class="row">
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e357">Command </th>
+
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e360">Description </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">RETR</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the server to send the file
+                specified by <span class="keyword parmname">&lt;pathname&gt;</span> from the server to the client on the
+                data connection. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">STOR</span>
+                <span class="keyword parmname">&lt;pathname&gt; </span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the server to accept the data
+                transferred through the data connection and to store the data as a file with name
+                  <span class="keyword parmname">&lt;pathname&gt;</span> at the server site. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">STOU</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the server to accept the data
+                transferred through the data connection and to store the data as a file with a
+                unique filename at the server site. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">APPE</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the server to accept the data
+                transferred via the data connection and to store the data in a file specified by
+                  <span class="keyword parmname">&lt;pathname&gt;</span> at the server site. If the file specified in
+                the pathname exists at the server site, then the data is appended to that file;
+                otherwise, the file specified in the pathname is created at the server site. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">RNFR</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Specifies the old pathname of the
+                file/directory which is to be renamed. This command must be immediately followed by
+                a "rename to" (RNTO) command specifying the new file pathname. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">RNTO</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Specifies the new pathname of the
+                file/directory specified in the immediately preceding "rename from" (RNFR) command.
+                Together the two commands cause a file/directory to be renamed. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">DELE</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the file specified by
+                  <span class="keyword parmname">&lt;pathname&gt;</span> to be deleted at the server site. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">RMD</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the directory specified in
+                  <span class="keyword parmname">&lt;pathname&gt;</span> to be removed as a directory (if the pathname
+                is absolute) or as a subdirectory of the current working directory (if the pathname
+                is relative). </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">MKD</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the directory specified in
+                  <span class="keyword parmname">&lt;pathname&gt;</span> to be created as a directory (if the pathname
+                is absolute) or as a subdirectory of the current working directory (if the pathname
+                is relative). </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">PWD</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the name of the current
+                working directory to be returned in the reply. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">LIST</span><span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes a list to be sent from the
+                server to the client. If <span class="keyword parmname">&lt;pathname&gt;</span> specifies a directory or
+                other group of files, the server should transfer a list of files in the specified
+                directory. If the pathname specifies a file then the server should send current
+                information on the file. A missing <span class="keyword parmname">&lt;pathname&gt;</span> argument
+                implies the user's current working or default directory. The details of the files
+                are returned in Unix format not matter which platform the server is running on. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">NLST</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes a directory listing to be sent
+                from server to client. The <span class="keyword parmname">&lt;pathname&gt;</span> should specify a
+                directory or other system-specific file group descriptor; a missing
+                  <span class="keyword parmname">&lt;pathname&gt;</span> argument implies the current directory. The
+                server will return a stream of names of files and no other information. The data
+                will be transferred over the data connection as valid pathname strings separated by
+                  <kbd class="ph userinput">&lt;CRLF&gt;</kbd>. This command is intended to return information
+                that can be used by a program to further process the files automatically. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">SITE</span>
+                <span class="keyword parmname">&lt;string&gt; </span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Used by the server to provide
+                services specific to his system that are essential to file transfer but not
+                sufficiently universal to be included as commands in the protocol. Currently, there
+                are no available <span class="keyword cmdname">SITE</span> commands. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">SYST</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Used by the client to determine the
+                system type on which the server resides. If the system type is Windows, then a
+                system type of WIN32 is returned. Otherwise, Unix is returned. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">STAT</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">
+                <p class="p">Status (not available during Transfer)</p>
+
+                <p class="p">Causes a status response to be sent over the control connection in the form of a
+                  reply. Unlike the RFC 959 description of STAT, this command cannot be sent during
+                  a file transfer. However, this command can be sent between file transfers. If a
+                    <span class="keyword parmname">&lt;pathname&gt;</span> is specified, the command is analogous to the
+                  "list" command except that data is transferred over the control connection. If a
+                  wild-carded pathname is given, the server can respond with a list of file names
+                  and attributes associated with that pathname. If
+                    <span class="keyword parmname">&lt;pathname&gt;</span> is not given, the server returns general
+                  status information about the server FTP process. This includes current values of
+                  all transfer parameters.</p>
+
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">HELP</span>
+                <span class="keyword parmname">&lt;string&gt; </span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Causes the server to send helpful
+                information regarding its implementation status over the control connection to the
+                user. The command takes an optional argument (for example, any command name) and
+                returns more specific information as a response. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e357 "><span class="keyword cmdname">NOOP</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e360 ">Does not affect any parameters or
+                previously entered commands. It specifies no action other than that the server
+                return an OK reply. </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+</div>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Security Extensions</h2>
+      
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_rbq_l5p_3r__table_eqq_fvp_3r" class="table" frame="border" border="1" rules="all">
+          
+          
+          <thead class="thead" align="left">
+            <tr class="row">
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e652">Command </th>
+
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e655">Description </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e652 "><span class="keyword cmdname">AUTH</span>
+                <span class="keyword parmname">&lt;mechanism&gt; </span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e655 ">
+                <p class="p">The <span class="keyword parmname">&lt;mechanism&gt;</span> parameter specifies a security mechanism.
+                  This command is only available on the FTP/s Explicit ports.</p>
+
+                <ul class="ul" id="topic_rbq_l5p_3r__ul_vmr_5cl_nt">
+                  <li class="li">SSL or TLS-P protect the control/data channels</li>
+
+                  <li class="li">TLS or TLS-C clear the protection of the control/data channels</li>
+
+                </ul>
+
+                <p class="p">It is suggested that AUTH SSL be specified for a secure connection and that this
+                  command would not be issued for the clear channel case.</p>
+
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e652 "><span class="keyword cmdname">PROT</span>
+                <span class="keyword parmname">&lt;level&gt; </span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e655 ">The <span class="keyword parmname">&lt;level&gt;</span>
+                parameter specifies the Data Channel Protection Level. Values of
+                  <kbd class="ph userinput">C</kbd> (for Clear) or <kbd class="ph userinput">P</kbd> (for
+                Private/Encrypted) are supported. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e652 "><span class="keyword cmdname">PBSZ</span>
+                <span class="keyword parmname">&lt;size&gt;</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e655 ">Allows the FTP client and server to
+                negotiate a maximum protected buffer size for the connection. A
+                  <span class="keyword parmname">&lt;size&gt;</span> of 0 (zero) is the only allowed size. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e652 "><span class="keyword cmdname">CCC</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e655 ">Sets a protected command channel to
+                clear-text. </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+</div>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">FTP Extensions</h2>
+      
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_rbq_l5p_3r__table_i45_gvp_3r" class="table" frame="border" border="1" rules="all">
+          
+          
+          <thead class="thead" align="left">
+            <tr class="row">
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e764">Command </th>
+
+              <th class="entry" rowspan="1" colspan="1" valign="top" id="d193232e767">Description </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody class="tbody">
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">EPORT</span>
+                <span class="keyword parmname">|&lt;net-prt&gt; &lt;net-address&gt;|&lt;tcp-port&gt;| </span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">
+                <p class="p">Allows for the specification of an extended address for the data connection. The
+                  network protocol field (<span class="keyword parmname">&lt;net-prt&gt;</span>) specifies format
+                  used for the <span class="ph uicontrol">&lt;net-address&gt;</span> field. The
+                    <span class="keyword parmname">&lt;tcp-port&gt;</span> field specifies the client data port to use.
+                  A delimiter character (typically <span class="keyword parmname">|</span>) separates the fields.
+                  Example commands for IPv4 and IPv6 formats would be:</p>
+
+                <div class="p">IPv4:        <pre class="pre codeblock">EPRT |1|192.136.4.34|1964|</pre>
+</div>
+
+                <div class="p">IPv6:        <pre class="pre codeblock">EPRT |2|1677::3:670:45AC:76B3|1959|</pre>
+</div>
+
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">MDTM</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">Returns the file modification time of
+                the file specified by <span class="keyword parmname">&lt;pathname&gt;</span>.</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">SIZE</span>
+                <span class="keyword parmname">&lt;pathname&gt;</span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">Returns the size, in bytes, of the
+                file specified by <span class="keyword parmname">&lt;pathname&gt;</span>. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">XMKD</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">Same as <span class="keyword cmdname">MKD</span>.
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">XPWD</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">Same as <span class="keyword cmdname">PWD</span>.
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">FEAT</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">Returns the list of supported
+                extended commands (such as commands beyond those originally described in RFC 959).
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">OPTS</span>
+              </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">Allows optional command parameters to
+                be set or reset. The <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications
+                currently do not offer any optional command parameters. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e764 "><span class="keyword cmdname">REST</span>
+                <span class="keyword parmname">&lt;position&gt; </span></td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top" headers="d193232e767 ">The <span class="keyword cmdname">REST</span> command
+                must be the last command issued before the data transfer command that is to cause a
+                restarted, rather than a complete, file transfer.  The
+                  <span class="keyword parmname">&lt;position&gt;</span> parameter specifies where the transfer is to be
+                started. STREAM mode is supported (Block and Compressed are not). </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+</div>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

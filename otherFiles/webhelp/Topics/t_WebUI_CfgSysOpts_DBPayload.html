@@ -1,0 +1,271 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="See Database Definitions for information about the database payload feature. Database Incoming Mailboxes For each trading partner mailbox, indicates whether VersaLex incoming payload should be ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Database Payload"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_CfgSysOpts_Databases.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="databasePayload"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Database Payload</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="databasePayload">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_System.html" title="System">System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_CfgSysOpts_Databases.html" title="Databases">Databases</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_Databases.html" title="Databases"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Databases</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Database Payload</h1>
+
+  <div class="body">
+    <div class="section"><p class="p">See <a class="xref" href="t_database_definitions.html">Database Definitions</a> for information about the database payload feature. </p>
+<dl class="dl">
+        
+          <dt class="dt dlterm"> Database Incoming Mailboxes </dt>
+
+          <dd class="dd">
+            <span class="ph">For each trading partner mailbox, indicates whether VersaLex incoming payload should
+              be inserted into the database rather than write to the file system.</span>
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd>
+            <p class="p">For incoming transfers to enabled mailboxes, if the database is not currently
+              available, the transfer from the trading partner is not accepted.</p>
+
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"> Maximum supported BLOB size </dt>
+
+          <dd class="dd">
+            <span class="ph">The maximum BLOB size supported by the database (incoming and outgoing payload will
+              be stored in a BLOB data type).</span>
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: Dependent on database </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 65535 bytes </dd>
+
+        
+        
+          <dt class="dt dlterm"> Polling interval for new outgoing payload </dt>
+
+          <dd class="dd">
+            <span class="ph">The frequency at which VersaLex will check for new outgoing payload.</span>
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: 5-60 seconds </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 5 seconds </dd>
+
+        
+        
+          <dt class="dt dlterm"> Outgoing payload attempt timeout </dt>
+
+          <dd class="dd">
+            <span class="ph">For abnormally terminated or unresponsive sends, the timeout at which the send will
+              be retried by either a parallel or restarted VersaLex.</span>
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: 10-60 minutes </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 30 minutes </dd>
+
+        
+        
+          <dt class="dt dlterm"> Maximum failed outgoing payload send attempts </dt>
+
+          <dd class="dd"> Dictates how many total times a transfer will be attempted before retries are halted. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: 0-n </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 0 (no maximum) </dd>
+
+        
+        
+          <dt class="dt dlterm"> Maximum number of concurrent sends </dt>
+
+          <dd class="dd"> Maximum number of concurrent outgoing database payload actions that can be active at
+            any given time.  If the limit is reached and more outgoing payload is found, it is put
+            on hold until one of the current outgoing database payload actions completes. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 50 </dd>
+
+        
+        
+          <dt class="dt dlterm"> Maximum number of concurrent sends per mailbox </dt>
+
+          <dd class="dd"> Maximum number of concurrent outgoing database payload actions that can be active at
+            any given time <strong class="ph b">for any given mailbox</strong>.  If the limit is reached and more outgoing
+            payload is found for a mailbox, it is put on hold until one of the current outgoing
+            database payload actions for that mailbox completes. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>:<p class="p">1-n and</p>
+<p class="p">&lt;= Maximum number of concurrent
+            sends</p>
+</dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 5 </dd>
+
+        
+        
+          <dt class="dt dlterm"> Bundle (serialize) same mailbox sends per mailbox </dt>
+
+          <dd class="dd"> At each polling interval, indicates to bundle payload for the same mailbox together
+            up to the configured amount and send one-by-one using just one mailbox session. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd><p class="p">2-n</p>
+</dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+            <p class="p">5</p>
+</dd>
+
+        
+        
+          <dt class="dt dlterm"> Database connection poolsize </dt>
+
+          <dd class="dd"> If database payload is enabled, indicates the number of database connections
+            immediately obtained and continually reused.  These connections are used strictly for
+            database payload. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: 0-n<p class="p">VersaLex will still obtain connections above the
+              poolsize specified when necessary and will continue to reuse those connections until
+              they become idle for an extended period of time.</p>
+</dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 20 </dd>
+
+        
+        
+          <dt class="dt dlterm"> Maximum number of database connections </dt>
+
+          <dd class="dd"> If selected, specifies the absolute maximum number of allowed database connections
+            (including poolsize) for database payload. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd><p class="p">Poolsize-n</p>
+</dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+            <p class="p">0</p>
+</dd>
+
+        
+        
+          <dt class="dt dlterm"> Reserve connections for incoming </dt>
+
+          <dd class="dd"> Percentage of the maximum number of database connections to reserve for incoming
+            requests. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: 0-75 percent </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: 33 percent </dd>
+
+        
+        
+          <dt class="dt dlterm"> Automatically clear outgoing payload after successfully sent </dt>
+
+          <dd class="dd">
+            <span class="ph">Indicates whether successfully sent payload should be automatically cleared by
+              VersaLex.</span>
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd></dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Selected</kbd>
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"> Stream incoming payload direct into the database </dt>
+
+          <dd class="dd"> Indicates whether incoming payload should be streamed directly into the database or
+            through a temporary file.  For Oracle and MySQL, this may need to be turned off
+            depending on specific database and driver versions and configuration.  This option is
+            not available on SQL Server nor DB2, as a filesize must be known prior to initiating the
+            stream. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd>
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Selected</kbd>
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"> Include user inbox subdirectories as incoming database payload </dt>
+
+          <dd class="dd">
+            <p class="p">Indicates whether files stored by a connected HTTP, FTP, or SSH FTP client in a
+              subdirectory of their configured inbox should be inserted into the database.</p>
+
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd><p class="p">When this value is false, only files stored in (or
+              renamed into) the user’s inbox are inserted into the database.</p>
+</dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"> Include user outbox subdirectories as outgoing database payload </dt>
+
+          <dd class="dd">
+            <p class="p">Indicates whether files retrieved by a connected HTTP, FTP, or SSH FTP client in a
+              subdirectory of their configured outbox should be updated in the database.</p>
+
+          </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd><p class="p">When this value is false, only files retrieved
+              from the user’s outbox are updated in the database.</p>
+</dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"> Temporarily suspend incoming/outgoing database payload </dt>
+
+          <dd class="dd"> Indicates whether the database payload feature has been temporarily put on hold by a
+            user. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+              <kbd class="ph userinput">Unselected</kbd></dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+          </dd>
+
+        
+      </dl>
+
+      <ul class="ul" id="databasePayload__ul_bxd_tly_wy">
+        <li class="li">Unlike all other VersaLex configuration parameters, these parameters are stored in the
+          database rather than the conf/Options.xml file.</li>
+
+        <li class="li">Retries are automatically scheduled based on <span class="ph uicontrol">Autosend Retry
+            Attempts</span> and <span class="ph uicontrol">Autosend Restart</span>. See <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a>.</li>
+
+      </ul>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_Databases.html" title="Databases"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Databases</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

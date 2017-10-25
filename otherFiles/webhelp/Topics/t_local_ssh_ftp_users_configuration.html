@@ -1,0 +1,64 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo VLTrader and Cleo Harmony applications only. When starting the SSH FTP server for the first time, no users are defined and therefore no access is granted to your ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Local SSH FTP Users Configuration"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_LocalListenerHeadingPage.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_SSHFTP_Configure_Local_SSHFTP_Users_Dirs.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_Cfg_Access_For_SSH_FTP_User_Host.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_Cfg_Local_SSH_FTP_Users_Mailbox.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_Cfg_LDAP_For_SSH_FTP_User_Mailbox.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_SSH_FTP_Cfg_IP_Filter_For_SSH_FTP_User_Mailbox.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_Cfg_Adv_Props_For_SSH_FTP_User_Mailbox.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_Cfg_Packaging_For_SSH_FTP_User_Mailbox.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_CFG_Local_SSH_FTP_Mailbox_Action_Commands.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_Cfg_Server_Cmd_Reference.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_File_Attributes.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="local_ssh_ftp_users_configuration"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local SSH FTP Users Configuration</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="local_ssh_ftp_users_configuration">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Local SSH FTP Users Configuration</h1>
+
+   <div class="body">
+      <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications
+         only.</div>
+
+      <p class="p">When starting the SSH FTP server for the first time, no
+         users are defined and therefore no access is granted to your server.  To initiate creation
+         of SSH FTP users, first activate the preconfigured Local SSH FTP Users local host. See
+            <a class="xref" href="../Tasks/t_activate_a_pre-configured_host.html">Activate a Host from a Template</a>. To create a new SSH FTP server login,
+            <strong class="ph b">clone</strong> the default "myTradingPartner" or another mailbox.  Local SSH FTP user
+         mailboxes can have actions, but unlike remote host/mailbox actions that perform remote host
+         operations, local SSH FTP user actions can only perform local host operations that
+         manipulate files within the user's home directory.</p>
+
+      <p class="p">Multiple Local SSH FTP Users local hosts may be created allowing users to be grouped
+         together with the same host properties; however, usernames (that is, Local SSH FTP user
+         mailbox names) will remain unique across all Local SSH FTP Users local hosts.</p>
+
+   </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_SSHFTP_Configure_Local_SSHFTP_Users_Dirs.html">Configuring Local SSH FTP User directories</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_Cfg_Access_For_SSH_FTP_User_Host.html">Configure access for SSH FTP host users</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_Cfg_Local_SSH_FTP_Users_Mailbox.html">Configuring Local Mailbox SSH FTP</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_Cfg_LDAP_For_SSH_FTP_User_Mailbox.html">Configure LDAP for Local SSH FTP Mailbox</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_SSH_FTP_Cfg_IP_Filter_For_SSH_FTP_User_Mailbox.html">Configure IP Filter for Local SSH FTP Mailbox</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_Cfg_Adv_Props_For_SSH_FTP_User_Mailbox.html">Local SSH FTP Mailbox Advanced Properties</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_Cfg_Packaging_For_SSH_FTP_User_Mailbox.html">Local SSH FTP Mailbox Packaging</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_CFG_Local_SSH_FTP_Mailbox_Action_Commands.html">Local SSH FTP Mailbox Action Commands</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_Cfg_Server_Cmd_Reference.html">SSH FTP Server Command Reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SSH_FTP_File_Attributes.html">SSH FTP File Attributes</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

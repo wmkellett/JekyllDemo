@@ -1,0 +1,265 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="This section will guide you through the procedure required to complete the first-time installation of LexiCom in the AS/400 Integrated File System.  Create the IFS folder. On a client PC within your ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Integrated File System Installation"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_as_400_install.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_i52_bbx_ds"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Integrated File System Installation</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_i52_bbx_ds">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation">AS/400 Setup and Installation</a> / <a class="navheader_parent_path" href="../Tasks/t_WebUI_as_400_install.html" title="AS/400 Install">AS/400 Install</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_WebUI_as_400_install.html" title="AS/400 Install"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Install</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Integrated File System Installation</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <div class="section context">
+            <p class="p">This section will guide you through the procedure required to complete the first-time
+                installation of LexiCom in the AS/400 Integrated File System. </p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Create the IFS folder.</span>
+                <div class="itemgroup info">
+                    <div class="p">On a client PC within your Local Area Network that has the Client Access
+                        Express for Windows installed and running, use the System i Navigator to
+                        create a new folder named <strong class="ph b">LexiCom</strong> under the AS/400's Root ('/ ')
+                        directory.   <div class="note warning"><span class="warningtitle">Warning:</span> You will not be able to
+                            run <span class="ph">Cleo LexiCom</span>
+                            software on the AS/400 if you name this folder anything other than
+                            LexiCom!</div>
+
+                    </div>
+
+                    
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Define the Authorization List for Accessing the IFS Folder</span>
+                <div class="itemgroup info">
+                    <p class="p">To allow multiple users to successfully run LexiCom and share access to all
+                        log and host files (even to those who did not originally create the files)
+                        without needing to give "All Object" access to any of these users, an
+                        Authorization List may be used to assign Read, Write and Execute privilege
+                        to the /LexiCom folder and all of its subfolders.  To do this, choose the
+                            <span class="ph uicontrol">Security</span> icon in the System i Navigator, select
+                        the <var class="keyword varname">Authorization Lists</var> item and choose the <strong class="ph b">New
+                            Authorization List</strong> option.</p>
+
+                    
+                </div>
+                <ol type="a" class="ol substeps" id="task_i52_bbx_ds__substeps_fy2_nbx_ds">
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Create a <strong class="ph b">LexiCom</strong> Authorization List and select
+                                <span class="ph uicontrol">All</span> under <span class="ph uicontrol">Public
+                                authority</span>.</span>
+                        <div class="itemgroup info">
+                            
+                            <p class="p">A screen similar to the following will be displayed.   Verify that
+                                the <span class="ph uicontrol">All</span> privilege is selected.</p>
+
+                            <p class="p">
+                                <img class="image" id="task_i52_bbx_ds__image_kzl_bbx_ds" src="../Images/image1898.jpg"></img>
+                            </p>
+
+                        </div>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Now add all the users who will be running LexiCom to the Authorization
+                            List and assign them the same <span class="ph uicontrol">All</span>
+                            privilege.</span>
+                        <div class="itemgroup info">
+                            
+                            <div class="note note"><span class="notetitle">Note:</span> The previous steps may also be performed using the
+                                    <span class="keyword cmdname">CRTAUTL</span> and <span class="keyword cmdname">ADDAUTLE</span>
+                                (green screen) commands, if preferred. </div>
+
+                        </div>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Next the /LexiCom folder <var class="keyword varname">and all its subfolders</var> must
+                            be linked with the newly created Authorization List.  Since the System i
+                            Navigator can only link the /LexiCom folder and none of its subfolders,
+                            it will be necessary to open an AS/400 (iSeries/i) “green screen” as the
+                            owner of the /LexiCom folder or a user with either *ALLOBJ or *ALL
+                            access and enter the <span class="keyword cmdname">CHGAUT</span> command as follows:</span>
+                        <div class="itemgroup info">
+                            <p class="p"><samp class="ph codeph">CHGAUT OBJ(‘/LexiCom’) DTAAUT(*RWX) AUTL(LEXICOM)
+                                    SUBTREE(*ALL)</samp></p>
+
+                            <p class="p">If desired, the System i Navigator may be used to verify that the
+                                LexiCom Authorization List has been properly assigned to the
+                                /LexiCom Object. </p>
+
+                            <p class="p">To do this, open the <var class="keyword varname">File Systems</var> tree, and expand
+                                the <var class="keyword varname">Integrated File System</var> entry and then under
+                                the <var class="keyword varname">Root</var> entry, right-click the /LexiCom folder
+                                and choose the <var class="keyword varname">Permissions</var> menu item. </p>
+
+                            
+                            
+                            <p class="p">For additional information refer to the following IBM resources:</p>
+
+                            <p class="p">Authorization Lists overview and how to use the Security folder of
+                                System i Navigator to deal with authorization lists:</p>
+
+                            <p class="p">
+                                <a class="xref" href="http://publib.boulder.ibm.com/html/as400/v4r5/ic2924/index.htm?info/RBAPKCRTAUTL.HTM" target="_blank"><span class="ph">http://publib.boulder.ibm.com/html/as400/v4r5/ic2924/index.htm?info/RBAPKCRTAUTL.HTM</span></a>
+                                <span class="ph"> System i Security Guide Redbook: </span>
+                            </p>
+
+                            <p class="p">
+                                <a class="xref" href="http://www.redbooks.ibm.com/Redbooks.nsf/RedbookAbstracts/sg246668.html?OpenDocument" target="_blank"><span class="ph">http://www.redbooks.ibm.com/Redbooks.nsf/RedbookAbstracts/sg246668.html?OpenDocument</span></a>
+                                <span class="ph"> Managing OS/400 with System i Navigator: Security:</span>
+                            </p>
+
+                            <p class="p">
+                                <a class="xref" href="http://www.redbooks.ibm.com/abstracts/sg246227.html?Open" target="_blank"><span class="ph">http://www.redbooks.ibm.com/abstracts/sg246227.html?Open</span></a>
+                            </p>
+
+                        </div>
+                    </li>
+
+                </ol>
+
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Create the LexiCom File Share.</span>
+                <div class="itemgroup info">
+                    <p class="p">Open i5/OS NetServer and create a file share for the LexiCom folder that you
+                        created above. </p>
+
+                    
+                    
+                    <p class="p">Make sure that the file share has Read/Write access:</p>
+
+                    
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Map the File Share to a Network Drive.</span>
+                <div class="itemgroup info">
+                    <p class="p">Using Windows Explorer, map the new LexiCom file share to any available
+                        network drive. 
+                        </p>
+
+                    
+                    <p class="p">The contents of the shared IFS drive (which will be empty) should appear.</p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Install LexiCom to the Network Drive.</span>
+                <div class="itemgroup info">
+                    <p class="p">If you have the LexiCom installation CD, click on the
+                            <var class="keyword varname">install</var> icon in the CD's root directory.</p>
+
+                    <p class="p">If you do not have the LexiCom installation CD, click on the install.exe file
+                        that you downloaded from the Cleo web site.</p>
+
+                    <div class="note warning"><span class="warningtitle">Warning:</span> As you are installing LexiCom, when prompted to "Choose
+                        Install Folder" do not accept the default value of C:\Program Files\LexiCom.
+                        You must either use the network drive (e.g., L:\) or the network share
+                        (e.g., \\cleo400\LexiCom) that you mapped in the previous step as the
+                        install target.  </div>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Register LexiCom</span>
+                <div class="itemgroup info">
+                    <p class="p">Start LexiCom (from either the Start menu or by double-clicking the
+                        LexiCom.exe application in the /LexiCom IFS folder through Windows Explorer)
+                        from your PC and register your serial number. See 
+                        <a class="xref" href="t_WebUI_register.html">Register your serial number</a>.  </p>
+
+                    <p class="p">
+                        <strong class="ph b">Note:</strong>  Once you have LexiCom installed into its final production
+                        destination, and before the end of your 30-day trial period, you will want
+                        to request your Permanent License. See
+                            <a class="xref" href="t_WebUI_request_a_permanent_license.html">Requesting a Permanent License</a>. </p>
+
+                </div>
+            </li>
+<li class="li step stepexpand" id="task_i52_bbx_ds__step_xk3_wvn_45">
+                <span class="ph cmd">Obtain the Latest Software Updates</span>
+                <div class="itemgroup info">
+                    <p class="p">Run the "Software Update" feature in LexiCom to receive the latest program
+                        and feature enhancements.</p>
+
+                    
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Update Options</span> to select the additional files
+                    needed for the AS/400.</span>
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Check the options to download the "AS400.zip &gt; LexiCom.savf" and the
+                    "jt400.jar" file and select the "Still download even if already at current
+                    release/patch level" option.  </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click
+                    <span class="ph uicontrol">OK</span>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Now click <span class="ph uicontrol">Check for Update</span>.</span>
+                
+                <div class="itemgroup info">
+                    <p class="p">A dialog box appears showing the currently installed version and any newly
+                        available releases or patches.  View and save the software release notes, if
+                        desired and then click <span class="ph uicontrol">Continue</span> to proceed with the
+                        software download. </p>
+
+                    
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Accept the default location of "LexiCom" as the temporary space to store the
+                    downloaded files by clicking
+                    <span class="ph uicontrol">Save</span>.</span>
+                <div class="itemgroup info">
+                    <p class="p">The software download will begin.  You will see a continually updated status
+                        of the download's progress, allowing you to gauge the amount of time that
+                        will be needed for it to complete. </p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">When the download has completed, review and accept the terms of the End-User
+                    Non-Disclosure and License Agreement ("EULA") by selecting the "I accept the
+                    terms of the agreement" check box.   The <span class="ph uicontrol">Continue</span> button
+                    will then be enabled.</span>
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Continue</span> and then click <span class="ph uicontrol">OK</span>
+                    to complete the software upgrade.</span>
+                
+                <div class="itemgroup info">
+                    <p class="p">When the software upgrade has completed, verify that the LexiCom.savf file
+                        and the jt400.jar files have been installed in the /LexiCom IFS folder and
+                        continue to the next  section where the necessary portions of LexiCom for
+                        the AS/400 will be installed in the Native File System.</p>
+
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_WebUI_as_400_install.html" title="AS/400 Install"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Install</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,327 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="You can synchronize user configuration on two or more instances of Cleo Harmony or Cleo VLTrader . Synchronization can involve a production system and one or more redundant backup systems, or it can ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Synchronizing User Configuration on Multiple Instances"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_Network.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="SynchUserConfigOnMultipleVLex"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Synchronizing User Configuration on Multiple Instances</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="SynchUserConfigOnMultipleVLex">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_WebUI_Network.html" title="Network">Network</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Network.html" title="Network"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Network</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Synchronizing User Configuration on Multiple Instances</h1>
+
+   <div class="body taskbody">
+      <div class="section context">
+         <p class="p">You can synchronize user configuration on two or
+            more instances of <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span>. Synchronization can involve a production system and one or more redundant backup
+            systems, or it can involve distributed, non-redundant production systems. To allow for
+            these different system scenarios, you can set up synchronization to include the entire
+            set of user configuration data or a subset. Items available for synchronization
+            include:</p>
+
+         <ul class="ul" id="SynchUserConfigOnMultipleVLex__ul_yxf_32m_gv">
+            <li class="li">Trading partner/CA certificates</li>
+
+            <li class="li">User certificates/private keys</li>
+
+            <li class="li">System options</li>
+
+            <li class="li">Proxy settings</li>
+
+            <li class="li">AS/400 configuration</li>
+
+            <li class="li">Windows/Unix folders configuration</li>
+
+            <li class="li">Schedule</li>
+
+            <li class="li">Routes</li>
+
+            <li class="li">Local Listener</li>
+
+            <li class="li">Hosts</li>
+
+            <li class="li">Trading Partners</li>
+
+         </ul>
+
+         <div class="note note"><span class="notetitle">Note:</span> In the case of backup systems, synchronization is geared towards dedicated, hot
+            backup systems.  This feature is not conducive to a backup system that is also used as a
+            standalone test system.</div>
+
+         <div class="cautiontitle">CAUTION:</div><div class="note caution">To avoid confusion, activate synchronization using the system
+            containing the starting point of the files to be synchronized. This protects you from
+            accidentally clearing configuration data. For example, when adding a synchronized backup
+            to a production system, use the production system to activate synchronization.
+            </div>
+
+         <p class="p">For further protection, before activating synchronization use <span class="ph menucascade"><span class="ph uicontrol">File</span> &gt; <span class="ph uicontrol">Export</span></span> to backup user files. See <a class="xref" href="../Topics/t_ExportImportUserFiles.html">Exporting and importing user files</a>.</p>
+
+         
+      </div>
+
+      <ol class="ol steps" id="SynchUserConfigOnMultipleVLex__steps_tfs_hsf_2r"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">Network</span> &gt; <span class="ph uicontrol">Synchronization</span></span>. In the native UI, select <span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol">Synchronization</span></span> in the menu bar.</span>
+            <div class="itemgroup info">
+               
+               <p class="p">The synchronization table appears. It always includes the active system (<span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span>) indicated by
+                  a dot.  This entry cannot be removed; right-click the entry and select
+                     <span class="ph uicontrol">Edit</span> to modify the <span class="ph uicontrol">Backup Only</span>
+                  setting for this system.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Add a system to be synchronized. </span>
+            <ol type="a" class="ol substeps" id="SynchUserConfigOnMultipleVLex__substeps_qjs_lg3_fy">
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Click <span class="ph uicontrol">Add VLTrader/Harmony</span>.</span>
+                  <div class="itemgroup info">The <span class="ph">Cleo Harmony</span>
+                     Synchronization or <span class="ph">Cleo VLTrader</span>
+                     Synchronization dialog box appears.</div>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Enter the serial number of the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> system to
+                     be synchronized and indicate whether it is a backup system. </span>
+                  <div class="itemgroup info">A backup system should be configured as such. In fact, your license for the
+                     backup system might indicate <kbd class="ph userinput">Backup Only</kbd>, which allows
+                     use as a backup system only. Backup systems are fully operational except for
+                     the following:<div class="note note"><span class="notetitle">Note:</span> While the production system is online, the scheduler can
+                        not be started on the backup system. If the schedule is marked to
+                           <kbd class="ph userinput">Automatically run at startup</kbd>, the schedule will
+                        startup automatically on the backup system if the production system goes
+                        offline and will stop automatically when the production system comes back
+                        online. The same rules apply for the router and outbound database payload
+                        features.</div>
+</div>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Enter the system’s computer name or address and the HTTP or HTTP/s port the
+                     Local Listener for that system is listening on (default is <kbd class="ph userinput">HTTP
+                        5080</kbd>).  Cleo recommends enabling a secure HTTP/s port for
+                     synchronization and in fact will automatically switch to using a secure HTTP/s
+                     port if one exists.</span>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Optional - Add an alias.  If you provide an alias, it is included in the
+                     title bar of the product's main window.  If the <span class="ph">Cleo VLNavigator</span> application
+                     is installed, you can set the alias to be included in the <span class="ph">Cleo VLNavigator</span> application's
+                     title bar by selecting the <span class="ph uicontrol">VLNavigator Alias</span> check box. 
+                  </span>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Optional - enter some information in the <span class="ph uicontrol">Location Note</span>
+                     field. For example, if you are using SNMP, enter a location note that can be
+                     used to describe the location.</span>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Select items to synchronize. You can select items individually, click
+                        <span class="ph uicontrol">All</span> to select them all, or click
+                        <span class="ph uicontrol">None</span> to clear all selections.</span>
+                  <div class="itemgroup info">
+                       <p class="p">Any
+                        combination of synchronized items is allowed, except for the
+                        following:</p>
+<ul class="ul" id="SynchUserConfigOnMultipleVLex__ul_njq_msf_2r">
+                        <li class="li">routes cannot be shared across production systems</li>
+
+                        <li class="li">trading partner/CA certificates and user certificates/private keys must
+                           be shared if hosts are being shared</li>
+
+                        <li class="li">hosts must be shared if the schedule is being shared</li>
+
+                        <li class="li">hosts must be shared across a production and backup system</li>
+
+                        <li class="li">trading partners can only be synchronized if hosts are synchronized</li>
+
+                     </ul>
+</div>
+               </li>
+
+            </ol>
+
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">OK</span>. </span>
+            <div class="itemgroup info">On <span class="ph">Cleo VLTrader</span> systems,
+               a confirmation dialog box appears.  Click <span class="ph uicontrol">Yes</span> to continue. </div>
+            <div class="itemgroup info">On <span class="ph">Cleo Harmony</span>
+               systems, the <span class="keyword wintitle">Synchronization Username/Password entry</span> dialog box
+               appears because <span class="ph">Cleo Harmony</span> installs
+               require an additional level of security to sync with another node.  Enter the user
+               name and password for the system you are connecting to. The user you enter must have
+               editable privileges to the system tree. Click <span class="ph uicontrol">OK</span> to continue.  </div>
+            <div class="itemgroup info">For both <span class="ph">Cleo VLTrader</span> and
+                  <span class="ph">Cleo Harmony</span> systems,
+               another dialog box appears allowing you to confirm that the existing user
+               configuration on this system should be the starting point for both systems.</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Yes</span> to continue with synchronization.</span>
+            
+            <div class="itemgroup info">At this point, the systems connect and the synchronization parameters on the other
+               side are automatically configured to match. If any network or port address
+               translations (NAT or PAT) are being used between the two systems, the user might need
+               to adjust the address and port of the automatically configured side for connecting
+               back.</div>
+            <div class="itemgroup info">
+               <p class="p">When hosts are being synchronized, message IDs and receipts are also automatically
+                  synchronized for applicable protocols, including AS2/AS3, ebMS, OFTP and SMTP.</p>
+
+               <ul class="ul" id="SynchUserConfigOnMultipleVLex__ul_dvr_gtf_2r">
+                  <li class="li">Sharing received message IDs ensures that duplicate messages can be detected
+                     from any of the synchronized instances of the product, not just the instance
+                     receiving the original message.</li>
+
+                  <li class="li">When a duplicate message ID is detected, sharing sent receipts allows the
+                     original receipt to be returned when dictated by the protocol.</li>
+
+                  <li class="li">Sharing received receipts ensures that the system that originally requested
+                     the receipt receives it.  This allows message completion to be properly
+                     recorded and avoids the potential for false receipt timeouts and unnecessary
+                     resends of payload.</li>
+
+                  <li class="li">Sharing all sent and received receipts allows the full complement of receipts
+                     to be available and viewable on any of the synchronized systems.  (However,
+                     sent receipts are permanently saved only if the Local Listener’s
+                        <span class="ph uicontrol">Save Sent MDN/Ack/EERP</span> Advanced property is
+                     enabled.)</li>
+
+                  <li class="li">Pending payload and receipt messages are NOT synchronized across systems,
+                     which means:<ul class="ul" id="SynchUserConfigOnMultipleVLex__ul_wgb_ktf_2r">
+                        <li class="li">Resending payload messages when the asynchronous receipt timeout expires
+                           is not synchronized.</li>
+
+                        <li class="li">Resending asynchronous receipts that fail to be sent is not
+                           synchronized.</li>
+
+                     </ul>
+</li>
+
+               </ul>
+
+               <p class="p">Unlike configured synchronization items where the user must indicate which system
+                  contains the starting point, any recent messages IDs and receipts on either system
+                  are immediately shared when the synchronized systems are initialized. For systems
+                  already in production for some time, initial synchronization of message IDs and
+                  receipts may take an extended period (and this period may be CPU intensive on
+                  lower-end systems).</p>
+
+               <p class="p">The status displayed in the synchronization dialog box indicates what is currently
+                  being synchronized from this system to the other system. The status will also
+                  reflect when there is a connection error or a synchronization
+                  error. The status will eventually hold steady at <samp class="ph msgph">Waiting
+                     for sync requests</samp> once initial synchronization has successfully
+                  completed.</p>
+
+            </div>
+            <div class="itemgroup info">
+               
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Once initial synchronization is complete, you can modify synchronized items on any
+               system and the update will be applied to the other instances of the product,
+               regardless of where it was originally configured and regardless of whether it is a
+               production or backup system. However, a warning dialog box is displayed whenever an
+               update of a synchronized item is attempted from a backup system.  Click
+                  <span class="ph uicontrol">Yes</span> to continue.</span>
+            
+            <div class="itemgroup info"> Modified items are immediately synchronized. If a synchronized system is
+               currently down, then a modified item is queued for synchronization for when the
+               system comes back online.</div>
+         </li>
+<li class="li step stepexpand"><span class="ph cmd">If errors occur, resolve them. Collisions can occur if users on two synchronized systems both
+               update an item at the same time. If the same item is updated on both systems while
+               the other system is offline, collisions will also occur when both systems are brought
+               back online.  An error message is generated and provides instructions to resolve the
+               issue. Follow the instructions in the error message. A dialog box is displayed to
+               allow you to continue.</span><div class="itemgroup info">
+               
+               
+            </div></li>
+<li class="li step stepexpand"><span class="ph cmd">In the dialog box, click <span class="ph uicontrol">Just Resolve Errors</span> to display a dialog box
+               where you can select the errors you want to resolve.</span>
+            </li>
+<li class="li step stepexpand"><span class="ph cmd">Select <span class="ph uicontrol">Sync Now</span> check box for the errors you want to resolve and then click <span class="ph uicontrol">OK</span>. The version of the file from this instance of the product is then synchronized with the other instance.</span><div class="itemgroup info">Synchronization can also fail if the file being synchronized is somehow marked as read-only or if a host is being synchronized and the host is currently running. These failures must also be manually resolved.</div></li>
+<li class="li step stepexpand"><span class="ph cmd">If a synchronized system has been offline for an extended period of time, an error message
+               might be displayed. </span><div class="itemgroup info">
+               <p class="p">If the still-online system is a backup system and the schedule is configured to run
+                  automatically, a warning might also be logged.</p>
+
+               <p class="p">You can configure the amount of time before failover the native UI at <span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Other</span> &gt; <span class="ph uicontrol">Synchronized Backup Failover</span></span> or in the web UI at <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">System</span> &gt; <span class="ph uicontrol">Other</span> &gt; <span class="ph uicontrol">Synchronized Backup Failover</span></span>. Failover defaults to 5 minutes. The connection failure exception
+                  is logged halfway through the failover wait period, so the connection failure is
+                  logged by default after 2.5 minutes, and failover occurs after 2.5 more
+                  minutes.</p>
+<ul class="ul" id="SynchUserConfigOnMultipleVLex__ul_mv2_g5f_2r"><li class="li">If there are multiple backup systems being synchronized with the production system, the schedule is automatically started on whichever online backup system has the lowest serial number.  (If also configured, the router and outbound db payload features are also started.)</li>
+<li class="li">If there are multiple production systems synchronizing the schedule, the online production system with the lowest serial number is the "master" scheduler, and load balances scheduled actions across the other online productions systems.  If a production system should go offline, an online backup system is added to the load balancing pool.  If all the production systems should go offline, the online backup system with the lowest serial number becomes the "master" scheduler.  (If also configured, the outbound db payload feature also loads balances in a similar fashion.)</li>
+</ul>
+</div></li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Should this become necessary, configuration items to be synchronized can be added
+               or removed at any time. If making additions, it is recommended that this be done on
+               the system containing the desired starting point of the configuration files being
+               added. Go back to <span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol"> Synchronization</span></span> in the native UI or <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">Network</span> &gt; <span class="ph uicontrol">Synchronization</span></span> in the web UI, right-click the serial number of the other instance,
+               and select <span class="ph uicontrol">Edit</span>. Then make the necessary modifications and
+               click <span class="ph uicontrol">OK</span>.  </span>
+            <div class="itemgroup info">
+               <p class="p">If synchronization items were added, again you will be asked if the existing user
+                  configuration for the item added on this instance should be the starting point for
+                  both systems.</p>
+
+               
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Synchronization with another instance can be temporarily disabled at any time by
+               editing the configuration. When synchronization is re-enabled, if you chose to
+               accumulate updates, any items modified while synchronization was disabled are
+               immediately synchronized.</span>
+            <div class="itemgroup info">
+               <p class="p">Synchronization is automatically disabled should the product software versions
+                  become mismatched and automatically re-enabled once the versions are again
+                  aligned.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If synchronization between two systems becomes unnecessary, you can remove it by
+               going to the <span class="ph uicontrol">Synchronization</span> panel, right-clicking the serial
+               number of the other instance, and selecting <span class="ph uicontrol">Remove</span>
+            </span>
+            <div class="itemgroup info">
+               <div class="note note"><span class="notetitle">Note:</span> If more than two instances are being synced and one needs to be removed from
+                  synchronization, it is best to temporarily disable the sync relationship on each
+                  instance before removing (otherwise, depending on timing, the relationship can get
+                  automatically added back in shortly after being removed). </div>
+
+               <div class="cautiontitle">CAUTION:</div><div class="note caution">For high throughput systems using a receipt protocol (AS2/3,
+                  ebMS, OFTP, SMTP), if one of the synchronized systems will be off-line for an
+                  extended period of time (for example, hardware being repaired/replaced), it might
+                  be best to disable the synchronization configuration from the system still online
+                  until the offline system is again available. When disabling, be sure to choose to
+                  not accumulate updates and instead re-initialize later. Doing this will save the
+                  system still online from having to maintain a large synchronization queue and from
+                  having to delay archiving a large number of receipts. </div>
+
+            </div>
+         </li>
+</ol>
+
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Network.html" title="Network"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Network</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="AS/400 System Requirements Please Note:  Cleo LexiCom 5.1 requires the use of Java 7 that is only available on IBM i7.1 and IBM i7.2.  Therefore, LexiCom 5.1 (and beyond) can no longer be supported on ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="AS/400 Getting Started"></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_as_400_setup_and_installation.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="as_400_getting_started"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS/400 Getting Started</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="as_400_getting_started">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_FileSystem.html" title="File System">File System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation">AS/400 Setup and Installation</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">AS/400 Getting
+                    Started</h1>
+
+   
+   <div class="body">
+      <div class="section"><h2 class="title sectiontitle">AS/400
+            System Requirements</h2></div>
+
+      <p class="p">Please Note:  <span class="ph">Cleo LexiCom</span> 5.1
+         requires the use of Java 7 that is only available on IBM i7.1 and IBM i7.2.  Therefore,
+         LexiCom 5.1 (and beyond) can no longer be supported on IBM i6.1. </p>
+
+      <p class="p">
+         <span class="ph">Visit</span>
+         <a class="xref" href="http://www.cleo.com/support/byproduct/lexicom/sysreqs-AS400.asp" target="_blank">
+            <span class="ph">www.cleo.com/support/byproduct/lexicom/sysreqs-AS400.asp</span>
+         </a>
+         <span class="ph">for current system requirements.</span>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Determining Your Currently Licensed AS/400 Products</h2>
+         
+      </div>
+
+      <p class="p">To display an inventory of the software that is installed on your system, type the command:
+            <strong class="ph b">DSPSFWRSC</strong>
+      </p>
+
+      <p class="p">Verify that <strong class="ph b">Java SE 8 64 bit (Option 17, Feature 5117)</strong> is installed on the AS/400.
+            <em class="ph i">If it is not present, it <u class="ph u">must</u> be downloaded from the IBM web site and
+            installed before proceeding any further.</em> Refer to <a class="xref" href="http://www-01.ibm.com/support/docview.wss?uid=nas8N1011217" target="_blank">http://www-01.ibm.com/support/docview.wss?uid=nas8N1011217</a> for
+         further information. Note that the instructions at this web site refer to JDK 7 (JV1
+         Options 14 and 15), but the same procedure should be used to download JDK 8 (JV1 Options 16
+         and 17).</p>
+
+      <p class="p">To determine the Java Group PTF level on your system, type the following command:    </p>
+
+      <p class="p">
+         <var class="keyword varname">For IBM i 7.1 V7R1:      </var>
+         <strong class="ph b">
+            <span class="ph">WRKPTFGRP</span>
+         </strong>
+         <strong class="ph b">
+            <span class="ph">SF99572</span>
+         </strong>
+      </p>
+
+      <p class="p">
+         <var class="keyword varname">For IBM i 7.2 V7R2:      </var>
+         <strong class="ph b">
+            <span class="ph">WRKPTFGRP</span>
+         </strong>
+         <strong class="ph b">
+            <span class="ph">SF99716</span>
+         </strong>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Obtaining Program Temporary Fixes (PTFs) for Your AS/400</h2>
+         
+      </div>
+
+      <p class="p">IBM recommends that you regularly apply updated PTFs to your system to maintain optimal
+         system performance.  To find information on downloading and ordering Program Temporary
+         Fixes (PTFs), Client Access, Group PTFs and a wealth of other information to help you
+         manage your AS/400, use the IBM Web site:</p>
+
+      <p class="p">
+         <a class="xref" href="http://www.ibm.com/servers/eserver/support/iseries/index.html" target="_blank">http://www.ibm.com/servers/eserver/support/iseries/index.html</a>
+      </p>
+
+      <div class="section"><h2 class="title sectiontitle">Installation and Operation Pre-requisites</h2>
+         
+      </div>
+
+      <p class="p">Before you can successfully install and run LexiCom on the AS/400, you must verify that the
+         following additional requirements are met:</p>
+
+      <ol class="ol" id="as_400_getting_started__ol_ohp_zlw_ds">
+         <li class="li">TCP/IP must be properly configured on the AS/400 and connectivity between a client PC
+            and the AS/400 must be established and working correctly.</li>
+
+         <li class="li">The host and domain name must be correctly defined on the AS/400. To verify or
+            configure the AS/400's host and domain name, type <strong class="ph b">
+               <span class="ph">GO CFGTCP</span>
+            </strong>and choose option 12.   Enter your AS/400's values in the <strong class="ph b">Host name</strong> and
+               <strong class="ph b">Domain name</strong>
+            fields.</li>
+
+         <li class="li">The DNS (Domain Name System) must be properly configured to successfully resolve host
+            names.    Without DNS configured properly, LexiCom will only be able to send messages to
+            IP addresses.  To configure DNS, type <strong class="ph b">
+               <span class="ph">GO CFGTCP</span>
+            </strong> and choose option 12 and enter the IP address of your <strong class="ph b">Domain Name Server</strong>. 
+            </li>
+
+         <li class="li">Add a host table entry for the AS/400's IP address and host name by typing <strong class="ph b">
+               <span class="ph">GO CFGTCP</span>
+            </strong> and choosing option 10 (Work with TCP/IP host table entries).  You should also have
+            a LOOPBACK entry that points to the LOCALHOST at 127.0.0.1.  
+            </li>
+
+         <li class="li">The i5/OS NetServer must be properly configured on the AS/400.  NetServer allows
+            support for Windows Network Neighborhood and allows you to map directories in the AS/400
+            file system to shared drives accessible through your Windows environment.  If the
+            NetServer has not already been started, the command <strong class="ph b">STRTCPSVR *NETSVR</strong> should be
+            entered to start this server.</li>
+
+         <li class="li">Client Access Express for Windows (or its equivalent) and the latest Service Pack must
+            be installed and configured on at least one PC in your Local Area Network.   Once
+            LexiCom is properly installed, any PC in the network (with the appropriate privileges
+            and object authority) will be able to access the shared IFS drive and view the LexiCom
+            UI. </li>
+
+         <li class="li">The System i Navigator (or its equivalent) must be installed on at least one PC in your
+            Local Area Network, and preferably on the PC where LexiCom will be installed.  System i
+            Navigator is only required for creating file shares (using i5/OS NetServer) but is also
+            useful for viewing System i functions with a graphical user interface. The examples in
+            the following sections use System i Navigator for its illustrations; however you are
+            under no obligation to use it if you prefer using comparable AS/400 native
+            commands.</li>
+
+         <li class="li">The QUTCOFFSET system value must be properly set for your time zone. This value is the
+            offset from Greenwich Mean Time and is used to correctly display and log the local time
+            of your AS/400.  If not properly set, the times displayed in the LexiCom log will not
+            reflect your current system time. To view this offset, type <strong class="ph b">
+               <span class="ph">DSPSYSVAL QUTCOFFSET</span>
+            </strong> on the AS/400. If it is incorrect, verify the <strong class="ph b">QTIMZON</strong> system value is set
+            appropriately for your local time zone.</li>
+
+      </ol>
+
+      <div class="section"><h2 class="title sectiontitle">Obtaining Additional Information from IBM</h2>
+         
+      </div>
+
+      <p class="p">Use the IBM i and System i Information Center as your starting point for looking up AS/400
+         technical information.  You can access the Information Center from the following web site:
+            <a class="xref" href="https://www-304.ibm.com/support/knowledgecenter/ssw_ibm_i_71/rzahg/icmain.htm" target="_blank">https://www-304.ibm.com/support/knowledgecenter/ssw_ibm_i_71/rzahg/icmain.htm</a>.</p>
+
+      <p class="p">With your hardware order, you should have received digital media on a DVD labelled
+            <strong class="ph b">System i Access for Windows</strong> that contains the IBM i Access for Windows licensed
+         program.</p>
+
+      <p class="p">Use the Client Access Web site as a general source of information on Client Access:
+            <span class="ph">http://www-03.ibm.com/systems/power/software/i/access/windows/os.html</span>
+      </p>
+
+      <p class="p">Use the NetServer Web site for general information as well as links to installation and
+         configuration information: <a class="xref" href="http://www.ibm.com/eserver/iseries/netserver/" target="_blank">http://www.ibm.com/eserver/iseries/netserver/</a>
+      </p>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

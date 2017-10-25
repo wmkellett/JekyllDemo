@@ -1,0 +1,198 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="In the Advanced tab: Click the Advanced tab. Specify values for the following properties as needed. Page Size Use this option to specify the number of nodes on a page. Changes to these settings in a ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Advanced Properties"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_ymb_3sb_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Advanced Properties</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_ymb_3sb_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service">Local Listener Web Browser Service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener Web Browser Service</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Configuring Advanced Properties</h1>
+
+    <div class="body taskbody">
+        <div class="section context">
+            <p class="p">In the <span class="keyword wintitle">Advanced</span> tab:</p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Click the
+                        <span class="keyword wintitle">Advanced</span> tab.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Specify values for the following properties as needed.</span>
+                <div class="itemgroup info">
+                    <dl class="dl">
+                        
+                            <dt class="dt dlterm">Page Size</dt>
+
+                            <dd class="dd">Use
+                                this option to specify the number of nodes on a page.</dd>
+
+                            <dd class="dd">Changes to these settings in a web UI session are immediately
+                                applied to the session so that the optimal values can be determined
+                                - other active web UI sessions must explicitly refresh the tree
+                                (right-click in whitespace around tree).  To match previous versions
+                                of the <span class="ph">Cleo Harmony</span> application when these settings were not
+                                configurable, set them as follows:<dl class="dl">
+                                    
+                                        <dt class="dt dlterm"><span class="ph uicontrol">Top Level</span></dt>
+
+                                        <dt class="dt dlterm"><span class="ph uicontrol">Host Subfolders</span></dt>
+
+                                        <dd class="dd">The number of nodes displayed per page for top level and
+                                            host subfolders trees.<div class="note note"><span class="notetitle">Note:</span> These settings apply to <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only</div>
+</dd>
+
+                                    
+                                    
+                                        <dt class="dt dlterm">Within Hosts</dt>
+
+                                        <dd class="dd">The number of nodes displayed per page for the active
+                                            and template hosts tree in the main window.</dd>
+
+                                    
+                                    
+                                        <dt class="dt dlterm"><span class="ph uicontrol">Certificates</span></dt>
+
+                                        <dd class="dd">The number of nodes displayed per page for the
+                                            certificates tree in <span class="ph menucascade"><span class="ph uicontrol">Administration  &gt;
+                                                  Certificates</span></span> in the web UI or in  <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Certificate Manager</span></span> in the native UI. </dd>
+
+                                    
+                                </dl>
+</dd>
+
+                        
+                        
+                            <dt class="dt dlterm">Session Timeouts - Harmony/VLNavigator</dt>
+
+                            <dd class="dd">These properties applies to the <span class="ph">VersaLex</span> and <span class="ph">Cleo VLNavigator</span>
+                                applications only. <dl class="dl">
+                                    
+                                        <dt class="dt dlterm">Initial startup</dt>
+
+                                        <dd class="dd">The time allotted for launching a new web browser
+                                            session. Default value: 120 seconds.</dd>
+
+                                    
+                                    
+                                        <dt class="dt dlterm">Waiting for response</dt>
+
+                                        <dd class="dd">The maximum time allowed waiting for server response to
+                                            a browser request. Default value: 120 seconds.</dd>
+
+                                    
+                                    
+                                        <dt class="dt dlterm">Abnormal exit detection</dt>
+
+                                        <dd class="dd">The time allowed without a web UI ping before the
+                                            session is shutdown by the server seconds. Default
+                                            value: 60 seconds.</dd>
+
+                                    
+                                </dl>
+</dd>
+
+                        
+                        
+                            <dt class="dt dlterm">Session Timeouts - VLPortal</dt>
+
+                            <dd class="dd">This property applies only to VLPortal.<dl class="dl">
+                                    
+                                        <dt class="dt dlterm">Inactivity Timeout</dt>
+
+                                        <dd class="dd">The maximum time allowed while logged into the web
+                                            portal without any user activity before the session is
+                                            expired (default 600 seconds).  <div class="note note"><span class="notetitle">Note:</span> If you have
+                                                configured your portal users to use the applet, this
+                                                value should be set large enough to cover the entire
+                                                duration that a user may have an applet window
+                                                active.</div>
+</dd>
+
+                                    
+                                </dl>
+</dd>
+
+                        
+                        
+                            <dt class="dt dlterm">Response Headers</dt>
+
+                            <dd class="dd">Additional response headers (primarily for required security
+                                headers) for the web UIs as a whole. Enter a new header on each
+                                line. </dd>
+
+                            <dd class="dd">Possible headers include:<ul class="sl simple">
+                                    <li class="sli"><samp class="ph codeph">X-XSS-Protection: 1; mode=block</samp></li>
+
+                                    <li class="sli"><samp class="ph codeph">X-Content-Type-Options: nosniff</samp></li>
+
+                                    <li class="sli"><samp class="ph codeph">Cache-Control: no-store </samp></li>
+
+                                    <li class="sli"><samp class="ph codeph">Content-Security-Policy: "script-src
+                                            'self'"</samp></li>
+
+                                </ul>
+</dd>
+
+                            <dd class="dd">If you specify <samp class="ph codeph">X-Frame-Options</samp>, for those web UIs
+                                where IFrames are used (for example, Cleo Harmony and Cleo
+                                VLTrader), a value of <samp class="ph codeph">DENY</samp> is automatically changed
+                                to <samp class="ph codeph">SAMEORIGIN</samp>.</dd>
+
+                            <dd class="dd">If you specify <samp class="ph codeph">Content-Security-Policy</samp>, for those
+                                web UIs where inline scripts are used(for example, Cleo Harmony and
+                                Cleo VLTrader), a <samp class="ph codeph">script-src</samp> directive is added if
+                                not already present, and includes <samp class="ph codeph">'unsafe-inline'</samp>.
+                                If the directive already exists, <samp class="ph codeph">'unsafe-inline'</samp> is
+                                automatically inserted into directive.</dd>
+
+                        
+                        
+                            <dt class="dt dlterm">Debug Settings</dt>
+
+                            <dd class="dd">
+                                <dl class="dl">
+                                    
+                                        <dt class="dt dlterm">Append service debug to system debug file</dt>
+
+                                        <dd class="dd">Select the check box to log debug information into the
+                                                <span class="ph">Cleo Harmony</span> system debug file.</dd>
+
+                                    
+                                    
+                                        <dt class="dt dlterm">Create individual client debug files</dt>
+
+                                        <dd class="dd">Select the check box to create a new HTML client debug
+                                            file (stored in <span class="ph filepath">logs\</span> under the <span class="ph">Cleo Harmony</span> home directory) for every JVM
+                                            instance.</dd>
+
+                                    
+                                </dl>
+
+                            </dd>
+
+                        
+                    </dl>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">Apply</span>.</span>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener Web Browser Service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

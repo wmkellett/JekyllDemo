@@ -1,0 +1,210 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo VLTrader and Cleo Harmony applications only. In the web UI, go to Administration &gt; Monitoring &gt; Transfers . In the native UI, click Transfers from the menu bar. ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Transfers"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_Monitoring.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_CfgSysOpts_FileTracking.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="TransfersMonitoringConfig"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Transfers</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="TransfersMonitoringConfig">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring">Monitoring</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Monitoring</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Transfers</h1>
+
+  <div class="body">
+    <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications
+      only.</div>
+
+    
+    <p class="p">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">Monitoring</span> &gt; <span class="ph uicontrol">Transfers</span></span>. In the native UI, click <span class="ph uicontrol">Transfers</span> from the menu
+      bar.</p>
+
+    <p class="p">This panel is used to determine if and how transfers are recorded. The following describes
+      the different parameters available. The <strong class="ph b">Database</strong> and <strong class="ph b">XML File</strong> sections are
+      dimmed based on the Transfer Logging option you select.</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Transfer Logging</dt>
+
+        <dd class="dd">Determines if Transfer Logging is enabled and whether a database or xml files are to be
+          used.</dd>
+
+        <dd class="dd">Possible values: <kbd class="ph userinput">Off</kbd>, <kbd class="ph userinput">Database</kbd>, or
+            <kbd class="ph userinput">XML File</kbd></dd>
+
+        <dd class="dd">Default value: <kbd class="ph userinput">Off</kbd></dd>
+
+      
+      
+        <dt class="dt dlterm">Transfer Database</dt>
+
+        <dd class="dd">The following fields are enabled when you select <kbd class="ph userinput">Database</kbd> from
+          the <span class="ph uicontrol">Transfer Logging</span> menu.<dl class="dl">
+            
+              <dt class="dt dlterm">Database</dt>
+
+              <dd class="dd">A menu from which you select the database to use for transfer logging.</dd>
+
+              <dd class="dd">Available databases are configured in the Databases tab. See <a class="xref" href="t_WebUI_CfgSysOpts_Databases.html">Databases</a></dd>
+
+            
+            
+              <dt class="dt dlterm">Test Database Connection</dt>
+
+              <dd class="dd">Click this button to attempt to create a database connection using the selected
+                database. The system will indicate success or failure.</dd>
+
+            
+            
+              <dt class="dt dlterm">Export Database Definition</dt>
+
+              <dd class="dd">Click this button to export SQL statements used to create the database tables for
+                the specified Driver String and selected EDI and payload options to be exported to
+                an SQL script file.</dd>
+
+              <dd class="dd">The file will contain all or most of the following DDL statements:<ul class="sl simple">
+                  <li class="sli"><samp class="ph codeph">CREATE TABLE</samp></li>
+
+                  <li class="sli"><samp class="ph codeph">ALTER TABLE</samp></li>
+
+                  <li class="sli"><samp class="ph codeph">CREATE</samp></li>
+
+                  <li class="sli"><samp class="ph codeph">CREATE TRIGGER</samp></li>
+
+                </ul>
+<p class="p">You can modify these statements (for example, use a specific table space or
+                  change/remove a trigger or foreign key), but the table names and columns must be
+                  left exactly as is.  You can use the modified script to create a modified VersaLex
+                  database.  If VersaLex itself has already created the standard database, you might
+                  need to add <samp class="ph codeph">DROP</samp> statements to the beginning of the
+                script.</p>
+</dd>
+
+            
+            
+              <dt class="dt dlterm">Automatically purge logged transfers older than <var class="keyword varname">n</var> day(s)</dt>
+
+              <dd class="dd">When enabled, VersaLex will purge the database every 8 hours of logged transfers
+                older than the configured number of days.</dd>
+
+              <dd class="dd">Possible values: <kbd class="ph userinput">Selected</kbd> or
+                  <kbd class="ph userinput">Unselected</kbd>, plus a value for number of days greater than or
+                equal to <kbd class="ph userinput">1</kbd>
+              </dd>
+
+              <dd class="dd">Default value: <kbd class="ph userinput">Unselected</kbd></dd>
+
+            
+            
+              <dt class="dt dlterm">Update Frequency</dt>
+
+              <dd class="dd">While the transfer is in-process, the frequency (in seconds) with which the
+                database is updated with the current transfer bytes and seconds. Set this value to
+                  <kbd class="ph userinput">0</kbd> to disable in-process updates.</dd>
+
+              <dd class="dd">Possible values: <kbd class="ph userinput">0</kbd> or a value greater than or equal to
+                  <kbd class="ph userinput">1</kbd>. </dd>
+
+              <dd class="dd">Default value: <kbd class="ph userinput">1</kbd></dd>
+
+            
+            
+              <dt class="dt dlterm">Track file content</dt>
+
+              <dd class="dd">Enables tracking feature where identifier and transactional data within EDI, XML
+                and text files can be tracked.  All tracked data is stored in additional database
+                tables. See <a class="xref" href="t_transfer_database_fields.html">Transfer Database Fields</a>.</dd>
+
+              <dd class="dd">Once enabled, click <span class="ph uicontrol">Configure</span> to provide more information
+                about tracking options. See <a class="xref" href="t_WebUI_CfgSysOpts_FileTracking.html">File Tracking</a>.</dd>
+
+              <dd class="dd">Possible values: <kbd class="ph userinput">Selected</kbd> or
+                  <kbd class="ph userinput">Unselected</kbd></dd>
+
+              <dd class="dd">Default value: <kbd class="ph userinput">Unselected</kbd></dd>
+
+            
+            
+              <dt class="dt dlterm">Use the database for incoming/outgoing payload</dt>
+
+              <dd class="dd">Extended transfer feature that uses the database as the payload repository rather
+                than the file system. </dd>
+
+              <dd class="dd">Once enabled, click <span class="ph uicontrol">Configure</span>. See <a class="xref" href="t_WebUI_CfgSysOpts_DBPayload.html">Database Payload</a></dd>
+
+              <dd class="dd">Possible values: <kbd class="ph userinput">Selected</kbd> or
+                  <kbd class="ph userinput">Unselected</kbd></dd>
+
+              <dd class="dd">Default value: <kbd class="ph userinput">Unselected</kbd></dd>
+
+            
+            
+              <dt class="dt dlterm">Temporarily disable transfer database</dt>
+
+              <dd class="dd">While disabled, transfers are saved to disk and logged once the database is again
+                available.  This includes both base transfer and additional EDI log entries. You can
+                set a limit to the number of transfer log entries to save while the database is
+                unavailable. See <cite class="cite">Maximum Saved Database Transfer Log Entries</cite> in <a class="xref" href="t_CfgSysOpts_Other.html">Other</a>.</dd>
+
+              <dd class="dd">Possible values: <kbd class="ph userinput">Selected</kbd> or
+                  <kbd class="ph userinput">Unselected</kbd></dd>
+
+              <dd class="dd">Default value: <kbd class="ph userinput">Unselected</kbd></dd>
+
+            
+            
+              <dt class="dt dlterm">Additional Serial Numbers</dt>
+
+              <dd class="dd">When using database transfer logging, transfers from other VersaLex installs can
+                be added to transfer reports (see <a class="xref" href="../Tasks/t_view_status_of_transfers.html">View Status of Transfers</a>) and
+                Dashboards(see <a class="xref" href="t_cleo_dashboards.html">Cleo Dashboards</a>. </dd>
+
+              <dd class="dd">Possible values: Valid product serial numbers.  You can enter multiple serial
+                numbers separated by commas.</dd>
+
+            
+          </dl>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Transfer XML File</dt>
+
+        <dd class="dd">The following field is enabled when you select <kbd class="ph userinput">XML File</kbd> from the
+            <span class="ph uicontrol">Transfer Logging</span> menu. <dl class="dl">
+            
+              <dt class="dt dlterm">Number of days before archiving the XML log</dt>
+
+              <dd class="dd">Each day’s transfers are logged to a separate file. This option defines the number
+                of days before the transfer history is archived.</dd>
+
+              <dd class="dd">Possible values: Integers greater than <kbd class="ph userinput">0</kbd> to represent whole
+                day increments.</dd>
+
+              <dd class="dd">Default value: <kbd class="ph userinput">3</kbd></dd>
+
+            
+          </dl>
+</dd>
+
+      
+    </dl>
+
+    
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_WebUI_CfgSysOpts_FileTracking.html">File Tracking</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Monitoring</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

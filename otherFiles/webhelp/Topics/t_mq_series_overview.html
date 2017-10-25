@@ -1,0 +1,79 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="IBM MQSeries (also known as WebSphere MQ or IBM MQ) is a widely used means of guaranteed message delivery. It uses Queue Managers containing local (and sometimes remote) message queues to send and ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="MQ Series Overview"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_mq_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="mq_series_overview"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>MQ Series Overview</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="mq_series_overview">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_mq_hosts.html" title="MQ Hosts">MQ Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_mq_hosts.html" title="MQ Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MQ Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">MQ Series Overview</h1>
+
+   
+   <div class="body">
+      <p class="p">IBM MQSeries (also known as WebSphere MQ or IBM MQ) is a widely used
+         means of guaranteed message delivery. It uses Queue Managers containing local (and
+         sometimes remote) message queues to send and receive message data. MQSeries uses a
+         store-and-forward mechanism to transport the message data. If the remote Queue Manager is
+         not available, the local Queue Manager retains the message until the remote Queue Manager
+         is ready to receive it. Messages that cannot be delivered can eventually be stored in a
+         dead letter queue.</p>
+
+      <p class="p">Messages are put on queues and are generally retrieved on a First-In-First-Out (FIFO)
+         basis. MQSeries also allows the use of a message-priority field (per-message) to put
+         higher-priority messages at the front of the queue. User authentication and message
+         security can also be applied to the sending and receiving channels. </p>
+
+      <p class="p">IBM MQSeries includes a Java client API that allows an application (such as the <span class="ph">Cleo Harmony</span> application) to programamtically connect to a Queue Manager using
+         server-connection channels to PUT, GET and LIST messages on queues from either a local or
+         remote Queue Manager.  These Java client API files are included as part of the <span class="ph">Cleo Harmony</span> installation.</p>
+
+      <p class="p">There are two ways to access a partner's queues:</p>
+
+      <ol class="ol" id="mq_series_overview__ol_ddr_5g2_p5">
+         <li class="li"><strong class="ph b">Queue Manager to Queue Manager</strong>: Messages are written to a remote queue (QR) on
+            the user's local Queue Manager (QMGR1) that maps to a local queue (QL) on the remote
+            Queue Manager (QMGR2). Messages are transported over the internet via uni-directional
+            sender (SDR) and receiver (RCVR) channels. If required, MQSeries automatically converts
+            the data to the target queue manager's understood data format. If the remote queue
+            manager (QMGR2) is unavailable, the sender channel is not running, or the message cannot
+            be delivered for any other reason, the message is retained in either the transmission
+            queue (XMIT) or the dead-letter queue (DLQ) on the local Queue Manager (QMGR1).  The
+            user must implement additional monitoring to periodically check the depth of these
+            queues and take the appropriate action.  <p class="p">
+               <img class="image" id="mq_series_overview__image_flr_5g2_p5" src="../Images/image1067.jpg"></img>
+            </p>
+</li>
+
+         <li class="li"><strong class="ph b">Direct Connection to the Queue Manager</strong>: Messages are sent to and received from
+            local queues (QL) on a Queue Manager (QMGR1) using bi-directional server-connection
+            channels (SVRCONN). User authentication and message encryption security (SSL) can be
+            applied to server-connection channels, if desired. This access method does not take
+            advantage of the store-and-forward mechanism; however, if the Queue Manager is not
+            available, an error will occur in the client and the message transport will be re-tried
+            at a later time.  Additionally, if required, the Java MQ client API allows for automatic
+            conversion of the data to the target Queue Manager's understood data format.  </li>
+
+      </ol>
+
+      <p class="p">
+         <img class="image" src="../Images/image1069.jpg"></img>
+      </p>
+
+      <p class="p">Either of these methods can be used with <span class="ph">VersaLex</span>. Using this section,
+         decide which method fits your requirements and configure your Queue Manager(s) and MQ Host
+         appropriately.  </p>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_mq_hosts.html" title="MQ Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MQ Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

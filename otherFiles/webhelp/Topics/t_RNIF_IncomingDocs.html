@@ -1,0 +1,110 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Incoming messages can be written in several formats. The raw content can be written as a stand-alone file or the content can be wrapped in XML as described in the previous section. To control the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Incoming Documents"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_rnif_overview.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_yyz_yzk_p5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Incoming Documents</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_yyz_yzk_p5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_rnif_hosts.html" title="RNIF Hosts">RNIF Hosts</a> / <a class="navheader_parent_path" href="../Topics/t_rnif_overview.html" title="RNIF Overview">RNIF Overview</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_rnif_overview.html" title="RNIF Overview"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Overview</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Incoming Documents</h1>
+
+  <div class="body"><p class="p">Incoming messages can be written in several formats. The raw content can be written as a
+      stand-alone file or the content can be wrapped in XML as described in the previous
+      section.</p>
+<p class="p"> To control the format of the incoming message, use the <span class="ph uicontrol">Incoming Content
+        Format</span> menu and select <span class="ph uicontrol">Two-action only</span> in the
+        <span class="keyword wintitle">RNIF Host: RosettaNet</span> tab. See <a class="xref" href="../References/r_RNIF_Host_RosettaNetTab.html">RNIF Host: RosettaNet Tab</a>.
+      If <span class="ph uicontrol">Two-action only</span> is selected, then all one-action PIPs will be
+      written in the <span class="ph uicontrol">Original</span> format and the two-action PIPs will follow the
+        <span class="ph uicontrol">Incoming Content Format</span> selection. If <span class="ph uicontrol">Two-action
+        only</span> is not selected, then both one-action and two-action PIPs follow the
+        <span class="ph uicontrol">Incoming Content Format</span> selection. If <span class="ph uicontrol">Original</span>
+      is selected in the <span class="ph uicontrol">Incoming Content Format</span> pull-down menu, then the
+      content is written in separate stand-alone files. If the pull-down selection is
+        <span class="ph uicontrol">Wrapped XML</span>, then the content is wrapped as specified in the previous
+      section, with the content written as an inline XML fragment. If the selection is
+        <span class="ph uicontrol">Wrapped CDATA</span>, the content is saved as text within a CDATA section
+      within the wrapper. If the selection is <span class="ph uicontrol">Wrapped BASE64</span>, then the
+      content is encoded as Base64 data. </p>
+<p class="p">For a wrapped incoming message, the following attributes are added to the root
+      &lt;pip&gt; element for your convenience:</p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_yyz_yzk_p5__table_dsw_pzk_p5" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d224136e79"> Element </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d224136e82"> Description </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d224136e85"> Attribute </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d224136e88"> Description </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e79 "> &lt;pip&gt; </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e82 ">Required.<p class="p">Root element.</p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e85 "> test </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e88 "> This attribute is set to
+                <span class="ph uicontrol">true</span> for a test message and <span class="ph uicontrol">false</span> for
+              a production message. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e79 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e82 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e85 "> host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e88 "> The alias of the receiving VersaLex
+              host. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e79 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e82 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e85 "> mailbox </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d224136e88 "> The alias of the receiving VersaLex
+              mailbox. </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_rnif_overview.html" title="RNIF Overview"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Overview</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

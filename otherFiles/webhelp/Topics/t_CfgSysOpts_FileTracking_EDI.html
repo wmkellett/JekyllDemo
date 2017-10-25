@@ -1,0 +1,208 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="EDI Tracking Exclusions When you click Edit Exclusions for the EDI Tracking Exclusion field on the File Tracking Options dialog box, the Edit EDI Exclusions dialog box appears. Choose from the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="EDI Tracking"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_CfgSysOpts_FileTracking.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_osh_3m5_45"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>EDI Tracking</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_osh_3m5_45">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_CfgSysOpts_Transfers.html" title="Transfers">Transfers</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_CfgSysOpts_FileTracking.html" title="File Tracking">File Tracking</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_FileTracking.html" title="File Tracking"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">File Tracking</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">EDI Tracking</h1>
+
+  <div class="body">
+    <div class="section"><h2 class="title sectiontitle">EDI Tracking Exclusions</h2>
+      
+      <p class="p">When you click
+          <span class="ph uicontrol">Edit Exclusions</span> for the <span class="ph uicontrol">EDI Tracking
+          Exclusion</span> field on the <strong class="ph b">File Tracking Options</strong> dialog box, the
+          <span class="keyword wintitle">Edit EDI Exclusions</span> dialog box appears.</p>
+
+      <div class="p">Choose from the following:<ul class="ul" id="topic_osh_3m5_45__ul_bbs_tfn_gy">
+          <li class="li"><span class="ph uicontrol">Exclude all non-production trading partner connections</span></li>
+
+          <li class="li"><span class="ph uicontrol">Exclude specific trading partner connections</span>: Select items from
+            the list that correspond to the trading partners you want to exclude from tracking.</li>
+
+          <li class="li"><span class="ph uicontrol">Exclude specific folders</span>: Select items from the list that
+            correspond to the folders you want to exclude from tracking.</li>
+
+          <li class="li"><span class="ph uicontrol">Exclude specific hosts\mailboxes\actions</span>: Select items from the
+            list that correspond to the hosts, mailboxes, or actions you want to exclude from
+            tracking.</li>
+
+        </ul>
+</div>
+
+      
+      <p class="p">All exclusions are considered independently. For example, assume you select
+          <span class="ph uicontrol">Exclude all non-production trading partner connections</span> and
+          <kbd class="ph userinput">newTradingPartner1</kbd> in the Trading Partners section and
+          <kbd class="ph userinput">AS2</kbd> in the hosts\mailboxes\actions section. With these selections,
+        a file processed through the system will be excluded from tracking if its action is
+        associated with the <span class="ph uicontrol">AS2</span> host, or its action is associated with
+          <span class="ph filepath">newTradingPartner1</span>, or its action is associated with a non-production
+        trading partner connection.</p>
+
+    </div>
+
+    
+    <div class="section"><h2 class="title sectiontitle">EDI Reference</h2>
+      
+      <p class="p">The <span class="keyword wintitle">New EDI Reference</span> dialog box is displayed when you click
+          <span class="ph uicontrol">New EDI</span> in the <span class="ph uicontrol">File Tracking List</span> in the
+          <span class="keyword wintitle">File Tracking Options</span> dialog box.  The <span class="keyword wintitle">Edit EDI
+          Reference</span> dialog box is displayed when you double-click an EDI item or
+        right-click an EDI item and then select <span class="ph uicontrol">Edit</span> in the <span class="ph uicontrol">File
+          Tracking List</span>.</p>
+
+      <p class="p">In <span class="keyword wintitle">New EDI Reference</span> or <span class="keyword wintitle">Edit EDI Reference</span> dialog
+        box, specify values for the following fields:</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">EDI Configuration</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">EDI Type</dt>
+
+                <dt class="dt dlterm">Transaction Type</dt>
+
+                <dd class="dd">Choose an type of EDI transaction and then a transaction type for which you want
+                  to specify a reference.</dd>
+
+                <dd class="dd">EDI types include ASC X12, EDIFACT or TRADACOMS.</dd>
+
+                <dd class="dd">The transaction types available depend on the EDI type you select. </dd>
+
+              
+              
+                <dt class="dt dlterm">Extract data on inbound transfers</dt>
+
+                <dt class="dt dlterm">Extract data on outbound transfers</dt>
+
+                <dd class="dd">Select these check boxes to track this reference on inbound and outbound
+                  transfers, respectively.  You can select either or both.</dd>
+
+              
+              
+                <dt class="dt dlterm">Extract data only if segment</dt>
+
+                <dd class="dd">Select this check box to track this reference when the
+                    <span class="ph uicontrol">segment</span>, <span class="ph uicontrol">element</span>, and
+                    <span class="ph uicontrol">subelement</span> meet the conditions you specify. If you select
+                  this check box, you must specify values for <span class="ph uicontrol">segment</span> and
+                    <span class="ph uicontrol">element</span>. The <span class="ph uicontrol">subelement</span> is
+                  optional.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Identifier Data</dt>
+
+          <dd class="dd">The system automatically tracks identifier data, regardless of any other settings on
+            the <span class="keyword wintitle">Edit EDI Reference</span> dialog box. There are no settings or fields
+            for you to configure.</dd>
+
+        
+        
+          <dt class="dt dlterm">Transactional Data</dt>
+
+          <dd class="dd">Specify one or more records in the <strong class="ph b">Transactional Data</strong> table. <ul class="ul" id="topic_osh_3m5_45__ul_qw4_z5m_gy">
+              <li class="li"><strong class="ph b">Insert a new row</strong> - Click <span class="ph uicontrol">New</span> to insert a new row in
+                the table and display the <span class="ph uicontrol">Extract Transactional Reference</span>
+                dialog box with none of the fields populated. </li>
+
+              <li class="li"><strong class="ph b">Edit a row</strong> - Right-click a row and select <span class="ph uicontrol">Edit</span> or
+                double-click a row to display the <span class="ph uicontrol">Extract Transactional
+                  Reference</span> dialog box populated with data from the selected row.</li>
+
+            </ul>
+See <a class="xref" href="#topic_osh_3m5_45__title_nl1_zvm_gy">Extract
+              Transactional Reference</a>.</dd>
+
+        
+      </dl>
+
+    </div>
+
+    <div class="section" id="topic_osh_3m5_45__section_ot4_fvm_gy"><h2 class="title sectiontitle">Extract Transactional Reference</h2>
+      
+      <div class="p">The <span class="keyword wintitle">Extract Transactional Reference</span> dialog box is displayed when you
+        select an item to edit or you click <span class="ph uicontrol">New</span> in the
+          <span class="ph uicontrol">Transactional Data</span> table. Edit or populate the following fields:<dl class="dl">
+          
+            <dt class="dt dlterm">Extract segment</dt>
+
+            <dt class="dt dlterm">element</dt>
+
+            <dt class="dt dlterm">[subelement]</dt>
+
+            <dd class="dd">Identify a segment, element, and subelement you want to track.</dd>
+
+            <dd class="dd"><span class="ph uicontrol">Segment</span> and <span class="ph uicontrol">element</span> are required.
+                <span class="ph uicontrol">Subelement</span> is optional.</dd>
+
+          
+          
+            <dt class="dt dlterm">only if</dt>
+
+            <dt class="dt dlterm">element</dt>
+
+            <dt class="dt dlterm">[subelement]</dt>
+
+            <dd class="dd">Select this check box to track this reference when the
+                <span class="ph uicontrol">element</span> and <span class="ph uicontrol">subelement</span> meet the
+              conditions you specify. If you select this check box, you must specify a value for the
+                <span class="ph uicontrol">element</span> field. The <span class="ph uicontrol">subelement</span> is
+              optional.</dd>
+
+          
+          
+            <dt class="dt dlterm">Storage Location for Extracted Data</dt>
+
+            <dd class="dd">Specify where to store the collected reference data. Each reference collected will
+              be separated by commas, and optionally preceded by the label, when it is displayed
+              through the <span class="ph uicontrol">View Information</span> right-click option under transfer
+              reporting. <dl class="dl">
+                
+                  <dt class="dt dlterm">Reference 1</dt>
+
+                  <dt class="dt dlterm">Reference2</dt>
+
+                  <dd class="dd">Select the reference in which to store the data.</dd>
+
+                
+                
+                  <dt class="dt dlterm">Reference Label</dt>
+
+                  <dd class="dd">Optional: a label for the reference.</dd>
+
+                
+              </dl>
+</dd>
+
+          
+        </dl>
+</div>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_FileTracking.html" title="File Tracking"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">File Tracking</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

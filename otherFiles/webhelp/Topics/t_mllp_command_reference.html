@@ -1,0 +1,442 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="PUT Send one or more files to the host. PUT -DEL &#34; source &#34; DEL If PUT is successful, delete local file. -DEL option is not applicable to queue-based PUT commands.  If specified for a queue-based PUT ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="MLLP Command Reference"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_mllp_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="mllp_command_reference"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>MLLP Command Reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="mllp_command_reference">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/t_mllp_hosts.html" title="MLLP Hosts">MLLP Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_mllp_hosts.html" title="MLLP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MLLP Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">MLLP Command
+                    Reference</h1>
+
+   <div class="body refbody">
+      <div class="section"><h2 class="title sectiontitle">PUT</h2>
+         
+         <p class="p">Send one or more files to the host. </p>
+
+         <pre class="pre codeblock"><span class="keyword cmdname">PUT</span> <span class="keyword option">-DEL</span> "<var class="keyword varname">source</var>" </pre>
+
+         <dl class="dl parml">
+            
+               <dt class="dt pt dlterm"><samp class="ph codeph">DEL</samp></dt>
+
+               <dd class="dd pd">If <span class="keyword cmdname">PUT</span> is successful, delete local file.</dd>
+
+               <dd class="dd pd"><samp class="ph codeph">-DEL</samp> option is not applicable to queue-based
+                     <span class="keyword cmdname">PUT</span> commands.  If specified for a queue-based
+                     <span class="keyword cmdname">PUT</span>, it is ignored.</dd>
+
+            
+            
+               <dt class="dt pt dlterm"><var class="keyword varname">source</var></dt>
+
+               <dd class="dd pd">
+                  <p class="p">Source path</p>
+
+                  <ul class="ul" id="mllp_command_reference__ul_b2n_y5x_3r">
+                     <li class="li"><samp class="ph codeph">source</samp> parameter is not applicable to queue-based
+                           <span class="keyword cmdname">PUT</span> commands.  If specified for a queue-based
+                           <span class="keyword cmdname">PUT</span>, it is ignored.</li>
+
+                     <li class="li">Path can be to a filename or to a directory.</li>
+
+                     <li class="li">You can use <samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp>, or a regular
+                        expression when you specify a filename. See <a class="xref" href="t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a>
+                        for additional information.</li>
+
+                     <li class="li">If you specify a relative path, the command uses the default outbox.</li>
+
+                     <li class="li">You can use macro variables. See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> (Source File
+                        context) for a list of the applicable macros.</li>
+
+                     <li class="li">If the path contains a space, dash (-), comma (,), or equal sign (=), it
+                        must be enclosed with double quotes ("...").</li>
+
+                  </ul>
+
+               </dd>
+
+            
+         </dl>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">GET</h2>
+         
+         <p class="p">Listens for incoming connections and then receives one or more
+            messages from the sender </p>
+
+         <pre class="pre codeblock"><span class="keyword cmdname">GET</span></pre>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">SYSTEM</h2>
+      
+      <p class="p">Execute a local system command.</p>
+
+      <pre class="pre codeblock"><span class="keyword cmdname">SYSTEM</span> "<var class="keyword varname">path</var>"</pre>
+
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">path</var>"</samp></dt>
+
+          <dd class="dd pd">Local command path with arguments.<ul class="ul" id="mllp_command_reference__d54457e740">
+              <li class="li">If you specify a relative path or no path, the command uses the <span class="ph">Cleo Harmony</span> home directory.</li>
+
+              <li class="li">See <a class="xref" href="t_Use_Operating_System_Commandsin_Actions.html">Use Operating System Commands in Actions</a> for additional information</li>
+
+            </ul>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">SET</h2>
+      
+      <p class="p">Change an action property value. The new value only affects the commands
+        that <strong class="ph b">follow</strong> the <span class="keyword cmdname">SET</span>.</p>
+
+      <pre class="pre codeblock">SET <var class="keyword varname">property</var>=<var class="keyword varname">value</var></pre>
+
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm">
+            <var class="keyword varname">property</var> = <var class="keyword varname">value</var>
+          </dt>
+
+          <dd class="dd pd">Action property and new value<ul class="ul" id="mllp_command_reference__d54457e669">
+              <li class="li">The property name must have no embedded spaces. </li>
+
+              <li class="li">The value specified remains in effect until it is set again or until the end of
+                action.   </li>
+
+              <li class="li">To reset property back to default value (host-level or system-level), specify
+                  <pre class="pre codeblock"><span class="keyword cmdname">SET</span> <var class="keyword varname">property</var></pre>
+<p class="p">or</p>
+<pre class="pre codeblock"><span class="keyword cmdname">SET</span> <var class="keyword varname">property</var>=</pre>
+</li>
+
+              <li class="li">To clear a string property, use the <span class="keyword cmdname">CLEAR</span> command </li>
+
+            </ul>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">CLEAR</h2>
+      
+      <p class="p">Clear an action property string value. The cleared value only affects
+        the commands that <strong class="ph b">follow</strong> the <span class="keyword cmdname">CLEAR</span>.</p>
+
+      <pre class="pre codeblock"><span class="keyword cmdname">CLEAR</span> <var class="keyword varname">property</var></pre>
+
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><var class="keyword varname">property</var></samp></dt>
+
+          <dd class="dd pd">Action property name with no embedded spaces.</dd>
+
+        
+      </dl>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">WAIT</h2>
+      
+      <p class="p">Pause execution.</p>
+
+      <pre class="pre codeblock"><span class="keyword cmdname">WAIT</span> <var class="keyword varname">seconds</var></pre>
+
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><var class="keyword varname">Seconds</var></samp></dt>
+
+          <dd class="dd pd">Number of seconds to pause.</dd>
+
+        
+      </dl>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">LCOPY</h2>
+      
+      <p class="p">Copy one or more files locally.</p>
+
+      <pre class="pre codeblock"><span class="keyword cmdname">LCOPY</span> –<span class="keyword option">DEL</span> -<span class="keyword option">REC</span> {–<span class="keyword option">UNI</span>|–<span class="keyword option">APE</span>} {-<span class="keyword option">ZIP</span>|-<span class="keyword option">UNZ</span>} "<var class="keyword varname">source</var>" "<var class="keyword varname">destination</var>"</pre>
+
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><span class="keyword option">-DEL</span></samp></dt>
+
+          <dd class="dd pd">If the command is successful, delete the local file.</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><span class="keyword option">-REC</span></samp></dt>
+
+          <dd class="dd pd">Recursively search all subdirectories.</dd>
+
+          <dd class="dd pd">You cannot use this option with the <samp class="ph codeph">-UNZ</samp> option.</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><span class="keyword option">-UNI</span></samp></dt>
+
+          <dd class="dd pd">Ensure the copied filename is unique.</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><span class="keyword option">-APE</span></samp></dt>
+
+          <dd class="dd pd">Append copied file to existing destination file.</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><span class="keyword option">-ZIP</span></samp></dt>
+
+          <dd class="dd pd">Zip all the files into one or more ZIP archive files, depending on the destination
+              specified.<ul class="ul" id="mllp_command_reference__d54457e216">
+              <li class="li">Specify ZIP comment and compression level through <span class="ph uicontrol">Zip
+                  Comment</span> and <span class="ph uicontrol">Zip Compression Level</span> properties.
+                See <a class="xref" href="../Tasks/t_set_advanced_host_properties.html">Set Advanced Host Properties</a>.</li>
+
+              <li class="li">The ZIP archive files created through the <span class="keyword cmdname">LCOPY</span> command conform
+                to the standard ZIP file format (reference <a class="xref" href="http://docs.oracle.com/javase/6/docs/api/java/util/zip/package-summary.html" target="_blank">HSP://docs.oracle.com/javase/6/docs/api/java/util/zip/package-summary.html</a>).
+                The ZIP file format should not be confused with other popular file
+                compression/archive formats such as GZIP, TAR, RAR, etc. The
+                  <span class="keyword cmdname">LCOPY</span> command works only with ZIP-formatted files. In addition
+                to the <span class="ph">Cleo Harmony</span> application, there are many other software packages that can read/write
+                ZIP-formatted files, for example, WinZip (Windows), File Roller (Linux), PKZIP and
+                Info-ZIP (Windows/Linux/other Unix).</li>
+
+              <li class="li">In addition to standard ZIP-formatted archives, the <span class="ph">Cleo Harmony</span> application also supports password-based AES- encrypted ZIP
+                files (128-bit, 192-bit, and 256-bit). See <a class="xref" href="t_cryptographic_services.html">Cryptographic Services</a>.</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph"><span class="keyword option">-UNZ</span></samp></dt>
+
+          <dd class="dd pd">Unzip the source file(s).<ul class="ul" id="mllp_command_reference__d54457e262">
+              <li class="li">All source files must be ZIP archive files.</li>
+
+              <li class="li">You cannot use this option with the <samp class="ph codeph">-REC</samp> option.</li>
+
+              <li class="li">Use ZIP entry paths if <span class="ph uicontrol">Unzip Use Path</span> is set. See <a class="xref" href="../Tasks/t_set_advanced_host_properties.html">Set Advanced Host Properties</a>.</li>
+
+              <li class="li">The ZIP archive files created through the <span class="keyword cmdname">LCOPY</span> command conform
+                to the standard ZIP file format (reference <a class="xref" href="http://docs.oracle.com/javase/6/docs/api/java/util/zip/package-summary.html" target="_blank">HSP://docs.oracle.com/javase/6/docs/api/java/util/zip/package-summary.html</a>).
+                The ZIP file format should not be confused with other popular file
+                compression/archive formats such as GZIP, TAR, RAR, etc. The
+                  <span class="keyword cmdname">LCOPY</span> command works only with ZIP-formatted files. In addition
+                to the <span class="ph">Cleo Harmony</span> application, there are many other software packages that can read/write
+                ZIP-formatted files, for example, WinZip (Windows), File Roller (Linux), PKZIP and
+                Info-ZIP (Windows/Linux/other Unix).</li>
+
+              <li class="li">In addition to standard ZIP-formatted archives, the <span class="ph">Cleo Harmony</span> application also supports password-based AES- encrypted ZIP
+                files (128-bit, 192-bit, and 256-bit). See <a class="xref" href="t_encryption_of_zip_files.html">Encryption
+                  of Zip Files</a> for more information on this capability.</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">source</var>"</samp></dt>
+
+          <dd class="dd pd">Source path<ul class="ul" id="mllp_command_reference__d54457e316">
+              <li class="li">Path can be to a filename or to a directory</li>
+
+              <li class="li">You can use <samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp>, or a regular expression
+                when you specify a filename. See <a class="xref" href="t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a> for additional
+                information.</li>
+
+              <li class="li">If you specify a relative path, the command uses the default inbox.</li>
+
+              <li class="li">You can use macro variables. See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> (Source File context)
+                for a list of the applicable macros.</li>
+
+              <li class="li">If the path contains a space, dash (-), comma (,), or equal sign (=), it must be
+                enclosed with double quotes ("...").</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">destination</var>" </samp></dt>
+
+          <dd class="dd pd">Destination path.<ul class="ul" id="mllp_command_reference__d54457e356">
+              <li class="li">Path can be to a filename or to a directory.</li>
+
+              <li class="li">If you specify a relative path, the command uses the default inbox.</li>
+
+              <li class="li">You can use macro variables. See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> (Source File context)
+                for a list of the applicable macros.</li>
+
+              <li class="li">You can use a single <samp class="ph codeph">*</samp> within the destination path. In this
+                context, it is not a wildcard. Rather, it is used to substitute a source file name
+                or a source subdirectory name. When <samp class="ph codeph">*</samp> is used in conjunction with
+                both the <samp class="ph codeph">-REC</samp> and <samp class="ph codeph">-ZIP</samp> options, and <samp class="ph codeph">Zip
+                  Subdirectories Into Individual Zip Files</samp> is enabled, then
+                  <samp class="ph codeph">*</samp> is substituted with each first-level subdirectory name. When
+                  <samp class="ph codeph">*</samp> is not used for bundling zipped subdirectories, then it is used
+                as a shortcut for the <samp class="ph codeph">%sourcefilename%</samp> or
+                  <samp class="ph codeph">%srcfilename%</samp> macro. Only one <samp class="ph codeph">*</samp> is allowed in
+                the destination path. See <a class="xref" href="../Tasks/t_set_advanced_host_properties.html">Set Advanced Host Properties</a>.</li>
+
+              <li class="li">When copying a file without the <samp class="ph codeph">-APE</samp> option, or when copying a
+                file with the <samp class="ph codeph">-APE</samp> option where the destination file does not
+                already exist, a temporary file name is used while the copy operation is taking
+                place. This temporary file is placed in the destination directory. Its name begins
+                with the product name and ends with <span class="ph filepath">.tmp</span>. Once the copy
+                completes successfully, the temporary file is renamed to the destination name.</li>
+
+              <li class="li">If the path contains a space, dash (-), comma (,), or equal sign (=), it must be
+                enclosed with double quotes ("...").</li>
+
+            </ul>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">LDELETE</h2>
+      
+      <p class="p">Delete one or more files locally.</p>
+
+      <pre class="pre codeblock"><span class="keyword cmdname">LDELETE</span> "<var class="keyword varname">source</var>"</pre>
+
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">source</var>"</samp></dt>
+
+          <dd class="dd pd">Source path.<ul class="ul" id="mllp_command_reference__d54457e461">
+              <li class="li">Path can be a filename or a directory.</li>
+
+              <li class="li">You can use <samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp>, or a regular expression
+                when you specify a filename. See <a class="xref" href="t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a> for additional
+                information.</li>
+
+              <li class="li">If you specify a relative path, the command uses the default inbox.</li>
+
+              <li class="li">Use of macro variables is supported. See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> (Source File
+                context) for a list of the applicable macros.</li>
+
+              <li class="li">If the path contains a space, dash (-), comma (,), or equal sign (=), it must be
+                enclosed with double quotes ("...").</li>
+
+            </ul>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">LREPLACE</h2>
+      
+      <p class="p">Replace bytes in one or more files locally.</p>
+
+      <pre class="pre codeblock"><span class="keyword cmdname">LREPLACE</span> "<var class="keyword varname">source</var>" Replace="<var class="keyword varname">input bytes</var>" With="<var class="keyword varname">output bytes</var>"</pre>
+
+      <dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">source</var>"</samp></dt>
+
+          <dd class="dd pd">Source path.<ul class="ul" id="mllp_command_reference__d54457e533">
+              <li class="li">Path can be to a filename or to a directory.</li>
+
+              <li class="li">You can use <samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp>, or a regular expression
+                when you specify a filename. See <a class="xref" href="t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a> for additional
+                information.</li>
+
+              <li class="li">If you specify a relative path, the command uses the default inbox.</li>
+
+              <li class="li">You can use macro variables. See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> (Source File context)
+                for a list of the applicable macros.</li>
+
+              <li class="li">If the path contains a space, dash (-), comma (,), or equal sign (=), it must be
+                enclosed with double quotes ("...").</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">input bytes</var>"</samp></dt>
+
+          <dd class="dd pd">List of bytes to be replaced.<ul class="ul" id="mllp_command_reference__d54457e573">
+              <li class="li">Comma separated list of byte values (0-255).</li>
+
+              <li class="li">All bytes in comma-separated list must be found in the file in listed sequence in
+                order to be replaced.</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">output bytes</var>"</samp></dt>
+
+          <dd class="dd pd">List of bytes to be substituted for original <samp class="ph codeph">input bytes</samp>.<ul class="ul" id="mllp_command_reference__d54457e597">
+              <li class="li">Comma separated list of byte values (0-255).</li>
+
+              <li class="li">If <samp class="ph codeph">With</samp> parameter is omitted, then the <samp class="ph codeph">input
+                  bytes</samp> are deleted from the file.</li>
+
+            </ul>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">CHECK</h2>
+      
+      <p class="p">See <a class="xref" href="t_check_command.html">CHECK Command</a> for information about this command.</p>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">SCRIPT</h2>
+      
+      <p class="p">See <a class="xref" href="t_script_command.html">SCRIPT Command</a> for information about this command.</p>
+
+    </div>
+
+      <div class="section"><h2 class="title sectiontitle">Comment</h2>
+      
+      <pre class="pre codeblock"># <var class="keyword varname">text</var>...</pre>
+
+      <p class="p">Lines in the action starting with a # character are considered comments
+        and will be ignored when the action executes. Lines starting with # are generally used for
+        documentation purposes.</p>
+
+    </div>
+
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_mllp_hosts.html" title="MLLP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MLLP Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the mailbox's HTTP tab to assign default values to message headers. For example, your AS2 name ( AS2-From ) and your trading partner's AS2 name ( AS2-To ) as well as the Subject and Content-Type ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="AS2 Mailbox: HTTP Tab"></meta><meta name="abstract" content="Use the mailbox's HTTP tab to assign default values to message headers."></meta><meta name="description" content="Use the mailbox's HTTP tab to assign default values to message headers."></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_AS2_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_vvd_xkc_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS2 Mailbox: HTTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_vvd_xkc_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_as2_configuration.html" title="AS2 Configuration">AS2 Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_AS2_Mailbox.html" title="AS2 Mailbox Configuration">AS2 Mailbox Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Mailbox.html" title="AS2 Mailbox Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Mailbox Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">AS2 Mailbox: HTTP Tab</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">Use the mailbox's <span class="keyword wintitle">HTTP</span> tab to assign default values to message
+    headers.</p>
+
+    <div class="section"><p class="p"> For example, your AS2 name (<kbd class="ph userinput">AS2-From</kbd>) and your trading partner's AS2 name
+          (<kbd class="ph userinput">AS2-To</kbd>) as well as the <kbd class="ph userinput">Subject</kbd> and
+          <kbd class="ph userinput">Content-Type</kbd> of the documents to be transferred. </p>
+
+      
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Default Value</dt>
+
+        <dd class="dd">You can assign a default value for each of the headers defined on the <span class="keyword wintitle">AS2
+            Host: HTTP</span> tab. (See <a class="xref" href="r_AS2_Host_HTTPTab.html">AS2 Host: HTTP Tab</a>.)  Unless an overriding
+          value is specified within the command in an action, these default values are used. (See
+            <a class="xref" href="../Topics/t_as2_checklist.html">AS2 Checklist</a>: item 5 for the <span class="ph uicontrol">AS2-From</span> value,
+          item 6 for the <span class="ph uicontrol">AS2-To</span> value, and item 14 for the default
+            <span class="ph uicontrol">Content-Type</span> value.) </dd>
+
+        <dd class="dd">At a minimum, the following <span class="ph uicontrol">Headers</span> must always be specified in
+          order to properly send AS2 messages:<ul class="ul" id="reference_vvd_xkc_b5__ul_yb2_35j_tw">
+            <li class="li"><span class="ph uicontrol">AS2-From</span> - the alias of the sender of the AS2 message. </li>
+
+            <li class="li"><span class="ph uicontrol">AS2-To</span> - the alias of the receiver of the AS2 message. 
+                <div class="note note"><span class="notetitle">Note:</span>  The <span class="ph uicontrol">AS2-From</span> / <span class="ph uicontrol">AS2-To</span> fields
+                are determined and agreed upon as part of the initial setup of the trading
+                relationship. These fields could be company-specific, such as DUNS number, or could
+                simply be an agreed-upon identification string. The <span class="ph uicontrol">AS2-From</span>
+                / <span class="ph uicontrol">AS2-To</span> combination is case-sensitive and must be unique
+                across all hosts defined in your system, since this combination is used to determine
+                into which Inbox messages are stored when received from remote hosts.  </div>
+</li>
+
+            <li class="li"><span class="ph uicontrol">Subject</span> - identifies the message and is returned in the
+              human-readable section of an MDN, if requested. </li>
+
+            <li class="li"><span class="ph uicontrol">Content-Type</span> - the format of the message being sent and is
+              used by the sending and receiving applications to properly assemble and parse the
+              message. Currently supported content types (in the pull-down menu) are: <ul class="ul" id="reference_vvd_xkc_b5__ul_zb2_35j_tw">
+                <li class="li"> EDIFACT </li>
+
+                <li class="li">X12 </li>
+
+                <li class="li">XML </li>
+
+                <li class="li">Binary </li>
+
+                <li class="li">Plain Text </li>
+
+                <li class="li">EDI Consent </li>
+
+              </ul>
+<div class="p">
+                <div class="note note"><span class="notetitle">Note:</span>  Entering a value for the <span class="ph uicontrol">Content-Type</span> header is
+                  optional. If <span class="ph uicontrol">Content-Type</span> is not specified or if multiple
+                  payloads are attached in the message, the <span class="ph uicontrol">Content-Type</span> is
+                  detected based first on file content and then the file extension. Detectable types
+                  include <span class="ph filepath">application/edifact</span>,
+                    <span class="ph filepath">application/edi-x12</span>,
+                    <span class="ph filepath">application/edi-tradacoms</span>,
+                    <span class="ph filepath">application/xml</span> (text/xml),
+                    <span class="ph filepath">application/pdf</span>, <span class="ph filepath">application/msword</span>,
+                    <span class="ph filepath">application/x-msexcel</span>,
+                  <span class="ph filepath">application/rtf</span>, <span class="ph filepath">application/zip</span>,
+                    <span class="ph filepath">image/bmp</span>, <span class="ph filepath">image/gif</span>,
+                    <span class="ph filepath">image/tiff</span>, <span class="ph filepath">image/jpeg</span>,
+                    <span class="ph filepath">text/plain</span>, <span class="ph filepath">text/html</span>, and
+                    <span class="ph filepath">video/mpg</span>. </div>
+
+              </div>
+</li>
+
+          </ul>
+</dd>
+
+      
+    </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Mailbox.html" title="AS2 Mailbox Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Mailbox Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

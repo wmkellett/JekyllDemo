@@ -1,0 +1,88 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Upload your ES key to the bank server. On the mailbox EBICS tab, click Upload My Keys . The Uploading My Keys dialog box appears. In the Order Type field, select Upload ES Key (INI) , and then click ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Key Exchange"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ebics_quick-start_steps.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_tly_zwk_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Key Exchange</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_tly_zwk_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_ebics_hosts.html" title="EBICS Hosts">EBICS Hosts</a> / <a class="navheader_parent_path" href="../Topics/t_ebics_quick-start_steps.html" title="EBICS Quick-Start Steps">EBICS Quick-Start Steps</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ebics_quick-start_steps.html" title="EBICS Quick-Start Steps"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Quick-Start Steps</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Key Exchange</h1>
+
+  <div class="body taskbody">
+    <ol class="ol steps" id="task_tly_zwk_b5__steps_m1d_n2r_dz"><li class="li step">
+        <span class="ph cmd">Upload your ES key to the bank server.  </span>
+        <ol type="a" class="ol substeps" id="task_tly_zwk_b5__substeps_ht3_yfr_dz">
+          <li class="li substep substepexpand">
+            <span class="ph cmd">On the mailbox <span class="keyword wintitle">EBICS</span> tab, click <span class="ph uicontrol">Upload My
+                Keys</span>.</span>
+            <div class="itemgroup info">The <span class="keyword wintitle">Uploading My Keys</span> dialog box appears.</div>
+          </li>
+
+          <li class="li substep substepexpand">
+            <span class="ph cmd">In the <span class="ph uicontrol">Order Type</span> field, select <span class="ph uicontrol">Upload ES Key
+                (INI)</span>, and then click <span class="ph uicontrol">Execute</span>. </span>
+            <div class="itemgroup info">The message pane displays information regarding the INI transaction.</div>
+          </li>
+
+        </ol>
+
+      </li>
+<li class="li step">
+        <span class="ph cmd">Upload your signing (X002) and encryption (E002) keys to the bank server. </span>
+        <ol type="a" class="ol substeps" id="task_tly_zwk_b5__substeps_ayv_bgr_dz">
+          <li class="li substep substepexpand">
+            <span class="ph cmd">On the mailbox <span class="keyword wintitle">EBICS</span> tab, click <span class="ph uicontrol">Upload My
+                Keys</span>.</span>
+          </li>
+
+          <li class="li substep substepexpand">
+            <span class="ph cmd">In the <span class="ph uicontrol">Order Type</span> field, select <span class="ph uicontrol">Upload Signing
+                and Encryption Keys (HIA)</span>, and then click
+              <span class="ph uicontrol">Execute</span>. </span>
+            <div class="itemgroup info">The message pane displays information regarding the HIA transaction.</div>
+            <div class="itemgroup info">
+              <div class="note note"><span class="notetitle">Note:</span> Once the INI and HIA transactions have been successfully completed, the bank
+                server should reject repeated attempts to transmit keys via INI and HIA. If you
+                attempt this, you should receive <samp class="ph codeph">EBICS_INVALID_USER_OR_USER_STATE</samp>
+                from the server. To update your keys, use the PUB, HCA, and HCS orders through
+                  <span class="ph uicontrol">Upload My Keys</span>.</div>
+
+            </div>
+          </li>
+
+        </ol>
+
+      </li>
+<li class="li step">
+        <span class="ph cmd">Download the bank's keys for signing (X002) and encryption (E002). </span>
+        <ol type="a" class="ol substeps" id="task_tly_zwk_b5__substeps_jyb_hgr_dz">
+          <li class="li substep substepexpand">
+            <span class="ph cmd">In the mailbox <span class="keyword wintitle">EBICS</span> tab, click <span class="ph uicontrol">Download Bank
+                Keys</span>. </span>
+            <div class="itemgroup info">The message pane displays information about the HPB transaction. </div>
+          </li>
+
+        </ol>
+
+      </li>
+</ol>
+
+    <div class="section postreq">Now you are ready to issue upload orders through the <span class="keyword cmdname">PUT</span> command and
+      download orders through the <span class="keyword cmdname">GET</span> command. See <a class="xref" href="t_ebics_command_reference.html">EBICS Command Reference</a>. You can also issue any of the ancillary orders through the
+      mailbox <span class="keyword wintitle">EBICS</span> tab <span class="ph uicontrol">Execute Ancillary Order</span>
+      function. For information about how to send and receive a test file, see <a class="xref" href="t_EBICS_QuickStart_SendRcvTestFile.html">Send and Receive a Test File</a>.</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ebics_quick-start_steps.html" title="EBICS Quick-Start Steps"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Quick-Start Steps</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

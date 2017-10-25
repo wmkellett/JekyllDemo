@@ -1,0 +1,95 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Server Dashboard provides information related to the server functionality of currently selected VersaLex.  Server Connection Status Chart The Server Connection Status chart displays a list of the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Server Dashboard"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cleo_system_monitor.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_eb4_pzq_m5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Server Dashboard</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_eb4_pzq_m5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_cleo_dashboards_and_cleo_system_monitor.html" title="Cleo Dashboards and Cleo System Monitor">Cleo Dashboards and Cleo System Monitor</a> / <a class="navheader_parent_path" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor">Cleo System Monitor</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Server Dashboard</h1>
+
+  <div class="body">
+    <p class="p">The
+        <span class="keyword wintitle">Server Dashboard</span> provides information related to the server
+      functionality of currently selected
+      VersaLex. </p>
+
+    <p class="p">
+      <img class="image" id="topic_eb4_pzq_m5__image_anc_sqn_25" src="../Images/image1800.jpg"></img>
+    </p>
+
+    <div class="section"><h2 class="title sectiontitle">Server Connection Status Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Server Connection Status</span> chart displays a list of the configured
+        VersaLex server ports, the type of port, and a count of the number of connections on each
+        port. If a port is configured but was unable to start listening on that port, then
+          <span class="ph uicontrol">Not Listening</span> will follow the port number.</p>
+
+      <p class="p">If any port is listed as <span class="ph uicontrol">Not Listening</span>, that is typically an
+        indication of a port conflict. Otherwise, the number of connections can monitored against
+        normal levels. Abnormally low or high numbers may indicate an issue internally, with trading
+        partner(s), or with another third party trying to access the system.</p>
+
+    </div>
+
+    <p class="p">Access the <span class="keyword wintitle">Server Connection History</span> sub-report by clicking on a bar or
+      a bar label.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Server Connection History Report</h2>
+      
+      
+    </div>
+
+    <p class="p">The <span class="keyword wintitle">Server Connection History</span> report displays the number of connections
+      active on each port over time. By default, it will show the last 60 minutes of history. Limit
+      the history displayed to one or more ports by selecting them in the <span class="ph uicontrol">Protocol
+        (Port)</span> filter. Use the parameter control box to change the <span class="ph uicontrol">Start
+        date/time</span> of the chart and the number of <span class="ph uicontrol">Minutes</span>
+      displayed. Use the zoom slider at the bottom to zoom in closer to a specific time. Hovering
+      the cursor over a specific data point on the chart will display information about that data
+      point.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Unsolicited Status Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Unsolicited Status</span> chart displays a count of the successes,
+        warnings, and failures that have occurred in the past 60 minutes. These are counts related
+        to unsolicited transfers that have occurred on the server ports.</p>
+
+      <p class="p">A growing red section of the pie chart indicates a current problem in the area of
+        unsolicited transfers.</p>
+
+    </div>
+
+    <p class="p">Access the <span class="keyword wintitle">Unsolicited Status History</span> sub-report by clicking on the pie
+      chart.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Unsolicited Status History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Unsolicited Status History</span> report displays the number of
+          <span class="ph uicontrol">Successes</span>, <span class="ph uicontrol">Warnings</span>, and
+          <span class="ph uicontrol">Failures</span> that have occurred on server ports over time. By default,
+        it will show the last 60 minutes of history. Use the parameter control box to change the
+          <span class="ph uicontrol">Start date/time</span> of the chart and the number of
+          <span class="ph uicontrol">Minutes</span> displayed. Use the zoom slider at the bottom to zoom in
+        closer to a specific time. Hovering the cursor over a specific data point on the chart will
+        display information about that data point.</p>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

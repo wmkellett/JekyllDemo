@@ -1,0 +1,356 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The VersaLex MSMQ URI is for using MSMQ (Microsoft Message Queuing) queues instead of local file system files for payload sent to and/or received from trading partners. The basic format of the MSMQ ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="MSMQ URI Scheme"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_uri_file_system_interface.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="msmq_uri_scheme"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>MSMQ URI Scheme</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="msmq_uri_scheme">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface">URI File System Interface</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">URI File System Interface</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">MSMQ URI Scheme</h1>
+
+   <div class="body">
+      <p class="p">The VersaLex MSMQ URI is for using MSMQ (Microsoft Message
+                  Queuing) queues instead of local file system files for payload sent to and/or
+                  received from trading partners.</p>
+
+      
+      <p class="p">The basic format of the MSMQ URI is:</p>
+
+      <pre class="pre codeblock">msmq:DIRECT=OS:<var class="keyword varname">msmqQueue</var>?<var class="keyword varname">param1</var>=<var class="keyword varname">value1</var>&amp;<var class="keyword varname">param2</var>=<var class="keyword varname">value2</var>&amp; <var class="keyword varname">param3</var>=…</pre>
+
+      
+      <p class="p">Example:</p>
+
+      <pre class="pre codeblock">msmq:DIRECT=OS:.\private$\Inbox?createQueue=true</pre>
+
+      
+      <p class="p">NOTE: VersaLex only supports the DIRECT=OS queues.</p>
+
+      
+      <div class="section"><h2 class="title sectiontitle">MSMQ URI Parameters</h2>
+         
+      </div>
+
+      <p class="p">Optional parameters specified in the URI include the
+            following:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+               <thead class="thead" align="left">
+                     <tr class="row">
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d337299e77">
+                                 URI Parameter
+                           </th>
+
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d337299e80">
+                                 Description
+                           </th>
+
+                           
+                     </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+               
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e77 ">
+                        createQueue=<var class="keyword varname">createQueue</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e80 ">
+                        This parameter specifies whether or not the queue
+                            should be created if it does not exist.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e77 ">
+                        msgLabel=<var class="keyword varname">messageLabel</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e80 ">
+                        This parameter specifies the MSMQ message label.
+                            The message label is used as the filename.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e77 ">
+                        msgID=<var class="keyword varname">msmqMessageID</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e80 ">
+                        This parameter is used to specify a specific MSMQ
+                            message ID. This parameter cannot be a wildcard or regular expression.
+                            This parameter is not typically specified in an action. It can be used
+                            to retrieve a specific message out of the MSMQ queue.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e77 ">
+                        timeoutSec=<var class="keyword varname">timeoutSeconds</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e80 ">
+                        This parameter is used to specify the number of
+                            seconds to wait when reading a specific message from the queue. If not
+                            specified, the default is 5 seconds. This parameter is not typically
+                            specified. It would only been seen when re-reading a message from the
+                            queue and it no longer exists.
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">Parameters that may automatically be added by VersaLex include
+            the following:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+               <thead class="thead" align="left">
+                     <tr class="row">
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d337299e153">
+                                 URI Parameter
+                           </th>
+
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d337299e156">
+                                 Description
+                           </th>
+
+                           
+                     </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+               
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e153 ">
+                        msgLabel=<var class="keyword varname">messageLabel</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e156 ">
+                        This parameter specifies the MSMQ message label.
+                            The message label is used as the filename.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e153 ">
+                        msgID=<var class="keyword varname">msmqMessageID</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e156 ">
+                        This is the MSMQ message ID. It is added to the
+                            URI so that a -DEL operation on a PUT can delete the specific message
+                            read.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e153 ">
+                        length=<var class="keyword varname">messageLength</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e156 ">
+                        This is the length of the message.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e153 ">
+                        arrival=<var class="keyword varname">messageArrivalTime</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e156 ">
+                        This is the arrival time of the MSMQ message
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e153 ">
+                        correlationId=<var class="keyword varname">correlationId</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d337299e156 ">
+                        This is the correlation ID of the MSMQ message
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <div class="section"><h2 class="title sectiontitle">MSMQ URI Sample
+                    Usages</h2>
+         
+      </div>
+
+      <p class="p">If the host-level Inbox/Outbox are specified as MSMQ queues:</p>
+
+      <p class="p"> Inbox:         <samp class="ph codeph">msmq:DIRECT=OS:.\private$\Inbox?createQueue=true</samp>
+            </p>
+
+      <p class="p"> Outbox:      <samp class="ph codeph">msmq:DIRECT=OS:.\private$\Outbox?createQueue=true</samp>
+            </p>
+
+      
+      <p class="p">Sample commands:</p>
+
+      <pre class="pre codeblock">PUT -DEL *</pre>
+
+      <p class="p">Sends all messages in the queue and deletes them after successful
+            send</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL test.edi</pre>
+
+      <p class="p">Sends the first message with the message label ‘test.edi’ and
+            deletes it after successful send</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL [test.edi]</pre>
+
+      <p class="p">Sends all messages with message label matching the regular
+            expression [test.edi]. If there are multiple ‘test.edi’ message labels in the queue,
+            each of them will be sent and deleted after they are successfully sent.</p>
+
+      
+      <pre class="pre codeblock">GET *</pre>
+
+      <p class="p">Retrieves all remote files and stores them in
+            DIRECT=OS:.\private$\Inbox.</p>
+
+      
+      <pre class="pre codeblock">LCOPY -DEL * C:\SomeDir\</pre>
+
+      <p class="p">Copies all messages from the <span class="ph filepath">DIRECT=OS:.\private$\Inbox</span> to
+                        <span class="ph filepath">C:\SomeDir\</span> and deletes them from the queue.</p>
+
+      
+      <p class="p">In the case of unsolicited incoming files, the files will
+            automatically be added as messages to the end of DIRECT=OS:.\private$\Inbox.</p>
+
+      
+      <p class="p">If the host-level Inbox/Outbox are specified as folders on the
+            local file system:</p>
+
+      <p class="p"> Inbox:         <span class="ph filepath">Inbox/</span>
+            </p>
+
+      <p class="p"> Outbox:      <span class="ph filepath">Outbox/</span>
+            </p>
+
+      <p class="p">Then you can still use the MSMQ queue within the action
+            commands.</p>
+
+      
+      <p class="p">Sample commands:</p>
+
+      <pre class="pre codeblock">PUT -DEL "msmq:DIRECT=OS:.\private$\Outbox?msgLabel=*"</pre>
+
+      <p class="p">Sends all messages in the queue and deletes them after successful
+            send</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL "msmq:DIRECT=OS:.\private$\Outbox?msgLabel=test.edi"</pre>
+
+      <p class="p">Sends the first message with the message label ‘test.edi’ and
+            deletes it after successful send.</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL "msmq:DIRECT=OS:.\private$\Outbox?msgLabel=[test.edi]"</pre>
+
+      <p class="p">Sends all messages with labels matching the regular expression
+            [test.edi]. If there are multiple ‘test.edi’ message labels in the queue, each of
+            them will be sent and deleted after they are successfully sent.</p>
+
+      
+      <pre class="pre codeblock">GET * "msmq:DIRECT=OS:.\private$\Inbox"</pre>
+
+      <p class="p">Retrieves all remote files and stores them in
+                        <span class="ph filepath">DIRECT=OS:.\private$\Inbox</span>.</p>
+
+      
+      <pre class="pre codeblock">LCOPY -DEL "msmq:DIRECT=OS:.\private$\Inbox" C:\SomeDir\</pre>
+
+      <p class="p">Copies all messages from <span class="ph filepath">DIRECT=OS:.\private$\Inbox</span> to
+                        <span class="ph filepath">C:\SomeDir\</span> and deletes them from the queue.</p>
+
+      
+      
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">URI File System Interface</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

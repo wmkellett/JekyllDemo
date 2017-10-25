@@ -1,0 +1,138 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Resource Path The check box activates and deactivates access to this resource. Access is activated by default. The default value of the path itself is the product name (for example, /VLPortal ). The ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Local Listener VLPortal Web Browser Service reference"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_bjl_3ff_lw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local Listener VLPortal Web Browser Service reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_bjl_3ff_lw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service">Local Listener Web Browser Service</a> / <a class="navheader_parent_path" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service">Configuring VLPortal Web Browser service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring VLPortal Web Browser service</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Local Listener VLPortal Web Browser Service reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Resource Path</dt>
+
+          <dd class="dd">The check box activates and deactivates access to this resource. Access is activated
+            by default.</dd>
+
+          <dd class="dd">The default value of the path itself is the product name (for example,
+              <kbd class="ph userinput">/VLPortal</kbd>). The path you specify must be included in the URL
+            (for example, <span class="ph filepath">http(s)://<var class="keyword varname">VersaLexComputerIP</var>:<var class="keyword varname">http(s)Port</var>/<var class="keyword varname">/Harmony</var></span>)
+            when accessing the Cleo VLPortal application through a browser. You can change this
+            value at any time, but it must begin with a forward slash (/) character. </dd>
+
+          <dd class="dd"><span class="ph uicontrol">Access via VLProxy</span> toggles access to the resource through the
+              <span class="ph">Cleo VLProxy</span> application. It
+            is selected by default. </dd>
+
+        
+        
+          <dt class="dt dlterm">Application Name</dt>
+
+          <dd class="dd">The name used by all your web portals. It is displayed as the title in the browser tab
+            and as part of the titles in the web portal user dialogs. The default value is
+              <samp class="ph codeph">VLPortal</samp>. </dd>
+
+        
+        
+          <dt class="dt dlterm">Web Page Catalog</dt>
+
+          <dd class="dd">Displays the <span class="keyword wintitle">VLPortal Web Page Catalog</span> dialog box. See <a class="xref" href="../Tasks/t_Maintain_Web_Catalog_Web_Browser_Svc.html">Maintaining the Web Page Catalog</a>.</dd>
+
+        
+        
+          <dt class="dt dlterm">Add custom link to user login page</dt>
+
+          <dd class="dd">A hyperlink included on the web portal login page.  The value you specify must be a
+            valid URL.</dd>
+
+          <dd class="dd">The check box activates and deactivates the feature. This option is deactivated by
+            default.</dd>
+
+          <dd class="dd">See <a class="xref" href="../Tasks/t_Providing_Access_Web_Portal_Web_Browser_Svc.html">Providing Access to the Web Portal</a>. </dd>
+
+          <dd class="dd">You can specify the text describing the link by editing the value for the
+              <kbd class="ph userinput">VLPortalUI.CustomLink</kbd> property in the language-specific
+              <span class="ph filepath">VLPortal_xx.properties</span> file(s) stored
+              under <span class="ph filepath">webserver\VLPortal\internationalization</span> in the <span class="ph">Cleo Harmony</span>
+            home directory. </dd>
+
+        
+        
+          <dt class="dt dlterm">Use reCAPTCHA</dt>
+
+          <dd class="dd">The check box activates and deactivates the feature. It is activated by default.</dd>
+
+          <dd class="dd">The value you specify is the number of failed attempts possible before reCAPTCHA is
+            used. reCAPTCHA is an additional authentication level added for your trading partners
+            when accessing the web portal to keep automated software from engaging in abusive
+            activities on your site.  This value defaults to <kbd class="ph userinput">3</kbd>. To enable
+            this feature for all login attempts, set it to <kbd class="ph userinput">0</kbd>. </dd>
+
+        
+        
+          <dt class="dt dlterm">Web Portals</dt>
+
+          <dd class="dd">Displays the list of configured web portals. Each row in the table summarizes one web
+            portal. </dd>
+
+          <dd class="dd">The <span class="ph uicontrol">Portal ID</span> field specifies a unique identifier for the
+            portal. </dd>
+
+          <dd class="dd">The <strong class="ph b">Language(s)</strong> field specifies the ISO-639-1 language code(s) for the
+            supported language(s) for this portal. English (‘en’) is provided by default with the
+              <span class="ph">Cleo Harmony</span>
+            application. An asterisk (<u class="ph u">*</u>) next to any of the language codes means
+            configuration of the web portal for that particular language has not been completed.
+            Therefore, users selecting those language-specific portals are not able to access the
+            incomplete web page(s). See <a class="xref" href="../Topics/t_I10Ning_your_web_portals_Web_Browser_Svc.html">Internationalizing Your Web Portals</a> for
+            detailed information. </dd>
+
+          <dd class="dd">The <span class="ph uicontrol">Pages</span> field provides a list of web page IDs that are
+            included with this portal. You can select only one row at a time. From each row's
+            right-click menu, you can:<ul class="ul" id="reference_bjl_3ff_lw__ul_ry3_51f_2t">
+              <li class="li"><span class="ph uicontrol">Edit</span> the web portal.  See <a class="xref" href="../Topics/t_Edit_Create_Web_Page_Web_Browser_Svc.html">Editing or creating a web page</a>.</li>
+
+              <li class="li"><span class="ph uicontrol">Clone</span> the web portal. When you select this option, a dialog
+                will be displayed allowing you to edit a new portal using the selected portal as a
+                baseline. See <a class="xref" href="../Topics/t_Edit_Create_Web_Page_Web_Browser_Svc.html">Editing or creating a web page</a>.</li>
+
+              <li class="li"><span class="ph uicontrol">Remove</span> the web portal. If the portal you attempt to remove
+                is referenced in an HTTP user host, you will be asked to confirm the removal. Note
+                that <strong class="ph b">Default Portal</strong> may not be removed.</li>
+
+              <li class="li">View the HTTP user hosts that reference the portal through the <span class="ph uicontrol">Where
+                  Used...</span> option. See <a class="xref" href="../Tasks/t_View_Web_Portal_Xref_Web_Browser_Svc.html">View a Web Portal Cross Reference</a>.</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">New Portal...</dt>
+
+          <dd class="dd">Create a new web portal from scratch. See <a class="xref" href="../Topics/t_Edit_Create_Web_Page_Web_Browser_Svc.html">Editing or creating a web page</a>.</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring VLPortal Web Browser service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

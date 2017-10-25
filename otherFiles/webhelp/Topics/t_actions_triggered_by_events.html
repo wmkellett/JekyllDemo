@@ -1,0 +1,116 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="You can configure your system to run actions based on a trigger created when certain events occur. When the trigger is created, the action runs immediately. Note that, by default, actions configured ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Scheduling actions to run based on events"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_SchedulingActions.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="Untitled1"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Scheduling actions to run based on events</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="Untitled1">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Basics.html" title="Basics">Basics</a> / <a class="navheader_parent_path" href="../Tasks/t_SchedulingActions.html" title="Scheduling actions">Scheduling actions</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_SchedulingActions.html" title="Scheduling actions"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Scheduling actions</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Scheduling actions to run based on events</h1>
+
+  <div class="body taskbody">
+    <div class="section context">You can
+      configure your system to run actions based on a <em class="ph i">trigger</em> created when certain events
+      occur. When the trigger is created, the action runs immediately. Note that, by default,
+      actions configured to be triggered for an FTP server (under a Users host or a Local FTP Users
+      host) are not triggered immediately. They are triggered when the connected FTP client issues
+      another command or the session is closed. See <cite class="cite">Trigger At Upload Completion</cite> in
+        <a class="xref" href="t_Local_FTP_Users_Advanced_Properties.html">Setting Local FTP Users Mailbox Advanced Properties</a>. <p class="p">Triggers are generated when:</p>
+<ul class="ul" id="Untitled1__ul_xd5_mdp_y5">
+        <li class="li">a new file arrives in a folder</li>
+
+        <li class="li">a new file fails to arrive in a folder</li>
+
+        <li class="li">a user session ends successfully</li>
+
+        <li class="li">a user session fails to end.</li>
+
+      </ul>
+<div class="note important"><span class="importanttitle">Important:</span> Only actions that are <em class="ph i">in scope</em> of the triggering event are
+        actually run. The trigger event's scope is limited to actions whose host is in the same host
+        folder as the trigger's mailbox or in a parent host folder of the trigger's
+        mailbox.</div>
+<p class="p">When you schedule an action to be run based on a trigger, the
+          <span class="keyword wintitle">Scheduler</span> window displays the triggering event in the
+          <span class="ph uicontrol">Scheduled</span> column. If there are multiple events, they are displayed
+        in the <span class="ph uicontrol">Scheduled</span> column as a comma-separated list.</p>
+</div>
+
+    <ol class="ol steps" id="Untitled1__steps_tkd_g1c_y5"><li class="li step stepexpand">
+        <span class="ph cmd">In the <span class="keyword wintitle">Scheduling</span> dialog box, select <span class="ph uicontrol">Run this action
+          automatically</span> check box and then select <span class="ph uicontrol">when ANY of the following
+            events occur</span>.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the events you want to trigger actions.  Choose from the following:</span>
+        <div class="itemgroup info">
+          <dl class="dl parml">
+            
+              <dt class="dt pt dlterm"><span class="ph uicontrol">New file arrives</span></dt>
+
+              <dd class="dd pd">Runs the action when a new file arrives in the folder. You can choose successful
+                or failed file transfers or both to trigger the action. </dd>
+
+              <dd class="dd pd">This event type is valid only for FTP and SFTP uploads, AS2 and HSP receives, and
+                <span class="keyword cmdname">LCOPY</span> commands.</dd>
+
+              <dd class="dd pd">For a Commands action scheduled for <samp class="ph codeph">new file arrives</samp>, the
+                Commands action will be run only if at least one of the sources of the
+                <span class="keyword cmdname">PUT</span> or <span class="keyword cmdname">LCOPY</span> commands in the action match
+                the path of the new file. And then at runtime, all of the sources of the
+                <span class="keyword cmdname">PUT</span>, <span class="keyword cmdname">LCOPY</span>, <span class="keyword cmdname">LDELETE</span>, and
+                <span class="keyword cmdname">LREPLACE </span>commands that match the new file's path are modified
+                to explicitly point to the new file.</dd>
+
+            
+            
+              <dt class="dt pt dlterm"><span class="ph uicontrol">User session ends</span></dt>
+
+              <dd class="dd pd">Runs the action when the user session ends.  Choose successful or failed session
+                end or both to be the trigger event.</dd>
+
+              <dd class="dd pd">
+                <div class="note note"><span class="notetitle">Note:</span> 
+                  <p class="p">This event type is valid only for FTP and SFTP user sessions.</p>
+
+                  <p class="p">This option is available only when you select <span class="ph uicontrol">JavaScript</span>
+                    as the <span class="ph uicontrol">Language</span> option. </p>
+
+                </div>
+
+              </dd>
+
+            
+          </dl>
+
+          <div class="note note"><span class="notetitle">Note:</span> For both <samp class="ph codeph">new file arrives</samp> and <samp class="ph codeph">user session ends</samp>
+            triggers, the trigger object is accessible in the JavaScript action via
+            <samp class="ph codeph">ISessionScript.getTrigger()</samp>. The user session end trigger includes
+            all the relevant <samp class="ph codeph">new file arrives</samp> triggers that occurred during the
+            session.</div>
+
+        </div>
+        <div class="itemgroup info"></div>
+        
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">OK</span>. </span>
+        <div class="itemgroup info">When the trigger event occurs, the action runs.</div>
+      </li>
+</ol>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_SchedulingActions.html" title="Scheduling actions"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Scheduling actions</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="See Add a User for information about how to add, rename, move, disable or remove a user. The following describes the User tab. User enabled Select this check box to enable the user. A user must be ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="User"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_vlnavigator_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_wnd_bwp_kr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>User</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_wnd_bwp_kr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_vlnavigator.html" title="Cleo VLNavigator">Cleo VLNavigator</a> / <a class="navheader_parent_path" href="../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application">Configuring the Cleo VLNavigator application</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring the Cleo VLNavigator application</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">User</h1>
+
+  <div class="body">
+    <p class="p">See <a class="xref" href="../Tasks/t_Add_A_User.html">Add a User</a> for information about how to add, rename, move, disable or remove a user.</p>
+
+    <p class="p">The following describes the <span class="keyword wintitle">User</span> tab.</p>
+
+    
+    <dl class="dl">
+      
+        <dt class="dt dlterm">User enabled</dt>
+
+        <dd class="dd">Select this check box to enable the user. A user must be enabled to log into <span class="ph">Cleo VLNavigator</span> or <span class="ph">Cleo Harmony</span>
+          applications. </dd>
+
+      
+      
+        <dt class="dt dlterm">LDAP User</dt>
+
+        <dd class="dd">Select this check box to use LDAP to authenticate this user.  The LDAP directory service
+          configured on the <a class="xref" href="t_Users_LDAP_Server_VLNav.html">Users LDAP Server</a> panel is used to authenticate
+          LDAP users and to obtain the full names and email addresses.  If you select this check
+          box, the <span class="ph uicontrol">Username</span>, <span class="ph uicontrol">Password</span>,
+            <span class="ph uicontrol">Confirm Password</span>, <span class="ph uicontrol">Full Name</span>, and
+            <span class="ph uicontrol">Email Address</span> fields are disabled.  <p class="p">When creating or modifying
+            an LDAP user, select the <span class="ph uicontrol">...</span> button to display a list of LDAP
+            users within the configured directory, base DN, and search filter. 
+            </p>
+<div class="note note"><span class="notetitle">Note:</span> If
+            you have not specified the optional <span class="ph uicontrol">Username</span> or
+              <span class="ph uicontrol">Password</span> within the LDAP Server tab, you will be asked to
+            authenticate the first time you select the <span class="ph uicontrol">[...]</span> button.
+            You must enter a valid LDAP
+            username and password to obtain the
+          list.</div>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Username</dt>
+
+        <dt class="dt dlterm">Password</dt>
+
+        <dd class="dd">The value you specify in the <span class="ph uicontrol">Username</span> field must be unique across
+          all user groups. The <span class="ph uicontrol">Password</span> can make use of any keyboard
+          characters. When logging in, the <span class="ph uicontrol">Username</span> and the
+            <span class="ph uicontrol">Password</span> are case sensitive. <p class="p">When creating or modifying a
+            non-LDAP user, you must use the <span class="ph uicontrol">Username</span>,
+              <span class="ph uicontrol">Password</span> and <span class="ph uicontrol">Confirm Password</span>
+            fields. </p>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Optional Alias</dt>
+
+        <dd class="dd">
+          <p class="p">If you specify a value, the alias rather than the username is displayed in the <span class="ph">Cleo VLNavigator</span> tree. </p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Full Name</dt>
+
+        <dt class="dt dlterm">Email Address</dt>
+
+        <dd class="dd">The <span class="ph uicontrol">Full Name</span> and <span class="ph uicontrol">Email Address</span> fields are
+          used by optional applications you configure on the Applications dialog box.  See <a class="xref" href="t_Applications_VLNav.html">Applications</a>). </dd>
+
+        <dd class="dd">The <span class="ph uicontrol">Email Address</span> and <span class="ph uicontrol">Password</span> you specify
+          on this tab are the credentials this user uses to log in to <span class="ph">Cleo Unify</span> and <span class="ph">Cleo Trust</span>.</dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring the Cleo VLNavigator application</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

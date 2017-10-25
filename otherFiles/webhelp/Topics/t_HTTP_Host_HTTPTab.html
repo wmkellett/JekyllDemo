@@ -1,0 +1,389 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The product uses the information you provide in the General and HTTP to build HTTP URLs when an action is run.  HTTP/HTTPs For HTTPs servers only. Possible values : HTTP or HTTPs - If the server ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="HTTP Host: HTTP Tab"></meta><meta name="abstract" content="The product uses the information you provide in the General and HTTP to build HTTP URLs when an action is run. "></meta><meta name="description" content="The product uses the information you provide in the General and HTTP to build HTTP URLs when an action is run. "></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_http_host.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_txg_51c_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>HTTP Host: HTTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_txg_51c_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_http_configuration.html" title="First activate either a trading partner specific host or the generic HTTP or HTTP/s pre-configured host (see below).  The generic HTTP host provides an interface over non-secure HTTP.  If interfacing to a server that requires use of the Secure Socket Layer (SSL) over HTTP, then the generic HTTP/s host must be used.">HTTP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_http_host.html" title="HTTP Host">HTTP Host</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_http_host.html" title="HTTP Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">HTTP Host</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">HTTP Host: HTTP Tab</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">The product uses the information you provide in the <span class="keyword wintitle">General</span> and
+      <span class="keyword wintitle">HTTP</span> to build HTTP URLs when an action is run.  </p>
+
+   <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">HTTP/HTTPs</dt>
+
+          <dd class="dd">For HTTPs servers only.</dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">HTTP</kbd> or <kbd class="ph userinput">HTTPs</kbd> -
+            If the server requires Secure Socket Layer (SSL), select <kbd class="ph userinput">HTTPs</kbd>. 
+            .</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Check certificate server name</dt>
+
+          <dd class="dd">Only available if you select <kbd class="ph userinput">HTTPs</kbd>. Verifies that the server
+            name in the received SSL server certificate matches the server name actually connected
+            to.</dd>
+
+        
+        
+          <dt class="dt dlterm">Method</dt>
+
+          <dd class="dd">Select a method for each command supported by the server. See <a class="xref" href="t_HTTPAndHTTPsHosts_Intro.html">HTTP and HTTP/s Hosts</a>.<ul class="ul" id="reference_txg_51c_b5__ul_rrj_kb1_cx">
+              <li class="li">The server might not require <span class="keyword cmdname">CONNECT</span> (login) because:<ul class="ul" id="reference_txg_51c_b5__ul_srj_kb1_cx">
+                  <li class="li">The server may not need to identify the client, or</li>
+
+                  <li class="li">Instead, the other commands may have parameters that identify the client,
+                    or</li>
+
+                  <li class="li">Over SSL, the server may make use of client certificates to identify the
+                    client.</li>
+
+                </ul>
+</li>
+
+              <li class="li"> The server must at least support <span class="keyword cmdname">PUT</span> and/or
+                  <span class="keyword cmdname">GET</span>. </li>
+
+              <li class="li"> If the server supports <span class="keyword cmdname">GET</span>, it usually will support
+                  <span class="keyword cmdname">DIR</span>; otherwise it is difficult to get files without first
+                knowing which files to get. </li>
+
+              <li class="li"> The server might support <span class="keyword cmdname">CONFIRM</span> or <span class="keyword cmdname">DELETE</span>
+                (usually not both). </li>
+
+              <li class="li"> The server might support <span class="keyword cmdname">REQUEUE</span>. </li>
+
+            </ul>
+</dd>
+
+          <dd class="dd">If the <span class="keyword cmdname">DIR</span> command is supported by an <span class="keyword cmdname">HTTP POST</span>
+            method, information concerning how to parse the directory listing returned by the server
+            is required.  This information is potentially used by <span class="keyword cmdname">GET</span> or
+              <span class="keyword cmdname">CONFIRM</span> or <span class="keyword cmdname">DELETE</span> commands to extract the
+            available file "identifiers" one-by-one from the directory listing.<ul class="ul" id="reference_txg_51c_b5__ul_xj4_rc1_cx">
+              <li class="li"> Line delimiter* - set of one or more characters that marks the end of a line in
+                the directory </li>
+
+              <li class="li"> Header lines - number of header lines to be ignored at the beginning of the
+                directory. </li>
+
+              <li class="li"> Field delimiter* - set of one or more characters that separates fields in a line </li>
+
+              <li class="li"> File identified - location in the line of the available file "identifier" <ul class="ul" id="reference_txg_51c_b5__ul_yj4_rc1_cx">
+                  <li class="li"> at position - the file id always starts at this column position (first column
+                    in line is 1) </li>
+
+                  <li class="li"> by tag - the file id always follows this set of one or more characters </li>
+
+                  <li class="li"> at field # - the file id is always this field # (first field in line is 1)
+                  </li>
+
+                </ul>
+</li>
+
+            </ul>
+</dd>
+
+          <dd class="dd">
+            <p class="p">
+              <sup class="ph sup">
+                <span class="ph">*</span>
+              </sup>
+              <span class="ph">Special escape sequences can be used to identify certain characters:</span>
+            </p>
+
+            <ul class="sl simple">
+              <li class="sli"><samp class="ph codeph">\s</samp> - space character</li>
+
+              <li class="sli"><samp class="ph codeph">\t</samp> - tab character</li>
+
+              <li class="sli"><samp class="ph codeph">\n</samp> - newline character</li>
+
+              <li class="sli"><samp class="ph codeph">\r</samp> - carriage return character</li>
+
+              <li class="sli"><samp class="ph codeph">\\</samp> - slash character</li>
+
+            </ul>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Path</dt>
+
+          <dd class="dd"> Supply the server <strong class="ph b">Path</strong> for each of the commands.  Depending on the server
+            implementation and the methods used, some or all the paths might be the same or some or
+            all might be different.</dd>
+
+        
+        
+          <dt class="dt dlterm">Parameters</dt>
+
+          <dt class="dt dlterm">Headers</dt>
+
+          <dd class="dd">Specify required and optional <strong class="ph b">Parameters</strong> and <strong class="ph b">Headers</strong> for each of the
+            commands.</dd>
+
+          <dd class="dd">Add custom parameters and additional headers as needed. The values for these will be
+            available on the receiving side either through the properties passed to the
+            ILexiComIncoming Java API or by accessing <samp class="ph codeph">ISessionScript.getTrigger()</samp>
+            in a JavaScript action scheduled for a new file arrives event.
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="reference_txg_51c_b5__table_uhm_1c1_cx" class="table" frame="border" border="1" rules="all">
+                
+                
+                
+                <thead class="thead" align="left">
+                  <tr class="row">
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d207203e264"> Rule </th>
+
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d207203e267"> Syntax </th>
+
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d207203e270"> Example </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header has
+                      one static value.  If a parameter value includes an ampersand (&amp;) or a
+                      vertical bar (|) or if a header value includes a comma (,) or a vertical bar
+                      (|), precede with a backslash (\&amp; or \, or \|). </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=value </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 ">
+                      <span class="ph">key=1</span>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header
+                      contains a macro variable, it must be enclosed within two percent signs (e.g.,
+                      "%index%").  See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a>
+                      <span class="ph">(Destination File context) for further details on macro usage.  Note that
+                        "macros" should not be confused with "keywords" (e.g., "%dir) that are also
+                        supported within the parameter/header values.</span>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=value </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 ">
+                      <span class="ph">key=MY_NAME_%index%_%date%</span>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header can
+                      have one or more possible values, separate with vertical bars (|).  To include
+                      a description with a possible value, separate the value and description with
+                      two percent signs (%%). </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=|value1|...| </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 ">
+                      <span class="ph">type=|EDI|X12|</span>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header can
+                      have unknown values </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name= </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 ">
+                      <span class="ph">user=</span>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value,
+                      when entered, should be masked, precede with an asterisk (*) </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> *name= </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 ">
+                      <span class="ph">*psw=</span>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header is
+                      optional, enclose with brackets ([...]) </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 ">
+                      <p class="p">[name=value]</p>
+
+                      <p class="p">[name=|value1|...|]</p>
+
+                      <p class="p">[name=]</p>
+
+                      <p class="p">[*name=]</p>
+
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> [type=|EDI|X12|] </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header should
+                      be sent to the server even when a value has not been entered, precede it with
+                      a plus sign (+) and enclose with brackets ([…]) </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> [+name=] </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> [+value=] </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter is not a
+                      name=value pair but just a value, include the = before the value </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> =value </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> =true </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If more than one parameter,
+                      separate with ampersands (&amp;) </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=value&amp;name=value </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> user=&amp;*pswd= </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If more than one header,
+                      separate with commas (,) </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=value,name=value </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> recvr=%tp,type=|EDI|X12|
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value
+                      can potentially be filled in via a <img class="image" id="reference_txg_51c_b5__image_vhm_1c1_cx" src="../Images/image025.gif"></img> trading partner branch (LexiCom) or the Trading
+                      Partner table (VLTrader and Harmony), use the keyword %tp </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=%tp </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> recvr=%tp </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value
+                      is the contents of the source file being transferred, use the keyword %file </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=%file </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> file=%file </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value
+                      is the name of the source file being transferred, use the keyword %file.name </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=%file.name </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> filename=%file.name </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value
+                      is the extension of the source file being transferred, use the keyword
+                      %file.extension </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=%file.extension </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> filetype=%file.extension
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value
+                      can potentially be filled in from the results of a DIR command (one-by-one),
+                      use the keyword %dir </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=%dir </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> filename=%dir </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value
+                      should include a uniquely generated message identifier, use the keyword
+                      %messageID. </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=%messageID </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> id=%messageID </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e264 "> If the parameter/header value
+                      should always be sent to the server with no value, use the keyword %empty. </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e267 "> name=%empty </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d207203e270 "> attribute=%empty </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+</div>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_http_host.html" title="HTTP Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">HTTP Host</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

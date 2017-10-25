@@ -1,0 +1,72 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The following properties are specific to the CHECK command. See Set Advanced Host Properties for a description of these properties. Email On Check Conditions Met Email On Check Conditions Not Met ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="CHECK command advanced properties"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_check_command.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_hwr_jdw_4t"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>CHECK command advanced properties</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_hwr_jdw_4t">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_extended_commands.html" title="Extended Commands">Extended Commands</a> / <a class="navheader_parent_path" href="../Topics/t_check_command.html" title="CHECK Command">CHECK Command</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">CHECK command advanced properties</h1>
+
+  <div class="body">
+    <p class="p">The following properties are specific to the
+        <span class="keyword cmdname">CHECK</span> command. See <a class="xref" href="../Tasks/t_set_advanced_host_properties.html">Set Advanced Host Properties</a> for a description
+      of these properties.</p>
+
+    <ul class="ul" id="topic_hwr_jdw_4t__ul_xh1_zkp_pt">
+      <li class="li"><samp class="ph codeph">Email On Check Conditions Met</samp></li>
+
+      <li class="li"><samp class="ph codeph">Email On Check Conditions Not Met</samp></li>
+
+      <li class="li"><samp class="ph codeph">Execute On Check Conditions Met</samp></li>
+
+      <li class="li"><samp class="ph codeph">Execute On Check Conditions Not Met</samp></li>
+
+    </ul>
+
+    <div class="note note"><span class="notetitle">Note:</span> 
+      <ol class="ol" id="topic_hwr_jdw_4t__ol_oqj_2rp_pt">
+        <li class="li">For the <samp class="ph codeph">Execute On Check Conditions Met</samp> property, if multiple files
+          contribute to the conditions being met, and one of the following file macros is in the
+          system command, the command will be executed repeatedly—once for each file.<ul class="ul" id="topic_hwr_jdw_4t__ul_kcn_clp_pt">
+            <li class="li"><samp class="ph codeph">%file%</samp></li>
+
+            <li class="li"><samp class="ph codeph">%sourcefile%/%srcfile%</samp></li>
+
+            <li class="li"><samp class="ph codeph">%sourcefilebase%/%srcfilebase%</samp></li>
+
+            <li class="li"><samp class="ph codeph">%sourcefileext%/%sourcefileext%</samp></li>
+
+            <li class="li"><samp class="ph codeph">%destfile%</samp></li>
+
+            <li class="li"><samp class="ph codeph">%destfilebase%</samp></li>
+
+            <li class="li"><samp class="ph codeph">%destfileext%</samp></li>
+
+          </ul>
+</li>
+
+        <li class="li">The macros listed above are not available to <samp class="ph codeph">Execute On Check Conditions Not
+            Met</samp>.</li>
+
+      </ol>
+
+      <p class="p">See <a class="xref" href="t_using_macro_variables.html">Using Macro Variable</a>
+        (Execute-On context).</p>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

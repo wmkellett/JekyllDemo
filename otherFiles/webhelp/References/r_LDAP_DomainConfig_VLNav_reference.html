@@ -1,0 +1,509 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Lookup Select the check box to use the value in the Domain field for retrieving SRV (Service) records for the LDAP service cluster. Clear the check box to add records to the table manually. Domain The ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Cleo VLNavigator LDAP Domain Configuration reference"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Users_Cfg_LDAP_Server_VLNav.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_dzl_3gb_d5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cleo VLNavigator LDAP Domain Configuration reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_dzl_3gb_d5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Users_VLNav.html" title="Users">Users</a> / <a class="navheader_parent_path" href="../Tasks/t_Users_Cfg_LDAP_Server_VLNav.html" title="Users LDAP Server">Users LDAP Server</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Users_Cfg_LDAP_Server_VLNav.html" title="Users LDAP Server"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users LDAP Server</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1"><span class="ph">Cleo VLNavigator</span> LDAP Domain
+    Configuration reference</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Lookup</dt>
+
+          <dd class="dd">Select the check box to use the value in the <span class="ph uicontrol">Domain</span> field for
+            retrieving SRV (Service) records for the LDAP service cluster. </dd>
+
+          <dd class="dd">Clear the check box to add records to the table manually.</dd>
+
+        
+        
+          <dt class="dt dlterm">Domain</dt>
+
+          <dd class="dd">The name of the domain from which you want to retrieve SRV records.</dd>
+
+          <dd class="dd">Click <span class="ph uicontrol">Refresh</span> to refresh the information in the table using the
+            value in the <span class="ph uicontrol">Domain</span> field.</dd>
+
+        
+        
+          <dt class="dt dlterm">SRV record table</dt>
+
+          <dd class="dd">The SRV record table displays information about SRV records. Each row in the table
+            represents one SRV record.  Each row contains the following columns:</dd>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Enabled</dt>
+
+                <dd class="dd">Select this check box to use the record. Otherwise, the record is ignored.</dd>
+
+              
+              
+                <dt class="dt dlterm">Hostname </dt>
+
+                <dd class="dd">The target machine on which the LDAP service is running. </dd>
+
+              
+              
+                <dt class="dt dlterm">Port</dt>
+
+                <dd class="dd">The port used to connect to the LDAP service. Typically, the port
+                    <samp class="ph codeph">389</samp> is used for non-secure (<kbd class="ph userinput">None</kbd>) or
+                  StartTLS mode and <samp class="ph codeph">636</samp> is used for SSL mode.</dd>
+
+              
+              
+                <dt class="dt dlterm">TTL</dt>
+
+                <dd class="dd">The <samp class="ph codeph">Time To Live</samp> value defined as the time interval (in
+                  seconds) that the  LDAP service record can be cached before the source of the
+                  information (for example, the domain) should again be consulted. A value of zero
+                  means that the LDAP record can only be used for the transaction in progress, and
+                  should not be cached.  You can also use a value of zero for extremely volatile
+                  data.</dd>
+
+              
+              
+                <dt class="dt dlterm">Priority</dt>
+
+                <dd class="dd">The priority of the LDAP server. Attempts are made to contact LDAP servers with
+                  the lowest-numbered priority first.  LDAP servers with the same priority are
+                  contacted in the order specified by the Weight field. </dd>
+
+                <dd class="dd"><strong class="ph b">Possible
+                  values:</strong><kbd class="ph userinput">0</kbd>-<kbd class="ph userinput">65535</kbd></dd>
+
+              
+              
+                <dt class="dt dlterm">Weight </dt>
+
+                <dd class="dd">A server selection mechanism that specifies a relative weight for entries with
+                  the same priority. Larger weights are given a proportionately higher probability
+                  of being selected. Use a zero value when server selection is not required.</dd>
+
+                <dd class="dd">When there are records with weight values greater than zero, records weighted
+                  with a zero value will have a very small chance of being selected. When all
+                  priority and weight values are the same, the LDAP servers are selected in random
+                  order. </dd>
+
+                <dd class="dd"><strong class="ph b">Possible
+                  values:</strong><kbd class="ph userinput">0</kbd>-<kbd class="ph userinput">65535</kbd></dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Base DN</dt>
+
+          <dd class="dd">The base organizational unit where the users are defined. Contact your directory
+            administrator for the correct Base DN value.  (The Base DN value entered here can be
+            overridden in a local user host LDAP mailbox.)</dd>
+
+          <dd class="dd">The examples the table below show sample base organizational units for the supported
+            directory types.  </dd>
+
+          <dd class="dd">
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_dzl_3gb_d5__table_z5q_l2k_wx" class="table" frame="border" border="1" rules="all">
+                <thead class="thead" align="left">
+                  <tr class="row">
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d44310e175"> Directory Type </th>
+
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d44310e178"> Example Base DN </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 ">Active Directory </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 "><kbd class="ph userinput">OU=Employees,DC=company,DC=com</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 ">Apache Directory Services </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 "><kbd class="ph userinput">OU=Users,DC=example,DC=com</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 ">Lotus Domino </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 "><kbd class="ph userinput">O=SCNotes</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 ">Novell eDirectory </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 "><kbd class="ph userinput">O=Company
+                        Organization</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 ">DirX </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e175 d44310e178 "><kbd class="ph userinput">ou=Users,o=Company</kbd>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+</div>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Search filter</dt>
+
+          <dd class="dd">Optional. Used to limit the amount of information returned from the LDAP server when
+            many users are defined.  A more restrictive filter can be specified as a comma separated
+            list. If necessary, contact your directory administrator to determine the appropriate
+            attributes and values.  You can override the value entered here in a local user host
+            LDAP mailbox. </dd>
+
+          <dd class="dd">The following table contains example lists with sample attribute names and
+            values.</dd>
+
+          <dd class="dd">
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_dzl_3gb_d5__table_f4x_2rj_dr" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                  <tr class="row">
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d44310e270"> Search Filter </th>
+
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d44310e273"> Description </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e270 "><kbd class="ph userinput">department=EDI</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e273 ">Limits the search to entries
+                      that have the attribute, <kbd class="ph userinput">department</kbd>, with a value of
+                        <kbd class="ph userinput">EDI</kbd>. </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e270 "><kbd class="ph userinput">department=EDI,group=administrators</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e273 ">Limits the search to entries
+                      that must match two attributes. The user must be in the
+                        <kbd class="ph userinput">EDI</kbd> department and in the
+                        <kbd class="ph userinput">administrators</kbd> group. </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e270 "><kbd class="ph userinput">department=EDI,telephoneNumber=800*</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e273 ">Limits search to EDI department
+                      members with a telephone number starting with <kbd class="ph userinput">800</kbd>.
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e270 "><kbd class="ph userinput">objectclass=person</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e273 ">Limit the search to entries
+                      that are people if the Base DN contains other entries (for example, computers)
+                      and people. </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e270 "><kbd class="ph userinput">!(userAccountControl:1.2.840.113556.1.4.803:=2)</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e273 "> Excludes disabled accounts -
+                      in Active Directory, if an account is disabled, bit
+                        <kbd class="ph userinput">0x02</kbd> in the <kbd class="ph userinput">userAccountControl</kbd>
+                      attribute value is on.  <kbd class="ph userinput">1.2.840.113556.1.4.803</kbd> is the
+                      rule object ID (ruleOID) for the LDAP bitwise <kbd class="ph userinput">AND</kbd>
+                      operator. </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+</div>
+
+          </dd>
+
+          <dd class="dd">If the value to search in has any of the following special characters, they must be
+            substituted in the Search Filter with the corresponding escape sequence.</dd>
+
+          <dd class="dd">
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_dzl_3gb_d5__table_qzy_2rj_dr" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                  <tr class="row">
+                    <th class="entry" rowspan="1" colspan="1" align="center" valign="top" id="d44310e384"> ASCII character </th>
+
+                    <th class="entry" rowspan="1" colspan="1" align="center" valign="top" id="d44310e387"> Escape Sequence Substitute
+                    </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e384 "><kbd class="ph userinput">*</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e387 "><kbd class="ph userinput">\2a</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e384 "><kbd class="ph userinput">(</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e387 "><kbd class="ph userinput">\28</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e384 "><kbd class="ph userinput">)</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e387 "><kbd class="ph userinput">\29</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e384 "><kbd class="ph userinput">,</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e387 "><kbd class="ph userinput">\2c</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e384 "><kbd class="ph userinput">\</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e387 "><kbd class="ph userinput">\5c</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e384 "><kbd class="ph userinput">NUL</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e387 "><kbd class="ph userinput">\00</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e384 "><kbd class="ph userinput">/</kbd>
+                    </td>
+
+                    <td class="entry" rowspan="1" colspan="1" align="center" valign="top" headers="d44310e387 "><kbd class="ph userinput">\2f</kbd>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+</div>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Username Attribute</dt>
+
+          <dd class="dd">The <span class="ph uicontrol">Username Attribute</span> is the directory attribute that matches
+            the username entered when a login is required. The following table contains typical
+            attribute names for the supported directory types. </dd>
+
+          <dd class="dd">
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_dzl_3gb_d5__table_xjb_frj_dr" class="table" frame="border" border="1" rules="all">
+                
+                
+                <thead class="thead" align="left">
+                  <tr class="row">
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d44310e517"> Directory Type </th>
+
+                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d44310e520"> Username Attribute </th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e517 ">Active Directory </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e520 "><kbd class="ph userinput">sAMAccountName</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e517 ">Apache Directory Services </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e520 "><kbd class="ph userinput">Uid</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e517 ">Lotus Domino </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e520 "><kbd class="ph userinput">CN</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e517 ">Novell eDirectory </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e520 "><kbd class="ph userinput">CN</kbd>
+                    </td>
+
+                  </tr>
+
+                  <tr class="row">
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e517 ">DirX </td>
+
+                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d44310e520 "><kbd class="ph userinput">cn</kbd>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+
+              </table>
+</div>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">LDAP Server Advanced Settings</dt>
+
+          <dd class="dd">The <span class="keyword wintitle">LDAP Server Advanced Settings</span> dialog box displays when you
+            click <span class="ph uicontrol">Advanced</span> on the <span class="keyword wintitle">LDAP Server</span> tab. Use
+            this dialog box to specify values for password expiration checking.<dl class="dl">
+              
+                <dt class="dt dlterm"><strong class="ph b">Enable Password Expiration Checking</strong></dt>
+
+                <dd class="dd">Select this check box to enable password expiration checking and the rest of the
+                  fields in the dialog box. Password expiration checking provides a daily email
+                  notification to the system administrator.</dd>
+
+              
+              
+                <dt class="dt dlterm"><strong class="ph b">Warning Days Before Password Expiration</strong></dt>
+
+                <dd class="dd">The range of days within which a notification is generated.</dd>
+
+              
+              
+                <dt class="dt dlterm">Daily Time Check</dt>
+
+                <dd class="dd">The time of day password expiration is checked.</dd>
+
+              
+              
+                <dt class="dt dlterm">To</dt>
+
+                <dd class="dd">The email address of the recipient of the daily password expiration check
+                  notification. You can specify multiple recipients.  Separate email addresses by
+                  commas (,), semi-colons(;) or colons(:). </dd>
+
+                <dd class="dd">One or more individual users can also receive an email notification, if
+                  specified, when the <span class="ph uicontrol">Security Mode</span> is not set to
+                    <kbd class="ph userinput">None</kbd> and an email address is configured for the users (as
+                  part of his Active Directory settings).  A Web Portal user whose password hasn't
+                  already expired is directed to the web link (see <a class="xref" href="../Tasks/t_Providing_Access_Web_Portal_Web_Browser_Svc.html">Providing Access to the Web Portal</a>) where they can change their password.
+                  Otherwise, they are directed to contact the system administrator for assistance in
+                  changing it.</dd>
+
+                <dd class="dd"><strong class="ph b">Default value</strong>: The System Administrator email address defined in the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Other</span></span> panel in the native UI or <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; System &gt; Other</span></span> in the web UI.</dd>
+
+              
+              
+                <dt class="dt dlterm">From</dt>
+
+                <dd class="dd">The email address of the sender of the daily password expiration check
+                  notification. If this field contains multiple email addresses, only the first
+                  address is displayed. </dd>
+
+                <dd class="dd"><strong class="ph b">Default value</strong>: The System Administrator email address defined in the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Other</span></span> panel in the native UI or <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; System &gt; Other</span></span> in the web UI.</dd>
+
+              
+              
+                <dt class="dt dlterm">Subject</dt>
+
+                <dd class="dd">String that appears in the Subject field of the daily password expiration check
+                  notification. </dd>
+
+              
+            </dl>
+</dd>
+
+        
+      </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Users_Cfg_LDAP_Server_VLNav.html" title="Users LDAP Server"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users LDAP Server</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

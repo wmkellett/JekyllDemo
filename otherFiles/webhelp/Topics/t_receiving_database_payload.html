@@ -1,0 +1,168 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="End user/application VersaLex •  End user reviews settings in the VLOptions and VLMailboxes tables.     •  With each new incoming payload request, VersaLex checks VLMailboxes table ReceiveIncoming ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Receiving Database Payload"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_database_definitions.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="receiving_database_payload"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Receiving Database Payload</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="receiving_database_payload">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_database_definitions.html" title="Database Definitions">Database Definitions</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_database_definitions.html" title="Database Definitions"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Database Definitions</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Receiving Database
+                Payload</h1>
+
+   <div class="body">
+      <p class="p"></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        End user/application
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        VersaLex
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        •  
+                     <span class="ph">End user reviews settings
+                                in the <strong class="ph b">VLOptions</strong> and <strong class="ph b">VLMailboxes</strong> tables.</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        •  
+                     <span class="ph">With each new incoming
+                                payload request, VersaLex checks <strong class="ph b">VLMailboxes</strong> table
+                                    <var class="keyword varname">ReceiveIncoming</var> column to see if trading partner’s
+                                    <var class="keyword varname">Host</var>\<var class="keyword varname">Mailbox</var> is set to receive database
+                                payload.</span>
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        •  
+                     <span class="ph">If database payload,
+                                VersaLex inserts into <strong class="ph b">VLIncoming</strong> table <var class="keyword varname">TransferID</var>,
+                                    <var class="keyword varname">VLSerial</var>, <var class="keyword varname">MessageID</var>, <var class="keyword varname">Fileindex</var>,
+                                    <var class="keyword varname">Payload</var>, <var class="keyword varname">Filename</var>, <var class="keyword varname">ContentType</var>,
+                                    <var class="keyword varname">Filesize</var>, <var class="keyword varname">Host</var>, <var class="keyword varname">Mailbox</var>, and
+                                    <var class="keyword varname">InsertedDT</var> columns.</span>
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        
+                     <p class="p">•  
+                        <span class="ph">End user application
+                                polls <strong class="ph b">VLIncoming</strong> table for new incoming payload</span>
+                     </p>
+
+                        
+                     <p class="p">
+                        <strong class="ph b">
+                           <span class="ph">Note: </span>
+                        </strong>
+                            
+                        <span class="ph">Payload should not be retrieved from the
+                                    <strong class="ph b">VLIncoming</strong> table until the corresponding
+                                    <strong class="ph b">VLTransfers</strong> table row no longer has a <var class="keyword varname">Status</var>
+                                column value of “In Progress”.  Valid payload will be indicated
+                                by a <var class="keyword varname">Status</var> column value of “Success” or “Warning”. 
+                                A <var class="keyword varname">Status</var> of “Error”, “Exception” or “Interrupted”
+                                indicates that payload was not successfully received.  The
+                                    <strong class="ph b">VLIncomingProperties</strong> table contains additional payload
+                                parameters/headers not already contained within the VLIncoming table
+                                (e.g. Subject).</span>
+                     </p>
+
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        •  
+                     <span class="ph">End user application
+                                either deletes row from <strong class="ph b">VLIncoming</strong> table after retrieving
+                                payload or sets the <var class="keyword varname">RetrievedDT</var> column.</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                         
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"> </p>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_database_definitions.html" title="Database Definitions"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Database Definitions</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

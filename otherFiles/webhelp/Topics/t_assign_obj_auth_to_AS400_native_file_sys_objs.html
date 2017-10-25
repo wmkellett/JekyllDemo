@@ -1,0 +1,59 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="As with objects defined in the /LexiCom IFS directory that are not owned by the user who originally created them, Authorization Lists may be used to allow users read and write access rights to ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Assigning Object Authority to AS/400 Native File System Objects"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cfg_AS400_Native_or_IFS_Access.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_jds_bgy_ds"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Assigning Object Authority to AS/400 Native File System Objects</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_jds_bgy_ds">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_as_400_configure_and_test.html" title="AS/400 Configure and Test">AS/400 Configure and Test</a> / <a class="navheader_parent_path" href="../Topics/t_cfg_AS400_Native_or_IFS_Access.html" title="Configuring for AS/400 Native or Integrated File System Access">Configuring for AS/400 Native or Integrated File System Access</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cfg_AS400_Native_or_IFS_Access.html" title="Configuring for AS/400 Native or Integrated File System Access"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring for AS/400 Native or Integrated File System Access</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Assigning Object Authority to AS/400 Native File System Objects</h1>
+
+  <div class="body">
+    <p class="p">As with objects defined in the /LexiCom IFS directory that are not owned by the user who
+      originally created them, <var class="keyword varname">Authorization Lists</var> may be used to allow users
+      read and write access rights to specified NFS libraries and files.  If read and/or write
+      access is not properly assigned to users who will be reading and writing in the NFS
+      directories, LexiCom will log errors that access to the request was denied. </p>
+
+    <p class="p"> To assign permissions based on Authorization Lists, open the <var class="keyword varname">File Systems</var>
+      tree in System i Navigator and expand the <var class="keyword varname">Integrated File System</var> entry.
+      Then under the <var class="keyword varname">QSYS.LIB</var> entry, right-click on the LEXICOM.LIB folder to
+      choose the <var class="keyword varname">Permissions</var> menu item and choose the <strong class="ph b">Authorization List</strong>
+      option: </p>
+
+    <p class="p">
+      <img class="image" id="topic_jds_bgy_ds__image_jgb_dgy_ds" src="../Images/image1950.jpg"></img>
+    </p>
+
+    <p class="p">Select the LexiCom Authorization List in the drop-down list and press “OK”:</p>
+
+    <p class="p">
+      <img class="image" id="topic_jds_bgy_ds__image_vgb_dgy_ds" src="../Images/image1952.jpg"></img>
+    </p>
+
+    <p class="p"> Now, verify that the LexiCom Authorization List has been assigned to the /LexiCom Object,
+      set the Public permissions to <strong class="ph b">From AUTL</strong> and click <span class="ph uicontrol">Apply</span>: </p>
+
+    <p class="p">
+      <img class="image" id="topic_jds_bgy_ds__image_hhb_dgy_ds" src="../Images/image1956.jpg"></img>
+    </p>
+
+    <div class="note note"><span class="notetitle">Note:</span>  The example above used the same Authorization List that was created for the /LexiCom IFS
+      folder, but a different Authorization List may be used, if desired.  Also, permissions may be
+      applied separately to specific objects in the LEXICOM.LIB directory, e.g., INBOUND.FILE,
+      OUTBOUND.FILE, etc.</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cfg_AS400_Native_or_IFS_Access.html" title="Configuring for AS/400 Native or Integrated File System Access"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring for AS/400 Native or Integrated File System Access</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

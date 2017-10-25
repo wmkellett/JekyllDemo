@@ -1,0 +1,921 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The VersaLex JMS URI is for using JMS (Java Message Service) queues instead of local file system files for payload sent to and/or received from trading partners. The basic format of the JMS URI is: ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="JMS URI Scheme"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_uri_file_system_interface.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="jms_uri_scheme"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>JMS URI Scheme</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="jms_uri_scheme">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface">URI File System Interface</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">URI File System Interface</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">JMS
+                    URI Scheme</h1>
+
+   <div class="body">
+      <p class="p">The VersaLex JMS URI is for using JMS (Java Message Service)
+                  queues instead of local file system files for payload sent to and/or received from
+                  trading partners.</p>
+
+      
+      <p class="p">The basic format of the JMS URI is:</p>
+
+      <pre class="pre codeblock">jms:jndi:<var class="keyword varname">jmsQueueName</var>?<var class="keyword varname">param1</var>=<var class="keyword varname">value1</var>&amp;<var class="keyword varname">param2</var>=<var class="keyword varname">value2</var>&amp;<var class="keyword varname">param3</var>=…</pre>
+
+      
+      <p class="p">Example:</p>
+
+            <pre class="pre codeblock">jms:jndi:OutboxQueue?msgFilename=test.edi&amp;jndiConnectionFactoryName=ConnectionFactory&amp;
+jmsSelector=(SomeProperty=’abcd’)&amp;filenameProp=filename</pre>
+
+      
+      <p class="p">
+                  <strong class="ph b">NOTES</strong>:</p>
+
+      <p class="p">1.   VersaLex JMS URI only supports JNDI (Java Naming and
+            Directory Interface) connections to JMS providers.</p>
+
+      <p class="p">2.   JMS supports many different message types: BytesMessage,
+            TextMessage, StreamMessage, MapMessage, ObjectMessage, and Message. VersaLex JMS URI
+            only supports the BytesMessage message type. All other message types in the queue will
+            be ignored and remain in the queue.</p>
+
+      <p class="p">3.   JMS supports Topics as well as Queues. VersaLex JMS URI
+            only supports Queues.</p>
+
+      <p class="p">4.   If necessary, a custom JMS URI can be created which could
+            support any of the items not supported above.</p>
+
+      <div class="section"><h2 class="title sectiontitle">JMS URI Parameters</h2>
+         
+      </div>
+
+      <p class="p">Optional parameters specified in the URI include the
+            following:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+               <thead class="thead" align="left">
+                     <tr class="row">
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e93">
+                                 URI Parameter
+                           </th>
+
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e96">
+                                 Description
+                           </th>
+
+                           
+                     </tr>
+    
+               </thead>
+
+            <tbody class="tbody">
+             
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        
+                     <p class="p">jndiConnectionFactoryName=</p>
+
+                        
+                     <p class="p">              
+                                <var class="keyword varname">connectionFactoryName</var>
+                     </p>
+
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is the connection factory name
+                            within JMS. Since there can be multiple connection factories within a
+                            single JMS, this parameter is typically required.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        
+                     <p class="p">jndiInitialContextFactory=</p>
+
+                        
+                     <p class="p">
+                        <var class="keyword varname">              
+                                    initialContextFactoryName</var>
+                     </p>
+
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is the initial context factory
+                            name. With some JMS implementations, such as GlassFish, this parameter
+                            does not need to be specified as it will be automatically determined
+                            during the call to javax.naming.InitialContext().
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        jndiURL=<var class="keyword varname">jndiURL</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is the JNDI URL. With some JMS
+                            implementations, such as GlassFish, this parameter does not need to be
+                            specified as it will be automatically determined during the call to
+                            javax.naming.InitialContext().
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        ctxProps=<var class="keyword varname">prop1=’val1’,prop2=’val2’,…</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is used to specify additional
+                            properties that will be used during the call to
+                            javax.naming.InitialContext(environment). InitialContext is used when
+                            making a connection to the JMS provider.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        connectionID=<var class="keyword varname">connectionIdentifier</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is used to specify a connection ID
+                            to reference properties from the properties file specified in the system
+                            property <var class="keyword varname">cleo.uri.jms.connectionFile</var>.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        filenameProp=<var class="keyword varname">filenameProperty</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        JMS does not have a set place to store a filename
+                            for a message. This parameter specifies the name of a String Property to
+                            hold the filename for a message. If this property is not present, then
+                            no filename will be saved into sent messages. If this property is not
+                            present when reading from the queue, the filename will be based on the
+                            JMS message ID.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        msgFilename=<var class="keyword varname">filename</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is used to specify the filename for
+                            a PUT, GET, PUT+GET, or LCOPY command. It is used in conjunction with
+                            the filenameProp parameter. When used as the source for a command, the
+                            filename can be a wildcard or regular expression.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        maxMessages=<var class="keyword varname">maxNumOfMessages</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is used to specify the maximum
+                            number of messages that will be read from the queue. Please note that if
+                            a JMS selector is used, the number of messages matching that selector
+                            will be returned. If a JMS selector is not used and a filename wildcard
+                            is used, it will read the first <var class="keyword varname">maxNumOfMessages</var> messages and
+                            then apply the filename filter. This could result in fewer messages than
+                            what is expected.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        jmsProps=<var class="keyword varname">prop1=’val1’,prop2=’val2’,…</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is used to specify specific JMS
+                            message string properties that will be added to the message. This
+                            parameter is only used in the Inbox or as the file destination.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        jmsSelector=<var class="keyword varname">(jmsSelectorExpression)</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is used to specify a JMS selector
+                            expression to be used to select only certain items from the queue. The
+                            syntax of the expression is based on a subset of the SQL92 conditional
+                            expression syntax. For example, the string (<var class="keyword varname">(prop1=’val1’) and
+                                (prop2 LIKE ’val%%’)</var> selects only those messages containing
+                            a string property, prop1, with a value of ‘val1’ and another string
+                            property, prop2, with a value starting with ‘val’. This parameter is
+                            used in the Outbox or as the file source. (Note: The typical % used in
+                            the JMS Selector expression must be specified as two percents (%%) since
+                            VersaLex uses % for macros.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e93 ">
+                        msgID=<var class="keyword varname">jmsMessageID</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e96 ">
+                        This parameter is used to specify a specific JMS
+                            message ID. This parameter cannot be a wildcard or regular expression.
+                            This parameter is not typically specified in an action. It can be used
+                            to retrieve a specific message out of the JMS queue.
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">Parameters that may automatically be added by VersaLex include
+            the following:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+               <thead class="thead" align="left">
+                     <tr class="row">
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e275">
+                                 URI Parameter
+                           </th>
+
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e278">
+                                 Description
+                           </th>
+
+                           
+                     </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+               
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e275 ">
+                        msgFilename=<var class="keyword varname">filename</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e278 ">
+                        This parameter is the filename for the message. If
+                            no filenameProp is specified, this will be the JMS message ID converted
+                            to a filename. Otherwise it contains the value from the String property
+                            specified by filenameProp.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e275 ">
+                        msgID=<var class="keyword varname">jmsMessageID</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e278 ">
+                        This is the JMS message ID. It is added to the URI
+                            so that a -DEL operation on a PUT can delete the specific message
+                            read.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e275 ">
+                        length=<var class="keyword varname">messageLength</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e278 ">
+                        This is the length of the message.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e275 ">
+                        time=<var class="keyword varname">messageTime</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e278 ">
+                        This is the timestamp of the JMS message. The
+                            format of <var class="keyword varname">messageTime</var> will be YYYYMMDD-HHMMSS.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e275 ">
+                        correlationId=<var class="keyword varname">correlationId</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e278 ">
+                        This is the correlation ID of the JMS message.
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">System properties can be defined for some of the JMS URI
+            parameters. The parameters defined at the system property level would apply to all JMS
+            URIs unless overridden in the URI itself or by a Connection ID property. The following
+            system properties may be defined:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+               <thead class="thead" align="left">
+                     <tr class="row">
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e366">
+                                 System Property
+                           </th>
+
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e369">
+                                 Description
+                           </th>
+
+                           
+                     </tr>
+     
+               </thead>
+
+            <tbody class="tbody">
+              
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e366 ">
+                        cleo.uri.jms.jndiConnectionFactoryName
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e369 ">
+                        This system property can be used in place of the
+                            jndiConnectionFactoryName URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e366 ">
+                        cleo.uri.jms.jndiInitialContextFactory
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e369 ">
+                        This system property can be used in place of the
+                            jndiInitialContextFactory URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e366 ">
+                        cleo.uri.jms.jndiURL
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e369 ">
+                        This system property can be used in place of the
+                            jndiURL URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e366 ">
+                        cleo.uri.jms.filenameProp
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e369 ">
+                        This system property can be used in place of the
+                            filenameProp URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e366 ">
+                        cleo.uri.jms.maxMessages
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e369 ">
+                        This system property can be used in place of the
+                            maxMessages URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e366 ">
+                        cleo.uri.jms.context.<var class="keyword varname">ContextKey</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e369 ">
+                                          <p class="p">This system property can be used in place of, or in
+                                                addition to, the ctxProps URI parameter and/or the
+                                                Connection ID context properties. For example, if
+                                                you wanted to set
+                                                java.naming.security.authentication to simple as a
+                                                default for all JMS connections, you would add the
+                                                following line to the system.properties file:</p>
+
+                                    </td>
+
+                
+               </tr>
+
+                              <tr class="row">
+                                    <td class="entry" colspan="2" align="right" valign="top" headers="d332370e366 d332370e369 ">
+                                          <pre class="pre codeblock"><samp class="ph codeph">cleo.uri.jms.context.java.naming.security.authentication=simple</samp></pre>
+
+                                    </td>
+
+                              </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e366 ">
+                        cleo.uri.jms.connectionFile
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e369 ">
+                        This system property is used to define a
+                            properties file containing JMS connection properties. The properties in
+                            this file are used in conjunction with the connectionID URI parameter
+                            above.
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">Certain properties can be defined per Connection ID. The properties defined at the
+                  Connection ID level would apply to any JMS URIs using the specific Connection ID
+                  which are not overridden in the URI itself. The following Connection ID properties
+                  may be defined for each <var class="keyword varname">connectionID</var>. </p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+               <thead class="thead" align="left">
+                     <tr class="row">
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e478">
+                                 Connection ID Property
+                           </th>
+
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d332370e481">
+                                 Description
+                           </th>
+
+                           
+                     </tr>
+    
+               </thead>
+
+            <tbody class="tbody">
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.username</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                        Username used when creating connections to the JMS
+                            queue.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.pw</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                        Password used when creating connections to the JMS
+                            queue.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.jndiConnectionFactoryName</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                        This system property can be used in place of the
+                            jndiConnectionFactoryName URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.jndiInitialContextFactory</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                        This system property can be used in place of the
+                            jndiInitialContextFactory URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.jndiURL</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                        This system property can be used in place of the
+                            jndiURL URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.filenameProp</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                        This system property can be used in place of the
+                            filenameProp URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.maxMessages</span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                        This system property can be used in place of the
+                            maxMessages URI parameter.
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e478 ">
+                        
+                     <span class="ph">cleo.uri.jms.connections.</span>
+                     <var class="keyword varname">connectionID</var>
+                     <span class="ph">.context.<var class="keyword varname">ContextKey</var>
+                     </span>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d332370e481 ">
+                                          <p class="p">This system property can be used in place of, or in
+                                                addition to, the ctxProps URI parameter and the
+                                                System context properties. For example, if you
+                                                wanted to set java.naming.security.authentication to
+                                                simple for Connection ID ‘ConnID1’, you would add
+                                                the following line to the properties file:</p>
+
+                                    </td>
+
+                
+               </tr>
+
+                              <tr class="row">
+                                    <td class="entry" colspan="2" align="right" valign="top" headers="d332370e478 d332370e481 ">
+                                          <pre class="pre codeblock"><samp class="ph codeph">cleo.uri.jms.connections.ConnID1.context.java.naming.security.
+authentication=simple</samp></pre>
+
+                                    </td>
+
+                              </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">Some parameters/properties can be specified at three different
+            levels. They can be specified in the URI string, in the Connection ID properties, and in
+            the System properties.  The parameters specified in the URI always override the values
+            in the Connection ID properties and the System properties. The Connection ID properties
+            override those in the System properties. If a value is in the System property that is
+            not needed for a specific Connection ID property, the property can be added to the
+            Connection ID properties file without a value.</p>
+
+      
+      <p class="p">There are many JMS servers available. Each of these servers
+            provide their own custom jar files that are used to send and receive JMS messages. These
+            jar files should be added to the VersaLex base class path using the
+                <strong class="ph b">cleo.additional.classpath</strong> system property. If more than one jar file is
+            necessary, the list of jar files should be separated with a semicolon (;) on Windows
+            systems and a colon (:) on Unix systems. Forward slashes (/) can be used for both
+            Windows and Unix. If backslash is used (\) then two backslashes (\\) must be used
+            between each directory. For example, for GlassFish V3 the system property defined in the
+            conf/system.properties file would be something similar to:</p>
+
+      <p class="p"><span class="ph filepath">cleo.additional.classpath=C:/glassfish3/glassfish/lib/gf-client.jar</span></p>
+
+      <p class="p">If the GlassFish server is not installed on the same workstation
+            as VersaLex, then either:</p>
+
+      <p class="p">a)   GlassFish would need to be loaded on the same workstation
+            as VersaLex but not executed</p>
+
+      <p class="p">b)   The necessary GlassFish files would need to be copied from
+            the GlassFish installation to the VersaLex workstation</p>
+
+      <p class="p">c)   The GlassFish files would need to be accessed through a
+            network share</p>
+
+      <div class="section"><h2 class="title sectiontitle">JMS URI Sample
+                Usages</h2>
+         
+      </div>
+
+      <p class="p">If the host-level Inbox/Outbox are specified as JMS queues:</p>
+
+      <p class="p">Inbox:</p>
+
+      <pre class="pre codeblock">jms:jndi:InboxQueue?jndiConnectionFactoryName=ConnectionFactory&amp;filenameProp=filename</pre>
+
+      <p class="p">Outbox:</p>
+
+            <pre class="pre codeblock">jms:jndi:OutboxQueue?jndiConnectionFactoryName=ConnectionFactory&amp;filenameProp=filename</pre>
+
+      
+      <p class="p">Sample commands:</p>
+
+      <pre class="pre codeblock">PUT -DEL *</pre>
+
+      <p class="p">Sends all messages in the queue and deletes them after successful
+            being send</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL test.edi</pre>
+
+      <p class="p">Sends the first message with the filename ‘test.edi’ and
+            deletes it after successful send</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL [test.edi]</pre>
+
+      <p class="p">Sends all messages with the filename property matching the
+            regular expression [test.edi]. If there are multiple ‘test.edi’ messages in the
+            queue, each of them will be sent and deleted after they are successfully sent.</p>
+
+      
+      <pre class="pre codeblock">GET *</pre>
+
+      <p class="p">Retrieves all remote files and stores them in the InboxQueue.</p>
+
+      
+      <pre class="pre codeblock">LCOPY -DEL * C:\SomeDir\</pre>
+
+      <p class="p">Copies all messages from the InboxQueue to <span class="ph filepath">C:\SomeDir\ </span>and deletes
+                  them from the queue.</p>
+
+      
+      <p class="p">In the case of unsolicited incoming files, the files will
+            automatically be added as messages to the end of InboxQueue.</p>
+
+      
+      <p class="p">If the host-level Inbox/Outbox are specified as folders on the
+            local file system:</p>
+
+      <p class="p"> Inbox:         <span class="ph filepath">Inbox/</span>
+            </p>
+
+      <p class="p"> Outbox:      <span class="ph filepath">Outbox/</span>
+            </p>
+
+      <p class="p">Then you can still use the JMS queue within the action
+            commands.</p>
+
+      
+      <p class="p">Sample commands:</p>
+
+      <pre class="pre codeblock">PUT -DEL "jms:jndi:OutboxQueue?msgFilename=*&amp;
+jndiConnectionFactoryName=ConnectionFactory&amp;filenameProp=filename"</pre>
+
+      <p class="p">Sends all messages in the queue and deletes them after successful
+            send</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL "jms:jndi:OutboxQueue?msgFilename=test.edi&amp;
+jndiConnectionFactoryName=ConnectionFactory&amp;filenameProp=filename"</pre>
+
+      <p class="p">Sends the first message with the filename property of
+            ‘test.edi’ and deletes it after successful send</p>
+
+      
+      <pre class="pre codeblock">PUT -DEL "jms:jndi:OutboxQueue?msgFilename=[test.edi]&amp;
+jndiConnectionFactoryName=ConnectionFactory&amp;filenameProp=filename"</pre>
+
+      <p class="p">Sends all files whose filename property matches the regular
+            expression [test.edi]. If there are multiple ‘test.edi’ messages in the queue, each
+            of them will be sent and deleted after they are successfully sent.</p>
+
+      
+      <pre class="pre codeblock">GET * "jms:jndi:InboxQueue?jndiConnectionFactoryName=ConnectionFactory&amp;
+filenameProp=filename"</pre>
+
+      <p class="p">Retrieves all remote files and stores them in the InboxQueue.</p>
+
+      
+      <pre class="pre codeblock">LCOPY -DEL "jms:jndi:InboxQueue?jndiConnectionFactoryName=ConnectionFactory&amp;
+filenameProp=filename" C:\SomeDir\</pre>
+
+      <p class="p">Copies all messages from the InboxQueue to <span class="ph filepath">C:\SomeDir\</span> and deletes
+                  them from the queue.</p>
+
+      
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">URI File System Interface</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Starting with OFTP2, transport layer security (TLS) is an option for secure communications. When downgrading the OFTP version (see Advanced Tab below), non-secure communications are used regardless of ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="OFTP Host: V2 Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_OFTP_Host.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_abm_kbq_15"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>OFTP Host: V2 Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_abm_kbq_15">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_oftp_configuration.html" title="Configure an Odette FTP (OFTP) host starting with the generic OFTP pre-configured host.">OFTP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_OFTP_Host.html" title="A host's parameters specify its location and how it is reached.">OFTP Host</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Host.html" title="A host's parameters specify its location and how it is reached."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Host</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">OFTP Host: V2 Tab </h1>
+
+  <div class="body refbody">
+    <div class="section"><p class="p">Starting with OFTP2, transport layer security (TLS) is an option for secure communications.
+      When downgrading the OFTP version (see Advanced Tab below), non-secure communications are used
+      regardless of any values you set on this page.  </p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Partner Is ACE-Capable</span></dt>
+
+        <dd class="dd">Indicates whether the trading partner is capable of sending and receiving certificates
+          through Automatic Certificate Exchange (ACE), and enables the <span class="keyword wintitle">ACE</span>
+          subtab in the <span class="keyword wintitle">OFTP Mailbox: Security</span> tab. See <a class="xref" href="../Topics/t_OFTP_Mailbox_SecurityTab.html">OFTP Mailbox: Security Tab</a>. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <ul class="ul" id="reference_abm_kbq_15__ul_bsd_llw_yw">
+            <li class="li"><kbd class="ph userinput">True</kbd> - Indicates your partner's OFTP2 product is capable of
+              processing ACE messages, but no messages have been sent with the appropriate virtual
+              filename</li>
+
+            <li class="li"><kbd class="ph userinput">False</kbd> - Indicates your partner's product is not capable of
+              processing ACE messages. However, when messages with the appropriate virtual filename
+              (SFIDDSN) are received from a trading partner, this field is automatically changed to
+                <kbd class="ph userinput">True</kbd>.</li>
+
+            <li class="li"><kbd class="ph userinput">False and Ignore Further Detection</kbd> - Indicates your partner's
+              product is not capable of processing ACE messages and this field will not be updated
+              automatically even if messages with the appropriate virtual filename (SFIDDSN) are
+              received from a trading partner.</li>
+
+          </ul>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">False</kbd></dd>
+
+      
+      
+        <dt class="dt dlterm">Outbound</dt>
+
+        <dd class="dd">The <span class="ph uicontrol">Outbound</span> group settings are enabled for TCP/IP connections.
+          See <a class="xref" href="r_OFTP_Host_GeneralTab.html" title="Use the General tab to configure three different types of connections: ISDN, TCP/IP, and Server Only">OFTP Host: General Tab</a>.</dd>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">TCP/IP</dt>
+
+              <dd class="dd">Select this option to use non-secure TCP/IP for outbound connections</dd>
+
+            
+            
+              <dt class="dt dlterm">Secure TCP/IP</dt>
+
+              <dd class="dd">Select this option to require TLS for outbound connections.</dd>
+
+            
+            
+              <dt class="dt dlterm">Check certificate server name</dt>
+
+              <dd class="dd"></dd>
+
+            
+          </dl>
+
+        </dd>
+
+        <dd class="dd">See <a class="xref" href="r_OFTP_Host_GeneralTab.html" title="Use the General tab to configure three different types of connections: ISDN, TCP/IP, and Server Only">OFTP Host: General Tab</a>.</dd>
+
+      
+      
+        <dt class="dt dlterm">Inbound</dt>
+
+        <dd class="dd"> The <span class="ph uicontrol">Inbound</span> group is enabled for either Server Only or TCP/IP
+          connections. </dd>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">Secure TCP/IP only</dt>
+
+              <dd class="dd">Select this option to require your trading partner to use TLS for inbound file
+                  transfers. See <a class="xref" href="r_OFTP_Host_GeneralTab.html" title="Use the General tab to configure three different types of connections: ISDN, TCP/IP, and Server Only">OFTP Host: General Tab</a>.</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+    </dl>
+   </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Host.html" title="A host's parameters specify its location and how it is reached."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Host</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

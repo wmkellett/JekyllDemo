@@ -1,0 +1,363 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Following is a list of potential problems while using LexiCom on the AS/400.   The list covers general problems.  For technical support, please call 1-866-444-2536 or email support@cleo.com.  NOTE: ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="AS/400 Troubleshooting"></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_as_400_setup_and_installation.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="as_400_troubleshooting"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS/400 Troubleshooting</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="as_400_troubleshooting">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_FileSystem.html" title="File System">File System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation">AS/400 Setup and Installation</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">AS/400
+                    Troubleshooting</h1>
+
+   
+   <div class="body">
+      <p class="p">Following is a list of
+         potential problems while using LexiCom on the AS/400.   The list covers general problems. 
+         For technical support, please call 1-866-444-2536 or email support@cleo.com. </p>
+
+      <p class="p">NOTE: Technical support is on a paid subscription basis.  See <a class="xref" href="../Concepts/c_CleoTechSupport.html">Cleo Technical Support</a> for information.</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d267023e49">Problem</th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d267023e52">Possible Cause(s)</th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d267023e55">Possible Solution</th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">After installing LexiCom to the mapped drive, (e.g., “L:\”), the message
+                        “The installation of LexiCom is finished, but some warnings occurred during
+                        the install.  Please see the installation log for details.”  </p>
+
+                     <p class="p">When examining the LexiComInstallLog.log file, 7 Warnings are found.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">All the warnings are “WARNING - String index out of range: -1” and are
+                        related to Install Uninstaller and Create LaunchAnywhere Java Executable
+                        Components.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">This error occurs because LexiCom was installed to a drive letter and the
+                        Installer did not find a path. Since this is a mapped location, these are
+                        benign warnings and no further action needs to be taken.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">When running AS/400 command "CALL INSTLEX" an error is returned that a jar
+                        file cannot be found</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">User did not install LexiCom using a network drive mapped to the AS/400 IFS
+                        directory /LexiCom</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">Verify that the IFS folder /LexiCom has been created and a drive has been
+                        mapped to it.</p>
+
+                     <p class="p">Verify that LexiCom has been installed to that mapped drive and not the
+                        default directory</p>
+
+                     <p class="p">C:\Program Files\LexiCom</p>
+
+                     <p class="p"> </p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">Cannot access the AS/400 from System i Navigator.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">User did not configure TCP/IP on the AS/400 properly.</p>
+
+                     <p class="p">User did not define the host and domain name on the AS/400.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">Verify that TCP/IP is configured properly.</p>
+
+                     <p class="p">Use the command "GO CFGTCP".  </p>
+
+                     <p class="p">
+                        <img class="image" src="../Images/image151.jpg"></img>  Verify that a TCP/IP host table
+                        entry has been added for your system (option 10). </p>
+
+                     <p class="p">
+                        <img class="image" src="../Images/image151.jpg"></img>  Verify that a host name and domain
+                        name have been configured for your system (option 12). </p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">When sending a message to a host (specified as a host name instead of an IP
+                        address), an UnknownHostException error is returned.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">User did not configure DNS on the AS/400 properly.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">Configure DNS by typing the command "GO CFGTCP" (on the green screen) and
+                        choosing option 12.  </p>
+
+                     <p class="p">Enter a valid internet address in the "Domain name server" field.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">The times displayed in the LexiCom log entries are off by several hours.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">User's system clock is not correctly defined for the appropriate time
+                        zone.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">Using System i Navigator, go to the Configuration and Service <img class="image" src="../Images/image1931.jpg"></img> System Values <img class="image" src="../Images/image1931.jpg"></img> Date and Time panel.</p>
+
+                     <p class="p">Click on the "Time" tab.</p>
+
+                     <p class="p">Click the “Change Time Zone…” to reflect your current time zone.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">After installing the permanent key, the AS/400 features are no longer
+                        available or the STRLEXSVR command no longer runs.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">User does have not the AS/400 license specified on his permanent key.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">The AS/400 option is available on the temporary key for evaluation
+                        purposes.  Contact Cleo Sales for information and pricing of AS/400
+                        features.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">User cannot start LexiCom after installing the permanent key.  It is
+                        returning the error:</p>
+
+                     <p class="p">"java.io.FileNotFoundException: 'Path':\.license\.lc\.lcf (Access is
+                        denied)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">The temp key was installed under a different user than the one attempting to
+                        install the permanent key.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">Verify the owner of the .lcf file by viewing the "Properties" in System i
+                        Navigator.</p>
+
+                     <p class="p">Install the permanent key using the same user as the owner of the file.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">LexiCom fails to start when the STRLEXSVR command is invoked.  No indication
+                        of the problem is displayed in the job log.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">Various issues could cause LexiCom to fail to start.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">If the failure has occurred before logging has started, the error should be
+                        recorded in the logs\exception.txt file.</p>
+
+                     <p class="p">If there is no exception.txt file, check the LexiCom.xml file and the
+                        LexiCom.dbg file.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">The error message displayed in the exception.txt file indicating that the
+                        required Java version is not installed.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">User does not have Java Developer Kit (Option 15) properly installed on the
+                        AS/400. </p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">Verify that Option 15, Feature 5115 - Java SE 7 64 bit is installed by
+                        typing the green screen command: DSPSFWRSC.</p>
+
+                     <p class="p">If it is not there, obtain it from IBM (if you don't already have it on your
+                        installation media) and install it.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">The error message "NoClassDefFoundError:
+                        com/ibm/as400/resource/ChangeableResource" is displayed when attempting to
+                        click the "New" button on the AS/400 Configuration panel.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">The IBM jt400.jar file is not installed in the LexiCom home directory.</p>
+
+                     <p class="p">The IBM jt400.jar is not in the class path.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">Obtain the jt400.jar file using Cleo's software update process.</p>
+
+                     <p class="p">Obtain a newer version of LexiCom.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">Exceptions are being logged: “Problem initializing decryption cipher. 
+                        Illegal key size.”</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">Encryption of sensitive data requires that unlimited strength jurisdiction
+                        policy files are properly installed in your JRE. </p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">
+                        <img class="image" src="../Images/image151.jpg"></img>  Verify that you have installed
+                        LexiCom with the bundled VM. </p>
+
+                     <p class="p">
+                        <img class="image" src="../Images/image151.jpg"></img>  Examine the lax file and verify that
+                        the “lax.nl.current.vm” path points to the jre directory where LexiCom was
+                        installed. </p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e49 ">
+                     <p class="p">When you launch the LexiCom executable, the error “Windows error 216
+                        occurred while loading the Java VM”</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e52 ">
+                     <p class="p">This occurs when the Windows 64- bit JRE installer was used to install
+                        LexiCom on the IFS and you have mapped a drive to access it from a Windows
+                        32-bit  machine.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d267023e55 ">
+                     <p class="p">
+                        <img class="image" src="../Images/image151.jpg"></img>  If all users that will be launching
+                        the LexiCom executable are using Windows 32-bit machines, re-install LexiCom
+                        using the Windows 32-bit JRE installer. </p>
+
+                     <p class="p">
+                        <img class="image" src="../Images/image151.jpg"></img>  If  there are some users that will
+                        launching the LexiCom executable from Windows 32-bit machines and others
+                        from Windows 64-bit machines, contact Cleo Support for further instructions
+                        on creating an alternate set of LexiCom executables for your Windows 32-bit
+                        machine users. </p>
+
+                  </td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

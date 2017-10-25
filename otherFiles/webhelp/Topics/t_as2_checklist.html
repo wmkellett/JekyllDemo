@@ -1,0 +1,164 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="1.   Are you using a translator?        □ Yes    □ No       If  &#34;Yes&#34;, which one?  _______________________________ 2.   Do you have a firewall?             □ Yes     □ No       If  &#34;Yes&#34;, which one?  ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="AS2 Checklist"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_as_400_pc_network_access_setup.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="as2_checklist"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS2 Checklist</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="as2_checklist">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">AS2 Checklist</h1>
+
+   <div class="body">
+      <p class="p">1.   Are you using a translator?        <span class="ph">□</span> Yes    <span class="ph">□</span> No <strong class="ph b">     </strong>
+      </p>
+
+      <p class="p">If  "Yes", which one?  _______________________________</p>
+
+      <p class="p">2.   Do you have a firewall?             <span class="ph">□</span> Yes     <span class="ph">□</span> No<strong class="ph b">     </strong>
+      </p>
+
+      <p class="p">If  "Yes", which one?  _______________________________</p>
+
+      <p class="p">3.   Are you using a proxy server?   <span class="ph">□</span> Yes    <span class="ph">□</span> No<strong class="ph b">   </strong>
+      </p>
+
+      <p class="p">If "Yes", what is the URL? _____________________________</p>
+
+      <p class="p">4.   What is the URL of your remote trading partner (including the port)?
+         ________________________</p>
+
+      <p class="p">Note: the URL is in the form:
+            <strong class="ph b">http(s)://host-ipaddress-or-name:port/optional-path?optional-parameters</strong> </p>
+
+      <p class="p">If  ':port'  is omitted, assume port 80 for HTTP and port 443 for HTTPs (SSL).</p>
+
+      <p class="p">5.   What is your AS2-Name?  _______________________________________________</p>
+
+      <p class="p">(This is the unique AS2 identifier for this trading relationship.)</p>
+
+      <p class="p">6.   What is your remote trading partner's AS2-Name?
+         ____________________________________</p>
+
+      <p class="p">7.   Will you be using the same certificate for both signing and encryption?   □ Yes    □
+         No</p>
+
+      <p class="p">8.   Have you created or obtained certificates for signing and encryption?       □ Yes    □
+         No</p>
+
+      <p class="p">If "Yes", have you exchanged the certificate(s) with your remote trading partner?  □ Yes   
+         □ No</p>
+
+      <p class="p">9.   Will any of your remote trading partners be using SSL?      □ Yes    □ No</p>
+
+      <p class="p">If "Yes", do you have an SSL server-style certificate?    □ Yes    □ No</p>
+
+      <p class="p">If "Yes", have you exchanged this certificate with your remote trading partner?  □ Yes    □
+         No</p>
+
+      <p class="p">10. What is the email address of the contact person at your location who will be
+         responsible for AS2 message administration?</p>
+
+      <p class="p">11. What is the IP address or host name where your AS2 VersaLex product is installed? </p>
+
+      <p class="p">12. What ports would you like to use for receiving messages from your remote trading
+         partners?  </p>
+
+      <p class="p">Cleo suggests using port 5080 for HTTP and port 5443 for HTTPs but any unused ports between
+         0 - 65535 may be used.</p>
+
+      <p class="p">HTTP: _________________             HTTPs:  ____________________ *</p>
+
+      <p class="p">(*only needed if the answer to Question #9 was "Yes")</p>
+
+      <p class="p"> </p>
+
+      <p class="p">13. Will the content of the messages you will be sending to your remote trading partners
+         be:</p>
+
+      <p class="p">
+         <span class="ph">□</span>  signed?</p>
+
+      <p class="p">
+         <span class="ph">□</span>  encrypted?     </p>
+
+      <p class="p">If selected, can your remote trading partner accept 3DES (Triple DES) encryption?</p>
+
+      <p class="p">
+         <span class="ph">□</span> Yes    <span class="ph">□</span> No</p>
+
+      <p class="p">
+         <span class="ph">□</span>  compressed?</p>
+
+      <p class="p"> </p>
+
+      <p class="p">14. What type of content will you primarily be sending?</p>
+
+      <p class="p">
+         <span class="ph">□</span>  EDI - X12</p>
+
+      <p class="p">
+         <span class="ph">□</span>  EDIFACT</p>
+
+      <p class="p">
+         <span class="ph">□</span>  XML</p>
+
+      <p class="p">
+         <span class="ph">□</span>  Binary</p>
+
+      <p class="p">
+         <span class="ph">□</span>  Plain Text</p>
+
+      <p class="p"> </p>
+
+      <p class="p">15. Will you be requesting MDNs (receipts) from your remote trading partner?    <span class="ph">□</span>
+         Yes    <span class="ph">□</span> No</p>
+
+      <p class="p">If "No",  skip the remaining questions.</p>
+
+      <p class="p"> </p>
+
+      <p class="p">16. Will the MDNs be signed?                <span class="ph">□</span> Yes    <span class="ph">□</span> No</p>
+
+      <p class="p">17. How will the MDNs be returned?     <span class="ph">□</span>   Synchronously       <span class="ph">□</span>
+         Asynchronously</p>
+
+      <p class="p">If "Asynchronously", what preferred transport method will you use to receive them?</p>
+
+      <p class="p">
+         <span class="ph">□</span>  HTTP</p>
+
+      <p class="p">
+         <span class="ph">□</span>  HTTPs </p>
+
+      <p class="p">
+         <span class="ph">□</span>  SMTP       Email address of the recipient  
+         _______________________________________</p>
+
+      <p class="p">18. Would you like to forward non-SMTP MDNs to an email recipient?     <span class="ph">□</span> Yes   
+            <span class="ph">□</span> No</p>
+
+      <p class="p">If "Yes", what is the email address of the recipient?   _______________________________</p>
+
+      <p class="p">What is the name of your mail server (optional)?   _________________________________</p>
+
+      <p class="p"> </p>
+
+      <p class="p"> </p>
+
+   </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_as_400_pc_network_access_setup.html">AS/400 PC Network Access Setup</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use this tab to associate a trading partner's signing and encryption certificates with a mailbox and override your own Local Listener's signing and encryption certificates, if necessary. Prior to ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="RNIF Mailbox: Certificates Tab"></meta><meta name="abstract" content="Use this tab to associate a trading partner's signing and encryption certificates with a mailbox and override your own Local Listener's signing and encryption certificates, if necessary."></meta><meta name="description" content="Use this tab to associate a trading partner's signing and encryption certificates with a mailbox and override your own Local Listener's signing and encryption certificates, if necessary."></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_RNIF_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_urg_m2k_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>RNIF Mailbox: Certificates Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_urg_m2k_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_rnif_configuration.html" title="RNIF Configuration">RNIF Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_RNIF_Mailbox.html" title="RNIF Mailbox">RNIF Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_RNIF_Mailbox.html" title="RNIF Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">RNIF Mailbox: Certificates Tab</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">Use this tab to associate a trading partner's signing and encryption certificates with
+    a mailbox and override your own Local Listener's signing and encryption certificates, if
+    necessary.</p>
+
+    <div class="section">
+      <p class="p">Prior to completing the mailbox's <span class="keyword wintitle">Certificates</span> tab, you must acquire
+        your trading partner's signing/encryption certificate(s) and create and/or provide to your
+        trading partner your signing/encryption certificate(s) (see <a class="xref" href="../Topics/t_acquire_your_trading_partner_s_signing_encryption_certificates.html">Acquire Your Trading Partner's Signing/Encryption Certificates</a> and <a class="xref" href="../Topics/t_create_provide_your_signing_encryption_certificates.html">Create/Provide Your Signing/Encryption Certificates</a>.)  </p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Trading Partner Certificates</span></dt>
+
+          <dd class="dd">Provided by the trading partner. <dl class="dl">
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Signing Certificate</span></dt>
+
+                <dd class="dd">Used to verify a signature from an incoming message that is signed. This
+                  certificate is optional. If not specified, the incoming signed content's signature
+                  is compared to all valid certificates in the local certificate store. </dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Encryption Certificate</span></dt>
+
+                <dd class="dd">Used to encrypt outgoing messages sent to your trading partner.</dd>
+
+              
+            </dl>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">My Certificates</dt>
+
+          <dd class="dd">By default, the certificates you configured on the <span class="keyword wintitle">Certificates</span>
+            tab of the Local Listener panel are the certificates used to sign messages sent to your
+            trading partner and decrypt messages received from your trading partner. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_Certificates.html" title="Define Local Listener default signing and encryption certificates for applicable services, for example, AS2 or ebXML.">Configuring certificates for Local Listener</a>.<dl class="dl">
+              
+                <dt class="dt dlterm">Override Local Listener Certificates</dt>
+
+                <dd class="dd">Enables fields where you specify signing and encryption certificates to use with
+                  this particular partner instead of the certificates you configured for the Local
+                  Listener. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_Certificates.html" title="Define Local Listener default signing and encryption certificates for applicable services, for example, AS2 or ebXML.">Configuring certificates for Local Listener</a>.</dd>
+
+                <dd class="dd">If you override the default certificates, you must also exchange the
+                  certificates you specify here with your partner.</dd>
+
+              
+              
+                <dt class="dt dlterm">Signing Certificate Alias</dt>
+
+                <dd class="dd">The name of the signing certificate registered with the <span class="ph">Cleo Harmony</span> application through the Certificate Manager. The certificate
+                  must be the same as the one exchanged with your remote trading partners, unless
+                  you want to override it at the Mailbox level. See <a class="xref" href="../Topics/t_local_http_users_configuration.html">Local HTTP Users Configuration</a>. </dd>
+
+                <dd class="dd">Click <span class="ph uicontrol">Browse</span> to view and select a certificate. Enter the
+                    <span class="ph uicontrol">Password</span> for your signing certificate's private key.
+                </dd>
+
+              
+              
+                <dt class="dt dlterm">Encryption Certificate Alias</dt>
+
+                <dd class="dd">The certificate for decrypting your trading partner’s messages, if you have
+                  created or obtained a separate certificate. </dd>
+
+                <dd class="dd">Click <span class="ph uicontrol">Browse</span> to view and select a certificate. Enter the
+                    <span class="ph uicontrol">Password</span> for your encryption certificate.</dd>
+
+              
+              
+                <dt class="dt dlterm">Use signing certificate</dt>
+
+                <dd class="dd">Select this check box to use the same certificate for signing and decrypting
+                  your trading partner's messages. The <span class="ph uicontrol">Encryption Certificate
+                    Alias</span> and <span class="ph uicontrol">Password</span> are populated to match the
+                    <span class="ph uicontrol">Signing Certificate Alias</span> and disabled.</dd>
+
+              
+              
+                <dt class="dt dlterm">Exchange Certificates</dt>
+
+                <dd class="dd">Invokes the <span class="ph uicontrol">Certificate Exchange</span> dialog box. If you
+                  override the default the certificates, you must exchange these alternate
+                  certificates with your trading partner. </dd>
+
+                <dd class="dd"></dd>
+
+              
+            </dl>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_RNIF_Mailbox.html" title="RNIF Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

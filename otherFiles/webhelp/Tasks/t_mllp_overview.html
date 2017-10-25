@@ -1,0 +1,229 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: All queue-based operations discussed in this section are supported only for the Cleo VLTrader and Cleo Harmony applications.  The MLLP (Minimal Lower Layer Protocol) provides a minimalistic OSI ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="MLLP Overview"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_mllp_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="mllp_overview"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>MLLP Overview</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="mllp_overview">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/t_mllp_hosts.html" title="MLLP Hosts">MLLP Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_mllp_hosts.html" title="MLLP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MLLP Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">MLLP Overview</h1>
+
+   
+   <div class="body taskbody">
+      <div class="section context"><div class="p">
+            <div class="note note"><span class="notetitle">Note:</span> All queue-based operations discussed in this section are supported only for the
+                  <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>
+               applications.</div>
+
+      </div>
+<p class="p"> The MLLP (Minimal Lower Layer Protocol) provides a minimalistic OSI session-layer
+            framing protocol. It is commonly used within the HL7 (Health Level Seven) community for
+            transferring HL7 messages and acknowledgments. MLLP is defined under two releases:
+            Release 1, which does not provide built-in reliable delivery assurance; and Release 2,
+            which provides delivery assurance through the use of commit acknowledgments. Release 1
+            is most commonly used with HL7 Version 2.x, while Release 2 is typically used with HL7
+            Version 3. If security is required, additional protocols or packaging can be layered on
+            top of MLLP to achieve these goals.   </p>
+<div class="p">Within the MLLP protocol, it is important
+            to understand senders and receivers. <ul class="ul" id="mllp_overview__ul_yn4_dtc_r5">
+               <li class="li">A <span class="keyword">sender</span> is defined by an action that contains either one
+                     <span class="keyword cmdname">PUT</span> command (queue-based) or one-to-many
+                     <span class="keyword cmdname">PUT</span> commands (file-based). The sender, depending upon its
+                  configuration, will maintain a persistent or a transient connection with the
+                  receiver. If the send action is associated with queuing, the connection will be
+                  persistent; the connection will be opened when the action is started (either
+                  automatically at startup or manually by the user) and continue indefinitely until
+                  the action is stopped by the user. If the send action is not associated with
+                  queuing, the connection will be transient; the connection will be opened at the
+                  beginning of the action and closed at the end of the action. </li>
+
+               <li class="li">A <span class="keyword">receiver</span> is defined by an action containing a singular
+                     <span class="keyword cmdname">GET</span> command. The receiver, once its action is started
+                  (either automatically at startup or manually by the user), will enter a listening
+                  state, waiting for a sender to connect to it. Once connected, the receiver will
+                  keep the connection open, processing incoming messages, until the sender
+                  disconnects. After the connection is closed, the receiver will return to a
+                  listening state. Only one sender can be connected to a receiver at a time. The
+                  receiver, once successfully started, can only be stopped by the user.  </li>
+
+            </ul>
+</div>
+<p class="p">The operation of an MLLP host is very similar to other hosts (for example,
+            AS2, ebXML) within the <span class="ph">Cleo Harmony</span> application. For example, the concepts of host, mailbox, and actions still exist.
+            However, since MLLP supports only direct connections between a sender and a receiver,
+            and there is no authentication process, only one mailbox is allowed per host.  </p>
+<p class="p">An
+            MLLP host, in its strictest sense, does not need to be tied to an HL7 application or HL7
+            payload; however, in practice, it most likely will be. Therefore, all discussions within
+            this section relate MLLP and HL7 together.</p>
+<p class="p">The following action commands are
+            available with the <span class="ph">Cleo Harmony</span> application:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+               
+               
+               
+               <thead class="thead" align="left">
+                  <tr class="row">
+                     <th class="entry" rowspan="1" colspan="1" valign="top" id="d159810e90">   </th>
+
+                     <th class="entry" rowspan="1" colspan="1" valign="top" id="d159810e93"> Command </th>
+
+                     <th class="entry" rowspan="1" colspan="1" valign="top" id="d159810e96"> Purpose </th>
+
+                  </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 "><strong class="ph b">Host commands </strong>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">PUT</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Send one or more messages to
+                        the host </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">GET</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Receive one or more messages
+                        from the host </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">   </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 "><strong class="ph b">Local commands </strong>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">SYSTEM</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Execute a local system command
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">WAIT</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Pause </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">SET</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Set a property </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">CLEAR</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Clear a string property
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">LCOPY</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Copy one or more local files
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">LDELETE</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Delete one or more local files
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">LREPLACE</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Replace bytes in one or more
+                        local files </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">CHECK</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 ">Check for a transfer, file, or
+                        directory (<span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>
+                        applications only) </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e90 ">   </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e93 "><span class="keyword cmdname">SCRIPT</span>
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d159810e96 "> Execute a JavaScript File
+                        (VLTrader and Harmony only) </td>
+
+                  </tr>
+
+               </tbody>
+
+            </table>
+</div>
+</div>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_mllp_hosts.html" title="MLLP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MLLP Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

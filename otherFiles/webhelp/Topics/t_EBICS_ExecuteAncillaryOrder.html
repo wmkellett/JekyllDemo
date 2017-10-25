@@ -1,0 +1,79 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Optional. Override the value in the Ancillary Order Inbox field. Select an order from the Order Type menu. Choose from the following: Download Retrievable Orders (HAA) Download Customer Acknowledgment ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Executing an ancillary order"></meta><meta name="DC.Relation" scheme="URI" content="../References/r_EBICS_Mailbox_EBICSTab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_w2z_cpl_bx"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Executing an ancillary order</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_w2z_cpl_bx">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../References/../Topics/t_EBICS_Mailbox.html" title="EBICS Mailbox">EBICS Mailbox</a> / <a class="navheader_parent_path" href="../References/r_EBICS_Mailbox_EBICSTab.html" title="Set up your identification to the bank server, manage key exchange, and perform several ancillary functions.">EBICS Mailbox: EBICS Tab</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../References/r_EBICS_Mailbox_EBICSTab.html" title="Set up your identification to the bank server, manage key exchange, and perform several ancillary functions."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Mailbox: EBICS Tab</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Executing an ancillary order</h1>
+
+  <div class="body taskbody">
+    <ol class="ol steps" id="task_w2z_cpl_bx__steps_psl_lql_bx"><li class="li step stepexpand">
+        <span class="ph cmd">Optional. Override the value in the <span class="ph uicontrol">Ancillary Order Inbox</span>
+          field.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select an order from the <span class="ph uicontrol">Order Type</span> menu. </span>
+        <div class="itemgroup info">Choose from the
+            following:<ul class="ul" id="task_w2z_cpl_bx__ul_lvh_sql_bx">
+            <li class="li">Download Retrievable Orders (HAA)</li>
+
+            <li class="li">Download Customer Acknowledgment (HAC)</li>
+
+            <li class="li">Download Supported Versions (HEV)</li>
+
+            <li class="li">Download Customer Data (HKD)</li>
+
+            <li class="li">Download Bank Parameters (HPD)</li>
+
+            <li class="li">Download Subscriber Data (HTD)</li>
+
+            <li class="li">Download Customer Protocol (PTK)</li>
+
+          </ul>
+</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Depending upon the order type selected, the <span class="ph uicontrol">Start Date</span> and
+            <span class="ph uicontrol">End Date</span> will be enabled. In this case, specify values. The date
+          values must be in the form <kbd class="ph userinput">YYYY-MM-DD</kbd>. </span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Execute</span> to run the order. </span>
+        <div class="itemgroup info">Messages are displayed as the transaction steps take place for execution of the order.
+        </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Optional. Click <span class="ph uicontrol">Cancel</span> at any point to interrupt the
+          execution.</span>
+      </li>
+</ol>
+
+    <div class="section postreq">
+      <p class="p">Some of the ancillary orders might not be supported by the server, either because they are
+        optional or because they are not supported under the particular EBICS version. When this
+        occurs, it is possible to see the return code <samp class="ph codeph">EBICS_UNSUPPORTED_ORDER_TYPE</samp>
+        or <samp class="ph codeph">EBICS_INVALID_ORDER_TYPE</samp>.</p>
+
+      <p class="p">For all ancillary orders except HEV, the downloaded order data will be placed in ancillary
+        order inbox (as seen in the FILE record shown in the dialog box above). Since the response
+        data is very simple for HEV, it will be reported immediately through detail messages. </p>
+
+    </div>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../References/r_EBICS_Mailbox_EBICSTab.html" title="Set up your identification to the bank server, manage key exchange, and perform several ancillary functions."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Mailbox: EBICS Tab</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

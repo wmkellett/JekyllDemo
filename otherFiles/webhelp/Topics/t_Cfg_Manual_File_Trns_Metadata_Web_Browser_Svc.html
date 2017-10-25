@@ -1,0 +1,144 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Configuring metadata allows you to build a form that the user is prompted to fill out when performing uploads from the Manual File Transfer page in VLPortal via the applet. The form input is inserted ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Manual File Transfer Metadata"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_ynf_dbh_hr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Manual File Transfer Metadata</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_ynf_dbh_hr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service">Local Listener Web Browser Service</a> / <a class="navheader_parent_path" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service">Configuring VLPortal Web Browser service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring VLPortal Web Browser service</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Configuring Manual File Transfer Metadata</h1>
+
+    <div class="body taskbody">
+        <div class="section context">Configuring metadata allows you to build a form that the user is prompted to fill
+            out when performing uploads from the <span class="keyword wintitle">Manual File Transfer</span> page in
+            VLPortal via the applet. The form input is inserted into an XML file that is uploaded
+            inside a zipped archive along with the selected files. </div>
+
+        <ol class="ol steps" id="task_ynf_dbh_hr__steps_p3r_b2w_xy"><li class="li step stepexpand">
+                <span class="ph cmd">From the Web Portal editor (<a class="xref" href="../Tasks/t_Edit_Clone_Create_Web_Portal_Web_Broswer_Svc.html#task_zhl_mwg_hr">Editing, cloning, or creating a web portal</a>), click <span class="ph uicontrol">Metadata</span>.</span>
+                <div class="itemgroup info">The <span class="ph uicontrol">Edit Portal Metadata</span> dialog box appears.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Enter information for the metadata file you want to create in the following
+                    fields:</span>
+                <div class="itemgroup info">
+                    <dl class="dl">
+                        
+                            <dt class="dt dlterm">Filename</dt>
+
+                            <dd class="dd">Specify the name of the XML file to contain the user-supplied
+                                metadata that will accompany the uploaded files.</dd>
+
+                        
+                        
+                            <dt class="dt dlterm">Language</dt>
+
+                            <dd class="dd">Displays whatever alternative <strong class="ph b">Label</strong> values have been supplied
+                                for the metadata items for the given language. See <a class="xref" href="t_I10Ning_your_web_portals_Web_Browser_Svc.html">Internationalizing Your Portal</a>.</dd>
+
+                        
+                    </dl>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Add or edit metadata items from the Form Data list.</span>
+                <div class="itemgroup info">If there are no existing metadata items in the Form Data list, click
+                        <span class="ph uicontrol">New Item</span> to display the <span class="keyword wintitle">New Metadata
+                        Item</span> dialog box.</div>
+                <div class="itemgroup info">If there are metadata items in the Form Data list, right-click an item and
+                    select <span class="ph uicontrol">Edit</span> to display the <span class="keyword wintitle">Edit Metadata
+                        Item</span> dialog box.</div>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span> The <span class="keyword wintitle">New Metadata Item</span> and the <span class="keyword wintitle">Edit Metadata
+                            Item</span> dialog boxes contain the same fields.</div>
+
+                </div>
+                <ol type="a" class="ol substeps" id="task_ynf_dbh_hr__substeps_lhv_hgw_xy">
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Enter information about the metadata item in the dialog box.</span>
+                        <div class="itemgroup info">
+                            <dl class="dl">
+                                
+                                    <dt class="dt dlterm">Label</dt>
+
+                                    <dd class="dd">This label is displayed for this item in the selected
+                                        language in the form the user is prompted to complete when
+                                        uploading files.  You select a language for the label and
+                                        enter the label text.</dd>
+
+                                
+                                
+                                    <dt class="dt dlterm">Choices</dt>
+
+                                    <dd class="dd">Indicate the choices available to the user when they provide
+                                        information about this item. If you provide choices, they
+                                        are delimited by the ‘|’ symbol. If the user can enter
+                                        freeform text for the input, leave this field blank.</dd>
+
+                                
+                                
+                                    <dt class="dt dlterm">Element Identifier</dt>
+
+                                    <dd class="dd">The XML attribute for this item's corresponding element in
+                                        the generated file.</dd>
+
+                                
+                                
+                                    <dt class="dt dlterm">Required</dt>
+
+                                    <dd class="dd">Indicate whether or not a selection/input is mandatory for
+                                        this metadata item.</dd>
+
+                                
+                            </dl>
+
+                        </div>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Click <span class="ph uicontrol">OK</span>.</span>
+                        <div class="itemgroup info">Your changes are saved and the <span class="keyword wintitle">Edit Portal
+                                Metadata</span> dialog box appears.</div>
+                    </li>
+
+                </ol>
+
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Optional - Right-click an existing metadata item and select one of the
+                    following from the menu:</span>
+                <div class="itemgroup info">
+                    <ul class="ul" id="task_ynf_dbh_hr__ul_tvw_zhw_xy">
+                        <li class="li"><span class="ph uicontrol">Move Up</span> and <span class="ph uicontrol">Move Down</span> to
+                            change the order in which corresponding fields appear in the form the
+                            user is prompted to complete when uploading the file(s).</li>
+
+                        <li class="li"><span class="ph uicontrol">Edit</span> to edit the metadata item</li>
+
+                        <li class="li"><span class="ph uicontrol">Remove</span> to remove the selected metadata item.</li>
+
+                    </ul>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">OK</span> to save your changes and return to the
+                        <span class="keyword wintitle">VLPortal</span> tab.</span>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring VLPortal Web Browser service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

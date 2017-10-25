@@ -1,0 +1,410 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Following is a list of potential problems while using VersaLex for AS2. The list covers general problems only. For technical support, please call 1-866-444-2536 or email support@cleo.com.  Note: ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="AS2 Troubleshooting"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_AS2_Hosts_HeaderPage.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="as2_troubleshooting"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS2 Troubleshooting</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="as2_troubleshooting">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_AS2_Hosts_HeaderPage.html" title="AS2 Hosts">AS2 Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Hosts_HeaderPage.html" title="AS2 Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">AS2 Troubleshooting</h1>
+
+   <div class="body">
+      <div class="p">Following is a list of potential problems while using VersaLex for AS2. The list covers
+         general problems only. For technical support, please call 1-866-444-2536 or email
+            support@cleo.com. <div class="note note"><span class="notetitle">Note:</span> Technical support is on a paid subscription basis. Refer to the
+            section <span class="keyword wintitle">Cleo Technical Support Subscription Programs</span> for
+            information.</div>
+</div>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d294552e34">
+                     <p class="p">Problem</p>
+
+                  </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d294552e40">
+                     <p class="p">Possible Cause</p>
+
+                  </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d294552e46">
+                     <p class="p">Possible Solution</p>
+
+                  </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Could not listen on port XXXX - Address in use: JVM_BIND</p>
+
+                     <p class="p">(Generated when an attempt is made to start the Local Listener.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">Port XXXX defined on the listener's HTTP panel is already being used by
+                        another application.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Use the "netstat -an" command (if available) to verify that the port is in
+                        use.  </p>
+
+                     <p class="p">Stop the listener, if it is running. Define a different port on the HTTP
+                        panel and restart the listener.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Error - Method GET is not implemented by this server</p>
+
+                     <p class="p">(Generated by the Local Listener receiving incoming messages)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">A remote user is attempting to access your Local Listener using a web
+                        browser by entering your URL in the form: </p>
+
+                     <p class="p">http://your-host-address:your-port/your-resource-path/ </p>
+
+                     <p class="p">The VersaLex Listener is only capable of processing HTTP POST requests, but
+                        messages from web browsers are sent as HTTP GET requests.  </p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">If the message is coming from a bona fide trading partner, ask them to send
+                        you messages using  POST requests instead of GET requests.</p>
+
+                     <p class="p"> If the message is from an unknown/unwanted source, modify your firewall
+                        settings to reject messages from the incoming IP address or change the
+                        setting for the <span class="ph uicontrol">Unknown Partner Message Action</span> in the
+                        Local Listener's <span class="keyword wintitle">Advanced</span> tab to either
+                           <span class="ph uicontrol">Ignore</span> or <span class="ph uicontrol">Reject</span>. </p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Connection refused: connect</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">Remote server is currently not running or is not listening on the specified
+                        port.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Contact your trading partner regarding the availability of the server and
+                        verify the configured host and port settings are correct.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Operation timed out: connect</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">Remote server is running but is not able to receive messages from you.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p"> Verify firewall settings on the sending and receiving ends are properly
+                        configured. </p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Timeout waiting for response</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">The action is unable to fully complete (i.e., complete transfer to remote
+                        host, decryption and/or signature verification) within the specified
+                        ConnectionTimeout period.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Increase the default ConnectionTimeout value on the
+                           <span class="keyword wintitle">Host/Advanced</span> panel or increase the
+                        ConnectionTimeout value for the individual Action.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Warning - Undefined AS2-To/AS2-From Relationship</p>
+
+                     <p class="p">(Generated by the Local Listener receiving incoming messages)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">The incoming<span class="ph uicontrol"> AS2-To</span> and
+                           <span class="ph uicontrol">AS2-From</span> header values do not match exactly with
+                        local <span class="ph uicontrol">AS2-From</span> and <span class="ph uicontrol">AS2-To
+                        </span>settings or the settings have not yet been defined.</p>
+
+                     <div class="p">
+                        <div class="note note"><span class="notetitle">Note:</span> Your <span class="ph uicontrol">AS2-To</span> value should be your trading
+                              partner's<span class="ph uicontrol"> AS2-From</span> value and your
+                              <span class="ph uicontrol">AS2-From</span> value should be your trading partner's
+                              <span class="ph uicontrol">AS2-To</span> value.</div>
+
+                     </div>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify that there is an entry for the designated
+                           <span class="ph uicontrol">AS2-From</span> / <span class="ph uicontrol">AS2-To</span>
+                        setting.</p>
+
+                     <p class="p">Verify your <span class="ph uicontrol">AS2-To</span> header value matches your trading
+                        partner's <span class="ph uicontrol">AS2-From</span> header value and vice versa. </p>
+
+                     <p class="p">These values are case-sensitive and there must be only one instance of the
+                        pair defined in your installation.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Warning - MDN processing warnings occurred at the remote host. See
+                        MDN for further details.</p>
+
+                     <p class="p">(Generated when sending a message to the remote host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">A warning occurred at the remote host. The message was still correctly
+                        processed. Commonly reported warnings are Undefined AS2-To / AS2-From
+                        Relationship and Duplicate file received.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">View the associated MDN to diagnose the cause of the warning and perform any
+                        corrective action as necessary.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Error - MDN processing errors occurred at the remote host:
+                        authentication failed - see MDN for further details</p>
+
+                     <p class="p">(Generated when sending a message to the remote host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">The remote host was unable to verify the signature of your signed
+                        message.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify that you have successfully sent your signing certificate to your
+                        trading partner and that it was properly installed at the remote host.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Exception - Certificate chain not trusted! </p>
+
+                     <p class="p">(Generated when receiving a message from a remote host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">Some of the certificates listed in the signature of the received message are
+                        missing in VersaLex's store of trusted certificates.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify that all CA certificates used by your trading partner's signing
+                        certificate have been received and installed in VersaLex.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Exception - The signature could not be verified!</p>
+
+                     <p class="p">(Generated when receiving a message from a remote host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">The Local Listener was unable to verify the signature of a remote host's
+                        signed message.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify that you have successfully received and installed your trading
+                        partner's signing certificate.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Exception - The trading partner's encryption certificate could not
+                        be found!</p>
+
+                     <p class="p">(Generated when attempting to send an encrypted message to a remote
+                        host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">VersaLex was unable to find the <span class="ph uicontrol">Trading Partner's Encryption
+                           Certificate</span> defined on the Mailbox’s Certificate Panel.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify the file defined on the Mailbox’s Certificate panel exists and has
+                        not been accidentally deleted.   Click <span class="ph uicontrol">Browse</span> to
+                        choose a new encryption certificate.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Error - MDN processing errors occurred at the remote host:
+                        decryption failed - see MDN for further details</p>
+
+                     <p class="p">(Generated when sending a message to the remote host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">The remote host was unable to decrypt your encrypted message.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify that you have successfully installed your trading partner's
+                        encryption certificate and have properly selected that certificate on the
+                        Mailbox’s <span class="keyword wintitle">Certificate</span> panel.</p>
+
+                     <p class="p">Verify the remote host is able to decrypt messages according to the
+                        Encryption Method specified on the Mailbox’s <span class="keyword wintitle">AS2</span>
+                        panel.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">Result: Exception - The message could not be decrypted!  </p>
+
+                     <p class="p">(Generated when receiving a message from a remote host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">The Local Listener was unable to decrypt a remote host's encrypted
+                        message.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify that you have successfully received and installed your trading
+                        partner's encryption certificate.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e34 ">
+                     <p class="p">WARNING: Source file is zero-length. </p>
+
+                     <p class="p">(Generated when sending a message to the remote host.)</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e40 ">
+                     <p class="p">An attempt was made to send a file with no content. The file will still be
+                        sent, but there may be unexpected results on the receiving end.</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d294552e46 ">
+                     <p class="p">Verify that the intent is to send files of zero-length and ignore any error
+                        messages generated due to this condition.</p>
+
+                  </td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Hosts_HeaderPage.html" title="AS2 Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

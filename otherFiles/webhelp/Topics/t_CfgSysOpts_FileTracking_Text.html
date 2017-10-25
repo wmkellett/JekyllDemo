@@ -1,0 +1,237 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Text Reference Use the Edit Text Reference dialog box to enter a unique description describing this reference, specify whether you want to track this reference on inbound transfers, outbound transfers ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Text Tracking"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_CfgSysOpts_FileTracking.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_fwg_5m5_45"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Text Tracking</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_fwg_5m5_45">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_CfgSysOpts_Transfers.html" title="Transfers">Transfers</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_CfgSysOpts_FileTracking.html" title="File Tracking">File Tracking</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_FileTracking.html" title="File Tracking"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">File Tracking</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Text Tracking</h1>
+
+  <div class="body">
+    <div class="section"><h2 class="title sectiontitle">Text Reference</h2>
+      
+      <p class="p">Use the <span class="keyword wintitle">Edit
+          Text Reference</span> dialog box to enter a unique description describing this
+        reference, specify whether you want to track this reference on inbound transfers, outbound
+        transfers or both, and specify tracking inclusions.</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Text Configuration</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Description</dt>
+
+                <dd class="dd">A unique description of this reference.</dd>
+
+              
+              
+                <dt class="dt dlterm">Extract data on inbound transfers</dt>
+
+                <dt class="dt dlterm">Extract data on outbound transfers</dt>
+
+                <dd class="dd">Select these check boxes to track this reference on inbound and outbound
+                  transfers, respectively. You can select either or both.</dd>
+
+              
+              
+                <dt class="dt dlterm">Tracking Inclusions</dt>
+
+                <dd class="dd">Unlike EDI and XML tracking, where you can optionally specify items to be
+                  excluded from tracking, for text tracking, you specify items you want
+                    <em class="ph i">included</em> in tracking. You must specify at least one inclusion. Also,
+                  unlike EDI and XML, where the exclusions are specified at global level, for text
+                  tracking, inclusions are specified <em class="ph i">for each individual reference</em>.</dd>
+
+                <dd class="dd">Click <span class="ph uicontrol">Edit Inclusions</span> to display a list where you can
+                  choose inclusions as follows:<ul class="ul" id="topic_fwg_5m5_45__ul_bbs_tfn_gy">
+                    <li class="li"><span class="ph uicontrol">Include all production trading partner
+                      connections</span></li>
+
+                    <li class="li"><span class="ph uicontrol">Include specific trading partner connections</span> - Select
+                      items from the list that correspond to the trading partners you want to
+                      include in tracking.</li>
+
+                    <li class="li"><span class="ph uicontrol">Include specific folders</span> - Select items from the list
+                      that correspond to the folders you want to include intracking.</li>
+
+                    <li class="li"><span class="ph uicontrol">Include specific hosts\mailboxes\actions</span> - Select
+                      items from the list that correspond to the hosts, mailboxes, or actions you
+                      want to include in tracking.</li>
+
+                  </ul>
+</dd>
+
+              
+              
+                <dt class="dt dlterm">Only track files named</dt>
+
+                <dd class="dd">Select the check box and specify a filename to which you want to limit tracking.
+                  You can use regular expressions and wildcards to specify a filename.</dd>
+
+              
+              
+                <dt class="dt dlterm">Lines</dt>
+
+                <dd class="dd">Within the <strong class="ph b">Lines</strong> container:<ul class="ul" id="topic_fwg_5m5_45__ul_xyx_tgj_hy">
+                    <li class="li">enter a <strong class="ph b">Fixed line length</strong> or a <strong class="ph b">Variable line delimiter</strong>.  Line
+                      delimiters cam be either a single character or '\n' (newline) or '\\'
+                      (backslash).</li>
+
+                    <li class="li"> optionally specify <strong class="ph b">Number of header lines to skip before
+                      parsing</strong>.</li>
+
+                  </ul>
+</dd>
+
+              
+              
+                <dt class="dt dlterm">Fields</dt>
+
+                <dd class="dd">
+                  <p class="p">Within the <strong class="ph b">Fields</strong> container</p>
+
+                  <p class="p">Choose whether fields will specified by character position (<strong class="ph b">Positional</strong>
+                    <strong class="ph b">(n:m)</strong>) or by field number (<strong class="ph b">Delimited by</strong>).  When fields are
+                    separated by a delimiter, the delimiter character may be either a single
+                    character or '\t' (tab).</p>
+
+                </dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+      </dl>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Identifier Data</h2>
+      
+      <p class="p">Unlike EDI, where the identifier data is automatically tracked when EDI tracking is
+        engaged, for text you must specify the text fields you want to track.  Right-click a row in
+        the <span class="ph uicontrol">Identifier Data</span> table and select <span class="ph uicontrol">Edit</span> to
+        display a dialog box where you can enter information about the data to extract. Use the
+        following fields to enter this information:</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Extract Field</dt>
+
+          <dd class="dd">Enter information about the field in one of the following ways:</dd>
+
+          <dd class="dd">either  or a string literal enclosed in two quotation marks.<ul class="ul" id="topic_fwg_5m5_45__ul_vxt_ctj_hy">
+              <li class="li"><strong class="ph b">Using proper syntax for field specification</strong> - For positional fields, you
+                must enter a string of the form <kbd class="ph userinput">n:m</kbd> where
+                  <kbd class="ph userinput">m</kbd> must be greater than or equal to
+                <kbd class="ph userinput">n</kbd>.  For delimited fields, you must enter a single number.  In
+                all cases, whether you specify positional or delimited fields, all positions are
+                  <em class="ph i">one-based</em>.  That is, the first field or character of a line is specified as
+                  <kbd class="ph userinput">1</kbd> and not <kbd class="ph userinput">0</kbd>.</li>
+
+              <li class="li"><strong class="ph b">Using a string literal enclosed in two quotation marks</strong> - If you key in a
+                string literal, the other fields in the dialog box are disabled.  This is because
+                the tracking software merely passes the literal straight through for storage in the
+                database.</li>
+
+            </ul>
+<dl class="dl">
+              
+                <dt class="dt dlterm">only on line number</dt>
+
+                <dd class="dd">Select the radio button and specify the line number from which to extract the
+                  data. You cannot select both this radio button and the <span class="ph uicontrol">only if
+                    field</span> radio button.</dd>
+
+              
+              
+                <dt class="dt dlterm">only if field</dt>
+
+                <dd class="dd">Select the radio button and specify criteria to select the field from which to
+                  extract the data. You cannot select both this radio button and the <span class="ph uicontrol">only
+                    on line number</span> radio button.</dd>
+
+              
+            </dl>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Extract Transactional Reference</h2>
+      
+    </div>
+
+    <div class="p">The <span class="keyword wintitle">Extract Transactional Reference</span> dialog box is displayed when you
+      select an item to edit or you click <span class="ph uicontrol">New</span> in the <span class="ph uicontrol">Transactional
+        Data</span> table. Edit or populate the following fields:<dl class="dl">
+        
+          <dt class="dt dlterm">Extract field</dt>
+
+          <dd class="dd">Identify a field you want to track.</dd>
+
+        
+        
+          <dt class="dt dlterm">only on line number</dt>
+
+          <dd class="dd">Select the radio button and specify the line number from which to extract the data.
+            You cannot select both this radio button and the <span class="ph uicontrol">only if field</span>
+            radio button.</dd>
+
+        
+        
+          <dt class="dt dlterm">only if field</dt>
+
+          <dd class="dd">Select the radio button and specify criteria to select the field from which to extract
+            the data. You cannot select both this radio button and the <span class="ph uicontrol">only on line
+              number</span> radio button.</dd>
+
+        
+        
+          <dt class="dt dlterm">Storage Location for Extracted Data</dt>
+
+          <dd class="dd">Specify where to store the collected reference data. Each reference collected will be
+            separated by commas, and optionally preceded by the label, when it is displayed through
+            the <span class="ph uicontrol">View Information</span> right-click option under transfer reporting. <dl class="dl">
+              
+                <dt class="dt dlterm">Reference 1</dt>
+
+                <dt class="dt dlterm">Reference2</dt>
+
+                <dd class="dd">Select the reference in which to store the data.</dd>
+
+              
+              
+                <dt class="dt dlterm">Reference Label</dt>
+
+                <dd class="dd">Optional - a label for the reference.</dd>
+
+              
+            </dl>
+</dd>
+
+        
+      </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_FileTracking.html" title="File Tracking"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">File Tracking</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

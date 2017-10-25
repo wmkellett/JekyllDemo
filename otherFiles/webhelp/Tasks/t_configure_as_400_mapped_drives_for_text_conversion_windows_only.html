@@ -1,0 +1,66 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Through iSeries Client Access for Windows , you may map an AS/400 file share with a Windows network drive and view its contents through Windows Explorer.  By default, the contents of AS/400 files are ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configure AS/400 Mapped Drives for Text Conversion (Windows only)"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_as_400_pc_network_access_setup.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="configure_as_400_mapped_drives_for_text_conversion_windows_only"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configure AS/400 Mapped Drives for Text Conversion (Windows only)</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="configure_as_400_mapped_drives_for_text_conversion_windows_only">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_as2_checklist.html" title="AS2 Checklist">AS2 Checklist</a> / <a class="navheader_parent_path" href="../Topics/t_as_400_pc_network_access_setup.html" title="AS/400 PC Network Access Setup">AS/400 PC Network Access Setup</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_as_400_pc_network_access_setup.html" title="AS/400 PC Network Access Setup"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 PC Network Access Setup</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Configure AS/400
+                    Mapped Drives for Text Conversion (Windows only)</h1>
+
+   <div class="body taskbody">
+      <div class="section context">
+         <p class="p">Through <var class="keyword varname">iSeries Client Access for
+               Windows</var>, you may map an AS/400 file share with a Windows network drive and
+            view its contents through Windows Explorer.  By default, the contents of AS/400 files
+            are stored in EBCDIC, which cannot be viewed through Windows. </p>
+
+         <p class="p">To allow automatic conversion of your files to ASCII format, follow this simple
+            procedure:</p>
+
+         <p class="p">1.   Open <var class="keyword varname">System i Navigator</var> and select the <strong class="ph b">File
+            Shares</strong> item:</p>
+
+         <p class="p">
+            <img class="image" src="../Images/image2006.jpg"></img>
+         </p>
+
+         <p class="p">2.   Right-click on the <strong class="ph b">File Shares</strong> item and select the <strong class="ph b">Open i5/OS
+               NetServer</strong> option:</p>
+
+         <p class="p">
+            <img class="image" src="../Images/image2008.jpg"></img>
+         </p>
+
+         <p class="p">3.   Right-click on the file share that you have mapped into Windows and the select
+               <strong class="ph b">Properties</strong> option:</p>
+
+         <p class="p">
+            <img class="image" src="../Images/image2010.jpg"></img>
+         </p>
+
+         <p class="p">4.   Select the <strong class="ph b">Allow file text conversion</strong> checkbox and add the file extensions
+            of all files that you will be viewing through Windows.  In the example below, all
+               <strong class="ph b">.mbr</strong> files will automatically be converted:</p>
+
+         <p class="p">
+            <img class="image" src="../Images/image2013.jpg"></img>
+         </p>
+
+      </div>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_as_400_pc_network_access_setup.html" title="AS/400 PC Network Access Setup"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 PC Network Access Setup</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

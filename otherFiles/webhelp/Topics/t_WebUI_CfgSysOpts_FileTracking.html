@@ -1,0 +1,201 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="When you select the Track file content check box and click Configure file tracking on the Options &gt; Transfers tab, the File Tracking Options dialog box is displayed. Use this dialog box as a starting ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="File Tracking"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_CfgSysOpts_Transfers.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_CfgSysOpts_FileTracking_EDI.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_CfgSysOpts_FileTracking_XML.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_CfgSysOpts_FileTracking_Text.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_x2k_zzj_dr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>File Tracking</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_x2k_zzj_dr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_Monitoring.html" title="Monitoring">Monitoring</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_CfgSysOpts_Transfers.html" title="Transfers">Transfers</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_Transfers.html" title="Transfers"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfers</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">File Tracking</h1>
+
+  <div class="body">
+    <p class="p">When you select the
+        <span class="ph uicontrol">Track file content</span> check box and click <span class="ph uicontrol">Configure file
+        tracking</span> on the <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Transfers</span></span> tab, the <span class="keyword wintitle">File Tracking Options</span> dialog box is
+      displayed.</p>
+
+    <p class="p">Use this dialog box as a starting point to configure all file tracking options. It consists
+      of three sections: <span class="keyword wintitle">Tracking Configuration</span>, <span class="keyword wintitle">File Tracking
+        List</span>, and <span class="keyword wintitle">Properties</span>.</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Tracking Configuration</dt>
+
+        <dd class="dd">Enable one or more of the three types of tracking available:  EDI, XML, and text.<dl class="dl">
+            
+              <dt class="dt dlterm">Track EDI content</dt>
+
+              <dd class="dd">When you select the <span class="ph uicontrol">Track EDI content</span> check box on the
+                  <span class="keyword wintitle">File Track Options</span> dialog box, EDI tracking is enabled and
+                baseline EDI identifier information, such as interchanges and functional groups, are
+                tracked.  See <a class="xref" href="t_XferDBFlds_EDITrackingFlds.html">EDI Tracking Fields</a> for
+                detailed information on the data collected in the database.  </dd>
+
+              <dd class="dd">You can configure EDI tracking options without enabling tracking. Tracking will
+                not actually occur unless the <span class="ph uicontrol">Track EDI content</span> check box is
+                selected.</dd>
+
+              <dd class="dd">To configure an EDI tracking entry, click <span class="ph uicontrol">New EDI</span>.  See
+                <a class="xref" href="#topic_x2k_zzj_dr__dlentry_llh_db2_3y">New EDI</a>. </dd>
+
+              <dd class="dd">To update an existing item, double-click it or right-click it and select
+                  <span class="ph uicontrol">Edit</span>. See <a class="xref" href="t_XferDBFlds_EDITrackingFlds.html">EDI Tracking Fields</a>. <dl class="dl">
+                  
+                    <dt class="dt dlterm">Enable EDI functional acknowledgment tracking</dt>
+
+                    <dd class="dd">Select this check box to track EDI-X12 and UN/EDIFACT pending functional
+                      acknowledgments. Once the functional acknowledgment is sent or received, the
+                      acknowledgment code is logged with the corresponding original transaction
+                      set.</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">Still track EDI inbound if error responding to the sender</dt>
+
+                    <dd class="dd">Select this check box to continue logging incoming EDI information if the
+                      payload was successfully received but there was an error sending the
+                      asynchronous AS2 MDN or ebMS acknowledgment.</dd>
+
+                  
+                  
+                    <dt class="dt dlterm">EDI Tracking Exclusions</dt>
+
+                    <dd class="dd">Specify tracking exclusions directly in the field or select <span class="ph uicontrol">Edit
+                        Exclusions</span> to select exclusions from a list. See <cite class="cite">EDI
+                        Tracking Exclusions</cite> in <a class="xref" href="t_CfgSysOpts_FileTracking_EDI.html">EDI Tracking</a>.</dd>
+
+                  
+                </dl>
+</dd>
+
+            
+            
+              <dt class="dt dlterm">Track XML content</dt>
+
+              <dd class="dd">Select the check box to enable XML content tracking.  </dd>
+
+              <dd class="dd">Unlike EDI tracking, where baseline content is tracked when you select the
+                  <span class="ph uicontrol">Track EDI content</span> check box, for XML tracking you must add
+                entries to the File Tracking List for any XML tracking to take place.  See <a class="xref" href="t_XferDBFlds_XMLTrackingFlds.html">XML Tracking Fields</a> for detailed information about the data collected in
+                the database.  For XML tracking, all data tracked - whether it be identifier data or
+                transactional data - is stored solely in the <span class="ph filepath">VLXMLExtractedData</span>
+                table.  </dd>
+
+              <dd class="dd">To configure an XML tracking entry, click <span class="ph uicontrol">New XML</span>.  See
+                  <a class="xref" href="#topic_x2k_zzj_dr__dlentry_vh2_4jd_3y">New XML</a>. </dd>
+
+              <dd class="dd">To update an existing item, double-click it or right-click it and select
+                  <span class="ph uicontrol">Edit</span>. See <a class="xref" href="t_XferDBFlds_XMLTrackingFlds.html">XML Tracking Fields</a>. <dl class="dl">
+                  
+                    <dt class="dt dlterm">XML Tracking Exclusions</dt>
+
+                    <dd class="dd">Specify tracking exclusions directly in the field or select <span class="ph uicontrol">Edit
+                        Exclusions</span> to select exclusions from a list. See <cite class="cite">XML
+                        Tracking Exclusions</cite> in <a class="xref" href="t_CfgSysOpts_FileTracking_XML.html">XML Tracking</a>.</dd>
+
+                  
+                </dl>
+</dd>
+
+            
+            
+              <dt class="dt dlterm">Track text content</dt>
+
+              <dd class="dd">Select the check box to enable text tracking. </dd>
+
+              <dd class="dd">Unlike EDI tracking, where baseline content is tracked when you enable it, for
+                text, you must add entries to the <span class="ph uicontrol">File Tracking List</span> for
+                  <em class="ph i">any</em> text tracking to take place. See <a class="xref" href="t_CfgSysOpts_FileTracking_Text.html">Text
+                  Tracking Fields</a> for detailed information on the data collected in the
+                database. For text tracking, all data tracked -- whether it be identifier data or
+                transactional data -- is stored solely in the
+                  <span class="ph filepath">VLTextExtractedData</span> table.</dd>
+
+              <dd class="dd">Click <span class="ph uicontrol">New Text</span> in the <span class="keyword wintitle">File Tracking
+                  List</span> to configure new text tracking items.  See <a class="xref" href="#topic_x2k_zzj_dr__dlentry_fsy_syd_3y">New Text</a>.</dd>
+
+              <dd class="dd">To update an existing item, double-click it or right-click it and select
+                  <span class="ph uicontrol">Edit</span>. See <a class="xref" href="t_XferDBFlds_TextTrackingFields.html">Text Tracking Fields</a>. </dd>
+
+            
+          </dl>
+</dd>
+
+      
+      
+        <dt class="dt dlterm"><a name="topic_x2k_zzj_dr__dlentry_zcj_hjd_3y"><!-- --></a>File Tracking List</dt>
+
+        <dd class="dd">A summary of all the reference information to be tracked. You can add new EDI, XML, and
+          text items to track.<dl class="dl">
+            
+              <dt class="dt dlterm"><a name="topic_x2k_zzj_dr__dlentry_llh_db2_3y"><!-- --></a>New EDI</dt>
+
+              <dd class="dd">Click <span class="ph uicontrol">New EDI</span> to add a new EDI item to the <span class="keyword wintitle">File
+                  Tracking List</span>. See <cite class="cite">EDI Reference</cite> in <a class="xref" href="t_CfgSysOpts_FileTracking_EDI.html">EDI Tracking</a>.</dd>
+
+            
+            
+              <dt class="dt dlterm"><a name="topic_x2k_zzj_dr__dlentry_vh2_4jd_3y"><!-- --></a>New XML</dt>
+
+              <dd class="dd">Click <span class="ph uicontrol">New XML</span> to add a new XML item to the <span class="keyword wintitle">File
+                  Tracking List</span>. See <cite class="cite">XML Reference</cite> in <a class="xref" href="t_CfgSysOpts_FileTracking_XML.html">XML Tracking</a>.</dd>
+
+            
+            
+              <dt class="dt dlterm"><a name="topic_x2k_zzj_dr__dlentry_fsy_syd_3y"><!-- --></a>New Text</dt>
+
+              <dd class="dd">Click <span class="ph uicontrol">New Text</span> to add a new Text item to the <span class="keyword wintitle">File
+                  Tracking List</span>. See <a class="xref" href="t_CfgSysOpts_FileTracking_Text.html">Text Tracking</a>.</dd>
+
+            
+          </dl>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Properties</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">Reference 1 Display Name</dt>
+
+              <dt class="dt dlterm">Reference 2 Display Name</dt>
+
+              <dd class="dd">Optional - Specify the names to use in the transfer reports for the two storage
+                areas designated for reference information.  These names can then subsequently be
+                seen in transfer report detail views, as seen through the <span class="ph uicontrol">View
+                  Information</span> right-click option.</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_CfgSysOpts_FileTracking_EDI.html">EDI Tracking</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_CfgSysOpts_FileTracking_XML.html">XML Tracking</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_CfgSysOpts_FileTracking_Text.html">Text Tracking</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_CfgSysOpts_Transfers.html" title="Transfers"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfers</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

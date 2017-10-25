@@ -1,0 +1,238 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo Harmony and Cleo VLTrader applications only. In the web UI, click Router . In the native UI, select Tools &gt; Router in the menu bar. By default, the router does ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Set up Automated Outgoing Routes"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="set_up_automated_outgoing_routes"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Set up Automated Outgoing Routes</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="set_up_automated_outgoing_routes">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Set up Automated Outgoing
+                    Routes</h1>
+
+   <div class="body taskbody">
+      <div class="section context"><div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications
+            only.</div>
+</div>
+
+      <ol class="ol steps" id="set_up_automated_outgoing_routes__steps_fnd_njm_2r"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, click <span class="ph uicontrol">Router</span>.  In the
+                  native UI, select <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Router</span></span> in the menu bar.</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">By default, the router does not automatically start when the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application is
+               started.  Either manually start the router by clicking <img class="image" id="set_up_automated_outgoing_routes__image_m2m_njm_2r" src="../Images/image433.gif"></img> or select <img class="image" id="set_up_automated_outgoing_routes__image_nfm_njm_2r" src="../Images/image056.jpg"></img> Automatically run at
+               startup.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">The automated routing directory defaults to <span class="ph filepath">autoroute\</span> in the
+                  <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> home
+               directory. The defined set of routing rules are automatically applied to files or
+               subdirectories placed in this directory.  Click <span class="ph uicontrol">...</span> to select
+               a different autoroute directory.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Find Route</span> to find an existing route by filename or
+               EDI parameters.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">New Route</span> to define a new routing rule.</span>
+            <div class="itemgroup info">
+               
+               <p class="p">At least one routing criterion is required - either a filename or EDI header
+                  map. The filename can be wild carded (for example, <span class="ph filepath">*.dcx</span>) and
+                  applies to files and subdirectories alike. If the mailbox protocol supports it,
+                  subdirectories can be used to send multipart payload messages.  More than one
+                  filename can be listed separated by either a comma (,) or a semicolon (;).  EDI
+                  routes only apply to single file routes and not subdirectory routes.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">New</span> to define a new EDI criterion.</span>
+            <div class="itemgroup info">
+               
+               <p class="p">The <span class="ph uicontrol">Note</span> field is used to capture trading partner or other
+                  relevant information – it is not an EDI criteria for routing.  When searching for
+                  a route (Step 4 above), wildcard characters (* and ?) can be used in the
+                     <span class="ph uicontrol">Note</span> field.</p>
+
+               <p class="p">The <span class="ph uicontrol">…</span> buttons are present when Trading Partners are
+                  available for selection. See <a class="xref" href="../Topics/t_trading_partner_management.html">Trading Partner Management</a>. These buttons
+                  allow the user to display the Trading Partners and configured Interchange
+                  Identifiers/Qualifiers.</p>
+
+               
+               <p class="p">If a Trading Partner Alias is selected along with <span class="ph uicontrol">Use All Interchange
+                     Identifiers/Qualifiers</span>, then a trading partner alias variable will
+                  be used. This will match any of the Interchange Identifiers/Qualifiers configured
+                  for the Trading Partner. If <span class="ph uicontrol">Use All Interchange
+                     Identifiers/Qualifiers</span> is not selected, then the user can select a
+                  specific Interchange Identifier/Qualifier pair to be used. Once the selections
+                  have been made and the <span class="ph uicontrol">OK</span> button is selected, then the
+                  selection will be placed in the appropriate fields depending on which
+                     <span class="ph uicontrol">…</span> button was selected.</p>
+
+               <p class="p">EDI-X12, UN/EDIFACT, and TRADACOMS file formats are recognized when routing by
+                  interchange sender and/or receiver, functional group application sender and/or
+                  receiver, and/or transaction type:</p>
+
+               
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="set_up_automated_outgoing_routes__table_u3m_njm_2r" class="table" frame="border" border="1" rules="all">
+                     
+                     
+                     
+                     
+                     
+                     <thead class="thead" align="left">
+                        <tr class="row">
+                           <th class="entry" rowspan="2" colspan="2" valign="top" id="d162463e171"> Criteria </th>
+
+                           <th class="entry" rowspan="1" colspan="3" valign="top" id="d162463e174"> Corresponding EDI
+                              elements </th>
+
+                        </tr>
+
+                        <tr class="row">
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d162463e180"> EDI-X12 </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d162463e183"> UN/EDIFACT </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d162463e186"> TRADACOMS </th>
+
+                        </tr>
+
+                     </thead>
+
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" rowspan="2" colspan="1" valign="top" headers="d162463e171 "> Interchange </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e171 "> Sender </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e180 "> ISA06 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e183 "> UNB02:1 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e186 "> STX02:1 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e171 "> Receiver </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e180 "> ISA08 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e183 "> UNB03:1 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e186 "> STX03:1 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="2" colspan="1" valign="top" headers="d162463e171 "> Functional Group </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e171 "> App Sender </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e180 "> GS02 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e183 "> UNG06:1 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e186 ">   </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e171 "> App Receiver </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e180 "> GS03 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e183 "> UNG07:1 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e186 ">   </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e171 "> Transaction </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e171 "> Type(s) </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e180 "> ST01 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e183 "> UNH09:1 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d162463e174 d162463e186 "> MHD02 </td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+
+               <p class="p">An EDI file can potentially be split across multiple routes as long as each
+                  segment of the file has one and only one route defined.  If there are undefined or
+                  doubly-defined segments in a file being routed, those segments will be rejected
+                  and filtered into the system reject box (see <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a>). 
+                  More than one transaction type can be listed separated by either a comma (,) or a
+                  semicolon (;).</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">A <span class="ph uicontrol">To</span> mailbox must be selected and one or more Cc mailboxes
+               can also be selected. Click in the cell and a pull-down list can be used to select
+               the appropriate host\mailbox. When routing, a file is sent to each mailbox selected
+               concurrently.</span>
+            <div class="itemgroup info">
+               <p class="p">You can specify sending parameters that override the default parameters in the
+                  mailbox's default <span class="keyword cmdname">&lt;send&gt;</span> action (for example,
+                     <span class="keyword cmdname">[Content-Type]=Binary or ReceiverId=CHASE</span>).</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">When a route first initiates, the file/subdirectory being routed is marked as
+               read-only so that no further updates can be made to the file(s). Temporary send
+               actions (named <span class="keyword cmdname">&lt;send%########## &gt;</span>) are created and used
+               during the routing process.  While a route is active, the status of the route can be
+               displayed.  Right-click a routing rule and select <span class="ph uicontrol">Status</span> or
+               double-click the routing rule.</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If the route attempt should fail, the status will reflect the result.  Retries are
+               automatically scheduled based on "Autosend Retry Attempts" and "Autosend Restart"
+               (see <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Other.html">Other System Options</a>).  To force an immediate
+               retry, right-click a file and select <span class="ph uicontrol">Retry Now</span>.  To cancel a
+               routing, right-click a file and select <span class="ph uicontrol">Cancel</span> or double-click
+               the file.</span>
+            <div class="itemgroup info">
+               
+               <p class="p">If the route file is being split across multiple routes, only the segments being
+                  routed to this mailbox based on this routing rule are canceled.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Once all the routes for a file/subdirectory are complete, the file/subdirectory is
+               automatically deleted.</span>
+         </li>
+</ol>
+
+   </div>
+
+ 
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

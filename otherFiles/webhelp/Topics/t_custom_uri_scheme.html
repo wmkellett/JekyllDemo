@@ -1,0 +1,78 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Custom scheme(s) can be created to access payload not normally accessible to VersaLex. A URI scheme must start with a letter and be followed by one or more alpha-numeric characters. The custom URI ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Custom URI Scheme"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_uri_file_system_interface.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="custom_uri_scheme"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Custom URI Scheme</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="custom_uri_scheme">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface">URI File System Interface</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">URI File System Interface</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Custom URI Scheme</h1>
+
+   <div class="body">
+            <p class="p">Custom scheme(s) can be created to access payload not
+                  normally accessible to VersaLex. A URI scheme must start with a letter and be
+                  followed by one or more alpha-numeric characters.</p>
+
+            <p class="p">The custom URI scheme implementation must provide three basic classes:</p>
+
+            <ol class="ol" id="custom_uri_scheme__ol_fsj_p3d_pv">
+                  <li class="li"><strong class="ph b">File class</strong> – A class that provides that similar functionality as the
+                        java.io.File class. The custom <var class="keyword varname">Scheme</var> File class must
+                        extend com.cleo.lexicom.beans.LexURIFile.</li>
+
+                  <li class="li"><strong class="ph b">InputStream class</strong> – A class that provides similar functionality as the
+                        java.io.InputStream class. The custom <var class="keyword varname">Scheme</var> InputStream
+                        class must extend java.io.InputStream.</li>
+
+                  <li class="li"><strong class="ph b">OutputStream class</strong> – A class that provides similar functionality as the
+                        java.io.OutputStream class. The custom <var class="keyword varname">Scheme</var>
+                        OutputStream class must extend java.io.OutputStream.</li>
+
+            </ol>
+
+            <p class="p">These three custom-written classes are configured in system properties. System
+                  properties are used to configure the class names for single URI scheme:</p>
+
+            <p class="p">cleo.uri.<strong class="ph b">
+                        <var class="keyword varname">scheme</var>
+                  </strong>.file                   (required)</p>
+
+            <p class="p">cleo.uri.<strong class="ph b">
+                        <var class="keyword varname">scheme</var>
+                  </strong>.inputstream      (required)</p>
+
+            <p class="p">cleo.uri.<strong class="ph b">
+                        <var class="keyword varname">scheme</var>
+                  </strong>.outputstream    (required)</p>
+
+            <p class="p">In addition, an optional classpath variable is provided to specify the path to the
+                  implementation jar and any support jar files necessary:</p>
+
+            <p class="p">cleo.uri.<strong class="ph b">
+                        <var class="keyword varname">scheme</var>
+                  </strong>.classpath         (optional)</p>
+
+            <p class="p">If any additional jars need to be in the base VersaLex class loader, then the
+                        <strong class="ph b">cleo.additional.classpath</strong> system property must be used.</p>
+
+            <p class="p">The Cleo versions of JMS, MSMQ, and VLPipe can be replaced with custom versions by
+                  specifying these system properties for JMS, MSMQ, or VLPipe and naming the custom
+                  classes.</p>
+
+            <p class="p">Further documentation for custom URI schemes is provided in the API documentation
+                  (see LexURIFile in the JavaDocs).</p>
+
+      </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_uri_file_system_interface.html" title="URI File System Interface"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">URI File System Interface</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

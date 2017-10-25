@@ -1,0 +1,164 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Provide Default Values for the headers for mailbox-level actions.  Unless you specify an overriding value in a command in an action, these default values are used. To Cc Bcc You can enter multiple ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="SMTP Mailbox: SMTP Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SMTP_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_bgj_2pd_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SMTP Mailbox: SMTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_bgj_2pd_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_smtp_configuration.html" title="SMTP Configuration">SMTP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_SMTP_Mailbox.html" title="SMTP Mailbox">SMTP Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_SMTP_Mailbox.html" title="SMTP Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">SMTP Mailbox: SMTP Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <p class="p">Provide <strong class="ph b">Default Values</strong> for the headers for mailbox-level actions.  Unless you
+        specify an overriding value in a command in an action, these default values are used.</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">To</dt>
+
+          <dt class="dt dlterm">Cc</dt>
+
+          <dt class="dt dlterm">Bcc</dt>
+
+          <dd class="dd">You can enter multiple usernames in each of these fields. Use semi-colons (;) or
+            commas (,) to separate them.</dd>
+
+          <dd class="dd">If this is an open-ended SMTP host (see <a class="xref" href="r_SMTP_Host_GeneralTab.html">SMTP Host: General Tab</a>), each
+            username specified must include the <span class="ph filepath">@domain</span> portion of the email
+            address. </dd>
+
+        
+        
+          <dt class="dt dlterm">Subject</dt>
+
+          <dd class="dd">Optional.</dd>
+
+        
+        
+          <dt class="dt dlterm">From</dt>
+
+          <dd class="dd">Optional. The value you specify (<span class="ph filepath">user@domain</span>) will override the
+              <span class="ph">Cleo Harmony</span>
+            application's email address specified in the Local Listener SMTP service.</dd>
+
+        
+        
+          <dt class="dt dlterm">Return-Path</dt>
+
+          <dd class="dd">Optional. The value you specify here (user@domain) will override the <span class="ph">Cleo Harmony</span>
+            application's return-path address specified in the Local Listener SMTP service.</dd>
+
+        
+        
+          <dt class="dt dlterm">Inline</dt>
+
+          <dd class="dd">Optional. The inline (non-attachment) portion of the message. You can enter text
+            directly in this field or select a file.</dd>
+
+        
+        
+          <dt class="dt dlterm">Content-Type</dt>
+
+          <dd class="dd">The default content-type of the payload. Select a value from pull down menu or enter a
+            value. </dd>
+
+          <dd class="dd">If <span class="ph uicontrol">Content-Type</span> is not specified or if multiple payloads are
+            attached in the message, the <span class="ph uicontrol">Content-Type</span> is detected based first
+            on file content and then on file extension. Detectable types include: <ul class="ul" id="reference_bgj_2pd_b5__ul_jlv_jfv_1x">
+              <li class="li"><kbd class="ph userinput">application/edifact</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/edi-x12</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/edi-tradacoms</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/xml (text/xml)</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/pdf</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/msword</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/x-msexcel</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/rtf</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">application/zip</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">0</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">image/gif</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">image/tiff</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">image/jpeg</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">text/plain</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">text/html</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">video/mpg</kbd></li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Content-Transfer-Encoding</dt>
+
+          <dd class="dd">Select a default value from the following:</dd>
+
+          <dd class="dd"><ul class="ul" id="reference_bgj_2pd_b5__ul_r1f_pmv_1x">
+              <li class="li"><kbd class="ph userinput">7bit</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">8bit</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">quoted-printable</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">base64</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">uuencode</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">binary</kbd></li>
+
+            </ul>
+If you do not select a value, the following values are assumed:<ul class="ul" id="reference_bgj_2pd_b5__ul_xzs_kfv_1x">
+              <li class="li"><kbd class="ph userinput">7bit</kbd> for <kbd class="ph userinput">text/*</kbd> content-types</li>
+
+              <li class="li"><kbd class="ph userinput">base64</kbd> for <kbd class="ph userinput">binary</kbd> content-types if
+                the server does not support the chunking extension</li>
+
+              <li class="li"><kbd class="ph userinput">binary</kbd> for <kbd class="ph userinput">binary</kbd> content-types if
+                the server supports the chunking extension</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Acceptable additional incoming sender usernames</dt>
+
+          <dd class="dd">Usernames (other than values above) from which incoming emails from this trading
+            partner are accepted. come from usernames other than the To username(s) specified
+            above. You can add multiple additional incoming sender usernames separated by
+            semi-colons (;) or commas (,) or entered on separate lines. (VLTrader and Harmony only)
+          </dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_SMTP_Mailbox.html" title="SMTP Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

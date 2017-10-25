@@ -1,0 +1,94 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The SLA/KPI Details table provides details of every checkpoint bound by the current filter (see SLA/KPI Dashboard Filter Area ) and parameter settings (see SLA/KPI Dashboard Parameters ). The table ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="SLA/KPI Details Table"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Dashboards_SLAKPIDashboard.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_w1d_1nv_m5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SLA/KPI Details Table</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_w1d_1nv_m5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_cleo_dashboards.html" title="Cleo Dashboards">Cleo Dashboards</a> / <a class="navheader_parent_path" href="../Topics/t_Dashboards_SLAKPIDashboard.html" title="SLA/KPI Dashboard">SLA/KPI Dashboard</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Dashboards_SLAKPIDashboard.html" title="SLA/KPI Dashboard"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SLA/KPI Dashboard</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">SLA/KPI Details Table</h1>
+
+  <div class="body">
+    
+    <p class="p">The <span class="keyword wintitle">SLA/KPI Details</span> table provides details
+      of every checkpoint bound by the current filter (see <a class="xref" href="t_Dashboards_SLAKPIFilters.html">SLA/KPI Dashboard Filter Area</a>) and parameter settings (see<a class="xref" href="t_Dashboards_SLAKPIParms.html">SLA/KPI Dashboard Parameters</a>). The table has two
+      grouping levels: first by trading partner, and next by the host\mailbox. The following summary
+      calculations can be seen at each group level: </p>
+
+    <ul class="ul" id="topic_w1d_1nv_m5__ul_unr_2gq_tv">
+      <li class="li"><span class="ph uicontrol">Total Successful Checkpoints</span> (those with a <span class="ph uicontrol">General
+          Status</span> of <span class="ph uicontrol">Successful</span>) </li>
+
+      <li class="li"><span class="ph uicontrol">Total Failed Checkpoints</span> (those with a <span class="ph uicontrol">General
+          Status</span> of <span class="ph uicontrol">Failed</span>) </li>
+
+      <li class="li"><span class="ph uicontrol">Percentage Successful Checkpoints</span> (total
+          <span class="ph uicontrol">Successful</span> checkpoints/total checkpoints) </li>
+
+    </ul>
+
+    <p class="p">The table is initially sorted by <span class="ph uicontrol">Trading Partner</span>, then by
+        <span class="ph uicontrol">Host\Mailbox</span>, and finally by <span class="ph uicontrol">Run Time</span>. See
+        <a class="xref" href="t_Dashboards_GeneralOperation.html#topic_x2g_bbs_35">Manipulating Dashboard Components</a> for general information about how to use the table's
+      right-click menus.  </p>
+
+    <p class="p">In the upper right corner of the table, a <span class="ph uicontrol">Total Records</span> value is
+      displayed.</p>
+
+    
+    <p class="p"><span class="ph uicontrol">Total Records</span> provides the number of records displayed in the
+        <span class="keyword wintitle">SLA/KPI Details</span> table as well as the number of records represented in
+      the <span class="keyword wintitle">SLA/KPI Summary</span> chart above. It will initially represent the number
+      of records in the query; however, it will change if any of the filters are selected.  </p>
+
+    <p class="p">The columns in the <span class="keyword wintitle">SLA/KPI Details</span> table are:</p>
+
+    <ul class="ul" id="topic_w1d_1nv_m5__ul_yzt_vjq_tv">
+      <li class="li"><span class="ph uicontrol">Run Time</span>: specifies the time that the CHECK command was run. This
+        is a linked cell.  Clicking on a specific run time will display the <span class="keyword wintitle">SLA/KPI Detail
+          Report</span>. See <a class="xref" href="t_Dashboards_SLAKPIDetailReport.html">SLA/KPI Detail Report</a>. </li>
+
+      <li class="li"><span class="ph uicontrol">Check Type</span>: specifies the type of CHECK command run. The types are:
+          <ul class="ul" id="topic_w1d_1nv_m5__ul_oqh_zjq_tv">
+          <li class="li"><span class="ph uicontrol">Transfer</span></li>
+
+          <li class="li"><span class="ph uicontrol">File Age</span></li>
+
+          <li class="li"><span class="ph uicontrol">Directory Age</span></li>
+
+        </ul>
+</li>
+
+      <li class="li"><span class="ph uicontrol">Class</span>: specifies the setting of the <span class="ph uicontrol">Class</span>
+        parameter on the CHECK command. </li>
+
+      <li class="li"><span class="ph uicontrol">Subclass</span>: specifies the setting of the
+          <span class="ph uicontrol">Subclass</span> parameter on the CHECK command. </li>
+
+      <li class="li"><span class="ph uicontrol">Status</span>: specifies the specific status of the checkpoint. </li>
+
+      <li class="li"><span class="ph uicontrol">Time Condition</span>: specifies the time condition, as interpreted from
+        the CHECK command's <span class="ph uicontrol">OccurredWithin/Age</span> parameters. </li>
+
+      <li class="li"><span class="ph uicontrol">Direction</span>: specifies whether the CHECK was for outbound or inbound
+        transfers (the value will be <span class="ph uicontrol">n/a</span> for file and directory age
+        checkpoints). </li>
+
+      <li class="li"><span class="ph uicontrol">Path</span>: specifies the path setting on the CHECK command. </li>
+
+    </ul>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Dashboards_SLAKPIDashboard.html" title="SLA/KPI Dashboard"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SLA/KPI Dashboard</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

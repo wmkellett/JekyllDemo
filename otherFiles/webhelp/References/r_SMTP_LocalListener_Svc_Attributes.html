@@ -1,0 +1,135 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="My Identification Domain User Name These values comprise your email address, that is User Name@Domain . Acceptable additional incoming receiver usernames Values recognized as valid To values by the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Local Listener SMTP Service reference"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_SMTP_Service_SMTP_Tab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_bjl_3ff_lw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local Listener SMTP Service reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_bjl_3ff_lw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Configure_Local_Listener_SMTP_Service.html" title="Local Listener SMTP Service">Local Listener SMTP Service</a> / <a class="navheader_parent_path" href="../Tasks/t_Configure_SMTP_Service_SMTP_Tab.html" title="Configuring SMTP Service">Configuring SMTP Service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_SMTP_Service_SMTP_Tab.html" title="Configuring SMTP Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring SMTP Service</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Local Listener SMTP Service reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">My Identification</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Domain</dt>
+
+                <dt class="dt dlterm">User Name</dt>
+
+                <dd class="dd">These values comprise your email address, that is <kbd class="ph userinput">User
+                    Name@Domain</kbd>.</dd>
+
+              
+              
+                <dt class="dt dlterm">Acceptable additional incoming receiver usernames</dt>
+
+                <dd class="dd">Values recognized as valid <kbd class="ph userinput">To</kbd> values by the <span class="ph">Cleo Harmony</span> SMTP server. For these <kbd class="ph userinput">To</kbd> values, the
+                    <kbd class="ph userinput">@Domain</kbd> portion must be the same as specified in the
+                    <span class="ph uicontrol">Domain</span> field.  <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications
+                  only.</dd>
+
+                <dd class="dd"></dd>
+
+                <dd class="dd"></dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Return-Path</dt>
+
+          <dd class="dd">Optional - specify an email address or server to which you would like to send any
+            responses, including bounced messages and error messages. The value must be specified as
+              <kbd class="ph userinput">User Name@Domain</kbd>. For the <span class="ph">Cleo LexiCom</span> application, the
+              <strong class="ph b">Return-Path</strong> must be entered to designate the server to receive any responses or
+            error message. The value must be specified as <strong class="ph b">user</strong>@<strong class="ph b">domain</strong>. </dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Perform reverse DNS lookup</dt>
+
+          <dd class="dd"><strong class="ph b"><span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only.
+            </strong> Select <strong class="ph b">Perform reverse DNS lookup</strong> if you would like to verify the source
+            domain name of an incoming email. </dd>
+
+        
+        
+          <dt class="dt dlterm">Allow VERIFY command</dt>
+
+          <dd class="dd"><strong class="ph b"><span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only.
+            </strong> Deselect <strong class="ph b">Allow VERIFY command</strong> if you do not want your trading partners to be
+            able to specifically verify your email address. </dd>
+
+        
+        
+          <dt class="dt dlterm">Case sensitive usernames</dt>
+
+          <dd class="dd"><strong class="ph b"><span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only.
+            </strong> Deselect <strong class="ph b">Case sensitive usernames</strong> if you want to allow your trading
+            partner's incoming email username verification to not be upper/lowercase
+            dependent. </dd>
+
+        
+        
+          <dt class="dt dlterm">DSNs Storage Folder</dt>
+
+          <dd class="dd"><strong class="ph b"><span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only.
+            </strong> If desired, change the location of the <strong class="ph b">DSNs Storage Folder</strong>. This folder
+            stores Delivery Status Notifications (DSNs). By default this directory is pre-defined to
+            be a subdirectory under the <span class="ph">Cleo Harmony</span>
+            directory tree. To change the location:</dd>
+
+          <dd class="dd">
+            <ol class="ol" id="reference_bjl_3ff_lw__ol_lln_41k_rw">
+              <li class="li">Click the <span class="ph uicontrol">...</span> button.</li>
+
+              <li class="li">Specify the new path using the directory chooser.</li>
+
+              <li class="li">Click <span class="ph uicontrol">Apply</span>.</li>
+
+            </ol>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Retain Message ID History</dt>
+
+          <dd class="dd"><strong class="ph b"><span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only.
+            </strong> If desired, change the number of days to <strong class="ph b">Retain Message ID History</strong>. The
+            default is 5 days. This setting is used to check for duplicate messages from your
+            trading partners. </dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_SMTP_Service_SMTP_Tab.html" title="Configuring SMTP Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring SMTP Service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

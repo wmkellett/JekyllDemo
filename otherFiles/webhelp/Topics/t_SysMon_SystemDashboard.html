@@ -1,0 +1,267 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The System Dashboard provides general information as well as information related to the JVM and the host system of the currently selected VersaLex. The System Dashboard is displayed. General ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="System Dashboard"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cleo_system_monitor.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_zrv_dbr_m5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>System Dashboard</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_zrv_dbr_m5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_cleo_dashboards_and_cleo_system_monitor.html" title="Cleo Dashboards and Cleo System Monitor">Cleo Dashboards and Cleo System Monitor</a> / <a class="navheader_parent_path" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor">Cleo System Monitor</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">System Dashboard</h1>
+
+  <div class="body">
+    <p class="p">The
+        <span class="keyword wintitle">System Dashboard</span> provides general information as well as information
+      related to the JVM and the host system of the currently selected VersaLex. The
+        <span class="keyword wintitle">System Dashboard</span> is displayed.</p>
+
+    
+    <div class="section"><h2 class="title sectiontitle">General Information Table</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">General Information</span> table provides information identifying the
+        product, serial number, alias, version, version available, pool name, IP address, and
+        date/time the application was last started.</p>
+
+      <p class="p">There are no sub-reports from this library component.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">CPU Usage Percentage Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">CPU Usage Percentage</span> chart displays the current CPU load as a
+        percentage of total CPU capacity related to the VersaLex server.</p>
+
+      <p class="p">A continuously high CPU load can indicate that another VersaLex should be added to the
+        system to spread out the load.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">CPU History</span> sub-report by clicking on the needle in the
+        graph.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">CPU History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">CPU History</span> report displays the CPU load as a percentage of total
+        CPU capacity over time. By default, it will show the last 60 minutes of history. Change the
+          <span class="ph uicontrol">Start date/time</span> of the chart and the number of
+          <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use the zoom
+        slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+        specific data point on the chart will display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">System Uptime Percentage Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">System Uptime Percentage</span> chart provides the percentage of time
+        VersaLex has been running. It measures the availability of VersaLex and its installed
+        components.</p>
+
+      <p class="p">There are no sub-reports from this library component.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Heap Memory Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Heap Memory</span> chart displays the percentage of heap memory used.
+        Heap memory is the portion of memory in which dynamically allocated memory resides. Memory
+        allocated from the heap will remain allocated until either the memory is freed up or the
+        program terminates. If all references to allocated memory are lost you have a memory leak:
+        the memory has still been allocated, but there is no easy way of accessing it anymore.
+        Leaked memory cannot be reclaimed for future memory allocations, but when the program ends
+        the memory will be freed up by the operating system.</p>
+
+      <p class="p">The maximum heap memory can automatically be determined by the JVM, or it can be configured
+        as a specific maximum. If the system runs out of heap memory, it could be a memory leak as
+        mentioned above, but it could also be that the maximum value is set too low for the amount
+        of VersaLex traffic. If the maximum is already set high and VersaLex is still running near
+        the maximum, that indicates that another VersaLex should be added to the system so the load
+        can be spread out between more VersaLexes.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">Heap Memory History</span> sub-report by clicking on the bar.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Heap Memory History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Heap Memory History</span> report displays the heap memory usage over
+        time. By default, it will show the last 60 minutes of history. Change the <span class="ph uicontrol">Start
+          date/time</span> of the chart and the number of <span class="ph uicontrol">Minutes</span>
+        displayed using the parameter control box. Use the zoom slider at the bottom to zoom in
+        closer to a specific time. Hovering the cursor over a specific data point on the chart will
+        display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Perm Gen Memory Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Perm Gen Memory</span> chart displays the percentage of perm gen memory
+        used.</p>
+
+      <p class="p">Perm Gen Memory is a heap in the JVM dedicated to storing the JVM's internal representation
+        of Java Classes and interned String instances. In the Oracle JVM, the heap is a fixed size.
+        If an attempt is made to load more class instances than will fit in this area, an
+          <span class="ph uicontrol">Out Of Memory Error</span> occurs, even when there is still plenty of
+        space on the other heaps.</p>
+
+      <p class="p">A problem in the Perm Gen Memory area will typically show a configuration problem. For
+        instance, if JMS URI is being used, the classes of the specific JMS provider are also loaded
+        into the VersaLex JVM. This can be an issue with the Perm Gen Memory.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">Perm Gen Memory History</span> sub-report by clicking on the
+        bar.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Perm Gen Memory History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Perm Gen Memory History</span> report displays the perm gen memory usage
+        over time. By default, it will show the last 60 minutes of history. Change the
+          <span class="ph uicontrol">Start date/time</span> of the chart and the number of
+          <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use the zoom
+        slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+        specific data point on the chart will display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Overall Transfer Rate Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Overall Transfer Rate</span> chart displays the overall inbound/outbound
+        transfer rates.</p>
+
+      <p class="p">Overall Transfer Rate monitors the speed of inbound and outbound transfers in which files
+        are currently being executed. This is an accumulation of all transfers currently being
+        executed, and can be reduced by the trading partner(s) if their connectivity is lower than
+        the maximum bandwidth of the VersaLex.</p>
+
+      <p class="p">This can be used to see if the bandwidth is reaching a system maximum, at which time
+        another VersaLex should be added to spread out the traffic.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">Overall Transfer Rate History</span> sub-report either by clicking
+        on the bars or the bar label.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Overall Transfer Rate History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Overall Transfer Rate History</span> report displays the overall Inbound
+        and Outbound transfer rates over time. By default, it will show the last 60 minutes of
+        history. Change the <span class="ph uicontrol">Start date/time</span> of the chart and the number of
+          <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use the zoom
+        slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+        specific data point on the chart will display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Storage Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Storage</span> chart displays the percentage of disk spaced used on the
+        drive containing the VersaLex installation.</p>
+
+      <p class="p"><span class="keyword wintitle">Storage</span> monitors the physical location for file storage related to
+        files that have been stored on the same disk as VersaLex. Use this feature to see if you are
+        running out of storage space on the disk where VersaLex is running.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">Storage Space History</span> sub-report by clicking the bar.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Storage Space History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Storage Space History</span> report displays the storage space used on
+        the drive containing VersaLex over time. By default, it will show the last 60 minutes of
+        history. Change the <span class="ph uicontrol">Start date/time</span> of the chart and the number of
+          <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use the zoom
+        slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+        specific data point on the chart will display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Thread Count Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Thread Count</span> chart displays a count of the active and deadlocked
+        threads. It also shows the peak number of threads since the last service restart.</p>
+
+      <p class="p">Threads are similar to processes. Threads, like processes, are time-sliced by the kernel.
+        On uniprocessor systems, the kernel uses time slicing to simulate simultaneous execution of
+        threads in much the same way it uses time slicing with processes. On multiprocessor systems,
+        threads are able to run simultaneously, just like two or more processes can.</p>
+
+      <p class="p">This can be used to monitor the typical number of threads for their system. This will vary
+        depending on the customer's outbound and inbound load. If the customer sees a significantly
+        higher or lower number of threads during normal traffic, this could indicate an issue that
+        something is not functioning correctly in the system.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">Thread Count History</span> sub-report by clicking one of the
+        bars.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Thread Count History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Thread Count History</span> report displays the
+          <span class="ph uicontrol">Active</span>, <span class="ph uicontrol">Peak</span>, and
+          <span class="ph uicontrol">Deadlock</span> thread counts over time. By default, it will show the last
+        60 minutes of history. Change the <span class="ph uicontrol">Start date/time</span> of the chart and
+        the number of <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use
+        the zoom slider at the bottom to zoom in closer to a specific time. Hovering the cursor over
+        a specific data point on the chart will display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">System Queues Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Thread Count</span> chart displays the percentage of each of the system
+        queues in use.</p>
+
+      <p class="p">This measures the size of the internal queues that are being used in memory and include
+          <span class="ph uicontrol">Transfer</span>, <span class="ph uicontrol">System</span>, and <span class="ph uicontrol">Operator
+          Audit Trail</span> queues. If any of these queues are full, it will affect the
+        performance of VersaLex.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">System Queue Percentage Used History</span> sub-report by clicking
+        the bars or the bar labels.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">System Queue Percentage Used History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">System Queue Percentage Used History</span> report displays the percent
+        of the system queues in use over time. By default, it will show the last 60 minutes of
+        history. Limit the history displayed to one or more queues by selecting them in the
+          <span class="ph uicontrol">Queue</span> filter. Change the <span class="ph uicontrol">Start date/time</span> of
+        the chart and the number of <span class="ph uicontrol">Minutes</span> displayed using the parameter
+        control box. Use the zoom slider at the bottom to zoom in closer to a specific time.
+        Hovering the cursor over a specific data point on the chart will display information about
+        that data point.</p>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

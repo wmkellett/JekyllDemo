@@ -1,0 +1,200 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Your Cleo product provides the ability to select local and/or partner certificates on a per trading partner basis that can activated for use at a scheduled time in the future (or immediately, if ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Scheduling Certificates for Future Use"></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Coverage" content="Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_certificate_manager.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="SchedCertsForFutureUse"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Scheduling Certificates for Future Use</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="SchedCertsForFutureUse">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Scheduling
+                    Certificates for Future Use</h1>
+
+   
+   <div class="body">
+      <p class="p">Your
+         Cleo product
+         provides
+         the ability to select local and/or partner certificates on a per trading partner basis that
+         can activated for use at a scheduled time in the future (or immediately, if
+         desired). Additionally, trading partners using non CEM-capable AS2 or AS3 protocols will
+         automatically be able to take advantage of the "first-usage" features for scheduled local
+         encryption certificates and scheduled partner signing certificates. See
+            .</p>
+
+      <p class="p">To schedule new certificates for future use for one or more
+            trading partners: </p>
+
+      <p class="p">
+         <img class="image" id="SchedCertsForFutureUse__image_vhg_l22_2s" src="../Images/image1376.jpg"></img>
+      </p>
+
+      <ol class="ol" id="SchedCertsForFutureUse__ol_ky2_v42_2s">
+         <li class="li">Select the desired trading partner(s) on the <span class="keyword wintitle">My Certs</span> or the
+               <span class="keyword wintitle">Trading Partner Certs</span> panels.</li>
+
+         <li class="li">Select the <span class="keyword wintitle">Schedule Certificates For Future Use</span> command
+            option.</li>
+
+         <li class="li">Click <span class="ph uicontrol">Proceed...</span></li>
+
+      </ol>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <p class="p">The following dialog box appears, allowing you to select and schedule new
+      certificates applicable for this trading relationship: </p>
+
+      
+      <p class="p">
+         <img class="image" src="../Images/image1378.jpg"></img>
+      </p>
+
+      <ul class="ul" id="SchedCertsForFutureUse__ul_d1h_xdf_2s">
+         <li class="li">Select the new certificate(s) by clicking <span class="ph uicontrol">Browse</span> or by typing
+            the alias of the new certificate(s) directly in the specified <span class="keyword wintitle">Alias</span>
+            fields. </li>
+
+         <li class="li">Add the correct private key password to the <span class="keyword wintitle">Password</span> field.  </li>
+
+         <li class="li">Select <span class="ph uicontrol">Use Signing Certificate</span> to choose the same certificate
+            for Signing and Encryption or deselect this option to use different certificates for
+            Signing and Encryption. </li>
+
+         <li class="li">The <span class="keyword wintitle">SSL Client Certificate Alias</span> and <span class="keyword wintitle">Password</span>
+            fields will only be enabled if an SSL Client certificate had been previously selected
+            for the trading relationship. To override selection of these fields, <span class="ph uicontrol">Schedule
+               SSL Client Certificate</span> may be selected or deselected as desired. </li>
+
+         <li class="li">The <span class="keyword wintitle">SSL Server Certificate Alias</span> and <span class="keyword wintitle">Password</span>
+            fields will only be enabled if the associated secure port for this protocol (in this
+            case HTTP/s) has been enabled in the Local Listener. To override selection of these
+               fields,<span class="ph uicontrol">Schedule SSL Server Certificate</span> may be selected or
+            deselected as desired. </li>
+
+         <li class="li">Select the desired <span class="ph uicontrol">Activation Date</span> and
+               <span class="ph uicontrol">Time</span> from pull-down lists or specify your own date (in the
+            form: 'yyyy/mm/dd') and time (in the form: hh:mm or hh:mm:ss). </li>
+
+         <li class="li">Once all the desired new certificates for the trading relationship have been selected
+            and desired activation date and time has been chosen, click
+               <span class="ph uicontrol">Schedule</span> to schedule the selected certificates for future use: <p class="p">
+               <img class="image" id="SchedCertsForFutureUse__image_nkg_22f_2s" src="../Images/image1380.jpg"></img>
+            </p>
+</li>
+
+         <li class="li">The following confirmation dialog will be displayed allowing for final verification of
+            the certificates before the certificates are scheduled for activation: <p class="p">
+               <img class="image" id="SchedCertsForFutureUse__image_wcx_f2f_2s" src="../Images/image1382.jpg"></img>
+            </p>
+<p class="p">If you click <span class="ph uicontrol">Yes</span>, all selected certificates will be
+               scheduled for installation and activation for the specified trading partner(s). 
+               Clicking <span class="ph uicontrol">No</span> brings you back to the previous 'Schedule Local
+               Certificates' panel allowing you the option of choosing either new certificates
+               and/or a new activation date/time.</p>
+</li>
+
+         <li class="li">The status of the selected record(s) will be set to <span class="ph">Scheduled</span> and the option
+            to email the scheduled certificates to your trading partner(s) will be given: <p class="p">
+               <img class="image" id="SchedCertsForFutureUse__image_kyh_h2f_2s" src="../Images/image1384.jpg"></img>
+            </p>
+<p class="p">
+               <img class="image" id="SchedCertsForFutureUse__image_lyh_h2f_2s" src="../Images/image1386.jpg"></img>
+            </p>
+</li>
+
+         <li class="li">The new certificates will be displayed in the panel with the current certificates and
+            will not be editable until after the scheduled certificate activation date and time has
+            elapsed or your trading partner begins encrypting with the new encryption certificate: <p class="p">
+               <img class="image" id="SchedCertsForFutureUse__image_a4j_k2f_2s" src="../Images/image1388.jpg"></img>
+            </p>
+<p class="p">At that time, all previously scheduled certificates will be activated and an
+               email notification will be sent to the email address specified in the
+                  <span class="ph uicontrol">Admin Email Address</span> field on the <span class="keyword wintitle">Other tab in
+                  Configure System Options</span> panel. See
+                  <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Other.html">Other System Options</a>. </p>
+</li>
+
+         <li class="li">If a new SSL or SSH Server certificate was scheduled, the new certificate will be
+            displayed in either the Local Listener’s HTTP, FTP, OFTP or SSH FTP panel (depending on
+            the specified protocol) with the current certificate. <span class="keyword wintitle">Certificate
+               Alias</span> will be read-only until all partners using the same SSL/SSH protocol
+            have scheduled the new certificate and that scheduled date has elapsed. Once this has
+            occurred, the new SSL/SSH Server certificate will automatically be installed (normally
+            within five minutes).     <p class="p">
+               <img class="image" id="SchedCertsForFutureUse__image_db5_l2f_2s" src="../Images/image1390.jpg"></img>
+            </p>
+</li>
+
+         <li class="li">Since only one HTTP, FTP, OFTP and SSH FTP server certificate can be active at any
+            time, the new server certificate relevant to the specified protocol will be the only
+            certificate that can be scheduled for all subsequent schedule requests for any other
+            protocols that use the same server certificate. <p class="p">
+               <img class="image" id="SchedCertsForFutureUse__image_fh3_n2f_2s" src="../Images/image1392.jpg"></img>
+            </p>
+</li>
+
+         <li class="li">If the server certificate was incorrectly scheduled and currently is in a read-only
+            state, it may be reverted by performing the following steps: <ol class="ol" id="SchedCertsForFutureUse__ol_t1m_q2f_2s">
+               <li class="li">Use <span class="ph uicontrol">More Filters…</span> to quickly isolate all records using the
+                  pending server certificate and click <span class="ph uicontrol">OK</span>: <p class="p">
+                     <img class="image" id="SchedCertsForFutureUse__image_flm_q2f_2s" src="../Images/image1394.jpg"></img>
+                  </p>
+</li>
+
+               <li class="li">Select those records and then choose <span class="ph uicontrol">Revert Pending SSL Listener
+                     Cert</span>. <p class="p">
+                     <img class="image" id="SchedCertsForFutureUse__image_tw3_s2f_2s" src="../Images/image1396.jpg"></img>
+                  </p>
+</li>
+
+               <li class="li">Click <span class="ph uicontrol">Proceed…</span><p class="p">
+                     <img class="image" id="SchedCertsForFutureUse__image_xmz_t2f_2s" src="../Images/image1398.jpg"></img>
+                  </p>
+</li>
+
+               <li class="li">The following confirmation dialog will be displayed: <p class="p">
+                     <img class="image" id="SchedCertsForFutureUse__image_sjl_v2f_2s" src="../Images/image1400.jpg"></img>
+                  </p>
+</li>
+
+               <li class="li">The HTTP/s panel certificate is now reverted back to its original state: <p class="p">
+                     <img class="image" id="SchedCertsForFutureUse__image_w2k_w2f_2s" src="../Images/image1402.jpg"></img>
+                  </p>
+</li>
+
+            </ol>
+</li>
+
+      </ul>
+
+      
+      
+      
+
+      
+      
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

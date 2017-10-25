@@ -1,0 +1,67 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="To acquire a CA-signed certificate, you must first generate a self-signed user certificate.  This will implicitly generate or import a public-private key pair. In the web UI, go to Administration &gt; ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Generating Self-signed User Certificates"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_certificate_manager.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_generate_new_selfsigned_certificate.html"></meta><meta name="DC.Relation" scheme="URI" content="../References/r_GenerateUserCert_Reference.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="GenSelfSignedUserCert"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Generating Self-signed User Certificates</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="GenSelfSignedUserCert">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Generating Self-signed User Certificates</h1>
+
+   
+   <div class="body taskbody">
+      <div class="section context">
+         <p class="p">To
+            acquire a CA-signed certificate, you must first generate a self-signed user
+            certificate.  This will implicitly generate or import a public-private key pair.</p>
+
+      </div>
+
+      <ol class="ol steps" id="GenSelfSignedUserCert__steps_fwc_jqg_1s"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; Certificate Management &gt; Certificates</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Certificate Manager</span></span> or click the <span class="ph uicontrol">Certificates</span> button in the tool
+               bar. </span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Right-click the <span class="ph uicontrol">Users</span> store in the tree pane and select
+                  <span class="ph uicontrol">Generate &gt; Self-signed User Certificate</span>.</span>
+            <div class="itemgroup info">The <span class="keyword wintitle">Generate Certificate</span> dialog box appears.</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter information about the certificate you want to generate.</span>
+            <div class="itemgroup info">See <a class="xref" href="../References/r_GenerateUserCert_Reference.html">User Certificate Reference</a> for information about the fields in
+               the dialog box.</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd"> After you finish entering required information, click
+               <span class="ph uicontrol">OK</span>.</span>
+            <div class="itemgroup info">After the key-pair and certificate are created, the certificate is added under
+                  <span class="ph uicontrol">Users</span> in the tree pane. </div>
+            <div class="itemgroup info">
+               <div class="note note"><span class="notetitle">Note:</span>  Because generating a self-signed certificate might take some time because it
+                  could involve public-private key pair generation. </div>
+
+            </div>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_generate_new_selfsigned_certificate.html">Generating a new self-signed User Certificate based on an existing certificate</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+You can use the Certificate Manager to generate a new self-signed certificate based         on the contents of an existing certificate.  This is useful in situations where a         self-signed certificate has expired and needs to be regenerated, or you want to generate a         new self-signed certificate using the same information as an existing certificate.          </li>
+<li class="link ulchildlink"><strong><a href="../References/r_GenerateUserCert_Reference.html">User Certificate Reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

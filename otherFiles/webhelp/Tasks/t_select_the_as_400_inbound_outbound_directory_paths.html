@@ -1,0 +1,103 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Follow these steps to add an AS/400 directory path to the Cleo Harmony configuration.  Repeat this process for each additional directory path: In the lower portion of the AS/400 Configuration panel, ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Select the AS/400 Inbound/Outbound Directory Paths"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_as_400_pc_network_access_setup.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="select_the_as_400_inbound_outbound_directory_paths"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Select the AS/400 Inbound/Outbound Directory Paths</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="select_the_as_400_inbound_outbound_directory_paths">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_as2_checklist.html" title="AS2 Checklist">AS2 Checklist</a> / <a class="navheader_parent_path" href="../Topics/t_as_400_pc_network_access_setup.html" title="AS/400 PC Network Access Setup">AS/400 PC Network Access Setup</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_as_400_pc_network_access_setup.html" title="AS/400 PC Network Access Setup"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 PC Network Access Setup</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Select the AS/400
+                    Inbound/Outbound Directory Paths</h1>
+
+   <div class="body taskbody">
+      <div class="section context">
+         <p class="p">Follow these steps to add an AS/400 directory path to the
+               <span class="ph">Cleo Harmony</span> configuration.  Repeat this process for each additional directory path:</p>
+
+      </div>
+
+      <ol class="ol steps" id="select_the_as_400_inbound_outbound_directory_paths__steps_wty_w5s_sx"><li class="li step stepexpand">
+            <span class="ph cmd">In the lower portion of the AS/400 Configuration panel, click the <strong class="ph b">New</strong> button
+               as shown:</span>
+            <div class="itemgroup info">
+               <img class="image" id="select_the_as_400_inbound_outbound_directory_paths__image_nd3_x5s_sx" src="../Images/image1983.jpg"></img>
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">A display similar to the following will appear. Click on the down arrow to get a
+               list of all AS/400 mapped file shares in your network:</span>
+            <div class="itemgroup info"><img class="image" id="select_the_as_400_inbound_outbound_directory_paths__image_od3_x5s_sx" src="../Images/image1985.jpg"></img>
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If you have mapped AS/400 file shares, a display similar to the following will be
+               shown:</span>
+            <div class="itemgroup info"><img class="image" id="select_the_as_400_inbound_outbound_directory_paths__image_pd3_x5s_sx" src="../Images/image1987.jpg"></img></div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select the desired mapped file share, if one exists. Otherwise, enter the desired
+               path in the <strong class="ph b">AS/400 Directory Path</strong> field (for example, /QSYS.LIB for Native
+               File System access or /LexiCom for Integrated File System access).</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select the appropriate file system option, i.e., either <strong class="ph b">Native File
+               System</strong> or <strong class="ph b">Integrated File System</strong>.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If the <strong class="ph b">Integrated File System</strong> option is selected, enter the appropriate
+                  <strong class="ph b">Coded Character Set ID</strong> value, if provided by your trading partner.   If
+               this field is left blank, the CCSID value based on the default locale will be
+               used.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If the <strong class="ph b">Native File System</strong> option is selected, select the <strong class="ph b">Pad Inbound to
+                  Record Length</strong> option if inbound files will contain variable length records.  </span>
+            <div class="itemgroup info">When this option is selected, all records are transformed to a fixed-length format
+               as they are stored in the AS/400 NFS file member.  End of line terminators (that is,
+               CR, LF or CRLF) are stripped from the record and the remainder of the record is
+               padded with blanks.  The record length is determined from the AS/400 target file.  If
+               the inbound file contains a record larger than the AS/400 target file, an error will
+               be logged and the file will not be stored.  When this option is not selected, the
+               inbound file will be assumed to already be fixed-length and will be streamed, i.e.,
+               no padding will be done to the records as they are written to the AS400 NFS file
+               member and end of line terminators will not be stripped from the file. </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select the <span class="ph uicontrol">Strip Padded Outbound Records</span> option if outbound
+               records are a fixed record length and are padded with the specified Padding
+               Character. The record length is determined from the AS/400 NFS target file.  When
+               this option is selected, padding characters after the terminator (CR, LF or CRLF)
+               will be removed. </span>
+            <div class="itemgroup info">The <strong class="ph b">Padding Character</strong> is the decimal value of the character used in AS/400
+               target file for padding outbound records.  By default, this value is set to 32 (the
+               ASCII representation of a space).  Any ASCII value between 0 – 127 can be
+               used.</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">The updated display should look similar to the one that follows.  Click
+                  <span class="ph uicontrol">OK</span>.</span>
+            <div class="itemgroup info"><img class="image" id="select_the_as_400_inbound_outbound_directory_paths__image_ud3_x5s_sx" src="../Images/image1989.jpg"></img>
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">The updated AS/400 Configuration panel will now be displayed similar to the one
+               below.  Click <span class="ph uicontrol">OK</span>.</span>
+            <div class="itemgroup info"><img class="image" id="select_the_as_400_inbound_outbound_directory_paths__image_vd3_x5s_sx" src="../Images/image1991.jpg"></img>
+            </div>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_as_400_pc_network_access_setup.html" title="AS/400 PC Network Access Setup"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 PC Network Access Setup</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

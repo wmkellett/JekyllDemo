@@ -1,0 +1,145 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Since the AS/400 does not have a graphical user interface and Cleo LexiCom is a graphical product, configuration of the hosts and the Local Listener is easily done using the Cleo LexiCom AS/400 UI.   ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="AS/400 Configure and Test"></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_as_400_setup_and_installation.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cfg_AS400_Native_or_IFS_Access.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="as_400_configure_and_test"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS/400 Configure and Test</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="as_400_configure_and_test">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_FileSystem.html" title="File System">File System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation">AS/400 Setup and Installation</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">AS/400 Configure
+                    and Test</h1>
+
+   
+   <div class="body">
+      <p class="p">Since the AS/400
+         does not have a graphical user interface and <span class="ph">Cleo LexiCom</span> is a graphical
+         product, configuration of the hosts and the Local Listener is easily done using the <span class="ph">Cleo LexiCom</span> AS/400 UI.   You
+         will be configuring the hosts that are stored on the AS/400 IFS (in the /LexiCom folder)
+         and therefore, you must invoke the <var class="keyword varname">LexiCom</var> program icon linked to the
+         shared drive that you mapped during the installation process.</p>
+
+      <p class="p">The <span class="ph">Cleo LexiCom</span> AS/400 UI
+         product is able to configure hosts and view status information in real-time.  After you
+         have started LexiCom on the AS/400, start the <span class="ph">Cleo LexiCom</span> application from
+         the IFS mapped drive.   After several seconds, <span class="ph">Cleo LexiCom</span> application will
+         start and the UI will be displayed.</p>
+
+      
+      <p class="p">Once all your hosts and the Local Listener are configured
+            to your satisfaction and optionally, the scheduler is correctly set up, you should
+            verify that you can properly exchange messages with all your trading partners by sending
+            and receiving test messages.</p>
+
+      <div class="section"><h2 class="title sectiontitle">AS/400 Configure Content-Type Inboxing for the Native File System (AS2 only)</h2>
+         
+         <p class="p">The <strong class="ph b">Add Content-Type Directory to Inbox</strong> check box allows for sorting of incoming
+            messages based on the content-type of the message to a subdirectory (under the
+               <var class="keyword varname">Inbox</var> specified on the General tab for the Host).   You specify
+            each of the content-types that you want directed to specified subdirectories by entering
+            a name in the <strong class="ph b">Directory</strong> field.  Directory entries may be made for content-types
+            of:  EDIFACT, X12, XML, Binary, Plain Text, and Other (a default catch-all for messages
+            with all other content-types you may receive.)  The same subdirectory may be used for
+            multiple content-types.  You may also leave 'Directory' entries blank that will cause
+            any received messages of that 'Content-Type' to be stored in the Inbox specified on the
+            General tab. </p>
+
+         <div class="note note"><span class="notetitle">Note:</span> If you use this feature, incoming messages will be placed in the specified folder
+            based on the content type specified in the HTTP header of the message.  LexiCom does not
+            check the actual content of the message to determine its content type.</div>
+
+         
+         <div class="note note"><span class="notetitle">Note:</span> If you are integrated with a translator, you should not add entries for the X12 or
+            EDIFACT directories.  These directories must remain blank in order for translator
+            integration to work properly.</div>
+
+         <p class="p">By default, the Content-Type directories are preconfigured for windows or IFS based
+            folders.  To use this feature on the AS/400 Native File System, modifications must be
+            made to all directories that will be used so that the settings have the correct AS/400
+            syntax, that is, each setting must be in the form
+            <kbd class="ph userinput">DIRECTORY.FILE</kbd>.</p>
+
+         
+         <p class="p">On the 'General' tab, specify just the library for the "Inbox" value where the
+            "Content-Type" files will be created. 
+            </p>
+
+         
+         <p class="p">Now verify that all the "directories" that you have specified, i.e., files in the form
+            DIRECTORY.FILE, have a matching physical file.  In the example above, the files
+            EDIFACT.FILE, X12.FILE and XML.FILE under the /QSYS.LIB/LEXICOM.LIB library are being
+            used.   If these files don't already exist, create a physical file for each of the files
+            you have specified as follows:</p>
+
+         <p class="p">
+            <strong class="ph b">
+               <span class="ph">CRTPF FILE(LEXICOM/EDIFACT) RCDLEN(132) MAXMBRS(*NOMAX</span>
+            </strong>
+            <strong class="ph b">
+               <span class="ph">)</span>
+            </strong>
+            <strong class="ph b">
+               <span class="ph">SIZE(*NOMAX)</span>
+            </strong>
+         </p>
+
+         <p class="p">
+            <strong class="ph b">
+               <span class="ph">CRTPF FILE(LEXICOM/X12) RCDLEN(132) MAXMBRS(*NOMAX</span>
+            </strong>
+            <strong class="ph b">
+               <span class="ph">)</span>
+            </strong>
+            <strong class="ph b">
+               <span class="ph">SIZE(*NOMAX)</span>
+            </strong>
+         </p>
+
+         <p class="p">
+            <strong class="ph b">
+               <span class="ph">CRTPF FILE(LEXICOM/XML) RCDLEN(132) MAXMBRS(*NOMAX</span>
+            </strong>
+            <strong class="ph b">
+               <span class="ph">)</span>
+            </strong>
+            <strong class="ph b">
+               <span class="ph">SIZE(*NOMAX)</span>
+            </strong>
+         </p>
+
+         <p class="p">As a final step, verify that the <strong class="ph b">Add Mailbox Alias Directory To Inbox</strong> setting on
+            the Advanced panel is not selected.</p>
+
+         
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Configuring the Scheduler for the AS/400</h2>
+         
+         <p class="p">Since the <span class="ph">Cleo LexiCom</span>
+            AS/400 server does not have a UI to allow the user to manually send and receive files
+            from trading partners, and typical AS/400 users will be integrating <span class="ph">Cleo LexiCom</span> software with an
+            EDI translator, the Scheduler is a convenient way to invoke the &lt;send&gt; and
+            &lt;receive&gt; actions that you have configured for your hosts.</p>
+
+         <p class="p">See <a class="xref" href="../Tasks/t_SchedulingActions.html">Scheduling actions</a> for information.</p>
+
+      </div>
+
+   </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_cfg_AS400_Native_or_IFS_Access.html">Configuring for AS/400 Native or Integrated File System Access</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

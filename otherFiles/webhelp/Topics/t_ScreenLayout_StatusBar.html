@@ -1,0 +1,85 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The status bar has five sections: Lists any running action , host actions , and local hosts. Indicates whether the Cleo Harmony scheduler is currently running. VLTrader and Harmony only.  Indicates ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Status Bar"></meta><meta name="DC.Relation" scheme="URI" content="../Concepts/c_screen_layout.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="StatusBar"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Status Bar</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="StatusBar">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Concepts/../Concepts/c_VLexConcepts.html" title="This section provides basic conceptual information about Cleo Harmony you should be familiar with before you begin using the product.">Cleo Harmony Concepts</a> / <a class="navheader_parent_path" href="../Concepts/c_screen_layout.html" title="Screen layout">Screen layout</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Concepts/c_screen_layout.html" title="Screen layout"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Screen layout</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Status Bar</h1>
+
+  <div class="body">
+    <p class="p">The status bar has five sections:</p>
+
+    <p class="p">
+      <img class="image" id="StatusBar__image_glw_43h_q5" src="../Images/image054.jpg"></img>
+    </p>
+
+    <ol class="ol" id="StatusBar__ol_ds1_1dl_3y">
+      <li class="li">Lists any running <var class="keyword varname">action</var>, <var class="keyword varname">host actions</var>, and
+          <var class="keyword varname">local hosts.</var>
+      </li>
+
+      <li class="li">Indicates whether the <span class="ph">Cleo Harmony</span>
+        scheduler is currently running.</li>
+
+      <li class="li">VLTrader and Harmony only.  Indicates whether the <span class="ph">Cleo Harmony</span>router
+        is currently running.</li>
+
+      <li class="li">Shows the mode of the <span class="ph">Cleo Harmony</span>
+          UI:<ul class="ul" id="StatusBar__ul_uny_pdl_3y">
+          <li class="li"><strong class="ph b">Service/Daemon: Running</strong> - The <span class="ph">Cleo Harmony</span>
+            UI is a 2<sup class="ph sup">nd</sup> process attached to a <span class="ph">Cleo Harmony</span>
+            Windows service or Unix daemon, which is running in the background.  If the <span class="ph">Cleo Harmony</span>
+            service/daemon should stop, the <span class="ph">Cleo Harmony</span>
+            UI will indicate <strong class="ph b">Service/Daemon: Stopped</strong> and then shutdown.</li>
+
+          <li class="li"><strong class="ph b">UI Service/Daemon</strong> - <span class="ph">Cleo Harmony</span>
+            is not running in the background as a Windows service or Unix daemon, but the <span class="ph">Cleo Harmony</span>
+            UI <strong class="ph b">is</strong> enabled as a “service” (see <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a>). 
+            This means that the <span class="ph">Cleo Harmony</span>
+            UI will act as a <span class="ph">Cleo Harmony</span>
+            service/daemon would and service any <span class="ph">Cleo Harmony</span>
+            command line processes.</li>
+
+          <li class="li"><strong class="ph b">Standalone</strong> - <span class="ph">Cleo Harmony</span>
+            is not running in the background as a Windows service or Unix daemon, and the <span class="ph">Cleo Harmony</span>
+            UI <strong class="ph b">is not</strong> enabled as a “service” (see <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a>). 
+            This means that <span class="ph">Cleo Harmony</span>
+            command line processes will queue up and only run after the <span class="ph">Cleo Harmony</span>
+            UI is exited.</li>
+
+          <li class="li"><strong class="ph b">Service/Daemon</strong> - <span class="ph">Cleo Harmony</span>
+            is running in the background as a Windows service or Unix daemon, but because the <span class="ph">Cleo Harmony</span>
+            service/daemon is enabled as a UI (see <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a>),
+            there is not a 2<sup class="ph sup">nd</sup>
+            <span class="ph">Cleo Harmony</span>
+            UI process attached (i.e. the <span class="ph">Cleo Harmony</span>
+            service/daemon process itself is displaying the UI).</li>
+
+        </ul>
+<div class="note note"><span class="notetitle">Note:</span> When <span class="ph">Cleo Harmony</span>
+          is running on an AS/400, by default it is running in the background like a Windows service
+          or Unix daemon.  The <span class="ph">Cleo Harmony</span> UI can be displayed on a Windows PC connected to the AS/400, and in
+          this case the <span class="ph">Cleo Harmony</span>
+          UI mode will be <strong class="ph b">AS/400: Running</strong>.</div>
+</li>
+
+      <li class="li">Continually reflects the current day, date, and time.</li>
+
+    </ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Concepts/c_screen_layout.html" title="Screen layout"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Screen layout</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

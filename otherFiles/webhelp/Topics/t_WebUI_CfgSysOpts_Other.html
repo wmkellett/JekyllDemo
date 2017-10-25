@@ -1,0 +1,946 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Other tab allows you to set some options that apply to varied portions of the product. In the web UI, go to Administration &gt; System &gt; Other . In the native UI, go to Options &gt; Other . To filter ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Other System Options"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_System.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="OtherSystemOptions"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Other System Options</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="OtherSystemOptions">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_WebUI_System.html" title="System">System</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_System.html" title="System"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">System</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Other System Options</h1>
+
+  <div class="body">
+    <p class="p">The <span class="keyword wintitle">Other</span> tab allows you to set some options that
+      apply to varied portions of the product.</p>
+
+    <p class="p">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">System</span> &gt; <span class="ph uicontrol">Other</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Other</span></span>.</p>
+
+    
+    <p class="p">To filter the display, enter a case-insensitive string in the <span class="ph uicontrol">Filter
+        String</span> field.  Note that for the web GUI you must press
+        <span class="ph uicontrol">Enter</span> after typing <span class="ph uicontrol">Filter String</span> text.</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Allow Scheduled Actions to Run Concurrently </dt>
+
+        <dd class="dd">
+          <p class="p"> Normally, actions and hostactions scheduled to run concurrently will in fact run
+            concurrently. If this option is disabled, the scheduler will wait for the currently
+            scheduled action to stop before starting another scheduled action.  </p>
+
+          <p class="p">If two actions within the <strong class="ph b">same</strong> host are scheduled to run concurrently and this
+            option is enabled, the host's Advanced property setting for <span class="ph uicontrol">Allow Actions to
+              Run Concurrently</span> dictates whether the actions are run sequentially or
+            concurrently. </p>
+
+          <div class="note note"><span class="notetitle">Note:</span>    This is a <span class="ph">Cleo VLTrader</span>
+            and <span class="ph">Cleo Harmony</span> option. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Selected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Always Show The Logged Message Date </dt>
+
+        <dd class="dd">Indicates to display both the message date and time when scrolling messages.  By default
+          only the logged message time is shown when scrolling messages in the messages pane or with
+          the command-line <span class="keyword option">-m</span> option. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Autorun Directory </dt>
+
+        <dd class="dd">Directory in which command files are to be automatically processed. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Any local or shared directory </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <span class="ph filepath">autorun\</span>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Autosend Check Every (seconds) </dt>
+
+        <dd class="dd">
+          <p class="p"> Number of seconds scheduler should wait before checking again if there are files to
+            send. Note that this property is only used with continuous autosend (see <a class="xref" href="t_SchedulingWhenActionHasFilesToSend.html">Scheduling When Action has Files to Send or Copy (Autosend)</a>.) </p>
+
+          <p class="p">For the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications,
+            this value is also used to control the frequency of checking for autoroute files, as
+            well as determine the frequency autochecking commands that are simply checking for the
+            existence of a file or directory existence (i.e., the "Age" parameter has a value of
+            "&gt;0D").</p>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 5-60</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 5 </dd>
+
+      
+      
+        <dt class="dt dlterm">Autosend Restart </dt>
+
+        <dd class="dd">Used to determine the period before restarting certain operations. These operations
+          include, but are not limited to, certain failed scheduled actions (both autosend and
+          periodic), router restart, database payload restart, and trigger processing restart.</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-60 </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 30 </dd>
+
+      
+      
+        <dt class="dt dlterm">Autosend Retry Attempts </dt>
+
+        <dd class="dd">Number of contiguous retries of failed scheduler autosend of a file, after which the
+          action is skipped until the number of minutes specified for <span class="ph uicontrol">Autosend
+            Restart</span> have passed. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: -1-n<p class="p"><kbd class="ph userinput">-1</kbd> indicates to never stop
+            retrying</p>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">2</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Autosend Round Robin </dt>
+
+        <dd class="dd">If on, indicates to check only the <strong class="ph b">next</strong> autosend action at each
+            <span class="ph uicontrol">Autosend Check Every</span> interval.  If off, indicates to check
+            <strong class="ph b">all</strong> autosend actions at each interval. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd">
+          <strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Cluster Network Not Fully Reachable</dt>
+
+        <dd class="dd">When selected, this property prevents the document database from attempting to replicate
+          itself. It is useful in cases where synced servers are not fully able to connect with each
+          other over the required doucment database ports. This property prevents the document DB
+          from restarting repeatedly, but also causes the failover server to exclude events and
+          transfers for the primary server should it become active. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd">
+          <strong class="ph b">Default value</strong>: <kbd class="ph userinput">Off</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Custom ILexiComIncoming Class</dt>
+
+        <dt class="dt dlterm">Custom LexiComLogListener Class</dt>
+
+        <dt class="dt dlterm">Custom LexiComOutgoingThread Class</dt>
+
+        <dd class="dd">Refer to the API javadocs for a description of the interfaces:<ul class="ul" id="OtherSystemOptions__ul_ekb_wzx_3v">
+            <li class="li"><span class="keyword cmdname">ILexiComIncoming</span> can be used to filter incoming payload streams
+              to an independent repository (database, message queue, different directory/filename,
+              etc.) based on the originating trading partner or payload content or protocol
+              headers/parameters.</li>
+
+            <li class="li"><span class="keyword cmdname">LexiComLogListener</span> can be used to watch XML log events and react
+              to successful/ unsuccessful sends/receives.</li>
+
+            <li class="li"><span class="keyword cmdname">LexiComOutgoingThread</span> can be used to wait/watch for new outgoing
+              payload in an independent repository (database, message queue, directory/filename, and
+              so on) and then stream to the appropriate trading partner using a <span class="ph">VersaLex</span>
+              IMailboxController.</li>
+
+          </ul>
+<div class="note note"><span class="notetitle">Note:</span> For instance, the sample API class <span class="keyword cmdname">PartnerComm</span> in the
+            examples package would be specified as <span class="keyword cmdname">examples.PartnerComm</span>
+          </div>
+<div class="note note"><span class="notetitle">Note:</span> For <span class="ph">Cleo LexiCom</span>,
+            API option must be specifically licensed. </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Fully-qualified name of class implementing interface.<p class="p">Archive
+            containing the implementation(s) must be copied to the <span class="ph filepath">lib/api/</span>
+            folder.</p>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Disable Date/Time Portion of Filenames In Sent/Received Box </dt>
+
+        <dd class="dd">When selected, filenames written to the sent and received box will not include a
+          date/time stamp or the product serial number (if synced). </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Enable GUI as <span class="ph">Cleo Harmony</span> Service/Daemon </dt>
+
+        <dd class="dd">Enabling the GUI as a service/daemon allows the normally GUI-only process to run as a
+          (semi-limited) independent service/daemon. It is only possible for the GUI to operate in
+          this capacity when there is not already a <span class="ph">Cleo Harmony</span> service/daemon running. <div class="note note"><span class="notetitle">Note:</span> Leaving this option <em class="ph i">off</em> ensures
+            that the service/daemon is capable of starting up.</div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Selected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Enable <span class="ph">Cleo Harmony</span> Service/Daemon as GUI </dt>
+
+        <dd class="dd">
+          <p class="p">Normally if the
+            product
+            is running as a service/daemon, when the
+            product
+            GUI is displayed, it remains a second process and communicates with the service/daemon
+            over the RMI port.</p>
+
+          <p class="p">Enabling the service as a GUI will force the service/daemon to display the GUI itself
+            and eliminate the second GUI-only process.</p>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+          <p class="p"> Except on Windows 98, where defaults to <kbd class="ph userinput">Selected</kbd>
+          </p>
+</dd>
+
+        <dd class="dd"></dd>
+
+      
+      
+        <dt class="dt dlterm">Enforce Password Policy </dt>
+
+        <dd class="dd">When selected, the configured password policy is enforced for all local user mailboxes
+          that have not overridden this password policy.<p class="p"> Click <span class="ph uicontrol">Configure</span>
+            to customize the Password Policy. See <a class="xref" href="t_enhanced_security.html">Enhanced Security</a> for further
+            information. </p>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+        <dd class="dd">
+          <div class="note note"><span class="notetitle">Note:</span>  This is a <span class="ph">Cleo VLTrader</span> and
+              <span class="ph">Cleo Harmony</span> option. </div>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">FIPS Mode </dt>
+
+        <dd class="dd">If licensed, this FIPS Edition option may be used to enable use of only the FIPS 140-2
+          approved cryptographic operations.<div class="note note"><span class="notetitle">Note:</span>  When enabled, this mode is not compatible with
+            certain versions of the Microsoft SQL JDBC data base driver. OpenPGP operations are not
+            supported when FIPS Mode is enabled. </div>
+<div class="note note"><span class="notetitle">Note:</span>  This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> FIPS Edition Only
+            option, which has additional license restrictions. </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Force Apply/Reset When Changing Content Panes </dt>
+
+        <dd class="dd">When selected, the product displays a dialog box that prompts you to either apply or
+          reset any pending changes before you can move to another content pane. </dd>
+
+        <dd class="dd">
+          <div class="note note"><span class="notetitle">Note:</span> This option applies only to the native UI. In the web UI, whether this option is
+            selected or not, the product does not prompt you to save any pending changes and does
+            not save any pending changes if you do not explicitly click <span class="ph uicontrol">Apply</span>
+            before you transition to another content pane. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Selected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Heap Dump on Memory Errors </dt>
+
+        <dd class="dd">When selected, a heap dump is performed for the first occurrence of an out of memory
+          error for the current process. The heap dump will be created only when detected by the
+          internal <span class="ph">Cleo Harmony</span> memory monitor. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">High Priority Transfers Percentage Available Bandwidth </dt>
+
+        <dd class="dd">The percentage of the detected available bandwidth that is allotted to high priority
+          transfers.  The bandwidth available to the  <span class="ph">Cleo Harmony</span> application is continuously calculated based upon the total transfer
+          rate within the last minute of the currently active transfers. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 60-100</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 75</dd>
+
+      
+      
+        <dt class="dt dlterm">Include Millisecond In System Log File </dt>
+
+        <dd class="dd">Indicates to add a millisecond (ms=) attribute to each <span class="keyword cmdname">&lt;Mark&gt;</span>
+          element in the system xml log file, which allows for finer granularity on event time
+          stamps. This option will also cause a .millisecond value to be appended to each event's
+          time in the listener's and actions' logged messages. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Macro Multiple Value Separator </dt>
+
+        <dd class="dd">
+          <p class="p">When passing a macro value as a parameter to a batch job (for example, when using an
+              <span class="ph uicontrol">Execute On</span> property) where multiple values are being collected 
+            (for example, in a <span class="keyword cmdname">PUT –MUL</span> command), this property can be used to
+            replace the default <kbd class="ph userinput">\n</kbd> separator character which is interpreted
+            by the batch job as a terminator causing only the first value to be passed as the
+            parameter.</p>
+
+          <div class="p">This applies these macro values:<ul class="ul" id="OtherSystemOptions__ul_opc_mr1_tx">
+              <li class="li"><kbd class="ph userinput">%file%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%sourcefile%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%srcfile%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%sourcefilebase%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%srcfilebase%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%sourcefileext%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%srcfileext%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%destfile%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%destfilebase%</kbd></li>
+
+              <li class="li"><kbd class="ph userinput">%destfileext%</kbd>
+              </li>
+
+              <li class="li"><kbd class="ph userinput">%transferid%</kbd></li>
+
+            </ul>
+</div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>:<p class="p">Any desired character(s) that can be used to separate multiple
+            values (for example, a semi-colon or comma).</p>
+<p class="p">Additionally, the following escaped
+            characters are also valid:</p>
+<ul class="ul" id="OtherSystemOptions__ul_fj4_crq_hz">
+            <li class="li"><kbd class="ph userinput">\n</kbd> (carriage return), <kbd class="ph userinput">\t</kbd> (tab) or
+                <kbd class="ph userinput">\s</kbd> (space)</li>
+
+          </ul>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">\n</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Allowed Synchronization Queue Size </dt>
+
+        <dd class="dd">If the synced <span class="ph">Cleo Harmony</span> instance is offline and the maximum queue size is reached,
+          synchronization is disabled and will require re-initialization once the instance is again
+          online. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 0-n </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 10000 </dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Number of Concurrent Routes </dt>
+
+        <dd class="dd">Maximum number of concurrent router actions that can be active at any given time. If the
+          limit is reached and a new route is needed, it is put on hold until one of the current
+          route actions completes. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 10 </dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Number of Concurrent Scheduled Actions</dt>
+
+        <dd class="dd">Maximum number of concurrently scheduled actions that can be active at any given time
+          (per instance of the <span class="ph">Cleo Harmony</span> application). If the limit is reached and a new action is scheduled
+          to run presently, it is put on hold until one of the currently running scheduled actions
+            completes.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 0-n, where 0 indicates no maximum limit.</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 0</dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Number Of Concurrent Transfer Checks </dt>
+
+        <dd class="dd">
+          <p class="p">Maximum number of concurrent transfer checks (<span class="keyword cmdname">CHECK -TRA</span>) that can
+            be active at any given time. If the limit is reached when a <span class="keyword cmdname">CHECK
+              -TRA</span> action is invoked, the action is suspended until one of the current
+            transfer checks completes. All pending requests are processed in the order in which they
+            are issued.</p>
+
+          <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and
+              <span class="ph">Cleo Harmony</span> option. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: -1-n<p class="p">-1 indicates no maximum limit.</p>
+<p class="p">0 indicates only one
+            check can run at any given time.</p>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 0 </dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Number Of Concurrent Users</dt>
+
+        <dd class="dd">Maximum number of concurrent GUI users allowed at any given time. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 5 </dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Number Of Trigger Event Threads</dt>
+
+        <dd class="dd">Controls the number of execution threads created for running the actions configured for
+          trigger events. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 15</dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Saved Database Transfer Log Entries </dt>
+
+        <dd class="dd">If database transfer logging is enabled but the database is unavailable, transfer log
+          entries are saved to disk and the database is brought up-to-date when it is again
+          available. This applies to the basic send/receive transfer log and EDI option, but does
+          not apply to the database payload option. If the maximum saved entries is reached while
+          the database is down, the oldest saved entries are deleted when new entries are added.
+            <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span>
+            and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: -1-n<p class="p">-1 indicates no maximum limit.</p>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 10000 </dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Trigger Persistor File Size (mbytes)</dt>
+
+        <dd class="dd">Controls the rollover of the trigger file once the specified size is reached.<div class="note note"><span class="notetitle">Note:</span> This
+            is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 5</dd>
+
+      
+      
+        <dt class="dt dlterm">Minimum Memory Free Percentage </dt>
+
+        <dd class="dd">
+          <p class="p">Minimum percentage of maximum available memory allowed before low memory warnings may
+            be logged. If zero, the internal memory monitor will be disabled.</p>
+
+          <div class="note note"><span class="notetitle">Note:</span> This option is only available when the optional Cleo System Monitor module has not
+            been licensed. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 0-100 </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 20 </dd>
+
+      
+      
+        <dt class="dt dlterm">Minimum Number Of Macro Index Digits </dt>
+
+        <dd class="dd">When the <kbd class="ph userinput">%index%</kbd> macro is used, this property determines the
+          minimum number of digits for the index string.  The index string is padded with zeros to
+          fill the minimum digit requirement. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n, where n is a reasonable number for the application. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 1 </dd>
+
+      
+      
+        <dt class="dt dlterm">MSMQ Administrative Queue Suffix </dt>
+
+        <dd class="dd">The suffix used for the inbound administrative queue.  This is the queue used to monitor
+          MSMQ send acknowledgments.  See <a class="xref" href="../Tasks/t_mllp_configuration.html">MLLP Configuration</a> for more information about the
+            <span class="keyword wintitle">Mailbox Queuing</span> tab. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Any reasonable expression.</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: '_r_admin' </dd>
+
+      
+      
+        <dt class="dt dlterm">MSMQ Write Timeout (seconds) </dt>
+
+        <dd class="dd">
+          <span class="ph">When writing to an inbound queue, this is the maximum time it should take to receive
+            an acknowledgment on the administrative queue.</span>  </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n, where n is a reasonable number for the
+            application.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 30 </dd>
+
+      
+      
+        <dt class="dt dlterm">No Reply Sender Display Name</dt>
+
+        <dd class="dd">The name in the <span class="ph uicontrol">From</span> field of forgotten password emails.</dd>
+
+      
+      
+        <dt class="dt dlterm">No Reply Sender Email Address</dt>
+
+        <dd class="dd">The email address from which forgotten password emails are sent.</dd>
+
+      
+      
+        <dt class="dt dlterm">Number Of Scheduler Threads </dt>
+
+        <dd class="dd">
+          <p class="p">If the scheduler has a large number of autosend tasks to be performed on a very
+            frequent basis, the number of scheduler threads can be increased to help imrprove
+            scheduler performance. Normally, this value should be set to '1' and only increased if
+            performance is seen to be a problem. Use caution when tuning this variable, as too many
+            threads could create downstream bottlenecks.</p>
+
+          <div class="note note"><span class="notetitle">Note:</span> By default, periodic (non-autosend) actions run independently from autosend actions.
+            Therefore, the total number of scheduler threads will actually be set to this value
+              <strong class="ph b">plus one</strong>. The only exception to this is if host-level or system-level action
+            concurrency is disabled.</div>
+
+          <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">VersaLex</span> and
+              <span class="ph">Cleo Harmony</span> option. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-10</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 1 </dd>
+
+      
+      
+        <dt class="dt dlterm">Only <span class="ph">Cleo Harmony</span> Service/Daemon Auto-Starts Tasks </dt>
+
+        <dd class="dd">Normally if <span class="ph">Cleo Harmony</span> is NOT running as a service/daemon and if the <span class="ph">Cleo Harmony</span> GUI is displayed, it will start up the schedule and local hosts if
+          they have been marked for automatic startup. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Portal Forgot Password Link Expiration (seconds)</dt>
+
+        <dd class="dd">The time in seconds before the link sent to a Portal user who requests a new password
+          expires – measured from the time when the email is sent.</dd>
+
+      
+      
+        <dt class="dt dlterm">VersaLex Service/Daemon RMI Port </dt>
+
+        <dd class="dd">When <span class="ph">Cleo Harmony</span> software is installed and/or running as a Windows service or Unix
+          daemon, it listens on this TCP/IP port to accept VersaLex client commands. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1024-49151, comma or dash separated (ex.
+          1100-1105,2100-2105)</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 1099-1109 </dd>
+
+      
+      
+        <dt class="dt dlterm">VersaLex Service/Daemon RMI Secondary Ports </dt>
+
+        <dd class="dd">In addition to the main RMI port above, one additional RMI port is used by the
+          service/daemon and each <span class="ph">Cleo Harmony</span> client (GUI or commandline). By default, these secondary ports are
+          dynamically allocated, which is potentially a problem for installations accessed over a
+          WAN and/or through a firewall.  At least two secondary ports should be specified (these
+          ports need to be open both inbound and outbound through the firewall). </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1024-49151, comma or dash separated (ex.
+          1100-1105,2100-2105)</dd>
+
+      
+      
+        <dt class="dt dlterm">VersaLex Service RMI Bind Address </dt>
+
+        <dd class="dd">The RMI server bind address. Only change the default setting if <span class="ph">Cleo Harmony</span> UI or API client access is needed across nodes. If this is the case,
+          remember to block the RMI ports except between the nodes involved.</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>:  <ul class="ul">
+            <li class="li">IPv4 address or IPv6 address or <samp class="ph codeph">hostname</samp> or <samp class="ph codeph">*</samp></li>
+
+            <li class="li">A blank value (default) indicates to bind to the loopback address (127.0.0.1),
+              except for LexiCom running on an AS400 where a blank value indicates to bind to
+              any/all local addresses to allow the Windows UI to be accessed</li>
+
+            <li class="li">A value of ‘localhost’ also means 127.0.0.1</li>
+
+            <li class="li">A value of ‘*’ indicates to bind to any/all local addresses</li>
+
+          </ul>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Replicate Event Log Queue Size</dt>
+
+        <dd class="dd">The maximum in-memory replicate event log queue size. A larger queue size might be
+          necessary for high-throughput spikes to buffer against adversely affecting active and new
+          transfers.<div class="note note"><span class="notetitle">Note:</span>  This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">1000</kbd> - <kbd class="ph userinput">n</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">1000</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Save Messages in Host Files </dt>
+
+        <dd class="dd">
+          <span class="ph">In addition to the <span class="ph">Cleo Harmony</span>
+            log file, messages generated by a specific</span>
+          <img class="image" id="OtherSystemOptions__image_o53_bys_3v" src="../Images/image146.gif"></img>  <span class="ph">action are saved in its
+            host file for later recall.</span>
+          <p class="p">When disabled, the <span class="ph">Cleo Harmony</span>
+            application will no longer update host files when an action stops.  This may help
+            eliminate periodic host file corruption.</p>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Sent/Received Box Archive </dt>
+
+        <dd class="dd">
+          <p class="p">Enables automatic archiving of configured host sentbox and receivedbox folders. The <span class="ph">Cleo Harmony</span>
+            application checks each enabled host every 15 minutes. As files are archived, a
+            timestamp indicating when the file was originally created is appended to the file name
+            to ensure the archive contains unique files.</p>
+
+          <p class="p">When this feature is enabled, files in the sentbox and receivedbox are not set to
+            read-only and conversely when this feature is not enabled, the files in the sentbox and
+            receivedbox are set to read-only.</p>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Sent/Received Box Archive After Files </dt>
+
+        <dd class="dd">
+          <p class="p">The maximum number of files allowed in the sentbox and receivedbox directory. The <span class="ph">Cleo Harmony</span>
+            application will automatically archive the oldest files into the archive subdirectory
+            until n / 2 files remain in the directory. </p>
+
+          <p class="p">Setting this value to -1 when the <span class="keyword option">Sent/Received Box Archive</span> option is
+            selected will keep the files copied to the sentbox and receivedbox directories from
+            being set to read-only but archiving of those files will not be done.  Please note that
+            an alternative process for archiving these files to manage disk space should be
+            considered.</p>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n or -1 </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 100 </dd>
+
+      
+      
+        <dt class="dt dlterm">Sent/Received Box Archive Size (mbytes) </dt>
+
+        <dd class="dd">The maximum size in megabytes of the files allowed in the sentbox and receivedbox
+          directory. The <span class="ph">Cleo Harmony</span> application will automatically archive the oldest files into the
+          archive subdirectory until the size of the files to retain in the directory is less than
+            <kbd class="ph userinput">n/2</kbd> files. This parameter also controls the maximum size of the
+          archive file stored in the archive subdirectory.  When this file size is exceeded a new
+          archive file is created.  </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 0.1-n</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 50.0 </dd>
+
+      
+      
+        <dt class="dt dlterm">Sent/Received Box Archive Append To Zip </dt>
+
+        <dd class="dd">Determines whether when archiving, compressed file entries will continue to be appended
+          to existing zip files until the maximum archive size is reached; or whether new zip files
+          should be created during each archive cycle. On very busy systems where the number of
+          files to be archived is large, disabling this setting may allow archiving to complete
+          faster, however the resulting zip files may be significantly smaller. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Selected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Show Hidden Panels </dt>
+
+        <dd class="dd">Some hosts have configuration panels that are by default hidden from view. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Starting Unique File Affix </dt>
+
+        <dd class="dd">
+          <p class="p"> Text appended to an incoming filename that is repeatedly incremented by 1 until a
+            unique name is found. </p>
+
+          <p class="p">This option is not applicable if you choose <span class="ph uicontrol">Random</span> for
+              <span class="ph uicontrol">Unique File Algorithm</span>.</p>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Any numeric text </dd>
+
+      
+      
+        <dt class="dt dlterm">Synchronized Backup Failover (minutes) </dt>
+
+        <dd class="dd">If a production system should go offline, number of minutes that a synchronized backup
+          waits before it switches into a "production" mode. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 1-n </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 5</dd>
+
+      
+      
+        <dt class="dt dlterm">System Administrator Email Address</dt>
+
+        <dd class="dd">
+          <p class="p">The value to use as the System Administrator email address. You can specify a comma-,
+            semicolon-, or colon-delimited list of email addresses. If you specify a list, the first
+            address in the list is considered both the FROM and the TO. Subsequent e-mail addresses
+            will only be considered TO. The first e-mail address should be an address internal to
+            the company. </p>
+
+          <div class="note note"><span class="notetitle">Note:</span> The System Administrator Email Address can be used anywhere where an email address
+            is configured for an email notification by specifying the <kbd class="ph userinput">%admin%</kbd>
+            macro. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Email addresses separated by commas (,),  semicolons (;) or
+          colons(:).  The first address should be an internal email address.</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The email address that may have previously been set in the on the
+            <span class="keyword wintitle">AS2 Service: AS2</span> tab. Otherwise it is left empty. See <a class="xref" href="../Tasks/t_Configure_AS2_Service_AS2_Tab.html">Configuring AS2 Service</a>.</dd>
+
+      
+      
+        <dt class="dt dlterm">System From Email Address</dt>
+
+        <dd class="dd">
+          <p class="p">The value to use as the FROM address in email sent from the system. If you specify a
+            value, it supersedes the value specified for the <span class="ph uicontrol">System Administrator Email
+              Address</span> property. If no value is specified, the system uses the value
+            specified for the <span class="ph uicontrol">System Administrator Email Address</span>
+            property.</p>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: A valid email address.</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: None</dd>
+
+      
+      
+        <dt class="dt dlterm">Transfer Log Queue Size </dt>
+
+        <dd class="dd">The maximum in-memory transfer log queue size.  A larger queue allows more time before
+          a database outage adversely affects active and new transfers. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: 250-n </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 250</dd>
+
+      
+      
+        <dt class="dt dlterm">Transfer Query Size</dt>
+
+        <dd class="dd">The maximum number of results to be returned and displayed when you query transfers. If
+          the number of results returned exceeds this value, the product displays a message to that
+          effect and that you should refine the query to return fewer results.</dd>
+
+        <dd class="dd"><strong class="ph b">Minimum value</strong>: <kbd class="ph userinput">10</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Maximum value</strong>: no maximum</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">5000</kbd>
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Unique File Algorithm</dt>
+
+        <dd class="dd">Algorithm that determines how incoming files are uniquely named.</dd>
+
+        <dd class="dd">
+          <ul class="ul" id="OtherSystemOptions__ul_bv3_bys_3v">
+            <li class="li"><span class="ph uicontrol">Increment</span> - Name files incrementally based on files already
+              in the destination directory. </li>
+
+            <li class="li"><span class="ph uicontrol">Random</span> - Names file randomly. If you choose
+                <span class="ph uicontrol">Random</span>, <span class="ph uicontrol">Starting Unique File Affix</span> is
+              not applicable.</li>
+
+          </ul>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Increment</dd>
+
+      
+      
+        <dt class="dt dlterm">Wait for Dial-up Disconnect Before Exiting </dt>
+
+        <dd class="dd">Normally <span class="ph">Cleo Harmony</span> will exit without waiting for the <span class="ph">Cleo LexiCom</span> dialer to
+          disconnect. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Unselected</kbd>
+        </dd>
+
+      
+    </dl>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_System.html" title="System"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">System</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="When a trusted CA certificate has been updated by a trading partner, you can easily replace it in the certificate store while retaining the original file name so the partner’s certificate defined in ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Replacing Trusted CA Certificates"></meta><meta name="abstract" content="When a trusted CA certificate has been updated by a trading partner, you can easily replace it in the certificate store while retaining the original file name so the partner’s certificate defined in your host configurations does not need to be updated."></meta><meta name="description" content="When a trusted CA certificate has been updated by a trading partner, you can easily replace it in the certificate store while retaining the original file name so the partner’s certificate defined in your host configurations does not need to be updated."></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Coverage" content="Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_certificate_manager.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ReplaceTrustedCACertificates"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Replacing Trusted CA Certificates</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ReplaceTrustedCACertificates">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Replacing Trusted CA Certificates</h1>
+
+   
+   
+   <div class="body taskbody"><p class="shortdesc">When a trusted CA certificate has been updated by a trading partner, you can easily
+      replace it in the certificate store while retaining the original file name so the partner’s
+      certificate defined in your host configurations does not need to be updated.</p>
+
+      <div class="section context"></div>
+
+      <ol class="ol steps" id="ReplaceTrustedCACertificates__steps_kwy_rhh_1s"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; Certificate Management &gt; Certificates</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Certificate Manager</span></span> or click the <span class="ph uicontrol">Certificates</span> button in the tool
+               bar. </span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">In the tree pane, right-click the intermediate CA certificate or root CA
+               certificate that you wish to replace and select <span class="ph menucascade"><span class="ph uicontrol">Replace &gt; Trusted CA Certificate</span></span>.  </span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter or <span class="ph uicontrol">Browse</span> to the path of the new partner certificate
+               that will be replacing the existing certificate and click
+                  <span class="ph uicontrol">Replace</span>.</span>
+            
+            <div class="itemgroup info">
+               <div class="note note"><span class="notetitle">Note:</span> The extension of the new file must match the extension of the original file and
+                  the certificates must be of the same type. For example, you should not attempt to
+                  overwrite the contents of a <span class="ph filepath">.p7b</span> file with the contents of a
+                     <span class="ph filepath">.cer</span> file.</div>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">A dialog appears showing the content of the new and original certificates and
+               asking for confirmation of the certificate replacement. By default, the original
+               certificate file will be archived in the certs\archive directory and the archived
+               file name will be appended with the current date/time stamp. If you do not want to
+               archive the certificate, clear the <span class="ph uicontrol">Archive original file before replacing
+                  it with the new content</span> check box.</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">OK</span>.</span>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

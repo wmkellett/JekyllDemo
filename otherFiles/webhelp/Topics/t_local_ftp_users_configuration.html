@@ -1,0 +1,89 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="When you start your FTP server for the first time, no users are defined and therefore no access is granted to your server.  Note: This section applies to the Cleo VLTrader and Cleo Harmony ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Local FTP Users"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_LocalListenerHeadingPage.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_Local_FTP_Users_Dirs.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Cfg_Local_FTP_Users_Mailbox_FTP.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Cfg_Local_AS3_Users_Mailbox_FTP.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Cfg_Local_LDAP_Users_Mailbox_FTP.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Cfg_Access_For_FTP_User_Host.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Local_FTP_Users_Advanced_Properties.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_configure_the_mailbox_packaging_tab.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_CfgIPFilter_FTPUserMailbox.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_About_Local_FTP_Users_Mailbox_Action_Cmds.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_FTP_Server_Command_Reference.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="local_ftp_users_configuration"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Local FTP Users</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="local_ftp_users_configuration">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Configuring Local FTP Users</h1>
+
+    <div class="body taskbody">
+        <div class="section context"><p class="p">When you start your FTP server for the first time, no
+                users are defined and therefore no access is granted to your server.  </p>
+<div class="note note"><span class="notetitle">Note:</span> This
+                section applies to the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>
+                applications only.</div>
+</div>
+
+        <ol class="ol steps" id="local_ftp_users_configuration__steps_c4j_rh3_kw"><li class="li step stepexpand">
+                <span class="ph cmd">Clone and active the preconfigured <span class="ph uicontrol">Local FTP Users</span> local
+                    host. See <a class="xref" href="../Tasks/t_activate_a_pre-configured_host.html">Activate a Host from a Template</a>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Specify default directories for all Local FTP users.  See <a class="xref" href="../Tasks/t_Configure_Local_FTP_Users_Dirs.html">Configuring Local FTP User directories</a>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Configure access for FTP users.  See <a class="xref" href="t_Cfg_Access_For_FTP_User_Host.html">Configure access for FTP host users</a>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Add a new mailbox to create a new FTP server login. </span>
+                <div class="itemgroup info">
+                    <p class="p">You can either clone the default <strong class="ph b">myTradingPartner</strong> mailbox or create a
+                        new mailbox.</p>
+
+                    <p class="p">Local FTP user mailboxes can have actions, but unlike remote host/mailbox
+                        actions that perform remote host operations, local FTP user actions can only
+                        perform local host operations that manipulate files within the user's home
+                        directory. See <a class="xref" href="t_About_Local_FTP_Users_Mailbox_Action_Cmds.html">Action Tab</a>.</p>
+
+                    <p class="p">FTP Users can be either generic FTP users, AS3 users, or LDAP users. See <a class="xref" href="t_Cfg_Local_FTP_Users_Mailbox_FTP.html">Configuring Local Mailbox FTP</a>, <a class="xref" href="t_Cfg_Local_AS3_Users_Mailbox_FTP.html">Configuring Local Mailbox AS3</a>, and <a class="xref" href="t_Cfg_Local_LDAP_Users_Mailbox_FTP.html">Configuring Local Mailbox LDAP</a>, respectively.</p>
+
+                </div>
+            </li>
+</ol>
+
+        <div class="section postreq">
+            <p class="p">You can create multiple Local FTP Users local hosts, which allows you to group users
+                with the same host properties together. User names (for example, Local FTP user
+                mailbox names) will remain unique across all Local FTP Users local hosts.</p>
+
+        </div>
+
+    </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_Configure_Local_FTP_Users_Dirs.html">Configuring Local FTP User directories</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_Cfg_Local_FTP_Users_Mailbox_FTP.html">Configuring Local Mailbox FTP</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_Cfg_Local_AS3_Users_Mailbox_FTP.html">Configuring Local Mailbox AS3</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_Cfg_Local_LDAP_Users_Mailbox_FTP.html">Configuring Local Mailbox LDAP</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_Cfg_Access_For_FTP_User_Host.html">Configure access for FTP host users</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_Local_FTP_Users_Advanced_Properties.html">Setting Local FTP Users Mailbox Advanced Properties</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_CfgIPFilter_FTPUserMailbox.html">Configuring IP filtering for an FTP mailbox</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_About_Local_FTP_Users_Mailbox_Action_Cmds.html">Action Tab</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_FTP_Server_Command_Reference.html">FTP Server Command Reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

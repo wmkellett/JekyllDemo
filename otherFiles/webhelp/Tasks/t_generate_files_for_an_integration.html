@@ -1,0 +1,89 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The translator file generation assumes that the incoming file will be called recvfile.edi and the outgoing file will be called sendfile.edi . If the input/output file names differ from these, the user ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Generate files for an Integration"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="generate_files_for_an_integration"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Generate files for an Integration</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="generate_files_for_an_integration">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Generate files for an
+                    Integration</h1>
+
+   <div class="body taskbody">
+      <div class="section context"><p class="p">The translator file generation assumes that the
+            incoming file will be called <strong class="ph b">recvfile.edi</strong> and the outgoing file will be called
+               <strong class="ph b">sendfile.edi</strong>. If the input/output file names differ from these, the user must
+            manually update the files generated.</p>
+<p class="p">Hosts should already be activated and set up
+            prior to running the translator file generation.</p>
+<p class="p">If host, mailbox, or action alias
+            names are changed, the user will have to re-generate the translator
+            files.</p>
+<p class="p">Generating integration files deletes the last set of files
+         generated.</p>
+</div>
+
+      <ol class="ol steps" id="generate_files_for_an_integration__steps_knp_qnf_2r"><li class="li step stepexpand">
+            <span class="ph cmd">Translator Selection: Select <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Integration</span></span> in the menu bar. (<strong class="ph b">Note</strong>: If you are running with an AS/400
+               without translator integration, then the following panel will not be displayed.
+               Proceed to <span class="keyword wintitle">Host Selection</span> section below).</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select the translator from the Translator pull-down. If it is not listed, then
+               enter the name of the translator. (<strong class="ph b">Note</strong>: If a name is entered, then generic
+               translator files will be generated).</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If the Platform is not dimmed, select the platform for which you are generating
+               script files.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter the directory path of the translator selected. You may also use the
+                  <span class="ph uicontrol">...</span> button to browse to that directory.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Generate Translator Files...</span> to begin the process of
+               selecting hosts or actions for which you wish to generate translator files.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If GXS Application Integrator is the translator chosen, a Hosts selection panel, is
+               displayed. Reference the GXS Application Integrator guide to proceed with this
+               translator integration. For other translator integrations, continue using the
+               following steps with the <span class="keyword wintitle">Host Actions</span> dialog box.
+               </span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select the actions for which you want to generate script files. (<strong class="ph b">Note</strong>: All
+               files will be re-generated. Files previously generated and not selected will be
+               deleted. For AS/400, another column will be shown where the user can name the
+               CL-file)</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter the <span class="ph uicontrol">Script Location</span> where the scripts should be
+               generated. (<strong class="ph b">Note</strong>: For certain translators, additional files are generated into
+               the <span class="ph uicontrol">Translator Location</span> or one of its sub-directories).</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Generate</span> to begin generation of the translator
+               files.</span>
+            <div class="itemgroup info">Most translators require additional steps to be able to use these files.
+               </div>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

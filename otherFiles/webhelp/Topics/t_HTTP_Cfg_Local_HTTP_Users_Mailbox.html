@@ -1,0 +1,203 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Username The mailbox alias. This value is used by your trading partner to log in to your HTTP server. Specify a value not already in use. Password The password for the mailbox. This value is used by ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Configuring Local Mailbox HTTP"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_http_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_y42_x5j_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Local Mailbox HTTP</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_y42_x5j_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_http_users_configuration.html" title="Local HTTP Users Configuration">Local HTTP Users Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_http_users_configuration.html" title="Local HTTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local HTTP Users Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Configuring Local Mailbox HTTP</h1>
+
+  <div class="body">
+    
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Username</dt>
+
+        <dd class="dd">The mailbox alias. This value is used by your trading partner to log in to your HTTP
+          server. Specify a value not already in use. </dd>
+
+      
+      
+        <dt class="dt dlterm">Password</dt>
+
+        <dd class="dd">The password for the mailbox. This value is used by your trading partner to log in to
+          your HTTP server.</dd>
+
+      
+      
+        <dt class="dt dlterm">User SSL Client Authentication</dt>
+
+        <dd class="dd">Select this check box to enable public key-based SSL client authentication.  Clear the
+          check box to enable WWW authentication. <dl class="dl">
+            
+              <dt class="dt dlterm">Certificate</dt>
+
+              <dd class="dd">If you select the <span class="ph uicontrol">User SSL Client Authentication</span> check box,
+                specify the certificate you want to use.  You can click
+                  <span class="ph uicontrol">Browse</span> to navigate to and select a certificate.</dd>
+
+            
+          </dl>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">User Home Directory</dt>
+
+        <dd class="dd">Defaults to a username subdirectory under the default root directory defined on the
+          <span class="keyword wintitle">General</span> tab (see <a class="xref" href="../Tasks/t_HTTP_Configure_Local_HTTP_Users_Dirs.html">Configuring Local HTTP User directories</a>). To override
+          this path for this user only, clear the <span class="ph uicontrol">Use Default Root\Username</span>
+          check box and click the <span class="ph uicontrol">...</span> button to change the home directory; or
+          select a custom macro variable from the drop-down list.  See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a>
+          Using Macro Variables for a list of the applicable macros (Default Root Directory
+          context). </dd>
+
+      
+      
+        <dt class="dt dlterm">LDAP Usergroup</dt>
+
+        <dd class="dd">Select the <span class="ph uicontrol">LDAP Usergroup</span> check box to designate the mailbox as
+          an LDAP user group mailbox and enable the Mailbox LDAP Tab (see <a class="xref" href="t_Cfg_Local_LDAP_Users_Mailbox_FTP.html">Configuring Local Mailbox LDAP</a>. Many of the other fields on this tab are disabled as
+          they are no longer applicable.  An LDAP user group mailbox has the following features:<ul class="ul" id="topic_y42_x5j_3r__ol_vwt_5yj_yy">
+            <li class="li">The mailbox no longer corresponds to a single user, but rather a group of users
+              configured in an external directory server.</li>
+
+            <li class="li">In addition to authenticating usernames and passwords through the external directory
+              server, user home directory paths can also be provided by the directory service, if
+              necessary, by selecting <span class="ph uicontrol">Use LDAP Home Directory</span>.  If this
+              option is not selected, and <strong class="ph b">Use Default Root\Username</strong> is selected, the <span class="ph">Cleo Harmony</span> application dynamically appends the username to the root directory by way of a
+                <samp class="ph codeph">%username%</samp> macro variable.</li>
+
+          </ul>
+</dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Unlock</span></dt>
+
+        <dd class="dd">This button is enabled when the user has too many failed log in attempts. Mouse over the
+            <span class="ph uicontrol">Unlock</span> button to display when the user will be unlocked
+          automatically or you must unlock the user manually. Click <span class="ph uicontrol">Unlock</span>
+          and then click <span class="ph uicontrol">Apply</span> to unlock the
+          user.</dd>
+
+      
+      
+        <dt class="dt dlterm">Subdirectories</dt>
+
+        <dd class="dd">Click <span class="ph uicontrol">Subdirectories</span> to display the <span class="keyword wintitle">Local User
+            Subdirectories</span> dialog box. This dialog box displays host-level settings
+          (read-only) for the current folder configuration and allows you to specify additional
+          folders at the mailbox level in the <span class="ph uicontrol">Others</span> field. You can add
+          multiple paths separated by commas, semi-colons, or carriage returns. All paths must be
+          relative and cannot include reserved macro variables (for example,
+            <samp class="ph codeph">%mailbox%</samp>).</dd>
+
+      
+      
+        <dt class="dt dlterm">Pipe Incoming Payload</dt>
+
+        <dd class="dd">Allows for this trading partner to send to your HTTP server and redirect, or pipe, the
+          incoming payload out through a different protocol. If the transfer out to the pipe mailbox
+          fails, the transfer into the local mailbox also fails.</dd>
+
+      
+      
+        <dt class="dt dlterm">Associate to Primary Mailbox</dt>
+
+        <dd class="dd">Indicates an alternate host\mailbox location for payload transfers with this trading
+          partner.  Even if the primary mailbox is specified, all transfers are still classified
+          under the local HTTP user host\mailbox (and not the primary host\mailbox).</dd>
+
+      
+    </dl>
+
+    <ol class="ol" id="topic_y42_x5j_3r__ol_pjm_413_mr">
+      <li class="li">The HTTP <strong class="ph b">User Name</strong> is simply the mailbox alias.  Enter an alias not already in use
+        to be used by your trading partner to log into your HTTP server.</li>
+
+      <li class="li">The <strong class="ph b">User Home Directory</strong> defaults to a username subdirectory under the default root
+        directory.  To override this path for this user only, clear the <strong class="ph b">Use Default
+          Root\Username</strong> check box and click <span class="ph uicontrol">[...]</span> to change the home
+        directory; or select a custom macro variable from the drop-down list.  See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> for information about applicable macros (Default Root Directory context).</li>
+
+      <li class="li">Click <span class="ph uicontrol">Subdirectories</span> to display <span class="keyword wintitle">Local User
+          Subdirectories</span>. This dialog box displays read-only host-level settings for the
+        current folder configuration and allows you to specify additional folders at the mailbox
+        level. If you would like to add mailbox-level folders, use the <strong class="ph b">Others</strong> field in the
+        mailbox-level settings to add them. Multiple paths can be added, separated by commas,
+        semi-colons or carriage returns. Note that all paths must be relative and cannot include
+        reserved macro variables (for example, <samp class="ph codeph">%mailbox%</samp>).</li>
+
+      <li class="li">The <strong class="ph b">Pipe Incoming Payload</strong> option allows for this trading partner to send to your
+        HTTP server and redirect (or pipe) the incoming payload out through a different protocol. 
+        Should the transfer out to the pipe mailbox fail, then the transfer into the local mailbox
+        will also fail.  Please note that inbound piping is not supported through VlPortal.</li>
+
+      <li class="li">The <strong class="ph b">Associate to Primary Mailbox</strong> option indicates an alternate host\mailbox
+        location for payload transfers with this trading partner.  Please note that, even if the
+        primary mailbox is specified, all transfers are still classified under the local HTTP user
+        host\mailbox (and not the primary host\mailbox).</li>
+
+      <li class="li">The HTTP server supports either password-based WWW authentication or public key-based SSL
+        client authentication.<ol class="ol" type="a" id="topic_y42_x5j_3r__ol_lsx_ssm_mr">
+          <li class="li"><strong class="ph b">WWW Authentication using a Password:</strong> Enter the user’s <strong class="ph b">Password</strong>.  You
+            will be asked to confirm the password when applying (once applied, the displayed length
+            of the masked password will not necessarily represent the actual password length).</li>
+
+          <li class="li"><strong class="ph b">SSL Client Authentication using a CA Certificate:</strong> Specify the name of the file
+            containing the Client’s Authentication Certificate (the remote client certificate to be
+            used for authentication) by clicking <span class="ph uicontrol">Browse</span>.  Find the
+            certificate that matches the one received from your trading partner and click
+              <span class="ph uicontrol">Select</span>.  <div class="note note"><span class="notetitle">Note:</span> <strong class="ph b">Authenticate Client</strong> in the Local Listener: HTTP Tab
+                must be enabled. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path.">Configuring a Local Listener for HTTP</a></div>
+</li>
+
+        </ol>
+</li>
+
+      <li class="li">To designate the mailbox as an LDAP user group mailbox select the <span class="ph uicontrol">LDAP
+          Usergroup</span> check box.  Selecting this check box will enable the
+          <span class="keyword wintitle">Mailbox LDAP</span> tab (see <a class="xref" href="t_HTTP_Cfg_LDAP_For_HTTP_User_Mailbox.html">Configure LDAP for Local HTTP Mailbox</a>) and
+        disable most of the fields above as they are no longer applicable.  An LDAP user group
+        mailbox has the following features:<ol class="ol" type="a" id="topic_y42_x5j_3r__ol_hmm_2tm_mr">
+          <li class="li">The mailbox no longer corresponds to a single user, but rather a group of users
+            configured in an external directory server.</li>
+
+          <li class="li">In addition to authenticating usernames and passwords through the external directory
+            server, user home directory paths can also be optionally provided by the directory
+            service by selecting <strong class="ph b">Use LDAP Home Directory</strong>.  If this option is not selected,
+            and <strong class="ph b">Use Default Root\Username</strong> is selected, the <span class="ph">Cleo Harmony</span>
+            application dynamically appends the username to the root directory by way of a
+              <samp class="ph codeph">%username%</samp> macro variable. <div class="note note"><span class="notetitle">Note:</span> HTTP digest authentication is not
+              compatible with LDAP user authentication as the <span class="ph">Cleo Harmony</span> application would not have access to an actual password value on either side.  The
+                <span class="ph">Cleo Harmony</span> application will not allow both an LDAP Server and HTTP Service digest
+              authentication to be enabled at the same time. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path.">Configuring a Local Listener for HTTP</a> and <a class="xref" href="t_WebUI_System.html">System</a>. </div>
+</li>
+
+        </ol>
+</li>
+
+      <li class="li"> If the user has too many failed logon attempts, then <span class="ph uicontrol">Unlock</span> will
+        be enabled. Holding the mouse over <span class="ph uicontrol">Unlock</span> will display when the user
+        will be unlocked automatically or if it must manually be unlocked. Selecting
+          <span class="ph uicontrol">Unlock</span> and <span class="ph uicontrol">Apply</span> will unlock the
+        user.</li>
+
+    </ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_http_users_configuration.html" title="Local HTTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local HTTP Users Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

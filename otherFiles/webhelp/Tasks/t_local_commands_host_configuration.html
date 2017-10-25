@@ -1,0 +1,175 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the Local Commands host for local commands only.  With Local Commands hosts, there is no server, client, or protocol involved, nor any connection to another host. Local Commands mailboxes can have ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Local Commands Host Configuration"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_LocalListenerHeadingPage.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Setting_Up_Local_Pkging_Local_Cmd_Host.html"></meta><meta name="DC.Relation" scheme="URI" content="../References/r_Local_Command_Host_Adv_Props.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="local_commands_host_configuration"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local Commands Host Configuration</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="local_commands_host_configuration">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Local Commands Host
+                Configuration</h1>
+
+   <div class="body taskbody">
+      <div class="section context"><p class="p">Use the Local Commands
+            host for local commands only.  With Local Commands hosts, there is no server, client, or
+            protocol involved, nor any connection to another host. Local Commands mailboxes can have
+            actions, but only operations that manipulate files within the local file system are
+            provided. You can create multiple Local Commands hosts, schedule actions, and package
+            files you have copied using an available packaging method, such as OpenPGP. </p>
+<p class="p">See
+               <a class="xref" href="t_Compose_an_Action.html">Compose an Action</a> and <a class="xref" href="../References/r_Local_Command_Reference.html">Local Command Reference</a> for more
+            information.</p>
+</div>
+
+      <ol class="ol steps" id="local_commands_host_configuration__steps_xfy_n4h_fr"><li class="li step stepexpand">
+            <span class="ph cmd">Activate the preconfigured Local Commands local host. </span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">On the <span class="keyword wintitle">General</span> tab for the activated Local Commands local
+               host, modify the default inbox and outbox directories, if necessary.  </span>
+            <div class="itemgroup info">
+               
+               <p class="p">You can select macro variables from the drop down lists.  See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> for a list of the applicable
+                  macros (Default Host Directory context) and examples. <span class="ph"> For <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>
+                     applications, see <a class="xref" href="../Topics/t_uri_file_system_interface_overview.html">URI File System Interface Overview</a> for information about
+                     how to use a Cleo-provided or custom URI for the Inbox or Outbox.  </span> See
+                     <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for information regarding the
+                  setup of system-level directories and custom directory macro variables.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">On the <span class="keyword wintitle">Advanced</span> tab, specify advanced host properties. The
+               available properties within the Local Commands host <span class="keyword wintitle">Advanced</span> tab
+               are a subset of the properties described in <a class="xref" href="t_set_advanced_host_properties.html">Set Advanced Host Properties</a>.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Specify mailbox packaging properties. Click the mailbox for the Local Commands host
+               to display the <span class="keyword wintitle">Packaging</span> tab.</span>
+            <div class="itemgroup info">The <span class="keyword wintitle">Packaging</span> tab of the Local Commands host mailbox is used
+               to encrypt and decrypt files that are involved in <span class="keyword cmdname">LCOPY</span> commands
+               within the Local Commands host.</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select one of the following options from the <span class="ph uicontrol">Packaging</span> menu
+               and then click <span class="ph uicontrol">Configure</span>.</span>
+            <ul class="ul choices" id="local_commands_host_configuration__choices_qt1_xgj_yy">
+               <li class="li choice"><span class="ph uicontrol">OpenPGP</span> -  a public/private key pair, established
+                  through a shared certificate, is used to perform the encryption/decryption, and
+                  digital signing is supported.  See <a class="xref" href="../Topics/t_Configure_Open_PGP_Local_Packaging.html">Configuring Open PGP Local Packaging for Local Commands Host</a>.</li>
+
+               <li class="li choice"><span class="ph uicontrol">XML Encryption</span> -  a public/private key pair,
+                  established through a shared certificate, is used to perform the
+                  encryption/decryption. See <a class="xref" href="../Topics/t_Configure_XML_Encryption_Local_Packaging.html">Configuring XML Encryption Local Packaging for Local Commands Host</a>.</li>
+
+            </ul>
+
+            <div class="itemgroup info">
+               <p class="p">See <a class="xref" href="../Topics/t_cryptographic_services.html">Cryptographic Services</a> for general information regarding encryption
+                  and signing.</p>
+
+               <p class="p">Unlike the <span class="keyword wintitle">Packaging</span> tab within other hosts that contains a
+                  Partner section and a Local section, the <span class="keyword wintitle">Packaging</span> tab within
+                  the Local Commands host contains only the Local section, as there is no partner
+                  associated with a Local Commands host.  See <a class="xref" href="t_Setting_Up_Local_Pkging_Local_Cmd_Host.html">Setting up Local Packaging for Local Commands Host</a>.  While reading the information about the Local section and its associated
+                  dialogs, it is important to be aware of the advanced properties that govern the
+                  details of the packaging selections.  These properties are listed in the following
+                  table.  See <a class="xref" href="t_set_advanced_host_properties.html">Set Advanced Host Properties</a> for more information.</p>
+
+               
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="local_commands_host_configuration__table_qyj_44h_fr" class="table" frame="border" border="1" rules="all">
+                     
+                     
+                     <thead class="thead" align="left">
+                        <tr class="row">
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d158735e189"> OpenPGP Properties </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d158735e192"> XML Encryption
+                              Properties </th>
+
+                        </tr>
+
+                     </thead>
+
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e189 "> PGP Compression
+                              Algorithm </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e192 "> XML Encryption
+                              Algorithm </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e189 "> PGP Encryption
+                              Algorithm </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e192 ">   </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e189 "> PGP Hash Algorithm </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e192 ">   </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e189 "> PGP Integrity Check </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e192 ">   </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e189 "> PGP Signature
+                              Verification </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e192 ">   </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e189 "> PGP V3 Signature </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d158735e192 ">   </td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd"> The Local Commands host is used strictly for operations on local files.  A default
+               copy <strong class="ph b">Action</strong> is provided to move files from the inbox to the outbox.  See <a class="xref" href="t_Compose_an_Action.html">Compose an Action</a> and <a class="xref" href="../References/r_Local_Command_Reference.html">Local Command Reference</a> for
+               more information.</span>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_Setting_Up_Local_Pkging_Local_Cmd_Host.html">Setting up Local Packaging for Local Commands Host</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../References/r_Local_Command_Host_Adv_Props.html">Local Commands Host Advanced Properties</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

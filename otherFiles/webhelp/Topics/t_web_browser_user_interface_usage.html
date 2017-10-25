@@ -1,0 +1,581 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="You can use a web GUI user interface to access Cleo Harmony , Cleo VLTrader , or Cleo VLNavigator software.  To configure and set up the parameters of the web browser service, see Configuring Cleo ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Web Browser User Interface Usage"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="web_browser_user_interface_usage"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Web Browser User Interface Usage</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="web_browser_user_interface_usage">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Web Browser User Interface
+                    Usage</h1>
+
+   <div class="body">
+      <p class="p">You can use
+         a web GUI user interface to access <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo VLNavigator</span> software.  To configure
+         and set up the parameters of the web browser service, see <a class="xref" href="../Tasks/t_Configure_Web_Browser_Svc_VL_Tab.html">Configuring Cleo VersaLex for web browser</a>.</p>
+
+      <p class="p">To run the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application from a web
+         browser, when not running through a <span class="ph">Cleo VLProxy</span> connection, you must
+         enter the proper URL in the browser (e.g., <var class="keyword varname">http(s)://VeraLexComputerIP:
+            http(s)Port/VersaLexResourcePath</var>). To run VersaLex from a web browser, when
+         running through a VLProxy connection, the VersaLex serial number must be supplied as a
+         parameter (e.g., <var class="keyword varname">http(s)://VLProxyComputerIP:
+            http(s)Port/VersaLexResourcePath?serial=LX7589-YU2693</var>) or concatenated to the
+         resource, preceded by a dash (e.g., <var class="keyword varname">http(s)://VLProxyComputerIP: http(s)Port/
+            VersaLexResourcePath-LX7589-YU2693</var>).</p>
+
+      <div class="p">In addition, a number of optional URL parameters can be passed to:<ul class="ul" id="web_browser_user_interface_usage__ul_pwk_j3r_ns">
+            <li class="li">associate external IDs with new or existing VersaLex host/mailbox aliases</li>
+
+            <li class="li">limit the contents of the UI</li>
+
+            <li class="li">provide user authentication</li>
+
+         </ul>
+</div>
+
+      
+<table cellpadding="4" cellspacing="0" border="1" class="tableborder"><tr><td>
+<table cellpadding="4" cellspacing="0" summary="" class="table" border="0">
+            
+            
+            
+            
+            <thead class="thead" align="left">
+              
+               <tr class="row">
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d390985e88">
+                        Type
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d390985e91">Parameter  </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d390985e94">Description</th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d390985e97">Values</th>
+
+                
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        a
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">hostID=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">ID value for new or existing VLT
+                     host </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">Up to 255 characters, unique
+                     across all hosts </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        a
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">mailboxID=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">ID value for new or existing VLT
+                     mailbox </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">Up to 255 characters, unique
+                     across all mailboxes </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        a
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">type= </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">If host or mailbox does not yet
+                     exist, comma-separated list of types of host to use </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 "><samp class="ph codeph">
+                        ILexiCom.listHostTypes()[].getName()</samp>
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        a
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">alias=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">If host or mailbox does not yet
+                     exist, suggested value for new alias </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">Up to 50 characters, backslash
+                     character not allowed </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        b
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">readonly=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">Comma-separated list of
+                     components that should be readonly </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">Host – host cannot be created or
+                     modified </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        b
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">view=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">Comma-separated list of VLT UI
+                     components to show </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">
+                        
+                     <p class="p"> Menubar </p>
+
+                        
+                     <p class="p">Toolbar</p>
+
+                        
+                     <p class="p">Tree</p>
+
+                        
+                     <p class="p">Content</p>
+
+                        
+                     <p class="p">Messages</p>
+
+                        
+                     <p class="p"> Statusbar </p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        b
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">toolbar=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">Comma-separated list of VLT
+                     toolbar buttons to show </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">
+                        
+                     <p class="p"> Log </p>
+
+                        
+                     <p class="p">Options</p>
+
+                        
+                     <p class="p">Scheduler</p>
+
+                        
+                     <p class="p">Router</p>
+
+                        
+                     <p class="p">Certificates</p>
+
+                        
+                     <p class="p"> Transfers </p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        b
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">no=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">Comma-separated list of
+                     miscellaneous features/components to hide </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">
+                        
+                     <p class="p"> Scheduler – scheduler tool not shown </p>
+
+                        
+                     <p class="p">Router – router tool not shown</p>
+
+                        
+                     <p class="p">Boxes – inbox/outbox/sentbox/ receivedbox fields
+                            not shown</p>
+
+                        
+                     <p class="p">Send+Receive – send+receive  actions are not
+                            shown</p>
+
+                        
+                     <p class="p">Collect – collect (and send+collect) actions not
+                            shown</p>
+
+                        
+                     <p class="p"> Release – release actions not shown </p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        c
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">auth=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">VLT web UI authentication. 
+                     Edit/view-only authentication request honored if hostID or mailboxID URL
+                     parameter also specified or if VLNavigator user groups have not been
+                     established for VersaLex. </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">
+                        
+                     <p class="p"><samp class="ph codeph">Edit;password=”xxx” </samp></p>
+
+                        
+                     <p class="p">  <strong class="ph b">or</strong>
+                     </p>
+
+                        
+                     <p class="p"><samp class="ph codeph">View-only;password=”xxx”</samp></p>
+
+                        
+                     <p class="p">  <strong class="ph b">or</strong>
+                     </p>
+
+                        
+                     <p class="p"><samp class="ph codeph">User;name=”xxx”;password=”xxx”</samp></p>
+
+                        
+                     
+                        
+                     
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        abc
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">uiparms=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">Encrypted URL-encoded string
+                     containing any/all of the above parameters.  Parameters can either appear
+                     directly in the URL or within the uiparms value.  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">
+                     <p class="p"> URL-encoded string encrypted using <samp class="ph codeph">ILexiCom.encrypt()</samp>. </p>
+
+                     <p class="p">Pre-encrypted example:</p>
+
+                     <p class="p"><samp class="ph codeph">hostID=p1&amp;type=FTP%2FFTPs&amp;</samp></p>
+
+                     <p class="p"><samp class="ph codeph">alias=ACME&amp;view=Content&amp;</samp></p>
+
+                     <p class="p"><samp class="ph codeph">no=Boxes%2CSend%2BReceive%2C</samp></p>
+
+                     <p class="p"><samp class="ph codeph">Collect%2CRelease&amp;</samp></p>
+
+                     <p class="p"><samp class="ph codeph"> auth=edit%3Bpassword%3D%22xxx%22 </samp></p>
+
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e88 ">
+                        abc
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e91 "><samp class="ph codeph">reset=</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e94 ">If this is not the first entry
+                     into VersaLex and a previous session already exists, indicates to reset the
+                     session using the parameters provided above.  This parameter cannot be wrapped
+                     within the uiparms= parameter value. </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d390985e97 ">True </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</td></tr></table>
+
+      <p class="p">All parameter names and values are case insensitive except for
+            ID, alias, and password values.</p>
+
+      <div class="note note"><span class="notetitle">Note:</span> If a host or mailboxID is passed, <span class="ph">Cleo Harmony</span> is being integrated with another application’s web UI and 
+         expects that application to display  as
+         a popup window.  To be able to distinguish hosts and mailboxes with ID associations, the
+         tree node icon of a host or mailbox with an ID association will have a gray box around it. 
+         Host and mailbox IDs are stored in the host XML files and are retained on export/import of
+         hosts. </div>
+
+      
+      <p class="p">To run <span class="ph">Cleo VLNavigator</span> from a web
+         browser, you must enter the proper URL in the browser (e.g,.
+            <var class="keyword varname">http(s)://VeraLexComputerIP:http(s)Port/VLNavigatorResourcePath</var>). </p>
+
+      
+      <p class="p">When <span class="ph">Cleo VLNavigator</span> logins are not in
+         use (see <span class="keyword wintitle">Require Logins</span>above), the web UI supports two modes, each
+         password protected:</p>
+
+      
+<table cellpadding="4" cellspacing="0" border="1" class="tableborder"><tr><td>
+<table cellpadding="4" cellspacing="0" summary="" class="table" border="0">
+            
+            
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        view-only:
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        user can not modify any configuration data nor
+                            active hosts
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        edit:
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        fully-privileged user, like native GUI user
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</td></tr></table>
+
+      <p class="p">The passwords are defined under the <span class="keyword wintitle">Harmony</span> tab or
+            <span class="keyword wintitle">VLTrader</span> tab of the <span class="keyword wintitle">Web Browser Service</span>.</p>
+
+      
+      <p class="p">The native and web browser user interfaces are virtually identical in layout and
+         capability. Because of this, only one help system is provided (with specific references to
+         the native GUI). There are, however, a few fundamental differences between the native and
+         web browser GUIs:</p>
+
+      <ul class="ul" id="web_browser_user_interface_usage__ul_wtm_xjr_ns">
+         <li class="li">The web browser GUI does automatically refresh and scroll the messages pane with new
+            messages like the native GUI, but not with the same frequency. The default automatic
+            refresh rate can be set as low as 1 second or overridden in a browser session (in the
+            upper right-hand corner of the main page), but depending on the network connection speed
+            and load, the effective refresh rate may be higher than configured.  A page refresh can
+            also be forced by clicking the <span class="ph uicontrol">refresh</span>
+            <img class="image" id="web_browser_user_interface_usage__image_eym_xjr_ns" src="../Images/image134.jpg"></img> button (also in the upper
+            right-hand corner of the main page).</li>
+
+         <li class="li">The native GUI efficiently scrolls large trees. However, with the web browser GUI,
+            large trees can cause long refresh delays. Because of this, the web browser GUI
+            introduces tree paging.<p class="p">For trees, a <span class="ph uicontrol">Page</span> node is inserted at
+               the bottom of a page of nodes. Click on the left and right arrows or on the specific
+               page numbers to page back and forth through the entire set.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="web_browser_user_interface_usage__table_qcg_jkr_ns" class="table" frame="border" border="1" rules="all">
+                  
+                  
+                  <tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" rowspan="1" colspan="1" valign="top">
+                           <img class="image" id="web_browser_user_interface_usage__image_rcg_jkr_ns" src="../Images/image136.jpg"></img>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top">
+                           <img class="image" id="web_browser_user_interface_usage__image_scg_jkr_ns" src="../Images/image138.jpg"></img>
+                        </td>
+
+                     </tr>
+
+                  </tbody>
+
+               </table>
+</div>
+<p class="p">To jump to any page number, click <span class="ph uicontrol">Go To...</span>
+            </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="web_browser_user_interface_usage__table_tcg_jkr_ns" class="table" frame="border" border="1" rules="all">
+                  
+                  <tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" rowspan="1" colspan="1" valign="top">
+                           <img class="image" id="web_browser_user_interface_usage__image_ucg_jkr_ns" src="../Images/image140.jpg"></img>
+                        </td>
+
+                     </tr>
+
+                     <tr class="row">
+                        <td class="entry" rowspan="1" colspan="1" valign="top">
+                           <img class="image" id="web_browser_user_interface_usage__image_vcg_jkr_ns" src="../Images/image142.jpg"></img>
+                        </td>
+
+                     </tr>
+
+                  </tbody>
+
+               </table>
+</div>
+<p class="p">Type in the desired page number, and if the tree supports searching,
+               optionally type a (partial) alias.  Click <span class="ph uicontrol">OK</span>.</p>
+<p class="p">For both
+               the active and preconfigured trees, <img class="image" id="web_browser_user_interface_usage__image_wcg_jkr_ns" src="../Images/image021.gif"></img> host and <img class="image" id="web_browser_user_interface_usage__image_drc_bdb_dr" src="../Images/image143.gif"></img> local host nodes, <img class="image" id="web_browser_user_interface_usage__image_xcg_jkr_ns" src="../Images/image144.gif"></img> mailbox nodes, <img class="image" id="web_browser_user_interface_usage__image_ycg_jkr_ns" src="../Images/image146.gif"></img> host action nodes,<img class="image" id="web_browser_user_interface_usage__image_zcg_jkr_ns" src="../Images/image025.gif"></img> trading partner nodes, <img class="image" id="web_browser_user_interface_usage__image_adg_jkr_ns" src="../Images/image146.gif"></img> action nodes, and <img class="image" id="web_browser_user_interface_usage__image_bdg_jkr_ns" src="../Images/image147.gif"></img> service nodes are paged when
+               necessary.  In <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Certificate Manager...</span></span>, <img class="image" id="web_browser_user_interface_usage__image_cdg_jkr_ns" src="../Images/image149.gif"></img> certificate nodes are also paged when necessary.</p>
+</li>
+
+         <li class="li">The few places where drag-and-drop is supported in the native GUI are not supported in
+            the web browser GUI.</li>
+
+         <li class="li">Although the main page does automatically refresh, objects (e.g., hosts, mailboxes,
+            actions, etc.) just created in another native/web browser GUI session are not shown in
+            the tree until <span class="ph uicontrol">Refresh</span> in the tree menu is selected, or the
+               <span class="ph uicontrol">refresh</span>
+            <img class="image" id="web_browser_user_interface_usage__image_wmt_rkr_ns" src="../Images/image134.jpg"></img> button is clicked, or some
+            other page submit occurs.  The same is true for renames or deletes, unless the
+            renamed/deleted tree node is currently selected. Currently running actions (and the
+            Local Listener) are not colored green as in the native GUI.</li>
+
+         <li class="li">Like the native GUI, always exit the web browser GUI by selecting <span class="ph menucascade"><span class="ph uicontrol">File &gt; Exit</span></span>.  If the web browser itself is exited without exiting VersaLex first, the
+               <span class="ph">Cleo Harmony</span> service/daemon will take about a minute before it recognizes that the user has
+            disconnected.</li>
+
+      </ul>
+
+      
+      <p class="p"><strong class="ph b">While the <span class="ph">Cleo Harmony</span> web browser interface is active, the standard web browser refresh, back, and forward
+            buttons should not be used.</strong>  To force refresh, instead use the refresh <img class="image" src="../Images/image134.jpg"></img> button in the upper, right-hand corner of the <span class="ph">Cleo Harmony</span> web browser GUI.  Instead of the back and forward buttons, navigate
+         through the <span class="ph">Cleo Harmony</span> windows as if you were using the native GUI.</p>
+
+      
+      <p class="p">Do not attempt to have different tabs in the same browser session accessing multiple
+         isntances of <span class="ph">Cleo Harmony</span> or even the same instance of <span class="ph">Cleo Harmony</span> multiple times. In this case, cached information may cause you to be
+         directed to the incorrect <span class="ph">Cleo Harmony</span> session.</p>
+
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Certificates created through the Cleo Harmony application have a default validity period of 24 months. This validity period can range from 1 to 96 months and can be lengthened or shortened as ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Handling Expired Certificates"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_certificate_manager.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="HandlingExpiredCerts"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Handling Expired Certificates</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="HandlingExpiredCerts">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Handling Expired Certificates</h1>
+
+   <div class="body">
+      <p class="p">Certificates created through the <span class="ph">Cleo Harmony</span> application have a default validity period of 24 months.
+                  This validity period can range from 1 to 96 months and can be lengthened or
+                  shortened as necessary when creating a new certificate. After that time, your
+                  certificate is no longer considered valid and you should generate a new
+                  certificate and distribute it to all your trading partners.</p>
+
+      <p class="p">Beginning 30 days prior to a certificate’s expiration date, the <span class="ph">Cleo Harmony</span> application logs warning notifications in its message
+                  log when any certificates used by the application (that is, either your user
+                  certificates or your trading partners' certificates) are about to expire or have
+                  already expired. </p>
+
+      <p class="p">You can also set the <span class="ph uicontrol">Email Local Certificate Expiration Notices</span>
+                  property in the <span class="keyword wintitle">Local Listener: Advanced</span> tab to receive daily
+                  email notifications when any of your user certificates is within 30 days of
+                  expiration or have already expired. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>. Otherwise, if  the <span class="ph uicontrol">Email Local Certificate Expiration
+                        Notices</span> property is not set and you have System Event logging
+                  configured for both errors and warnings (applies to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span>
+                  applications only), the daily certificate expiration notifications are logged in
+                  the System Event log/file instead. If the <span class="ph uicontrol">Email Local Certificate
+                        Expiration Notices</span> property is not configured and System Event
+                  logging is not defined, a warning message is logged in the <span class="ph">Cleo Harmony</span> message log if it detects any local or partner
+                  certificates have expired or are about to expire. See <a class="xref" href="t_WebUI_CfgSysOpts_Messages.html">Logs</a>.</p>
+
+            
+      <p class="p">Although a 30-day warning should afford you ample time to either generate a new certificate
+                  and distribute it to all your trading partners or request and obtain a new
+                  certificate from your trading partner, you may change this default setting by
+                  changing the <span class="ph uicontrol">Email Local And Partner Certificate Expiration Warning
+                        Days</span> property in the <span class="keyword wintitle">Local Listener: Advanced
+                        Tab</span>. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</p>
+
+      <p class="p">Use the <span class="ph uicontrol">View</span> button to review certificate expiration dates. See
+                        <a class="xref" href="../Tasks/t_WebUI_view_usage.html">Viewing User and CA Certificate Usage</a>.</p>
+
+      
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

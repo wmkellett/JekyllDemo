@@ -1,0 +1,1880 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The following is a description of the fields used for the Cleo VLNavigator applications and the storing of User login/access information. DashboardsOptions database table The DashboardsOptions table ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Cleo VLNavigator Application/User Access Database Fields"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_database_definitions.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="vlnavigator_application_user_access_database_fields"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cleo VLNavigator Application/User Access Database Fields</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="vlnavigator_application_user_access_database_fields">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_database_definitions.html" title="Database Definitions">Database Definitions</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_database_definitions.html" title="Database Definitions"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Database Definitions</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1"><span class="ph">Cleo VLNavigator</span> Application/User Access
+        Database Fields</h1>
+
+   <div class="body">
+        <p class="p">The following is a description of the fields used for the <span class="ph">Cleo VLNavigator</span> applications and the
+            storing of User login/access information.</p>
+
+        <div class="section"><h2 class="title sectiontitle">DashboardsOptions database
+                        table</h2><p class="p">The <strong class="ph b">DashboardsOptions</strong> table is used to
+                store options relating to Dashboards.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_ttv_lbj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e49"> Column/Field Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e52"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e55"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e58"> Source </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e49 "> DashboardsOptionsID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e52 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e55 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e58 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e49 "> ScorecardEnabled </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e52 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e55 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e58 "> Flag indicating if the
+                                scorecard is enabled (0 = disabled; 1 = enabled) </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+ </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLApplicationNum table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLApplicationNum</strong> table is used to store <span class="ph">Cleo VLNavigator</span> application names
+                and enabled/disabled flags for the application as a whole.</p>
+
+            
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_kr5_mbj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e136"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e139"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e142"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e145"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e136 "> VLApplicationNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e139 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e142 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e145 "> Number assigned by <span class="ph">Cleo VLNavigator</span>
+                                for each application </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e136 "> Application </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e139 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e142 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e145 "> Application name
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e136 "> IsEnabled </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e139 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e142 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e145 "> Flag indicating if the
+                                application is enabled (0 = disabled; 1 = enabled) </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLContact table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLContact</strong> table is used to store various types of contact information for
+                a user.</p>
+
+            
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_i2j_rbj_t5" class="table" frame="border" border="1" rules="all"><thead class="thead" align="left"><tr class="row"><th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e227"> Column Name </th>
+<th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e229"> Data Type </th>
+<th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e231"> Length </th>
+<th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e233"> Description </th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e227 "> VLContactID </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e229 "> INTEGER </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e231 ">   </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e233 "> Generated by <span class="ph">Cleo VLNavigator</span> and used as a "key" to the records </td>
+</tr>
+<tr class="row"><td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e227 "> VLEntityID </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e229 "> INTEGER </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e231 ">   </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e233 "> VLEntityID in VLEntity table </td>
+</tr>
+<tr class="row"><td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e227 "> VLContactNum </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e229 "> INTEGER </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e231 ">   </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e233 "> VLContactNum in VLContactNum table </td>
+</tr>
+<tr class="row"><td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e227 "> Value </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e229 "> VARCHAR </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e231 "> 255 </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e233 "> Depending on the value in VLContactNum., this is either an email address, phone number, or IP address. </td>
+</tr>
+<tr class="row"><td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e227 "> IsPrimary </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e229 "> TINYINT </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e231 ">   </td>
+<td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e233 "> Set to 1 for the primary contact for a user and 0 otherwise. </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLContactNum table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLContactNum</strong> table is used to store enumerated list of contact
+                information types (Example: “Work Email”).</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_avl_3mm_jv" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e317"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e320"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e323"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e326"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e317 "> VLContactNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e320 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e323 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e326 "> Number assigned by <span class="ph">Cleo VLNavigator</span>
+                                for each contact type. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e317 "> Description </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e320 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e323 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e326 "> Description of contact
+                                information type </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLEntity table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLEntity</strong> table is used to store information on both the configured Users
+                and User Groups.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_umt_3sm_jv" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e403"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e406">Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e409"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e412"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e403 "> VLEntityID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e406 ">INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e409 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e412 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e403 "> Name </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e406 ">VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e409 "> 255  </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e412 ">For a group, the Group
+                                Name is stored here. For non-LDAP users, this contains the user’s
+                                Full Name. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e403 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e406 ">INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e409 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e412 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e403 "> IsEnabled </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e406 ">TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e409 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e412 ">Group/User enabled(1)
+                                or disabled(0) flag </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" colspan="1" valign="top" headers="d381455e403 ">IsDefaultEntity</td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e406 ">TINYINT </td>
+
+                            <td class="entry" colspan="1" valign="top" headers="d381455e409 "> </td>
+
+                            <td class="entry" colspan="1" valign="top" headers="d381455e412 ">Set to 1 for User Groups and 0
+                                otherwise</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" colspan="1" valign="top" headers="d381455e403 ">IsSystemAdmin</td>
+
+                            <td class="entry" colspan="1" valign="top" headers="d381455e406 ">TINYINT</td>
+
+                            <td class="entry" colspan="1" valign="top" headers="d381455e409 "> </td>
+
+                            <td class="entry" colspan="1" valign="top" headers="d381455e412 ">Set to 1 for the System
+                                Administrator user and 0 otherwise. </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLEntityApplication table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLEntityApplication</strong> table is used to store information on whether each
+                    <span class="ph">Cleo Harmony</span> application is enabled or disabled for a specific User or
+                User Group.</p>
+
+            
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_lf3_kcj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e549"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e552"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e555"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e558"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e549 "> VLEntityApplicationID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e552 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e555 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e558 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e549 "> VLEntityID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e552 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e555 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e558 "> VLEntityID in VLEntity
+                                table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e549 "> VLApplicationNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e552 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e555 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e558 "> VLApplicationNum in
+                                VLApplicationNum table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e549 "> IsEnabled </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e552 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e555 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e558 "> Set to 1 if the
+                                application is enabled and 0 if disabled for the user/group </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLEntityApplicationFile table</h2>
+            
+            <p class="p">The <strong class="ph b">VLEntityApplicationFile</strong> table is used to
+                store file paths associated to a specific application.</p>
+
+            
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_o3n_lcj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e662"> Column/Field Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e665"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e668"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e671"> Source </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e662 ">
+                                VLEntityApplicationFileID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e665 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e668 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e671 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e662 "> VLEntityID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e665 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e668 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e671 "> VLEntityID in VLEntity
+                                table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e662 "> VLApplicationNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e665 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e668 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e671 "> VLApplicationNum in
+                                VLApplicationNum table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e662 "> Sequence </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e665 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e668 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e671 "> Sequence order of
+                                files </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e662 "> Path </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e665 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e668 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e671 "> Path to file for this
+                                application </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLEntityApplicationPrivilege table</h2>
+            
+            <p class="p">The <strong class="ph b">VLEntityApplicationPrivilege</strong> table is
+                used to store specific privileges that the VLEntity has for an application.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_htn_nnm_jv" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e791"> Column/Field Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e794"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e797"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e800"> Source </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e791 ">
+                                VLEntityApplicationPrivilegeID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e794 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e797 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e800 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e791 "> VLEntityID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e794 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e797 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e800 "> VLEntityID in VLEntity
+                                table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e791 "> VLApplicationNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e794 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e797 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e800 "> VLApplicationNum in
+                                VLApplicationNum table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e791 "> Privilege </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e794 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e797 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e800 "> Privileged item name
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLEntityGroup table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLEntityGroup</strong> table is used to store the type of group (VLNavigator
+                Group, VLNavigator Admin Group, …) for each User Group configured.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_sgr_4cj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e906"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e909"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e912"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e915"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e906 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e909 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e912 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e915 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e906 "> VLGroupNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e909 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e912 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e915 "> VLGroupNum in
+                                VLGroupNum table </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLEntityNum table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLEntityNum</strong> table is used to store the enumerated list of Entity types
+                (Example: “VLNavigator Person”).</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_hys_pcj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e991"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e994"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e997"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1000"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e991 "> VLEntityNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e994 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e997 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1000 "> Number assigned by <span class="ph">Cleo VLNavigator</span>
+                                for each Entity type </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e991 "> Description </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e994 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e997 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1000 "> Description of Entity
+                                type </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLGroupNum table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLGroupNum</strong> table is used to store the enumerated list of Group types
+                (Examples: “VLNavigator Admin Group”, “VLNavigator Group”)</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_c1y_qcj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1077"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1080"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1083"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1086"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1077 "> VLGroupNum </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1080 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1083 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1086 "> Number assigned by <span class="ph">Cleo VLNavigator</span>
+                                for each Group type </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1077 "> Description </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1080 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1083 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1086 "> Description of Group
+                                type </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLOpAuditTrail table </h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLOpAuditTrail</strong> table is used to store a trail of events of things the
+                users have done through the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLNavigator</span> user
+                interfaces.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_vyf_scj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1168"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1171"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1174"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1177"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> VLOpAuditTrailID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> ModDateTime </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> DATETIME </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Date and time of the
+                                audit trail event </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> ComputerName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Computer name or IP
+                                address from where the modification was made </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> VLSerial </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Serial number of <span class="ph">Cleo Harmony</span> from where the modification was made
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> Username </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Logged in user
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> UserFullName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Full username of
+                                logged in user </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> ItemType </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Type item modified
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> ItemName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Name of item modified
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> OldItemName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Original name of item
+                                modified (in the case of a renamed item) </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> EventType </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Type of event that has
+                                occurred </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1168 "> PathName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1171 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1174 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1177 "> Relative path of file
+                                modified </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLOpAuditTrailOptions table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLOpAuditTrailOptions</strong> table is used to store information on if and when
+                to purge old Operator Audit Trail events</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_qdk_5cj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1392"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1395"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1398"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1401"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1392 ">
+                                VLOpAuditTrailOptionsID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1395 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1398 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1401 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1392 "> PurgeEventsEnabled </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1395 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1398 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1401 "> Set to 1 if purge of
+                                old events is desired. Set to 0 otherwise. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1392 "> PurgeAfterDays </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1395 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1398 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1401 "> Operator Audit Trail
+                                events will be purged after they are older than this number of days
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUser table</h2>
+            
+            <p class="p">The <strong class="ph b">VLUser</strong>
+                table is used to store information on the users that can log into the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLNavigator</span> applications.
+                    <strong class="ph b">Note</strong>: The users in the Administrator group are also store in the
+                encrypted Users.xml file so that administrators can log in even when the database is
+                not functioning.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_l4n_vcj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1501"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1504"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1507"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1510"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> VLUserID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> VLEntityID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> VLEntityID in VLEntity
+                                table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> FirstName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> User’s first name
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> LastName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> User’s last name
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> BuildFullName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> ‘True’ if the full
+                                name should be built from FirstName and LastName </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> UserName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> Log in user name
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> Alias </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> Optional user alias
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> LDAPUser </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> Set to 1 for an LDAP
+                                user. Set to 0 otherwise. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1501 "> UserPassword </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1504 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1507 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1510 "> Password for non-LDAP
+                                users </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUserEntityGroup table</h2>
+            
+            <p class="p">The
+                    <strong class="ph b">VLUserEntityGroup</strong> table is used to store information related to
+                VLNavigator user groups.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_tcz_wcj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1692"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1695"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1698"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1701"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> VLUserEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> LdapUserGroup </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> ‘True’ if this is an
+                                LDAP group </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> OverrideDomain </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> ‘True’ if overriding
+                                the base domain </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> Domain </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> Overriding base domain
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> OverrideFilter </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> TINYINT </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> ‘True’ if overriding
+                                LDAP search filter </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> Filter </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> Overriding search 
+                                filter </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1692 "> ExtendFilter </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1695 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1698 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1701 "> Extension of search
+                                filter </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUserEntityGroupAccess table</h2>
+            
+            <p class="p">The <strong class="ph b">VLUserEntityGroupAccess</strong> table is used to
+                store User Group access to the various instances of the <span class="ph">Cleo Harmony</span> application configured.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_v22_ycj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1871"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1874"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1877"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1880"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1871 ">
+                                VLUserEntityGroupAccessID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1874 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1877 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1880 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1871 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1874 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1877 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1880 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1871 "> VLPools </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1874 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1877 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1880 "> List of VersaLex pools
+                                to which the user group has access </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1871 "> VLSerials </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1874 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1877 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1880 "> List of <span class="ph">Cleo Harmony</span> serial numbers to which the user group has
+                                access </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUserEntityGroupPrivilege table</h2>
+            
+            <p class="p">The <strong class="ph b">VLUserEntityGroupPrivilege</strong> table is used
+                to store access levels to various items within the <span class="ph">Cleo Harmony</span>application.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_x1n_zcj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1993"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1996"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e1999"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2002"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1993 ">
+                                VLUserEntityGroupPrivilegeID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1996 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1999 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2002 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1993 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1996 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1999 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2002 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1993 "> VLPrivilegeItem </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1996 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1999 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2002 "> List of specific items
+                                within <span class="ph">Cleo Harmony</span> to which the user group has access </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1993 "> VLPrivilegeAccess </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1996 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e1999 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2002 "> Access restriction
+                                level for VLPrivilegeItem(s) </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUserEntityGroupTRAccess table</h2>
+            
+            <p class="p">The <strong class="ph b">VLUserEntityGroupTRAccess</strong> table is used to
+                store which file types the user group has access to within Transfer Report. If the
+                user group does not have access to a file type, then users within that group will
+                not be able to view or email the contents of the transferred file.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_vwq_1dj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2111"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2114"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2117"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2120"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2111 ">
+                                VLUserEntityGroupTRAccessID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2114 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2117 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2120 "> Generated by the <span class="ph">Cleo VLNavigator</span>
+                                application and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2111 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2114 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2117 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2120 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2111 ">
+                                <p class="p">AccessibleFileTypes</p>
+
+                                <p class="p">                </p>
+
+                            </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2114 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2117 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2120 "> List of specific file
+                                types (EDI, XML, Text), separated by commas, within the Transfer
+                                Report to which the user group has access. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2111 "> TransactionsAccessible </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2114 "> Bit </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2117 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2120 "> ON if the transaction
+                                types in the VLUserEntityGroupTREDITypes table are accessible to the
+                                user group. OFF if the transaction types in the
+                                VLUserEntityGroupTREDITypes table are not accessible to the user
+                                group. </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUserEntityGroupTRColumns table</h2>
+            
+            <p class="p">The <strong class="ph b">VLUserEntityGroupTRColumns</strong> table is used
+                to store which Transfer Report columns are displayed and which order they are
+                displayed. It also stores any custom column names configured.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_mbb_cdj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2232"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2235"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2238"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2241"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2232 ">
+                                VLUserEntityGroupTRColumnsID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2235 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2238 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2241 "> Generated by the <span class="ph">Cleo VLNavigator</span>
+                                application and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2232 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2235 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2238 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2241 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2232 ">ColumnName</td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2235 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2238 ">255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2241 "> Either VLTransfers
+                                table column name or one of the items tracked through file tracking
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2232 "> CustomColumnName </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2235 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2238 ">255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2241 "> User-customized column
+                                name </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2232 "> Enabled </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2235 "> Bit </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2238 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2241 "> ON if this column is
+                                displayed in the Transfer Report table; Otherwise, OFF </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2232 "> ColumnNumber </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2235 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2238 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2241 "> Order of the columns
+                                in the Transfer Report table (0-based) </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUserEntityGroupTREDITypes table</h2>
+            
+            <p class="p">The <strong class="ph b">VLUserEntityGroupTREDITypes</strong> table is
+                used to store which EDI types the user group can/cannot access. Whether the user
+                group can or cannot access the items in this table depends on the
+                TransactionsAccessible flag in the VLUserEntityGroupTRAccess table.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_gnb_ddj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2378"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2381"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2384"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2387"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2378 ">
+                                VLUserEntityGroupTREDITypesID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2381 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2384 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2387 "> Generated by the <span class="ph">Cleo VLNavigator</span>
+                                applcation and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2378 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2381 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2384 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2387 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2378 ">
+                                <p class="p">EDIType</p>
+
+                                <p class="p">                </p>
+
+                            </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2381 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2384 ">255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2387 "> Either “ASC X12”,
+                                “EDIFACT”, or “TRADACOMS” </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2378 "> TransactionType </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2381 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2384 ">255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2387 ">
+                                <p class="p">Specific transaction type</p>
+
+                                <p class="p">Example: “850” (for ASC X12)</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">VLUserEntityGroupTreeAccess table</h2>
+            
+            <p class="p">The <strong class="ph b">VLUserEntityGroupTreeAccess</strong> table is
+                used to store user group access to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLNavigator</span> applications</p>
+
+            <p class="p"> </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="vlnavigator_application_user_access_database_fields__table_cnq_2dj_t5" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2516"> Column Name </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2519"> Data Type </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2522"> Length </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d381455e2525"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2516 ">
+                                VLUserEntityGroupTreeAccessID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2519 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2522 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2525 "> Generated by <span class="ph">Cleo VLNavigator</span>
+                                and used as a "key" to the records </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2516 "> VLEntityGroupID </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2519 "> INTEGER </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2522 ">   </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2525 "> VLEntityGroupID in
+                                VLEntityGroup table </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2516 "> VLPoolTreeSubset </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2519 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2522 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2525 "> List of VersaLex pools
+                                to which the user group has access </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2516 "> UserGroupTreeSubset </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2519 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2522 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2525 "> List of <span class="ph">Cleo Harmony</span> user groups to which the user group has
+                                access </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2516 "> HostFolderTreeSubset </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2519 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2522 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2525 "> List of host folder
+                                tree to which the user group has access </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2516 "> ApplicationTreeSubset </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2519 "> VARCHAR </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2522 "> 255 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d381455e2525 "> List of <span class="ph">Cleo VLNavigator</span>
+                                applications to which the user group has access </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_database_definitions.html" title="Database Definitions"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Database Definitions</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

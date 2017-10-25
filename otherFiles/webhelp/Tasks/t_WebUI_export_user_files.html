@@ -1,0 +1,159 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="In the web UI, go to Administration &gt; System &gt; Export . In the native UI, select File&gt;Export in the menu bar. Select any combination of host files, configuration files, user certificates, and CA ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Export User Files"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_ExportImportUserFiles.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="export_import_user_files"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Export User Files</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="export_import_user_files">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_System.html" title="System">System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_ExportImportUserFiles.html" title="Export and import user files">Export and import user files</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_ExportImportUserFiles.html" title="Export and import user files"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Export and import user files</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Export User Files</h1>
+
+   <div class="body taskbody">
+      <div class="section context"></div>
+
+      <ol class="ol steps" id="export_import_user_files__steps_gym_lpf_2r"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; System &gt; Export</span></span>.  In the native UI, select <span class="ph menucascade"><span class="ph uicontrol">File&gt;Export</span></span> in the menu bar.</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select any combination of host files, configuration files, user certificates, and
+               CA certificate files.  </span>
+            <div class="itemgroup info">
+               <p class="p">A private key password must be provided with each selected user certificate - the
+                  exported user certificates and associated private keys are exported as PKCS#12
+                  files.  Any additional files may also be selected, but normally you would not want
+                  to include the following:</p>
+
+               <ul class="ul" id="export_import_user_files__ul_tnz_spf_2r">
+                  <li class="li"><span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span>
+                     libraries (<span class="ph filepath">.jar</span> files)</li>
+
+                  <li class="li">Java runtime environment (<span class="ph filepath">jre/</span> files)</li>
+
+                  <li class="li">User certificate/private key store (<span class="ph filepath">data/</span> files). 
+                        <div class="note note"><span class="notetitle">Note:</span> User certificates/private keys can be exported
+                     individually.</div>
+</li>
+
+               </ul>
+
+               <p class="p">A partial host can be exported by right-clicking on the host and selecting a set
+                  of mailboxes or actions.  (A partial host export can also be initiated by
+                  selecting <span class="ph uicontrol">Export…</span> from a mailbox or action in the active
+                  host tree.  The configuration, user, and trading partner certificates
+                  corresponding only to the selected hosts can also be exported by selecting the
+                     <span class="ph uicontrol">For selected host(s) only</span> check box in the respective
+                  table.  (If initiating the export from the active host tree, the dialog box offers
+                  the same option overall.)</p>
+
+               <p class="p">Two specially named additional files, <span class="ph filepath">prereadme.txt</span> and
+                     <span class="ph filepath">postreadme.txt</span>, if included during <span class="ph menucascade"><span class="ph uicontrol">File &gt; Export</span></span>, will be displayed as pre-import and post-import instructions if or
+                  when the exported files are imported.</p>
+
+               <div class="note note"><span class="notetitle">Note:</span> As an added security feature, the <strong class="ph b">Additional File(s)</strong> section of the
+                  dialog  may be removed by setting the
+                     <var class="keyword varname">cleo.file.export.additional.files</var> system property to false
+                  in the <span class="ph filepath">conf/system.properties</span> file or by using a <samp class="ph codeph">-D
+                     cleo.file.export.additional.files=false</samp> command line parameter.  This
+                  property only affects the dialog launched from the  <span class="ph uicontrol">File &gt;
+                     Export</span> menu option and does not affect exporting additional files
+                  via the command line.  See <a class="xref" href="t_Execute_from_Command_Line.html">Execute from Command Line</a> for more
+                  information.</div>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select a suitable passphrase and confirm it. </span>
+            <div class="itemgroup info"><p class="p">This passphrase is used to encrypt secure content (for example, passwords)
+                  within the selected files.  Additionally, this passphrase is used to AES encrypt
+                  the entire exported zip file.  The passphrase must be a minimum of 8 characters in
+                  length. Note that the length of the password determines the strength of the AES
+                  encryption key.  Refer to the following table for guidance.</p>
+ 
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="export_import_user_files__table_jgr_lpf_2r" class="table" frame="border" border="1" rules="all">
+                     
+                     
+                     <thead class="thead" align="left">
+                        <tr class="row">
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d147805e145"> Password Length </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d147805e148"> AES Key Strength
+                           </th>
+
+                        </tr>
+
+                     </thead>
+
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e145 "> &lt; 8 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e148 "> invalid -- too weak
+                           </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e145 "> 8   &lt;= length &lt;
+                              32 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e148 "> 128-bit key (weakest)
+                           </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e145 "> 32 &lt;= length &lt; 48 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e148 "> 192-bit key </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e145 "> 48 &lt;= length &lt; 64 </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d147805e148 "> 256-bit key (strongest)
+                           </td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> The passphrase is case sensitive and that all preceding and succeeding
+                  whitespace of the passphrase is trimmed and ignored.</div>
+</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd"> Click <span class="ph uicontrol">Export</span>.</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select the location to save the
+               exported
+               zip file and click <span class="ph uicontrol">Save</span>.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Save As</span> to save current filter settings to an XML
+               file.  You can use this XML file later to recall these settings using
+                  <span class="ph uicontrol">Open</span> or with the <span class="ph"><span class="keyword cmdname">Harmony</span></span>,
+                  , or 
+               <span class="keyword cmdname">c -b</span> command-line option (see <a class="xref" href="t_Execute_from_Command_Line.html">Execute from Command Line</a>).</span>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_ExportImportUserFiles.html" title="Export and import user files"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Export and import user files</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

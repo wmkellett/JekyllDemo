@@ -1,0 +1,886 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the Advanced tab to set advanced properties for the Mailbox. Active Mode Source Data Port Specifies the FTP server source data port for Active Mode FTP when set to a value &gt; 0. Default value is 0 ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Setting Local FTP Users Mailbox Advanced Properties"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_ftp_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_wqd_kdp_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Setting Local FTP Users Mailbox Advanced Properties</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_wqd_kdp_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users">Configuring Local FTP Users</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Setting Local FTP Users Mailbox Advanced Properties</h1>
+
+  <div class="body">
+    <p class="p">Use the <span class="keyword wintitle">Advanced</span> tab to set advanced properties for the Mailbox.</p>
+
+    
+    <dl class="dl">
+               
+          
+            <dt class="dt dlterm"> Active Mode Source Data Port </dt>
+
+            <dd class="dd"> Specifies the FTP server source data
+              port for Active Mode FTP when set to a value &gt; 0.  Default value is 0 where the
+              data port is unspecified. Some FTP clients may require a specific port number (for example,
+              20) be used for the server data port. </dd>
+
+          
+          
+            <dt class="dt dlterm"> Allow Duplicate Incoming AS3 Message
+              IDs </dt>
+
+            <dd class="dd">Ignores messages with duplicate message
+              IDs and allows reprocessing of the message.</dd>
+
+          
+          
+            <dt class="dt dlterm">Automatically Delete Retrieved Outbox
+              Files </dt>
+
+            <dd class="dd"> When this option is selected, delete (remove) each file retrieved from the user’s
+          Outbox when the next FTP command is received from the client for a given FTP session.
+          Files will only be deleted from the outbox (see <a class="xref" href="../Tasks/t_Configure_Local_FTP_Users_Dirs.html">Configuring Local FTP User directories</a> Tab)
+          after retrieval from the defined Outbox directory or its subdirectories. The delete
+          confirmation response will be contained in a multi-line response (for example,
+          150-Retrieve of 'test.edi' confirmed… ) for the next appropriate client command. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">Selected</kbd> or
+            <kbd class="ph userinput">Unselected</kbd>. </dd>
+
+          
+          
+            <dt class="dt dlterm"> Base64 Encode AS3 Content </dt>
+
+            <dd class="dd">
+              <var class="keyword varname">Base64</var> is the encoding format used by Multi-purpose Internet Mail
+              Extension (MIME) for transmitting non-text material over text-only communications
+              channels. Base64 is based on a 65-character subset of US-ASCII, enabling 6 bits to be
+              represented per printable character </dd>
+
+          
+          
+            <dt class="dt dlterm">Canonicalize Inbound AS3 Signed
+              Content</dt>
+
+            <dd class="dd">When this option is selected, a
+              canonicalizer is used to ensure that ‘\r’ and ‘\n’ characters always occur together as
+              ‘\r\n’.  This option may be used when the inbound signature hash verification fails
+              and the trading partner is using OpenSSL to sign its messages.</dd>
+
+          
+          
+            <dt class="dt dlterm"> Compression-Signing Order </dt>
+
+            <dd class="dd">When both signing and compression are
+              enabled, this indicates which is applied first.</dd>
+
+          
+      
+            <dt class="dt dlterm">Email On Check Conditions Met </dt>
+
+            <dd class="dd">Send an email notification after running a <span class="keyword cmdname">CHECK</span> command where
+          the overall conditions of the check are met.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo Harmony</span>
+            and <span class="ph">Cleo VLTrader</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Email addresses separated by commas (,), semicolons (;), or
+          colons ( : ).  The first address should be an internal email address. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>:The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Email On Check Conditions Not Met </dt>
+
+            <dd class="dd">Send an email notification after running a <span class="keyword cmdname">CHECK</span> command where
+          the overall conditions of the check are <strong class="ph b">not</strong> met. See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> option. </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Email addresses separated by commas (,), semicolons (;), or
+          colons ( : ).  The first address should be an internal email address. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>:The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Email On Fail </dt>
+
+            <dd class="dd">If an error occurs during a command,
+              email the error condition.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute
+                Based on Results</a>. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Email addresses separated by commas (,), semicolons (;), or
+          colons ( : ).  The first address should be an internal email address. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>:The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Email On Flag</dt>
+
+            <dd class="dd">If a flagged event occurs, email the event. See
+                <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>.</dd>
+
+            <dd class="dd">Email addresses separated by commas (,), semicolons
+              (;) or colons (:). The first address should be an internal email address.</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: Email addresses separated by commas (,), semicolons (;), or
+          colons ( : ).  The first address should be an internal email address. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>:The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Email On Repetitive Action
+              Failures</dt>
+
+            <dd class="dd">When "Email On Fail" is enabled and the same failure occurs each time an action is
+          run for a specific host, leaving this option unchecked suppresses emailing of the same
+          alert multiple times.  If the same email alert continues to be suppressed after 24 hours,
+          the suppressed email alert will be sent every 24 hours and after every system restart if
+          the failure occurs again. When the failure is resolved an email alert will be
+            sent.<div class="note note"><span class="notetitle">Note:</span> This feature only suppresses multiple emails if the same failure occurs
+            multiple times in a row. Suppression is not maintained across synchronized
+          hosts.</div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+      
+            <dt class="dt dlterm">Email On Repetitive Listener
+              Failures</dt>
+
+            <dd class="dd">When "Email On Fail" is enabled and the same failure occurs each time an inbound
+          message is processed by the Listener for a specific host, leaving this option unchecked
+          suppresses emailing of the same alert multiple times. If the same email alert continues to
+          be suppressed after 24 hours, the suppressed email alert will be sent every 24 hours and
+          after every system restart if the failure occurs again. If the failure can be associated
+          with a specific host, an email alert will be sent when the failure is resolved.  Failure
+          resolution email alerts will not be sent for general Listener failures since it is not
+          possible to determine that these types of failures have been resolved.<div class="note note"><span class="notetitle">Note:</span> This feature
+            only suppresses multiple emails if the same failure occurs multiple times in a
+            row. Suppression is not maintained across synchronized hosts.</div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+      
+            <dt class="dt dlterm">Email On Successful Copy </dt>
+
+            <dd class="dd">Send an email notification after
+              copying a file using <span class="keyword cmdname">LCOPY</span>.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>:  Email addresses separated by commas (,), semicolons (;) or
+          colons ( : ).  The first address should be an internal email address. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>:The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Email On Successful Receive </dt>
+
+            <dd class="dd">Send an email notification after
+              successfully receiving a file.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>:  Email addresses separated by commas (,), semicolons (;) or
+          colons ( : ).  The first address should be an internal email address. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>:The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Email On Successful Send </dt>
+
+            <dd class="dd">Send an email notification after
+              successfully sending a file.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. </dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>:  Email addresses separated by commas (,), semicolons (;) or
+          colons ( : ).  The first address should be an internal email address. </dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>:The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Execute On Check Conditions Met </dt>
+
+            <dd class="dd">After executing a <span class="keyword cmdname">CHECK</span> command where the overall conditions are
+          met, run a system command.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. <div class="note note"><span class="notetitle">Note:</span> This is a
+              <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> option.
+            </div>
+<div class="note note"><span class="notetitle">Note:</span> Note that if multiple files contribute to the conditions being met, and one
+            of the file macros is in the command (e.g., <span class="keyword cmdname">%file%</span>),  the system
+            command will be executed repeatedly - once for each file.</div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: System command to be executed. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Execute On Check Conditions Not Met </dt>
+
+            <dd class="dd">After executing a <span class="keyword cmdname">CHECK</span> command where the overall conditions are
+            <var class="keyword varname">not</var> met, run a system command.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> option. </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: System command to be executed. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Execute On Fail </dt>
+
+            <dd class="dd">If an error occurs during a command,
+              run a system command.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: System command to be executed. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Execute On Repetitive Action
+              Failures</dt>
+
+            <dd class="dd">
+              <p class="p">When <span class="keyword cmdname">Execute On Fail</span> is enabled and the same failure occurs each
+            time an action is run for a specific host, leaving this option unchecked suppresses
+            multiple executions of the <span class="keyword cmdname">Execute On Fail</span> command.  If suppression
+            of execution of the command for this failure continues after 24 hours, the suppressed
+              <span class="keyword cmdname">Execute On Fail</span> command will be executed every 24 hours and after a
+            system restart if the failure occurs again.  When the failure is resolved, the
+              <span class="keyword cmdname">Execute On Fail</span> command will be executed again.  Users must account
+            for this by including the %status% macro variable for the <span class="keyword cmdname">Execute On
+              Fail</span> command (see <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a>) and then checking for a
+            success or failure.     </p>
+
+              <div class="note note"><span class="notetitle">Note:</span> This feature only suppresses multiple executions of the <span class="keyword cmdname">Execute On
+              Fail</span> command if the same failure occurs multiple times in a row. 
+            Suppression is not maintained across synchronized hosts.</div>
+
+            </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+      
+            <dt class="dt dlterm">Execute On Repetitive Listener
+              Failures</dt>
+
+            <dd class="dd">
+              <p class="p">When <span class="keyword cmdname">Execute On Fail</span> is enabled and the same failure occurs each
+            time an inbound message is processed by the Listener for a specific host, leaving this
+            option unchecked suppresses multiple executions of the <span class="keyword cmdname">Execute On
+              Fail</span> command.  If suppression of execution of the command for this failure
+            continues after 24 hours, the suppressed <span class="keyword cmdname">Execute On Fail</span> command will
+            be executed every 24 hours and after every system restart if the failure occurs again.  If
+            the failure can be associated with a specific host, the <span class="keyword cmdname">Execute On
+              Fail</span> command will be executed again when the failure is resolved. Users must
+            account for this by including the %status% macro variable for the <span class="keyword cmdname">Execute On
+              Fail</span> command (see <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a>) and then checking for a
+            success or failure. Executions of the "Execute On Fail" command for resolution of
+            general Listener failures will not be done since it is not possible to determine that
+            these types of failures have been resolved. </p>
+
+              <div class="note note"><span class="notetitle">Note:</span> This feature only suppresses multiple executions of the <span class="keyword cmdname">Execute On
+              Fail</span> command if the same failure occurs multiple times in a row. 
+            Suppression is not maintained across synchronized hosts.</div>
+
+            </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+      
+            <dt class="dt dlterm">Execute On Successful Copy </dt>
+
+            <dd class="dd">After successfully copying  a file
+              using <span class="keyword cmdname">LCOPY</span>, run a system command.  This command may be used for
+              post-processing the file.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: System command to be executed. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Execute On Successful Receive </dt>
+
+            <dd class="dd">After successfully receiving a file,
+              run a system command.  This command may be used for post-processing the file.  See
+                <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: System command to be executed. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Execute On Successful Send </dt>
+
+            <dd class="dd">After successfully sending a file, run
+              a system command.  This command may be used for post-processing the file.  See <a class="xref" href="t_email_execute_based_on_results.html">Email/Execute Based on Results</a>. </dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: System command to be executed. </dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel (if set). </dd>
+
+      
+            <dt class="dt dlterm">Fixed Record EOL Characters </dt>
+
+            <dd class="dd">End-of-line characters to be inserted
+              and/or deleted. </dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">0</kbd> to <em class="ph i"><kbd class="ph userinput">n</kbd></em>
+          characters.  <div class="p">Special character sequences:<ul class="sl simple">
+              <li class="sli"><kbd class="ph userinput">\r</kbd> - carriage return</li>
+
+              <li class="sli"><kbd class="ph userinput">\n</kbd> - new line (linefeed)</li>
+
+              <li class="sli"><kbd class="ph userinput">\f</kbd> - form feed</li>
+
+              <li class="sli"><kbd class="ph userinput">\t</kbd> - horizontal tab</li>
+
+              <li class="sli"><kbd class="ph userinput">\0</kbd> - null</li>
+
+              <li class="sli"><kbd class="ph userinput">\\</kbd> - backslash</li>
+
+            </ul>
+</div>
+</dd>
+
+      
+            <dt class="dt dlterm">Fixed Record Incoming Delete EOL </dt>
+
+            <dd class="dd">If Fixed Record EOL Characters has been specified and Fixed Record Length is greater
+          than 0, indicates to look for and delete EOL characters while receiving a file.<div class="note note"><span class="notetitle">Note:</span> When
+            using FTP ASCII mode, standard EOL characters may already be changing if transferring
+            between Windows and Unix platforms.</div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Off</kbd></dd>
+
+      
+            <dt class="dt dlterm">Fixed Record Incoming Insert EOL </dt>
+
+            <dd class="dd">If Fixed Record EOL Characters has been specified and Fixed Record Length is greater
+          than 0, indicates to insert EOL characters while receiving a file.<p class="p">Fixed Record Incoming
+            Delete EOL and Fixed Record Incoming Insert EOL are mutually exclusive
+          properties.</p>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Off</kbd></dd>
+
+      
+            <dt class="dt dlterm">Fixed Record Length </dt>
+
+            <dd class="dd">The fixed record length after which
+              end-of-line characters need to be inserted and/or deleted.</dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">0</kbd> - <kbd class="ph userinput">n</kbd>
+        </dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">0</kbd>
+        </dd>
+
+      
+            <dt class="dt dlterm">Fixed Record Outgoing Insert EOL </dt>
+
+            <dd class="dd">If Fixed Record EOL Characters has been specified and Fixed Record Length is greater
+          than 0, indicates to insert EOL characters while sending a file. <div class="note note"><span class="notetitle">Note:</span> When using FTP
+            ASCII mode, standard EOL characters may already be changing if transferring between
+            Windows and Unix platforms.</div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Off</kbd></dd>
+
+      
+            <dt class="dt dlterm">High Priority </dt>
+
+        
+        <dd class="dd">Indicates whether incoming and/or outgoing transfers through the mailbox should be
+          treated as high priority. When both high priority and regular priority transfers are
+          active, the high priority transfers get a larger portion of the available
+          bandwidth. Go
+          to <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Options &gt; Other</span></span> to set the <kbd class="ph userinput">High Priority Transfers Percentage Available
+            Bandwidth</kbd> (defaults to 75). See
+            <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a> for more information.</dd>
+
+              <dd class="dd">
+          
+          <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo Harmony</span> and
+              <span class="ph">Cleo VLTrader</span> option. </div>
+
+          <div class="note warning"><span class="warningtitle">Warning:</span> If the trading partner’s bandwidth (and not the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application's) is
+            limiting the transfer rate, then setting High Priority will not increase the transfer
+            rate and will only result in potentially slowing down other <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> transfers. Also, do not
+            attempt to set High Priority Incoming or Outgoing on a host where the same instance of
+            the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application is both the
+            client and server (for example, a local looptest). </div>
+</dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: <ul class="sl simple" id="topic_wqd_kdp_3r__d52057e2668">
+            <li class="sli"><kbd class="ph userinput">Incoming</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">Outgoing</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">Both</kbd></li>
+
+          </ul>
+</dd>
+
+      
+            <dt class="dt dlterm">Ignore Exception After Quit </dt>
+
+            <dd class="dd">Indicates to ignore any I/O errors that
+              occur when attempting to read the SMTP server response after issuing a
+                <span class="keyword cmdname">QUIT</span> command. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Off</kbd></dd>
+
+      
+            <dt class="dt dlterm">Include Failure In Subject Of Email</dt>
+
+            <dd class="dd">When specified, the exception message will be included in the email that is
+          generated on failure.<div class="note note"><span class="notetitle">Note:</span> If the exception message exceeds 256 characters, it will be
+            truncated.</div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel</dd>
+
+          
+            <dt class="dt dlterm"> Interim File Extension </dt>
+
+            <dd class="dd"> When applicable, specifies the temporary filename extension that a trading
+          partner's client software uses while transferring a file.  For the transfer logging
+          feature, the <span class="ph">Cleo Harmony</span> application sets the transfer status to <samp class="ph msgph">Interim
+            Success</samp> rather than <samp class="ph msgph">Success</samp> when a transfer with a temporary
+          filename extension is finished. Then, when the trading partner client software renames the
+          file to strip off the temporary filename extension, the <span class="ph">Cleo Harmony</span>
+          application inserts an additional <samp class="ph msgph">Success</samp> entry into the transfer log with
+          the resulting filename, thus marking the transfer as complete.  The dot preceding the
+          extension can be included in the configured value, but it is not required.  If multiple
+          temporary filename extensions are used, they can be separated by commas or semicolons. </dd>
+
+          
+      
+            <dt class="dt dlterm">LCOPY Archive </dt>
+
+            <dd class="dd">If specified, contains the directory for archiving <span class="keyword cmdname">LCOPY</span> source
+          files. </dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: Any local or shared directory. Macros can be used.  See
+            <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> (LCOPY Archive context). </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel, if any.</dd>
+
+      
+        <dt class="dt dlterm">Log Individual LCOPY Results To Transfer Logging </dt>
+
+        <dd class="dd">When this option is enabled, a <kbd class="ph userinput">&lt;send&gt;</kbd> and
+            <kbd class="ph userinput">&lt;receive&gt;</kbd> result is logged to the transfer log for each file
+            copied.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> option. </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Off</kbd></dd>
+
+      
+      
+            <dt class="dt dlterm">Macro Date Format </dt>
+
+            <dd class="dd">Specifies the date format to be used when the <kbd class="ph userinput">%date%</kbd> macro is
+          used.</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> for information about usage and
+          possible date/time formats. </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel, if any.</dd>
+
+          
+      
+            <dt class="dt dlterm">Macro Time Format </dt>
+
+            <dd class="dd">Specifies the time format to be used when the <kbd class="ph userinput">%time%</kbd> macro is
+          used.</dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> for information about usage
+          and possible date/time formats. </dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: The value specified for this property on the <span class="ph menucascade"><span class="ph uicontrol">Options &gt; Advanced</span></span> panel, if any.</dd>
+
+          
+          
+            <dt class="dt dlterm"> Maximum Concurrent FTP Logins </dt>
+
+            <dd class="dd">The total number of logins allowed at
+              any one time for this user. With the default value of 0, the number of concurrent
+              connections per user will be limited the Maximum Concurrent FTP Logins Per User
+              setting. A value other than zero will override the Maximum Concurrent FTP Logins Per
+              User setting for this user. </dd>
+
+          
+      
+            <dt class="dt dlterm">Maximum Incoming Transfer Rate
+              (kbytes/s) </dt>
+
+            <dd class="dd">Sets the maximum incoming transfer rate in Kbytes (1024 bytes) per second for each
+          mailbox or host. The default value of <kbd class="ph userinput">0</kbd> does not limit the transfer
+          rate. The Maximum Incoming Transfer Rate system setting might also limit the transfer
+          rates. The system Maximum Incoming Transfer Rate value is used unless this setting is more
+          restrictive. For simultaneous transfers, the number of active transfers also affects
+          individual transfer rates. See
+            <a class="xref" href="t_WebUI_CfgSysOpts_Advanced.html">Advanced System Options</a>.</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">0</kbd> - <kbd class="ph userinput">n</kbd>
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">0</kbd>
+        </dd>
+
+          
+      
+            <dt class="dt dlterm">Maximum Outgoing Transfer Rate
+              (kbytes/s) </dt>
+
+            <dd class="dd">Sets the maximum outgoing transfer rate in Kbytes (1024 bytes) per second for each
+          mailbox or host. The default value of <kbd class="ph userinput">0</kbd> does not limit the transfer
+          rate. The system setting might also limit the transfer rates. The system Maximum Outgoing
+          Transfer Rate value is used unless this setting is more restrictive. For simultaneous
+          transfers, the number of active transfers will also affect individual transfer rates. See
+            <a class="xref" href="t_WebUI_CfgSysOpts_Advanced.html">Advanced System Options</a> for more information about Maximum
+          Outgoing Transfer Rate.</dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">0</kbd> - <kbd class="ph userinput">n</kbd>
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">0</kbd>
+        </dd>
+
+          
+      
+            <dt class="dt dlterm">Outbox Sort </dt>
+
+            <dd class="dd">Controls the order in which multiple files are transferred for a
+            <span class="keyword cmdname">PUT</span> command.  If <kbd class="ph userinput">System Default</kbd> is specified,
+          the value set on the <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Options &gt; Advanced</span></span> tab takes precedence.  For <kbd class="ph userinput">Alphabetical</kbd> ordering,
+          the file extensions are not used to determine the sorted order unless they are needed to
+          make the filenames unique.</dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>:<ul class="sl simple" id="topic_wqd_kdp_3r__d52057e3711">
+            <li class="sli"><kbd class="ph userinput">System Default</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">Alphabetical</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">Date/Time Modified</kbd></li>
+
+          </ul>
+
+        </dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">System Default</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">PGP Compression Algorithm </dt>
+
+            <dd class="dd">Compression method used when OpenPGP packaging (with compression) is requested
+          through the <span class="keyword wintitle">Mailbox Packaging</span> tab. See <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>. If <kbd class="ph userinput">System Default</kbd> is
+          specified, the value set on the <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Options &gt; Advanced</span></span> tab is in effect.</dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>: <ul class="sl simple">
+            <li class="sli"><kbd class="ph userinput">System Default </kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">ZIP</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">ZLIB</kbd></li>
+
+          </ul>
+</dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">System Default</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">PGP Encryption Algorithm </dt>
+
+            <dd class="dd">Encryption method used when OpenPGP packaging (with encryption) is requested through
+          the <span class="keyword wintitle">Mailbox Packaging</span> tab. See <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>. If <kbd class="ph userinput">System Default</kbd> is specified, the value set on the <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Options &gt; Advanced</span></span> tab takes precedence.</dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>:<ul class="sl simple">
+            <li class="sli"><kbd class="ph userinput">System Default</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">TripleDES</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">Blowfish</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">CAST5</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">DES</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">AES-128</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">AES-192</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">AES-256</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">Twofish</kbd></li>
+
+          </ul>
+</dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">System Default</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">PGP Hash Algorithm </dt>
+
+            <dd class="dd">Signing method used when OpenPGP packaging (with signing) is requested through the
+            <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>.  If <kbd class="ph userinput">System Default</kbd> is
+          specified, the value set on the <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Options &gt; Advanced</span></span> tab takes precedence.</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>:<ul class="sl simple">
+            <li class="sli"><kbd class="ph userinput">System Default</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">MD2</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">MD5</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">RIPE-MD-160</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">SHA-1</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">SHA-256</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">SHA-384</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">SHA-512</kbd></li>
+
+          </ul>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">System Default</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">PGP Integrity Check </dt>
+
+            <dd class="dd">When OpenPGP encrypting (see <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>), include an
+          integrity check on encrypted data. Can be disabled for compatibility with certain OpenPGP
+          implementation. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">PGP Signature Verification </dt>
+
+            <dd class="dd">Indicates whether or not signed inbound PGP messages should verified when inbound
+          OpenPGP packaging is requested through the <span class="keyword wintitle">Mailbox Packaging</span> tab. See
+            <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>. In general, this property should be enabled. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">PGP V3 Signature</dt>
+
+            <dd class="dd"></dd>
+
+            
+            
+          
+          
+            <dt class="dt dlterm"> Retain Temporary Inbound Message Files </dt>
+
+            <dd class="dd">Leaves any files that are used while processing inbound messages in the
+            <span class="ph filepath">temp\</span> folder. The default action is to delete these files after
+          processing has completed.  These files can be helpful for problem diagnosis.<div class="note note"><span class="notetitle">Note:</span> Temp
+            files are only created for large (&gt; 2.3 meg) or compressed inbound
+          messages.</div>
+</dd>
+
+          
+          
+            <dt class="dt dlterm"> Store AS3 Raw Sent Message </dt>
+
+            <dd class="dd">
+              <p class="p">Saves the content of the FTP header and raw (unprocessed) message sent to the
+                remote client. The files are stored in the as3\sent\ directory under the <span class="ph">Cleo Harmony</span> root path. These files may be useful in diagnosing problems,
+                but should be disabled if disk space needs to be conserved.</p>
+
+            </dd>
+
+          
+          
+            <dt class="dt dlterm">Trigger At Upload Completion</dt>
+
+        <dd class="dd">When this property is not selected, the trigger is created when the next command is
+          received after the file upload. </dd>
+
+            <dd class="dd">When this property is selected, the trigger is created when a file upload is
+          completed (data channel is closed). <div class="note note"><span class="notetitle">Note:</span> For the FTP protocol, the end of file is
+            signaled by the closure of the data channel. This makes it difficult to distinguish
+            between successful and failed transfers accurately. Therefore, if this property is
+            selected, it is possible that the trigger is created for an incomplete or failed
+            transfer. </div>
+<div class="note note"><span class="notetitle">Note:</span> There might be some use cases where a transfer is considered
+            successful even if the client does not issue another command or log out. For example, if
+            the client transfers a file and remains logged in until the next transfer (which could
+            be several minutes later). In that use case, you should select the property.</div>
+</dd>
+
+          
+          
+            <dt class="dt dlterm">Use AS3 Content Type for File
+              Extension</dt>
+
+            <dd class="dd">By default, inbound messages that do not specifically contain the name of the target
+          file to be saved are stored using the value of the Message-ID (of that message) with the
+            <span class="ph filepath">.file</span> extension.  When this option is selected, inbound messages
+          without a target file name specifier will be stored using the Message-ID and the
+          appropriate file extension based on the Content Type of the message.</dd>
+
+          
+          
+            <dt class="dt dlterm">Use External IP Address In PASV
+              Response</dt>
+
+            <dd class="dd">Indicates for passive (pasv) mode that
+              the external rather than the local IP address should be included in data port response
+              to the FTP client.</dd>
+
+          
+      
+            <dt class="dt dlterm">Use Folded Headers For Outbound
+              Messages</dt>
+
+            <dd class="dd">Enables or disables automatic line wrapping of HTTP headers exceeding 76
+          characters.  By default headers are not folded since some non-Cleo product
+          
+          remote hosts using Microsoft Internet Information Server (IIS) cannot handle folded
+          headers properly. Unless your host has been pre-configured to enable folded headers, leave
+          this setting cleared! </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">Off</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">Wait For Execute On</dt>
+
+            <dd class="dd">Indicates whether execution should wait for processing to complete within an
+            <span class="keyword cmdname">Execute On Fail</span>, <span class="keyword cmdname">Execute On Successful Copy</span>,
+            <span class="keyword cmdname">Execute On Successful Receive</span>, or <span class="keyword cmdname">Execute On Successful
+            Send</span> command.  Note that this option does not apply to native AS400
+          execution.</dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+          
+      
+            <dt class="dt dlterm">XML Encryption Algorithm</dt>
+
+            <dd class="dd">The method used to encrypt/decrypt files when XML Encryption packaging is requested
+          through the <span class="keyword wintitle">Mailbox Packaging</span> tab. See <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a> .  If <kbd class="ph userinput">System Default</kbd> is
+          specified, the value set on the <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Options &gt; Advanced</span></span> tab takes precedence. </dd>
+
+            <dd class="dd"><strong class="ph b">Possible values</strong>:<ul class="sl simple" id="topic_wqd_kdp_3r__d52057e6249">
+            <li class="sli"><kbd class="ph userinput">System Default</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">TripleDES</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">AES-128</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">AES-192</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">AES-256</kbd></li>
+
+          </ul>
+</dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">System Default</kbd>
+        </dd>
+
+          
+      
+            <dt class="dt dlterm">Zip Compression Level</dt>
+
+            <dd class="dd">Controls the level of compression for <span class="keyword cmdname">LCOPY -ZIP</span> operations. If
+            <kbd class="ph userinput">System Default</kbd> is specified, the value set on the <span class="ph menucascade"><span class="ph uicontrol">Configure &gt; Options &gt; Advanced</span></span> takes precedence </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <ul class="sl simple" id="topic_wqd_kdp_3r__d52057e6328">
+            <li class="sli"><kbd class="ph userinput">System Default</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">9</kbd> -  (Best Compression)</li>
+
+            <li class="sli"><kbd class="ph userinput">8</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">7</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">6</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">5</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">4</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">3</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">2</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">1</kbd></li>
+
+            <li class="sli"><kbd class="ph userinput">0</kbd> - (No Compression) </li>
+
+          </ul>
+</dd>
+
+            <dd class="dd"><strong class="ph b">Default value</strong>: System Default</dd>
+
+          
+      
+            <dt class="dt dlterm">Zip Subdirectories Into Individual Zip
+              Files</dt>
+
+            <dd class="dd">Indicates whether or not subdirectories should be bundled for <span class="keyword cmdname">LCOPY –ZIP
+            –REC</span> operations.  When enabled, each first-level subdirectory (and all of its
+          descendents) will be bundled together into an individual zip file.  The name of this zip
+          file may optionally reflect the subdirectory name if an asterisk
+          (<kbd class="ph userinput">*</kbd>) is placed in the destination path.  Any files that are directly
+          off the source root directory will not be copied.  </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+          
+        
+    </dl>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

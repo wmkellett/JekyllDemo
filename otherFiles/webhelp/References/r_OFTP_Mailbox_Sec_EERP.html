@@ -1,0 +1,111 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The EERP tab is used to specify a certificate for EERP and NERP packet signing. The trading partner's signing certificate is used to validate an incoming signed EERP/NERP. Note that this certificate ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="OFTP Mailbox Security: EERP Tab"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_OFTP_Mailbox_SecurityTab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_ygx_fjp_cz"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>OFTP Mailbox Security: EERP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_ygx_fjp_cz">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_OFTP_Mailbox.html" title="A mailbox's parameters allow access to the host system.">OFTP Mailbox</a> / <a class="navheader_parent_path" href="../Topics/t_OFTP_Mailbox_SecurityTab.html" title="OFTP Mailbox: Security Tab">OFTP Mailbox: Security Tab</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Mailbox_SecurityTab.html" title="OFTP Mailbox: Security Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Mailbox: Security Tab</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">OFTP Mailbox Security: EERP Tab</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <p class="p">The <span class="keyword wintitle">EERP</span> tab is used to specify a certificate for EERP and NERP packet
+        signing. The trading partner's signing certificate is used to validate an incoming signed
+        EERP/NERP. Note that this certificate is optional. If it is not specified, the incoming
+        signed EERP/NERP's signature is compared to all valid certificates in the local certificate
+          store. <span class="ph uicontrol">My Certificate</span> signing certificate is used to sign outgoing
+        EERP/NERPs.</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Trading Partner's Certificates</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Signing Certificate</span></dt>
+
+                <dd class="dd">The certificate to use to validate an incoming signed EERP/NERPs.</dd>
+
+                <dd class="dd">Specify a value or click <span class="ph uicontrol">Browse</span> to navigate to the file
+                  you want to select. </dd>
+
+                <dd class="dd">If you do not specify a value, the incoming EERP/NERP's signature is compared to
+                  all valid certificates in the local certificate store. </dd>
+
+              
+              
+                <dt class="dt dlterm">Use signing certificate</dt>
+
+                <dd class="dd">Indicates that your trading partner uses the same certificate as specified for
+                  signing in the <span class="ph uicontrol">Signing Certificate</span> field on the
+                    <span class="keyword wintitle">Certificates</span> tab (see <a class="xref" href="r_OFTP_Mailbox_CertificatesTab.html">OFTP Mailbox: Certificates Tab</a>).</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">My Certificate</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Signing Certificate</span></dt>
+
+                <dd class="dd">The certificate to use to sign outgoing EERP/NERPs. </dd>
+
+                <dd class="dd">Specify a value or click <span class="ph uicontrol">Browse</span> to navigate to the file
+                  you want to select. </dd>
+
+              
+              
+                <dt class="dt dlterm">Password</dt>
+
+                <dd class="dd">The password for the certificate you specify.</dd>
+
+              
+              
+                <dt class="dt dlterm">Use encryption certificate</dt>
+
+                <dd class="dd">Indicates that you want to use the same certificate as specified for signing in
+                  the <span class="ph uicontrol">Signing Certificate</span> field on the
+                    <span class="keyword wintitle">Certificates</span> tab (see <a class="xref" href="r_OFTP_Mailbox_CertificatesTab.html">OFTP Mailbox: Certificates Tab</a>).</dd>
+
+              
+              
+                <dt class="dt dlterm">Exchange Certificates</dt>
+
+                <dd class="dd">Displays the Certificate Exchange dialog box, which allows you to send your user
+                  and SSL certificates to your trading partner. See <a class="xref" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html">Exchanging Certificates with Your Trading Partner</a>.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+      </dl>
+
+      
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Mailbox_SecurityTab.html" title="OFTP Mailbox: Security Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Mailbox: Security Tab</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

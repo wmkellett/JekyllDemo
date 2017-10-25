@@ -1,0 +1,121 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The following additional directories will be created either during the ebXML installation or as needed by the application: Directory Purpose ebXML\ The ebXML\ack directory contains subdirectories for ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="ebXML-Specific Directories"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ebxml_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ebxml-specific_directories"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>ebXML-Specific Directories</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ebxml-specific_directories">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_ebxml_hosts.html" title="ebXML Hosts">ebXML Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ebxml_hosts.html" title="ebXML Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">ebXML-Specific Directories</h1>
+
+   <div class="body">
+      <p class="p">The following additional directories will be created
+         either during the ebXML installation or as needed by the application:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">Directory</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">Purpose</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">ebXML\</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">The <span class="ph filepath">ebXML\ack</span> directory contains subdirectories for
+                        received (and optionally sent) acknowledgments. This directory can be
+                        changed on the ebXML Message Service Panel. Acknowledgments can be
+                        automatically archived by the application or manually archived by the user
+                        from the "Acks" tab on the listener panel. Archived acknowledgments are
+                        stored in <span class="ph filepath">ebXML\ack\received\archive\ack.zip</span> or
+                           <span class="ph filepath">ebXML\ack\sent\archive\ack.zip</span>.</p>
+
+                     <p class="p"> The <span class="ph filepath">ebXML\data</span> directory contains an ebXMLmsgs.txt
+                        file that is used by the application to determine the receipt of duplicate
+                        messages.  Entries in this file are retained for the time interval
+                        configured on the <a class="xref" href="../Tasks/t_Configure_ebXML_Msg_Service_ebXML_Tab.html">ebXML
+                           Message Service</a>. </p>
+
+                     <p class="p">The <span class="ph filepath">ebXML\schemas</span> directory contains XML schema (.xsd)
+                        files that describe the format of various ebXML documents.</p>
+
+                     <p class="p">The <span class="ph filepath">ebXML\sent+received</span> directory contains "raw"
+                        (unprocessed) incoming and outgoing messages. These files can be helpful in
+                        diagnosing problems. Old files should be deleted or archived by the user, if
+                        necessary. </p>
+
+                     <p class="p">The <span class="ph filepath">ebXML\unsent</span> directory contains raw header, data
+                        and message setup information files. These files are used if a message needs
+                        to be retransmitted and are deleted automatically by the application once
+                        the message transfer has either completed successfully or has failed due to
+                        timeouts, exceptions or exhausting the number of retries.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">lostandfound\</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">Default inbox where incoming data will be deposited when the application
+                        cannot determine where to put it.</p>
+
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">temp\</p>
+
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                     <p class="p">Temporary location where large incoming messages or compressed messages may
+                        be stored while they are being processed by the application. These are
+                        deleted automatically once the message has been completely processed. This
+                        directory is only created if large messages or compressed messages need to
+                        be processed.</p>
+
+                  </td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ebxml_hosts.html" title="ebXML Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

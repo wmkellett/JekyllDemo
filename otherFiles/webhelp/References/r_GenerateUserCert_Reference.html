@@ -1,0 +1,310 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="User Information and Usage Information User Alias An arbitrary name for the certificate (for example, CLEO ) Common Name A user name for client-style certificates; a fully qualified computer name (or ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="User Certificate Reference"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_generate_self-signed_user_certificate.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="UserCertReference"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>User Certificate Reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="UserCertReference">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a> / <a class="navheader_parent_path" href="../Tasks/t_WebUI_generate_self-signed_user_certificate.html" title="Generating Self-signed User Certificates">Generating Self-signed User Certificates</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_WebUI_generate_self-signed_user_certificate.html" title="Generating Self-signed User Certificates"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Generating Self-signed User Certificates</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">User Certificate Reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section"><h2 class="title sectiontitle">User Information and Usage Information</h2>
+      
+      
+          <dl class="dl">
+            
+              <dt class="dt dlterm">User Alias </dt>
+
+              <dd class="dd"> An arbitrary name for the
+                certificate (for example, <kbd class="ph userinput">CLEO</kbd>) </dd>
+
+            
+            
+              <dt class="dt dlterm">Common Name </dt>
+
+              <dd class="dd"> A user name for client-style
+                certificates; a fully qualified computer name (or registered IP address) for
+                server-style certificates (for example, <kbd class="ph userinput">cleo.com</kbd>). This field
+                may be completed when importing OpenPGP or SSH FTP keys. </dd>
+
+            
+            
+              <dt class="dt dlterm">Email </dt>
+
+              <dd class="dd">Administrator email address, for
+                example, <kbd class="ph userinput">user@cleo.com</kbd>. This field may be completed when
+                importing OpenPGP or SSH FTP keys. </dd>
+
+            
+            
+              <dt class="dt dlterm">Organization Unit </dt>
+
+              <dd class="dd"> This could be a company department
+                (for example, <kbd class="ph userinput">Cleo Engineering</kbd>, or <kbd class="ph userinput">Cleo
+                  Production</kbd>) </dd>
+
+            
+            
+              <dt class="dt dlterm">Organization </dt>
+
+              <dd class="dd"> Official company name (for example,
+                  <kbd class="ph userinput">Cleo Communications, Inc.</kbd>) </dd>
+
+            
+            
+              <dt class="dt dlterm">City </dt>
+
+              <dd class="dd"> Complete city name (for example,
+                  <kbd class="ph userinput">Loves Park</kbd>) </dd>
+
+            
+            
+              <dt class="dt dlterm">State </dt>
+
+              <dd class="dd"> State name (for example,
+                  <kbd class="ph userinput">Illinois</kbd>) </dd>
+
+            
+            
+              <dt class="dt dlterm">Country </dt>
+
+              <dd class="dd"> Two characters (for example,
+                  <kbd class="ph userinput">US</kbd>).  Select from pull-down menu.</dd>
+
+            
+            
+              <dt class="dt dlterm">Signature Algorithm </dt>
+
+              <dd class="dd"> Either MD5, SHA-1, SHA-256, SHA-384,
+                or SHA-512. <strong class="ph b">SHA-1 is recommended.</strong> The appropriate algorithm is configured and
+                this is field is disabled after importing OpenPGP or SSH FTP keys. </dd>
+
+            
+            
+              <dt class="dt dlterm">DigitalSignature </dt>
+
+              <dd class="dd"> Set if certificate is to be used for
+                SSL client or signing.  <strong class="ph b">This field should generally be checked for AS2, AS3, or
+                  ebMS.</strong>
+              </dd>
+
+            
+            
+              <dt class="dt dlterm">KeyEncipherment </dt>
+
+              <dd class="dd"> Set if certificate is to be used for
+                SSL server or encryption.  <strong class="ph b">This field should generally be checked for AS2, AS3,
+                  or ebMS.</strong>
+              </dd>
+
+            
+            
+              <dt class="dt dlterm">clientAuth </dt>
+
+              <dd class="dd">
+                Set if certificate is to be used for TLS client.  <strong class="ph b">Not applicable to AS2, AS3,
+                    or ebMS.</strong>
+                
+              </dd>
+
+            
+            
+              <dt class="dt dlterm">serverAuth </dt>
+
+              <dd class="dd">
+                Set if certificate is to be used for TLS server.  <strong class="ph b">Not applicable to AS2, AS3,
+                    or ebMS.</strong>
+                
+              </dd>
+
+            
+            
+              <dt class="dt dlterm">Subject Key Identifier </dt>
+
+              <dd class="dd"> Set if the Subject Key Identifier
+                extension is to be generated.  This extension is used as a means of identifying the
+                particular public key being used. </dd>
+
+            
+            
+              <dt class="dt dlterm">Valid For </dt>
+
+              <dd class="dd"> The number of months that this
+                certificate will be valid.  By default, it is set to 24 months, but may be increased
+                up to 96 months. </dd>
+
+            
+          </dl>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Generate Private</h2>
+      
+      <p class="p">Used to generate a new public/private key pair. </p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="UserCertReference__table_t1n_qmp_hx" class="table" frame="border" border="1" rules="all">
+          
+          
+          <tbody class="tbody">
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top"> Private Key Size </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top">
+                <p class="p">512, 1024, 2048, 3072 or 4096 for RSA certificates</p>
+
+                <p class="p">512 or 1024 for DSA certificates. </p>
+
+                <p class="p">The larger the key-size, the stronger the encryption; however, depending on your
+                  platform and/or CPU speed, generating certificates with private key sizes greater
+                  than 2048 bits may take several minutes.</p>
+
+                <p class="p">(1024 is the default for both RSA and DSA certificates)</p>
+
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top"> Algorithm </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top"> Defaults to RSA, which is the
+                defacto standard.  DSA is also available. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top"> Private Key Password </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top"> This is an arbitrary
+                password.</td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top"> Confirm Password </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top">
+                <span class="ph">Re-enter the private key</span><span class="ph"> password.</span>
+              </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top"> Encryption Sub-key Size </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top"> 1024, 2048, or 4096-bit OpenPGP
+                encryption sub-key size. Enabled when the Generate OpenPGP checkbox is selected.
+                This is only necessary if you wish to generate a certificate to be used for OpenPGP
+                encryption and an encryption sub-key is required. </td>
+
+            </tr>
+
+            <tr class="row">
+              <td class="entry" rowspan="1" colspan="1" valign="top"> OpenPGP Key Does Not Expire </td>
+
+              <td class="entry" rowspan="1" colspan="1" valign="top"> When selected, the generated OpenPGP
+                key will never expire. Otherwise, the OpenPGP key will expire when the User
+                Certificate expires. Enabled when the Generate OpenPGP checkbox is selected.
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+</div>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Import OpenPGP</h2>
+      
+      <p class="p">Used for OpenPGP encryption for an existing key. </p>
+
+      
+      <div class="p">
+        
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="UserCertReference__table_o4g_vmp_hx" class="table" frame="border" border="1" rules="all">
+            
+            
+            <tbody class="tbody">
+              <tr class="row">
+                <td class="entry" rowspan="1" colspan="1" valign="top"> OpenPGP Key </td>
+
+                <td class="entry" rowspan="1" colspan="1" valign="top"> OpenPGP secret key. Browse/type
+                  for the OpenPGP filename. </td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" rowspan="1" colspan="1" valign="top"> Private Key Password </td>
+
+                <td class="entry" rowspan="1" colspan="1" valign="top"> This must be the same password as
+                  the existing key. </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+</div>
+
+      </div>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">SSH FTP Key</h2><p class="p">SSH FTP Key - to use an existing key for SSH FTP
+        authentication. Enter the following information and click <span class="ph uicontrol">Import</span> to
+        read the key information. The Common Name and Email fields will be completed using the key
+        information.</p>
+
+      
+      <div class="p">
+        
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="UserCertReference__table_ukq_h4p_hx" class="table" frame="border" border="1" rules="all">
+            
+            
+            <tbody class="tbody">
+              <tr class="row">
+                <td class="entry" rowspan="1" colspan="1" valign="top"> SSH FTP Key </td>
+
+                <td class="entry" rowspan="1" colspan="1" valign="top"> SSH FTP private key. Browse/type
+                  for the SSH filename. </td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" rowspan="1" colspan="1" valign="top"> Private Key Password </td>
+
+                <td class="entry" rowspan="1" colspan="1" valign="top"> This must be the same password as
+                  the existing key. </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+</div>
+
+      </div>
+
+    </div>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_WebUI_generate_self-signed_user_certificate.html" title="Generating Self-signed User Certificates"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Generating Self-signed User Certificates</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

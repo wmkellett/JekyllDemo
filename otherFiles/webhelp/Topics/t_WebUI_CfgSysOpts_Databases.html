@@ -1,0 +1,130 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo Harmony and Cleo VLTrader applications only. In the web UI, go to Administration &gt; System &gt; Databases . In the native UI, select Options &gt; Databases . Use the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Databases"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_System.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_CfgSysOpts_DBPayload.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="DatabasesConfig"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Databases</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="DatabasesConfig">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_WebUI_System.html" title="System">System</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_System.html" title="System"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">System</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Databases</h1>
+
+  <div class="body">
+    <div class="section">
+      <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications
+        only.</div>
+
+      <p class="p">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">System</span> &gt; <span class="ph uicontrol">Databases</span></span>. In the native UI, select <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Databases</span></span>. </p>
+
+      
+      <p class="p">Use the <span class="keyword wintitle">Databases</span> panel to configure one or more databases to be used
+        either for <span class="ph">VersaLex</span> Transfer
+        Logging or one of the optional <span class="ph">Cleo VLNavigator</span> applications. See <a class="xref" href="t_WebUI_CfgSysOpts_Transfers.html">Transfers</a> and <a class="xref" href="t_Applications_VLNav.html">Applications</a>. When you click <span class="ph uicontrol">New Database
+          Connection</span>, the <span class="keyword wintitle">Database Connection Configuration</span> dialog
+        appears. Enter values for the following fields:</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Connection Type</dt>
+
+          <dd class="dd">Choose <kbd class="ph userinput">ODBC</kbd> for databases where ODBC (Open DataBase
+            Connectivity) is used. Choose MySQL Connector/J if a MySQL JDBC connection is used.
+            Otherwise, select Other. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">ODBC</kbd>, <kbd class="ph userinput">MySQL
+              Connector/J</kbd>, or <kbd class="ph userinput">Other</kbd></dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">ODBC </kbd></dd>
+
+        
+        
+          <dt class="dt dlterm">Connection String </dt>
+
+          <dd class="dd">JDBC connection string for accessing the database. </dd>
+
+          <dd class="dd">
+            <p class="p">Examples:</p>
+
+            <pre class="pre codeblock">jdbc:odbc:vltdb</pre>
+
+            <pre class="pre codeblock">jdbc:mysql://myhost:3306/vltdb</pre>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Driver String </dt>
+
+          <dd class="dd">This string describes the path to the Java class that will be used for accessing the
+            database. </dd>
+
+          <dd class="dd">
+            <p class="p">Examples:</p>
+
+            <pre class="pre codeblock">sun.jdbc.odbc.JdbcOdbcDriver</pre>
+
+            <pre class="pre codeblock">com.mysql.jdbc.Driver</pre>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Username</dt>
+
+          <dd class="dd">Username for accessing the database (if required). </dd>
+
+        
+        
+          <dt class="dt dlterm">Password </dt>
+
+          <dd class="dd">Password for accessing the database (if required). </dd>
+
+        
+        
+          <dt class="dt dlterm">Single Record Timeout (seconds) </dt>
+
+          <dd class="dd">Prevents VersaLex from hanging on single-records transactional (i.e., transfer log and
+            operator trail log) inserts and updates. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">0-n</kbd> where <kbd class="ph userinput">n</kbd> is a
+            reasonable number.  <kbd class="ph userinput">0</kbd> indicates unlimited, but is not recommended
+            as it could cause processing to hang in the event of database problems. </dd>
+
+          <dd class="dd"><strong class="ph b">Default value</strong>:<kbd class="ph userinput">150</kbd>
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Test Database Connection </dt>
+
+          <dd class="dd">Attempts to create a database connection using the entered <kbd class="ph userinput">Connection
+              String</kbd>, <kbd class="ph userinput">Driver String</kbd>,
+              <kbd class="ph userinput">Username</kbd>, and <kbd class="ph userinput">Password</kbd> and indicates
+            success or failure. </dd>
+
+        
+      </dl>
+
+      <p class="p">See <a class="xref" href="t_database_definitions.html">Database Definitions</a> for information about JDBC drivers and driver/connection string
+        values. </p>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_WebUI_CfgSysOpts_DBPayload.html">Database Payload</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_System.html" title="System"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">System</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

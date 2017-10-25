@@ -1,0 +1,254 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="You can create connector hosts in the Cleo Harmony and Cleo VLTrader applications only. Connector hosts all have the same general structure, which is slightly different from the other host types. ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Connector Host"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_ConnectorHost_Configuration.html"></meta><meta name="DC.Relation" scheme="URI" content="../References/r_ConnectorHost_command_reference.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_omt_5j3_hw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Connector Host</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_omt_5j3_hw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Connector Host</h1>
+
+  <div class="body">
+    <p class="p">You can create connector hosts in the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only. </p>
+
+    <p class="p">Connector hosts all have the same general structure, which is slightly different from the
+      other host types. Connector hosts do not have mailboxes and all properties specific to the
+      connector type are segregated from other advanced properties. There are several connector
+      hosts that ship with the product and are available in the <span class="ph uicontrol">Templates</span>
+      tree, including SMB, Clarify, EEI, File, S3, and
+      HDFS, and LDAP. The LDAP connector is different from the rest. SMB, Clarify, EEI, File S3, and HDFS are all <em class="ph i">data connectors</em>, while LDAP is an <em class="ph i">authentication connector</em>.</p>
+
+    <div class="p">A <em class="ph i">data connector host</em> can be accessed from another host inbox or outbox or as the
+      source or destination of a command by using one of the following URI syntaxes:<dl class="dl">
+        
+          <dt class="dt dlterm">Long Form</dt>
+
+          <dd class="dd">
+            <div class="p"><pre class="pre codeblock">scheme:host/subdir/filename?name=value</pre>
+where,<ul class="ul">
+                <li class="li"><span class="ph filepath">scheme</span> is the scheme name built into the connector,
+                  sometimes named after a protocol. For example, SMB.</li>
+
+                <li class="li"><span class="ph filepath">host</span> is the alias assigned to the active connector</li>
+
+                <li class="li"><span class="ph filepath">subdir</span> and <span class="ph filepath">filename</span> are optional
+                  depending on use case</li>
+
+                <li class="li"><span class="ph filepath">name=value</span> is optional and can be used to override any
+                  connector or advanced properties. These properties temporarily override properties
+                  set in the connector host only during the use of the URI file instance.</li>
+
+              </ul>
+</div>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Short Form</dt>
+
+          <dd class="dd">
+            <div class="p"><pre class="pre codeblock">sysscheme:/subdir/filename?name=value</pre>
+ where,<ul class="ul">
+                <li class="li"><span class="ph filepath">sysscheme</span> is the value of the System Scheme Name property
+                  as set under the connector properties tab </li>
+
+                <li class="li"><span class="ph filepath">subdir</span> and <span class="ph filepath">filename</span> are optional
+                  depending on use case </li>
+
+                <li class="li"><span class="ph filepath">name=value</span> is optional and can be used to override any
+                  connector or advanced properties. These properties temporarily override properties
+                  set in the connector host only during the use of the URI file instance.</li>
+
+              </ul>
+</div>
+
+          </dd>
+
+        
+      </dl>
+ These powerful constructs allow you to move data seamlessly across hosts and connectors. </div>
+
+    <p class="p">An <em class="ph i">authentication connector host</em> can be accessed through a Users' mailbox by selecting the <span class="ph uicontrol">Connector Host</span> authentication type. The same URI syntax applies as above; however, the optional subdir and filename path would never be applicable for an authentication connector.</p>
+
+    <p class="p">There are specific rules for URI accessibility. The connector must be located within the same
+      branch as the host for access to be granted, but there are special rules for the root host
+      folder: </p>
+
+    <ul class="ul" id="topic_omt_5j3_hw__ul_dcd_g54_fx">
+      <li class="li">If the connector is in the root host folder, any host in any folder can access it via a
+        URI. But a host in the root host folder can only access connectors also in the root host
+        folder. </li>
+
+      <li class="li">Otherwise, the connector must be in the same host subfolder or below for it to be
+        accessible from the host.</li>
+
+    </ul>
+
+    <div class="section"><h2 class="title sectiontitle">Examples of using an URI as Inbox and Outbox</h2>
+      
+      <p class="p">The data connector URIs are typically used as the Inbox and/or Outbox locations for other
+        hosts. This section contains examples of using connector URIs as inboxes and outboxes.</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Examples of URIs configured as the host Inbox</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm"><samp class="ph codeph">smb:MyServer/partner1/inbox</samp></dt>
+
+                <dd class="dd">Stores incoming files to an SMB/CIFS file server in the
+                    <span class="ph filepath">partner1/inbox</span> folder under the share path folder. The name
+                  of the file server, login credentials, and share path folder are defined in the
+                    <kbd class="ph userinput">MyServer</kbd> SMB connector.</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">clarify:Prod/%host%/toclarify</samp></dt>
+
+                <dd class="dd">Sends incoming files directly to the Cleo Clarify system(s) configured in the
+                    <kbd class="ph userinput">Prod</kbd> Clarify connector. These files are tagged as coming
+                  from the current host alias (<kbd class="ph userinput">%host%</kbd>). This URI scheme
+                  should be used for all Inbox configurations sending directly to Clarify. No
+                  sub-path should be specified after <kbd class="ph userinput">toclarify</kbd>.</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">eei:Prod/</samp></dt>
+
+                <dd class="dd">Sends incoming files directly to the Cleo EEI system configured in the
+                    <kbd class="ph userinput">Prod</kbd> EEI connector host. This URI scheme should be used
+                  for all Inbox configurations sending directly to EEI. No sub-path should be
+                  specified after the connector alias (<kbd class="ph userinput">Prod</kbd> in this
+                  example).</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">file:MyRoot/partner1/inbox</samp></dt>
+
+                <dd class="dd">Stores incoming files on the file system in the
+                    <span class="ph filepath">partner1/inbox</span> folder under the root path folder. The root
+                  path folder is defined in the <kbd class="ph userinput">MyRoot</kbd> File connector.</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">s3:MyS3/partner1/inbox</samp></dt>
+
+                <dd class="dd">
+                  <p class="p">Sends incoming files directly to the <span class="ph filepath">partner1/inbox</span> folder
+                    object in an Amazon S3 bucket. The Amazon S3 login credentials, region, and
+                    bucket are defined in the <kbd class="ph userinput">MyS3</kbd> S3 connector.</p>
+
+                </dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">hdfs:MyHDFS/partner1/inbox</samp></dt>
+
+                <dd class="dd">Sends incoming files directly to the <span class="ph filepath">partner1/inbox</span> folder
+                  in a Hadoop Distributed File System (HDFS). The HDFS login credentials are defined
+                  in the <kbd class="ph userinput">MyHDFS</kbd> HDFS connector.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"></dt>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Examples of URIs configured as the host Outbox</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm"><samp class="ph codeph">smb:MyServer/partner1/outbox</samp></dt>
+
+                <dd class="dd">Retrieves outgoing files from the <span class="ph filepath">partner1/outbox</span> folder
+                  under the share path folder on an SMB/CIFS file server. The name of the file
+                  server, login credentials, and share path folder are defined in the
+                    <kbd class="ph userinput">MyServer</kbd> SMB connector.</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">clarify:Prod/%host%/fromclarify</samp></dt>
+
+                <dd class="dd">Retrieves outgoing files from the Cleo Clarify system(s) configured in the
+                    <kbd class="ph userinput">Prod</kbd> Clarify connector. Clarify files for the current
+                  host alias (<kbd class="ph userinput">%host%</kbd>) are retrieved directly from Clarify.
+                  This URI scheme should be used for all Outbox configurations sending directly from
+                  Clarify. No sub-path should be specified below
+                  <kbd class="ph userinput">fromclarify</kbd>.</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">eei:Prod/partner1</samp></dt>
+
+                <dd class="dd">Retrieves outgoing files for <kbd class="ph userinput">partner1</kbd> from the Cleo EEI
+                  system configured in the <kbd class="ph userinput">Prod</kbd> EEI connector host. This URI
+                  scheme should be used for all Outbox configurations sending directly from EEI. No
+                  sub-path should be specified after the EEI partner name
+                    (<kbd class="ph userinput">partner1</kbd> in this example).</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">file:MyRoot/partner1/outbox</samp></dt>
+
+                <dd class="dd">Retrieves outgoing files from the file system in the
+                    <span class="ph filepath">partner1/outbox</span> folder under the root path folder. The root
+                  path folder is defined in the <kbd class="ph userinput">MyRoot</kbd> File connector.</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">s3:MyS3/partner1/outbox</samp></dt>
+
+                <dd class="dd">Retrieves outgoing files directly from the <span class="ph filepath">partner1/outbox</span>
+                  folder object in an Amazon S3 bucket. The Amazon S3 login credentials, region, and
+                  bucket are defined in the <kbd class="ph userinput">MyS3</kbd> S3 connector.</dd>
+
+              
+              
+                <dt class="dt dlterm"><samp class="ph codeph">hdfs:MyHDFS/partner1/outbox</samp></dt>
+
+                <dd class="dd">Retrieves outgoing files directly from the <span class="ph filepath">partner1/outbox</span>
+                  folder in a Hadoop Distributed File System (HDFS). The HDFS login credentials are
+                  defined in the <kbd class="ph userinput">MyHDFS</kbd> HDFS connector.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_ConnectorHost_Configuration.html">Connector Configuration</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+A connector host is configured using parameters that specify its location and how it is     reached. </li>
+<li class="link ulchildlink"><strong><a href="../References/r_ConnectorHost_command_reference.html">Connector Host Command Reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+Descriptions of commands and their options, arguments, and parameters.</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

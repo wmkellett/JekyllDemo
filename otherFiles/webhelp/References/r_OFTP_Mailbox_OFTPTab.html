@@ -1,0 +1,132 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="User ID (SSIDCODE) Password (SSIDPASWD) Credentials that identify your trading partner. Outgoing Default Virtual Filename (SFIDDSN) Optionally, enter an outgoing Default Virtual Filename . An action's ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="OFTP Mailbox: OFTP Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_OFTP_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_mqs_ybq_15"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>OFTP Mailbox: OFTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_mqs_ybq_15">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_oftp_configuration.html" title="Configure an Odette FTP (OFTP) host starting with the generic OFTP pre-configured host.">OFTP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_OFTP_Mailbox.html" title="A mailbox's parameters allow access to the host system.">OFTP Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Mailbox.html" title="A mailbox's parameters allow access to the host system."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">OFTP Mailbox: OFTP Tab</h1>
+
+  <div class="body refbody">
+    <div class="section"><dl class="dl">
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">User ID (SSIDCODE)</span></dt>
+
+        <dt class="dt dlterm"><span class="ph uicontrol">Password (SSIDPASWD)</span></dt>
+
+        <dd class="dd">Credentials that identify your trading partner.</dd>
+
+      
+      
+        <dt class="dt dlterm">Outgoing</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Default Virtual Filename (SFIDDSN)</span></dt>
+
+              <dd class="dd">Optionally, enter an outgoing <span class="ph uicontrol">Default Virtual Filename</span>. An
+                action's <span class="keyword cmdname">PUT</span> command destination, if specified, will override
+                this value. If a <span class="keyword cmdname">PUT</span> command does not specify a destination and a
+                Default Virtual Filename is also not specified, then the source filename is
+                used.</dd>
+
+            
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Originator</span></dt>
+
+              <dd class="dd">A user ID identifying the sender. Select the check box and provide a value to
+                override the default. You can also use the <span class="keyword cmdname">SET</span> command in an
+                action to override these values.</dd>
+
+              <dd class="dd"><strong class="ph b">Default value</strong>: your User ID.</dd>
+
+            
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Destination</span></dt>
+
+              <dd class="dd">A user ID identifying the receiver. Select the check box and provide a value to
+                override the default. You can also use the <span class="keyword cmdname">SET</span> command in an
+                action to override these values.</dd>
+
+              <dd class="dd"><strong class="ph b">Default value</strong>:  your trading partner's User ID.</dd>
+
+            
+            
+              <dt class="dt dlterm">Send files when partner initiates connection</dt>
+
+              <dd class="dd">Enables the <span class="ph uicontrol">Send Action</span> field. </dd>
+
+              <dd class="dd">
+                <div class="note note"><span class="notetitle">Note:</span> Available in the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only.</div>
+
+              </dd>
+
+            
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Send Action</span></dt>
+
+              <dd class="dd">The action to be run whenever a trading partner-initiated connection makes the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application
+                  the speaker. This allows the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> OFTP to act as
+                  the server in a traditional client-server model, where trading partner clients are
+                  both pushing and pulling files. If the <span class="keyword wintitle">General</span> tab (see <a class="xref" href="r_OFTP_Host_GeneralTab.html" title="Use the General tab to configure three different types of connections: ISDN, TCP/IP, and Server Only">OFTP Host: General Tab</a>) is set to <span class="ph uicontrol">Server Only</span> and
+                  outgoing database payload is being used (see <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Transfers.html">Transfers</a>), any unsent database
+                  payload for the mailbox is also sent using the configured send action commands
+                  when the partner-initiated connection makes the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application
+                  the speaker.</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+    </dl>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">My Identification</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">User ID</dt>
+
+              <dt class="dt dlterm">Password</dt>
+
+              <dd class="dd">Override your default credentials.</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Substation Mailbox</span></dt>
+
+        <dd class="dd">Enables a drop down menu where you select a substation mailbox.  The mailbox uses the
+          same user ID (SSIDCODE) and password (SSIDPASWD) as the managing mailbox, but has a
+          different originator (SFIDORIG)/destination (SFIDDEST) pair (so these two override flags
+          are automatically set). For OFTP2, a substation mailbox can have different signing,
+          encryption, and/or EERP certificates.</dd>
+
+      
+    </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Mailbox.html" title="A mailbox's parameters allow access to the host system."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

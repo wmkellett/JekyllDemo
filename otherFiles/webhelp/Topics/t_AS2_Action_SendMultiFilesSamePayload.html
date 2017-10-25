@@ -1,0 +1,112 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="By default, AS2 messages contain a single file within the payload (i.e., the message being sent). However, some supply chains require that multiple files that are related to each other (perhaps with ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Sending Multiple Files within the Same Payload"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_AS2_Action.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_tqy_jwc_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Sending Multiple Files within the Same Payload</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_tqy_jwc_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_as2_configuration.html" title="AS2 Configuration">AS2 Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_AS2_Action.html" title="AS2 Action">AS2 Action</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Action.html" title="AS2 Action"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Action</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Sending Multiple Files within the Same Payload</h1>
+
+  <div class="body">
+    <p class="p">By default, AS2 messages contain a single file within the payload (i.e., the message being
+      sent). However, some supply chains require that multiple files that are related to each other
+      (perhaps with different content types) be sent together within the same message. </p>
+
+    <p class="p">To send multiple files within the same payload:</p>
+
+    <ol class="ol" id="topic_tqy_jwc_b5__ol_w2s_zcs_zs">
+      <li class="li">Select <span class="ph uicontrol">Multiple file payload</span> from the Command Wizard or include the
+          <samp class="ph codeph">-MUL</samp> option on the <span class="keyword cmdname">PUT</span> command line.</li>
+
+      <li class="li">Group the related files to be sent either in your designated outbox or within a
+        subdirectory under your designated outbox. Files that you do not want to be sent should not
+        be stored in this subdirectory.</li>
+
+      <li class="li">Optionally, enter the <span class="ph uicontrol">Destination</span> file names. This field can
+        include any of the supported macros allowing for the outgoing files to be named, for
+        example, with a date-time stamp. See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> (Destination File context)
+        section for information about applicable macros. </li>
+
+      <li class="li">Run the action.<p class="p">Inbound messages containing multiple files within the same payload are
+          stored together in a subdirectory under the designated inbox. </p>
+<p class="p">The directory is
+          named in the form:</p>
+<pre class="pre codeblock">YYYYMMDD-HHMMSS-CCC</pre>
+<p class="p">where:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_tqy_jwc_b5__table_cw3_3ds_zs" class="table" frame="border" border="1" rules="rows">
+            
+            
+            <tbody class="tbody">
+              <tr class="row">
+                <td class="entry" valign="top" width="75pt">YYYY</td>
+
+                <td class="entry" valign="top" width="200 pt">current year</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="75pt">MM</td>
+
+                <td class="entry" valign="top" width="200 pt">current number of the month (01-12)</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="75pt">DD</td>
+
+                <td class="entry" valign="top" width="200 pt">current day of the month</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="75pt">HH</td>
+
+                <td class="entry" valign="top" width="200 pt">current hour</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="75pt">MM</td>
+
+                <td class="entry" valign="top" width="200 pt">current minute</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="75pt">SS</td>
+
+                <td class="entry" valign="top" width="200 pt">current second</td>
+
+              </tr>
+
+              <tr class="row">
+                <td class="entry" valign="top" width="75pt">CCC</td>
+
+                <td class="entry" valign="top" width="200 pt">current fraction of a second</td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+</div>
+</li>
+
+    </ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Action.html" title="AS2 Action"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Action</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

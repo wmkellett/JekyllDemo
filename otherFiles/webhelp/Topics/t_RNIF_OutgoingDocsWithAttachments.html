@@ -1,0 +1,78 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="RNIF messages with attachments can be sent using the PUT command with the -MUL option. See RNIF Command Reference for details about using the -MUL option. When you use the -MUL option: each subfolder ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Outgoing Documents with attachments"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_rnif_overview.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_vrg_mgp_y5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Outgoing Documents with attachments</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_vrg_mgp_y5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_rnif_hosts.html" title="RNIF Hosts">RNIF Hosts</a> / <a class="navheader_parent_path" href="../Topics/t_rnif_overview.html" title="RNIF Overview">RNIF Overview</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_rnif_overview.html" title="RNIF Overview"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Overview</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Outgoing Documents with attachments</h1>
+
+  <div class="body">
+    <p class="p">RNIF messages with attachments can be sent using the <span class="keyword cmdname">PUT</span> command with the
+        <span class="keyword cmdname">-MUL</span> option. See <a class="xref" href="../References/r_rnif_command_reference.html">RNIF Command Reference</a> for details about using
+      the <span class="keyword cmdname">-MUL</span> option.</p>
+
+    <div class="p">When you use the <span class="keyword cmdname">-MUL</span> option:<ul class="ul" id="topic_vrg_mgp_y5__ul_abw_xgp_y5">
+        <li class="li">each subfolder within the outbox is sent as one RNIF message with attachments.</li>
+
+        <li class="li">the file that starts with the name <span class="ph filepath">service-content_</span> is considered
+          the payload. The rest of the files are attachments. If there is no file that stats with
+            <span class="ph filepath">service-content_</span>, no message is sent and an error is logged.</li>
+
+        <li class="li">if there is more than one file whose name starts with
+            <span class="ph filepath">service-content_</span>, an error is logged.</li>
+
+        <li class="li">in the generated MIME multipart message for the payload:<ul class="ul" id="topic_vrg_mgp_y5__ul_d3n_khp_y5">
+            <li class="li">the file name used for the payload strips off the
+                <span class="ph filepath">service-content_</span> part of the name.</li>
+
+            <li class="li">the Content-ID of the header is the name of the attachment.</li>
+
+          </ul>
+</li>
+
+      </ul>
+</div>
+
+    <p class="p">For example, assume you want to send RNIF messages with attachments and the outbox contains
+      three folders with the following structure:</p>
+
+    <p class="p"><img class="image" id="topic_vrg_mgp_y5__image_lcg_c3p_y5" src="../Images/RNIF_Outgoing_Doc_Attch_Example.jpg"></img></p>
+
+    <p class="p">Three RNIF messages would be sent as follows: </p>
+
+    <ol class="ol" id="topic_vrg_mgp_y5__ol_x1n_d3p_y5">
+      <li class="li">The <span class="ph filepath">RN with attachment</span> folder contains three files:
+          <span class="ph filepath">service-content_fileName 2s.xml</span> is the payload. The other two files,
+          <span class="ph filepath">test.edi</span> and <span class="ph filepath">test – Copy.edi</span>, are the
+        attachments. <p class="p">When the RNIF MIME multipart message is constructed the
+            <span class="ph filepath">service-content_</span> part of the payload file name is stripped and
+            <span class="ph filepath">fileName 2s.xml</span> is used as the payload file name. </p>
+<div class="note note"><span class="notetitle">Note:</span> If
+          there are multiple files in the folder, only one file name should start with
+            <span class="ph filepath">service-content_</span>.</div>
+</li>
+
+      <li class="li">The <span class="ph filepath">RN without attachment</span> folder contains only one file, which is the
+        payload. This payload is sent without attachments.</li>
+
+      <li class="li"><span class="ph filepath">payload file.xml</span> is directly under the source directory. This is sent
+        as payload without attachments.</li>
+
+    </ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_rnif_overview.html" title="RNIF Overview"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Overview</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

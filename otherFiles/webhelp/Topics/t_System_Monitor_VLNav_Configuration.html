@@ -1,0 +1,176 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Before you can configure any applications, including the System Monitor, you must have a database configured for the Cleo VLNavigator software to use. See Applications . Note: Once the application is ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring VLNavigator System Monitor"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_System_Monitor_VLNav.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_gwf_cbq_kr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring VLNavigator System Monitor</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_gwf_cbq_kr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application">Configuring the Cleo VLNavigator application</a> / <a class="navheader_parent_path" href="../Topics/t_System_Monitor_VLNav.html" title="Cleo VLNavigator System Monitor">Cleo VLNavigator System Monitor</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_System_Monitor_VLNav.html" title="Cleo VLNavigator System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo VLNavigator System Monitor</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Configuring VLNavigator System Monitor</h1>
+
+  <div class="body taskbody">
+    <div class="section context">Before you can configure any applications, including
+      the System Monitor, you must have a database configured for the <span class="ph">Cleo VLNavigator</span> software to use. See <a class="xref" href="t_Applications_VLNav.html">Applications</a>.
+        <div class="note note"><span class="notetitle">Note:</span> Once
+        the application is enabled, you must restart the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon before
+        you use Cleo System
+      Monitor.</div>
+</div>
+
+    <ol class="ol steps"><li class="li step stepexpand">
+        <span class="ph cmd">In the <span class="ph">Cleo VLNavigator</span> tree pane,
+          select <span class="keyword wintitle">System Monitor</span> under <span class="keyword wintitle">Applications</span>. </span>
+        <div class="itemgroup info">The <span class="keyword wintitle">Settings</span> tab appears.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">On the <span class="keyword wintitle">Settings</span> tab, select the <span class="ph uicontrol">Application
+            enabled</span> check box and click <span class="ph uicontrol">Apply</span>.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Restart the <span class="ph">Cleo Harmony</span> or
+            <span class="ph">Cleo VLTrader</span>
+          service/daemon.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Grant access to the System Monitor. Click the user group to which you want to grant
+          access and then click the <span class="keyword wintitle">Applications Settings</span> tab. See <a class="xref" href="t_User_Group_VLNav_Application_Settings.html">User Group Application Settings Tab</a>.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">In the <span class="keyword wintitle">Application Settings</span> tab, click <span class="ph uicontrol">System
+            Monitor</span> and then click the <span class="ph uicontrol">Application Enabled for User
+            Group</span> check box. </span>
+        <div class="itemgroup info">The <span class="keyword wintitle">Privileges</span> and <span class="keyword wintitle">Reports</span> tabs are enabled
+          for the user group.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the options you want for the user group.</span>
+        <ul class="ul choices" id="task_gwf_cbq_kr__choices_ewb_2xp_fz">
+          <li class="li choice">The <span class="keyword wintitle">Privileges</span> sub-tab allows you to specify access and
+            update system monitor privileges at the public, custom, and private levels.<ul class="ul" id="task_gwf_cbq_kr__ul_pbq_2xp_fz">
+              <li class="li"><span class="ph uicontrol">Public</span>: Standard reports/components provided by Cleo
+                deployments</li>
+
+              <li class="li"><span class="ph uicontrol">Custom</span>: Customized reports/components optionally available
+                to other users and user groups</li>
+
+              <li class="li"><span class="ph uicontrol">Private</span>: Customized reports/components only available to
+                that user</li>
+
+            </ul>
+</li>
+
+          <li class="li choice">The <span class="keyword wintitle">Reports</span> sub-tab identifies the reports initially shown
+            when the user first opens the <span class="keyword wintitle">System Monitor</span> web application.<p class="p">The
+              report sequence defaults to the Cleo-provided standard <span class="ph uicontrol">Public</span>
+              reports. See <a class="xref" href="t_cleo_dashboards_and_cleo_system_monitor.html">Cleo Dashboards and Cleo System Monitor</a> for a description of each of the
+              standard reports.  The initial default published reports provided by Cleo are all
+              dashboards (<span class="ph filepath">.dsh</span> files), which are comprised of library
+              components (<span class="ph filepath">.lc</span> files) that link to web reports
+                (<span class="ph filepath">.wls</span> files).</p>
+<p class="p">User groups will always have read-only
+              access to the public <span class="keyword wintitle">System Monitor</span> area and read-write access to
+              their private <span class="keyword wintitle">System Monitor</span> area. Optionally, you can grant a
+              user group read-only or read-write access to the custom <span class="keyword wintitle">System
+                Monitor</span> reports/components area. This means Cleo's standard reports and
+              components are always available, and any customizations to Cleo's standard reports and
+              components are either kept private or shared with other users.</p>
+<ol class="ol" type="a" id="task_gwf_cbq_kr__ol_lcv_nxp_fz">
+              <li class="li">Use the right-click menu options in the table to <span class="ph uicontrol">Move Up</span> or
+                  <span class="ph uicontrol">Move Down</span> the sequence of a report in the list or to
+                  <span class="ph uicontrol">Remove</span> a report from the list (this only removes the report
+                from this display list; the report itself still exists).</li>
+
+              <li class="li">Click <span class="ph uicontrol">Add</span> to insert a <span class="ph uicontrol">Public</span> or
+                  <span class="ph uicontrol">Custom</span> report to the end of the list.</li>
+
+              <li class="li">Click <span class="ph uicontrol">Reset Defaults</span> to revert the list back to the
+                standard Cleo-provided <span class="ph uicontrol">Public</span> reports.</li>
+
+              <li class="li">Click <span class="ph uicontrol">Delete Report File</span> to permanently remove a
+                  <span class="ph uicontrol">Custom</span> report from the report server.</li>
+
+            </ol>
+</li>
+
+        </ul>
+
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Optional - Override user group report sequence for individual users. </span>
+        <ol type="a" class="ol substeps" id="task_gwf_cbq_kr__substeps_cmt_cyp_fz">
+          <li class="li substep substepexpand">
+            <span class="ph cmd">Select an individual user from a user group and then select the
+                <span class="keyword wintitle">Applications Settings</span> tab.</span>
+          </li>
+
+          <li class="li substep substepexpand">
+            <span class="ph cmd">On the <span class="keyword wintitle">Application Settings</span> tab, select the
+                <span class="ph uicontrol">Override User Group settings</span> check box.</span>
+            <div class="itemgroup info">
+              <ol class="ol" type="i" id="task_gwf_cbq_kr__ol_k5d_52q_fz">
+                <li class="li">Use the right-click menu options in the table to <span class="ph uicontrol">Move Up</span>
+                  or <span class="ph uicontrol">Move Down</span> the sequence of a report in the list or to
+                    <span class="ph uicontrol">Remove</span> a report from the list (this only removes the
+                  report from this display list; the report itself still exists).</li>
+
+                <li class="li">Click <span class="ph uicontrol">Add</span> to insert a <span class="ph uicontrol">Public</span>,
+                    <span class="ph uicontrol">Custom</span>, or <span class="ph uicontrol">Private</span> report to the
+                  end of the list.</li>
+
+                <li class="li">Click <span class="ph uicontrol">Reset Defaults</span> to revert the list back to the
+                  standard Cleo-provided <span class="ph uicontrol">Public</span> reports.</li>
+
+                <li class="li">Click <span class="ph uicontrol">Delete Report File</span> to permanently remove a
+                    <span class="ph uicontrol">Private</span> report from the report server.</li>
+
+              </ol>
+
+            </div>
+          </li>
+
+        </ol>
+
+        <div class="itemgroup info"></div>
+        <div class="itemgroup info">
+          <p class="p">The report sequence configured at the user group level can be overridden at the user
+            level. If <span class="ph uicontrol">Override User Group Settings</span> is selected for a user,
+            the same <span class="keyword wintitle">Reports</span> sub-tab as above is enabled for the user and
+            operates in a similar fashion.</p>
+
+          <ol class="ol" type="a" id="task_gwf_cbq_kr__ol_mcv_nxp_fz">
+            <li class="li">Use the right-click menu options in the table to <span class="ph uicontrol">Move Up</span> or
+                <span class="ph uicontrol">Move Down</span> the sequence of a report in the list or to
+                <span class="ph uicontrol">Remove</span> a report from the list (this only removes the report
+              from this display list; the report itself still exists).</li>
+
+            <li class="li">Click <span class="ph uicontrol">Add</span> to insert a <span class="ph uicontrol">Public</span>,
+                <span class="ph uicontrol">Custom</span>, or <span class="ph uicontrol">Private</span> report to the end
+              of the list.</li>
+
+            <li class="li">Click <span class="ph uicontrol">Reset Defaults</span> to revert the list back to the standard
+              Cleo-provided <span class="ph uicontrol">Public</span> reports.</li>
+
+            <li class="li">Click <span class="ph uicontrol">Delete Report File</span> to permanently remove a
+                <span class="ph uicontrol">Private</span> report from the report server.</li>
+
+          </ol>
+
+        </div>
+        <div class="itemgroup info">The Reports sub-tab allows you to </div>
+      </li>
+</ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_System_Monitor_VLNav.html" title="Cleo VLNavigator System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo VLNavigator System Monitor</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

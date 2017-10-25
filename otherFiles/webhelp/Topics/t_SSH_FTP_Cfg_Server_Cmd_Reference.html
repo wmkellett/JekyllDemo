@@ -1,0 +1,659 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo Harmony and Cleo VLTrader applications only. The SSH FTP Server allows users to log into the Cleo Harmony application and store and retrieve files using standard ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="SSH FTP Server Command Reference"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_ssh_ftp_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_idz_nvm_mr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SSH FTP Server Command Reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_idz_nvm_mr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_ssh_ftp_users_configuration.html" title="Local SSH FTP Users Configuration">Local SSH FTP Users Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_ssh_ftp_users_configuration.html" title="Local SSH FTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local SSH FTP Users Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">SSH FTP Server Command Reference</h1>
+
+  <div class="body">
+    <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications only.</div>
+
+    <p class="p">The SSH FTP Server allows users to log into the <span class="ph">Cleo Harmony</span>
+      application and store and retrieve files using standard SSH FTP (Secure Shell File Transfer
+      Protocol) commands. A full description of the SSH FTP commands can be found in the
+      Internet-Draft draft-ietf-secsh-filexfer-02.txt specification. </p>
+
+    <p class="p">The following SSH FTP packet types are accepted and processed by the <span class="ph">Cleo Harmony</span> FTP
+      server. The <span class="ph uicontrol">id</span> field of each request or response has been omitted in
+      the following descriptions. See <a class="xref" href="t_SSH_FTP_File_Attributes.html">SSH FTP File Attributes</a> for information about
+      the &lt;ATTRS attrs&gt; parameter used in some of the commands.</p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_idz_nvm_mr__table_czh_zwm_mr" class="table" frame="border" border="1" rules="all">
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d232244e52"> Command </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d232244e55"> Description </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="2" valign="top" headers="d232244e52 d232244e55 "> Requests from the Client to the SSH
+              FTP Server </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_INIT</samp><p class="p"><var class="keyword varname">&lt;uint32
+                  version&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;optional extension
+              data&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Sent by the client when the transfer
+              protocol starts. The client must be capable of supporting version 3 of the SSH FTP
+              protocol. The server responds with a <samp class="ph msgph">SSH_FXP_VERSION</samp> packet.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_VERSION</samp><p class="p"><var class="keyword varname">&lt;uint32
+                  version&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;optional extension
+              data&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 "> Response to the SSH_FXP_INIT request.
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_OPEN</samp><p class="p"><var class="keyword varname">&lt;string
+                  filename&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;uint32
+                  pflags&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;ATTRS attrs&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Files are opened or created when the
+              client sends this message where filename field specifies the file name. The
+                <samp class="ph codeph">pflags</samp> field is a bitmask. The bits are defined as
+                  follows:<p class="p"><samp class="ph msgph">SSH_FXF_READ         
+                  0x00000001</samp></p>
+<p class="p"><samp class="ph msgph">SSH_FXF_WRITE         
+                  0x00000002</samp></p>
+<p class="p"><samp class="ph msgph">SSH_FXF_APPEND     
+                  0x00000004</samp></p>
+<p class="p"><samp class="ph msgph">SSH_FXF_CREAT        
+                  0x00000008</samp></p>
+<p class="p"><samp class="ph msgph">SSH_FXF_TRUNC        
+                  0x00000010</samp></p>
+<p class="p"><samp class="ph msgph">SSH_FXF_EXCL          
+                0x00000020</samp></p>
+<p class="p">These have the following
+                  meanings:</p>
+<p class="p"><samp class="ph msgph">SSH_FXF_READ</samp> - Open the file for
+                  reading.</p>
+<p class="p"><samp class="ph msgph">SSH_FXF_WRITE</samp> - Open the file for writing.  If both
+                this and <samp class="ph msgph">SSH_FXF_READ</samp> are specified, the file is opened for both
+                reading and writing.</p>
+<p class="p"><samp class="ph msgph">SSH_FXF_APPEND</samp> - Force all writes to
+                append data at the end of the file.</p>
+<p class="p"><samp class="ph msgph">SSH_FXF_CREAT</samp> - If this
+                flag is specified, then a new file will be created if one does not already exist (if
+                O_TRUNC is specified, the new file will be truncated to zero length if it previously
+                exists).</p>
+<p class="p"><samp class="ph msgph">SSH_FXF_TRUNC</samp> - Forces an existing file with the same
+                name to be truncated to zero length when creating a file by specifying
+                  <samp class="ph msgph">SSH_FXF_CREAT</samp>. <samp class="ph msgph">SSH_FXF_CREAT</samp>
+                <em class="ph i"><strong class="ph b">must</strong></em> also be specified if this flag is
+                  used.</p>
+<p class="p"><samp class="ph msgph">SSH_FXF_EXCL</samp> - Causes the request to fail if the named
+                file already exists. <samp class="ph msgph">SSH_FXF_CREAT</samp>
+                <em class="ph i"><strong class="ph b">must</strong></em> also be specified if this flag is used.</p>
+<p class="p">The server response
+                to this message will be either <samp class="ph msgph">SSH_FXP_HANDLE</samp> (if successful) or
+                  <samp class="ph msgph">SSH_FXP_STATUS</samp> (if the operation fails).  </p>
+</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_CLOSE</samp><p class="p">
+                <span class="ph"><var class="keyword varname">&lt;string handle&gt;</var></span>
+              </p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">A file is closed when the client sends
+              this request. The server response to this request will be a
+                <samp class="ph msgph">SSH_FXP_STATUS</samp> message. The handle parameter is a handle previously
+              returned in response to a <samp class="ph msgph">SSH_FXP_OPEN</samp> or
+                <samp class="ph msgph">SSH_FXP_OPENDIR</samp>.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_READ</samp><p class="p"><var class="keyword varname">&lt;string
+                  handle&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;uint64
+                  offset&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;uint32 len&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Once a file has been opened, it can be
+              read using the <samp class="ph msgph">SSH_FXP_READ</samp> message. Only sequential offsets are
+              supported, and repositioning within an open file is not allowed. In response to this
+              request, the server will read as many bytes as it can from the file (up to 'len'), and
+              return them in a <samp class="ph msgph">SSH_FXP_DATA</samp> message.  If an error occurs or EOF is
+              encountered before reading any data, the server will respond with
+                <samp class="ph msgph">SSH_FXP_STATUS</samp>.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_WRITE</samp><p class="p"><var class="keyword varname">&lt;string
+                  handle&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;uint64
+                  offset&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;uint32
+                  len&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;string data&gt;</var>
+              </p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">When a file has been opened for
+              writing, it can be written using the <samp class="ph msgph">SSH_FXP_WRITE</samp> message. Only
+              sequential offsets are supported and repositioning within an open file is not allowed.
+              The server responds to a write request with a <samp class="ph msgph">SSH_FXP_STATUS</samp>
+              message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_LSTAT</samp><p class="p"><var class="keyword varname">&lt;string path&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Used to retrieve the attributes for a
+              named file (identified by the 'path') while not following symbolic links. The server
+              responds to this request with either <samp class="ph msgph">SSH_FXP_ATTRS</samp> or
+                <samp class="ph msgph">SSH_FXP_STATUS</samp>.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_FSTAT</samp><p class="p"><var class="keyword varname">&lt;string path&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 "><samp class="ph msgph">SSH_FXP_FSTAT</samp> returns
+              status information for an open file (identified by the file handle). The server
+              responds to this request with <samp class="ph msgph">SSH_FXP_ATTRS</samp> or
+                <samp class="ph msgph">SSH_FXP_STATUS</samp>.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_SETSTAT</samp><p class="p"><var class="keyword varname">&lt;string
+                  path&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;ATTRS attrs&gt;</var>
+              </p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">File attributes may be modified using
+              the <samp class="ph msgph">SSH_FXP_SETSTAT</samp> request where <var class="keyword varname">path</var> specifies the
+              file system object (for example, file or directory) whose attributes are to be
+              modified, and <var class="keyword varname">attrs</var> specifies the modifications to be made to its
+              attributes. The server responds to this request with a <samp class="ph msgph">SSH_FXP_STATUS</samp>
+              message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_FSETSTAT</samp><p class="p"><var class="keyword varname">&lt;string
+                  handle&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;ATTRS attrs&gt; </var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">File attributes on an open file may be
+              modified using the <samp class="ph msgph">SSH_FXP_FSETSTAT</samp> request where
+                <var class="keyword varname">handle</var> (<em class="ph i"><strong class="ph b">must</strong></em> be returned by
+                <samp class="ph msgph">SSH_FXP_OPEN</samp>) identifies the file whose attributes are to be
+              modified, and 'attrs' specifies the modifications to be made to its attributes. The
+              server responds to this request with a <samp class="ph msgph">SSH_FXP_STATUS</samp> message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_OPENDIR</samp><p class="p">
+                <var class="keyword varname">&lt;string path&gt;</var>
+              </p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">The <samp class="ph msgph">SSH_FXP_OPENDIR</samp>
+              opens a directory for reading where <var class="keyword varname">path</var> is the path name of the
+              directory to be listed (without any trailing slash). The server will respond to this
+              request with either a <samp class="ph msgph">SSH_FXP_HANDLE</samp> or a <samp class="ph msgph">SSH_FXP_STATUS</samp>
+              message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_READDIR</samp><p class="p"><var class="keyword varname">&lt;string
+              handle&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Once the directory has been
+              successfully opened, files (and directories) contained in it can be listed using
+                <samp class="ph msgph">SSH_FXP_READDIR</samp> requests. The server responds to this request with
+              either a <samp class="ph msgph">SSH_FXP_NAME</samp> or a <samp class="ph msgph">SSH_FXP_STATUS</samp>
+              message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_REMOVE</samp><p class="p"><var class="keyword varname">&lt;string
+              filename&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Files can be removed using the
+                <samp class="ph msgph">SSH_FXP_REMOVE</samp> message where <var class="keyword varname">filename</var> is the name
+              of the file to be removed. The Server responds with a <samp class="ph msgph">SSH_FXP_STATUS</samp>
+              message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_MKDIR</samp><p class="p"><var class="keyword varname">&lt;string
+                  path&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;ATTRS attrs&gt;</var>
+              </p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">New directories can be created using
+              the <samp class="ph msgph">SSH_FXP_MKDIR</samp> request where <var class="keyword varname">path</var> and
+                <var class="keyword varname">attrs</var> specify the directory name and attributes. The server will
+              respond to this request with a <samp class="ph msgph">SSH_FXP_STATUS</samp> message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_RMDIR</samp><p class="p"><var class="keyword varname">&lt;string path&gt;</var>
+              </p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Directories can be removed using the
+                <samp class="ph msgph">SSH_FXP_RMDIR </samp>request where <var class="keyword varname">path</var> specifies the
+              directory to be removed. The server responds to this request with a
+                <samp class="ph msgph">SSH_FXP_STATUS</samp> message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_REALPATH</samp><p class="p"><var class="keyword varname">&lt;string path&gt;</var>
+              </p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">The <samp class="ph msgph">SSH_FXP_REALPATH</samp>
+              request can be used to have the server canonicalize any given path name to an absolute
+              path. The server will respond with a <samp class="ph msgph">SSH_FXP_NAME</samp> packet containing
+              only one name and a dummy attributes value.  The name is the returned packet will be
+              in canonical form. If an error occurs, the server may also respond with
+                <samp class="ph msgph">SSH_FXP_STATUS</samp>.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_STAT</samp><p class="p"><var class="keyword varname">&lt;string path&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Used to retrieve the attributes for a
+              named file identified by the <var class="keyword varname">path</var>. <samp class="ph msgph">SSH_FXP_STAT</samp> and
+                <samp class="ph msgph">SSH_FXP_LSTAT</samp> only differ in that <samp class="ph msgph">SSH_FXP_STAT</samp> follows
+              symbolic links on the server. The server responds to this request with either
+                <samp class="ph msgph">SSH_FXP_ATTRS</samp> or <samp class="ph msgph">SSH_FXP_STATUS</samp>.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_RENAME</samp><p class="p"><var class="keyword varname">&lt;string
+                  oldpath&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;string newpath&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">Files (and directories) can be renamed
+              using the <samp class="ph msgph">SSH_FXP_RENAME</samp> message where <var class="keyword varname">oldpath</var> is
+              the name of an existing file or directory, and <var class="keyword varname">newpath</var> is the new
+              name for the file or directory. The server will respond to this request with a
+                <samp class="ph msgph">SSH_FXP_STATUS</samp> message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_READLINK</samp><p class="p"><var class="keyword varname">&lt;string path&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">The server does not support reading
+              symbolic links. The server will respond with a <samp class="ph msgph">SSH_FXP_STATUS</samp> error
+              message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_SYMLINK</samp><p class="p"><var class="keyword varname">&lt;string
+                  linkpath&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;string targetpath&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">The server does not support creating
+              symbolic links. The server will respond with a <samp class="ph msgph">SSH_FXP_STATUS</samp> error
+              message.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="2" valign="top" headers="d232244e52 d232244e55 "> Responses from the SSH FTP Server to
+              Client </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_VERSION</samp><p class="p"><var class="keyword varname">&lt;uint32
+                  version&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;optional extension
+              data&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 "> Response to the
+                <samp class="ph msgph">SSH_FXP_INIT</samp> request. The server will respond supplying the lowest of
+              its own (3) and the client's version number.  </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_STATUS</samp><p class="p"><var class="keyword varname">&lt;uint32
+                  status&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;string
+                  error&gt;</var></p>
+<p class="p"><var class="keyword varname">&lt;string language&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 "><samp class="ph msgph">SSH_FXP_STATUS</samp> response
+              is returned by the server in response to a client request where
+                <var class="keyword varname">status</var> indicates the result of the requested operation. The value
+                <samp class="ph msgph">SSH_FX_OK</samp> indicates success, and all other values indicate
+                  failure.<p class="p"><samp class="ph msgph">SSH_FX_OK</samp> -Indicates successful completion of the
+                operation.</p>
+<p class="p"><samp class="ph msgph">SSH_FX_EOF</samp> - indicates end-of-file condition; for
+                  <samp class="ph msgph">SSH_FX_READ</samp> it means that no more data is available in the file,
+                and for <samp class="ph msgph">SSH_FX_READDIR</samp> it indicates that no more files are contained
+                in the directory.</p>
+<p class="p"><samp class="ph msgph">SSH_FX_NO_SUCH_FILE</samp> - is returned when a
+                reference is made to a file that should exist but does
+                  not.</p>
+<p class="p"><samp class="ph msgph">SSH_FX_PERMISSION_DENIED</samp> - is returned when the
+                authenticated user does not have sufficient permissions to perform the
+                operation.</p>
+<p class="p"><samp class="ph msgph">SSH_FX_FAILURE</samp> - is a generic catch-all error
+                message; it should be returned if an error occurs for which there is no more
+                specific error code defined.</p>
+<p class="p"><samp class="ph msgph">SSH_FX_BAD_MESSAGE</samp> - may be
+                returned if a badly formatted packet or protocol incompatibility is
+                  detected.</p>
+<p class="p"><samp class="ph msgph">SSH_FX_NO_CONNECTION</samp> - is a pseudo-error that
+                indicates the client has no connection to the server (it can only be generated
+                locally by the client, and <em class="ph i"><strong class="ph b">must not</strong></em> be returned by
+                  servers).</p>
+<p class="p"><samp class="ph msgph">SSH_FX_CONNECTION_LOST</samp> - is a pseudo-error that
+                indicates the connection to the server has been lost (it can only be generated
+                locally by the client, and <em class="ph i"><strong class="ph b">must not</strong></em> be returned by
+                  servers).</p>
+<p class="p"><samp class="ph msgph">SSH_FX_OP_UNSUPPORTED</samp> - indicates that an attempt
+                was made to perform an operation not supported for the server (it could be generated
+                locally by the client if, for example, the version number exchange indicates that a
+                required feature is not supported by the server, or it may be returned by the server
+                if the server does not implement an operation).</p>
+</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_HANDLE</samp><p class="p"><var class="keyword varname">&lt;string handle&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 "><samp class="ph msgph">SSH_FXP_HANDLE</samp> is the
+              server response to an <samp class="ph msgph">SSH_FXP_OPEN</samp> or <samp class="ph msgph">SSH_FXP_OPENDIR</samp>
+              where <var class="keyword varname">handle</var> is an arbitrary string that identifies an open file or
+              directory on the server. The handle is opaque to the client; the client <em class="ph i"><strong class="ph b">must
+                  not</strong></em> attempt to interpret or modify it in any way.</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_DATA</samp><p class="p"><var class="keyword varname">&lt;string data&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 "><samp class="ph msgph">SSH_FXP_DATA</samp> is the
+              server response to an <samp class="ph msgph">SSH_FXP_READ</samp> where <var class="keyword varname">data</var> is an
+              arbitrary byte string containing the requested data.  The data string may be at most
+              the number of bytes requested in a <samp class="ph msgph">SSH_FXP_READ</samp> request, but may also
+              be shorter if end of file is reached or if the read is from something other than a
+              regular file. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 "><samp class="ph msgph">SSH_FXP_NAME</samp><p class="p"><var class="keyword varname">&lt;uint32 count&gt;</var></p>
+<p class="p">repeats
+                count times:</p>
+<p class="p">            <var class="keyword varname">&lt;string
+                filename&gt;</var></p>
+<p class="p">            <var class="keyword varname">&lt;string longname&gt;</var></p>
+<p class="p">
+                            <var class="keyword varname">&lt;ATTRS attrs&gt;</var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 "><var class="keyword varname">count</var> is the number
+              of names returned in this response, and the remaining fields repeat
+                <var class="keyword varname">count</var> times (so that all three fields are first included for the
+              first file, then for the second file, and so on).  In the repeated <samp class="ph msgph">SSH_FXP_
+                NAME </samp>is the server response to either a <samp class="ph msgph">SSH_FXP_READDIR</samp> or
+                <samp class="ph msgph">SSH_FXP_REALPATH</samp> message where <var class="keyword varname">filename</var> is a file
+              name being returned (for <samp class="ph msgph">SSH_FXP_READDIR</samp>, it will be a relative name
+              within the directory, without any path components; for <samp class="ph msgph">SSH_FXP_REALPATH</samp>
+              it will be an absolute path name), <var class="keyword varname">longname</var> is an expanded format
+              for the file name, similar to what is returned by <span class="keyword cmdname">ls -l</span> on Unix
+              systems. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e52 ">SSH_FXP_ATTRS<p class="p"><var class="keyword varname">&lt;ATTRS
+                  attrs&gt; </var></p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d232244e55 ">SSH_FXP_ATTRS is the server response
+              for returning file attributes.</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+    <p class="p"><span class="ph">Cleo Harmony</span>
+      also supports <span class="keyword cmdname">HTTP PUT</span>, <span class="keyword cmdname">GET</span>, and
+        <span class="keyword cmdname">DELETE</span> methods for sending payload, receiving directory listings and
+      payload, and deleting payload respectively, but the <span class="keyword cmdname">POST</span> methods are
+      recommended.  Following are captures of example <span class="keyword cmdname">HTTP</span> requests and responses
+      demonstrating the above methods.  While the examples below only show parameters on the
+        <span class="keyword cmdname">POST</span> line, <span class="ph">Cleo Harmony</span> does
+      accept requests using the <samp class="ph codeph">application/x-www-form-urlencoded</samp> and
+        <samp class="ph codeph">multipart/form-data</samp> Content-types.</p>
+
+    <p class="p">Client initial connect request without authorization</p>
+
+    <pre class="pre codeblock">POST /server?request=connect HTTP/1.1
+Host: test.cleo.com:5080
+Connection: Keep-Alive, TE
+TE: trailers, deflate, gzip, compress
+User-Agent: RPT-HTTPClient/0.3-3I (Windows XP)
+Content-length: 0 </pre>
+
+    <p class="p"><span class="ph">Cleo Harmony</span>
+      response (unauthorized; both basic and digest Authentication is enabled)</p>
+
+    <pre class="pre codeblock">HTTP/1.1 401 Unauthorized
+Server: Cleo VLTrader/3.5 (Windows 2000)
+Date: Tue, 22 May 2007 17:04:13 GMT
+WWW-Authenticate: Basic realm="Cleo VLTrader"
+WWW-Authenticate: Digest realm="Cleo VLTrader",domain="/server",qop="auth",nonce="0qenmpn44",opaque="4b4c37373332"
+Connection: close
+Content-Type: text/html
+Content-Length: 80
+&lt;html&gt;&lt;head&gt;&lt;title&gt; Unauthorized&lt;/title&gt;&lt;/head&gt;&lt;body&gt; Unauthorized&lt;/body&gt;&lt;/html&gt; </pre>
+
+    <p class="p">Client connect request with digest authorization</p>
+
+    <pre class="pre codeblock">POST /server?request=connect HTTP/1.1
+Host: test.cleo.com:5080
+Connection: TE
+TE: trailers, deflate, gzip, compressUser-Agent: RPT-HTTPClient/0.3-3I (Windows XP)
+Authorization: Digest realm="Cleo VLTrader",username="cleo",uri="/server%3Frequest=connect",nonce="0qenmpn44",response="b4f7542bdedce937de6aa93078fcdf17",opaque="4b4c37373332",cnonce="f5f20437b69ca661e4aedfedb54f5c32",qop="auth",nc="00000001"
+Content-length: 0 </pre>
+
+    <p class="p"><span class="ph">Cleo Harmony</span>
+      response (authentication successful)</p>
+
+    <pre class="pre codeblock">HTTP/1.1 200 OK
+Server: Cleo VLTrader/3.5 (Windows 2000)
+Date: Tue, 22 May 2007 17:04:18 GMT
+Content-Length: 0
+Set-cookie: jSessionId=3513ld61kg8bt; path=/
+Connection: keep-alive</pre>
+
+    <p class="p">Client send (upload) request</p>
+
+    <pre class="pre codeblock">POST /server?request=send&amp;directory=inbox%2F HTTP/1.1
+Host: test.cleo.com:5080
+Connection: TE
+TE: trailers, deflate, gzip, compress
+User-Agent: RPT-HTTPClient/0.3-3I (Windows XP)
+Cookie: jSessionId=3513ld61kg8bt
+Cookie2: $Version="1"
+Authorization: Digest realm="Cleo VLTrader",username="cleo",uri=...
+Content-type: application/octet-stream; name="test.edi"
+Content-length: 1533
+...payload...</pre>
+
+    <p class="p"><span class="ph">Cleo Harmony</span>
+      response (send successful)</p>
+
+    <pre class="pre codeblock">HTTP/1.1 200 OK
+Server: Cleo VLTrader/3.5 (Windows 2000)
+Date: Tue, 22 May 2007 17:19:59 GMT
+Content-Type: text/html
+Content-Length: 84
+Connection: keep-alive
+&lt;html&gt;&lt;head&gt;&lt;title&gt;OK&lt;/title&gt;&lt;/head&gt;&lt;body&gt;File successfully uploaded.&lt;/body&gt;&lt;/html&gt;</pre>
+
+    <p class="p">Client list request</p>
+
+    <pre class="pre codeblock">POST /server?request=list&amp;directory=outbox%2Fpayload%2F HTTP/1.1
+Host: test.cleo.com:5080
+Connection: TE
+TE: trailers, deflate, gzip, compress
+User-Agent: RPT-HTTPClient/0.3-3I (Windows XP)
+Cookie: jSessionId=3513ld61kg8bt
+Cookie2: $Version="1"
+Authorization: Digest realm="Cleo VLTrader",username="cleo",uri=...
+Content-length: 0</pre>
+
+    <p class="p"><span class="ph">Cleo Harmony</span>
+      response (listing successful)</p>
+
+    <pre class="pre codeblock">HTTP/1.1 200 OK
+Server: Cleo VLTrader/3.5 (Windows 2000)
+Date: Tue, 22 May 2007 17:04:18 GMT
+Content-Type: text/html
+Content-Length: 402
+Connection: keep-alive
+&lt;head&gt;&lt;title&gt;'cleo' mailbox&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;&lt;H2&gt;Download&lt;/H2&gt;Server directory: outbox/payload/&lt;hr&gt;
+2007/05/03 08:43:17   1.497kB &lt;A HREF="/server/outbox/payload/test.edi" &gt;test.edi&lt;/A&gt;&lt;br&gt;
+2007/05/22 08:32:46   4.491kB &lt;A HREF="/server/outbox/payload/test2.edi" &gt;test2.edi&lt;/A&gt;&lt;br&gt;
+2007/05/22 08:33:28  28.444kB &lt;A HREF="/server/outbox/payload/test3.edi" &gt;test3.edi&lt;/A&gt;&lt;br&gt;&lt;hr&gt;&lt;/pre&gt;&lt;/body&gt;</pre>
+
+    <p class="p">Client receive (download) request</p>
+
+    <pre class="pre codeblock">POST /server?request=receive&amp;directory=outbox%2Fpayload&amp;filename=test.edi HTTP/1.1
+Host: test.cleo.com:5080
+Connection: TE
+TE: trailers, deflate, gzip, compress
+User-Agent: RPT-HTTPClient/0.3-3I (Windows XP)
+Cookie: jSessionId=3513ld61kg8bt
+Cookie2: $Version="1"
+Authorization: Digest realm="Cleo VLTrader",username="cleo",uri=...
+Content-length: 0</pre>
+
+    <p class="p"><span class="ph">Cleo Harmony</span>
+      response (receive successful)</p>
+
+    <pre class="pre codeblock">HTTP/1.1 200 OK
+Server: Cleo VLTrader/3.5 (Windows 2000)
+Date: Tue, 22 May 2007 17:25:57 GMT
+Content-Description: test.edi
+Content-Disposition: attachment; filename="test.edi"
+Transfer-Encoding: chunked
+Content-Type: application/edi-x12; name="test.edi"
+Connection: keep-alive
+...chunked payload...</pre>
+
+    <p class="p">Client delete request</p>
+
+    <pre class="pre codeblock">POST /server?request=delete&amp;directory=outbox%2Fpayload&amp;filename=test.edi HTTP/1.1
+Host: test.cleo.com:5080
+Connection: TE
+TE: trailers, deflate, gzip, compress
+User-Agent: RPT-HTTPClient/0.3-3I (Windows XP)
+Cookie: jSessionId=3513ld61kg8bt
+Cookie2: $Version="1"
+Authorization: Digest realm="Cleo VLTrader",username="cleo",uri=...
+Content-length: 0</pre>
+
+    <p class="p"><span class="ph">Cleo Harmony</span>
+      response (delete successful)</p>
+
+    <pre class="pre codeblock">HTTP/1.1 200 OK
+Server: Cleo VLTrader/3.5 (Windows 2000)
+Date: Tue, 22 May 2007 17:25:58 GMT
+Content-Length: 0
+Connection: keep-alive</pre>
+
+    <p class="p">A web browser can also be used by a trading partner to manually trade with VerasLex's HTTP
+      server.  A trading partner would use the <span class="ph">Cleo Harmony</span>
+      address and HTTP server resource path to start, for example,
+        <span class="ph filepath">https://test.cleo.com:6080/server</span>:</p>
+
+    
+    <p class="p">After logging in, a simple web page is displayed to allow uploading and downloading of
+      files.</p>
+
+    
+    <div class="p">
+      <div class="note note"><span class="notetitle">Note:</span> For information about a more robust web portal interface, see <a class="xref" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html">Configuring VLPortal Web Browser service</a>.</div>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_ssh_ftp_users_configuration.html" title="Local SSH FTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local SSH FTP Users Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

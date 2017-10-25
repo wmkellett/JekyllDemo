@@ -1,0 +1,74 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to Cleo VLTrader and Cleo Harmony applications only. Windows has a built in capability to access Windows (CIFS) and Unix (SMB) shares. This is accomplished through the use ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="CIFS Directories"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_FileSystem.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_configure_CIFS_directories.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="CIFSDirectories"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>CIFS Directories</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="CIFSDirectories">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_WebUI_FileSystem.html" title="File System">File System</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_FileSystem.html" title="File System"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">File System</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">CIFS Directories</h1>
+
+      
+   <div class="body">
+      <div class="note note"><span class="notetitle">Note:</span> This section applies to <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>
+                  applications only.</div>
+
+      <p class="p">Windows has a built in capability to access Windows
+                  (CIFS) and Unix (SMB) shares. This is accomplished through the use of UNC paths or
+                  mounting the drive as a drive letter. The account the <span class="ph">Cleo VLTrader</span> or <span class="ph">Cleo Harmony</span>
+                  application is running as must have the credentials to access the files on the
+                  share. If the <span class="ph">Cleo VLTrader</span> or <span class="ph">Cleo Harmony</span>
+                  application is running as a user that has permission to access the desired shared
+                  paths, then configuring this feature is not necessary.</p>
+
+      
+      <p class="p">Windows/Unix Folder Access enables the <span class="ph">Cleo VLTrader</span> or <span class="ph">Cleo Harmony</span>
+                  application to read and write directly from Windows (CIFS) and Unix (SMB) shares
+                  from any platform. It allows different user credentials to be used on different
+                  shares. Access to these shares can be through a user other than the user running
+                  VersaLex. This allows the <span class="ph">Cleo VLTrader</span> or <span class="ph">Cleo Harmony</span>
+                  application to be running as a Windows Service under a <span class="ph uicontrol">Local System
+                        Account</span>. On Unix platforms, it allows the <span class="ph">Cleo VLTrader</span> or <span class="ph">Cleo Harmony</span>
+                  application to access shares without the use of Samba.</p>
+
+      
+      <div class="note important"><span class="importanttitle">Important:</span> When running on certain operating systems, the operating system assumes
+                  it is the only software talking to the server. It will send a VC (Virtual Circuit)
+                  number of zero to the server. Many servers, by default, will reset all other
+                  CIFS/SMB connections to the same computer including the Windows/Unix Folder
+                  connection for the <span class="ph">Cleo VLTrader</span> or <span class="ph">Cleo Harmony</span>
+                  application.</div>
+
+      <p class="p">For Samba servers, <samp class="ph codeph">reset on zero vc = no</samp> can be configured in the
+                        <span class="ph filepath">smb.conf</span> file.</p>
+
+      <p class="p">For some Windows servers,
+                        <span class="ph filepath">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NetBT\Parameters\SmbDeviceEnabled</span>
+                  can be added to the registry and set to <kbd class="ph userinput">0</kbd>. This same
+                  setting can also be used on the client computer. See <a class="xref" href="http://support.microsoft.com/kb/301673" target="_blank">http://support.microsoft.com/kb/301673</a> for details.</p>
+
+            
+            
+            
+      
+      
+   </div>
+
+   
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_configure_CIFS_directories.html">Configuring Windows/Unix Folder Access</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_FileSystem.html" title="File System"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">File System</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

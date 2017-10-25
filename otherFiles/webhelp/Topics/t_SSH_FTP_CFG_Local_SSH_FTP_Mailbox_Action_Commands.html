@@ -1,0 +1,51 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The SSH FTP Server does not independently invoke send and receive actions, but rather acts on the actions of the connected client.  Default collect and release actions are provided to allow the server ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Local SSH FTP Mailbox Action Commands"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_ssh_ftp_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_zql_jvm_mr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local SSH FTP Mailbox Action Commands</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_zql_jvm_mr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_ssh_ftp_users_configuration.html" title="Local SSH FTP Users Configuration">Local SSH FTP Users Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_ssh_ftp_users_configuration.html" title="Local SSH FTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local SSH FTP Users Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Local SSH FTP Mailbox Action Commands</h1>
+
+  <div class="body">
+    <p class="p">The SSH FTP Server does not independently invoke send and receive actions, but rather acts on
+      the actions of the connected client.  Default collect and release actions are provided to
+      allow the server to make sent and received files available for processing.</p>
+
+    <div class="section" id="topic_zql_jvm_mr__section_xj3_kwz_5t"><h2 class="title sectiontitle">Collect Action </h2>
+      
+      <pre class="pre codeblock">#Initialize inbound file
+LDELETE recvfile.edit
+
+#Merge all files received into recvfile.edit
+LCOPY -DEL -APE %inbox%/* recvfile.edi</pre>
+
+    </div>
+
+    <div class="section" id="topic_zql_jvm_mr__section_km4_kwz_5t"><h2 class="title sectiontitle">Release Action </h2>
+      
+      <pre class="pre codeblock">#Release all not yet available files
+LCOPY -DEL %outbox%/../* %outbox%</pre>
+
+    </div>
+
+    
+    
+    <p class="p">See <a class="xref" href="../Tasks/t_Compose_an_Action.html">Compose an Action</a> and <a class="xref" href="../References/r_Local_Command_Reference.html">Local Command Reference</a> for more
+      information.</p>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_ssh_ftp_users_configuration.html" title="Local SSH FTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local SSH FTP Users Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

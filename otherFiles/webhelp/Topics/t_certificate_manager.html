@@ -1,0 +1,159 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Certificate Manager is a utility program for management of digital certificates and private keys. It facilitates: generating self-signed user certificates and certificate signing requests (CSRs) ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Certificate Management"></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Coverage" content="Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_generate_self-signed_user_certificate.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_generate_pem-formatted_certificate_signing_request.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_generate_trusted_ca_certificate_from_openpgp_or_ssh_ftp_key.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_replace_with_ca-signed_certificate_server_id.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_import_certificate.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_export_certificate.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_replace_trusted_ca_certificates.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_move_certificate.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_remove_certificate.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_configure_options_including_crl_and_tsl.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_view_usage.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_WebUI_scheduling_certificates_for_future_use.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_handle_expired_certificates.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="CertificateManagement"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Certificate Management</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="CertificateManagement">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Certificate Management</h1>
+
+  
+  <div class="body">
+    <p class="p">Certificate
+      Manager is a utility program for management of digital certificates and private keys. It
+      facilitates:</p>
+
+    <ul class="ul" id="CertificateManagement__ul_e2d_jpg_1s">
+      <li class="li">generating self-signed user certificates and certificate signing requests (CSRs)</li>
+
+      <li class="li">importing/exporting user certificates/private keys</li>
+
+      <li class="li">importing/exporting certificate authority (CA) certificates</li>
+
+      <li class="li">marking CA certificates as either trusted or pending</li>
+
+    </ul>
+
+    <p class="p">When invoked through VersaLex during SSL negotiation, it also is used to:</p>
+
+    <ul class="ul" id="CertificateManagement__ul_cbb_lpg_1s">
+      <li class="li">provide the set of trusted CA root certificates</li>
+
+      <li class="li">provide a selected user certificate chain</li>
+
+    </ul>
+
+    
+    <p class="p">An X.509 certificate is equivalent to an ID card.  It identifies a subject (entity) and an
+      issuer (signer). If the subject and issuer are the same, the certificate is said to be
+      self-signed.</p>
+
+    <p class="p">The certificate infrastructure includes a public/private key pair for <strong class="ph b">encryption</strong>. The
+      public key is encapsulated in the digital certificate and is shared with trading partners. 
+      The private key is kept secret. Only the private key can be used to decrypt what has been
+      encrypted by trading partners using the public key. A certificate and its public/private key
+      pair can also be used as a <strong class="ph b">digital signature</strong>.</p>
+
+    <p class="p">Certificates are grouped into three categories:</p>
+
+    <ul class="ul" id="CertificateManagement__ul_ltp_npg_1s">
+      <li class="li"><strong class="ph b">User certificate</strong>: Identifies a person (client) or a computer (server). User
+        certificates, when first generated using Certificate Manager, are self-signed.  If desired,
+        they can be submitted to a certificate authority (CA) for signing. The CA-signed
+        certificate then replaces the original self-signed certificate.</li>
+
+      <li class="li"><strong class="ph b">Intermediate CA certificate</strong>: Identifies a trusted certificate authority (CA) whose
+        certificate is signed by another intermediate CA or a root CA.</li>
+
+      <li class="li"><strong class="ph b">Root CA certificate</strong>: Identifies a trusted certificate authority (CA) whose
+        certificate is self-signed. A certificate "chain" is a series of CA-signed certificates
+        terminated by a root CA certificate. A certificate chain consists of:<ul class="ul" id="CertificateManagement__ul_yw1_4pg_1s">
+          <li class="li">One CA-signed user certificate</li>
+
+          <li class="li">Any intermediate CA certificates</li>
+
+          <li class="li">One root CA certificate (sometimes referred to as the top level certificate)</li>
+
+        </ul>
+</li>
+
+    </ul>
+
+    <p class="p">Connecting a certificate's issuer CA to the next certificate's subject CA forms the chain. If
+      a certificate's issuer CA cannot be found, the chain is incomplete. If a host requests the
+      user certificate during SSL negotiation prior to a file transfer, the certificate chain,
+      whether complete or not, is built and sent. Depending on the host, an incomplete chain may or
+      may not affect the success of transfers.</p>
+
+    <p class="p">For your convenience, <span class="ph">VersaLex</span>
+      comes installed with an assortment of trusted VeriSign intermediate and root CA certificates
+      and a trusted RSA root CA certificate.</p>
+
+    <p class="p">All the certificates currently stored in Certificate Manager are listed directly under each
+      store type (with a certificate icon). Certificate Manager builds and displays certificate
+      chains starting in the users and trusted intermediate CA certificate stores trees. The
+      certificates listed in these chains (with no icon) are references to a stored intermediate or
+      root CA certificate.</p>
+
+    
+    <p class="p">If a chain is incomplete, the chain terminates with a <samp class="ph codeph">? Not Found</samp> and the
+      certificates in the chain are colored orange. If the issuer CA certificate is found but the
+      signature is not valid, the chain is also considered incomplete. If signature verification is
+      not an issue, it can be turned off by selecting <span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol">Options</span></span> and clearing <span class="ph uicontrol">Check Certificate Issuer's CA
+      Signature</span>.</p>
+
+    <p class="p">If a certificate is not yet valid or is expired, the certificate is colored red. If validity
+      is not an issue, it can be turned off by selecting <span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol">Options</span></span> and clearing <span class="ph uicontrol">Check Certificate Validity Period</span>. When a
+      certificate or a certificate chain is colored red, orange or is marked with a  <img class="image" id="CertificateManagement__image_eck_rnq_kv" src="../Images/image1211.gif"></img>, additional tool-tip information is
+      also provided. </p>
+
+    <p class="p">The action items available at any given time from <span class="ph uicontrol">Certificates</span> in the
+      menu bar, the toolbar, and the right-click menus are dependent on the current selection in the
+      tree pane.</p>
+
+    <p class="p">Action items for adding a new certificate (e.g. generate user certificate, import) are
+      enabled depending on the store type selected.</p>
+
+    
+    <p class="p">Action items for manipulating an existing certificate (e.g. generate CSR, replace, export,
+      remove) are enabled depending on the certificate selected.</p>
+
+    
+    <div class="note note"><span class="notetitle">Note:</span> The step-by-step instructions in the following sections describe the use of right-click
+      menus. In all cases, Certificates in the menu bar provides the same selections. The toolbar
+      provides most of the same selections.</div>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_generate_self-signed_user_certificate.html">Generating Self-signed User Certificates</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_generate_pem-formatted_certificate_signing_request.html">Generating PEM-formatted Certificate Signing Requests</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+Once the self-signed user certificate has been generated, create and copy a PEM       (Privacy Enhanced Mail)-formatted Certificate Signing Request (CSR) and paste it onto a web       form on a Certificate Authority (CA) website. The CSR contains the public key of the key pair       generated with the user certificate.</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_generate_trusted_ca_certificate_from_openpgp_or_ssh_ftp_key.html">Generating Trusted CA Certificates from OpenPGP or SSH FTP Keys</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+An OpenPGP public key contains a master key and one or more subkeys. A Trusted CA       Certificate can be created from the public key information to verify OpenPGP signatures and       encrypt data before it is sent to your trading partner. <span class="ph">A SSH FTP public key may be used          for public key authentication with the SSH FTP server (VLTrader and Harmony only).</span> The       following describes how to import an OpenPGP or SSH FTP public key and generate a Trusted CA       certificate.</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_replace_with_ca-signed_certificate_server_id.html">Replacing a User Certificate with a CA-signed Certificate (Server ID)</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+After you submit a CSR to a Certificate Authority (CA) and receive the CA-signed       certificate back, you must replace the user certificate previously generated in Certificate       Manager.</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_WebUI_import_certificate.html">Importing Certificates</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_WebUI_export_certificate.html">Exporting Certificates</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_replace_trusted_ca_certificates.html">Replacing Trusted CA Certificates</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+When a trusted CA certificate has been updated by a trading partner, you can easily       replace it in the certificate store while retaining the original file name so the partner’s       certificate defined in your host configurations does not need to be updated.</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_WebUI_move_certificate.html">Moving Certificates</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_WebUI_remove_certificate.html">Removing Certificates</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_configure_options_including_crl_and_tsl.html">Configuring Options including CRL and TSL</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_view_usage.html">Viewing User and CA Certificate Usage</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html">Exchanging Certificates with Your Trading Partner</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Tasks/t_WebUI_scheduling_certificates_for_future_use.html">Scheduling Certificates for Future Use</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_handle_expired_certificates.html">Handling Expired Certificates</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

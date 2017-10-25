@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="EBICS (Electronic Banking Internet Communication Standard) uses the HTTPs protocol as its transport mechanism to send files over the Internet. VersaLex uses the PUT and GET action commands, both using ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="EBICS Overview"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ebics_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ebics_overview"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>EBICS Overview</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ebics_overview">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_ebics_hosts.html" title="EBICS Hosts">EBICS Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ebics_hosts.html" title="EBICS Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">EBICS Overview</h1>
+
+   <div class="body">
+      <p class="p">EBICS (Electronic Banking Internet Communication Standard) uses the
+            HTTPs protocol as its transport mechanism to send files over the Internet. VersaLex uses
+            the <span class="keyword cmdname">PUT</span> and <span class="keyword cmdname">GET</span> action commands, both using
+                <span class="keyword cmdname">HTTP POST</span>, to transport the secure data to the remote banking
+            server. All EBICS messages are encapsulated within XML packaging. In addition to
+            SSL/TLS-level encryption, the package content is also encrypted.  Within EBICS, there is
+            strong usage of signatures, both hand-written and electronic. </p>
+
+      
+      <p class="p">EBICS has a client-server architecture, where the bank is the <span class="ph uicontrol">server</span>
+            and the bank's customer (company or individual) is the
+            <span class="ph uicontrol">client</span>. Within EBICS, the client uploads so-called
+                <span class="ph uicontrol">orders</span> to the server and the server processes the
+            orders. Order direction is classified as either an <span class="ph uicontrol">upload order</span>,
+            where the customer is sending payload to the server (e.g., order type IZV - upload of a
+            domestic payment) or a <span class="ph uicontrol">download order</span>, where the bank is sending
+            data to its customer (e.g., order type STA - download SWIFT daily accounts). Whether the
+            order is an upload or download order, the transaction is always initiated from the
+            client.</p>
+
+      
+      <p class="p"> The EBICS specification classifies orders as <span class="ph uicontrol">bank-technical</span> or
+                <span class="ph uicontrol">system-related</span> (organizational or ancillary
+            transfers). Bank-technical orders transfer specific data between the customer and bank
+            (e.g., payments, statements, etc.). System-related orders are used for administrative
+            details such key management or for bank-customer contractual information exchange. The
+            EBICS specification defines many different order types that encompass both
+            bank-technical and system-related orders. With the exception of a few system-related
+            orders, the VersaLex EBICS client is not required to know or understand the content of
+            the orders; it will simply transport the information without parsing the content. With
+            VersaLex, all supported bank-technical orders are transmitted through the
+                <span class="keyword cmdname">GET</span> or  <span class="keyword cmdname">PUT</span> action commands, and all supported
+            system-related orders are transmitted through functions on the <span class="keyword wintitle">EBICS mailbox:
+                EBICS</span> tab. See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a>. </p>
+
+      
+      <p class="p"> While the EBICS specification calls for many different order types that can accommodate
+            specific requests, the FUL and FDL orders are defined by the specification to support
+            general uploads (FUL) and downloads (FDL). See the EBICS specification at <a class="xref" href="http://www.ebics.org/" target="_blank"> www.ebics.org </a>
+            for details on order types. </p>
+
+      <div class="section"><h2 class="title sectiontitle">Customers and Users</h2>
+         
+            <p class="p"> In the context of EBICS, a <span class="ph uicontrol">customer</span> is defined as the
+                organizational unit that concludes a contract with the bank, and a
+                    <span class="ph uicontrol">user</span> is defined as a human or technical system that is
+                assigned to a customer. Customers are often also referred to as
+                    <span class="ph uicontrol">partner</span>, and users are often also referred to as
+                    <strong class="ph b">subscriber</strong>. The customer/partner has a <span class="ph uicontrol">Partner ID</span>
+                to uniquely identify it, and the user/subscriber has a <span class="ph uicontrol">User
+                    ID</span>. The customer-user combination is tied to a mailbox, and their
+                associated IDs are specified on the <span class="keyword wintitle">EBICS mailbox: EBICS</span> tab.
+                See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a>. These IDs are sent with almost every initial
+                request to the bank server. </p>
+
+      </div>
+
+        <div class="section"><h2 class="title sectiontitle">Technical Subscribers</h2>
+            
+            <p class="p">The EBICS specification explains the concept of <span class="ph uicontrol">technical
+                    subscribers</span>. When requests are sent from a technical subscriber, the
+                optional  &lt;SystemID&gt; element is defined. Technical subscribers do not exist in
+                the context of the VersaLex EBICS client, therefore, the &lt;SystemID&gt; element
+                will never be specified.</p>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">Bank-Customers Contracts</h2>
+            
+            <p class="p">Initially, a contract is established between a bank and a customer. The contract
+                includes details such as the orders the customer can issue, which accounts are
+                accessible, and signing permission level.. All contractual details are outside of
+                the EBICS specification and are therefore outside the scope of the VersaLex EBICS
+                client. The management of these contractual details are maintained somewhere within
+                the environment of the financial institution, and not within the VersaLex
+                environment. Therefore, it is the responsibility of the financial institution to
+                guard against unauthorized transactions. For example, if a certain VersaLex user is
+                not authorized to issue a particular order, this transaction will ultimately be
+                prevented when the bank server issues the appropriate return code (that is,
+                    <samp class="ph codeph">EBICS_INVALID_USER_STATE</samp>) during the initialization phase of an
+                order.</p>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">File-Based Transfers</h2>
+            
+            <p class="p">All order data tranmissions are file-based. The VersaLex EBICS client, by default,
+                ensures that all upload requests specify an HTTP header
+                    <span class="ph uicontrol">Content-Type</span>
+                <kbd class="ph userinput">name</kbd> parameter corresponding to the original file name within
+                the VersaLex file system. Conversely, it is anticipated that the bank server will
+                provide a <span class="ph uicontrol">Content-Type</span> "name" parameter or a
+                    <span class="ph uicontrol">Content-Disposition</span> "filename" parameter within the
+                returned HTTP headers for all download requests. While this is anticipated, it is
+                not required for download orders. See <a class="xref" href="#ebics_overview__section_a43_gfk_35">Inbound File Names</a>. </p>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">Data Segmentation and Checkpoint Restart</h2>
+            
+        </div>
+
+        <p class="p">According to the EBICS specification, there is a one (1) MB limit on the size of the
+            payload (i.e., the data encapsulated within the &lt;OrderData&gt; element). After the
+            payload has been compressed, encrypted, and base64-encoded, if larger than 1 MB, it must
+            be segmented into multiple transaction steps. The EBICS specification defines optional
+            checkpoint restart rules at the segment breaks. The VersaLex EBICS client supports the
+            checkpoint restart capability for both uploads and downloads.</p>
+
+        <div class="section"><h2 class="title sectiontitle">Signatures</h2>
+            
+            <p class="p"> EBICS calls for multiple levels of signatures. Almost every message request and
+                response carries a signature; this signature is wrapped within the
+                &lt;AuthSignature&gt; element and it uses the XML Signature methodology. This is
+                referred to as the <span class="ph uicontrol">identification and authentication</span>
+                signature, and it is required for almost every EBICS request and response. In
+                addition to the identification and authentication signature, a so-called
+                    <span class="ph uicontrol">electronic signature</span> (abbreviated as ES) can also be
+                present on an EBICS upload request. This signature is embodied within the
+                &lt;UserSignatureData&gt; element. The <span class="ph uicontrol">ES</span> signs the payload
+                and the <span class="ph uicontrol">identification and authentication signature</span> signs
+                overall EBICS packages. </p>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">Order Attributes</h2>
+            
+            <p class="p">The EBICS specification requires the &lt;OrderAttribute&gt; element on most EBICS
+                requests. See the table below. To learn more, see the EBICS specification at <a class="xref" href="http://www.ebics.org/" target="_blank"> www.ebics.org
+                </a>.</p>
+
+            <p class="p">The &lt;OrderAttribute&gt; element is 5-character field. The setting for each
+                character is as follows:</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ebics_overview__table_ygm_5cl_zt" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e223"> Position </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e226"> Meaning </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e229"> Permitted Values
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e223 "> Position </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e226 "> Meaning </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e229 "> Permitted Values
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e223 "> 1 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e226 "> Type of data
+                                transmitted </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e229 ">
+                                <p class="p">
+                                    <strong class="ph b">
+                                        <span class="ph">O</span>
+                                    </strong>
+                                    <span class="ph">= order data and ES</span>
+                                </p>
+
+                                <p class="p">
+                                    <strong class="ph b">
+                                        <span class="ph">U</span>
+                                    </strong>
+                                    <span class="ph">= ES only</span>
+                                </p>
+
+                                <p class="p">
+                                    <strong class="ph b">
+                                        <span class="ph">D</span>
+                                    </strong>
+                                    <span class="ph">= order data and transport ES</span>
+                                </p>
+
+                                <p class="p">(or no ES in the case of certain key management orders like HIA
+                                    and INI)</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e223 "> 2 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e226 "> Compression type </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e229 ">
+                                <strong class="ph b">
+                                    <span class="ph">Z</span>
+                                </strong>
+                                <span class="ph">= ZIP compression</span>
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e223 "> 3 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e226 "> Encryption type for
+                                order data and/or ES </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e229 ">
+                                <p class="p">
+                                    <strong class="ph b">
+                                        <span class="ph">N</span>
+                                    </strong>
+                                    <span class="ph">= no encryption</span>
+                                </p>
+
+                                <p class="p">
+                                    <strong class="ph b">
+                                        <span class="ph">H</span>
+                                    </strong>
+                                    <span class="ph">= hybrid encryption AES/RSA</span>
+                                </p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e223 "> 4 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e226 "> Reserved </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e229 ">
+                                <strong class="ph b">
+                                    <span class="ph">N</span>
+                                </strong>
+                                <span class="ph">= reserved setting</span>
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e223 "> 5 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e226 "> Reserved </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e229 ">
+                                <strong class="ph b">
+                                    <span class="ph">N</span>
+                                </strong>
+                                <span class="ph">= reserved setting</span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">Security Media For Private Keys</h2>
+            
+            <p class="p">The EBICS specification defines the following codes for identification of the medium
+                for storage of private keys.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ebics_overview__table_zgm_5cl_zt" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e423"> Security Medium </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e426"> Setting </th>
+
+                        </tr>
+   
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e423 "> Security Medium </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e426 "> Setting </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e423 "> No specification </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e426 "> 0000 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e423 "> Diskette </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e426 "> 01dd </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e423 "> Chipcard </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e426 "> 02dd </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e423 "> Other removable
+                                storage medium </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e426 "> 03dd </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e423 "> Non-removable storage
+                                medium </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e426 "> 04dd </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+        <p class="p"> Note that "dd" represents any number combination that is configurable by the
+            customer. This value is specified through the <span class="keyword wintitle">EBICS Host: EBICS</span>
+            tab. See <a class="xref" href="t_EBICS_Host.html">EBICS Host</a>. </p>
+
+        <div class="section" id="ebics_overview__section_a43_gfk_35"><h2 class="title sectiontitle">Inbound File Names</h2>
+            
+            <p class="p"> Inbound files can be received via a <span class="keyword cmdname">GET</span> command or via one of the
+                ancillary orders executed through the <span class="keyword wintitle">EBICS mailbox: EBICS</span> tab
+                (using <span class="ph uicontrol">Execute Ancillary Order</span> or <span class="ph uicontrol">Download Bank
+                    Keys</span>). See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a>. </p>
+
+            <p class="p">The general order of precedence is as follows:</p>
+
+            <ol class="ol" id="ebics_overview__ul_y4l_wnl_zt">
+                <li class="li">If a "destination" name is specified on the <span class="keyword cmdname">GET</span> command, it
+                    is used.</li>
+
+                <li class="li">Otherwise, the <span class="ph uicontrol">Default File Name</span> setting from the
+                        <span class="keyword wintitle">EBICS Host: EBICS</span> tab is used. See <a class="xref" href="t_EBICS_Host.html">EBICS Host</a></li>
+
+            </ol>
+
+            <p class="p">Within the destination string of a <span class="keyword cmdname">GET</span> command or within the
+                    <span class="ph uicontrol">Default File Name</span>, source file macros (e.g.,
+                %sourcefile%) can be used to build the final destination name. When a macro is used,
+                if the <span class="ph uicontrol">Content-Disposition</span> "filename" or the
+                    <span class="ph uicontrol">Content-Type</span> "name" is specified on the inbound response
+                from the bank server, then it is used to resolve the macro. If both parameters are
+                specified, then <span class="ph uicontrol">Content-Disposition</span> takes
+                precedence. Conversely, if neither parameter is specified, then the generic string,
+                "receive.file", is used for the macro substitution.</p>
+
+            <p class="p">After the inbound file name is determined, the following will determine its final
+                name. These steps are different for files associated with a <span class="keyword cmdname">GET</span>
+                command and for files associated with an ancillary or key download.</p>
+
+            <p class="p">If a file is associated with a <span class="keyword cmdname">GET</span> command:</p>
+
+            <ul class="ul" id="ebics_overview__ul_msn_hfk_35">
+                <li class="li">if -UNI is specified on the command, and the file already exists, the name will
+                    be made unique (e.g., changing <samp class="ph codeph">FDL.xml</samp> to
+                        <samp class="ph codeph">FDL1.xml</samp>) to avoid overwriting the file. </li>
+
+                <li class="li">if -APE is specified on the command, the file will be appended to if it already
+                    exists. </li>
+
+                <li class="li">if neither -UNI nor -APE are specified, and the file already exists, it will be
+                    overwritten. </li>
+
+            </ul>
+
+            <p class="p">If a file is associated with an ancillary or key download:</p>
+
+            <ul class="ul" id="ebics_overview__ul_dzd_kfk_35">
+                <li class="li">if the file already exists, the name will be made unique (e.g., changing
+                        <samp class="ph codeph">HTD.xml</samp> to <samp class="ph codeph">HTD1.xml</samp>) to avoid overwriting
+                    the file. </li>
+
+            </ul>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">Key Management</h2>
+            
+            <p class="p">The EBICS specification defines several provisions and order types associated with
+                the exchange of public keys.  Three sets of public-private keys are defined for
+                EBICS application-level encryption and signing. They are:</p>
+
+            <ol class="ol" id="ebics_overview__ol_wjx_bgk_35">
+                <li class="li">key pair for encryption</li>
+
+                <li class="li">key pair for identification and authentication signature</li>
+
+                <li class="li">key pair for electronic signature (ES)</li>
+
+            </ol>
+
+            <p class="p">According to the specification, key pairs 1 and 2 can be the same pair, but key pair
+                3 must be unique. The bank server will respond with appropriate error codes if this
+                requirement is not met.</p>
+
+        </div>
+
+      <div class="section"><h2 class="title sectiontitle">SSL/TLS Keys</h2>
+            
+            <p class="p">In addition to the keys used at the application-level, there is a public-private key
+                pair for TLS-level encryption.  The EBICS specification makes no restrictions as to
+                whether or not this key pair may coincide with one of the application-level
+                keys.</p>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">Key Exchange</h2>
+            
+            <p class="p">When a user is first created, the bank will classify the user as
+                    <span class="ph uicontrol">New</span>. Prior to conducting transactions, the user must be
+                classified as <span class="ph uicontrol">Ready</span>. The <span class="ph uicontrol">Ready</span> state
+                means that the bank has all the information necessary for the user to start
+                submission of orders, including bank's download keys. To achieve the
+                    <span class="ph uicontrol">Ready</span> state, the bank requires the receipt of certain
+                keys. Know the requirements of your banking partner in order to provide the
+                necessary keys according to the prescribed methods.</p>
+
+            <p class="p"> The transfer of keys from the client to the server and from the server to the client
+                is referred to as <span class="ph uicontrol">key exchange</span> and is supported through the
+                    <span class="keyword wintitle">EBICS mailbox: EBICS</span> tab. See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a>. Under EBICS, provisions have been made for key exchange through certain order
+                types defined within the specification. The key exchange order types implemented
+                through the VersaLex EBICS client are: </p>
+
+            <p class="p"> Upload: </p>
+
+            <ul class="ul" id="ebics_overview__ul_fjr_dgk_35">
+                <li class="li"><span class="ph uicontrol">INI</span> - Upload ES key </li>
+
+                <li class="li"><span class="ph uicontrol">HIA</span> - Upload signing and encryption keys </li>
+
+                <li class="li"><span class="ph uicontrol">H3K</span> - Upload signing, encryption, and ES keys </li>
+
+                <li class="li"><span class="ph uicontrol">PUB</span> - Update ES key </li>
+
+                <li class="li"><span class="ph uicontrol">HCA</span> - Update signing and encryption keys </li>
+
+                <li class="li"><span class="ph uicontrol">HCS</span> - Update signing, encryption, and ES keys </li>
+
+            </ul>
+
+            <p class="p">Download:</p>
+
+            <ul class="ul" id="ebics_overview__ul_zx4_fgk_35">
+                <li class="li"><span class="ph uicontrol">HPB</span> - Download signing and encryption keys </li>
+
+            </ul>
+
+            <p class="p">The EBICS specification also calls for hardcopy "initialisation letters" through
+                which a secondary submission of key information is passed. The VersaLex EBICS client
+                also provides functions to produce these letters.</p>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">EBICS Client Order Types</h2>
+            
+            <div class="p"> Below is a table summarizing the order types referenced in the EBICS specification
+                at <a class="xref" href="http://www.ebics.org/" target="_blank"> www.ebics.org
+                </a>. The source of the table originated from Appendix 13 of
+                    <span class="keyword wintitle">Specification EBICS Version 2.5</span>. The last column of the
+                table displays where the order type is supported within the framework of an EBICS
+                host, mailbox, or action. 
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ebics_overview__table_dnb_bdl_zt" class="table" frame="border" border="1" rules="all">
+                        
+                        
+                        
+                        
+                        
+                        <thead class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e768"> Order Type </th>
+
+                                <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e771"> Direction of
+                                    Transfer </th>
+
+                                <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e774"> Text </th>
+
+                                <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e777"> Specification
+                                    Status </th>
+
+                                <th class="entry" rowspan="1" colspan="1" valign="top" id="d313657e780"> Where Supported in
+                                    VersaLex </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> FDL </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download file with
+                                    any format </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p"><span class="ph">Supported through</span> the <span class="keyword cmdname">GET</span>
+                                        command. </p>
+
+                                    <p class="p">See <a class="xref" href="t_ebics_command_reference.html">EBICS Command Reference</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> FUL </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Upload file with
+                                    any format </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p"><span class="ph">Supported through</span> the <span class="keyword cmdname">PUT</span>
+                                        command. </p>
+
+                                    <p class="p">See <a class="xref" href="t_ebics_command_reference.html">EBICS Command Reference</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HAA </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download
+                                    retrievable order types </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HAC </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download status
+                                    information (XML Format) </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Mandatory </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HCA </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Update signing and
+                                    encryption keys </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Mandatory </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HCS </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Update signing,
+                                    encryption, and ES keys </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Mandatory </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HEV </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download supported
+                                    versions </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Mandatory </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HIA </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Upload signing and
+                                    encryption keys </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Mandatory </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HKD </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download customer
+                                    data for all users </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HPB </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download signing
+                                    and encryption keys </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Mandatory </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HPD </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download bank
+                                    parameters </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Mandatory </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HSA </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Upload subscriber
+                                    keys for FTAM users </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 "> Not Planned
+                                    [4]</td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HTD </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download customer
+                                    data for this specific user </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HVD </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Retrieve VEU state </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Conditional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    
+                                    
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HVE </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Add VEU state </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Conditional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    
+                                    
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HVS </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> VEU cancellation </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Conditional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    
+                                    
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HVT </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Retrieve VEU
+                                    cancellation details </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Conditional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    
+                                    
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HVU </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download VEU
+                                    overview </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Conditional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    
+                                    
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> HVZ </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download VEU
+                                    overview with additional information </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Conditional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    
+                                    
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> H3K </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Upload signing,
+                                    encryption, and ES keys </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> INI </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Upload ES key </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> PTK </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Download status
+                                    information (German version only) </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> PUB </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Update ES Key </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> SPR </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Suspend user </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Optional </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Supported through the <span class="keyword wintitle">EBICS mailbox:
+                                            EBICS</span> tab. </p>
+
+                                    <p class="p">See <a class="xref" href="t_EBICS_Mailbox.html">EBICS Mailbox</a></p>
+
+                                </td>
+
+                            </tr>
+
+                            <tr class="row">
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e768 "> AEA, AIA, etc. [5] </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e771 "> U/D </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e774 "> Variable </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e777 "> Variable </td>
+
+                                <td class="entry" rowspan="1" colspan="1" valign="top" headers="d313657e780 ">
+                                    <p class="p">Upload commands supported through the <span class="keyword cmdname">PUT</span>
+                                        command .</p>
+<p class="p">Download command supported through the
+                                            <span class="keyword cmdname">GET</span> command .</p>
+See <a class="xref" href="t_ebics_command_reference.html">EBICS Command Reference</a></td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+</div>
+
+        </div>
+
+   </div>
+
+    
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ebics_hosts.html" title="EBICS Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

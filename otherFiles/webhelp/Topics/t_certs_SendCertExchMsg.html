@@ -1,0 +1,185 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="To send new certificates to your trading partner(s) via EDIINT Certificate Exchange Messaging, the following pre-requisites must be satisfied: The trading partner relationships must already exist.  ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Sending a Certificate Exchange Message"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_qzj_2jc_f5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Sending a Certificate Exchange Message</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_qzj_2jc_f5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html" title="Exchanging Certificates with Your Trading Partner">Exchanging Certificates with Your Trading Partner</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html" title="Exchanging Certificates with Your Trading Partner"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Exchanging Certificates with Your Trading Partner</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Sending a Certificate Exchange Message</h1>
+
+  <div class="body taskbody">
+    <div class="section context"><p class="p">To send new certificates to your trading
+        partner(s) via EDIINT Certificate Exchange Messaging, the following pre-requisites must be
+        satisfied:</p>
+<ul class="ul" id="task_qzj_2jc_f5__ul_dzq_2jl_gv">
+        <li class="li">The trading partner relationships must already exist.  EDIINT Certificate Exchange
+          Messaging may only be used to upgrade certificates in established trading relationships. </li>
+
+        <li class="li">Your trading partner(s) must be capable of sending and receiving EDIINT Certificate
+          Exchange Messages (that is, for <strong class="ph b">AS2-CEM</strong> protocols only).</li>
+
+      </ul>
+<p class="p"> If either of these pre-requisites has not been satisfied, you can still use the
+        Certificate Exchange dialog boxes, but the certificates are sent using
+          <span class="ph uicontrol">Email</span> instead. See <a class="xref" href="t_WebUI_exchanging_certificates_with_your_trading_partner.html">Exchanging Certificates with Your Trading Partner</a>. See <a class="xref" href="t_certs_NonCEMCapablePartners.html">Non-CEM Capable Trading Partners</a>
+        <span class="ph">for further information.</span>
+      </p>
+</div>
+
+    <ol class="ol steps" id="task_qzj_2jc_f5__steps_owv_cyb_dy"><li class="li step stepexpand">
+        <span class="ph cmd">Open the Certificate Exchange dialog box.  In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; Cerfiticate Management &gt; Certificate Exchange</span></span>.  In the native UI, click <span class="ph uicontrol">Certificates</span> in the menu
+          bar to display the <span class="keyword wintitle">Certificate Manager</span>, and then in the
+            <span class="keyword wintitle">Certificate Manager</span>, go to <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Exchange Certificates</span></span>.  </span>
+        <div class="itemgroup info">The <span class="ph uicontrol">My Certs</span> tab appears.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">In the <span class="ph uicontrol">My Certs</span> tab, select the AS2-CEM trading partner(s) you
+          want to exchange with. </span>
+        
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">In the Command menu, select <span class="ph uicontrol">Send New Certificates</span>, and then
+          click <span class="ph uicontrol">Proceed</span>.</span>
+        <div class="itemgroup info">The <span class="ph uicontrol">Send Local Certificates</span> dialog box appears, allowing you to
+          select certificates for this trading relationship.</div>
+        
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select certificates.</span>
+        <ol type="a" class="ol substeps" id="task_qzj_2jc_f5__substeps_qxv_5zb_dy">
+          <li class="li substep substepexpand">
+            <span class="ph cmd">Before you enter information to select certificates, you might have to enable
+              fields, except for the Signing Certificate fields, which are always enabled.</span>
+            <div class="itemgroup info">To enable the <span class="ph uicontrol">Encryption Certificate Alias</span> fields, clear
+              the <span class="ph uicontrol">Use Signing Certificate</span> check box. Clearing this check box
+              means you choose to use separate certificates for signing and encryption.  If you
+              leave this check box selected, the certificate you select as the signing certificate
+              is also used for encryption.</div>
+            <div class="itemgroup info">To enable the <span class="ph uicontrol">SSL Client Certificate Alias</span> fields, select
+              the <span class="ph uicontrol">Send SSL Client Certificate</span> check box.</div>
+            <div class="itemgroup info">To enable the <span class="ph uicontrol">SSL Serer Certificate Alias</span> fields, select
+              the <span class="ph uicontrol">Send SSL Server Certificate</span> check box.</div>
+            <div class="itemgroup info">If a certificate is already pending from a previous certificate exchange, the
+              fields and the <span class="ph uicontrol">Browse</span> button for that certificate are not
+              enabled.  </div>
+          </li>
+
+          <li class="li substep substepexpand">
+            <span class="ph cmd">For each certificate you want to send, type a certificate alias name in the
+                <span class="ph uicontrol">Alias</span> field or click <span class="ph uicontrol">Browse</span> to
+              navigate to a certificate and select it.</span>
+          </li>
+
+        </ol>
+
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">The <span class="ph uicontrol">Send</span> button is enabled only if previous messages from the
+          trading partner have included a specific header indicating that the partner is
+          CEM-capable. You can verify this capability by ensuring that the <span class="ph uicontrol">Partner Is
+            CEM-Capable</span> setting in the <span class="ph menucascade"><span class="ph uicontrol">Host &gt; AS2</span></span> panel is set to <kbd class="ph userinput">True</kbd>.</span>
+        <div class="itemgroup info">
+          <p class="p">If the partner has specifically requested the exchange of new certificates using EDIINT
+            Certificate Exchange Messaging but <span class="ph uicontrol">Send</span> is not enabled, select
+            the <span class="ph uicontrol">Partner Is CEM-Capable</span> option to force sending of the new
+            certificates via EDIINT Certificate Exchange Messaging.</p>
+
+        </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Send</span>, click it to send the <span class="keyword">Certificate
+            Request</span> message. </span>
+        <div class="itemgroup info"></div>
+        
+        
+        <div class="itemgroup info">A confirmation dialog box appears.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Yes</span> to verify the certificates you selected are the ones
+          you want to send.</span>
+        <div class="itemgroup info">
+          
+          <p class="p">If any of the specified certificates are already active (that is, installed) for this
+            trading relationship, an additional confirmation dialog box appears asking if you want
+            to send the installed certificates. </p>
+
+        </div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Yes</span> to send all new and previously installed certificates
+          to your trading parter.</span>
+        <div class="itemgroup info">Click <span class="ph uicontrol">No</span> to send only the newly selected certificates to your
+          trading partner.</div>
+        <div class="itemgroup info"> If all the selected certificates are already installed, clicking
+            <span class="ph uicontrol">No</span> returns you to the previous <span class="keyword wintitle">Send Local
+            Certificates</span> panel allowing you to either choose new certificates to send to
+          your trading partner or to cancel the send operation altogether.</div>
+        <div class="itemgroup info"></div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">The <span class="ph uicontrol">My Certs</span> tab appears and, if the Certificate Request is
+          successfully sent, its status is set to <kbd class="ph userinput">Pending</kbd>.</span>
+        <div class="itemgroup info">If an error occurred, you can correct any issues, select the partner entry, and click
+            <span class="ph uicontrol">Retry</span>.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click Close.</span>
+        <div class="itemgroup info">
+          <p class="p">
+            <span class="ph">j.    The status of the Certificate Request is set to
+                  <span class="ph"><span class="ph uicontrol">Pending</span></span> if it had been successfully sent.  (If an
+              error occurred, the Certificate Request message may be re-sent after correcting the
+              problem, if possible, by selecting the partner entry and invoking
+                <span class="ph uicontrol">Retry</span>.)</span>
+          </p>
+
+          <p class="p">
+            <img class="image" id="task_qzj_2jc_f5__image_zf4_t1c_f5" src="../Images/image1336.jpg"></img>
+          </p>
+
+          <p class="p">k.   The new certificates will be displayed in the panel with the current certificates
+            and will not be editable until after certificate acceptance and your trading partner
+            begins encrypting with the new encryption certificate.</p>
+
+          <p class="p">
+            <img class="image" id="task_qzj_2jc_f5__image_ag4_t1c_f5" src="../Images/image1338.jpg"></img>
+          </p>
+
+          <p class="p">l.    If a new SSL Server certificate was sent, the new certificate will be displayed
+            in the Local Listener’s HTTP panel with the current certificate. <span class="keyword wintitle">Certificate
+              Alias</span> will be read-only until all HTTP partners have received and accepted
+            the new certificate.  Once this has occurred, the new SSL Server certificate will
+            automatically be installed (normally within five-minutes).    </p>
+
+          <p class="p">
+            <img class="image" id="task_qzj_2jc_f5__image_bg4_t1c_f5" src="../Images/image1340.jpg"></img>
+          </p>
+
+          <p class="p">
+            <span class="ph">m.  Since only one HTTP SSL Server certificate may be active at any time, the new
+              SSL Server certificate will be the only certificate that may sent for all subsequent
+              Certificate Exchange Messages:</span>
+          </p>
+
+          <p class="p">
+            <img class="image" id="task_qzj_2jc_f5__image_cg4_t1c_f5" src="../Images/image1342.jpg"></img> </p>
+
+        </div>
+      </li>
+</ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html" title="Exchanging Certificates with Your Trading Partner"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Exchanging Certificates with Your Trading Partner</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

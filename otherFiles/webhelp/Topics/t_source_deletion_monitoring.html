@@ -1,0 +1,46 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo Harmony and Cleo VLTrader applications only. When transfer logging is enabled (see Configure &gt; Options Transfers tab), the VersaLex source deletion monitoring ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Source Deletion Monitoring"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="source_deletion_monitoring"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Source Deletion Monitoring</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="source_deletion_monitoring">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Source Deletion Monitoring</h1>
+
+   <div class="body">
+      <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications
+         only.</div>
+
+      
+      <p class="p">When transfer logging is enabled (see
+            <span class="keyword wintitle">Configure &gt; Options Transfers</span> tab), the <span class="ph">VersaLex</span> source deletion
+         monitoring feature is active. While this feature is active, any files that fail to be
+         deleted as part of a <span class="keyword cmdname">PUT -DEL</span> command in an action are added to a
+         monitoring list. Once monitored, they have a status of 'Delete Error' in the transfer
+         report. Also, these files are skipped if an action attempts to resend them. Finally, an
+         hourly cleanup task attempts to remove these files. Once a file is successfully removed, or
+         if it is deleted manually, its status is set to 'Delete Resolved' and it is removed from
+         the monitoring list.</p>
+
+      <p class="p"> If a source deletion error occurs for an action being run by the scheduler and transfer
+         logging is disabled, the <img class="image" src="../Images/image146.gif"></img> action is disabled by the
+         scheduler. To resolve this problem, manually delete the file and restart the schedule. To
+         avoid disabling actions in the future, enable transfer logging and restart the
+         schedule.</p>
+
+      
+   </div>
+
+ <div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

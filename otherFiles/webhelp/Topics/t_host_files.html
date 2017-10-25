@@ -1,0 +1,426 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Each available host type within the Cleo Harmony Cleo VLTrader Cleo LexiCom software comes pre-configured within an XML file in the \hosts\preconfigured directory. If a pre-configured host is ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Host Files"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_xml_file_formats.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="host_files"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Host Files</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="host_files">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_xml_file_formats.html" title="XML file formats">XML file formats</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_xml_file_formats.html" title="XML file formats"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">XML file formats</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Host Files</h1>
+
+   <div class="body">
+      <p class="p">Each available host type within
+            the <span class="ph">Cleo Harmony</span><span class="ph">Cleo VLTrader</span><span class="ph">Cleo LexiCom</span> software comes
+            pre-configured within an XML file in the <span class="ph filepath">\hosts\preconfigured</span>
+            directory. If a pre-configured host is activated, its XML file is copied to the
+                <span class="ph filepath">\hosts</span> directory and is then updated as the user further
+            configures the host through the <span class="ph">Cleo Harmony</span><span class="ph">Cleo VLTrader</span><span class="ph">Cleo LexiCom</span> panels.</p>
+
+      
+      <p class="p">A host XML file is generally formatted as
+            follows:</p>
+
+        <p class="p"> <img class="image" src="../Images/image1872.jpg"></img> </p>
+
+        <ul class="ul" id="host_files__ul_f45_4jy_wy">
+            <li class="li">One and only one <samp class="ph codeph">&lt;Host&gt;</samp> element exists in the file.</li>
+
+            <li class="li"><samp class="ph codeph">&lt;Host&gt;</samp> may contain zero or more
+                    <samp class="ph codeph">&lt;Mailbox&gt;</samp> elements and zero or more
+                    <samp class="ph codeph">&lt;TradingPartner&gt;</samp> elementss.</li>
+
+            <li class="li"><samp class="ph codeph">&lt;Mailbox&gt;</samp> may contain zero or more
+                    <samp class="ph codeph">&lt;Action&gt;</samp> elements.</li>
+
+            <li class="li">The <span class="ph filepath">class="path"</span> identifies the VersaLex module that
+                corresponds to this host type and tree level.  It is a java class path relative to
+                the base VersaLex bean package.</li>
+
+            <li class="li">The <span class="ph filepath">alias="value" </span>cannot contain the backslash character
+                (\).</li>
+
+            <li class="li"><samp class="ph codeph">&lt;Property1&gt;</samp>, <samp class="ph codeph">&lt;Property2&gt;</samp>,
+                    <samp class="ph codeph">&lt;Property...&gt;</samp> do not actually exist.  Some common
+                property names and possible values do exist, but most are dependent on the specific
+                host type.</li>
+
+        </ul>
+
+      
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d327715e118">
+                        Level
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d327715e121">
+                        Common property
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d327715e124">
+                        Possible values
+                    </th>
+
+                
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                        &lt;Host&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Address&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        The server address, either a fully-qualified name
+                            (recommended) or an IP address
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Port&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        The server port, either a specific port # or -1 to
+                            indicate the default port for the protocol
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Connecttype&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        
+                     <p class="p">0 - system default</p>
+
+                        
+                     <p class="p">1 - direct internet access</p>
+
+                        
+                     <p class="p">2 - LexRas dial-up connection</p>
+
+                        
+                     <p class="p">3 - GXS IBC dial-up connection</p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Phonebookentry&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Existing Windows RAS phonebook entry
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Ibcusername&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        GXS IBC account username
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Ibcpassword&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        GXS IBC account password
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Inbox&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Any local or shared directory
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Outbox&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Any local or shared directory
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Sentbox&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Any local or shared directory
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Notes&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Any pertinent information
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                        &lt;Mailbox&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Notes&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Any pertinent information
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                        &lt;TradingPartner&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Notes&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Any pertinent information
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                        &lt;Action&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Commands&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Formatted command lines, syntax specific to host
+                            type
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Messages&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Messages logged the last time the action was
+                            run
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e118 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e121 ">
+                        &lt;Notes&gt;
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d327715e124 ">
+                        Any pertinent information
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">All pre-configured hosts are not created equally. The more generic host types contain
+            little or no properties, while the more specific host types may contain almost all the
+            required properties. The more information contained in the pre-configured host file, the
+            less information the user must provide when the host is activated.</p>
+
+      <p class="p">For example, the following generic HTTP/s host file
+            provides no property values.</p>
+
+      
+      <p class="p">
+         <img class="image" src="../Images/image1874.jpg"></img>
+      </p>
+
+      
+      <p class="p">If you wanted to start with the generic HTTP/s host to connect to our example ABC VAN host,
+            you would use the <span class="ph">Cleo Harmony</span> configuration panels to provide values for the following properties.</p>
+
+        
+      
+      <p class="p">
+         <img class="image" src="../Images/image1876.jpg"></img>
+      </p>
+
+      
+      <p class="p">The best way to learn a property name and possible values for a specific host type is to
+            use the <span class="ph">Cleo Harmony</span> UI to
+            configure the host and then interrogate the XML file.</p>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_xml_file_formats.html" title="XML file formats"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">XML file formats</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

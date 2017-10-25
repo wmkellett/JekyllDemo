@@ -1,0 +1,197 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Provide information about the Service Provider (SP). Enable SAML for all Cleo portal users Select this check box to authenticate all Cleo Portal users via IDP using SAML protocol. Important: Before ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="SAML Service Provider reference"></meta><meta name="abstract" content="Provide information about the Service Provider (SP)."></meta><meta name="description" content="Provide information about the Service Provider (SP)."></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SAMLCfg_Overview.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="SAMLSvcProviderReference"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SAML Service Provider reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="SAMLSvcProviderReference">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_User_Management.html" title="User Management">User Management</a> / <a class="navheader_parent_path" href="../Topics/t_SAMLCfg_Overview.html" title="SAML Configuration">SAML Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_SAMLCfg_Overview.html" title="SAML Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SAML Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">SAML Service Provider reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">Provide information about the Service Provider (SP). </p>
+
+    <div class="section"><dl class="dl">
+        
+          <dt class="dt dlterm">Enable SAML for all Cleo portal users</dt>
+
+          <dd class="dd">Select this check box to authenticate all Cleo Portal users via IDP using SAML
+              protocol.<div class="note important"><span class="importanttitle">Important:</span> Before you select this check box,
+              make sure you have imported your IDP information and your IDP has your SP
+              information.</div>
+</dd>
+
+        
+      </dl>
+</div>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Entity ID</dt>
+
+          <dd class="dd">Specify the value to be used as the <samp class="ph codeph">Issuer</samp> in the
+              <samp class="ph codeph">Authn</samp> request. This value must be unique and it should conform to the
+            URI pattern. </dd>
+
+          <dd class="dd">This value is used to publicly identify your deployment throughout your configuration
+            and all of the other deployments that it interoperates with. This means that updating
+            this value could affect many different systems and could take a long time to propagate.
+            It is recommended that you <em class="ph i">not</em> use a physical hostname, as such a value could
+            change if you update your physical configuration. Instead, consider using a value that
+            describes the service itself, as such a value could remain intact even through changes
+            in physical configuration. One recommendation is to use your Assertion Consumer Service
+            Endpoint value, as long as the domain is fully qualified.</dd>
+
+        
+        
+          <dt class="dt dlterm">Assertion Consumer Service Endpoint (HTTP-POST)</dt>
+
+          <dd class="dd">The URL to which the IDP posts assertions to your <span class="ph">Cleo Harmony</span> system.</dd>
+
+          <dd class="dd"><samp class="ph codeph">http://&lt;domain&gt;:&lt;port&gt;/&lt;portal-resource&gt;</samp></dd>
+
+          <dd class="dd">The value you should use for <var class="keyword varname">&lt;portal-resource&gt;</var> is the same one
+            you configure for the Local Listener Web Browser Service. See <a class="xref" href="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html">Local Listener Web Browser Service</a>.</dd>
+
+        
+        
+          <dt class="dt dlterm">Single Logout Service Endpoint (HTTP – Redirect)</dt>
+
+          <dd class="dd">The URL from which the IDP sends logout requests to your <span class="ph">Cleo Harmony</span> system.</dd>
+
+          <dd class="dd"><samp class="ph codeph">http://&lt;domain&gt;:port&lt;/signout&gt;</samp></dd>
+
+          <dd class="dd">This field is populated automatically based on the value provided in the
+              <span class="ph uicontrol">Assertion Consumer Service Endpoint</span> field and is
+            read-only.</dd>
+
+        
+        
+          <dt class="dt dlterm">Enable Single Logout</dt>
+
+          <dd class="dd">Select this check box to enable single logout processing and populate the
+              <span class="ph uicontrol">Single Logout Service Endpoint (HTTP – Redirect)</span> field.</dd>
+
+        
+      </dl>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Signing &amp; Encryption</h2>
+      
+      <p class="p">Provide information to support signing authentication requests and encrypting
+        assertions.</p>
+
+      <dl class="dl">
+        
+        
+          <dt class="dt dlterm">Sign Authentication Requests</dt>
+
+          <dd class="dd">Select the check box to enable fields where you specify a certificate and password to
+            cause <span class="ph filepath">Authn Requests</span> sent to the IDP to be signed. <dl class="dl">
+              
+                <dt class="dt dlterm">Signing Certificate</dt>
+
+                <dt class="dt dlterm">Password</dt>
+
+                <dt class="dt dlterm">Algorithm</dt>
+
+                <dd class="dd">Alias, password and algorithm for the certificate to use to sign authentication
+                  requests. You can specify a certificate or browse for and select one.</dd>
+
+                <dd class="dd"><kbd class="ph userinput">SHA-1</kbd> and <kbd class="ph userinput">SHA-256</kbd> algorithms are
+                  supported.</dd>
+
+              
+            </dl>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Encryption Assertion</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Encryption Certificate</dt>
+
+                <dt class="dt dlterm">Password</dt>
+
+                <dd class="dd">Optional - Certificate alias and password the IDP will use for encryption. You
+                  can specify a certificate or browse for and select one.</dd>
+
+                <dd class="dd">Select <span class="ph uicontrol">Use same as Signing Certificate</span> to use the signing
+                  certificate for encryption.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Sign MetaData</dt>
+
+          <dd class="dd">Enables the fields where you select a certificate to use to sign SP metadata XML files
+            generated during export. <dl class="dl">
+              
+                <dt class="dt dlterm">Metadata Signing Certificate</dt>
+
+                <dt class="dt dlterm">Password</dt>
+
+                <dd class="dd">Certificate alias and password to use for signing SP metadata XML files
+                  generated during export. You can specify a certificate or browse for and select
+                  one.</dd>
+
+                <dd class="dd">Select <span class="ph uicontrol">Use same as Signing Certificate</span> to use the signing
+                  certificate to sign metadata.</dd>
+
+              
+            </dl>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Organization and Contacts</h2>
+      
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Name</dt>
+
+          <dt class="dt dlterm">Display Name</dt>
+
+          <dt class="dt dlterm">Website</dt>
+
+          <dd class="dd">Information about the SP organization. </dd>
+
+        
+        
+          <dt class="dt dlterm">Technical - Name and Email</dt>
+
+          <dt class="dt dlterm">Support - Name and Email</dt>
+
+          <dd class="dd">Information about people at the SP who are available to be contacted.</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_SAMLCfg_Overview.html" title="SAML Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SAML Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

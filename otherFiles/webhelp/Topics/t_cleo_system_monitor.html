@@ -1,0 +1,183 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Cleo System Monitor™ application is designed for a VersaLex system administrator. Cleo System Monitor allows a user, through a web interface, to view the status of the selected VersaLex system. ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Cleo System Monitor"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cleo_dashboards_and_cleo_system_monitor.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SystemMonitor_Launcing.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SysMon_SystemDashboard.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SysMon_ActionDashboards.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SysMon_ServerDashboard.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SysMon_UIDashboard.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SysMon_SyncDashboard.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SysMon_VLProxyDashboard.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SysMon_SuppDashboards.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="cleo_system_monitor"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cleo System Monitor</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="cleo_system_monitor">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_cleo_dashboards_and_cleo_system_monitor.html" title="Cleo Dashboards and Cleo System Monitor">Cleo Dashboards and Cleo System Monitor</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cleo_dashboards_and_cleo_system_monitor.html" title="Cleo Dashboards and Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo Dashboards and Cleo System Monitor</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Cleo System Monitor</h1>
+
+   <div class="body">
+      <p class="p">The Cleo System
+                  Monitor™ application is designed for a VersaLex system administrator. Cleo System
+                  Monitor allows a user, through a web interface, to view the status of the selected
+                  VersaLex system.</p>
+
+      
+      <p class="p">The following are the prerequisites for running the Cleo System Monitor
+            on a specific VersaLex:</p>
+
+            <ul class="ul" id="cleo_system_monitor__ul_tnk_rg1_qy">
+                  <li class="li">The user group has been granted access.</li>
+
+                  <li class="li">VersaLex must be running.</li>
+
+                  <li class="li">System Monitor is licensed and enabled.</li>
+
+                  <li class="li">The System Monitor embedded database must be up and running.</li>
+
+                  <li class="li">The System Monitor embedded database must be accessible from the VersaLex
+                        application through which the user is connecting. This means the firewall
+                        must allow access to the embedded database port.</li>
+
+            </ul>
+
+      
+      <p class="p">The user accesses the Cleo System Monitor application through a web browser. The default
+                  URL will be in the format:</p>
+
+      
+      <p class="p">http(s)://<var class="keyword varname">VesraLexComputerIP</var>:<var class="keyword varname">http(s)Port</var>/<var class="keyword varname">VLMonitor</var>
+      </p>
+
+      <p class="p">           </p>
+
+      <p class="p">Where <var class="keyword varname">VesraLexComputerIP</var> is the address of the VersaLex (or
+            VLProxy) system and <var class="keyword varname">http(s)Port</var> is the HTTP(s) port the system is listening on
+            for HTTP(s) traffic.</p>
+
+      
+      <p class="p">After logging in, the user selects a VersaLex Pool and a specific
+            VersaLex to view.</p>
+
+      <p class="p">
+         <img class="image" src="../Images/image1732.jpg"></img>
+      </p>
+
+      <p class="p">The reports configured in VLNavigator for this user will be
+            displayed.</p>
+
+      
+      <p class="p">The Cleo System Monitor™ software includes the following baseline dashboards:</p>
+
+            <ul class="ul" id="cleo_system_monitor__ul_jm2_zqn_25">
+                  <li class="li"><a class="xref" href="t_SysMon_SystemDashboard.html">System Dashboard</a>
+                  </li>
+
+                  <li class="li"><a class="xref" href="t_SysMon_ActionDashboards.html">Action Dashboard</a>
+                  </li>
+
+                  <li class="li"><a class="xref" href="t_SysMon_ServerDashboard.html">Server Dashboard</a>
+                  </li>
+
+                  <li class="li"><a class="xref" href="t_SysMon_UIDashboard.html">UI Dashboard</a>
+                  </li>
+
+                  <li class="li"><a class="xref" href="t_SysMon_SyncDashboard.html">Synchronization Dashboard</a>
+                  </li>
+
+                  <li class="li"><a class="xref" href="t_SysMon_VLProxyDashboard.html">VLProxy Dashboard</a>
+                  </li>
+
+            </ul>
+
+      
+      <p class="p">In addition to the baseline dashboards, <a class="xref" href="t_SysMon_SuppDashboards.html">Supplementary Dashboards</a> might also
+                  be available.</p>
+
+      
+      <p class="p">The initial data for the dashboard is not displayed until that dashboard has been made
+                  visible. Once the report has been made visible, it will automatically refresh
+                  every 60 seconds. The dashboards can be refreshed on demand by clicking <span class="ph">
+                        <strong class="ph b">
+                              <span class="ph">Refresh</span>
+                        </strong>
+                  </span>
+                  <span class="ph">
+                        <img class="image" src="../Images/image1645.jpg"></img>
+                  </span>
+                  <span class="ph"> on the</span>
+                  <span class="ph">side bar</span>
+                  <span class="ph">.</span>
+            </p>
+
+            <div class="section"><h2 class="title sectiontitle">Start date/time in History Sub-reports</h2>
+                  
+                  <p class="p">Many of the items on the System Monitor dashboards link to history sub-reports.
+                        These history reports default to the last 1 hour of data. This is
+                        accomplished by using the formula:</p>
+
+                  <p class="p">dateadd(‘h’,-1,currenttime())</p>
+
+                  <p class="p">This formula subtracts 1 hour from the current time.</p>
+
+                  <p class="p">You can change this time by entering a date time in the format:</p>
+
+                  <p class="p">            yyyy/MM/dd HH:mm:ss</p>
+
+                  <p class="p">where:</p>
+
+                  <p class="p">yyyy = 4-digit year</p>
+
+                  <p class="p">MM = 2 digit month (01-12)</p>
+
+                  <p class="p">dd = 2 digit day of the month (01-31)</p>
+
+                  <p class="p">HH = 2 digit hour of the day (00-23)</p>
+
+                  <p class="p">mm = 2 digit minute of the hour (00-59)</p>
+
+                  <p class="p">ss = 2 digit second of the minute (00-59)</p>
+
+                  <p class="p">An alternative is to use the calendar. This can be accessed by clicking on the
+                        calendar icon <img class="image" id="cleo_system_monitor__image_tlj_3pp_m5" src="../Images/image1734.jpg"></img> next to the field.</p>
+
+                  <p class="p">
+                        <img class="image" id="cleo_system_monitor__image_ulj_3pp_m5" src="../Images/image1736.jpg"></img>
+                  </p>
+
+                  <p class="p">This will bring up the calendar control where you use one of the predefined
+                        templates by selecting from the Template dropdown or select the date and
+                        time from the left-hand side.</p>
+
+                  <p class="p">
+                        <img class="image" id="cleo_system_monitor__image_vlj_3pp_m5" src="../Images/image1738.jpg"></img>
+                  </p>
+
+            </div>
+
+   </div>
+
+      
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_SystemMonitor_Launcing.html">Launching Cleo System Monitor</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SysMon_SystemDashboard.html">System Dashboard</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SysMon_ActionDashboards.html">Action Dashboard</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SysMon_ServerDashboard.html">Server Dashboard</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SysMon_UIDashboard.html">UI Dashboard</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SysMon_SyncDashboard.html">Synchronization Dashboard</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SysMon_VLProxyDashboard.html">VLProxy Dashboard</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_SysMon_SuppDashboards.html">Supplementary Dashboards</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cleo_dashboards_and_cleo_system_monitor.html" title="Cleo Dashboards and Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo Dashboards and Cleo System Monitor</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

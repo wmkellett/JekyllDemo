@@ -1,0 +1,76 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="After you submit a CSR to a Certificate Authority (CA) and receive the CA-signed certificate back, you must replace the user certificate previously generated in Certificate Manager. If the CA-signed ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Replacing a User Certificate with a CA-signed Certificate (Server ID)"></meta><meta name="abstract" content="After you submit a CSR to a Certificate Authority (CA) and receive the CA-signed certificate back, you must replace the user certificate previously generated in Certificate Manager."></meta><meta name="description" content="After you submit a CSR to a Certificate Authority (CA) and receive the CA-signed certificate back, you must replace the user certificate previously generated in Certificate Manager."></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Coverage" content="Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_certificate_manager.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ReplaceWithCASignedCertificateServerID"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Replacing a User Certificate with a CA-signed Certificate (Server ID)</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ReplaceWithCASignedCertificateServerID">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Replacing a User Certificate with a CA-signed Certificate (Server ID)</h1>
+
+   
+   
+   <div class="body taskbody"><p class="shortdesc">After you submit a CSR to a Certificate Authority (CA) and receive the CA-signed
+      certificate back, you must replace the user certificate previously generated in Certificate
+      Manager.</p>
+
+      <div class="section context">
+         
+         <p class="p">If the CA-signed certificate is sent embedded in an email, cut and paste the certificate
+            into a certificate file. This involves copying from the <samp class="ph codeph">-----BEGIN
+               CERTIFICATE-----</samp> marker to the <samp class="ph codeph">-----END CERTIFICATE-----</samp>
+            marker (inclusive) into a text editor. The extension you give the certificate file does
+            not really matter. Certificate Manager will automatically determine whether just one
+            certificate (CER/DER) or a certificate chain (P7B) is included.  If a certificate chain
+            is found, this means intermediate and/or root CA certificates have been included. These
+            are imported, along with the CA-signed user certificate, into the proper stores.</p>
+
+         
+      </div>
+
+      <ol class="ol steps" id="ReplaceWithCASignedCertificateServerID__steps_ulq_ytg_1s"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; Certificate Management &gt; Certificates</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Certificate Manager</span></span> or click the <span class="ph uicontrol">Certificates</span> button in the tool
+               bar. </span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Right-click the user certificate in the tree pane and select <span class="ph menucascade"><span class="ph uicontrol">Replace &gt; User Certificate</span></span></span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter the private key password. Use the same password that was used to generate the
+               self-signed user certificate.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter or browse for the certificate filename.</span>
+            <div class="itemgroup info">
+               <div class="note note"><span class="notetitle">Note:</span> In the web UI, you must click <span class="ph uicontrol">Import</span> to display a dialog
+                  box where you can enter or browse for a certificate filename, select a file, and
+                  then click <span class="ph uicontrol">Open</span>.</div>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Import</span> to replace the user certificate with the
+               CA-signed certificate.</span>
+            <div class="itemgroup info">
+               <div class="note note"><span class="notetitle">Note:</span> You can repeat this process if a replacement CA-signed certificate is received
+                  at a later time.</div>
+
+            </div>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

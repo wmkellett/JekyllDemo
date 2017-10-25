@@ -1,0 +1,304 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The messages pane continually scrolls runtime messages as they occur.  Messages can originate from two main sources: A running action, host action or local host will generate status messages.  ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Messages Pane"></meta><meta name="DC.Relation" scheme="URI" content="../Concepts/c_screen_layout.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="MessagesPane"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Messages Pane</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="MessagesPane">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Concepts/../Concepts/c_VLexConcepts.html" title="This section provides basic conceptual information about Cleo Harmony you should be familiar with before you begin using the product.">Cleo Harmony Concepts</a> / <a class="navheader_parent_path" href="../Concepts/c_screen_layout.html" title="Screen layout">Screen layout</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Concepts/c_screen_layout.html" title="Screen layout"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Screen layout</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Messages Pane</h1>
+
+  <div class="body">
+    <p class="p">The messages pane continually scrolls runtime messages as they occur.  Messages can originate
+      from two main sources:</p>
+
+    <p class="p">A running <var class="keyword varname">action,</var>
+      <var class="keyword varname">host action</var> or <var class="keyword varname">local host</var> will generate status
+      messages.  Indentation and color are used to indicate message flow and status.</p>
+
+    <pre class="pre codeblock">hh:mm:ss   &lt;Action&gt;Mailbox@Host   Run: type="<var class="keyword varname">type</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host      Detail: "<var class="keyword varname">message</var>" level=#
+hh:mm:ss   &lt;Action&gt;Mailbox@Host      Command: "<var class="keyword varname">put command</var>" type="<var class="keyword varname">protocol</var>" line=<var class="keyword varname">#</var> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         File: "<var class="keyword varname">local path</var>" direction="Loca -&gt; Host" destination="<var class="keyword varname">remote path</var>" number=<var class="keyword varname">#</var> of <var class="keyword varname">#</var> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         <var class="keyword varname">PROTOCOL</var>: "<var class="keyword varname">request</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host            Transfer: kB/sec=<var class="keyword varname">#.#</var> kBytes=<var class="keyword varname">#.#</var> seconds=<var class="keyword varname">#.#</var> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         Response: "<var class="keyword varname">good host response</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         Result: "Success"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         File: "<var class="keyword varname">local path</var>" direction="Local-&gt;Host" destination="<var class="keyword varname">remote path</var>" number=<var class="keyword varname">#</var> of <var class="keyword varname">#</var> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         <var class="keyword varname">PROTOCOL</var>: "<var class="keyword varname">request</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host            Transfer: kB/sec=<var class="keyword varname">#.#</var> kBytes=<var class="keyword varname">#.#</var> seconds=<var class="keyword varname">#.#</var> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         Response: "<var class="keyword varname">good host response</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         Result: "Success"
+--&gt; <span class="ph">hh:mm:ss   &lt;Action&gt;Mailbox@Host      Command:</span>--&gt; <span class="ph"> "<var class="keyword varname">get command</var>" type="<var class="keyword varname">protocol</var>" line=<var class="keyword varname">#</var> </span> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         File: "<var class="keyword varname">remote path</var>" direction="Host-&gt;Local" destination="<var class="keyword varname">local path</var>" number=<var class="keyword varname">#</var> of <var class="keyword varname">#</var> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         <var class="keyword varname">PROTOCOL</var>: "<var class="keyword varname">request</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host            Transfer: kB/sec=<var class="keyword varname">#.#</var> kBytes=<var class="keyword varname">#.#</var> seconds=<var class="keyword varname">#.#</var> 
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         Response: "<var class="keyword varname">bad host response</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         Result: "<var class="keyword varname">unsuccesful</var>" "<var class="keyword varname">reason</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host         Hint: "<var class="keyword varname">possible cause</var>"
+hh:mm:ss   &lt;Action&gt;Mailbox@Host   End</pre>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="MessagesPane__table_fmj_j3h_q5" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d236325e181"> --&gt; <span class="ph">Message Type</span>
+            </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d236325e187"> Purpose </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d236325e190"> How many </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d236325e193"> Color </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> --&gt; <span class="ph">Run:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Mark start of action run, has run type </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> 1 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Black </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> --&gt; <span class="ph">Detail:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Provide extra detailed information;
+              can appear anywhere in the flow </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> Unlimited </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Black </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> --&gt; <span class="ph">Command:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Mark start of a command, has command
+              text and line number </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> --&gt; <span class="ph">0 or more per Run:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Green </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> --&gt; <span class="ph">File:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Mark start of a file transfer, has
+              file paths and counts </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> --&gt; <span class="ph">0 or more per Command</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Blue </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> --&gt; <span class="ph">Transfer:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Mark completion of a file transfer,
+              has transfer rate </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> 1 per File </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Blue </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> FTP: or HTTP: </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Protocol-specific request made to host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> 0 or more per Command </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Black </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> Response: </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Protocol-specific response from host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> 1 per FTP or HTTP request </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 ">
+              <p class="p">Black if good</p>
+
+              <p class="p">--&gt; <span class="ph">Red</span> --&gt; <span class="ph">if bad</span>
+              </p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> --&gt; <span class="ph">Result:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Mark end of a command or file
+              transfer, has resultant status </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> --&gt; <span class="ph">1 per Command or File</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 ">
+              <p class="p">--&gt; <span class="ph">Green</span> --&gt; <span class="ph">if successful</span>
+              </p>
+
+              <p class="p">--&gt; <span class="ph">Red</span> --&gt; <span class="ph">if unsuccessful</span>
+              </p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> Hint: </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Provide insight into possible cause of
+              error or exception </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> Unlimited </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Magenta </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e181 "> End </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e187 "> Mark end of action run </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e190 "> 1 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e193 "> Black </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+    <p class="p">The outer <span class="ph">Cleo Harmony</span>
+      application shell may detect a situation that requires a message.  Color is used to indicate
+      message severity.</p>
+
+    <p class="p">hh:mm:ss   Note: "<var class="keyword varname">message</var>"</p>
+
+    <p class="p">hh:mm:ss   Warning: "<var class="keyword varname">message</var>"</p>
+
+    <p class="p">hh:mm:ss   Error: "<var class="keyword varname">message</var>"</p>
+
+    <p class="p">hh:mm:ss   Exception: "<var class="keyword varname">message</var>"</p>
+
+    <p class="p">hh:mm:ss   Detail "<var class="keyword varname">message</var>" level=#</p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="MessagesPane__table_gmj_j3h_q5" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d236325e463"> Type </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d236325e466"> Purpose </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d236325e469"> Color </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e463 "> Note: </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e466 "> Log a notable condition </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e469 "> Black </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e463 "> Warning: </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e466 "> Log a cautionary condition </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e469 "> --&gt; <span class="ph">Orange</span>
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e463 "> Error: </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e466 "> Log an unrecoverable error </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e469 "> Red </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e463 "> Exception: </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e466 "> Log an unrecoverable program exception </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e469 "> Red </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e463 "> --&gt; <span class="ph">Detail:</span>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e466 "> Provide extra detailed information;
+              can appear anywhere in the flow </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d236325e469 "> Black </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Concepts/c_screen_layout.html" title="Screen layout"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Screen layout</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

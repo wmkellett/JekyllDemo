@@ -1,0 +1,134 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The IP addresses you specify here are the only addresses that will be allowed to log into the user mailbox. Go to the IP Filter tab for your user mailbox. Click New to create a new entry or ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Users Mailbox: IP Filter"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_UsersHost_MailboxConfig.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_xlg_5tf_lt"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Users Mailbox: IP Filter</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_xlg_5tf_lt">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_UsersHost_HeaderPage.html" title="Users Host">Users Host</a> / <a class="navheader_parent_path" href="../Topics/t_UsersHost_MailboxConfig.html" title="Users mailbox configuration">Users mailbox configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_UsersHost_MailboxConfig.html" title="Users mailbox configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users mailbox configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Users Mailbox: IP Filter </h1>
+
+  <div class="body taskbody">
+    <div class="section context">The IP addresses you specify here are the only addresses that will be allowed to log
+      into the user mailbox.</div>
+
+    <ol class="ol steps" id="task_xlg_5tf_lt__steps_cjt_5tf_lt"><li class="li step stepexpand">
+        <span class="ph cmd">Go to the <span class="keyword wintitle">IP Filter</span> tab for your user mailbox.</span>
+        <div class="itemgroup info"></div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">New</span> to create a new entry or double-click an existing
+          entry to edit it.  Alternatively, you can right-click on the entry and select
+            <span class="ph uicontrol">Edit</span>. </span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Enter an IP address to be added to the whitelist.  </span>
+        <div class="itemgroup info">You can use both IPv4 and IPv6 addresses. IP addresses can be a single address or a
+          range of addresses. The following are examples of valid IP addresses:
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="task_xlg_5tf_lt__table_fpj_h23_mr" class="table" frame="border" border="1" rules="all">
+              
+              
+              <thead class="thead" align="left">
+                <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d143529e59"> IP Address </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d143529e62"> Description </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody class="tbody">
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 "> * </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> All IP addresses </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 "> 10.11.12.13 </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> Single IPv4 address matching
+                    10.11.12.13 </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 "> 10.* </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> IPv4 addresses in the range
+                    10.0.0.0-10.255.255.255 </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 "> 10.11.* </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> IPv4 addresses in the range
+                    10.11.0.0-10.11.255.255 </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 "> 10.11.12.50-10.11.12.70 </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> IPv4 addresses in the range
+                    10.11.12.50-10.11.12.70 </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 "> fe80::79ba:8815:4f62:e386 </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> Single IPv6 address matching
+                    fe80::79ba:8815:4f62:e386 </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 ">
+                    fe80::79ba:8815:4f62:e386-fe80::79ba:8815:4f62:ffff </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> IPv6 addresses in the range
+                    fe80::79ba:8815:4f62:e386-fe80::79ba:8815:4f62:ffff </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e59 "> fe80::79ba:8815:4f62:e386/90 </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d143529e62 "> IPv6 addresses matching the
+                    first 90 bits of address fe80::79ba:8815:4f62:e386 </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+</div>
+</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Apply</span>.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Optionally, remove an entry by right-clicking it and selecting
+            <span class="ph uicontrol">Remove</span>. </span>
+      </li>
+</ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_UsersHost_MailboxConfig.html" title="Users mailbox configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users mailbox configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

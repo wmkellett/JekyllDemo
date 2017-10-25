@@ -1,0 +1,106 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Follow the instructions below to tell the Cleo LexiCom application whether your files will be located on the AS/400 native file system (QSYS.LIB) or the integrated file system (IFS). A display similar ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="AS/400 File System Type Selection"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cfg_AS400_Native_or_IFS_Access.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_nkw_pfy_ds"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS/400 File System Type Selection</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_nkw_pfy_ds">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_as_400_configure_and_test.html" title="AS/400 Configure and Test">AS/400 Configure and Test</a> / <a class="navheader_parent_path" href="../Topics/t_cfg_AS400_Native_or_IFS_Access.html" title="Configuring for AS/400 Native or Integrated File System Access">Configuring for AS/400 Native or Integrated File System Access</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cfg_AS400_Native_or_IFS_Access.html" title="Configuring for AS/400 Native or Integrated File System Access"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring for AS/400 Native or Integrated File System Access</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">AS/400 File System Type Selection</h1>
+
+    
+    <div class="body"><p class="shortdesc"></p>
+
+        <p class="p">Follow the instructions below to tell the <span class="ph">Cleo LexiCom</span> application
+            whether your files will be located on the AS/400 native file system (QSYS.LIB) or the
+            integrated file system (IFS).</p>
+
+        <p class="p">A display similar to the following will appear.  Update the form as shown below:</p>
+
+        <p class="p">For Native File Systems</p>
+
+        <p class="p">
+            <img class="image" id="topic_nkw_pfy_ds__image_wf1_pfx_ds" src="../Images/image1939.jpg"></img>
+        </p>
+
+        <ul class="ul" id="topic_nkw_pfy_ds__ul_hgq_rfy_ds">
+            <li class="li">In the <strong class="ph b">AS/400 Directory Path</strong> field, enter /QSYS.LIB.  This entry allows the
+                    <span class="ph">Cleo LexiCom</span> product
+                to correctly do the EDCDIC / ASCII format conversion for any file that begins with
+                the /QSYS.LIB path specifier.</li>
+
+            <li class="li">Select the <strong class="ph b">Native File System</strong> option.</li>
+
+            <li class="li">Select the <strong class="ph b">Pad Inbound to Record Length</strong> option if inbound files will consist
+                of variable length records.  When this option is selected, all records are
+                transformed to a fixed-length format as they are stored in the AS/400 NFS file
+                member.  End of line terminators (i.e., CR, LF or CRLF) are stripped from the record
+                and the remainder of the record will be padded with blanks.  The record length is
+                determined from the AS/400 NFS target file.  If the inbound file contains a record
+                larger than the AS/400 target file, an error will be logged and the file will not be
+                stored.  When this option is not selected, the inbound file will be assumed to
+                already be fixed-length and will be streamed, i.e., no padding will be done to the
+                records as the they are written to the AS400 NFS file member and end of line
+                terminators will not be stripped from the file.</li>
+
+            <li class="li">Select the <strong class="ph b">Strip Padded Outbound Records</strong> option if outbound records are a
+                fixed record length and are padded with the specified <strong class="ph b">Padding Character</strong>.  The
+                record length is determined from the AS/400 NFS target file.  When this option is
+                selected, padding characters (if present) after the terminator (CR, LF or CRLF) will
+                be removed.</li>
+
+            <li class="li">The <strong class="ph b">Padding Character</strong> is the decimal value of the character used in AS/400
+                target file for padding outbound records.  By default, this value is set to 32 (the
+                ASCII representation of a space).  Any ASCII value between 0 – 127 may be used.</li>
+
+            <li class="li">The <strong class="ph b">Coded Character Set ID</strong> field is only used when accessing the Integrated
+                File System and is not accessible for the Native File System. </li>
+
+        </ul>
+
+        <div class="note note"><span class="notetitle">Note:</span> In order for the <span class="ph">Cleo LexiCom</span> product to be
+            able to determine that source and destination paths are part of the AS/400 native file
+            system, the paths that you enter for the Inbox, Outbox (and optionally the Sentbox) on
+            the <strong class="ph b">Host</strong>
+            <strong class="ph b">
+                <span class="ph">®</span>General</strong> panel must begin with the path that you specify in the
+                <strong class="ph b">AS/400 Directory Path</strong> field.</div>
+
+        <p class="p">For Integrated File Systems </p>
+
+        <p class="p">
+            <img class="image" id="topic_nkw_pfy_ds__image_uk1_pfx_ds" src="../Images/image1941.jpg"></img>
+        </p>
+
+        <ul class="ul" id="topic_nkw_pfy_ds__ul_ncl_vfy_ds">
+            <li class="li">In the <strong class="ph b">AS/400 Directory Path</strong> field, enter /LexiCom (or any other appropriate
+                IFS path). </li>
+
+            <li class="li">Select the <strong class="ph b">Integrated File System</strong> option.</li>
+
+            <li class="li">Enter a value in the <strong class="ph b">Coded Character Set ID</strong> field.   If this field is left
+                blank, the CCSID will be based on the default locale.  </li>
+
+        </ul>
+
+        <div class="note warning"><span class="warningtitle">Warning:</span> Setting a CCSID is only intended for directories where payload (e.g.,
+            inbox/ and outbox/) will be stored.  <strong class="ph b">Do not set a CCSID for the /LexiCom installation
+                directory or for any of the directories used to run the application (e.g.,
+                /LexiCom/lib; /LexiCom/hosts; /LexiCom/jre, etc.).  Doing so will cause
+                unpredictable results.</strong>
+        </div>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cfg_AS400_Native_or_IFS_Access.html" title="Configuring for AS/400 Native or Integrated File System Access"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring for AS/400 Native or Integrated File System Access</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

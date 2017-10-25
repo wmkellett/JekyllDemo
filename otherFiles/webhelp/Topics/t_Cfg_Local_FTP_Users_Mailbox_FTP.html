@@ -1,0 +1,115 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="FTP Users can be either generic FTP users, AS3 users, or LDAP users. Username The mailbox alias. This value is used by your trading partner to log in to your FTP server. Specify a value not already in ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Configuring Local Mailbox FTP"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_ftp_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_y42_x5j_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Local Mailbox FTP</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_y42_x5j_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users">Configuring Local FTP Users</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Configuring Local Mailbox FTP</h1>
+
+  <div class="body">
+    <p class="p">FTP Users can be either generic FTP users, AS3 users, or LDAP
+      users.</p>
+
+    
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Username</dt>
+
+        <dd class="dd">The mailbox alias. This value is used by your trading partner to log in to your FTP
+          server. Specify a value not already in use. </dd>
+
+      
+      
+        <dt class="dt dlterm">Password</dt>
+
+        <dd class="dd">The password for the mailbox. This value is used by your trading partner to log in to
+          your FTP server.</dd>
+
+      
+      
+        <dt class="dt dlterm">User Home Directory</dt>
+
+        <dd class="dd">Defaults to a username subdirectory under the default root directory defined on the
+            <span class="keyword wintitle">General</span> tab (see <a class="xref" href="../Tasks/t_Configure_Local_FTP_Users_Dirs.html">Configuring Local FTP User directories</a>). To override
+          this path for this user only, clear the <span class="ph uicontrol">Use Default Root\Username</span>
+          check box and click the <span class="ph uicontrol">...</span> button to change the home directory; or
+          select a custom macro variable from the drop-down list.  See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a>
+          Using Macro Variables for a list of the applicable macros (Default Root Directory
+          context). </dd>
+
+      
+      
+        <dt class="dt dlterm">Subdirectories</dt>
+
+        <dd class="dd">Click <span class="ph uicontrol">Subdirectories</span> to display the <span class="keyword wintitle">Local User
+            Subdirectories</span> dialog box. This dialog box displays host-level settings
+          (read-only) for the current folder configuration and allows you to specify additional
+          folders at the mailbox level in the <span class="ph uicontrol">Others</span> field. You can add
+          multiple paths separated by commas, semi-colons, or carriage returns. All paths must be
+          relative and cannot include reserved macro variables (for example,
+            <samp class="ph codeph">%mailbox%</samp>).</dd>
+
+      
+      
+        <dt class="dt dlterm">Pipe Incoming Payload</dt>
+
+        <dd class="dd">Allows for this trading partner to send to your FTP server and redirect, or pipe, the
+          incoming payload out through a different protocol. If the transfer out to the pipe mailbox
+          fails, the transfer into the local mailbox also fails.</dd>
+
+      
+      
+        <dt class="dt dlterm">AS3 User</dt>
+
+        <dd class="dd">Select the <span class="ph uicontrol">AS3 User</span> check box to designate the user as an AS3
+          user and enable the <span class="keyword wintitle">AS3 Mailbox: AS3</span> tab. See <a class="xref" href="t_as3_mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. ">AS3 Mailbox</a></dd>
+
+      
+      
+        <dt class="dt dlterm">LDAP Usergroup</dt>
+
+        <dd class="dd">Select the <span class="ph uicontrol">LDAP Usergroup</span> check box to designate the mailbox as
+          an LDAP user group mailbox and enable the Mailbox LDAP Tab (see <a class="xref" href="t_Cfg_Local_LDAP_Users_Mailbox_FTP.html">Configuring Local Mailbox LDAP</a>. Many of the other fields on this tab are disabled as
+          are no longer applicable.  An LDAP user group mailbox has the following features:<ul class="ul" id="topic_y42_x5j_3r__ol_vwt_5yj_yy">
+            <li class="li">The mailbox no longer corresponds to a single user, but rather a group of users
+              configured in an external directory server.</li>
+
+            <li class="li">In addition to authenticating usernames and passwords through the external directory
+              server, user home directory paths can also be provided by the directory service, if
+              necessary, by selecting <span class="ph uicontrol">Use LDAP Home Directory</span>.  If this
+              option is not selected, and <strong class="ph b">Use Default Root\Username</strong> is selected, the <span class="ph">Cleo Harmony</span> application dynamically appends the username to the root directory by way of a
+                <samp class="ph codeph">%username%</samp> macro variable.</li>
+
+          </ul>
+</dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Unlock</span></dt>
+
+        <dd class="dd">This button is enabled when the user has too many failed log in attempts. Mouse over the
+            <span class="ph uicontrol">Unlock</span> button to display when the user will be unlocked
+          automatically or you must unlock the user manually. Click <span class="ph uicontrol">Unlock</span>
+          and then click <span class="ph uicontrol">Apply</span> to unlock the
+          user.</dd>
+
+      
+    </dl>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

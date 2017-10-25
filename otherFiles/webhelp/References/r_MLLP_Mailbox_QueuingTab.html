@@ -1,0 +1,155 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Queuing tab allows you to establish inbound and outbound queues if messages are to be routed to and from queues rather than the file system.  Outbound Use queue Enables outbound queuing. Queue ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="MLLP Mailbox: Queuing Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_MLLP_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_ow2_kxd_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>MLLP Mailbox: Queuing Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_ow2_kxd_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_mllp_configuration.html" title="MLLP Configuration">MLLP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_MLLP_Mailbox.html" title="MLLP Mailbox">MLLP Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_MLLP_Mailbox.html" title="MLLP Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MLLP Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1"> MLLP Mailbox: Queuing Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <p class="p">The <span class="keyword wintitle">Queuing</span> tab allows you to establish inbound and outbound queues if
+        messages are to be routed to and from queues rather than the file system. </p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Outbound</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Use queue</span></dt>
+
+                <dd class="dd">Enables outbound queuing. </dd>
+
+              
+              
+                <dt class="dt dlterm">Queue Type</dt>
+
+                <dd class="dd">The only value available is <span class="ph uicontrol">MSMQ</span>. MSMQ versions 2.0
+                  through 5.0 are supported.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Queue Name</span></dt>
+
+                <dd class="dd">The name of the outbound queue. Only queues that are prefixed with "DIRECT=OS:"
+                  are supported. Both local and remote queues are supported.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Create queue</span></dt>
+
+                <dd class="dd">Indicates if the outbound queue should be created when not present. When
+                  selected, the queue specified in <span class="ph uicontrol">Queue Name</span> field is
+                  created if not present. When not selected, ensure that the queue is present and
+                  properly configured. The outbound queue must be a transactional queue.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Outbound Action</span></dt>
+
+                <dd class="dd">Select the <span class="ph uicontrol">Outbound Action</span> for the queue-based sender.
+                  The drop-down list contains all actions under the mailbox.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Automatically run at startup</span></dt>
+
+                <dd class="dd">Select <span class="ph uicontrol">Automatically run at startup</span> to have the
+                    <span class="ph uicontrol">Outbound Action</span> automatically start each time the <span class="ph">Cleo Harmony</span> application is launched.</dd>
+
+                <dd class="dd">
+                  <div class="note note"><span class="notetitle">Note:</span> If you have selected <span class="ph uicontrol">Automatically run at startup</span> for
+                    your <span class="ph uicontrol">Outbound Action</span>, a condition can occur in which the
+                    action begins before the MSMQ service is up and running. In this case, 
+                    receive an error that states, <var class="keyword varname">Cannot open queue.
+                      (hr=MQ_ERROR_SERVICE_NOT_AVAILABLE)</var>. If this occurs, you should set
+                    MSMQ as a dependency within the <span class="ph">Cleo Harmony</span> service. Setting this dependency ensures that MSMQ starts
+                    before the <span class="ph">Cleo Harmony</span> application. Likewise, if you shut down MSMQ, the <span class="ph">Cleo Harmony</span> application will also be shut down. Visit <a class="xref" href="http://support.microsoft.com/kb/193888" target="_blank">http://support.microsoft.com/kb/193888</a> for information about setting a
+                    dependency. </div>
+
+                </dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Sender Restart</span></dt>
+
+                <dd class="dd">Specify the <span class="ph uicontrol">Sender Restart</span> value. This setting determines
+                  the number of minutes before the <span class="ph uicontrol">Outbound Action</span> is
+                  restarted after a connection failure or interruption.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Inbound</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Use queue</span></dt>
+
+                <dd class="dd">Enables inbound queuing. </dd>
+
+              
+              
+                <dt class="dt dlterm">Queue Type</dt>
+
+                <dd class="dd">The only value available is <span class="ph uicontrol">MSMQ</span>. MSMQ versions 2.0
+                  through 5.0 are supported.</dd>
+
+              
+              
+                <dt class="dt dlterm">Queue Name</dt>
+
+                <dd class="dd">The name of the inbound queue. Only queues that are prefixed with "DIRECT=OS:"
+                  are supported. Both local and remote queues are supported.</dd>
+
+              
+              
+                <dt class="dt dlterm"><span class="ph uicontrol">Create queue</span></dt>
+
+                <dd class="dd">Indicates if the inbound queues should be created when not present. When
+                  selected, both the primary queue (specified in the <span class="ph uicontrol">Queue
+                    Name</span> field) and an MSMQ administrative queue are created if not
+                  present. The MSMQ administrative queue is used to store MSMQ send
+                  acknowledgments. When MSMQ successfully completes a send operation on the primary
+                  queue, an acknowledgment is placed on the administrative queue. The <span class="ph">Cleo Harmony</span> application monitors the administrative queue to ensure
+                  guaranteed message delivery. </dd>
+
+                <dd class="dd">When the check box is cleared, ensure that the required queues are present and
+                  properly configured. The primary queue must be a transactional queue. The
+                  administrative queue must be a non-transactional queue, and its path must be that
+                  of the <span class="ph uicontrol">Queue Name</span> field, suffixed with the string specified
+                  in the <span class="ph uicontrol">MSMQ Administrative Queue Suffix</span> property. See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Other.html">Other System Options</a></dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_MLLP_Mailbox.html" title="MLLP Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MLLP Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Private key authentication (PKA) allows you to connect to your Trading Partner's remote server without exchanging your password over the Internet. PKA uses two keys: a private key that only you have, ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Private key authentication"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SSH_FTP_Mailbox_SSHFTPTab.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_fasp_Mailbox_faspTab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_xt5_qbv_xw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Private key authentication</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_xt5_qbv_xw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_SSH_FTP_Mailbox_SSHFTPTab.html" title="SSH FTP Mailbox: SSH FTP Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SSH FTP Mailbox: SSH FTP Tab</span></a></span>  
+<span class="navparent"><a class="link" href="../Topics/t_fasp_Mailbox_faspTab.html" title="fasp Mailbox: fasp Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">fasp Mailbox: fasp Tab</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Private key authentication</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section"><div class="p">Private key authentication (PKA) allows you to connect to your Trading Partner's
+        remote server without exchanging your password over the Internet. PKA uses two keys: a
+        private key that only you have, and a public key placed on the accessing server, usually by
+        your Trading Partner's system administrator when the account is set up. In the <span class="ph">Cleo Harmony</span> application, the private key portion is maintained securely in a User Certificate
+        protected with the <span class="ph uicontrol">Certificate Password</span>. The <span class="ph uicontrol">Certificate
+          Alias</span> specifies the desired User Certificate to use for PKA.<div class="note note"><span class="notetitle">Note:</span>  You must
+          provide your Trading Partner with the corresponding SSH Public Key using the Certificate
+          Manager. Using options <span class="ph uicontrol">Export &gt;OpenPGP</span> or <span class="ph uicontrol">SSH FTP
+            Keys</span> select either the <span class="ph uicontrol">OpenSSH FTP Public Key</span> or
+            <span class="ph uicontrol">SSH FTP Public Key</span> (IETF) format. Do not select and send the
+            <span class="ph uicontrol">SSH FTP Private Key</span> format to your Trading Partner.
+        </div>
+</div>
+<p class="p">Alternatively, you can use an existing private key file. This file should be
+        stored in a secure place and protected with a password. This feature is applicable only if
+        you have an existing SSH private key for authentication with your Trading Partner and you
+        are using JRE1.3. SSH private keys have no standard format. OpenSSH, SSH FTP Public Key
+        (IETF), PuTTY, and ssh.com all have different proprietary formats. A private key generated
+        with one cannot immediately be used with another. The <span class="ph">Cleo Harmony</span> application supports both OpenSSH and SSH FTP Public Key (IETF) private key file formats.
+        If the private key is in a format not supported by the <span class="ph">Cleo Harmony</span> application, you should export if from the application that created it in an OpenSSH
+        format. To determine the format of your key you can simply open it using a text editor and
+        compare it to the partial example formats listed below.</p>
+<div class="sectiondiv">
+        <div class="p">
+          
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="reference_xt5_qbv_xw__table_fsy_nn2_jr" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Supported Private Key Formats</span></caption>
+              
+              
+              <thead class="thead" align="left">
+                <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d84928e70"> Type </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d84928e73"> Partial Example </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody class="tbody">
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e70 ">IEFT (DSA) </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e73 ">
+                    <pre class="pre codeblock">---- BEGIN SSHTOOLS ENCRYPTED PRIVATE KEY ----
+Comment: 1024-bit DSA
+Subject: John Doe
+AAAACDNERVMtQ0JD3yrqcRRh1OwAAAFQof0uP52Ya5iOnuVm1+G+o9TpQwXrOQfjPp0w8+GQ9uJ7</pre>
+
+                  </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e70 ">IETF (RSA)</td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e73 ">
+                    <pre class="pre codeblock">---- BEGIN SSHTOOLS ENCRYPTED PRIVATE KEY ----
+Comment: 1024-bit RSS
+Subject: Jonh Doe
+AAAACDNERVMtQ0JDEOMMw0wR0TwAAAEoUYoVJjvLn7lEnvusvbovpjscf1EDkJOMLX7HUddw8k9f</pre>
+
+                  </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e70 ">OpenSSH (RSA) </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e73 "><pre class="pre codeblock">-----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQDzl7h/4lkzqSPR5GhpwYr5MmUL6IeiY9TAsA24dA3Xa45a0JIQ</pre>
+ </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e70 ">OpenSSH (DSA) </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e73 ">
+                    <pre class="pre codeblock">-----BEGIN DSA PRIVATE KEY-----
+MIIBuwIBAAKBgQD42waNRIv7eJQoTR1PSQt+A2o8F9P1pGKLaLyw/rAg8N4FEHIN</pre>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+</div>
+
+        </div>
+
+      </div><div class="sectiondiv">
+        <div class="p">
+          
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="reference_xt5_qbv_xw__table_eyz_3jv_xw" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2. Unsupported Private Key Formats</span></caption>
+              
+              
+              <thead class="thead" align="left">
+                <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d84928e150"> Type </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d84928e153"> Partial Example </th>
+
+                </tr>
+
+              </thead>
+
+              <tbody class="tbody">
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e150 ">PuTTY </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e153 ">
+                    <pre class="pre codeblock">PuTTY-User-Key-File-2: ssh-rsa
+Encryption: none
+Comment: rsa-key-20070808
+Public-Lines: 4
+AAAAB3NzaC1yc2EAAAABJQAAAIBw8VeSCq0goiOwWqrlMu7H+N1QXAcBPdmvYttw</pre>
+
+                  </td>
+
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e150 ">SSH.COM</td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d84928e153 ">
+                    <pre class="pre codeblock">---- BEGIN SSH2 ENCRYPTED PRIVATE KEY ----
+Comment: "rsa-key-20070808"
+P2/56wAAAiwAAAA3aWYtbW9kbntzaWdue3JzYS1wa2NzMS1zaGExfSxlbmNyeXB0e3JzYS</pre>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+</div>
+
+        </div>
+
+      </div></div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_SSH_FTP_Mailbox_SSHFTPTab.html" title="SSH FTP Mailbox: SSH FTP Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SSH FTP Mailbox: SSH FTP Tab</span></a></span>  
+<span class="navparent"><a class="link" href="../Topics/t_fasp_Mailbox_faspTab.html" title="fasp Mailbox: fasp Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">fasp Mailbox: fasp Tab</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

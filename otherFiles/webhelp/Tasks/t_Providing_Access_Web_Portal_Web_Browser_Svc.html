@@ -1,0 +1,97 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: A custom web portal splash screen can be displayed by placing it in webserver\VAADIN\cleo\images\custom under the Cleo Harmony home directory. The filename must start with “splash.” (the word ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Providing Access to the Web Portal"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_mcj_ngh_hr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Providing Access to the Web Portal</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_mcj_ngh_hr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service">Local Listener Web Browser Service</a> / <a class="navheader_parent_path" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service">Configuring VLPortal Web Browser service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring VLPortal Web Browser service</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Providing Access to the Web Portal</h1>
+
+    <div class="body taskbody">
+        <div class="section context">
+            <div class="note note"><span class="notetitle">Note:</span> A custom web portal splash screen can be displayed by placing it in
+                    <span class="ph filepath">webserver\VAADIN\cleo\images\custom</span> under the <span class="ph">Cleo Harmony</span> home directory. The filename must start with “splash.” (the
+                word splash followed by a period). Supported formats include JPEG, GIF, and PNG. The
+                image can be no larger than 525X340 pixels and no smaller than 250X100
+                pixels.</div>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Before your trading partners can access the web portal, you must first
+                    establish a mailbox for each partner under the local HTTP users (see <a class="xref" href="../Topics/t_local_http_users_configuration.html">Local HTTP Users Configuration</a>), and provide your partners with the proper URL (for example,
+                        <span class="ph filepath">http(s)://<var class="keyword varname">VesraLexComputerIP</var>:<var class="keyword varname">http(s)Port</var>/<var class="keyword varname">VLPortalResourcePath</var></span>). Once
+                    these steps are followed, your trading partners can access the web portal by
+                    entering the specified URL into their browser. They will be prompted for a
+                    login.</span>
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The <span class="ph uicontrol">User name</span> and <span class="ph uicontrol">Password</span> are
+                    those that were established within the trading partner's mailbox under the local
+                    HTTP user. </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">To change a password, click <span class="ph uicontrol">Options</span>.  </span>
+                <div class="itemgroup info">
+                    <p class="p">A password can be changed if:</p>
+
+                    <ul class="ul" id="task_mcj_ngh_hr__ol_ic1_tgh_hr">
+                        <li class="li">the username's mailbox is not defined as an LDAP Usergroup and/or the
+                            username’s password has expired or</li>
+
+                        <li class="li">the username's mailbox is defined as an LDAP Usergroup, the LDAP Server
+                            Directory Type is "Active Directory," the LDAP Server Security Mode is
+                            not set to "None," and the user's password has not already expired.</li>
+
+                    </ul>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The user can choose from the list of available languages from the
+                        <span class="ph uicontrol">Language</span> drop-down list and view the web portal in
+                    their preferred language based on the resource files that have been configured
+                    and imported into the <span class="ph">Cleo Harmony</span> application (see <a class="xref" href="../Topics/t_I10Ning_your_web_portals_Web_Browser_Svc.html">Internationalizing Your Portal</a>).</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">If the option to select a custom link was configured in the VLPortal tab, a
+                    link will be included on the login page. (See <a class="xref" href="t_Configure_VLPortal_Web_Browser_Svc_FTP.html#task_fqs_gmg_hr">Configuring VLPortal Web Browser service</a>.) The
+                    text describing this link can be customized by editing the
+                        <span class="ph filepath">VLPortalUI.CustomLink</span> property in the language-specific
+                        <span class="ph filepath">VLPortal.properties</span> file(s) stored in
+                        <span class="ph filepath">webserver\VLPortal\internationalization</span> under the <span class="ph">Cleo Harmony</span> home directory. </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">If reCAPTCHA authentication was enabled on the <span class="keyword wintitle">VLPortal</span>
+                    tab, a dialog similar to the one shown below will also be displayed when the
+                    number of configured failed login attempts has been exceeded, or the number of
+                    failed login attempts was set to zero. See <a class="xref" href="t_Configure_VLPortal_Web_Browser_Svc_FTP.html#task_fqs_gmg_hr">Configuring VLPortal Web Browser service</a>.     </span>
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">After successfully logging in, the trading partner will be presented with the
+                    web portal home page in his desired language. The web portal associated with the
+                    user login is specified on the <span class="keyword wintitle">Local HTTP User Host: Host
+                        HTTP</span> tab. See <a class="xref" href="../Topics/t_HTTP_Cfg_Access_For_HTTP_User_Host.html">Configure access for HTTP host users</a>. The
+                    navigation within this portal is determined by the setup you established under
+                    the <span class="keyword wintitle">VLPortal</span> tab. To understand the default (as-shipped)
+                    web portal configuration, see <a class="xref" href="t_Configure_VLPortal_Web_Browser_Svc_FTP.html">Configuring VLPortal Web Browser service</a>. </span>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring VLPortal Web Browser service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

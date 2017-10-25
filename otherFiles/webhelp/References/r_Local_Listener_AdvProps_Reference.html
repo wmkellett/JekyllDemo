@@ -1,0 +1,736 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the Advanced tab to specify advanced properties for your listener. Not all properties apply to all protocols. By default, all advanced properties are displayed regardless of the protocols to which ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Specifying Local Listener advanced properties"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_listener_configuration_topc_level.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="LocListAdvProps"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Specifying Local Listener advanced properties</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="LocListAdvProps">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_listener_configuration_topc_level.html" title="The Local Listener is automatically activated (on HTTP port 5080) the first time VersaLex is launched. This makes web browser service (supported only on Unix and Windows platforms) available &#34;out-of-the-box&#34; for systems lacking a graphics console. All other services require further user configuration before they are ready and available.">Listener Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_listener_configuration_topc_level.html" title="The Local Listener is automatically activated (on HTTP port 5080) the first time VersaLex is launched. This makes web browser service (supported only on Unix and Windows platforms) available &#34;out-of-the-box&#34; for systems lacking a graphics console. All other services require further user configuration before they are ready and available."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Listener Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Specifying Local Listener advanced properties</h1>
+
+  <div class="body">
+    <p class="p">Use the
+        <span class="keyword wintitle">Advanced</span> tab to specify advanced properties for your listener. Not all
+      properties apply to all protocols. By default, all advanced properties are displayed
+      regardless of the protocols to which they apply. Use the <span class="ph uicontrol">Filter</span>
+      drop-drown menu to select a single protocol for which to display advanced properties. In
+      addition, you can specify a string on which to filter the list of properties.</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Allow AS2 Identifiers in Actions</dt>
+
+        <dd class="dd">When this property is not set, AS2 identifiers are not resolved by checking the commands
+          in the actions. Consequently, AS2 Identifiers that are set in the actions will result in a
+          run-time exception when sending and might result in an unknown trading partner
+          relationship exception when receiving. <strong class="ph b">Although this value is set to
+              <kbd class="ph userinput">true</kbd> by default, setting this property to
+              <kbd class="ph userinput">false</kbd> might help performance in environments with a large
+            number of hosts and mailboxes.</strong></dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2</dd>
+
+      
+      
+        <dt class="dt dlterm">Archive Automatically After Maximum Receipts </dt>
+
+        <dd class="dd">When the number of MDNs in the MDN directory (for example, <span class="ph filepath">as2\mdn</span>
+          or <span class="ph filepath">as3\mdn</span>), the number of ACKs in the ACK directory (for example,
+            <span class="ph filepath">ebXML\ack</span>, <span class="ph filepath">RNIF\ack</span>, or
+            <span class="ph filepath">EBICS\ack</span>), the number of EERPs in the EERP directory (for example,
+            <span class="ph filepath">OFTP\eerp</span>), or the number of DSNs in the DSN directory (for
+          example, <span class="ph filepath">SMTP\dsn</span>) exceeds this value (<kbd class="ph userinput">n</kbd>), the
+            <span class="ph">Cleo Harmony</span> application automatically archives the oldest receipts into the
+          archive subdirectory until <kbd class="ph userinput">n/2</kbd> receipts remain in the
+            directory. <strong class="ph b">By default, this value is set to 500.</strong>
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, OFTP, RNIF, SMTP, RNIF</dd>
+
+      
+      
+        <dt class="dt dlterm">Archive File Maximum Size (mbytes) </dt>
+
+        <dd class="dd">The maximum size of the receipt archive file stored in the archive subdirectory. When
+          this file size is exceeded a new, unique archive file is created.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, OFTP, RNIF, SMTP, RNIF</dd>
+
+      
+      
+        <dt class="dt dlterm">Async Resends </dt>
+
+        <dd class="dd">Specifies the number of attempts that will be made to resend an asynchronous transaction
+          that was not completed (that is, an AS2 MDN or ebXML ACK response has not been received
+          asynchronously) within the specified timeout period.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, ebXML, OFTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Async Timeout </dt>
+
+        <dd class="dd">The maximum time (in minutes) that the Local Listener will wait for an asynchronous
+          response before either resending the transaction (if AsyncResends &gt; 0) or logging an
+          error.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, ebXML, OFTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Auto Accept Received Certificate (CEM)</dt>
+
+        <dd class="dd">When selected, automatically accepts all partner certificates sent as part of an inbound
+          Certificate Exchange Message (CEM) request. This setting can be overridden by selecting
+          the <span class="ph uicontrol">Override Listener CEM Auto Accept Setting</span> in the desired AS2
+          host(s).  See <a class="xref" href="../Topics/t_certs_AutoAcceptInbEDDINTCEMReq.html">Auto-Accepting Inbound EDIINT CEM Requests</a> for further information.   <strong class="ph b">By default,
+            this property is not selected. </strong>
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2</dd>
+
+      
+      
+        <dt class="dt dlterm">Connection Timeout </dt>
+
+        <dd class="dd">The amount of time (in seconds) allowed for each read operation on a connected port. In
+          the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications, this
+          also includes the amount of time allowed for data socket connections. </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: All</dd>
+
+      
+      
+        <dt class="dt dlterm">Do Not Create Inbox Subdirectories For Multipart Payload Files</dt>
+
+        <dd class="dd">Indicates, when a multipart payload message is received, whether the payload files
+          should be placed in a date/time stamped subdirectory under the inbox. </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, ebXML, RNIF, SMTP.</dd>
+
+      
+      
+        <dt class="dt dlterm"> Email Local And Partner Certificate Expiration Notices </dt>
+
+        <dd class="dd"> When this field is populated, a daily email notification is sent to all recipients
+          specified in this field when any local user or partner/CA certificates, that is, signing,
+          encryption or packaging certificates (defined at the local listener level and/or those
+          defined at the mailbox level) that have expired or will expire within the number of days
+          configured in the <span class="ph uicontrol">Email Local And Partner Certificate Expiration Warning
+            Days</span> property.  Additionally, if applicable, any SSL certificates for HTTPs,
+          FTPs, OFTPs, SMTPs and/or SSH FTP (defined at the local listener level) that have or are
+          about to expire will be included in this email notification.  By default, this value is
+          set to <samp class="ph codeph">%admin%</samp>, which points to the System Administrator Email Address
+          defined in the <span class="keyword wintitle">Other</span> tab in Configure System Options.  See 
+          <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Other.html">Other System Options</a> for more information.</dd>
+
+        <dd class="dd">When this property is not set, Certificate expiration notifications will be logged to
+          the System Event log/file instead if errors and warnings are enabled in the
+            <span class="keyword wintitle">Messages</span> tab in the native UI and the <span class="keyword wintitle">Logs</span>
+          panel in the web UI. 
+          <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Messages.html">Logs</a> for more information.</dd>
+
+        <dd class="dd">
+          <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and
+              <span class="ph">Cleo Harmony</span> option.
+          </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: All</dd>
+
+      
+      
+        <dt class="dt dlterm">Email Local And Partner Certificate Expiration Warning Days</dt>
+
+        <dd class="dd">When the <span class="ph uicontrol">Email Local And Partner Certificate Expiration Notices</span>
+          property is configured with at least one email address, this property is used to define
+          the number of days before a certificate is about to expire to trigger sending email
+          warning notifications. <strong class="ph b">By default, this value is set to 30.</strong>
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: All</dd>
+
+      
+      
+        <dt class="dt dlterm">Email Recipient When Unable To Send Async AS2 MDN </dt>
+
+        <dd class="dd">When this property is selected, the Local Listener will attempt to notify the intended
+          recipient of an asynchronous MDN when it is unable to send it via HTTP or HTTP/s. </dd>
+
+        <dd class="dd">Email messages may only be returned if the trading partner’s raw incoming message
+          contains an HTTP “From:” header and that header contains a valid email address.  (The HTTP
+          “From:” header is optional for AS2 and may not always be used or populated with a valid
+          email address.)</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2</dd>
+
+      
+      
+        <dt class="dt dlterm">FTP Idle Timeout </dt>
+
+        <dd class="dd">The amount of time (in seconds) allowed between each FTP command.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: FTP, SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">FTP UTF8 Pathnames </dt>
+
+        <dd class="dd">Indicates to support UTF8 pathnames. When enabled, UTF8 included in response to FEAT
+            command.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Ignore RNIF Attachments</dt>
+
+        <dd class="dd">Indicates whether attachments to received RNIF messages should be ignored. If selected,
+          only the payload is extracted into the inbox and attachments are ignored.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: RNIF</dd>
+
+      
+      
+        <dt class="dt dlterm">Incoming Connection Backlog Size </dt>
+
+        <dd class="dd">This is the network socket backlog size per listening port. There is a handshake that
+          the client and server go through to set up a connection, which allows the server to then
+          accept the connection, and this backlog setting is the queue size for incoming connections
+          that are in the process of being accepted. The larger the backlog size, the larger number
+          of connections that can be in the process of being accepted at the same time. Connections
+          that are not accepted result in a connection refused on the client side.<div class="note note"><span class="notetitle">Note:</span> This is a
+              <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, FTP, HSP, HTTP, RNIF, SMTP, SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">ISDN Controllers </dt>
+
+        <dd class="dd">For those cases where is it is not possible through CAPI to ascertain the number of
+          available controllers or the available controller number list is not sequential starting
+          at 1. When necessary, property accepts comma-separated values, as well as dash-separated
+          ranges. </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: OFTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Local Bind Address </dt>
+
+        <dd class="dd">When specified, all listening server ports for HTTP<span class="ph">, FTP (<span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications
+            only), OFTP, SMTP (<span class="ph">Cleo VLTrader</span>
+            and <span class="ph">Cleo Harmony</span>
+            applications only) and SSH FTP (<span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications
+            only)</span> will bind only to this address. By default, this field is blank designating
+          that the <span class="ph">Cleo Harmony</span>
+          application will bind its listening ports to all addresses available to the server.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: All</dd>
+
+      
+      
+        <dt class="dt dlterm">Log Received Message Details</dt>
+
+        <dd class="dd">When this property is selected, additional information about the incoming message, i.e.,
+          whether it is signed, encrypted and compressed is logged.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML</dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Allowed CEM Response Days</dt>
+
+        <dd class="dd">The maximum number of days allowed for receiving a partner response when sending a set
+          of certificates via Certificate Exchange Messaging (CEM) before the request is expired. By
+          default, this value is set to 7 days.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2</dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Concurrent FTP Logins Per User </dt>
+
+        <dd class="dd">The total number of logins allowed at any one time for any user. With the default value
+          of 0, the number of concurrent connections per user will be limited to the <strong class="ph b">Maximum
+            Concurrent FTP Users</strong> mailbox setting.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: FTP, SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Maximum Concurrent FTP Users </dt>
+
+        <dd class="dd">The total number of active FTP users allowed at any one time.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: FTP, SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Number Days Before Auto Delete Files In Local User Sent/Receivedbox </dt>
+
+        <dd class="dd">If a sentbox and/or receivedbox is configured for local FTP, HTTP, or SSH FTP users,
+          files not already deleted by the client will be automatically deleted after this many
+          days. <strong class="ph b">By default, this value is set to 7 days.</strong> A value of 0 turns off automatic
+          deletion. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: FTP, HTTP, SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Number Of Passwords Before Repeats Allowed </dt>
+
+        <dd class="dd">Specifies the number of previous passwords that cannot be used when changing the
+          password for a local user. </dd>
+
+      
+      
+        <dt class="dt dlterm">Omit Domain Names From Message IDs</dt>
+
+        <dd class="dd">By default, message IDs for outbound messages are constructed to include the domain name
+          (or machine name) from which it is being sent.  Select this option if you do not want to
+          include the name of your domain or machine as part of the message.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Proxy Protocol: Regex To Match Load Balancer</dt>
+
+        <dd class="dd">Specify a regex value for this property to cause the application to look for the Proxy
+          Protocol header on all TCP traffic from IPs that match the specified value.</dd>
+
+        <dd class="dd">For example, if you set the value to <kbd class="ph userinput">172.163.23.225</kbd>, the
+          application will expect the proxy protocol header on all TCP traffic from that IP. </dd>
+
+        <dd class="dd">To match all IPs in the CIDR blocks, <kbd class="ph userinput">172.31.48.0/24</kbd>,
+            <kbd class="ph userinput">172.31.49.0/24</kbd>, and <kbd class="ph userinput">172.31.50.0/24</kbd>you
+          could specify the following:
+          <pre class="pre codeblock">172\.31\.(48|49|50)\.([0-9]|[1-9][0-9]|1([0-9][0-9])|2([0-4][0-9]|5[0-5]))</pre>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Save Sent Receipt</dt>
+
+        <dd class="dd">Specifies that a copy of all receipts sent to your trading partners will be saved in the
+          sent folder (that is, <span class="ph filepath">AS2\mdn\sent</span>,
+          <span class="ph filepath">AS3\mdn\sent</span>, <span class="ph filepath">ebXML\ack\sent</span>,
+            <span class="ph filepath">OFTP\eerp\sent</span>, <span class="ph filepath">RNIF\ack\sent</span>,
+            <span class="ph filepath">SMTP\dsn\sent</span>, <span class="ph filepath">EBICS\ack</span>).<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo LexiCom</span>-only option.
+            </div>
+<div class="note note"><span class="notetitle">Note:</span> For AS2, within <span class="ph">Cleo LexiCom</span>, receipts are
+            always retained in the <span class="ph filepath">AS2\mdn\sent</span> folder for 24 hours to allow
+            for possible retransmission of a previously sent MDN when a duplicate message is
+            received.  </div>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Send ‘200 OK’ For Empty AS2 Responses</dt>
+
+        <dd class="dd">By default, when either no MDN is specified or an asynchronous MDN is requested and
+          there is no content to return, a <samp class="ph msgph">204 No Content</samp> is returned by the Local
+          Listener.  Selecting this option returns a <samp class="ph msgph">200 OK</samp> response and <samp class="ph msgph">200
+            OK</samp> in the content of the response instead.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2</dd>
+
+      
+      
+        <dt class="dt dlterm">SMTP Payload Resend Delay</dt>
+
+        <dd class="dd">The time (in minutes) that the Local Listener will wait before either trying to resend
+          an SMTP message to one or more multiple recipients that had previously failed to be sent
+          (if SMTP Payload Resend Duration has not expired) or logging an error.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SMTP Payload Resend Duration </dt>
+
+        <dd class="dd">The maximum time (in minutes) that the Local Listener will continue to attempt to resend
+          the original SMTP message when it had previously failed to be sent to one or more multiple
+          recipients.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SMTP Receive DSN Timeout </dt>
+
+        <dd class="dd">The time (in minutes) that the Local Listener will wait for a delivery status
+          notification before either resending the original message (if SMTP Payload Resend Duration
+          has not expired) or logging an error.<div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SMTP Send DSN Retry Delay </dt>
+
+        <dd class="dd">The time (in minutes) that the Local Listener will wait before either trying again to
+          send a DSN that previously failed to be sent (if SMTP Send DSN Retry Duration has not
+          expired) or logging an error. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SMTP Send DSN Retry Duration </dt>
+
+        <dd class="dd">The maximum time (in minutes) that the Local Listener will retry sending a DSN.</dd>
+
+        <dd class="dd">
+          <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and
+              <span class="ph">Cleo Harmony</span> option.
+          </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSH FTP Ciper Pattern</dt>
+
+        <dd class="dd">Regular expression (enclosed in brackets) that limits the set of cipher algorithms
+          available for all listening SSH FTP server ports. The [List] button shows the resulting
+          set of cipher algorithms for this property setting.</dd>
+
+        <dd class="dd">Example values include:<ul class="ul" id="LocListAdvProps__ul_yf4_w4s_5x">
+            <li class="li"><samp class="ph codeph">[.*]</samp> - All supported cipher algorithms</li>
+
+            <li class="li"><samp class="ph codeph">[.*cbc.*]</samp> - Only supported cipher algorithms containing ‘cbc’ in
+              the name.</li>
+
+            <li class="li"><samp class="ph codeph">[((?!cbc).)*]</samp> - All supported cipher algorithms except those
+              containing ‘cbc’ in the name.</li>
+
+          </ul>
+</dd>
+
+        <dd class="dd">
+          <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and
+              <span class="ph">Cleo Harmony</span> option.
+          </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSH FTP Compression </dt>
+
+        <dd class="dd">When this property is selected the SSH FTP server will enable supported compression
+          algorithms. The default setting disables compression algorithms. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option. </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSH FTP Key Exchange Pattern</dt>
+
+        <dd class="dd">Regular expression (enclosed in brackets) that limits the key exchange algorithms
+          available for all listening SSH FTP server ports. The <span class="ph uicontrol">List</span> button
+          shows the resulting set of key exchange algorithms for this property setting.</dd>
+
+        <dd class="dd">Example values include:<ul class="sl simple">
+            <li class="sli"><samp class="ph codeph">[.*]</samp> - All supported key exchange algorithms</li>
+
+            <li class="sli"><samp class="ph codeph">[.*group14.*]</samp> - Only supported key exchange algorithms containing
+                <kbd class="ph userinput">group14</kbd> in the name, for example,
+                <kbd class="ph userinput">diffie-hellman-group14-sha1</kbd>.</li>
+
+            <li class="sli"><samp class="ph codeph">[((?!group14).)*]</samp> - All supported key exchange algorithms
+                <em class="ph i">except</em> those containing <kbd class="ph userinput">group14</kbd> in the name</li>
+
+            <li class="sli"><samp class="ph codeph">[.*curve.*]</samp> - Only support
+                <kbd class="ph userinput">curve25519-sha256@libssh.org</kbd> key exchange algorithm</li>
+
+            <li class="sli"><samp class="ph codeph">[((?!sha1).)*]</samp> - Do not support algorithms containing
+                <kbd class="ph userinput">sha1</kbd> in the name, that is,
+                <kbd class="ph userinput">diffie-hellman-group1-sha1</kbd> and
+                <kbd class="ph userinput">diffie-hellman-group14-sha1</kbd></li>
+
+          </ul>
+</dd>
+
+        <dd class="dd">
+          <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and
+              <span class="ph">Cleo Harmony</span> option.
+          </div>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSH FTP MAC Pattern</dt>
+
+        <dd class="dd">Regular expression (enclosed in brackets) that limits the set of MAC algorithms
+          available for all listening SSH FTP server ports. The [List] button shows the resulting
+          set of MAC algorithms for this property setting.</dd>
+
+        <dd class="dd">Example values include:<ul class="sl simple">
+            <li class="sli"><samp class="ph codeph">[.*]</samp> - All supported MAC algorithms</li>
+
+            <li class="sli"><samp class="ph codeph">[.*sha1.*]</samp> - Only supported MAC algorithms containing
+                <kbd class="ph userinput">sha1</kbd> in the name.</li>
+
+            <li class="sli"><samp class="ph codeph">[((?!sha1).)*]</samp> - All supported MAC algorithms except those
+              containing <kbd class="ph userinput">sha1</kbd> in the name.</li>
+
+          </ul>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSH FTP Window Size </dt>
+
+        <dd class="dd">Specifies the maximum number of received bytes allowed before a window adjustment is
+          required. A large window size may significantly increase memory requirements if there are
+          numerous large file transfers occurring concurrently. If VLProxy is used as a SSH FTP
+          reverse proxy, this parameter will also affect VLProxy memory requirements. When receiving
+          (client uses a PUT command), a typical SSHFTP Window Size setting would be equal to the
+          largest expected file size or the default setting, whichever is greater. This setting will
+          not normally affect sends since the receiver (the client) requires the majority of
+          adjustments. <div class="note note"><span class="notetitle">Note:</span> This is a <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> option.
+          </div>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: SSH FTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSL Allow Legacy Renegotiation </dt>
+
+        <dd class="dd">When this property is selected (default value), legacy renegotiation will be allowed. If
+          this property is not selected, the extension described in <a class="xref" href="http://www.rfc-editor.org/rfc/rfc5746.txt" target="_blank">RFC5746</a> will be used for renegotiation and any SSL clients must also support
+          this extension. See <a class="xref" href="http://www.rfc-editor.org/rfc/rfc5746.txt" target="_blank">RFC5746</a> for a description of the extension and the
+          vulnerability it addresses. </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, FTP, HSP, HTTP, OFTP, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSL Cipher Pattern </dt>
+
+        <dd class="dd">Regular expression (enclosed in brackets) or wildcard expression that limits the set of
+          SSL ciphers available for all listening secure server ports. SSL Cipher Pattern works in
+          conjunction with certificates for all the applicable SSL servers, the SSL Ciphers setting,
+          and the SSL Minimum Encryption Key Size setting. The <span class="ph uicontrol">List</span> button
+          shows the resulting set of ciphers for the applicable SSL server certificates and these
+          three property settings. </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, FTP, HSP, HTTP, OFTP, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSL Ciphers </dt>
+
+        <dd class="dd">Specifies the list of ciphers available for all listening secure server ports (HTTP,
+          OFTP, and, for <span class="ph">Cleo VLTrader</span> and
+            <span class="ph">Cleo Harmony</span> applications,
+          FTP and SMTP).<ul class="ul" id="LocListAdvProps__ul_cdl_ztm_lw">
+            <li class="li">Default Set (default value)</li>
+
+            <li class="li">All standard ciphers excluding anonymous (DH_anon) and non-encrypting (NULL)
+              ciphers.</li>
+
+            <li class="li">All Implemented</li>
+
+            <li class="li">All standard ciphers including anonymous (DH_anon) and non-encrypting (NULL)
+              ciphers.</li>
+
+          </ul>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, FTP, HSP, HTTP, OFTP, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSL Ignore Client Cipher Preference Order</dt>
+
+        <dd class="dd">
+          
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, FTP, HSP, HTTP, OFTP, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSL Maximum Protocol Version </dt>
+
+        <dd class="dd">
+          <p class="p">Specifies the maximum protocol version allowed for all listening secure server ports
+            (HTTP, OFTP, and, for <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications, FTP
+            and SMTP). By default, this field is blank designating that the <span class="ph">Cleo Harmony</span>
+            application will select the most recent version (currently TLS 1.2).</p>
+
+          <p class="p">SSL 3.0 - refer to <a class="xref" href="http://tools.ietf.org/html/rfc6101" target="_blank">RFC6101</a>
+          </p>
+
+          <p class="p">TLS 1.0 (SSL 3.1) - refer to <a class="xref" href="http://tools.ietf.org/html/rfc2246" target="_blank">RFC2246</a>
+          </p>
+
+          <p class="p"> TLS 1.1 (SSL 3.2) - refer to <a class="xref" href="http://tools.ietf.org/html/rfc4346" target="_blank">RFC4346</a>
+          </p>
+
+          <p class="p">TLS 1.2 (SSL 3.3) - refer to <a class="xref" href="http://tools.ietf.org/html/rfc5246" target="_blank">RFC5246</a></p>
+
+        </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, FTP, HSP, HTTP, OFTP, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSL Minimum Encryption Key Size </dt>
+
+        <dd class="dd">Specifies the minimum encryption key size allowed for all listening secure server ports
+          (HTTP, OFTP, and, for <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>
+          application, FTP and SMTP). To prevent use of low or medium strength ciphers change from
+          the default value of zero to 112 or 128 (depending on the requirement). </dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS, ebXML, FTP, HS, HTTP, OFTP, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">SSL Minimum Protocol Version </dt>
+
+        <dd class="dd">Specifies the minimum protocol version allowed for all listening secure server ports
+          (HTTP, OFTP, and, for <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>
+          applications, FTP and SMTP). SSL 3.0 is the default value for compatibility with clients
+          that do not support the more recent TLS versions 1.0, 1.1, and 1.2.<p class="p">SSL 3.0 (default
+            value) - refer to <a class="xref" href="http://tools.ietf.org/html/rfc6101" target="_blank">RFC6101</a>
+          </p>
+<p class="p">TLS 1.0 (SSL 3.1) - refer to <a class="xref" href="http://tools.ietf.org/html/rfc2246" target="_blank">RFC2246</a>
+          </p>
+<p class="p">TLS 1.1 (SSL 3.2) - refer to <a class="xref" href="http://tools.ietf.org/html/rfc4346" target="_blank">RFC4346</a>
+          </p>
+<p class="p">TLS 1.2 (SSL 3.3) - refer to <a class="xref" href="http://tools.ietf.org/html/rfc5246" target="_blank">RFC5246</a></p>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, FTP, HSP, HTTP, OFTP, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm"><a name="LocListAdvProps__SSLUseRcdSplitting"><!-- --></a>SSL Use Record Splitting </dt>
+
+        <dd class="dd">
+          
+        </dd>
+
+        <dd class="dd">Indicates whether to use 1/n-1 record splitting in CBC mode as a countermeasure against
+          the Rizzo/Duong BEAST (Browser Exploit Against SSL/TLS) attack against the SSL 3.0 / TLS
+          1.0 protocol. Must be turned off if the SSL library on the other side of the connection
+          does not support the feature. </dd>
+
+        <dd class="dd"><strong class="ph b">Possible values</strong>: <kbd class="ph userinput">On</kbd> or <kbd class="ph userinput">Off</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">On</kbd></dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: FTP, HSP, HTTP, OFTP, RNIF, SMTP</dd>
+
+        <dd class="dd"> </dd>
+
+        <dd class="dd">   </dd>
+
+      
+      
+        <dt class="dt dlterm">Store Raw Received Message</dt>
+
+        <dd class="dd">When this property is selected, raw received messages will be saved in the protocol's
+          received directory (that is, <span class="ph filepath">AS2\received</span>,
+            <span class="ph filepath">AS3\received</span>, <span class="ph filepath">ebXML\sent+received</span>,
+            <span class="ph filepath">OFTP\received</span>, <span class="ph filepath">RNIF\sent+received</span>,
+            or <span class="ph filepath">SMTP\received</span>) under the <span class="ph">Cleo Harmony</span>
+          root path.  These files may be useful in diagnosing problems, but it may be desirable to
+          disable this setting when disk space needs to be conserved.</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML, RNIF, SMTP</dd>
+
+      
+      
+        <dt class="dt dlterm">Unknown Partner Message Action</dt>
+
+        <dd class="dd">Determines the desired action to be taken when a message is received by an unknown or
+          undefined trading partner.  For AS2/AS3, the <span class="ph">Cleo Harmony</span>
+          application determines valid trading relationships via the defined "AS2-To"/”AS3-To” and
+          "AS2-From"/”AS3-From” headers configured at the Mailbox level.  For ebXML, the <span class="ph">Cleo Harmony</span>
+          application determines valid trading relationships via the configured "CPA Id" at the host
+          level.</dd>
+
+        <dd class="dd">This setting may help filter out unwelcome messages.</dd>
+
+        <dd class="dd">Choose from the following actions:<ul class="ul" id="LocListAdvProps__ul_yf3_z44_ts">
+            <li class="li"><span class="ph uicontrol">Save Payload</span> - The incoming payload is stored in the
+              lostandfound\ directory if the message can be successfully decrypted (when
+              applicable).  For AS2/AS3, if the sending system requested an MDN, an unsigned MDN is
+              returned with an explanation of the error. <strong class="ph b">This is the default setting.</strong>
+            </li>
+
+            <li class="li"><span class="ph uicontrol">Save Raw Message</span> - The raw received MIME message is stored in
+              the protocol's received directory as described for the <span class="ph uicontrol">Store Raw Received
+                Message</span> property (above).  No payload is stored, even if the message can
+              be successfully decrypted (when applicable).   For AS2/AS3, if the sending system
+              requested an MDN, an unsigned MDN is returned with an explanation of the error.</li>
+
+            <li class="li"><span class="ph uicontrol">Ignore</span> - The sending system receives a valid response code
+              without any explanation of the error, even if the sending system requested an MDN (for
+              AS2/AS3).  No message or payload is stored on the receiving system.</li>
+
+            <li class="li"><span class="ph uicontrol">Reject</span> - Disconnect from the sending system before completing
+              receipt of the entire message entity. No message or payload is stored on the receiving
+              system.</li>
+
+          </ul>
+</dd>
+
+        <dd class="dd"><strong class="ph b">Protocols supported</strong>: AS2, AS3, ebXML</dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_listener_configuration_topc_level.html" title="The Local Listener is automatically activated (on HTTP port 5080) the first time VersaLex is launched. This makes web browser service (supported only on Unix and Windows platforms) available &#34;out-of-the-box&#34; for systems lacking a graphics console. All other services require further user configuration before they are ready and available."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Listener Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

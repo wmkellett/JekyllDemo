@@ -1,0 +1,214 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The mailbox's AS2 tab allows you to select the desired encryption and signing for sending messages and the optional desired security for receiving messages. If an MDN receipt is desired, you can also ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="AS2 Mailbox: AS2 Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_AS2_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_prl_xjc_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS2 Mailbox: AS2 Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_prl_xjc_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_as2_configuration.html" title="AS2 Configuration">AS2 Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_AS2_Mailbox.html" title="AS2 Mailbox Configuration">AS2 Mailbox Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Mailbox.html" title="AS2 Mailbox Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Mailbox Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">AS2 Mailbox: AS2 Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <p class="p">The mailbox's AS2 tab allows you to select the desired encryption and signing for sending
+        messages and the optional desired security for receiving messages. If an MDN receipt is
+        desired, you can also select the format and delivery method of that receipt.</p>
+
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Request</dt>
+
+          <dd class="dd">Specify the S/MIME format for messages to send to the remote host. <ul class="ul" id="reference_prl_xjc_b5__ul_svn_d1s_zs">
+              <li class="li">Unsigned / unencrypted (neither <span class="ph uicontrol">Encrypted</span> nor
+                  <span class="ph uicontrol">Signed</span> selected)</li>
+
+              <li class="li">Signed (only <span class="ph uicontrol">Signed</span> selected)</li>
+
+              <li class="li">Encrypted (only <span class="ph uicontrol">Encrypted</span> selected)</li>
+
+              <li class="li">Signed / Encrypted (both <span class="ph uicontrol">Signed</span> and
+                  <span class="ph uicontrol">Encrypted</span> selected)</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Receipt</dt>
+
+          <dd class="dd">Enables the <span class="keyword wintitle">MDN Receipt</span> section. See <a class="xref" href="#reference_prl_xjc_b5__dlentry_qx4_4j3_vw">MDN Receipt</a>.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol"> Encryption Method</span></dt>
+
+          <dd class="dd">When <span class="ph uicontrol">Encrypted</span> is selected, the <span class="ph uicontrol"> Encryption
+              Method</span> field is enabled allowing you to choose the desired encryption
+            method of the message to be sent to the remote host. The remote host must be able to
+            decrypt the message using the method you have chosen. For a non-<span class="ph">Cleo Harmony</span>
+            host, it is important to verify the methods capable of handling prior to sending an
+            encrypted message. The default encryption method is <span class="keyword apiname">TripleDES</span>.  See
+              <a class="xref" href="../Topics/t_cryptographic_services.html">Cryptographic Services</a> for more information on choosing an encryption
+            algorithm.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Compress Content</span></dt>
+
+          <dd class="dd">Compresses the message using ZLIB compression. Compression is generally used for large
+            files so that the message will conserve bandwidth and be transferred more efficiently
+            and securely over the Internet.</dd>
+
+        
+        
+          <dt class="dt dlterm">Inbound Message Security</dt>
+
+          <dd class="dd">Indicates how inbound messages should be received. </dd>
+
+          <dd class="dd">Select any combination of <span class="ph uicontrol">Force Encryption</span>, <span class="ph uicontrol">Force
+              Signature</span> and <span class="ph uicontrol">Force MDN Signature</span> to check inbound
+            messages at a particular security level. The message is rejected and an error is logged
+            if the message is not received according to the corresponding message security settings. </dd>
+
+          <dd class="dd">By default, no settings are selected. If no settings are selected, the message is not
+            checked.</dd>
+
+          <dd class="dd">
+            <p class="p">See <a class="xref" href="../Topics/t_as2_checklist.html">AS2 Checklist</a>, item 13 for determining the type of request being
+              sent.</p>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"><a name="reference_prl_xjc_b5__dlentry_qx4_4j3_vw"><!-- --></a>MDN Receipt</dt>
+
+          <dd class="dd">Attributes of the Message Disposition Notification (MDN) receipt you requested.</dd>
+
+          <dd class="dd">Message Disposition Notifications can be returned Synchronously (as part of the same
+            HTTP session, that is, the MDN is returned during the acknowledgement phase of the
+            message response) or Asynchronously (as part of a new HTTP session, that is, just the
+            HTTP status message is returned during the acknowledgment phase of the message response
+            and the MDN is returned later in a separate HTTP POST message.) The receiver must be
+            capable of handling the specified delivery method; some non-<span class="ph">Cleo Harmony</span>
+            hosts may not be able to return either a synchronous or asynchronous MDN. This
+            information must be obtained and noted during the initial set-up of the trading
+            relationship. <span class="ph">Cleo Harmony</span>
+            can handle either method of delivery.</dd>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Signed</dt>
+
+                <dd class="dd">Compute and remember a hash over the content of the sent message using Message
+                  Integrity Check (MIC) algorithm you select. The trading partner returns the MDN
+                  with a digital signature; and computes an independent MIC value over the content
+                  of the message it received (using the same MIC algorithm) and returns this value
+                  as a base64-encoded value in the human-readable portion of the MDN. When the MDN
+                  is received, the original MIC is compared against the received MIC. When the MIC
+                  values match, the sender is guaranteed that the message read by the trading
+                  partner is identical to the message that came from the sender and was not modified
+                  in any way.</dd>
+
+              
+              
+                <dt class="dt dlterm">MIC algorithm</dt>
+
+                <dd class="dd">The algorithm used to compute the hash for a signed message. </dd>
+
+                <dd class="dd">Possible values:<ul class="ul" id="reference_prl_xjc_b5__ul_ypk_2dd_5w">
+                    <li class="li"><kbd class="ph userinput">SHA-1</kbd> - Supported by all vendors.</li>
+
+                    <li class="li"><kbd class="ph userinput">MD5</kbd> - Supported by all vendors.</li>
+
+                    <li class="li"><kbd class="ph userinput">SHA-256</kbd> - Verify that your trading partner supports
+                      this algorithm before attempting to use it.</li>
+
+                    <li class="li"><kbd class="ph userinput">SHA-384</kbd> - Verify that your trading partner supports
+                      this algorithm before attempting to use it.</li>
+
+                    <li class="li"><kbd class="ph userinput">SHA-512</kbd> - Verify that your trading partner supports
+                      this algorithm before attempting to use it.</li>
+
+                  </ul>
+</dd>
+
+              
+              
+                <dt class="dt dlterm">Forward MDN to Email</dt>
+
+                <dd class="dd">Forward a copy of the MDN received via HTTP or HTTPS (either synchronously or
+                  asynchronously) to the email address specified in the <span class="ph uicontrol">Email
+                    Address</span> field. When the asynchronous SMTP option is selected, the
+                    <span class="ph uicontrol">Forward MDN to Email</span> field is disabled.<p class="p">An additional
+                    feature available in <span class="ph">Cleo Harmony</span> is the ability to forward a copy of the MDN received via
+                    HTTP or HTTPS (either synchronously or asynchronously) to an email recipient
+                    when <span class="ph uicontrol">Forward MDN to Email</span> is selected. </p>
+</dd>
+
+              
+              
+                <dt class="dt dlterm">Synchronous</dt>
+
+                <dd class="dd">Return the MDN as part of the same HTTP sessions, that is, the MDN is returned
+                  during the acknowledgment phase of the message response. You must determine
+                  whether the receiver can handle this delivery method and plan accordingly. </dd>
+
+              
+              
+                <dt class="dt dlterm">Asynchronously</dt>
+
+                <dd class="dd">Return the MDN as part of a new HTTP session, that is, just the HTTP status
+                  message is returned during the acknowledgment phase of the message response and
+                  the MDN is returned later in a separate HTTP <span class="keyword cmdname">POST</span> message.</dd>
+
+                <dd class="dd">When you select <span class="ph uicontrol">Asynchronous</span>, you can choose the method
+                  used to process the message returned:<ul class="ul" id="reference_prl_xjc_b5__ul_ahf_1gd_5w">
+                    <li class="li"><span class="ph uicontrol">HTTP</span>: The MDN is received and processed by the local
+                      non-secure listener configured in the Local Listener Panel.</li>
+
+                    <li class="li"><span class="ph uicontrol">HTTPS</span>: The MDN is received and processed by the local
+                      SSL listener configured in the Local Listener Panel.</li>
+
+                    <li class="li"><span class="ph uicontrol">SMTP</span>: The MDN is emailed to the trading partner.
+                        <div class="note note"><span class="notetitle">Note:</span> When you select <kbd class="ph userinput">SMTP</kbd>, you must provide the
+                          <span class="ph uicontrol">Email Address</span> where the MDN will be sent. The
+                          <span class="ph uicontrol">Email Address</span> field is only enabled for editing
+                        when you select <kbd class="ph userinput">SMTP</kbd> as the delivery method.
+                      </div>
+</li>
+
+                  </ul>
+<p class="p">See <a class="xref" href="../Topics/t_as2_checklist.html">AS2 Checklist</a>, items 17 and 18, for determining the
+                    MDN delivery method.</p>
+</dd>
+
+              
+            </dl>
+
+            <p class="p">See <a class="xref" href="../Topics/t_as2_checklist.html">AS2 Checklist</a>, items 15 and 16, to determine the type of MDN
+              response that will be requested.</p>
+
+          </dd>
+
+        
+      </dl>
+
+    </div>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Mailbox.html" title="AS2 Mailbox Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Mailbox Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

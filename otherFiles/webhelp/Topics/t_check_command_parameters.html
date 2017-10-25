@@ -1,0 +1,306 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="OccurredWithin Required for the transfer ( -TRA ) option.   Indicates the time period in which the transfer for which you want to check should have occurred.  The value or OccurredWithin can either be ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="CHECK Command Parameters"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_check_command.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_n31_5dw_4t"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>CHECK Command Parameters</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_n31_5dw_4t">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_extended_commands.html" title="Extended Commands">Extended Commands</a> / <a class="navheader_parent_path" href="../Topics/t_check_command.html" title="CHECK Command">CHECK Command</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">CHECK Command Parameters</h1>
+
+  <div class="body">
+    <dl class="dl">
+      
+        <dt class="dt dlterm">OccurredWithin</dt>
+
+        <dd class="dd">Required for the transfer (<span class="keyword cmdname">-TRA</span>) option.   Indicates the time period
+          in which the transfer for which you want to check should have occurred.  The value or
+            <span class="keyword cmdname">OccurredWithin</span> can either be expressed explicitly as
+              "<samp class="ph codeph"><var class="keyword varname">nn</var>[D|H|M|S]</samp>, where <var class="keyword varname">nn</var> is a
+          number from 1-99 and the letter following indicates days, hours, minutes, or seconds; or
+          it can be the keyword "Yesterday" or "Today". </dd>
+
+        <dd class="dd">To enter this parameter, either type the string in directly or click on the cell to show
+          the [Build...] button.  The [Build...] button, if selected, will display the following
+          wizard dialog that can be used to build the 'OccurredWithin' parameter.<p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_xhm_bdw_4t" src="../Images/image1861.jpg"></img>
+          </p>
+<p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_y3m_bdw_4t" src="../Images/image1853.jpg"></img>Select 'Today',
+            'Yesterday', or 'Custom'.  If 'Custom' is specified, then enter a value between 1 and 99
+            and a unit (e.g., '99 Hours' as shown above).</p>
+<p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_xjm_bdw_4t" src="../Images/image1853.jpg"></img>To obtain a written
+            translation of your settings, click on the [Test...] button.  You will receive a dialog
+            such as follows.</p>
+<p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_xkm_bdw_4t" src="../Images/image1863.jpg"></img>
+          </p>
+<p class="p"> <img class="image" id="topic_n31_5dw_4t__image_amm_bdw_4t" src="../Images/image1853.jpg"></img>Once you are
+            satisfied with your settings, click the [OK] button.</p>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Age</dt>
+
+        <dd class="dd">
+          <p class="p">This parameter is required for the file (-FIL) and directory (-DIR) options.   It
+            specifies the age condition for which the files/directories should be checked.  The
+            value of Age may be of the form "[&lt;|&gt;]<var class="keyword varname">nnn</var>[D|H|M|S]" where
+              <var class="keyword varname">nnn</var> is a number from 0-999 and the letter following indicates days,
+            hours, minutes, or seconds.  The "&lt;" or "&gt;" symbol must be present to indicate
+            whether the check is looking for ages greater than or equal to, or less than or equal
+            to, the specified age.  For example, "Age=&gt;24H" indicates the check should look for
+            files/directories equal to or older than 24 hours.  The value of Age can also be
+            "[&lt;|&gt;]Yesterday" or "[&lt;|&gt;]Today". </p>
+
+          <p class="p">Notes:</p>
+
+          <p class="p">1.   To simply check for existence of a file/directory, use a parameter setting of
+            "&gt;0[D|H|M|S]".  (It does not matter which unit is selected in this case.)</p>
+
+          <p class="p">2.   A parameter setting of "&lt;0[D|H|M|S]",  is really nonsensical because it is
+            essentially looking for files/directories with future ages.  This setting will be
+            flagged as an error.</p>
+
+          <p class="p">To enter this parameter, either type the string in directly or click on the cell to
+            show the [Build...] button.  The [Build...] button, if selected, will display the
+            following wizard dialog that can be used to build the 'Age' parameter.</p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_fnm_bdw_4t" src="../Images/image1865.jpg"></img>
+          </p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_l4m_bdw_4t" src="../Images/image1853.jpg"></img>Select 'Greater Than
+            (&gt;)' or 'Less Than (&lt;)'. </p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_mqm_bdw_4t" src="../Images/image1853.jpg"></img>Select 'Today',
+            'Yesterday', or 'Custom'.  If 'Custom' is specified, then enter a value between 0 and
+            999 and a unit (e.g., '10 Days' as shown above).</p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_nrm_bdw_4t" src="../Images/image1853.jpg"></img>To obtain a written
+            translation of your settings, click on the [Test...] button.  You will receive a dialog
+            such as follows.</p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_nsm_bdw_4t" src="../Images/image1867.jpg"></img>
+          </p>
+
+          <p class="p"> <img class="image" id="topic_n31_5dw_4t__image_ttm_bdw_4t" src="../Images/image1853.jpg"></img>Once you are satisfied
+            with your settings, click the [OK] button.</p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Class</dt>
+
+        <dt class="dt dlterm"><strong class="ph b">Subclass</strong></dt>
+
+        <dd class="dd">
+          <p class="p">These parameters, if specified, are for categorizing the result of the CHECK command
+            (what is referred to as a “checkpoint”) within the <span class="ph">Dashboards</span>
+            <span class="ph">application SLA/KPI report.</span>
+          </p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_dvm_bdw_4t" src="../Images/image1853.jpg"></img>
+            <strong class="ph b">
+              <span class="ph">Class –</span>
+            </strong>
+            <span class="ph">there are two settings for this parameter:</span>
+          </p>
+
+          <p class="p">- <strong class="ph b">SLA</strong> (Service Level Agreement) – verification of internal or external customer
+            commitments</p>
+
+          <p class="p">- <strong class="ph b">KPI</strong> (Key Performance Indicator) – measurement for
+            self-policing/self-improvement</p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_axm_bdw_4t" src="../Images/image1853.jpg"></img>
+            <strong class="ph b">
+              <span class="ph">Subclass</span>
+            </strong>
+            <span class="ph">– this parameter is freeform and can be set to any value that has meaning within the
+              business use case.</span>
+          </p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">ConditionsMet</dt>
+
+        <dd class="dd">This parameter, if specified, signals that records should be added to the transfer log
+          when the CHECK command is executed (see <span class="ph">Transfer Entries for CHECK Commands</span>
+          <span class="ph">).  Further, this parameter indicates how to classify the result when the conditions
+            are met.   There are two settings for this parameter:</span>
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_xym_bdw_4t" src="../Images/image1853.jpg"></img>
+            <strong class="ph b">
+              <span class="ph">Error</span>
+            </strong>
+            <span class="ph">- if the conditions of the CHECK are met, then the result should be classified as
+              "Error".   If the conditions of the CHECK are not met, then the result should be
+              classified as "Success".</span>
+          </p>
+<p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_s1n_bdw_4t" src="../Images/image1853.jpg"></img>
+            <strong class="ph b">
+              <span class="ph">Success</span>
+            </strong>
+            <span class="ph">- if the conditions of the CHECK are met, then the result should be classified as
+              "Success".  If the conditions of the CHECK are not met, then the result should be
+              classified as "Error".</span>
+          </p>
+<p class="p">Note that the Advanced property, 'Terminate On Fail', is only honored if this
+            parameter is set and the result of running the CHECK is classified as "Error".  Refer to
+              <a class="xref" href="../Tasks/t_set_advanced_host_properties.html">Set Advanced Host
+              Properties</a> for a description of 'Terminate On Fail'.</p>
+<p class="p">To enter this
+            parameter, either type the string in directly or click on the cell to show a drop-down
+            list containing available options from which you can select.  If [ConditionsMet] is not
+            specified, then the result will always be classified as "None", irrespective of whether
+            the conditions were met or not.   Also, the CHECK operation will not be added to the
+            transfer log.</p>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Status</dt>
+
+        <dd class="dd">
+          <p class="p">This parameter is only applicable to the transfer (-TRA) option.   When checking for a
+            transfer, it's possible to qualify the status of the transfer.  There are three settings
+            for this parameter: </p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_zcn_bdw_4t" src="../Images/image1853.jpg"></img>
+            <strong class="ph b">
+              <span class="ph">Delivered</span>
+            </strong>
+            <span class="ph">- this term applies to transfer statuses of  'Success', 'Warning', and 'Receipt
+              Pending'. </span>
+            <span class="ph">Although rarely seen, the 'Delete Error' and 'Delete Resolved' statuses are also
+              included in this category.</span>
+          </p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_afn_bdw_4t" src="../Images/image1853.jpg"></img>
+            <strong class="ph b">
+              <span class="ph">Completed</span>
+            </strong>
+            <span class="ph">- this term applies to transfer statuses of  'Success', and 'Warning'. </span>
+            <span class="ph">Although rarely seen, the 'Delete Error' and 'Delete Resolved' statuses are also
+              included in this category.</span>
+          </p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_xgn_bdw_4t" src="../Images/image1853.jpg"></img>
+            <strong class="ph b">
+              <span class="ph">Any</span>
+            </strong>
+            <span class="ph">- this term applies to any transfer status, including 'Error', 'Exception', and
+              'Interrupted'.</span>
+          </p>
+
+          <p class="p">To enter this parameter, either type the string in directly or click on the cell to
+            show a drop-down list containing available options from which you can select.  If
+            [Status] is not specified, the default status is <strong class="ph b">Delivered</strong>.</p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Count</dt>
+
+        <dd class="dd">
+          <p class="p">This parameter is applicable to all options (-TRA, -FIL, and -DIR).   For -TRA, it
+            indicates the minimum number of transfers records found that meet the CHECK conditions. 
+            Its value should be a number from 1-99999.   For the -FIL and -DIR options, [Count] can
+            either be the keyword, "All", or a number from 1-99999.  If a number is specified, it
+            indicates the minimum number of files/directories that should meet the CHECK
+            conditions.  If "All" is specified, it indicates that all files/directories
+              <var class="keyword varname">that are found</var> according to the path specification must meet the
+            age criteria.  This implies that if no files/directories are found according to the
+            path, the conditions will also be met. </p>
+
+          <p class="p">To enter this parameter, either type the string in directly or click on the cell to
+            show a drop-down list containing available options from which you can select (the
+            drop-down list is only available for -FIL/-DIR operations).   If [Count] is not
+            specified, the default value is one (1).</p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Edi....</dt>
+
+        <dd class="dd">
+          <p class="p">The [Edi....] parameters are only applicable to the transfer (-TRA) option and only
+            when database transfer logging is enabled.   They indicate additional (EDI) conditions
+            that must be met for a particular transfer record.  For the 'Edi.Interchange.Sender' and
+            'Edi.FunctionalGroup.Sender' parameters, the syntax is "EDI Sender:Qualifier", where
+            Qualifier is optional.   For the 'Edi.Interchange.Receiver' and
+            'Edi.FunctionalGroup.Receiver' parameters, the syntax is "EDI Receiver:Qualifier", where
+            Qualifier is optional.  For the 'EDI.Transaction.Type' parameter, multiple transaction
+            types may be entered, separated by a semicolon (';') or comma (','). </p>
+
+          <p class="p">If any of the [EDI...] parameters contain embedded spaces, the Edit Command dialog will
+            automatically replace these with '\s'.  Note that if you are keying the command in
+            directly from the freeform editor on the Commands tab, you will be responsible for
+            inserting '\s' for every embedded space.  In general, when typing commands without the
+            use of the Edit Command dialog editor, special escape sequences must be used to identify
+            certain characters:</p>
+
+          <p class="p">\s = space character</p>
+
+          <p class="p">\t = tab character</p>
+
+          <p class="p">\n = newline character</p>
+
+          <p class="p">\r = carriage return character</p>
+
+          <p class="p">\\ = slash character</p>
+
+          <p class="p">To enter these parameters, either type the string in directly or, for the 'Edi…Sender'
+            / 'Edi…Receiver' parameters, click on the cell to show the [Build...] button.  The
+            [Build...] button, if selected, will display the following wizard dialog that can be
+            used to build the 'Edi…Sender' / 'Edi…Receiver' parameters.</p>
+
+          <p class="p">
+            <img class="image" id="topic_n31_5dw_4t__image_v3n_bdw_4t" src="../Images/image1868.jpg"></img>
+          </p>
+
+          <p class="p">If a Trading Partner Alias is selected along with ‘<strong class="ph b">Use All Interchange
+              Identifiers/Qualifiers</strong>’, then a trading partner alias variable will be used. This
+            will match any of the Interchange Identifiers/Qualifiers configured for the Trading
+            Partner. If ‘<strong class="ph b">Use All Interchange Identifiers/Qualifiers</strong>’ is not selected, then
+            the user can select a specific Interchange Identifier/Qualifier pair to be used. Once
+            the selections have been made and the [OK] button is selected, then the selection will
+            be placed in the appropriate field depending on which [Build…] button was selected.</p>
+
+        </dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

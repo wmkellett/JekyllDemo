@@ -1,0 +1,198 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Action Dashboard provides information related to the various types of actions active within the currently selected VersaLex. It consists of several different components. Action Status Chart The ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Action Dashboard"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cleo_system_monitor.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_lws_xyq_m5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Action Dashboard</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_lws_xyq_m5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_cleo_dashboards_and_cleo_system_monitor.html" title="Cleo Dashboards and Cleo System Monitor">Cleo Dashboards and Cleo System Monitor</a> / <a class="navheader_parent_path" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor">Cleo System Monitor</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Action Dashboard</h1>
+
+  <div class="body">
+    <p class="p">The
+        <span class="keyword wintitle">Action Dashboard</span> provides information related to the various types of
+      actions active within the currently selected VersaLex.  It consists of several different
+      components.</p>
+
+    <p class="p"> <img class="image" id="topic_lws_xyq_m5__image_tml_rqn_25" src="../Images/image1774.jpg"></img> </p>
+
+    <div class="section"><h2 class="title sectiontitle">Action Status Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Action Status</span> chart displays a count of the successes, warnings,
+        and failures that have occurred in the past 60 minutes. This is a count of each command
+        within an action rather than the status of the action as a whole.</p>
+
+      <p class="p">A growing red section of the pie chart indicates a current problem in the VersaLex
+        actions.</p>
+
+    </div>
+
+    <p class="p">Access the <span class="keyword wintitle">Action Status History</span> sub-report by clicking on the pie
+      chart.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Action Status History Report </h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Action Status History</span> report displays the number of
+          <span class="ph uicontrol">Successful</span>, <span class="ph uicontrol">Warning</span>, and
+          <span class="ph uicontrol">Failed</span> items over time. By default, it will show the last 60
+        minutes of history. Change the <span class="ph uicontrol">Start date/time</span> of the chart and the
+        number of <span class="ph uicontrol">Minutes</span> displayed using the parameter box. Use the zoom
+        slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+        specific data point on the chart will display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Pending Deletions Table</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Pending Deletions</span> table displays a count of the number of files
+        pending deletion. If a PUT-DEL command fails to delete a file, it is added to list and
+        attempted to delete at a later time.</p>
+
+      <p class="p">This value should be 0. If it is non-zero, then it is likely that another process has files
+        open, preventing VersaLex from deleting the file(s).</p>
+
+    </div>
+
+    <p class="p">Access the <span class="keyword wintitle">Files Pending Deletion</span> sub-report by clicking the underlined
+      number in the table.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Files Pending Deletion Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Files Pending Deletion</span> report displays the files that failed to be
+        deleted. These file could be pending deletion due to file permissions or the file being open
+        by another application.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Scheduler Status Table</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Scheduler Status</span> table displays the status of the VersaLex
+        Scheduler, when the Scheduler was last started/stopped, which VersaLex is the master
+        Scheduler, and scheduled actions counts.</p>
+
+      <p class="p">The first check should be to see if the scheduler is running when it is expected to be
+        running. The master scheduler will normally be the VersaLex with the lowest serial number.
+        If this changes, an issue is indicated with the master scheduler VersaLex. The cycle time is
+        the time it takes to check all the scheduled actions once. This time will vary for each
+        setup. Once a typical cycle time has been determined, you can monitor the cycle time.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">Scheduled Action History</span> sub-report by clicking an
+        underlined value in the table.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Scheduled Action History Report</h2>
+      
+      
+    </div>
+
+    <p class="p">The <span class="keyword wintitle">Scheduled Action History</span> report displays the number of
+        <span class="ph uicontrol">Active</span>, <span class="ph uicontrol">Disabled</span>, and
+        <span class="ph uicontrol">Idle</span> scheduled actions over time. By default, it will show the last
+      60 minutes of history. Change the S<span class="ph uicontrol">tart date/time</span> of the chart and the
+      number of <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use the
+      zoom slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+      specific data point on the chart will display information about that data point.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Router Status Table</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Router Status</span> table displays the status of the VersaLex Router,
+        when the Router was last started/stopped, and route counts.</p>
+
+      <p class="p">The first check should be to see if the router is running when it is expected to be
+        running. You can monitor the pending routes to see how much of a backlog the system has.</p>
+
+    </div>
+
+    <p class="p">Access the <span class="keyword wintitle">Router History</span> sub-report by clicking on an underlined value
+      in the table.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Router History Report</h2>
+      
+      
+    </div>
+
+    <p class="p">The <span class="keyword wintitle">Router History</span> report displays the number of
+        <span class="ph uicontrol">Configured</span>, <span class="ph uicontrol">Active</span>, and
+        <span class="ph uicontrol">Pending</span> routes over time. By default, it will show the last 60
+      minutes of history. Change the <span class="ph uicontrol">Start date/time</span> of the chart and the
+      number of <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use the
+      zoom slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+      specific data point on the chart will display information about that data point.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Database Payload Status Table</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Database Payload Status</span> table displays the status of the VersaLex
+        Database Payload system, which VersaLex is the master, whether the database is currently
+        connected, and how many items are in the backlog.</p>
+
+      <p class="p">Check to see if the Database Payload is running when it is expected to be running and
+        whether or not the database is connected. You can monitor the database payload backlog to
+        see if it is growing to a number higher than usual.</p>
+
+    </div>
+
+    <p class="p">Access the <span class="keyword wintitle">Database Payload History</span> sub-report by clicking an underlined
+      value in the table.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Database Payload History Report</h2>
+      
+      
+    </div>
+
+    <p class="p">The <span class="keyword wintitle">Database Payload History</span> report displays the number of backlogged
+      payload items over time. It shows whether the database payload was running (1) or not (0). It
+      also shows whether the database was connected (1) or not (0). By default, it will show the
+      last 60 minutes of history. Change the <span class="ph uicontrol">Start date/time</span> of the chart and
+      the number of <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use
+      the zoom slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+      specific data point on the chart will display information about that data point.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Active Actions Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Active Actions</span> chart displays a count of the active actions in
+        each <span class="ph uicontrol">Run Type</span> category. This can be monitored and compared against
+        normal levels of the number of actions running at a given time. Abnormally high or low
+        numbers could indicate an issue in the system, either internally or externally.</p>
+
+    </div>
+
+    <p class="p">Access the <span class="keyword wintitle">Active Actions History</span> sub-report by clicking on a bar or a
+      bar label.</p>
+
+    <div class="section"><h2 class="title sectiontitle">Active Actions History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">Active Actions History</span> report displays the number of running
+        actions for each of the <span class="ph uicontrol">Run Types</span> over time. By default, it will show
+        the last 60 minutes of history. Use the <span class="ph uicontrol">Run Type</span> filter to limit the
+        history displayed to one or more <span class="ph uicontrol">Run Types</span>. Change the
+          <span class="ph uicontrol">Start date/time</span> of the chart and the number of
+          <span class="ph uicontrol">Minutes</span> displayed using the parameter control box. Use the zoom
+        slider at the bottom to zoom in closer to a specific time. Hovering the cursor over a
+        specific data point on the chart will display information about that data point.</p>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

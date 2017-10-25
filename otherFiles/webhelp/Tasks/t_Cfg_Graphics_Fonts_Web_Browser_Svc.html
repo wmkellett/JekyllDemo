@@ -1,0 +1,226 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="If you are running the Cleo Harmony application on a Unix platform, you might need to adjust graphics- and font-related properties if the application is reporting related problems. Running in Headless ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Graphics and Fonts"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_klf_rlb_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Graphics and Fonts</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_klf_rlb_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service">Local Listener Web Browser Service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener Web Browser Service</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Configuring Graphics and Fonts</h1>
+
+    <div class="body taskbody">
+        <div class="section context">
+            <p class="p">If you are
+                running the <span class="ph">Cleo Harmony</span> application on a Unix platform, you might need to adjust
+                graphics- and font-related properties if the application is reporting related
+                problems. Running in <span class="ph uicontrol">Headless mode</span> eliminates any possible
+                dependencies on X11 or XVFB. When Headless mode is enabled (the default for new
+                installs), the other graphics and font settings cannot be changed. The corresponding
+                XML property name is <samp class="ph codeph">&lt;Headlessmode&gt;</samp>.</p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Click the <span class="keyword wintitle">Graphcis/Fonts</span> tab.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Clear the <span class="ph uicontrol">Headless mode</span> check box to enable edit mode
+                    for the other graphics and fonts settings.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Select the <span class="ph uicontrol">Mixed settings</span> check box to enable the
+                    properties below. </span>
+                <div class="itemgroup info">
+                    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="task_klf_rlb_3r__table_ug2_slb_3r" class="table" frame="border" border="1" rules="all">
+                            
+                            
+                            
+                            
+                            <thead class="thead" align="left">
+                                <tr class="row">
+                                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d114258e79">Field Name </th>
+
+                                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d114258e82">Property name </th>
+
+                                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d114258e85">Description </th>
+
+                                    <th class="entry" rowspan="1" colspan="1" valign="top" id="d114258e88"> Default Value
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">Use platform
+                                        graphics </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;UsePlatformGraphics&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">Indicates to
+                                        use native graphics environment rather than the
+                                        application’s virtual graphics environment </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">True if Solaris
+                                        or HP-UX and JRE 1.5;<p class="p">False otherwise</p>
+</td>
+
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">Use X11 DISPLAY
+                                        environment variable </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;NeedX11DisplayVariable&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">If access to
+                                        X-Window is needed for native graphics environment </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">True </td>
+
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">   </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;X11DisplayVariableValue&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">X11 server
+                                        number and screen number.  If an X11 server is not
+                                        available, it may be necessary to run <samp class="ph codeph">Xvfb</samp>. </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">:0.0 </td>
+
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">Include
+                                        application fonts </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;IncludeApplicationFonts&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">Includes
+                                        webserver/AjaxSwing/lib/fonts in font path.  Can only be
+                                        False if &lt;IncludeJreFonts&gt; is True </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">True </td>
+
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">Include JRE
+                                        fonts </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;IncludeJreFonts&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">Includes
+                                        jre/lib/fonts in font path.  Can only be False if
+                                        &lt;IncludeApplicationFonts&gt; is True </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">True </td>
+
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">Reverse order
+                                        in font path </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;ReverseOrderInFontPath&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">Reverses order
+                                        of above directories in font path </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">False </td>
+
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">Use application
+                                        font properties </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;UseApplicationFontProperties&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">Indicates to
+                                        use application’s font properties rather than JRE’s </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">True, if
+                                            Linux.<p class="p">False otherwise</p>
+</td>
+
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e79 ">Use platform
+                                        font </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e82 ">&lt;UsePlatformFont&gt; </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e85 ">Indicates to
+                                        use native font rather than JRE’s </td>
+
+                                    <td class="entry" rowspan="1" colspan="1" valign="top" headers="d114258e88 ">True, if
+                                            AIX.<p class="p">False otherwise</p>
+</td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+</div>
+
+                    <p class="p">
+                        <strong class="ph b">Xvfb</strong> (X virtual frame buffer) is an X11 server that performs all
+                        graphical operations in memory (<a class="xref" href="http://en.wikipedia.org/wiki/Xvfb" target="_blank">http://en.wikipedia.org/wiki/Xvfb</a>). Xvfb implementations are
+                        available on Linux, Solaris, AIX, and HP-UX. If needed, perhaps the easiest
+                        way to activate Xvfb is to start an Xvfb process just prior to starting the
+                            <span class="ph">Cleo Harmony</span> application in the <samp class="ph codeph"><span class="ph"><span class="keyword cmdname">Harmony</span></span><span class="ph"><span class="keyword cmdname">VLTrader</span></span><span class="ph"><span class="keyword cmdname">LexiCom</span></span>d</samp> daemon script. The X11 server number and screen number are
+                        runtime parameters to <kbd class="ph userinput">Xvfb</kbd>; the
+                            <var class="keyword varname">&lt;X11DisplayVariableValue&gt;</var> above would need to
+                        be set to the same server and screen numbers.</p>
+
+                    <div class="note note"><span class="notetitle">Note:</span> If a native UI does not exist, you can use command line options to change
+                        any of the above settings.  For example: <samp class="ph codeph"><span class="ph"><span class="keyword cmdname">Harmony</span></span><span class="ph"><span class="keyword cmdname">VLTrader</span></span><span class="ph"><span class="keyword cmdname">LexiCom</span></span>c -p
+                            Local Listener\Web Browser</samp>
+                        <samp class="ph codeph">–t &lt;Service&gt;&lt;IncludeApplicationFonts&gt;False</samp></div>
+
+                    <ul class="ul" id="task_klf_rlb_3r__ul_bnt_34z_gt">
+                        <li class="li">When <span class="ph uicontrol">Mixed settings</span> is selected, the graphics and
+                            text settings can be a mixture of the <span class="ph">Cleo Harmony</span> software's virtual environment and JVM runtime
+                            and operating system native environment.</li>
+
+                        <li class="li">When <span class="ph uicontrol">Application only settings</span> is selected, all
+                            of the graphics and font settings shift to only those provided by the
+                                <span class="ph">Cleo Harmony</span> software's virtual environment.</li>
+
+                        <li class="li">When <span class="ph uicontrol">Platform only settings</span> is selected, all of
+                            the graphics and font settings shift to only those provided by the JVM
+                            runtime and operating system native environment. </li>
+
+                    </ul>
+
+                    <p class="p">For both <span class="ph uicontrol">Mixed settings</span> and <span class="ph uicontrol">Platform only
+                            settings</span>, if the <span class="ph uicontrol">Use X11 DISPLAY environment
+                            variable</span> check box is selected, you should ensure the server
+                        and screen number are properly set.</p>
+
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener Web Browser Service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

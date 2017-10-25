@@ -1,0 +1,381 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The generic SMTP and SMTP/s hosts are provided to allow a user to fully specify a client email interface to an SMTP server. Using a pre-configured host specific to the target server, if possible, will ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="SMTP Overview"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_smtp_and_smtp_s_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="smtp_overview"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SMTP Overview</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="smtp_overview">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_smtp_and_smtp_s_hosts.html" title="SMTP and SMTP/s Hosts">SMTP and SMTP/s Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_smtp_and_smtp_s_hosts.html" title="SMTP and SMTP/s Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP and SMTP/s Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">SMTP Overview</h1>
+
+   
+   <div class="body">
+      <p class="p">The
+            generic SMTP and SMTP/s hosts are provided to allow a user to fully specify a client
+            email interface to an SMTP server. Using a pre-configured host specific to the target
+            server, if possible, will save you the effort of having to research, specify, and then
+            debug the interface.</p>
+
+      <p class="p">Not all SMTP servers will support or require the full set of host options allowed by
+            VersaLex. The following action commands are available on VersaLex:</p>
+
+      <p class="p"> </p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d344985e49">
+                         
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d344985e52">
+                        Command
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d344985e55">
+                        Purpose
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d344985e58">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Underlying SMTP method</span>
+                     </strong>
+                    
+                  </th>
+
+                
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Host commands</span>
+                     </strong>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        PUT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 "> Send one or more files to the
+                            server </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        
+                     <p class="p">MAIL FROM:</p>
+
+                        
+                     <p class="p">RCPT TO:</p>
+
+                        
+                     <p class="p">DATA or BDAT</p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        QUOTE <var class="keyword varname">command</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 "> Send a raw command to the server </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        command
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Local commands</span>
+                     </strong>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        SYSTEM
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 "> Execute a local system command </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        WAIT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 ">
+                        Pause
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        SET
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 "> Set a property </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        CLEAR
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 "> Clear a string property </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        LCOPY
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 ">
+                        Copy one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        LDELETE
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 ">
+                        Delete one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        LREPLACE
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 ">
+                        Replace bytes in one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        CHECK
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 ">
+                        Check for a transfer, file, or directory (VLTrader
+                            and Harmony only)
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e49 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e52 ">
+                        SCRIPT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e55 ">
+                        Execute a JavaScript File (VLTrader and Harmony
+                            only)
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d344985e58 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"> </p>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_smtp_and_smtp_s_hosts.html" title="SMTP and SMTP/s Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP and SMTP/s Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

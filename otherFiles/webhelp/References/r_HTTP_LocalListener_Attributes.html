@@ -1,0 +1,176 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Automatically run at startup Select this check box to have the receiver automatically start each time the Cleo Harmony application is launched. HTTP Allow remote host or user to send requests over ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="HTTP Local Listener reference"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_Local_Listener_HTTP.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_bjl_3ff_lw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>HTTP Local Listener reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_bjl_3ff_lw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_listener_configuration_topc_level.html" title="The Local Listener is automatically activated (on HTTP port 5080) the first time VersaLex is launched. This makes web browser service (supported only on Unix and Windows platforms) available &#34;out-of-the-box&#34; for systems lacking a graphics console. All other services require further user configuration before they are ready and available.">Listener Configuration</a> / <a class="navheader_parent_path" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path.">Configuring a Local Listener for HTTP</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring a Local Listener for HTTP</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">HTTP Local Listener reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Automatically run at startup</dt>
+
+          <dd class="dd">Select this check box to have the receiver automatically start each time the <span class="ph">Cleo Harmony</span>
+            application is launched.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">HTTP</dt>
+
+          <dd class="dd">Allow remote host or user to send requests over clear-text HTTP. </dd>
+
+          <dd class="dd">Specify a <span class="ph uicontrol">Port</span> number. <kbd class="ph userinput">5080</kbd> is the
+            default for HTTP. Port number <kbd class="ph userinput">80</kbd> is standard for clear-text HTTP.
+            You can also use any other unused port value in the range of <kbd class="ph userinput">1024</kbd>
+            - <kbd class="ph userinput">65535</kbd>. Using non-standard HTTP ports in the range of
+              <kbd class="ph userinput">1</kbd> - <kbd class="ph userinput">1023</kbd> might interfere with port
+            numbers reserved by TCP/IP for other purposes. </dd>
+
+          <dd class="dd">You can configure HTTP to listen on multiple ports by separating the field values with
+            commas. For example, suppose you specified port 5080, but you have some trading partners
+            who have outbound firewall restrictions and can only send to port 80. Specifying
+              <kbd class="ph userinput">5080,80</kbd> in the <strong class="ph b">Port</strong> field allows the firewall-restricted
+            trading partners to be able to send to your server while allowing you to continue to
+            accept inbound messages from your other trading partners on port 5080.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">HTTP/s</dt>
+
+          <dd class="dd">Allow remote host or user to send requests over both clear-text, non-secure HTTP and
+            encrypted HTTP. </dd>
+
+          <dd class="dd">Specify a <span class="ph uicontrol">Port</span> number. There is no default for HTTP/s. Port
+            number <kbd class="ph userinput">443</kbd> is standard for HTTP/s and <kbd class="ph userinput">5443</kbd>
+            for is suggested. You can also use any other unused port value in the range
+              of<kbd class="ph userinput">1024</kbd> - <kbd class="ph userinput">65535</kbd>. Using non-standard HTTP
+            ports in the range of <kbd class="ph userinput">1</kbd> - <kbd class="ph userinput">1023</kbd> might
+            interfere with port numbers reserved by TCP/IP for other purposes. </dd>
+
+          <dd class="dd">You can configure HTTP/s to listen on multiple ports by separating the field values
+            with commas. For example, suppose you specified port 5443, but you have some trading
+            partners who have outbound firewall restrictions and can only send to port 443.
+            Specifying <kbd class="ph userinput">5443,443</kbd> in the <span class="ph uicontrol">Port</span> field
+            allows the firewall-restricted trading partners to be able to send to your server while
+            allowing you to continue to accept inbound messages from your other trading partners on
+            port 5080.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">SSL Server Certificate</dt>
+
+          <dd class="dd">If you select <span class="ph uicontrol">HTTP/s</span>, select a valid <span class="ph uicontrol">SSL Server
+              Certificate</span>. Click <span class="ph uicontrol">Browse...</span> to navigate to and
+            select a certificate. Then, enter the <strong class="ph b">Password</strong> for the SSL Server Certificate's
+            private key. </dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Authenticate Client</dt>
+
+          <dd class="dd">If you select <span class="ph uicontrol">HTTP/s</span>, select <span class="ph uicontrol">Authenticate
+              Client</span> to require the SSL client to provide a valid certificate during SSL
+            negotiation.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Authentication Certificates</dt>
+
+          <dd class="dd">By default, all of the Certificate Manager Trusted CA and user certificates are
+            accepted for client authentication. To change this, use the <span class="ph uicontrol">Authentication
+              Certificates</span> button to establish the list of accepted FTP client
+            authentication certificates, which can be: <ul class="ul" id="reference_bjl_3ff_lw__ul_cxz_zff_lw">
+              <li class="li">all of the local HTTP user certificates and/or</li>
+
+              <li class="li">all or a subset of the trusted CA certificates and/or</li>
+
+              <li class="li">all or a subset of the user certificates.</li>
+
+            </ul>
+This option must be decided and agreed upon between trading partners before sending
+            messages via SSL. After changing this setting, stop and restart the Local Listener to
+            clear cached SSL sessions.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Optional</dt>
+
+          <dd class="dd">If you select <span class="ph uicontrol">HTTP/s</span>, select the
+              <span class="ph uicontrol">Optional</span> check box to request (but not require) the SSL client
+            to provide a certificate. </dd>
+
+          <dd class="dd">Requesting but not requiring client authentication only makes sense if clients can
+            also authenticate by other means (for example, WWW-authentication or signing
+              certificate).<div class="note note"><span class="notetitle">Note:</span> Non-optional client authentication is not compatible with HTTP
+              Portal Applets. The applet will not be able to initialize in the browser without a
+              client certificate. See <a class="xref" href="../Topics/t_HTTP_Cfg_Access_For_HTTP_User_Host.html">Configure access for HTTP host users</a>. </div>
+</dd>
+
+          <dd class="dd">These settings must be decided and agreed upon between trading partners before sending
+            messages via SSL. After changing this setting, stop and restart the Local Listener to
+            clear cached SSL sessions.<div class="note note"><span class="notetitle">Note:</span> If you configure an HSP host, you must either select
+              both the <strong class="ph b">Authenticate Client</strong> check box and the <strong class="ph b">Optional</strong> check box or
+              neither. HSP will fail if you select the <strong class="ph b">Authenticate Client</strong> check box and not
+              the the <strong class="ph b">Optional</strong> check box.</div>
+</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Exchange Certificates</dt>
+
+          <dd class="dd"> Click <span class="ph uicontrol">Exchange Certificates</span> to send the SSL Server Certificate
+            to your trading partner(s). See <a class="xref" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html">Exchanging Certificates with Your Trading Partner</a> for further information.</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring a Local Listener for HTTP</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

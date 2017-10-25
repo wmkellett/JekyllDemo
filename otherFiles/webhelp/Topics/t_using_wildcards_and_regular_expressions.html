@@ -1,0 +1,964 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="This section describes the usage of wildcards and regular expressions.  Wildcards and regular expression are most often used in the paths of GET , PUT , LCOPY , LDELETE , LREPLACE , and CHECK ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Using Wildcards and Regular Expressions"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="using_wildcards_and_regular_expressions"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Using Wildcards and Regular Expressions</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="using_wildcards_and_regular_expressions">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Using Wildcards and Regular
+                    Expressions</h1>
+
+   <div class="body">
+      <p class="p">This section
+         describes the usage of wildcards and regular expressions.  Wildcards and regular expression
+         are most often used in the paths of <span class="keyword cmdname">GET</span>, <span class="keyword cmdname">PUT</span>,
+            <span class="keyword cmdname">LCOPY</span>, <span class="keyword cmdname">LDELETE</span>, <span class="keyword cmdname">LREPLACE</span>, and
+            <span class="keyword cmdname">CHECK </span> commands. The <span class="keyword cmdname">CHECK</span> is only available with
+         the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications. 
+         Generally, wildcards and regular expressions are restricted to use only within the filename
+         token of a path. Some cases, however, allow for placement within the directory tokens, as
+         well.  Refer to your specific command reference for locations where you can use wildcards
+         and regular expressions.  As an introduction, the table below provides some examples.</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" width="100%" frame="border" border="1" rules="all">
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e59">Command</th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e62">Result</th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e59 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        myOutbox\ab*.edi</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e62 ">Searches
+                        <span class="ph filepath">myOutbox</span> for all files that match the pattern
+                        <span class="ph filepath">ab*.edi</span></td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e59 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        myOutbox\ab?.edi</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e62 ">Searches
+                        <span class="ph filepath">myOutbox</span> for all files that match the pattern
+                        <span class="ph filepath">ab?edi </span></td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e59 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        myOutbox\[ab.*\.edi]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e62 ">Searches
+                        <span class="ph filepath">myOutbox</span> for all files that match the regular
+                     expression <span class="ph filepath">ab.*\.edi</span></td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e59 "><samp class="ph codeph"><span class="keyword cmdname">CHECK</span>
+                        *box\[ab.*\.edi]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e62 ">Searches first for directories
+                     that end in <samp class="ph codeph">box</samp> (for example, <samp class="ph codeph">inbox</samp> or
+                        <samp class="ph codeph">outbox</samp>) and next for files that match the regular
+                     expression <samp class="ph codeph">ab.*\.edi</samp>
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e59 "><samp class="ph codeph"><span class="keyword cmdname">CHECK</span>
+                        *box\[a.*]\[ab.*\.edi]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e62 ">Searches first for directories
+                     that end in <samp class="ph codeph">box</samp> (for example, <samp class="ph codeph">inbox</samp> or
+                        <samp class="ph codeph">outbox</samp>), and next for the subdirectories that match the
+                     regular expression <samp class="ph codeph">a.* </samp>, and finally for files that match the
+                     regular expression <samp class="ph codeph">ab.*\.edi</samp>
+                  </td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <div class="section"><h2 class="title sectiontitle">Wildcards</h2>
+         
+      </div>
+
+      
+      <p class="p">Wildcards are represented by <samp class="ph codeph">*</samp> or <samp class="ph codeph">?</samp>, where
+            <samp class="ph codeph">*</samp> matches multiple characters and <samp class="ph codeph">?</samp> matches only a
+         single character.  For example, assume the outbox has the following files.</p>
+
+      <p class="p"><span class="ph filepath">ab1.edi</span></p>
+
+      <p class="p"><span class="ph filepath">ab2.edi</span></p>
+
+      <p class="p"><span class="ph filepath">ab11.edi</span></p>
+
+      <p class="p"><span class="ph filepath">ab12.edi</span></p>
+
+      <p class="p">The following commands produce the following results.</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" width="100%" frame="border" border="1" rules="all">
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e227">Command</th>
+
+                  
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e230">Result</th>
+
+                  
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e227 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        ab*.edi</samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e230 ">Sends all four files from the
+                     outbox </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e227 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        ab?.edi</samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e230 ">Sends only
+                        <span class="ph filepath">ab1.edi</span> and <span class="ph filepath">ab2.edi</span>
+                  </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">Note that, when using wildcards, it is possible to use multiple wildcards within the same
+         token. For example, "<strong class="ph b">PUT ab*.*</strong>" and "<strong class="ph b">PUT ab?.*</strong>" are both acceptable.  </p>
+
+      
+      
+      <div class="section"><h2 class="title sectiontitle">Regular Expressions</h2>
+         
+      </div>
+
+      
+      <p class="p">When the basic wildcards do not provide the needed search criteria, regular expressions may
+         be used instead. Regular expressions (abbreviated <em class="ph i">regex</em>) are composed of a special
+         syntax that enables a wider range of search patterns. All regular expression usage must
+         follow these basic rules.</p>
+
+      <ul class="ul" id="using_wildcards_and_regular_expressions__ul_mvy_bkx_ps">
+         <li class="li">The regex pattern must be enclosed in brackets (for example, <samp class="ph codeph">[test[ABC]\.edi]</samp>
+            or <samp class="ph codeph">[test\d\.edi]</samp>).  Note that, as seen in this example, it is possible
+            for a regular expression to contain brackets as part of the pattern definition itself;
+            however, it is still necessary to enclose the complete pattern in its own pair of
+            brackets.</li>
+
+         <li class="li">Only one regex pattern is allowed per token, for example, a filename or a directory
+            token. Furthermore, the pattern must consume the entire token. Below is a table
+            containing some valid and invalid regular expression examples. </li>
+
+      </ul>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_hhb_wmz_2t" class="table" width="100%" frame="border" border="1" rules="all">
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e319">Command </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e322">Valid/Invalid </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e319 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        myOutbox\[ab.*\.edi]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e322 ">valid </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e319 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        myOutbox\ab.*\.edi</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e322 ">invalid -- does not contain the
+                     brackets </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e319 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        myOutbox\ab[.*\.edi]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e322 ">invalid -- does not consume the
+                     entire filename token </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e319 "><samp class="ph codeph"><span class="keyword cmdname">PUT</span>
+                        myOutbox\[ab.*].[edi]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e322 ">invalid -- contains two regex
+                     patterns within one token (i.e., the filename token) </td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <div class="section"><h2 class="title sectiontitle">Regular Expression
+                    Constructs</h2>
+         
+      </div>
+
+      
+      <p class="p">This section provides descriptions of some commonly used constructs within regular
+         expressions. For a more complete list of regular expression constructs and a more detailed
+         discussion, visit <a class="xref" href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#sum" target="_blank">http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#sum </a></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_tzs_qty_2t" class="table" width="100%" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Character Classes</span></caption>
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e404">Construct </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e407">Description </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e404 d377592e407 "><samp class="ph codeph">[abc]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e404 d377592e407 "><samp class="ph codeph">a</samp>, <samp class="ph codeph">b</samp> or <samp class="ph codeph">c</samp></td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e404 d377592e407 "><samp class="ph codeph">[^abc]</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e404 d377592e407 ">Any character except <samp class="ph codeph">a</samp>, <samp class="ph codeph">b</samp> or <samp class="ph codeph">c</samp></td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_uk3_px3_4y" class="table" width="100%" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 2. Predefined Character Classes</span></caption>
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" valign="top" id="d377592e465">Construct</th>
+
+                  <th class="entry" valign="top" id="d377592e468">Description</th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" valign="top" headers="d377592e465 d377592e468 "><samp class="ph codeph">.</samp></td>
+
+                  <td class="entry" valign="top" headers="d377592e465 d377592e468 ">Any character</td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" valign="top" headers="d377592e465 d377592e468 "><samp class="ph codeph">\d</samp></td>
+
+                  <td class="entry" valign="top" headers="d377592e465 d377592e468 ">A digit: <samp class="ph codeph">[0-9]</samp></td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" valign="top" headers="d377592e465 d377592e468 "><samp class="ph codeph">\D</samp></td>
+
+                  <td class="entry" valign="top" headers="d377592e465 d377592e468 ">A non-digit: <samp class="ph codeph">[^0-9]</samp></td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_g4l_wty_2t" class="table" width="100%" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 3. POSIX Character Classes</span></caption>
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e529">Construct </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e532">Description </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e529 "><samp class="ph codeph">\p{Lower}</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e532 ">lowercase alphabetic character</td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e529 "><samp class="ph codeph">\p{Upper}</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e532 ">An uppercase alphabetic character</td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e529 "><samp class="ph codeph">\p{ASCII}</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e532 "> Any ASCII character:
+                        <samp class="ph codeph">[\x00-\x7F]</samp>
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e529 "><samp class="ph codeph">\p{Digit}</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e532 "> A digit: <samp class="ph codeph">[0-9]</samp>
+                  </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e529 "><samp class="ph codeph">\p{Alnum}</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e532 ">                          An
+                     alphanumeric character                       </td>
+
+               </tr>
+
+              
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_ych_c5y_2t" class="table" width="100%" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 4. Quantifiers</span></caption>
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e618"> Construct </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e621"> Description </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e618 "><samp class="ph codeph"><var class="keyword varname">X</var>?</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e621 "><samp class="ph codeph"><var class="keyword varname">X,</var></samp>  zero or one time </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e618 "><samp class="ph codeph"><var class="keyword varname">X</var>*</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e621 "><samp class="ph codeph"><var class="keyword varname">X,</var></samp>, zero or more times </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e618 "><samp class="ph codeph"><var class="keyword varname">X</var>+</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e621 "><samp class="ph codeph"><var class="keyword varname">X,</var></samp>, one or more times </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e618 "><samp class="ph codeph"><var class="keyword varname">X</var>{<var class="keyword varname">n</var>}</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e621 "><samp class="ph codeph"><var class="keyword varname">X,</var></samp>, exactly
+                           <samp class="ph codeph"><var class="keyword varname">n</var></samp> times </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e618 "><samp class="ph codeph"><var class="keyword varname">X</var>{<var class="keyword varname">n</var>,}</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e621 "><samp class="ph codeph"><var class="keyword varname">X,</var></samp>, at least
+                           <samp class="ph codeph"><var class="keyword varname">n</var></samp> times </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e618 "><samp class="ph codeph"><var class="keyword varname">X</var>{<var class="keyword varname">n</var>,<var class="keyword varname">m</var>}</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e621 "><samp class="ph codeph"><var class="keyword varname">X,</var></samp>, at least
+                           <samp class="ph codeph"><var class="keyword varname">n</var></samp> but not more than
+                           <samp class="ph codeph"><var class="keyword varname">m</var></samp> times </td>
+
+               </tr>
+
+
+              
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_oxx_25y_2t" class="table" width="100%" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 5. Boundary Markers</span></caption>
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e768"> Construct </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e771"> Description </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e768 "><samp class="ph codeph">^</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e771 ">Indicates the subsequent
+                     characters must appear at the beginning of the string </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e768 "><samp class="ph codeph">$</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e771 ">Indicates the preceding
+                     characters must appear at the end of the string </td>
+
+               </tr>
+
+               
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_sxc_g5y_2t" class="table" width="100%" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 6. Literal Expressions</span></caption>
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e818"> Construct </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e821"> Description </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e818 "><samp class="ph codeph">\</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e821 ">Escapes (quotes) the following
+                     character. Necessary if you want to match to a period ('.'), bracket ('[]'),
+                     brace ('{}') or other special character. </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e818 "><samp class="ph codeph">\Q</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e821 ">Starts an escaped (quoted)
+                     literal string. Literal string should be closed with \E. </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e818 "><samp class="ph codeph">\E</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e821 ">Ends an escaped (quoted) literal
+                     string that was started by \Q. </td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"></p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_wildcards_and_regular_expressions__table_tjt_35y_2t" class="table" width="100%" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 7. Other</span></caption>
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e882"> Construct </th>
+
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e885"> Description </th>
+
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e882 "><samp class="ph codeph">(?i)</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e885 ">Turn on flag to ignore case. </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e882 "><samp class="ph codeph">(
+                        <var class="keyword varname">X</var>)</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e885 ">Match string <samp class="ph codeph">
+                        <var class="keyword varname">X</var>
+                     </samp>. </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e882 "><samp class="ph codeph">(?i:
+                        <var class="keyword varname">X</var>)</samp></td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e885 ">Match string <samp class="ph codeph">
+                        <var class="keyword varname">X</var>
+                     </samp>, ignoring case. </td>
+
+               </tr>
+
+               <tr class="row">
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e882 "><samp class="ph codeph">(?!
+                        <var class="keyword varname">X</var>)</samp>
+                  </td>
+
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e885 ">Do not match string <samp class="ph codeph">
+                        <var class="keyword varname">X</var>
+                     </samp>. </td>
+
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      
+      <div class="section"><h2 class="title sectiontitle">Regular Expression
+                    Examples</h2>
+         
+      </div>
+
+      
+      <p class="p">The table below contains some examples that might be used for
+            file name searches.</p>
+
+      <p class="p"></p>
+ 
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" width="100%" frame="border" border="1" rules="all">
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                  
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e987">
+                     Regex
+                  </th>
+
+                  
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d377592e990">
+                     Matches
+                  </th>
+
+                  
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+              
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[.*]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">Matches any file</td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 ">[test.*\.edi] </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     test.edi through test                         (any character(s))
+                     .                         edi (lower case only)                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?i)test.*\.edi]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     test.edi through test                         (any character(s))
+                     .edi (lower or  upper case)                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?i)test[abc]{3}\d\.edi]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     testaaa0.edi through testccc9.edi (lower or upper case)                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[test\p{Digit}{1,}\.edi]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     test0.edi through test9.edi, test00 through test99.edi, etc. (lower case only)                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?!TestFile)(.*)]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> a file called "TestFile" (case sensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?i)(?!TestFile)(.*)]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> a file called "TestFile" (case
+                     insensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?!.*\.edi$)(.*)]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> a file that ends in ".edi" (case
+                     sensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?i:(?!.*\.edi$))(.*)]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> a file that ends in ".edi" (case
+                     insensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?!(\.)|(\.\.))(.*)]
+                     </samp></td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> those named "." or "..".                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?i)(?!(.*\.tmp$))(.*)]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> those that end in ".tmp" (case
+                     insensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?i)(?!(^vltrader.*\.tmp$))(.*)]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> those that start with "VLTrader" and end
+                     in ".tmp" (case insensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?!(TestFile)|(Test\.File))(.*)]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file <var class="keyword varname">except</var> those named "TestFile" or "Test.File"
+                     (case insensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(.*)(Primary)(.*)]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     any file that contains the string "Primary" somewhere in it (case sensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(.*)(?i:Primary)(.*)]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     any file that contains the string "Primary" somewhere in it (case insensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[test.edi]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     only "test.edi".                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[(?i)test.edi]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     "test.edi" (case insensitive).                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[\+.*]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file that starts with "+".                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[\+\+.*]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file that starts with "++".                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[\Q+\E.*]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file that starts with "+".                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[\Q++\E.*]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file that starts with "++".                       </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e987 "><samp class="ph codeph">[.*\Q+\E.*]</samp>
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d377592e990 ">                          Matches
+                     every file that contains "+" anywhere within the name.                       </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      <div class="note note"><span class="notetitle">Note:</span> 
+         <ol class="ol" id="using_wildcards_and_regular_expressions__ol_ifw_hkx_ps">
+            <li class="li">If you need to download a specific file, but the absence of that file generates an
+               unwanted error, enclose the filename in a regular expression to avoid the error. For
+               example, <samp class="ph codeph">[test\.edi]</samp> will match only a file called
+                  <span class="ph filepath">test.edi</span>.</li>
+
+            <li class="li">For <samp class="ph codeph"><span class="keyword cmdname">LCOPY</span> -REC</samp> commands, the final token cannot
+               be a file. To get around this restriction, enclose the filename in brackets. For
+               example, <samp class="ph codeph">outbox/test/[test.edi]</samp>.</li>
+
+         </ol>
+
+      </div>
+
+      
+   </div>
+
+  
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

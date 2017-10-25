@@ -1,0 +1,1349 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The directory structure for the installed product is as follows: .\ (VersaLex home) VersaLex executable file (‘ VersaLex .exe’), command line file (‘ VersaLex c.exe’), and other software executable ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Directories/Maintenance"></meta><meta name="DC.Relation" scheme="URI" content="../Concepts/c_VLexConcepts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="DirectoriesMaintenance"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Directories/Maintenance</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="DirectoriesMaintenance">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Concepts/c_VLexConcepts.html" title="This section provides basic conceptual information about Cleo Harmony you should be familiar with before you begin using the product.">Cleo Harmony Concepts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Concepts/c_VLexConcepts.html" title="This section provides basic conceptual information about Cleo Harmony you should be familiar with before you begin using the product."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo Harmony Concepts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Directories/Maintenance</h1>
+
+   <div class="body">
+      <p class="p">The directory structure for the installed product is as follows:</p>
+
+      <dl class="dl">
+         
+            <dt class="dt dlterm"><span class="ph filepath">.\</span> (VersaLex home)</dt>
+
+            <dd class="dd">VersaLex executable file (‘ <var class="keyword varname">VersaLex</var> .exe’), command line file (‘
+                  <var class="keyword varname">VersaLex</var> c.exe’), and other software executable files.  If the
+               java runtime environment (JRE) should terminate unexpectedly, it may dump trace or
+               heap files.</dd>
+
+            <dd class="dd">Archive/copy files accumulate in this directory.<dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">.license\</span></dt>
+
+                     <dd class="dd">Contains product license files. </dd>
+
+                     <dd class="dd">Automatically created and updated when register product and acquire
+                        permanent license. </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">AS2\</span></dt>
+
+                     <dd class="dd">AS2 protocol directories<dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">data\</span></dt>
+
+                              <dd class="dd">Message ID and filename history</dd>
+
+                              <dd class="dd">Retention period can be changed in the AS2 service AS2 tab.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">mdn\</span></dt>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                                       <dd class="dd">Message disposition notifications (receipts)
+                                          received.</dd>
+
+                                       <dd class="dd">You can control the storage location. See <cite class="cite">MDN
+                                             Storage Folder</cite> in <a class="xref" href="../References/r_AS2_LocalListener_Svc_Attributes.html">Local Listener AS2 Service reference</a>. </dd>
+
+                                       <dd class="dd">Received MDNs are always retained.<dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archived\</span></dt>
+
+                                                <dd class="dd">Archived MDN zip files. </dd>
+
+                                                <dd class="dd">You can set Archive properties. See  <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>. </dd>
+
+                                                <dd class="dd">Archive/copy files accumulate in this
+                                                  directory.</dd>
+
+                                             
+                                          </dl>
+</dd>
+
+                                    
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                                       <dd class="dd">Message disposition notifications (receipts) sent.</dd>
+
+                                       <dd class="dd">You can control the storage location. See <cite class="cite">MDN
+                                             Storage Folder</cite> in <a class="xref" href="../References/r_AS2_LocalListener_Svc_Attributes.html">Local Listener AS2 Service reference</a>.  </dd>
+
+                                       <dd class="dd">For <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>, sent receipts are always saved. </dd>
+
+                                       <dd class="dd">For <span class="ph">Cleo LexiCom</span>, you can configure your system to save sent receipts.
+                                          See <cite class="cite">Save Sent Receipt</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.<dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archived\</span></dt>
+
+                                                <dd class="dd">Archived MDN zip files. </dd>
+
+                                                <dd class="dd">You can set Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>. </dd>
+
+                                                <dd class="dd">Archive/copy files accumulate in this
+                                                  directory.</dd>
+
+                                             
+                                          </dl>
+</dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                              <dd class="dd">Copies of  raw incoming messages.</dd>
+
+                              <dd class="dd">You control whether these messages are saved. See <cite class="cite">Store Raw
+                                    Received Message</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a></dd>
+
+                              <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                              <dd class="dd">Copies of  raw outgoing messages. </dd>
+
+                              <dd class="dd">You control whether these messages are saved per trading partner.
+                                 See <cite class="cite">Store Raw Sent Message</cite> in <a class="xref" href="../References/r_AS2_Host_AdvancedTab.html">AS2 Host: Advanced Tab</a>.</dd>
+
+                              <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">restart\</span></dt>
+
+                              <dd class="dd">Partial incoming message.</dd>
+
+                              <dd class="dd">You can change this storage location. See <cite class="cite">Restarts Temp
+                                    Folder</cite> in <a class="xref" href="../References/r_AS2_LocalListener_Svc_Attributes.html">Local Listener AS2 Service reference</a>. </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">unsent\</span></dt>
+
+                              <dd class="dd">Copies of outgoing messages waiting for asynchronous MDN. </dd>
+
+                           
+                        </dl>
+</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">AS3\</span></dt>
+
+                     <dd class="dd">AS3 protocol directories.<dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">data\</span></dt>
+
+                              <dd class="dd">Message ID history. </dd>
+
+                              <dd class="dd">You can control the retention period for this directory. See
+                                    <cite class="cite">Retain Message ID History</cite> in <a class="xref" href="../References/r_AS3_LocalListener_Svc_Attributes.html">Local Listener AS3 Service reference</a>.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">mdn\</span></dt>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                                       <dd class="dd">Message disposition notifications (receipts)
+                                          received.</dd>
+
+                                       <dd class="dd">Received MDNs are always retained, but you can control
+                                          the storage location. See <cite class="cite">MDN Storage Folder</cite>
+                                          in <a class="xref" href="../References/r_AS3_LocalListener_Svc_Attributes.html">Local Listener AS3 Service reference</a>. <dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archived\</span></dt>
+
+                                                <dd class="dd">Archived MDN zip files. </dd>
+
+                                                <dd class="dd">You can set Archive properties. See  <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>. </dd>
+
+                                                <dd class="dd">Archive/copy files accumulate in this
+                                                  directory.</dd>
+
+                                             
+                                          </dl>
+</dd>
+
+                                    
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                                       <dd class="dd">Message disposition notifications (receipts) sent.</dd>
+
+                                       <dd class="dd">You can control the storage location. See <cite class="cite">MDN
+                                             Storage Folder</cite> in <a class="xref" href="../References/r_AS3_LocalListener_Svc_Attributes.html">Local Listener AS3 Service reference</a>.</dd>
+
+                                       <dd class="dd">For <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>, sent receipts are always saved. </dd>
+
+                                       <dd class="dd">For <span class="ph">Cleo LexiCom</span>, you can configure your system to save sent receipts.
+                                          See <cite class="cite">Save Sent Receipt</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a></dd>
+
+                                       <dd class="dd">
+                                          <dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archived\</span></dt>
+
+                                                <dd class="dd">Archived MDN zip files. </dd>
+
+                                                <dd class="dd">You can set Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>. </dd>
+
+                                                <dd class="dd">Archive/copy files accumulate in this
+                                                  directory.</dd>
+
+                                             
+                                          </dl>
+
+                                       </dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                              <dd class="dd">Copies of raw incoming messages.</dd>
+
+                              <dd class="dd">You control whether these messages are saved. See <cite class="cite">Store Raw
+                                    Received Message</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a></dd>
+
+                              <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                              <dd class="dd">Copies of raw outgoing messages. </dd>
+
+                              <dd class="dd">You control whether these messages are saved per trading partner.
+                                 See <cite class="cite">Store Raw Sent Message</cite> in <a class="xref" href="../References/r_AS3_Host_AdvancedTab.html">AS3 Host: Advanced Tab</a>.</dd>
+
+                              <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">unsent\</span></dt>
+
+                              <dd class="dd">Copies of outgoing messages waiting for asynchronous MDN. </dd>
+
+                           
+                        </dl>
+</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">autoroute\</span></dt>
+
+                     <dd class="dd"><span class="ph">Cleo VLTrader</span> and
+                           <span class="ph">Cleo Harmony</span>
+                        systems only. </dd>
+
+                     <dd class="dd">Default directory for outgoing payload files to be automatically processed
+                        based on routing rules</dd>
+
+                     <dd class="dd">You can set up the Autoroute Directory. See <a class="xref" href="../Tasks/t_set_up_automated_outgoing_routes.html">Set up Automated Outgoing Routes</a>. </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">autorun\</span></dt>
+
+                     <dd class="dd">Default directory for “command” files to be automatically processed</dd>
+
+                     <dd class="dd">You can change the Autorun Directory. See <a class="xref" href="t_CfgSysOpts_Other.html">Other</a>.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">backup\</span></dt>
+
+                     <dd class="dd">Versioned patch incremental backups.  See <a class="xref" href="../Tasks/t_WebUI_update_software.html">Updating Your Software</a>. </dd>
+
+                     <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">BI\</span></dt>
+
+                     <dd class="dd"><span class="ph">Cleo VLTrader</span> and
+                           <span class="ph">Cleo Harmony</span>
+                        systems only. </dd>
+
+                     <dd class="dd">Business intelligence resource folder for dashboards and system
+                        monitor.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">certs\</span></dt>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm">pending\</dt>
+
+                              <dd class="dd">Trusted and pending (untrusted) X509 certificate authority (CA)
+                                 files for secure transfers.</dd>
+
+                              <dd class="dd">You can add, modify, and delete trusted and pending certificate
+                                 files directly in this directory, but the preferred method is to
+                                 use the Certificate Manager. See <a class="xref" href="t_certificate_manager.html">Certificate Management</a>.</dd>
+<dd class="dd"></dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">conf\</span></dt>
+
+                     <dd class="dd">Product configuration files.</dd>
+
+                     <dd class="dd">Managed via various <span class="ph menucascade"><span class="ph uicontrol">Configure…</span></span> and <span class="ph menucascade"><span class="ph uicontrol">Tools…</span></span> items. </dd>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">unsynced</span></dt>
+
+                              <dd class="dd">Synchronized configuration changes not yet applied.</dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">data\</span></dt>
+
+                     <dd class="dd">X509 user certificate and private key store files for secure transfers. 
+                        Can include OpenPGP and SSH keys.</dd>
+
+                     <dd class="dd">Managed using the Certificate Manager.  See  <a class="xref" href="t_certificate_manager.html">Certificate Management</a>.
+                        </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">EBICS\</span></dt>
+
+                     <dd class="dd">EBICS protocol directories</dd>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">ack\</span></dt>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                                       <dd class="dd">Acknowledgments (receipts) sent </dd>
+
+                                       <dd class="dd">“Save Sent Receipt” can be set in the Local Listener
+                                          Advanced tab. </dd>
+
+                                    
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">archive</span></dt>
+
+                                       <dd class="dd">Archived receipt zip files</dd>
+
+                                       <dd class="dd"> “Archive ..." properties can be set in the Local
+                                          Listener Advanced tab. </dd>
+
+                                       <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">schemas_2_4\</span></dt>
+
+                              <dd class="dd">EBICS Version 2.4 schema files</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">schemas_2_5\</span></dt>
+
+                              <dd class="dd">EBICS Version 2.5 schema files</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">sent+received\</span></dt>
+
+                              <dd class="dd">Copies of “raw” incoming requests and corresponding outgoing
+                                 responses</dd>
+
+                              <dd class="dd">“Store Raw Sent And Received” can be set in the EBICS host
+                                 Advanced tab </dd>
+
+                              <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">unsent\</span></dt>
+
+                              <dd class="dd">Transient copies of outgoing XML</dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">ebXML</span></dt>
+
+                     <dd class="dd">ebMS protocol directories</dd>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">ack\</span></dt>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                                       <dd class="dd">Acknowledgments (receipts) received</dd>
+
+                                       <dd class="dd">You can control the storage location for received ACKs.
+                                          See <a class="xref" href="../Tasks/t_Configure_ebXML_Msg_Service_ebXML_Tab.html">Configuring ebXML Message Service</a>.</dd>
+
+                                       <dd class="dd">Received ACKs are always retained. </dd>
+
+                                       <dd class="dd">
+                                          <dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                                <dd class="dd">Archived ACK zip files </dd>
+
+                                             
+                                          </dl>
+
+                                       </dd>
+
+                                    
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                                       <dd class="dd">Acknowledgments (receipts) sent </dd>
+
+                                       <dd class="dd">You can control the storage location for sent ACKs.  See
+                                             <a class="xref" href="../Tasks/t_Configure_ebXML_Msg_Service_ebXML_Tab.html">Configuring ebXML Message Service</a>.</dd>
+
+                                       <dd class="dd">For <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span>, sent receipts are always saved. </dd>
+
+                                       <dd class="dd">For <span class="ph">Cleo LexiCom</span>, you can configure your system to save sent receipts.
+                                          See <cite class="cite">Save Sent Receipt</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a></dd>
+
+                                       <dd class="dd">
+                                          <dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                                <dd class="dd">Archived ACK zip files </dd>
+
+                                             
+                                          </dl>
+
+                                       </dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">data\</span></dt>
+
+                              <dd class="dd">Message ID history</dd>
+
+                              <dd class="dd">You can control how long this data is retained. See <a class="xref" href="../Tasks/t_Configure_ebXML_Msg_Service_ebXML_Tab.html">Configuring ebXML Message Service</a> and <a class="xref" href="../References/r_ebXML_LocalListener_Svc_Attributes.html">Local Listener ebXML Service reference</a>.</dd>
+
+                           
+                        </dl>
+
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">schemas\</span></dt>
+
+                              <dd class="dd">ebMS schema files</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">sent+received\</span></dt>
+
+                              <dd class="dd">Copies of raw incoming and outgoing messages</dd>
+
+                              <dd class="dd">You can control whether raw messages received are stored.  See
+                                    <cite class="cite">Store Raw Received Message</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                              <dd class="dd">You can configure whether raw sent messages are stored per trading
+                                 partner. See <cite class="cite">Store Raw Sent</cite>
+                                 <a class="xref" href="../References/r_ebXML_Host_ebXMLTab.html">ebXML Host: ebXML Tab</a>. </dd>
+
+                              <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">unsent\</span></dt>
+
+                              <dd class="dd">Copies of outgoing messages waiting for asynchronous
+                                 acknowledgment.</dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+               </dl>
+</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">home\</span></dt>
+
+            <dd class="dd">The default location for the file/directory chooser when there is no other
+               appropriate default folder.</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">hosts\</span></dt>
+
+            <dd class="dd">Active host XML files</dd>
+
+            <dd class="dd">Created when you activate a pre-configured host.</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">pre-configured\</span></dt>
+
+                     <dd class="dd">Pre-configured host XML files</dd>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                              <dd class="dd">Pre-released, beta or “backup” hosts. Directory can be empty.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">custom\</span></dt>
+
+                              <dd class="dd">Custom, preconfigured hosts</dd>
+
+                              <dd class="dd">See <a class="xref" href="../Tasks/t_create_a_custom_preconfigured_host.html">Create a Custom Preconfigured Host </a>.</dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">support\</span></dt>
+
+                     <dd class="dd">Active support  host XML files (for communicating with Cleo web site)</dd>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">pre-configured\</span></dt>
+
+                              <dd class="dd">Pre-configured support host XML files</dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">unsynced\</span></dt>
+
+                     <dd class="dd">Synchronized host changes not yet applied</dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">HTTP\</span></dt>
+
+            <dd class="dd">HTTP client protocol directories</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                     <dd class="dd">Copies of  raw outgoing messages</dd>
+
+                     <dd class="dd">You can configure whether raw sent messages are stored per trading partner.
+                        See <cite class="cite">Store Raw Sent Message</cite> in <a class="xref" href="../References/r_HTTP_Host_AdvancedTab.html">HTTP Host: Advanced Tab</a>. </dd>
+
+                     <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">inbox\</span></dt>
+
+            <dd class="dd">Default (parent) directory for incoming payload files.</dd>
+
+            <dd class="dd">You can specify the default system inbox. See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a>. </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">jre\</span></dt>
+
+            <dd class="dd">Java runtime environment</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">lib\</span></dt>
+
+            <dd class="dd">Main product library files</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">api\</span></dt>
+
+                     <dd class="dd">Embedded custom API libraries</dd>
+
+                     <dd class="dd">You can specify custom classes.  See <cite class="cite">Custom ILexiComIncoming
+                           Class</cite>, <cite class="cite">Custom LexiComLogListener Class</cite>, and
+                        <cite class="cite">Custom LexiComOutgoingThread Class</cite> in <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a>.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">ext\</span></dt>
+
+                     <dd class="dd">Add-on third-party libraries, for example, database driver</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">help\</span></dt>
+
+                     <dd class="dd">Product help library</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">ws\</span></dt>
+
+                     <dd class="dd">Web service client runtime libraries</dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">local\root\</span></dt>
+
+            <dd class="dd">Default FTP, HTTP, and SSH FTP server root directory. </dd>
+
+            <dd class="dd">
+               <div class="note note"><span class="notetitle">Note:</span> <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> systems
+                  only. </div>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">logs\</span></dt>
+
+            <dd class="dd">System XML log file  (<span class="ph filepath">VersaLex.xml</span>), system debug file
+                  (<span class="ph filepath">VersaLex.dbg</span>), and other log and debug files</dd>
+
+            <dd class="dd">You can set system log and debug options. See <a class="xref" href="t_WebUI_CfgSysOpts_Messages.html">Logs</a>. </dd>
+
+            <dd class="dd">You can set web UI debug options. See <a class="xref" href="../Tasks/t_Cfg_Adv_Properties_Web_Browser_Svc.html">Configuring Advanced Properties</a>.</dd>
+
+            <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                     <dd class="dd">Default directory for archived system XML log files</dd>
+
+                     <dd class="dd">You can control storage location. See <a class="xref" href="t_WebUI_CfgSysOpts_Messages.html">Logs</a>.</dd>
+
+                     <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">olddbg\</span></dt>
+
+                     <dd class="dd">Archived system debug files</dd>
+
+                     <dd class="dd">Retention period of three days cannot be changed.</dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">lostandfound\</span></dt>
+
+            <dd class="dd">Incoming payload for unknown trading relationships</dd>
+
+            <dd class="dd">You can specify what, if any, action should be taken when a message is received form
+               an unknown trading partner. See <cite class="cite">Unknown Partner Message Action</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+            <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">OFTP\</span></dt>
+
+            <dd class="dd">Odette FTP protocol directories</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">data\</span></dt>
+
+                     <dd class="dd">Message ID history.</dd>
+
+                     <dd class="dd">You can control how long this data is retained. </dd>
+
+                     <dd class="dd">See <a class="xref" href="../Tasks/t_Configure_OFTP_Service_OFTP_Tab.html">Configuring OFTP Service</a> and <a class="xref" href="../References/r_OFTP_LocalListener_Svc_Attributes.html">Local Listener OFTP Service reference</a>.</dd>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">eerp\</span></dt>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                                       <dd class="dd">End-to-end responses (receipts) received</dd>
+
+                                       <dd class="dd">Received EERPs/NERPs are always retained.</dd>
+
+                                       <dd class="dd">You can control where received responses are stored. </dd>
+
+                                       <dd class="dd">See <a class="xref" href="../Tasks/t_Configure_OFTP_Service_OFTP_Tab.html">Configuring OFTP Service</a> and <a class="xref" href="../References/r_OFTP_LocalListener_Svc_Attributes.html">Local Listener OFTP Service reference</a>.</dd>
+
+                                       <dd class="dd">
+                                          <dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                                <dd class="dd">Archived EERP zip files</dd>
+
+                                                <dd class="dd">You can specify Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                                                <dd class="dd">Archive/copy files accumulate in this
+                                                  directory.</dd>
+
+                                             
+                                          </dl>
+
+                                       </dd>
+
+                                    
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                                       <dd class="dd">End-to-end responses (receipts) sent</dd>
+
+                                       <dd class="dd">You can control whether sent receipts are saved. See
+                                             <cite class="cite">Save Sent Receipt</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                                       <dd class="dd">You can also control where sent receipts are stored. See
+                                             <a class="xref" href="../Tasks/t_Configure_OFTP_Service_OFTP_Tab.html">Configuring OFTP Service</a> and <a class="xref" href="../References/r_OFTP_LocalListener_Svc_Attributes.html">Local Listener OFTP Service reference</a>.</dd>
+
+                                       <dd class="dd">
+                                          <dl class="dl">
+                                             
+                                                <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                                <dd class="dd">Archived EERP zip files</dd>
+
+                                                <dd class="dd">You can specify Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                                                <dd class="dd">Archive/copy files accumulate in this
+                                                  directory.</dd>
+
+                                             
+                                          </dl>
+
+                                       </dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                              <dd class="dd">Copies of raw incoming messages</dd>
+
+                              <dd class="dd">You can control whether raw messages received are stored. See
+                                    <cite class="cite">Store Raw Received Message</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                              <dd class="dd">Copies of “raw” outgoing messages</dd>
+
+                              <dd class="dd">You can configure whether raw sent messages are stored per trading
+                                 partner. See <cite class="cite">Store Raw Sent Message</cite> in <a class="xref" href="t_OFTP_Host_AdvancedTab.html">OFTP Host: Advanced Tab</a>. </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">restart\</span></dt>
+
+                              <dd class="dd">Partial incoming message</dd>
+
+                              <dd class="dd">You can change this storage location. See <cite class="cite">Restarts Temp
+                                    Folder</cite> in <a class="xref" href="../References/r_OFTP_LocalListener_Svc_Attributes.html">Local Listener OFTP Service reference</a>.</dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">unsent\</span></dt>
+
+                              <dd class="dd">Copies of outgoing messages waiting for EERP </dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">outbox\</span></dt>
+
+            <dd class="dd">Default (parent) directory for outgoing payload files</dd>
+
+            <dd class="dd">You can specify the default system outbox. See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a>. </dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">test\</span></dt>
+
+                     <dd class="dd">Files used for testing with the Cleo Test Server</dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">receivedbox\</span></dt>
+
+            <dd class="dd">System actually defaults to no receivedbox.</dd>
+
+            <dd class="dd">You can specify the default system receivedbox. See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a>. </dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                     <dd class="dd">Archived receivedbox copies zip files </dd>
+
+                     <dd class="dd">You can set Sent/Received Box Archive properties.  See <cite class="cite">Sent/Received
+                           Box Archive</cite>, <cite class="cite">Sent/Received Box Archive After Files</cite>,
+                           <cite class="cite">Sent/Received Box Archive Size (mbytes)</cite>, and
+                           <cite class="cite">Sent/Received Box Archive Append To Zip</cite> in <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a>. </dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">sentbox\</span></dt>
+
+            <dd class="dd">System actually defaults to no sentbox.</dd>
+
+            <dd class="dd">You can specify the default system sentbox. See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a>. </dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                     <dd class="dd">Archived sentbox copies zip files </dd>
+
+                     <dd class="dd">You can set Sent/Received Box Archive properties.  See <cite class="cite">Sent/Received
+                           Box Archive</cite>, <cite class="cite">Sent/Received Box Archive After Files</cite>,
+                           <cite class="cite">Sent/Received Box Archive Size (mbytes)</cite>, and
+                           <cite class="cite">Sent/Received Box Archive Append To Zip</cite> in <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a>. </dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">rejectbox\</span></dt>
+
+            <dd class="dd">Default directory for rejected outgoing files</dd>
+
+            <dd class="dd">You can specify the default system rejectbox. See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> and <a class="xref" href="../References/r_DefaultHostDir_Reference.html">Default Host Directory Reference</a>. </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">resource\</span></dt>
+
+            <dd class="dd">Installer resource files</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">RNIF\</span></dt>
+
+            <dd class="dd">RosettaNet Implementation Framework protocol directories</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">ack\</span></dt>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                              <dd class="dd">Acknowledgments (receipts) received.</dd>
+
+                              <dd class="dd">Received ACKs are always retained. </dd>
+
+                              <dd class="dd">You can control where received responses are stored. </dd>
+
+                              <dd class="dd">See <a class="xref" href="../Tasks/t_Configure_RosettaNet_Service_RosettaNet_Tab.html">Configuring Local Listener RosettaNet Service</a> and <a class="xref" href="../References/r_RosettaNet_LocalListener_Svc_Attributes.html">Local Listener RosettaNet Service reference</a>.</dd>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                       <dd class="dd">Archived ACK zip files</dd>
+
+                                       <dd class="dd">You can specify Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                              <dd class="dd">Acknowledgments (receipts) sent</dd>
+
+                              <dd class="dd">You can specify whether sent responses are stored.  See <cite class="cite">Save
+                                    Sent Receipt</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a></dd>
+
+                              <dd class="dd">You can control where sent responses are stored.</dd>
+
+                              <dd class="dd">See <a class="xref" href="../Tasks/t_Configure_RosettaNet_Service_RosettaNet_Tab.html">Configuring Local Listener RosettaNet Service</a> and <a class="xref" href="../References/r_RosettaNet_LocalListener_Svc_Attributes.html">Local Listener RosettaNet Service reference</a>.</dd>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                       <dd class="dd">Archived ACK zip files</dd>
+
+                                       <dd class="dd">You can specify Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">data\</span></dt>
+
+                     <dd class="dd">PIP Instance/Message ID history</dd>
+
+                     <dd class="dd">You can control how long this data is retained. </dd>
+
+                     <dd class="dd">See <a class="xref" href="../Tasks/t_Configure_RosettaNet_Service_RosettaNet_Tab.html">Configuring Local Listener RosettaNet Service</a> and <a class="xref" href="../References/r_RosettaNet_LocalListener_Svc_Attributes.html">Local Listener RosettaNet Service reference</a>.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">DTDs\</span></dt>
+
+                     <dd class="dd">PIP content validation DTD files shipped with product or imported</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">pips\</span></dt>
+
+                     <dd class="dd">Pre-defined PIPs shipped with product</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">schemas\</span></dt>
+
+                     <dd class="dd">PIP content validation schema files shipped with product or imported </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">sent+received\</span></dt>
+
+                     <dd class="dd">Copies of raw incoming and outgoing messages</dd>
+
+                     <dd class="dd">You can control whether raw messages received are stored. See <cite class="cite">Store
+                           Raw Received Message</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                     <dd class="dd">You can configure whether raw sent messages are stored per trading partner.
+                        See <cite class="cite">Store Raw Sent Message</cite>
+                        <a class="xref" href="../References/r_RNIF_Host_AdvancedTab.html">RNIF Host: Advanced Tab</a>. </dd>
+
+                     <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">unsent\</span></dt>
+
+                     <dd class="dd">Copies of outgoing messages waiting for asynchronous acknowledgment. </dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">SMTP\</span></dt>
+
+            <dd class="dd">SMTP protocol directories</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">data\</span></dt>
+
+                     <dd class="dd">Message ID history</dd>
+
+                     <dd class="dd">Retention period can be changed in the SMTP Service SMTP tab.</dd>
+
+                     <dd class="dd">You can control how long this data is retained. </dd>
+
+                     <dd class="dd">See <a class="xref" href="t_Configure_Local_Listener_SMTP_Service.html">Local Listener SMTP Service</a> and <a class="xref" href="../References/r_SMTP_LocalListener_Svc_Attributes.html">Local Listener SMTP Service reference</a>.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">dsn\</span></dt>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                              <dd class="dd">Delivery status notifications (receipts) received.</dd>
+
+                              <dd class="dd">Received EERPs/NERPs are always retained.</dd>
+
+                              <dd class="dd">You can control where received EERPs/NERPs are stored. See <a class="xref" href="t_Configure_Local_Listener_SMTP_Service.html">Local Listener SMTP Service</a> and <a class="xref" href="../References/r_SMTP_LocalListener_Svc_Attributes.html">Local Listener SMTP Service reference</a>.</dd>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                       <dd class="dd">Archived DSN zip files</dd>
+
+                                       <dd class="dd">You can specify Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                                       <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                              <dd class="dd">Delivery status notifications (receipts) sent.</dd>
+
+                              <dd class="dd">You can specify whether sent receipts are stored. See <cite class="cite">Save
+                                    Sent Receipt</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a></dd>
+
+                              <dd class="dd">You can control where sent receipts are stored. See <a class="xref" href="t_Configure_Local_Listener_SMTP_Service.html">Local Listener SMTP Service</a> and <a class="xref" href="../References/r_SMTP_LocalListener_Svc_Attributes.html">Local Listener SMTP Service reference</a>.</dd>
+
+                              <dd class="dd">
+                                 <dl class="dl">
+                                    
+                                       <dt class="dt dlterm"><span class="ph filepath">archive\</span></dt>
+
+                                       <dd class="dd">Archived DSN zip files</dd>
+
+                                       <dd class="dd">You can specify Archive properties. See <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                                       <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                                    
+                                 </dl>
+
+                              </dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                     <dd class="dd">Copies of raw incoming messages</dd>
+
+                     <dd class="dd">You can control whether raw messages received are stored. See <cite class="cite">Store
+                           Raw Received Message</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                     <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                     <dd class="dd">Copies of raw outgoing messages</dd>
+
+                     <dd class="dd">You can configure whether raw sent messages are stored per trading partner.
+                        See <cite class="cite">Store Raw Sent Message</cite>
+                        <a class="xref" href="../References/r_SMTP_Host_AdvancedTab.html">SMTP Host: Advanced Tab</a>. </dd>
+
+                     <dd class="dd">Archive/copy files accumulate in this directory.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">unsent\</span></dt>
+
+                     <dd class="dd">Copies of outgoing messages waiting for DSN</dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">temp\</span></dt>
+
+            <dd class="dd">VersaLex non-persistent work area</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">thirdparty\</span></dt>
+
+            <dd class="dd">Information about included third-party software</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">translators\</span></dt>
+
+            <dd class="dd">Sub-directories containing files for use with an EDI translator</dd>
+
+            <dd class="dd">See <a class="xref" href="../Tasks/t_generate_files_for_an_integration.html">Generate files for an Integration</a>.</dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">webserver\</span></dt>
+
+            <dd class="dd"></dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">VLPortal\</span></dt>
+
+                     <dd class="dd"><span class="ph">Cleo VLTrader</span> and
+                           <span class="ph">Cleo Harmony</span>
+                        systems only. </dd>
+
+                     <dd class="dd">Web portal documents, images, HTML pages, and language-specific property
+                        files. </dd>
+
+                     <dd class="dd">Files can be imported through web page and web portal build functions that
+                        are described under the Web Browser Service VLPortal tab.</dd>
+
+                     <dd class="dd">
+                        <dl class="dl">
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">doc\</span></dt>
+
+                              <dd class="dd"></dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">img\</span></dt>
+
+                              <dd class="dd"></dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">html\</span></dt>
+
+                              <dd class="dd"></dd>
+
+                           
+                           
+                              <dt class="dt dlterm"><span class="ph filepath">internationalization\</span></dt>
+
+                              <dd class="dd"></dd>
+
+                           
+                        </dl>
+
+                     </dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+         
+            <dt class="dt dlterm"><span class="ph filepath">WS\</span></dt>
+
+            <dd class="dd">Web service protocol directories</dd>
+
+            <dd class="dd">
+               <dl class="dl">
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">conf\</span></dt>
+
+                     <dd class="dd">Apache AXIS and WS security files</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">received\</span></dt>
+
+                     <dd class="dd">Copies of raw incoming messages</dd>
+
+                     <dd class="dd">You can control whether raw received messages are stored. See <cite class="cite">Store
+                           Raw Received Message</cite> in <a class="xref" href="../References/r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</dd>
+
+                  
+                  
+                     <dt class="dt dlterm"><span class="ph filepath">sent\</span></dt>
+
+                     <dd class="dd">Copies of raw outgoing messages</dd>
+
+                     <dd class="dd">You can configure whether raw sent messages are stored per trading partner.
+                        See <cite class="cite">Store Raw Sent Message</cite>
+                        <a class="xref" href="../References/r_WS_Host_AdvancedTab.html">WS Host: Advanced Tab</a>. </dd>
+
+                     <dd class="dd">“Store Raw Sent Message” can be set per trading partner in the WS host
+                        Advanced tab.</dd>
+
+                  
+               </dl>
+
+            </dd>
+
+         
+      </dl>
+
+      
+      
+      <p class="p">Files can accumulate in the directories marked with an
+                <strong class="ph b">(X)</strong> above. VersaLex will not automatically delete files in these
+            directories.  Be sure to turn off any debugging options that may cause files to
+            accumulate once a problem has been solved.  For example:</p>
+
+      <p class="p">-     Heap files in the home directory</p>
+
+      <p class="p">-     AS2 raw received files in the AS2/received
+            directory</p>
+
+      <p class="p">-     HTML*.dbg files in the logs/ directory</p>
+
+      
+      <p class="p">VersaLex will also not remove any non-empty inbound or
+            outbound directories associated with hosts or mailboxes if the host or mailbox is
+            renamed or deleted since these directories could also be used by other trading
+            relationships or by other applications.  These directories may be manually removed, if
+            desired, after verifying that they are no longer in-use.</p>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Concepts/c_VLexConcepts.html" title="This section provides basic conceptual information about Cleo Harmony you should be familiar with before you begin using the product."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo Harmony Concepts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

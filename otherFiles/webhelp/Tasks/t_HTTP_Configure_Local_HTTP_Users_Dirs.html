@@ -1,0 +1,85 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Specify a Default Root Directory . By default, each HTTP user's home directory is a subfolder under the default root directory you specify here.  Click [...] to browse and select a directory. ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Local HTTP User directories"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_http_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_kg5_tqd_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Local HTTP User directories</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_kg5_tqd_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_http_users_configuration.html" title="Local HTTP Users Configuration">Local HTTP Users Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_http_users_configuration.html" title="Local HTTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local HTTP Users Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Configuring Local HTTP User directories</h1>
+
+    <div class="body taskbody">
+        <div class="section context"></div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Specify a <span class="ph uicontrol">Default Root Directory</span>.  By default, each HTTP
+                    user's home directory is a subfolder under the default root directory you
+                    specify here.  Click <span class="ph uicontrol">[...]</span> to browse and select a
+                    directory. Alternatively, select a custom macro variable from the drop-down
+                    menu.  See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> for a list of the applicable macros (Default Root Directory
+                    context).  Once the change is applied, HTTP users already configured to use the
+                    default root are switched over to the new default root.</span>
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd"> Specify the paths and names of <strong class="ph b">Local User Subdirectories</strong>.  These
+                    directories are automatically created under each user's home directory.  Each
+                    directory path specified must be a relative path.  </span>
+                <div class="itemgroup info">
+                    <p class="p">The configured inbox and outbox directories can be easily referenced in the
+                        mailbox <samp class="ph codeph">&lt;collect&gt;</samp> and <samp class="ph codeph">&lt;release&gt;</samp>
+                        actions by use of the <samp class="ph codeph">%inbox%</samp> and <samp class="ph codeph">%outbox%</samp>
+                        macros, respectively.  </p>
+
+                    <p class="p">See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for more information.</p>
+
+                    <div class="p">If the sentbox directory is configured, when the user retrieves a file from
+                        the configured outbox, the <span class="ph">Cleo Harmony</span> application places a user-accessible copy of the
+                        file in the sentbox directory.  If the receivedbox directory is configured,
+                        when the user stores a file in the configured inbox, the <span class="ph">Cleo Harmony</span> application also places a user-accessible copy of
+                        the file in the receivedbox directory. <div class="note note"><span class="notetitle">Note:</span>  Files of the same name are
+                            overwritten.</div>
+
+                    </div>
+
+                    <p class="p">In addition to the <strong class="ph b">Inbox</strong>, <strong class="ph b">Outbox</strong>, <strong class="ph b">Sentbox</strong> and
+                            <strong class="ph b">Receivedbox</strong> folders, additional folders can be specified in the
+                            <span class="ph uicontrol">Others</span> field. Multiple paths can be added in the
+                            <span class="ph uicontrol">Others</span> field, separated by commas, semi-colons or
+                        carriage returns. Note that all paths must be relative and cannot include
+                        reserved macro variables (for example, <samp class="ph codeph">%mailbox%</samp>).</p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The <strong class="ph b">Archive Directories</strong> allow for a copy of the sent and received files
+                    to be saved in an additional location that, in most cases, is not accessible by
+                    the user.  Unlike the sentbox and receivedbox configured under the <strong class="ph b">Local User
+                        Subdirectories</strong>, these directories can be configured to point to a
+                    network location by clicking <span class="ph uicontrol">[...]</span>; or a custom macro
+                    variable may be selected from the drop-down list.  See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> for a list of the applicable macros (Default Local User
+                    Archive Directory context). See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a>
+                    for information about setting up system-level directories and custom directory
+                    macro variables.</span>
+                <div class="itemgroup info">You can use the <samp class="ph codeph">%mailbox%</samp> macro as part of these directory
+                    definitions to filter files for non-LDAP users into separate subdirectories.
+                    Files written to these directories are retained with unique file names and are
+                    archived if the <span class="ph uicontrol">Sent/Received Box Archive System Option</span>
+                    is enabled. See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a></div>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_http_users_configuration.html" title="Local HTTP Users Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local HTTP Users Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

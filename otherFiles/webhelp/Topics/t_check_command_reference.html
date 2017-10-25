@@ -1,0 +1,206 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Check to see if a transfer has occurred within a given specification, or check the age of file or directory. CHECK –TRA|-FIL|-DIR  -IN|-OUT  -VER -REC &#34;source&#34; | &#34;destination&#34; | &#34;path&#34; OccurredWithin= ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="CHECK Command Reference"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_check_command.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="check_command_reference"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>CHECK Command Reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="check_command_reference">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_extended_commands.html" title="Extended Commands">Extended Commands</a> / <a class="navheader_parent_path" href="../Topics/t_check_command.html" title="CHECK Command">CHECK Command</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">CHECK Command
+                    Reference</h1>
+
+   <div class="body">
+      <p class="p">Check to see if a transfer
+         has occurred within a given specification, or check the age of file or directory. </p>
+
+      <pre class="pre codeblock"><span class="keyword cmdname">CHECK</span> –TRA|-FIL|-DIR  -IN|-OUT  -VER -REC "source" | "destination" | "path"
+                   OccurredWithin= | Age=
+                   [Class]=SLA|KPI
+                   [Subclass]=
+                   [ConditionsMet]=
+                   [Status]=
+                   [Count]=
+                   [Edi.Interchange.Sender]=
+                   [Edi.Interchange.Receiver]=
+                   [Edi.FunctionalGroup.Sender]=
+                   [Edi.FunctionalGroup.Receiver]=
+                   [Edi.Transaction.Type]=</pre>
+
+      <dl class="dl parml">
+         
+            <dt class="dt pt dlterm"><span class="keyword option">-TRA</span></dt>
+
+            <dd class="dd pd">Check that a transfer has occurred.</dd>
+
+            <dd class="dd pd">Requires the <samp class="ph codeph">OccurredWithin</samp> parameter. See <a class="xref" href="t_check_command_parameters.html">CHECK Command Parameters</a>.</dd>
+
+         
+         
+            <dt class="dt pt dlterm"><span class="keyword option">-FIL</span></dt>
+
+            <dd class="dd pd">Check a file age or existence. </dd>
+
+            <dd class="dd pd">Requires the <samp class="ph codeph">Age</samp> parameter. See <a class="xref" href="t_check_command_parameters.html">CHECK Command Parameters</a>.</dd>
+
+         
+         
+            <dt class="dt pt dlterm"><span class="keyword option">-DIR</span></dt>
+
+            <dd class="dd pd">Check a directory age or existence. </dd>
+
+            <dd class="dd pd">Requires the <samp class="ph codeph">Age</samp> parameter. See <a class="xref" href="t_check_command_parameters.html">CHECK Command Parameters</a>.</dd>
+
+         
+         
+            <dt class="dt pt dlterm"><span class="keyword option">-IN</span></dt>
+
+            <dd class="dd pd">Check an inbound transfer.  This option is only applicable to <samp class="ph codeph">CHECK
+                  -TRA</samp> operations. </dd>
+
+         
+         
+            <dt class="dt pt dlterm"><span class="keyword option">-OUT</span></dt>
+
+            <dd class="dd pd">Check an outbound transfer.  This option is only applicable to <samp class="ph codeph">CHECK
+                  -TRA</samp> operations. </dd>
+
+         
+         
+            <dt class="dt pt dlterm"><span class="keyword option">-VER</span></dt>
+
+            <dd class="dd pd">This option is only applicable to <samp class="ph codeph">CHECK -FIL</samp> and <samp class="ph codeph">CHECK
+                  -DIR</samp> operations.  In addition to logging <samp class="ph codeph">FILE</samp> elements
+               for files/directories that meet <samp class="ph codeph">CHECK -FIL/-DIR</samp> requirements, also
+               log informational <samp class="ph codeph">FILE</samp> elements for those files that match the path
+               but do not meet the other requirements, for example, age.  </dd>
+
+         
+         
+            <dt class="dt pt dlterm"><span class="keyword option">-REC</span></dt>
+
+            <dd class="dd pd">Recursively search all subdirectories.  This option is only applicable to
+                  <samp class="ph codeph">CHECK -FIL/-DIR</samp> operations.  Note that it is the last path token
+               (file or directory) that is searched for in recursive operations. </dd>
+
+         
+         
+            <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">source</var>"</samp>
+            </dt>
+
+            <dd class="dd pd">
+               <p class="p">Local source path for an outbound (<samp class="ph codeph">-OUT</samp>) transfer check.</p>
+
+               <ul class="ul" id="check_command_reference__ul_vsz_hhw_4t">
+                  <li class="li">The path can be to a filename or to a directory.</li>
+
+                  <li class="li"><samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp>, or a regular expression, are
+                     supported in filename, as well as each level of the path. See <a class="xref" href="t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a> for additional information. Wildcards are only
+                     available on the <span class="keyword cmdname">CHECK</span> command.</li>
+
+                  <li class="li">The final token of the path should be explicitly specified, either as a
+                     specific name or a wildcard/regular expression.</li>
+
+                  <li class="li">If you specify a relative path, it uses the default outbox for remote hosts
+                     and the user home directory for local user mailbox-based actions.  For local
+                     user host-based actions, the default root directory is used. </li>
+
+                  <li class="li">Macro variables are supported.  See <a class="xref" href="t_using_macro_variables.html">Using Macro
+                        Variables</a> (Source File context) for a list of the applicable
+                     macros.</li>
+
+               </ul>
+
+            </dd>
+
+         
+         
+            <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">destination</var>"</samp>
+            </dt>
+
+            <dd class="dd pd">
+               <p class="p">Local destination path for an inbound (<samp class="ph codeph">-IN</samp>) transfer check.</p>
+
+               <ul class="ul" id="check_command_reference__ul_a3w_qkp_pt">
+                  <li class="li">The path can be to a filename or to a directory.</li>
+
+                  <li class="li"><samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp>, or a regular expression, are
+                     supported in filename, as well as each level of the path. See <a class="xref" href="t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a> for additional information. Wildcards are only
+                     available on the <span class="keyword cmdname">CHECK</span> command.</li>
+
+                  <li class="li">The final token of the path should be explicitly specified, either as a
+                     specific name or a wildcard/regular expression. </li>
+
+                  <li class="li">If you specify a relative path, it uses the default inbox for remote hosts and
+                     the user home directory for local user mailbox-based actions.  For local user
+                     host-based actions, the default root directory is used.</li>
+
+                  <li class="li">Macro variables are supported.  See <a class="xref" href="t_using_macro_variables.html">Using Macro
+                        Variables</a> (Destination File context) for a list of the applicable
+                     macros.</li>
+
+               </ul>
+
+               <p class="p">If the path contains a space, dash (-), comma (,), or equal sign (=), it must be
+                  enclosed with double quotes ("...").</p>
+
+            </dd>
+
+         
+         
+            <dt class="dt pt dlterm"><samp class="ph codeph">"<var class="keyword varname">path</var>"  </samp></dt>
+
+            <dd class="dd pd">
+               <p class="p">Local path for a file/directory check.</p>
+
+               <ul class="ul" id="check_command_reference__ul_yhw_tkp_pt">
+                  <li class="li">The path can be to a filename or to a directory.</li>
+
+                  <li class="li"><samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp>, or a regular expression, are
+                     supported in filename, as well as each level of the path. See <a class="xref" href="t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a> for additional information. Wildcards are only
+                     available on the <span class="keyword cmdname">CHECK</span> command.</li>
+
+                  <li class="li">The final token of the path should be explicitly specified, either as a
+                     specific name or a wildcard/regular expression.  When a file
+                        (<samp class="ph codeph">-FIL</samp>) path ends with <samp class="ph codeph">/</samp> or
+                        <samp class="ph codeph">\</samp>, a <samp class="ph codeph">*</samp> is automatically added to the
+                     path.</li>
+
+                  <li class="li">If you specify a relative path, it uses the default inbox for remote hosts and
+                     the user home directory for local user mailbox-based actions.  For local user
+                     host-based actions, the default root directory is used.</li>
+
+                  <li class="li">Macro variables are supported.  See <a class="xref" href="t_using_macro_variables.html">Using Macro
+                        Variables</a> (Source File context) for a list of the applicable macros. </li>
+
+               </ul>
+
+               <p class="p">If the path contains a space, dash (-), comma (,), or equal sign (=), it must be
+                  enclosed with double quotes ("...").</p>
+
+            </dd>
+
+         
+         
+            <dt class="dt pt dlterm"></dt>
+
+            <dd class="dd pd"></dd>
+
+         
+      </dl>
+
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_check_command.html" title="CHECK Command"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CHECK Command</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

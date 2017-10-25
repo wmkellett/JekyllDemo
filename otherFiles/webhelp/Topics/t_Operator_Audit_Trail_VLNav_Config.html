@@ -1,0 +1,65 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Before you can configure any applications, including the Operator Audit Trail, you must have a database configured for the Cleo VLNavigator software to use. See Applications . In the Cleo VLNavigator ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Operator Audit Trail"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Operator_Audit_Trail_VLNav.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_jtz_11q_kr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Operator Audit Trail</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_jtz_11q_kr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application">Configuring the Cleo VLNavigator application</a> / <a class="navheader_parent_path" href="../Topics/t_Operator_Audit_Trail_VLNav.html" title="Operator Audit Trail">Operator Audit Trail</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Operator_Audit_Trail_VLNav.html" title="Operator Audit Trail"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Operator Audit Trail</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Configuring Operator Audit Trail</h1>
+
+  <div class="body taskbody">
+    <div class="section context">Before you can configure any applications, including
+      the Operator Audit Trail,  you must have a database configured for the <span class="ph">Cleo VLNavigator</span> software to use. See <a class="xref" href="t_Applications_VLNav.html">Applications</a>. </div>
+
+    <ol class="ol steps" id="task_jtz_11q_kr__steps_rcg_w3f_2z"><li class="li step stepexpand">
+        <span class="ph cmd">In the <span class="ph">Cleo VLNavigator</span> tree pane,
+          select <span class="ph uicontrol">Operator Audit Trail</span> under
+          <span class="keyword wintitle">Applications</span>. </span>
+        <div class="itemgroup info">The <span class="keyword wintitle">Settings</span> tab appears.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">On the <span class="keyword wintitle">Settings</span> tab, select the <span class="ph uicontrol">Application
+            enabled</span>  check box.</span>
+        
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Optional - configure the application to purge old events automatically.  On the
+          Settings tab, select the <span class="ph uicontrol">Automatically purge Operator Audit Trail events after
+            # days</span> and enter the number of days.  </span>
+        <div class="itemgroup info">Events older that the number of days you specify are deleted from the database.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Click <span class="ph uicontrol">Apply</span> to save your configuration.</span>
+      </li>
+</ol>
+
+    <div class="section postreq">
+      <p class="p">Once you have enabled the <span class="keyword wintitle">Operator Audit Trail</span> application, any user
+        updates made using the <span class="ph">Cleo Harmony</span> and
+          <span class="ph">Cleo VLNavigator</span> user interfaces are
+        logged to the database for all users.</p>
+
+      <p class="p">In addition to the <span class="keyword wintitle">Application</span> settings, there are <span class="keyword wintitle">User
+          Group Application</span> settings, where you can enable or disable the application for
+        an entire user group. If disabled for a user group, the audit trail will still be logged for
+        these users, but they will not be able to view the audit trail.</p>
+
+    </div>
+
+    
+ 
+</div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Operator_Audit_Trail_VLNav.html" title="Operator Audit Trail"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Operator Audit Trail</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

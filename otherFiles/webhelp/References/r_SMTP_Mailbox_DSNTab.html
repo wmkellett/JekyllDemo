@@ -1,0 +1,96 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Possible received Delivery Status Notification action (status) values: delivered : message delivery has succeeded. No further DSNs are expected. failed : message delivery has failed. No further DSNs ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="SMTP Mailbox: DSN Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SMTP_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_xt3_gpd_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SMTP Mailbox: DSN Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_xt3_gpd_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_smtp_configuration.html" title="SMTP Configuration">SMTP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_SMTP_Mailbox.html" title="SMTP Mailbox">SMTP Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_SMTP_Mailbox.html" title="SMTP Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">SMTP Mailbox: DSN Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <p class="p">Possible received Delivery Status Notification action (status) values:</p>
+
+      <ul class="ul" id="reference_xt3_gpd_b5__ul_e5m_ygn_q5">
+        <li class="li"><span class="ph uicontrol">delivered</span>: message delivery has succeeded. No further DSNs are
+          expected.</li>
+
+        <li class="li"><span class="ph uicontrol">failed</span>: message delivery has failed. No further DSNs are
+          expected.</li>
+
+        <li class="li"><span class="ph uicontrol">relayed</span>: message has been relayed or gatewayed into an
+          environment that does not support DSNs. No further DSNs are expected.</li>
+
+        <li class="li"><span class="ph uicontrol">delayed</span>: message delivery is delayed. Further DSNs are
+          expected.</li>
+
+        <li class="li"><span class="ph uicontrol">expanded</span>: message delivery has expanded to multiple recipient
+          addresses. Further DSNs are expected.</li>
+
+      </ul>
+
+      <p class="p">Requested DSNs are returned back to the <span class="ph">Cleo Harmony</span> application in a separate SMTP session. When a DSN has been requested as part of a sent
+        message, the <span class="ph">Cleo Harmony</span>
+        application retains the original message and tracks message delivery based on the SMTP
+        properties specified. See <a class="xref" href="r_Local_Listener_AdvProps_Reference.html">Specifying Local Listener advanced properties</a>.</p>
+
+      <p class="p">Message delivery status and received DSNs can be viewed in the Local Listener SMTP Server
+        DSNs tab.  See <a class="xref" href="../Topics/t_Working_with_DSN_SMTP.html">Working with DSNs</a>.</p>
+
+      <p class="p">Please note that not all SMTP servers support or honor DSN requests. DSNs are not
+        non-reputable because they are not signed. The return of the entire original message in the
+        DSN is meant to happen only upon failure, and only when requested. Some SMTP servers always
+        return the entire original message in the DSN regardless of failure status and regardless of
+        whether only message headers were requested. </p>
+
+      <p class="p">If the entire original message is included in a DSN received by the <span class="ph">Cleo Harmony</span> application, it will strip the payload out of the DSN while saving the DSN to the
+        received/ folder. (The <span class="ph">Cleo Harmony</span>
+        sentbox can instead be used to permanently save sent payload.) </p>
+
+      <p class="p">Since the <span class="ph">Cleo Harmony</span>
+        SMTP server only acts as a mail endpoint, it only generates 'delivered' DSNs.</p>
+
+    </div>
+
+    <div class="section"><dl class="dl">
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Return a DSN on success or failure</span></dt>
+
+        <dd class="dd">Request a Delivery Status Notification for each <span class="ph uicontrol">To</span> recipient of a
+          message (Cc and Bcc recipients are not included) and enable other fields on the tab. </dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Return message headers only</span></dt>
+
+        <dt class="dt dlterm"><span class="ph uicontrol">Return entire message</span></dt>
+
+        <dd class="dd">Indicate whether the returned DSN should include just the original message's outer
+          headers or the entire original message. </dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Also return a DSN on delay</span></dt>
+
+        <dd class="dd">Requests that an intermediate DSN also be returned when a message's delivery has been
+          delayed for an unusually long period of time.</dd>
+
+      
+    </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_SMTP_Mailbox.html" title="SMTP Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

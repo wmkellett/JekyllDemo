@@ -1,0 +1,136 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Outbound Indicates whether you use SSL or not for outbound file transfers. HTTP Do not require use SSL HTTP/s Require SSL for outbound file transfers. If you select HTTP/s, you can select Check ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="ebXML Host: HTTP Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ebXML_Host.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_cmw_dxc_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>ebXML Host: HTTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_cmw_dxc_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_ebxml_configuration.html" title="ebXML Configuration">ebXML Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_ebXML_Host.html" title="ebXML Host">ebXML Host</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ebXML_Host.html" title="ebXML Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Host</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">ebXML Host: HTTP Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Outbound</dt>
+
+          <dd class="dd">Indicates whether you use SSL or not for outbound file transfers.<dl class="dl">
+              
+                <dt class="dt dlterm">HTTP</dt>
+
+                <dd class="dd">Do not require use SSL</dd>
+
+              
+            </dl>
+<dl class="dl">
+              
+                <dt class="dt dlterm">HTTP/s</dt>
+
+                <dd class="dd">Require SSL for outbound file transfers.</dd>
+
+                <dd class="dd">If you select HTTP/s, you can select <span class="ph uicontrol">Check certificate server
+                    name</span></dd>
+
+              
+            </dl>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Inbound</dt>
+
+          <dt class="dt dlterm">HTTP/s only</dt>
+
+          <dd class="dd">Require your trading partner to use Secure Socket Layer (SSL) for inbound file
+            transfers.</dd>
+
+        
+        
+          <dt class="dt dlterm">Command</dt>
+
+          <dd class="dd"> In most cases the <span class="keyword cmdname">CONNECT</span> command is not used and should be left
+            blank. In rare instances, CONNECT is required by the remote server to identify the
+            client, particularly if SSL has not been used. </dd>
+
+        
+        
+          <dt class="dt dlterm">Method</dt>
+
+          <dd class="dd"> The only valid <span class="ph uicontrol">Method</span> for AS2 commands is
+              <span class="keyword cmdname">PUT</span> ("<span class="keyword cmdname">POST</span>"). </dd>
+
+        
+        
+          <dt class="dt dlterm">Path</dt>
+
+          <dd class="dd">The server <span class="ph uicontrol">Path</span> for the <span class="keyword cmdname">PUT</span> command. </dd>
+
+          <dd class="dd">If the remote server is also using the <span class="ph">Cleo Harmony</span>
+            application, the path is <samp class="ph codeph"><span class="ph filepath">/ebMS</span></samp>. The resource path
+            must be properly specified in order for your trading partner’s ebMS installation to
+            process messages from you. Given the URL provided by your remote trading partner in the
+              form:<p class="p"><samp class="ph codeph">http(s)://remote-host:port/<em class="ph i"><strong class="ph b">resource-path</strong></em>?optional-parameters</samp></p>
+<p class="p">Enter
+              the bolded portion in this field (if it was supplied). </p>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Parameters</dt>
+
+          <dd class="dd">By default, no <span class="ph uicontrol">Parameters</span> are specified for sending ebMS
+            messages. If parameters are required, they must be obtained from your trading partner
+            when the trading relationship is established. Given the URL provided by your remote
+            trading partner in the
+                    form: <p class="p"><samp class="ph codeph">http(s)://remote-host:port/resource-path?<em class="ph i"><strong class="ph b">optional-parameters</strong></em>
+              </samp></p>
+<p class="p">Enter the bolded portion in this field if it was supplied.</p>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Headers</dt>
+
+          <dd class="dd">These header fields are filled in at the Mailbox and/or Action level and specify the
+            values set in the HTTP headers that precede the body of the message sent.</dd>
+
+          <dd class="dd">At a minimum, the only <span class="ph uicontrol">Header</span> required is the
+              <samp class="ph codeph">SOAPAction: "ebXML"</samp> header. <span class="ph uicontrol">Content-Type:</span> is
+            optional and can be specified at the mailbox and/or action level.<div class="note note"><span class="notetitle">Note:</span>  Entering a value
+              for the <span class="ph uicontrol">Content-Type</span> header is optional. If
+                <span class="ph uicontrol">Content-Type</span> is not specified or if multiple payloads are
+              attached in the message, the <span class="ph uicontrol">Content-Type</span> is detected based
+              first on file content and then the file extension. Detectable types include
+                <span class="ph filepath">application/edifact</span>, <span class="ph filepath">application/edi-x12</span>,
+                <span class="ph filepath">application/edi-tradacoms</span>, <span class="ph filepath">application/xml</span>
+              (text/xml), <span class="ph filepath">application/pdf</span>,
+                <span class="ph filepath">application/msword</span>, <span class="ph filepath">application/x-msexcel</span>,
+                <span class="ph filepath">application/rtf</span>, <span class="ph filepath">application/zip</span>,
+                <span class="ph filepath">image/bmp</span>, <span class="ph filepath">image/gif</span>,
+                <span class="ph filepath">image/tiff</span>, <span class="ph filepath">image/jpeg</span>,
+                <span class="ph filepath">text/plain</span>, <span class="ph filepath">text/html</span>, and
+                <span class="ph filepath">video/mpg</span>. </div>
+<p class="p">These header fields are filled in at the
+              Mailbox and/or Action level and specify the values set in the HTTP headers that
+              precede the body of the message sent.</p>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ebXML_Host.html" title="ebXML Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Host</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

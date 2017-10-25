@@ -1,0 +1,455 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="This table contains low-level information regarding each CHECK command run (that is, each checkpoint).  Note that only CHECK commands that contain the ConditionsMet parameter are recorded in the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="SLA/KPI Fields"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_transfer_database_fields.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_gqn_dll_p5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SLA/KPI Fields</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_gqn_dll_p5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_database_definitions.html" title="Database Definitions">Database Definitions</a> / <a class="navheader_parent_path" href="../Topics/t_transfer_database_fields.html" title="Transfer Database Fields">Transfer Database Fields</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_transfer_database_fields.html" title="Transfer Database Fields"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfer Database Fields</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">SLA/KPI Fields </h1>
+
+  <div class="body">
+    <p class="p">This table contains low-level information regarding each
+        <span class="keyword cmdname">CHECK</span> command run (that is, each checkpoint).  Note that only
+        <span class="keyword cmdname">CHECK</span> commands that contain the <samp class="ph codeph">ConditionsMet</samp> parameter
+      are recorded in the VLTrader enterprise database.</p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_gqn_dll_p5__table_b1z_bxy_st" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="4" valign="top" id="d282340e48"> VLSLAKPI database table </th>
+
+          </tr>
+
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d282340e54"> Column Name </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d282340e57"> Data Type </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d282340e60"> Length </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d282340e63"> Description </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> TransferID </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 30 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 "> TransferID in VLTransfers table
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> VLSerial </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 6 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 "> VLSerial in VLTransfers table </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> CheckType </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 30 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_gc1_mlq_jv">
+                <li class="li">File Age</li>
+
+                <li class="li">Directory Age</li>
+
+                <li class="li">Transfer</li>
+
+                <li class="li">Transfer EDI Ack</li>
+
+                <li class="li">Transfer Response</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Class </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 20 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_ugl_4lq_jv">
+                <li class="li">SLA</li>
+
+                <li class="li">KPI</li>
+
+                <li class="li">BLANK</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Subclass </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 30 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ol_s53_qlq_jv">
+                <li class="li">user-specified string</li>
+
+                <li class="li">BLANK </li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> TimeCondition </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 100 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 "> Contains a common-language summary of
+              the primary time condition. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Direction </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 20 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_xdm_slq_jv">
+                <li class="li">Inbound</li>
+
+                <li class="li">Outbound</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Recursive </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 10 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_yyl_tlq_jv">
+                <li class="li">True</li>
+
+                <li class="li">False</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Status </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 20 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_pfm_5lq_jv">
+                <li class="li">Delivered</li>
+
+                <li class="li">Completed</li>
+
+                <li class="li">Any</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Count </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 20 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_ubq_vlq_jv">
+                <li class="li">1-99999</li>
+
+                <li class="li">All</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Sender </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 500 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_xmz_wlq_jv">
+                <li class="li">user-specified string</li>
+
+                <li class="li">BLANK</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> Receiver </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 500 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_yqz_xlq_jv">
+                <li class="li">user-specified string</li>
+
+                <li class="li">BLANK</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> FunctionalGroupSender </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 500 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_rr2_zlq_jv">
+                <li class="li">user-specified string</li>
+
+                <li class="li">BLANK</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> FunctionalGroupReceiver </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 500 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_yql_1mq_jv">
+                <li class="li">user-specified string</li>
+
+                <li class="li">BLANK</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> TransactionType </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 6 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_hms_1mq_jv">
+                <li class="li">user-specified string</li>
+
+                <li class="li">BLANK</li>
+
+                <li class="li">‘n/a’</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> DocumentType </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 255 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_w5b_bmq_jv">
+                <li class="li">user-specified string (planned)</li>
+
+                <li class="li">BLANK</li>
+
+                <li class="li">‘n/a’ (planned)</li>
+
+              </ul>
+
+              <p class="p"> </p>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> ResponseMatchCondition </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 100 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_gdf_cmq_jv">
+                <li class="li">user-specified string (planned)</li>
+
+                <li class="li">‘n/a’ (planned)</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> ConditionsMetClassification </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> VARCHAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 "> 20 </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 ">
+              <p class="p">Contains one of these values:</p>
+
+              <ul class="ul" id="topic_gqn_dll_p5__ul_j2r_cmq_jv">
+                <li class="li">Success</li>
+
+                <li class="li">Error</li>
+
+              </ul>
+
+            </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e54 "> ConditionsMet </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e57 "> BIT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e60 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d282340e48 d282340e63 "> ‘true’ if overall conditions of CHECK
+              were met; ‘false’ otherwise </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_transfer_database_fields.html" title="Transfer Database Fields"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfer Database Fields</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

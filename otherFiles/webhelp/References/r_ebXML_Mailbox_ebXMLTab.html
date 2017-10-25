@@ -1,0 +1,168 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Select options for encryption and signing outbound messages and security for inbound messages. Select the acknowledgment format if necessary. Encrypted Enable or disable TripleDES encryption when ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="ebXML Mailbox: ebXML Tab"></meta><meta name="abstract" content="Select options for encryption and signing outbound messages and security for inbound messages. Select the acknowledgment format if necessary."></meta><meta name="description" content="Select options for encryption and signing outbound messages and security for inbound messages. Select the acknowledgment format if necessary."></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ebXML_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_cgc_n1d_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>ebXML Mailbox: ebXML Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_cgc_n1d_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_ebxml_configuration.html" title="ebXML Configuration">ebXML Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_ebXML_Mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. ">ebXML Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ebXML_Mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. "><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">ebXML Mailbox: ebXML Tab</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">Select options for encryption and signing outbound messages and security for inbound
+    messages. Select the acknowledgment format if necessary.</p>
+
+    <div class="section"><dl class="dl">
+      
+        <dt class="dt dlterm">Encrypted</dt>
+
+        <dd class="dd">Enable or disable TripleDES encryption when sending messages. See <a class="xref" href="../Topics/t_cryptographic_services.html">Cryptographic Services</a> for general information about encryption.</dd>
+
+      
+      
+        <dt class="dt dlterm">Signed</dt>
+
+        <dd class="dd">Enable or disable signing messages when sending them.</dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Ack</span></dt>
+
+        <dd class="dd">Enables the <span class="keyword wintitle">Acknowledgment</span> section and includes a request for an
+          acknowledgment (receipt) from your trading partner.</dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Compressed</span></dt>
+
+        <dd class="dd">Compress the message using GZIP compression. Compression is generally used for large
+          files to conserver bandwidth and make the transfer more efficient and secure. </dd>
+
+      
+      
+        <dt class="dt dlterm">Synchronous Reply</dt>
+
+        <dd class="dd">Require requested acknowledgments and any ebXML errors be returned synchronously, using
+          the same HTTP session as the HTTP response. If <span class="ph uicontrol">Synchronous Reply</span> is
+          cleared, requested acknowledgments and any ebXML errors will be returned asynchronously by
+          your trading partner, as part of a new HTTP session in an HTTP request.</dd>
+
+      
+      
+        <dt class="dt dlterm">Eliminate Duplicates</dt>
+
+        <dd class="dd">Your trading partner checks for duplicate message IDs. If a duplicate is discovered, the
+          message payload is ignored.</dd>
+
+      
+      
+        <dt class="dt dlterm">Preserve Message Order</dt>
+
+        <dd class="dd">
+          <p class="p">Your trading partner ensures that messages are processed in proper sequence. VersaLex
+            does not currently support preserving message order on incoming messages.</p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Acknowledgment</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Signed</span></dt>
+
+              <dd class="dd">Request a signed acknowledgment.</dd>
+
+            
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Forward Ack to Email</span></dt>
+
+              <dd class="dd">An additional VersaLex feature is the ability to forward a copy of the
+                acknowledgment received either synchronously or asynchronously to an email recipient
+                when <span class="ph uicontrol">Forward Ack to Email</span> is selected.</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Inbound Message Security</dt>
+
+        <dd class="dd">When you select any of the options in this section, <dl class="dl">
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Force Encryption</span></dt>
+
+              <dt class="dt dlterm"><span class="ph uicontrol">Force Signature</span></dt>
+
+              <dd class="dd">When you select <span class="ph uicontrol">Force Encryption</span> or <span class="ph uicontrol">Force
+                  Signature</span>, all inbound messages are checked for the required security
+                level. An error is logged and the message is rejected if the message is not received
+                according to the corresponding message security settings. If either setting is not
+                selected (default), the message is not checked for conformance with that security
+                setting.</dd>
+
+            
+            
+              <dt class="dt dlterm">Honor Reply Requests</dt>
+
+              <dd class="dd">Accept requests for replies for messages that match the setting you choose from
+                the following:<ul class="ul" id="reference_cgc_n1d_b5__ul_gnk_p1h_xw">
+                  <li class="li"><span class="ph uicontrol">Any</span> - accept any message.</li>
+
+                  <li class="li"><span class="ph uicontrol">Asychronous</span> - accept only messages with asynchronous
+                    reply requests.</li>
+
+                  <li class="li"><span class="ph uicontrol">Synchronous</span> - accept only messages with synchronous
+                      reply requests.</li>
+
+                </ul>
+</dd>
+
+            
+          </dl>
+</dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Description</span></dt>
+
+        <dd class="dd">
+          <p class="p">Optional. Provide a human readable description of the outgoing messages.</p>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Ping</span></dt>
+
+        <dd class="dd">Click to check if the trading partner's message service is currently accepting messages.
+        </dd>
+
+      
+      
+        <dt class="dt dlterm"><span class="ph uicontrol">Message Status</span></dt>
+
+        <dd class="dd">Click to check the status of a previously sent message.</dd>
+
+      
+    </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ebXML_Mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. "><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">ebXML Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

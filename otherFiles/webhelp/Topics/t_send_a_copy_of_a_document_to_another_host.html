@@ -1,0 +1,120 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="If you have two trading partners (i.e., hosts) configured, you can easily enhance your configuration to automatically send files to the second trading partner after the files have been successfully ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Send a Copy of a Document to Another Host"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="send_a_copy_of_a_document_to_another_host"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Send a Copy of a Document to Another Host</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="send_a_copy_of_a_document_to_another_host">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Send a Copy of a Document to
+                    Another Host</h1>
+
+   <div class="body">
+      <p class="p">If you have two trading partners (i.e., hosts) configured, you can easily enhance your
+         configuration to automatically send files to the second trading partner after the files
+         have been successfully sent to the first trading partner using an "auto copy". Given Host A
+         (the original sender) and Host B (the additional sender), in most situations you would
+         perform the following steps to configure "auto copy":</p>
+
+      <ul class="ul" id="send_a_copy_of_a_document_to_another_host__ul_i4s_4dr_ps">
+         <li class="li">Add an "auto copy" action to Host B (steps 1-2 below).</li>
+
+         <li class="li">Configure Host A so that the files that have been sent are automatically deposited into
+            the file source location (i.e., the Outbox) for Host B's "auto copy" action (step 3
+            below).</li>
+
+         <li class="li">Configure the Host B "auto copy" action to automatically send the file when it is
+            copied from Host A (step 4 below).</li>
+
+      </ul>
+
+      <p class="p">The following diagram illustrates the flow of the file that is
+            sent using "Auto-Copy" (dotted lines signify dependence on successful completion of
+            the file being sent to the first Trading Partner):</p>
+
+      
+      <p class="p">
+         <img class="image" src="../Images/image525.gif"></img>
+      </p>
+
+      
+      
+      <div class="section"><h2 class="title sectiontitle">Auto-Copy
+                    Configuration</h2>
+         
+      </div>
+
+      
+      <p class="p">Follow the steps below to configure "auto copy".</p>
+
+      <ol class="ol" id="send_a_copy_of_a_document_to_another_host__ol_hdl_wdr_ps">
+         <li class="li">Create a new "auto copy" action for Host B.<ol class="ol" type="a" id="send_a_copy_of_a_document_to_another_host__ol_wfr_ydr_ps">
+               <li class="li">In the Host B tree, right mouse-click the "send" action and select
+                     <span class="ph uicontrol">Clone</span>. <p class="p">A
+                     new action called <span class="keyword cmdname">newsend</span> is
+                  created.</p>
+</li>
+
+               <li class="li">Rename the new action to <span class="keyword cmdname">auto copy</span>. (The name is arbitrary;
+                  you can choose any name you want for your new
+                  action.)</li>
+
+            </ol>
+</li>
+
+         <li class="li">In Host B's "auto copy" Action that you have just created, configure the PUT command
+            with an "autocopy" subfolder in the path and a wildcard ("*") in the file
+               name.<ol class="ol" type="a" id="send_a_copy_of_a_document_to_another_host__ol_mps_h2r_ps">
+               <li class="li"><strong class="ph b">Wildcard Note:</strong> Using a wildcard for the file name addresses the situation
+                  where Host A sends multiple files with the same file name before Host B can send
+                  the file.  In that case, automatic versioning occurs (e.g.,
+                     <samp class="ph codeph">sendfile1.edi</samp>, <samp class="ph codeph">sendfile2.edi</samp>, etc.) in Host
+                  A's Sentbox, the file source location (i.e., Outbox) for Host B's "auto copy"
+                  Action.</li>
+
+               <li class="li"><strong class="ph b">Subfolder Note:</strong> Specifying the source path in the "auto copy" action
+                  differentiates Host B's "auto copy" Outbox location
+                     (<samp class="ph codeph">…\hosts\outbox\HostB\autocopy</samp>) from the "normally used"
+                  Outbox location (<samp class="ph codeph">…\hosts\outbox\HostB</samp>).</li>
+
+            </ol>
+</li>
+
+         <li class="li">In the <span class="keyword wintitle">General</span> tab for Host A, specify a Sentbox path that is the
+            same as Host B's Outbox
+            path.</li>
+
+         <li class="li">In order for Host B to immediately send the file after Host A has successfully sent the
+            file, configure the Host B "Auto Copy" action to run <span class="ph uicontrol">whenever the action has
+               a file to send</span>.<ol class="ol" type="a" id="send_a_copy_of_a_document_to_another_host__ol_ksy_42r_ps">
+               <li class="li">Right-click Host B's "Auto Copy" Action (in the Tree pane) and select <span class="ph uicontrol">
+                     Schedule…</span></li>
+
+               <li class="li">A dialog box appears allowing you to schedule the action.
+                  </li>
+
+               <li class="li">Select <span class="ph uicontrol">Whenever the action has files to send </span>and click
+                     <span class="ph uicontrol">OK</span>.</li>
+
+            </ol>
+</li>
+
+      </ol>
+
+      
+      
+      
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

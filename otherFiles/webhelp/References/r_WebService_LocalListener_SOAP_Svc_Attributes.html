@@ -1,0 +1,119 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="There are two kinds of SOAP web services offered: a general purpose web service and a service designed specifically to work with TradeLink. Resource Path The check box activates and deactivates access ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Local Listener Web Service SOAP reference"></meta><meta name="abstract" content="There are two kinds of SOAP web services offered: a general purpose web service and a service designed specifically to work with TradeLink."></meta><meta name="description" content="There are two kinds of SOAP web services offered: a general purpose web service and a service designed specifically to work with TradeLink."></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_About_Web_Service.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_bjl_3ff_lw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local Listener Web Service SOAP reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_bjl_3ff_lw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_About_Web_Service.html" title="Local Listener Web Service">Local Listener Web Service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_About_Web_Service.html" title="Local Listener Web Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener Web Service</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Local Listener Web Service SOAP reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">There are two kinds of SOAP web services offered: a general purpose web service and a
+    service designed specifically to work with TradeLink.</p>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Resource Path</dt>
+
+          <dd class="dd">The check box activates and deactivates access to this resource. Access is activated
+            by default.</dd>
+
+          <dd class="dd">The default value of the path itself is <kbd class="ph userinput">/services</kbd>. </dd>
+
+        
+        
+          <dt class="dt dlterm">General Purpose web service</dt>
+
+          <dd class="dd">Used to initiate trading partner mailbox sends and receives through any <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> protocol. </dd>
+
+          <dd class="dd">Similar to the Java <span class="ph filepath">API IMailboxController</span> interface, the web
+            service provides for <span class="keyword cmdname">send</span>, <span class="keyword cmdname">receive</span>, and
+              <span class="keyword cmdname">sendAndReceive</span> operations. A <span class="keyword cmdname">delete</span> operation is
+            also included for confirming receipt of a payload file after a
+              <span class="keyword cmdname">receive</span>. .</dd>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Password</dt>
+
+                <dd class="dd">Required by the web service. The password is immediately operational for any
+                  configured <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span>
+                  mailbox.  </dd>
+
+                <dd class="dd">Available when you select <span class="ph uicontrol">General Purpose web service</span>.
+                </dd>
+
+              
+              
+                <dt class="dt dlterm">WSDL 1.2 compliant</dt>
+
+                <dd class="dd">Select to eliminate overloaded operations.</dd>
+
+                <dd class="dd">Available when you select <span class="ph uicontrol">General Purpose web service</span>.
+                </dd>
+
+              
+              
+                <dt class="dt dlterm">Use arrays</dt>
+
+                <dd class="dd">Indicates whether the host/mailbox should be specified in a string array rather
+                  than separate string arguments.  When <span class="ph uicontrol">WSDL 1.2 compliant</span> is
+                  not activated, <span class="ph uicontrol">Use arrays</span> will default to activated.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">TradeLink web serivce</dt>
+
+          <dd class="dd">Used to initiate trading partner mailbox sends and receives through any <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> protocol. <dl class="dl">
+              
+                <dt class="dt dlterm">Database Driver String</dt>
+
+                <dt class="dt dlterm">Connection String</dt>
+
+                <dt class="dt dlterm">Username</dt>
+
+                <dt class="dt dlterm">Password</dt>
+
+                <dd class="dd">Information required to connect to a TradeLink database. If you are not sure of
+                  these values, contact your TradeLink system administrator.</dd>
+
+              
+            </dl>
+</dd>
+
+        
+        
+          <dt class="dt dlterm">Allow web access to logs\ directory</dt>
+
+          <dd class="dd">Enables access to <span class="ph">Cleo Harmony</span>
+            log files from within the web service activated, whether a general purpose web service
+            or TradeLink.</dd>
+
+        
+      </dl>
+
+      
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_About_Web_Service.html" title="Local Listener Web Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Listener Web Service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

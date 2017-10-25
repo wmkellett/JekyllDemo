@@ -1,0 +1,122 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Trading Partners table displays aliases, contacts, and connections for each trading partner configured. Each row in the table contains information about a single trading partner. To access the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="About the Trading Partners table"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_trading_partner_management.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_TradingPartnersTable_Filter.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_TradingPartnersTable_Find.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_TradingPartnersTable_AddingEditing.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_TradingPartnersTable_Exporting.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_TradingPartnersTable_Importing.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_zs2_qks_g5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>About the Trading Partners table</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_zs2_qks_g5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_Basics.html" title="Basics">Basics</a> / <a class="navheader_parent_path" href="../Topics/t_trading_partner_management.html" title="Trading Partner Management">Trading Partner Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_trading_partner_management.html" title="Trading Partner Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Trading Partner Management</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">About the Trading Partners table</h1>
+
+  <div class="body">
+    <p class="p">The Trading Partners table displays aliases, contacts, and connections for each trading
+      partner configured. Each row in the table contains information about a single trading partner. </p>
+
+    <p class="p">To access the Trading Partners Table, do one of the following:</p>
+
+    <ul class="ul" id="topic_zs2_qks_g5__ul_c4z_plq_kv">
+      <li class="li">In the web UI, click <span class="ph uicontrol">Partners</span>.</li>
+
+      <li class="li">In the native UI, select <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Trading Partners</span></span> in the menu bar.</li>
+
+    </ul>
+
+    <div class="section">
+      <p class="p">You can sort the table by any of the columns. By default, the table is sorted by the
+          <span class="ph uicontrol">Trader Partner Alias</span> column. When you sort by
+          <span class="ph uicontrol">Contacts</span>, rows are sorted by the first e-mail address in the cell
+        for each row. When you sort by <span class="ph uicontrol">Connections</span>, rows are sorted based on
+        first item in the connections list.</p>
+
+      <p class="p">Within each <span class="ph uicontrol">Contacts</span> cell, items are sorted by e-mail address.
+        Within each <span class="ph uicontrol">Connections</span> cell, the items are also sorted
+        alphabetically. The <span class="ph uicontrol">Trading Partner Type</span> column is only displayed if
+        Trading Partner Types exist for you trading partners.</p>
+
+      <p class="p">The table will only display information about the Trading Partners and connections for
+        which the current user has viewing privileges. This is based on the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> folders to which the
+        current user has privileges to see. If the Trading Partner has associated folders, hosts,
+        and mailboxes but the current user does not have privileges to see them, the user will not
+        see the trading partner information in the table. If there are no connections associated
+        with a trading partner, all users will be able to see that trading partner and the
+        associated contacts.</p>
+
+      <p class="p">If the host/mailbox is not associated with a Trading Partner and is not a Cleo test host or
+        the Local Listener, it is shown in the table at the bottom of the list with one row per
+        host/mailbox, and the Trading Partner alias, Trading Partner Type, and Contacts cells are
+        empty. These items are shown with a darker background color to indicate which host/mailbox
+        combinations are not associated with any trading partner.</p>
+
+      <div class="p">Right-click a <strong class="ph b">trading partner</strong> row to display a menu from which you can choose from
+        the following operations:<ul class="ul" id="topic_zs2_qks_g5__ul_pzc_jqg_cz">
+          <li class="li"><span class="ph uicontrol">Edit Trading Partner…</span> displays the <span class="keyword wintitle">Edit Trading
+              Partner</span> dialog box. Alternatively, you can also double-click a row to
+            display the edit dialog box. See <a class="xref" href="t_TradingPartnersTable_AddingEditing.html">Adding or editing a Trading Partner</a>.</li>
+
+          <li class="li"><span class="ph uicontrol">Remove Trading Partner</span> deletes the selected Trading Partner(s). </li>
+
+          <li class="li"><span class="ph uicontrol">Transfer Report…</span> displays the Transfer Report Filter dialog box
+            for the selected Trading Partner(s). See <a class="xref" href="t_TradingPartnersTable_Filter.html">Trading Partner Table Filter</a>.</li>
+
+          <li class="li"><span class="ph uicontrol">Find</span> and <span class="ph uicontrol">Find Next</span> allow the user to
+            search the table for specific entries. See <a class="xref" href="t_TradingPartnersTable_Find.html">Find Trading Partner</a>.</li>
+
+        </ul>
+</div>
+
+      <div class="p">Right-click a non-trading partner row to display a menu from which you can choose from the
+        following operations:<ul class="ul" id="topic_zs2_qks_g5__ul_edq_stg_cz">
+          <li class="li"><span class="ph uicontrol">Transfer Report…</span> displays the <span class="keyword wintitle">Transfer Report
+            Filter</span> dialog box for the selected host/mailbox. See <a class="xref" href="t_TradingPartnersTable_Filter.html">Trading Partner Table Filter</a>.</li>
+
+          <li class="li"><span class="ph uicontrol">Associate to Trading Partner</span> displays the <span class="keyword wintitle">Trading
+              Partner Selection</span> dialog box, where you can create a new partner or select
+            an existing one.</li>
+
+        </ul>
+</div>
+
+      <div class="p">In addition, you can use the row of buttons at the bottom of the page.<ul class="ul" id="topic_zs2_qks_g5__ul_fth_nm3_cz">
+          <li class="li"><span class="ph uicontrol">Filter</span> - See <a class="xref" href="t_TradingPartnersTable_Filter.html">Trading Partner Table Filter</a>. </li>
+
+          <li class="li"><span class="ph uicontrol">Find</span> - See <a class="xref" href="t_TradingPartnersTable_Find.html">Find Trading Partner</a>.</li>
+
+          <li class="li"><span class="ph uicontrol">Add Trading Partner</span> - See <a class="xref" href="t_TradingPartnersTable_AddingEditing.html">Adding or editing a Trading Partner</a>.</li>
+
+        <li class="li"><span class="ph uicontrol">Export</span> - See <a class="xref" href="t_TradingPartnersTable_Exporting.html">Exporting Contacts</a>.</li>
+
+          <li class="li"><span class="ph uicontrol">Import</span> - See <a class="xref" href="t_TradingPartnersTable_Importing.html">Importing Contacts and EDI Parameters</a>.</li>
+
+        </ul>
+</div>
+
+    </div>
+
+    
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_TradingPartnersTable_Filter.html">Trading Partner Table Filter</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_TradingPartnersTable_Find.html">Find Trading Partner</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_TradingPartnersTable_AddingEditing.html">Adding or editing a Trading Partner</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_TradingPartnersTable_Exporting.html">Exporting Contacts</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_TradingPartnersTable_Importing.html">Importing Contacts and EDI Parameters</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_trading_partner_management.html" title="Trading Partner Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Trading Partner Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

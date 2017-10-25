@@ -1,0 +1,369 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo VLTrader and Cleo Harmony applications only. In the web UI, go to Administration &gt; Monitoring &gt; Thresholds . In the native UI, go to Options &gt; Monitor &gt; ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Thresholds"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_Monitoring.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_e5c_1dk_nt"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Thresholds</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_e5c_1dk_nt">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring">Monitoring</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Monitoring</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Thresholds</h1>
+
+  <div class="body">
+    <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications only.</div>
+
+    <p class="p">In the web UI,
+      go to <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">Monitoring</span> &gt; <span class="ph uicontrol">Thresholds</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Monitor</span> &gt; <span class="ph uicontrol">Thresholds</span></span>. The <span class="keyword wintitle">Thresholds</span> page lists each available threshold item,
+      the threshold setting, the duration at the threshold value before considered an error
+      condition, and whether or not an error should be logged and/or an SNMP alert delivered. </p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_e5c_1dk_nt__table_bzk_frj_dr" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d168253e69">Item </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d168253e72">Description </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d168253e75">Default Threshold and Duration*
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Account Lockout</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">A local user has been locked out due to too many
+              failed login attempts. </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling
+              intervals. The <span class="ph uicontrol">Log Error</span> check box is selected by default and
+              cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Attempted Invalid File Type</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">A user attempted to upload or rename a file not
+              matching any values configured for 'Acceptable inbound file patterns' (FTP/SSH FTP
+              Users) or 'Acceptable inbound media types' (HTTP users) and the request was rejected. </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">The <span class="ph uicontrol">Log Error</span>
+              check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Blacklisted</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">An IP address has been blacklisted due to too many
+              failed login attempts based on automatic IP blacklisting settings.</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling
+              intervals. The <span class="ph uicontrol">Log Error</span> check box is selected by default and
+              cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Blocked By Blacklist</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">One or more connection attempts were made from IP
+              addresses on the IP blacklist and the connections were closed. </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling
+              intervals. The <span class="ph uicontrol">Log Error</span> check box is selected by default and
+              cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Blocked by Lockout</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">A local user whose account is locked attempted to
+              log in and was blocked.</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling
+              intervals. The <span class="ph uicontrol">Log Error</span> check box is selected by default and
+              cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Blocked By Whitelist</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">A local user attempted to log in from an IP address
+              not on the IP whitelist and the login attempt was blocked. </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling
+              intervals. The <span class="ph uicontrol">Log Error</span> check box is selected by default and
+              cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">CPU Usage </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Percentage of the overall, available
+              CPU used by the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span>
+              service/daemon process </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">90% for 60 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Database Payload Backlog </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Count of backlogged database payload
+              entries </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">50 count for 30 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Deadlocked Threads </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Any deadlocked threads within the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon
+              process </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">n/a </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Disk Storage Usage </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Percentage of the available <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> installation disk
+              space used </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">90% for 30 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Exceeded Max Concurrent System Sessions</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">The maximum number of concurrent FTP users allowed
+              at the system level has been exceeded and the login attempt was rejected. </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling
+              intervals. The <span class="ph uicontrol">Log Error</span> check box is selected by default and
+              cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Exceeded Max Concurrent User Sessions</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">A Local User has exceeded their maximum concurrent
+              logins and the login attempt was rejected. </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling
+              intervals. The <span class="ph uicontrol">Log Error</span> check box is selected by default and
+              cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Heap Memory Usage </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Percentage of the maximum heap space
+              used by the <span class="ph">Cleo Harmony</span>
+              or <span class="ph">Cleo VLTrader</span>
+              service/daemon process </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">90% for 30 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Local Certificate Expired</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">The certificate used for Local Packaging has
+              expired.</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">The <span class="ph uicontrol">Log Error</span>
+              check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Operator Audit Trail Queue Backlog </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Percentage of the maximum operator
+              audit trail queue used by the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon
+              process </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">90% for 30 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Partner Certificate Expired</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">The certificate used for Partner Packaging has
+              expired. </td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e75 ">Detection not subject to polling intervals. The Log
+              Error check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Perm Gen Memory Usage </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Percentage of the maximum perm gen
+              space used by the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon
+              process </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">90% once </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Scheduler Cycle Time </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Seconds for the (master) <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> scheduler to cycle
+              through the entire schedule </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">300 seconds once </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Server Port Listening </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Any configured server port listening
+              failures </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">The <span class="ph uicontrol">Log Error</span>
+              check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Synced VersaLex Connection </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Any synced <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> communication
+              failures </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">The <span class="ph uicontrol">Log Error</span>
+              check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Synchronization Backlog </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Count of backlogged synchronization
+              items with another <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instance in the
+              same pool </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">50 count for 60 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Synchronization Item(s) Unresolved </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Any failures to synchronize changes to
+              synced <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instance</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">n/a </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">System Log Queue Backlog </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Percentage of the maximum system log
+              queue used by the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon
+              process </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">90% for 30 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Thread Usage </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Count of the overall number of active
+                <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon
+              process threads </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">500 count for 30 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" colspan="1" valign="top" headers="d168253e69 ">Transfer Failed</td>
+
+            <td class="entry" colspan="1" valign="top" headers="d168253e72 ">A file transfer failed. This could occur for many
+              different reasons. See the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> system log for
+              further details. Detection not subject to polling intervals.</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">The <span class="ph uicontrol">Log Error</span>
+              check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Transfer Log DB Connection </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">A transfer logging database connection
+              failure </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">The <span class="ph uicontrol">Log Error</span>
+              check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">Transfer Log Queue Backlog </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Percentage of the maximum transfer log
+              queue used by the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon
+              process </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">90% for 30 seconds </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e69 ">VLProxy Connection </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e72 ">Any configured <span class="ph">Cleo VLProxy</span> communication
+              failures  </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d168253e75 ">The <span class="ph uicontrol">Log Error</span>
+              check box is selected by default and cannot be cleared. </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Monitoring</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

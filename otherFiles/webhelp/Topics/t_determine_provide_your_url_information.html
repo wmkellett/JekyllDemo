@@ -1,0 +1,113 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The AS2 , AS3/FTP server ( Cleo Harmony and Cleo VLTrader applications only), and ebMS protocols require you to forward your Cleo Harmony , Cleo VLTrader , or Cleo LexiCom URL to your trading partner. ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Determine/Provide Your URL Information"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="determine_provide_your_url_information"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Determine/Provide Your URL Information</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="determine_provide_your_url_information">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Determine/Provide Your
+                    URL Information</h1>
+
+   <div class="body">
+      <p class="p">The AS2<span class="ph">, AS3/FTP server (<span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications
+            only),</span> and ebMS protocols require you to forward your <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> URL to your trading
+         partner.</p>
+
+      
+      <div class="p">
+         <ol class="ol" id="determine_provide_your_url_information__ol_afq_plq_ps">
+            <li class="li">If you have not already done so, complete Local Listener configuration. See <a class="xref" href="t_listener_configuration_topc_level.html" title="The Local Listener is automatically activated (on HTTP port 5080) the first time VersaLex is launched. This makes web browser service (supported only on Unix and Windows platforms) available &#34;out-of-the-box&#34; for systems lacking a graphics console. All other services require further user configuration before they are ready and available.">Listener Configuration</a>.<div class="p">Use the Local Listener Configuration Wizard
+                  configuration wizard (see <a class="xref" href="t_use_a_host_mailbox_wizard.html">Use a Host/Mailbox Wizard</a>) and follow the
+                  easy steps to specify the address and ports. <div class="note note"><span class="notetitle">Note:</span> You can also use the Local
+                     Listener Configuration Wizard to create signing/encryption
+                  certificates.</div>
+</div>
+</li>
+
+            <li class="li">The method of URL exchange must be agreed upon with the trading partner.  The
+               mailbox <span class="keyword wintitle">Notes</span> tab may come preconfigured with specific
+               information concerning URL exchange with a particular trading partner.<div class="p">If emailing,
+                  use the Email Profile utility. See <a class="xref" href="t_email_profile_to_your_trading_partner.html">Email Profile to Your Trading Partner</a>. 
+                     <div class="note note"><span class="notetitle">Note:</span> This utility is also used to send your signing/encryption
+                     certificates.</div>
+Even if the utility is not used to forward your profile to
+                  your trading partner, you can use the utility to capture the information
+                  locally.</div>
+<p class="p">The Email Profile utility automatically builds the URL.  If you are
+                  not using the utility, you must build the URL by hand.</p>
+</li>
+
+         </ol>
+
+      </div>
+
+      
+      <p class="p">AS2 and ebMS are HTTP protocols. An HTTP URL is of the form:
+            <span class="ph filepath">http(s)://your-host:httpport/your-resource-path</span> where: </p>
+
+      <ul class="ul" id="determine_provide_your_url_information__ul_md2_smq_ps">
+         <li class="li"><var class="keyword varname">http</var> or <var class="keyword varname">https</var> is specified depending on whether
+            you are using an HTTP or HTTP/s Port from the <a class="xref" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path.">Configuring a Local Listener for HTTP</a>.</li>
+
+         <li class="li">
+            <var class="keyword varname">your-host</var> is the fully qualified name (recommended) or static,
+            external IP address of the VersaLex computer. For AS2, this is <span class="ph uicontrol">My External
+               Address</span> in the <a class="xref" href="../Tasks/t_Configure_AS2_Service_AS2_Tab.html">Configuring AS2 Service</a>. Contact your systems administrator if you do not know
+            your fully qualified name or external IP address. You may also obtain your external IP
+            address by accessing <a class="xref" href="http://www.cleo.com/whoami" target="_blank"> http://www.cleo.com/whoami </a>.</li>
+
+         <li class="li"><var class="keyword varname">httpport</var> is the HTTP or HTTP/s Port in the <span class="keyword wintitle">Local Listener:
+               HTTP</span> tab. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path.">Configuring a Local Listener for HTTP</a>. Including
+               <var class="keyword varname">:httpport</var> in the URL is optional when the standard port is used.
+            Port 80 is the standard port for HTTP and port 443 is the standard port for HTTP/s.</li>
+
+         <li class="li">If using VLProxy (or a third party reverse proxy), <var class="keyword varname">http</var> or
+               <var class="keyword varname">https</var>, <var class="keyword varname">your-host</var>, and
+               <var class="keyword varname">httpport</var> instead are dependent on the proxy settings.</li>
+
+         <li class="li"><var class="keyword varname">your-resource-path</var> is the Resource Path in either the <span class="keyword wintitle">AS2 Service: AS2</span> tab or the <span class="keyword wintitle">ebMS Service: ebXML</span> tab. See <a class="xref" href="../Tasks/t_Configure_AS2_Service_AS2_Tab.html">Configuring AS2 Service</a> and <a class="xref" href="../Tasks/t_Configure_ebXML_Msg_Service_ebXML_Tab.html">Configuring ebXML Message Service</a>. </li>
+
+      </ul>
+
+      
+      <p class="p">For AS3 server or FTP server are FTP protocols. An FTP URL is of the form:
+            <span class="ph filepath">ftp(s)://your-host:ftpport</span> where: </p>
+
+      <ul class="ul" id="determine_provide_your_url_information__ul_xys_d4q_ps">
+         <li class="li"><var class="keyword varname">ftp</var> is specified if using an FTP or FTP/s Explicit Port and
+               <var class="keyword varname">ftps</var> is specified if using an FTP/s Implicit Port from the <a class="xref" href="../Tasks/t_Configure_Local_Listener_FTP.html" title="The Cleo Harmony and Cleo VLTrader applications contain a full-featured, embedded FTP server for receiving FTP requests."> Local Listener: FTP tab </a>. </li>
+
+         <li class="li"><var class="keyword varname">your-host</var> is the fully qualified name (recommended) or static,
+            external IP address of the VersaLex computer. Contact your systems administrator if you
+            do not know your fully qualified name or external IP address. You may also obtain your
+            external IP address by accessing <a class="xref" href="http://www.cleo.com/whoami" target="_blank"> http://www.cleo.com/whoami </a>.</li>
+
+         <li class="li"><var class="keyword varname">ftpport</var> is the FTP or FTP/s Port in the <span class="keyword wintitle">Local Listener:
+               FTP</span> tab. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_FTP.html" title="The Cleo Harmony and Cleo VLTrader applications contain a full-featured, embedded FTP server for receiving FTP requests.">Configuring a Local Listener for FTP</a>.  (Inclusion
+            of <var class="keyword varname">:ftpport</var> in the URL is optional when the standard port is being
+            used. Port 21 is the standard port for FTP and FTP/s Implicit and port 990 is the
+            standard port for FTP/s Explicit.)</li>
+
+         <li class="li">If using <span class="ph">Cleo VLProxy</span> (or a
+            third party reverse proxy), <var class="keyword varname">ftp</var> or <var class="keyword varname">ftps</var>,
+               <var class="keyword varname">your-host</var>, and <var class="keyword varname">ftpport</var> instead are dependent on
+            the proxy settings.</li>
+
+      </ul>
+
+      
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

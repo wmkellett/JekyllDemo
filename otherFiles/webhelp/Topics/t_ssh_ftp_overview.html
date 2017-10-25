@@ -1,0 +1,492 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The generic SSH FTP host is provided to allow a user to fully specify a client file transfer interface to an SSH FTP server. If at all possible, use a pre-configured host specific to the target ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="SSH FTP Overview"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ssh_ftp_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ssh_ftp_overview"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SSH FTP Overview</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ssh_ftp_overview">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_ssh_ftp_hosts.html" title="SSH FTP Hosts">SSH FTP Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ssh_ftp_hosts.html" title="SSH FTP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SSH FTP Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">SSH FTP Overview</h1>
+
+   <div class="body">
+      <p class="p">The generic SSH FTP host is provided to allow a user to fully
+            specify a client file transfer interface to an SSH FTP server. If at all possible, use a
+            pre-configured host specific to the target server. A pre-configured host will eliminate
+            the need to research, specify, and then debug the interface.</p>
+
+      <p class="p">Not all SSH FTP servers will support or require the full set of host commands allowed by
+            VersaLex. At a minimum, the server must support PUT and/or GET. The following action
+            commands are available on VersaLex:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d349182e40">
+                         
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d349182e43">
+                        Command
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d349182e46">
+                        Purpose
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d349182e49">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Underlying SSH FTP method</span>
+                     </strong>
+                    
+                  </th>
+
+                
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Host commands</span>
+                     </strong>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        PUT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Send one or more files to the host
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        GET
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        GET
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Receive one or more files from the host
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        PUT
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        DIR
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Get a directory listing of available files from
+                            the host
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        LIST
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        CD
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 "> Changes the current directory on
+                            the host </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        CD
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        QUOTE <var class="keyword varname">command</var>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Sends a raw command to the server
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        
+                     <p class="p">command</p>
+
+                        
+                     <p class="p"> </p>
+
+                        
+                     <p class="p">Supported commands include:</p>
+
+                        
+                     <p class="p">CHGRP</p>
+
+                        
+                     <p class="p">CHMOD</p>
+
+                        
+                     <p class="p">CHOWN</p>
+
+                        
+                     <p class="p">MKDIR</p>
+
+                        
+                     <p class="p">MKDIRS</p>
+
+                        
+                     <p class="p">PWD</p>
+
+                        
+                     <p class="p">RENAME</p>
+
+                        
+                     <p class="p">RM</p>
+
+                        
+                     <p class="p">RMDIR</p>
+
+                        
+                     <p class="p">STAT</p>
+
+                        
+                     <p class="p">
+                        <span class="ph">SYMLINK</span>
+                     </p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Local commands</span>
+                     </strong>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        SYSTEM
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Execute a local system command
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        WAIT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Pause
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        SET
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Sets a property
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        CLEAR
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Clears a string property
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        LCOPY
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Copy one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        LDELETE
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Delete one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        LREPLACE
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Replace bytes in one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        CHECK
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Check for a transfer, file, or directory (VLTrader
+                            and Harmony only)
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e40 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e43 ">
+                        SCRIPT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e46 ">
+                        Execute a JavaScript File (VLTrader and Harmony
+                            only)
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d349182e49 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ssh_ftp_hosts.html" title="SSH FTP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SSH FTP Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

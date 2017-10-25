@@ -1,0 +1,137 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="To import user files from a zip file exported from the Cleo Harmony , Cleo VLTrader , or Cleo LexiCom application, select File &gt; Import in the menu bar in the native UI. In the web UI, go to ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Export/Import User Files"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_ExportImportUserFiles.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="export_import_user_files"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Export/Import User Files</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="export_import_user_files">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_System.html" title="System">System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_ExportImportUserFiles.html" title="Export and import user files">Export and import user files</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_ExportImportUserFiles.html" title="Export and import user files"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Export and import user files</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Export/Import User
+                    Files</h1>
+
+   <div class="body taskbody">
+      <div class="section context"></div>
+
+      <ol class="ol steps" id="export_import_user_files__steps_rr1_2qf_2r"><li class="li step stepexpand">
+            <span class="ph cmd">To import user files from a zip file exported from the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> application,
+               select <span class="ph menucascade"><span class="ph uicontrol">File &gt; Import</span></span> in the menu bar in the native UI. In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; System &gt; Import</span></span></span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Deployment URL</span> if your product
+               
+               is being connected to a <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> trading partner
+               and the administrator has provided a network deployment URL.  This deployment URL
+               points to a
+               zip
+               file at a web location (possibly the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span>
+               application).</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter the deployment URL and click <span class="ph uicontrol">Download</span>.</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Otherwise click <span class="ph uicontrol">Local File</span> if necessary.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select the location of the
+               zip
+               file and click <span class="ph uicontrol">Open</span>.</span>
+            
+            <div class="itemgroup info"><p class="p">If the file you are importing is encrypted, you will receive the following
+                  prompt to enter the correct passphrase.   If, however, the file you are importing
+                  is from a legacy system and was created before encryption was employed, you be
+                  taken directly to the <strong class="ph b">Import User Files</strong> dialog
+                  below.</p>
+<p class="p">Note:
+                  As an added security feature, the <strong class="ph b">Additional File(s)</strong> section of the dialog 
+                  may be removed by setting the <strong class="ph b">
+                     <var class="keyword varname">cleo.file.import.additional.files</var>
+                  </strong> system property to false in the <span class="ph filepath">conf/system.properties</span>
+                  file or by using a <samp class="ph codeph">-D cleo.file.import.additional.files=false</samp>
+                  command line parameter.   This property only affects the dialog launched from the <span class="ph menucascade"><span class="ph uicontrol">File&gt;Import</span></span> menu option and does not affect importing additional files via the
+                  command line.  See <a class="xref" href="t_Execute_from_Command_Line.html">Execute from Command Line</a> for more
+               information.</p>
+ </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select any combination of the available files and click
+                  <span class="ph uicontrol">Import</span>.  A private key password must be provided with each
+               selected user certificate.  If any of the files selected already exist, you will be
+               prompted.</span>
+            <div class="itemgroup info">
+               
+               <p class="p">For a partial host import where a set of mailboxes is being imported, the parent
+                  host must exist and if a mailbox being imported already exists, the user is
+                  prompted with a similar as above.  Actions being imported within a partial
+                  mailboxes are handled in the same fashion.  As are partial configuration
+                  imports.</p>
+
+            </div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">For hosts being imported, if the host is disabled in the import file, select
+                  <span class="ph uicontrol">Enable host if disabled</span> to enable the host on import.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">If was passphrase was set on export then it is required in order to decrypt and
+               import. However, if there was no passphrase set on export then this field may be left
+               empty.</span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Once the import is complete, the imported items (hosts, certs, etc.) are
+               immediately available for use.</span>
+         </li>
+</ol>
+
+      <div class="section postreq">
+         <p class="p">Zip files exported from the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span> application can
+            also be imported using the <span class="ph"><span class="keyword cmdname">Harmony</span></span>, <span class="ph"><span class="keyword cmdname">VLTrader</span></span>, <span class="ph"><span class="keyword cmdname">LexiCom</span></span> commandline
+               <span class="keyword cmdname">-i</span> option.</p>
+
+         <div class="p">The following example imports a file originally exported from the <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span>, or <span class="ph">Cleo LexiCom</span>
+            application:<pre class="pre codeblock"><span class="keyword cmdname">VersaLexc</span> <span class="keyword option">-i</span> <span class="ph filepath">VersaLexConfig.zip</span> <span class="keyword option">-pp</span> <kbd class="ph userinput">cleocleo</kbd> <span class="keyword option">-cp</span> <kbd class="ph userinput">keypswd1</kbd> <span class="keyword option">-cp</span> <kbd class="ph userinput">keypswd2</kbd> <span class="keyword option">-m</span></pre>
+</div>
+
+         <div class="p">where:<ul class="ul" id="export_import_user_files__ul_rh2_cq1_vx">
+               <li class="li"><span class="keyword option">-i</span>
+                  <span class="ph filepath">VersaLexConfig.zip</span> - import the file,
+                     <span class="ph filepath">VersaLexConfig.zip</span>.</li>
+
+               <li class="li"><span class="keyword option">-pp</span>
+                  <kbd class="ph userinput">cleocleo</kbd> - cleocleo is the passphrase used when the data
+                  was exported.</li>
+
+               <li class="li"><span class="keyword option">-cp</span>
+                  <kbd class="ph userinput">cleo</kbd>
+                  <span class="keyword option">-cp</span>
+                  <kbd class="ph userinput">keypswd1</kbd>
+                  <span class="keyword option">-cp</span>
+                  <kbd class="ph userinput">keypswd2</kbd> - certificate private key passwords that are
+                  rotated through until one matches.</li>
+
+               <li class="li"><span class="keyword option">-m</span> - shows the output of the import on the console.</li>
+
+            </ul>
+</div>
+
+         <p class="p">See <a class="xref" href="t_Execute_from_Command_Line.html">Execute from Command Line</a>.</p>
+
+      </div>
+
+   </div>
+
+ 
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_ExportImportUserFiles.html" title="Export and import user files"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Export and import user files</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

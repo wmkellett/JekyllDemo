@@ -1,0 +1,119 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Transfer Details table provides details of every transfer bound by the current filter (see Transfer Dashboard Filter Area ) and parameter settings (see Transfer Dashboard Parameters ). The table ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Transfer Details Table"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Dashboards_TransferDashboard.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_zld_5vp_m5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Transfer Details Table</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_zld_5vp_m5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_cleo_dashboards.html" title="Cleo Dashboards">Cleo Dashboards</a> / <a class="navheader_parent_path" href="../Topics/t_Dashboards_TransferDashboard.html" title="Transfer Dashboard">Transfer Dashboard</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Dashboards_TransferDashboard.html" title="Transfer Dashboard"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfer Dashboard</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Transfer Details Table</h1>
+
+  <div class="body">
+    <div class="section">
+      
+      <p class="p">The <span class="keyword wintitle">Transfer Details</span> table provides
+        details of every transfer bound by the current filter (see <a class="xref" href="t_Dashboards_TrnsfrDBFilterArea.html">Transfer Dashboard Filter Area</a>) and parameter settings (see <a class="xref" href="t_Dashboards_TrnsfrDBParms.html">Transfer Dashboard Parameters</a>). The table has two grouping levels; first by trading
+        partner and next by the host\mailbox. The following summary calculations can be seen at each
+        group level: </p>
+
+      <ul class="ul" id="topic_zld_5vp_m5__ul_nhb_sxl_q5">
+        <li class="li">Total Successful Transfers (those with a <span class="ph uicontrol">General Status</span> of
+            <span class="ph uicontrol">Successful</span>) </li>
+
+        <li class="li">Total Failed Transfers (those with a <span class="ph uicontrol">General Status</span> of
+            <span class="ph uicontrol">Failed</span>) </li>
+
+        <li class="li">Total In-Progress Transfers (those with a <span class="ph uicontrol">General Status</span> of
+            <span class="ph uicontrol">In Progress</span>) </li>
+
+        <li class="li">Percentage Successful Transfers (total <span class="ph uicontrol">Successful</span> transfers out
+          of total transfers) </li>
+
+      </ul>
+
+      <p class="p"> Initially the table is sorted by <span class="ph uicontrol">Trading Partner</span>, then by
+          <span class="ph uicontrol">Host\Mailbox</span>, and finally <span class="ph uicontrol">Start Time</span>. See
+          <a class="xref" href="t_Dashboards_GeneralOperation.html#topic_x2g_bbs_35">Manipulating Dashboard Components</a> for information about how to use the table's
+        right-click menus.  </p>
+
+      <p class="p">In the upper right corner of the table, a <span class="ph uicontrol">Total Records</span> value is
+        displayed:</p>
+
+      
+      <p class="p">
+        <span class="ph uicontrol">Total Records</span> provides the number of records displayed in the
+          <span class="ph uicontrol">Transfer Details</span> table as well as the number of records represented
+        in the <span class="ph uicontrol">Transfer Summary</span> chart above. Initially, it will represent the
+        number of records in the query; however, it will change if any filters are selected.  </p>
+
+      <p class="p">Below is a description of each column in the <span class="keyword wintitle">Transfer Details</span>
+        table:</p>
+
+      <ul class="ul" id="topic_zld_5vp_m5__ul_edm_2yl_q5">
+        <li class="li"><span class="ph uicontrol">Start Time</span> specifies the start time for the transfer. This is a
+          linked cell. Clicking on a specific start time will display the <span class="keyword wintitle">Transfer Detail
+            Report</span>. See <a class="xref" href="t_Dashboards_TrnsfrDetailReport.html">Transfer Detail Report</a>. </li>
+
+        <li class="li"><span class="ph uicontrol">End Time</span> specifies the end time for the transfer. This field will
+          be blank for a transfer that is in progress. </li>
+
+        <li class="li"><span class="ph uicontrol">Status</span> specifies the specific status of the transfer. </li>
+
+        <li class="li"><span class="ph uicontrol">Direction</span> specifies whether the transfer is outbound (send) or
+          inbound (receive). </li>
+
+        <li class="li"><span class="ph uicontrol">Protocol</span> specifies the common name for the transport mechanism. </li>
+
+        <li class="li"><span class="ph uicontrol">File Name</span> specifies the file name. </li>
+
+        <li class="li"><span class="ph uicontrol">File Type</span> specifies the last extension of the file name (in
+          lowercase). </li>
+
+        <li class="li"><span class="ph uicontrol">File Size</span> specifies the file size in bytes. </li>
+
+        <li class="li"><span class="ph uicontrol">Tracked Type</span> specifies whether there is associated tracked data
+          for the transfer (EDI, XML, or TEXT). If no data is associated, it will report
+            <span class="ph uicontrol">untracked</span>. </li>
+
+        <li class="li"><span class="ph uicontrol">Run Type</span> specifies how the transfer was run (Interactive,
+          Scheduled, API, etc.). </li>
+
+        <li class="li"><span class="ph uicontrol">More</span> provides a link to possible features that are available for
+          the associated transfer.  At this time, <span class="ph uicontrol">More</span> links directly to a
+          file viewer. File viewing is only available if certain conditions were met at the time of
+          the transfer. Contact your VersaLex system administrator to ensure the following
+          conditions are met to enable the viewing capability:<ul class="ul" id="topic_zld_5vp_m5__ul_gr3_3yl_q5">
+            <li class="li">For remote hosts, the sentbox and receivedbox are configured.</li>
+
+            <li class="li">For local hosts, the archive sentbox and receivedbox are configured.</li>
+
+            <li class="li"><span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Other</span> &gt; <span class="ph uicontrol">Disable Date/Time Portion Of Filenames In Sent/Receivedbox</span></span> is cleared.</li>
+
+            <li class="li">When you click <span class="ph uicontrol">More</span>, if the above conditions were not met,
+              and therefore a copy of the file is not available, you will receive an
+                error.<p class="p">
+                If, however, a copy of the file is available, the <span class="keyword wintitle">File Viewer</span>
+                will display the file. See <a class="xref" href="t_Dashboards_TrnsfrDBFileViewer.html">Transfer Dashboard File Viewer</a>. </p>
+</li>
+
+          </ul>
+</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Dashboards_TransferDashboard.html" title="Transfer Dashboard"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Transfer Dashboard</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

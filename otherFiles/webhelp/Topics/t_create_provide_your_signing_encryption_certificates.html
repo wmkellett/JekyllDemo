@@ -1,0 +1,79 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The AS2, AS3, ebMS, OFTPv2, RNIF, and other protocols require use of a digital certificate for encryption and signing purposes. Other security features within VersaLex (e.g., XML Encryption within the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Create/Provide Your Signing/Encryption Certificates"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="create_provide_your_signing_encryption_certificates"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Create/Provide Your Signing/Encryption Certificates</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="create_provide_your_signing_encryption_certificates">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Create/Provide Your
+                    Signing/Encryption Certificates</h1>
+
+   <div class="body">
+      <p class="p">The AS2, AS3, ebMS,
+         OFTPv2, RNIF, and other protocols require use of a digital certificate for encryption and
+         signing purposes. Other security features within VersaLex (e.g., XML Encryption within the
+         Mailbox Packaging Tab. See <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>) also require a digital
+         certificate. As a pre-requisite to setting up a trading relationship, digital certificates
+         must be created and forwarded to your trading partner. For general information on digital
+         certificates, see <a class="xref" href="t_certificate_overview.html">Certificate Overview</a>.</p>
+
+      
+      <p class="p">If you have not already done so, generate a user certificate to be used for signing
+         messages sent to your trading partner and decrypting message received from your trading
+         partner.</p>
+
+      <div class="p">Use the Local Listener configuration wizard (see <a class="xref" href="t_use_a_host_mailbox_wizard.html">Use a Host/Mailbox Wizard</a>) and
+         follow the easy steps to generate a new self-signed user certificate for signing and
+         encryption. Normally the same certificate is used for signing and encryption, but if
+         required they can be different certificates. Be sure to remember/record the password of the
+         certificate(s) created. <div class="note note"><span class="notetitle">Note:</span> The Local Listener wizard is also used to configure your
+            external address and ports.</div>
+</div>
+
+      <p class="p">Your trading partner may not allow self-signed certificates, and instead require that your
+         certificate be signed by a trusted Certificate Authority (CA). To acquire a CA-signed
+         certificate, forward a Certificate Signing Request (CSR) to the CA. See <a class="xref" href="../Tasks/t_WebUI_generate_pem-formatted_certificate_signing_request.html" title="Once the self-signed user certificate has been generated, create and copy a PEM (Privacy Enhanced Mail)-formatted Certificate Signing Request (CSR) and paste it onto a web form on a Certificate Authority (CA) website. The CSR contains the public key of the key pair generated with the user certificate.">Generating PEM-formatted Certificate Signing Requests</a>. Then, after receiving a signed
+         certificate back from the CA, replace your self-signed certificate with the CA-signed
+         certificate. See <a class="xref" href="../Tasks/t_WebUI_replace_trusted_ca_certificates.html" title="When a trusted CA certificate has been updated by a trading partner, you can easily replace it in the certificate store while retaining the original file name so the partner’s certificate defined in your host configurations does not need to be updated.">Replacing Trusted CA Certificates</a>.</p>
+
+      <p class="p">If you already have a certificate and private key currently stored outside of VersaLex to
+         be used for signing/encryption, import the certificate and private key. See <a class="xref" href="t_WebUI_import_certificate.html">Importing Certificates</a></p>
+
+      <p class="p">If you have <strong class="ph b">multiple</strong> trading relationships, you may be able to use the same user
+         certificate for all. The Local Listener wizard sets the default signing/encryption
+         certificates in the <span class="keyword wintitle">Local Listener: Certificates</span> tab . See <a class="xref" href="../Tasks/t_Configure_Local_Listener_Certificates.html" title="Define Local Listener default signing and encryption certificates for applicable services, for example, AS2 or ebXML.">Configuring certificates for Local Listener</a>. If a different user certificate must be used for a
+         specific trading relationship, the Local Listener certificates can be overridden at the
+         mailbox level (e.g. <a class="xref" href="../References/r_AS2_Mailbox_CertificatesTab.html" title="Use this tab to associate a trading partner's signing and encryption certificates with this mailbox and to override your own Local Listener's signing and encryption certificates, if necessary.">AS2 Mailbox: Certificates Tab</a>).</p>
+
+      <p class="p">The method of certificate exchange must be agreed upon with the trading partner.
+         Certificates may be exchanged through a web site, a courier service, regular mail, as email
+         attachments or through EDIINT Certificate Exchange Messaging (CEM) – refer to <a class="xref" href="t_WebUI_exchanging_certificates_with_your_trading_partner.html">Exchanging Certificates
+            with Your Trading Partner </a> for
+         further information. (The mailbox <span class="keyword wintitle">Notes</span> tab may come preconfigured
+         with specific information concerning certificate exchange with a particular trading
+         partner.)</p>
+
+      <p class="p">If emailing, use the <a class="xref" href="t_email_profile_to_your_trading_partner.html">Email Profile </a> utility. This utility is also used to send your URL
+         information. Even if the utility will not be used to forward your profile to your trading
+         partner, the utility can be used to capture the information locally.</p>
+
+      <p class="p">The Email Profile utility automatically exports the appropriate user certificate(s) for
+         attachment. If you are not using the utility, you need to export your user certificate by
+         hand.  See <a class="xref" href="t_WebUI_export_certificate.html">Exporting Certificates</a></p>
+
+      
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

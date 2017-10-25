@@ -1,0 +1,103 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="VersaLex provides the ability to create an email containing all the required profile information for a specified mailbox and send it to your trading partner. Any profile information that is configured ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Email Profile to Your Trading Partner"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="email_profile_to_your_trading_partner"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Email Profile to Your Trading Partner</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="email_profile_to_your_trading_partner">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Email Profile to Your
+                    Trading Partner</h1>
+
+   <div class="body">
+      <p class="p">VersaLex provides the ability to create an email containing all the required profile
+         information for a specified mailbox and send it to your trading partner. Any profile
+         information that is configured for a specified mailbox can automatically be included in
+         this email. This information includes any URLs (if applicable) and necessary
+         certificates. </p>
+
+      
+      <p class="p">To send your profile information to your trading partner, select a mailbox in the active
+         tree pane, right click and select <span class="ph uicontrol">Email Profile</span>
+      </p>
+
+      
+      <div class="p">
+         <div class="note note"><span class="notetitle">Note:</span> You may need to extract your service’s profile information prior to actually defining
+            a host/mailbox relationship.  To do this, select a service under the Local Listener,
+            right-click and select <span class="ph uicontrol">Email Profile</span>. </div>
+
+      </div>
+
+      
+      <div class="p">
+         <div class="note note"><span class="notetitle">Note:</span> This example is for AS2 mailboxes. The Profile Information section will differ by
+            protocol.</div>
+
+      </div>
+
+      
+      <p class="p">Complete the information on the screen:</p>
+
+      <ol class="ol" id="email_profile_to_your_trading_partner__ol_zjf_bcr_ps">
+         <li class="li">In the <span class="ph uicontrol">To:</span> field enter the email address of your trading
+            partner. If the mailbox is associated with a Trading Partner (see <a class="xref" href="t_trading_partner_management.html">Trading Partner Management </a>) and the
+            Trading Partner has Technical contacts, then a <span class="ph uicontrol">Get Partner
+               Contacts</span> button will be displayed. Clicking this button will fill the
+               <span class="ph uicontrol">To:</span> field with all the associated Technical contacts. <ol class="ol" type="a" id="email_profile_to_your_trading_partner__ol_obc_3cr_ps">
+               <li class="li">You can also choose to send a copy of this email to your registered System
+                  Administrator Email address or to the email address that was specified in the
+                  primary contact information when you registered your product.</li>
+
+            </ol>
+</li>
+
+         <li class="li">The <span class="ph uicontrol">From:</span> field default value is taken from the System
+            Administrator email address defined in the <span class="keyword wintitle">Options &gt; Other</span>
+            panel. If this field contains  multiple email addresses, only the first address is
+            displayed. </li>
+
+         <li class="li">Update the <span class="ph uicontrol">Subject:</span> field as needed.</li>
+
+         <li class="li">If multiple listening ports are specified (that is, HTTP and HTTP/s for AS2, ebMS,
+            RosettaNet or WS;  FTP, FTP/s Explicit and/or FTP/s Implicit for AS3 or FTP servers; or
+            OFTP and OFTP/s or OFTP), multiple URLs are displayed. You can select and send any or
+            all of the displayed URLs to your trading partner.</li>
+
+         <li class="li">Choose the <span class="ph uicontrol">Send all certificates in one zip file</span> option if your
+            trading partner's email client has difficulty receiving files with a
+               <span class="ph filepath">.cer</span> extension for X509 certificates;  <span class="ph filepath">.asc</span>
+            for PGP public keys;  or <span class="ph filepath">.pub</span>  for SSH or OpenSSH public keys.
+            (This is a common problem with MS Outlook.) </li>
+
+         <li class="li">Optional - Type an Optional Message for your trading partner.</li>
+
+         <li class="li">Click <span class="ph uicontrol">Send</span>. A <span class="keyword wintitle">Profile Confirmation</span> dialog
+            box
+            appears.</li>
+
+         <li class="li">An additional Security Warning is displayed to indicate that this information will be
+            sent in clear text via email over the internet. If you want to send anyway, click
+               <span class="ph uicontrol">Yes</span>. To suppress this Security Warning for future profiles
+            that you email, select the <span class="ph uicontrol">Do not show this message again</span> option
+            at the bottom of this
+            panel.</li>
+
+      </ol>
+
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

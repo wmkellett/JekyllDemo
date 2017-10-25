@@ -1,0 +1,103 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="To start the LexiCom server. From the AS/400 command line, type the command STRLEXSVR to start the LexiCom server.  The server will take a few minutes to start. The server is fully started when port ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Starting and Stopping on the AS/400"></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_as_400_setup_and_installation.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="starting_and_stopping_on_the_as_400"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Starting and Stopping on the AS/400</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="starting_and_stopping_on_the_as_400">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_FileSystem.html" title="File System">File System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation">AS/400 Setup and Installation</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Starting and
+                    Stopping on the AS/400</h1>
+
+   
+   <div class="body taskbody">
+      <div class="section context"></div>
+
+      <ul class="ul steps-unordered" id="starting_and_stopping_on_the_as_400__steps_jl3_z4w_cy"><li class="li step">
+            <span class="ph cmd">To start the LexiCom server.</span>
+            <ol class="ol substeps" id="starting_and_stopping_on_the_as_400__substeps_wqz_4pw_cy">
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">From the AS/400 command line, type the command
+                        <kbd class="ph userinput">STRLEXSVR</kbd> to start the LexiCom server.  </span>
+                  <div class="itemgroup info">The server will take a few minutes to start. </div>
+                  <div class="itemgroup info">The server is fully started when port 1099 and the HTTP(/S) port (if using
+                     AS2) are active.  </div>
+                  <div class="itemgroup info">If using only the FTP(/S) and/or HTTP(/S) protocols, the server is fully
+                     started when port 1099 is active.  Additionally, the message ‘<samp class="ph codeph">LexiCom
+                        AS/400 process is now running.</samp> is written to the QSYSOPR
+                     log.</div>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">You can easily view the existence of these ports from System i Navigator
+                     (under <span class="ph menucascade"><span class="ph uicontrol">Network &gt; TCP/IP Configuration &gt;  IPv4 &gt; Connections</span></span>), or you can type the <kbd class="ph userinput">WRKTCPSTS</kbd> or the
+                        <kbd class="ph userinput">netstat</kbd> command from the AS/400 command line and then
+                     select Option 3 (Work with IPv4 connection status).</span>
+               </li>
+
+            </ol>
+
+         </li>
+<li class="li step">
+            <span class="ph cmd">To stop the <span class="ph">Cleo LexiCom</span> server.  </span>
+            <ol class="ol substeps" id="starting_and_stopping_on_the_as_400__substeps_n3g_jpw_cy">
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Type the command <kbd class="ph userinput">ENDLEXSVR</kbd> from the AS/400 command
+                     line.</span>
+                  <div class="itemgroup info">
+                     <p class="p">You can also stop the <span class="ph">Cleo LexiCom</span>
+                        server from the <span class="ph">Cleo LexiCom</span> UI
+                        running through the IFS mapped drive.   Select the <span class="ph menucascade"><span class="ph uicontrol">File &gt; Stop AS/400 </span></span> menu option.</p>
+
+                     <p class="p">A dialog box appears asking you to confirm that you want to stop the LexiCom
+                        AS/400 process.</p>
+
+                     <p class="p">The message, <samp class="ph codeph">LexiCom AS/400 process is stopping…</samp>’ is
+                        written to the <span class="ph filepath">QSYSOPR</span> log. </p>
+
+                  </div>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">Click on the "Yes" button and the LexiCom AS/400 process will be stopped and
+                     the message ‘<strong class="ph b">LexiCom AS/400 process has stopped.</strong>’ will be written to the
+                     QSYSOPR log.</span>
+                  <div class="itemgroup info">
+                     <p class="p">It may take several minutes for the server to stop, especially if the server
+                        is currently processing a message. </p>
+
+                  </div>
+               </li>
+
+               <li class="li substep substepexpand">
+                  <span class="ph cmd">You can verify the server has stopped by checking the port connections as
+                     described above or by checking the <span class="ph filepath">QSYSOPR</span> log for the
+                     message ‘<strong class="ph b">LexiCom AS/400 process has stopped.</strong>’.</span>
+               </li>
+
+            </ol>
+
+         </li>
+</ul>
+
+      <div class="section postreq">
+         <p class="p">When you want to start the <span class="ph">Cleo LexiCom</span> application
+            again on the AS/400, you must run the <strong class="ph b">STRLEXSVR</strong> command from the AS/400 command
+            line.</p>
+
+      </div>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_as_400_setup_and_installation.html" title="AS/400 Setup and Installation"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS/400 Setup and Installation</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

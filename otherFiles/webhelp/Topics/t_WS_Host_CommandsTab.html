@@ -1,0 +1,153 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Commands tab displays a list of available commands. Each command must be mapped to one or more actual web service method calls. Double-click a command or right-click the row and select Edit from ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="WS Host: Commands Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WS_Host.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_dkq_3yd_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>WS Host: Commands Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_dkq_3yd_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_ws_configuration.html" title="WS Configuration">WS Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_WS_Host.html" title="WS Host">WS Host</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WS_Host.html" title="WS Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">WS Host</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">WS Host: Commands Tab </h1>
+
+  <div class="body">
+    
+    <p class="p">The <span class="keyword wintitle">Commands</span> tab displays a list of available commands. Each command
+      must be mapped to one or more actual web service method calls. Double-click a command or
+      right-click the row and select <span class="ph uicontrol">Edit</span> from the menu to display the
+        <span class="keyword wintitle">Methods</span> dialog box. </p>
+
+    <div class="section"><h2 class="title sectiontitle">Using the Methods dialog box</h2>
+      
+      <p class="p">Use the <span class="keyword wintitle">Methods</span> dialog box to add, edit, and order method calls to the
+        web service.</p>
+
+      
+      <ul class="ul" id="topic_dkq_3yd_b5__ul_r3p_54x_rt">
+        <li class="li">Click <span class="ph uicontrol">Add</span> to display the <span class="keyword wintitle">Edit Method</span> dialog
+          box, where you add a new web service call.</li>
+
+        <li class="li">For existing calls, highlight the entry and click <span class="ph uicontrol">Edit</span> or
+          double-click on the entry to display the <span class="keyword wintitle">Edit Method</span> dialog box,
+          where edit the web service call.</li>
+
+        <li class="li">Highlight and click <span class="ph uicontrol">Delete</span> to remove the method call from the
+          list for the command.</li>
+
+        <li class="li">Use <span class="ph uicontrol">Move Up</span> and <span class="ph uicontrol">Move Down</span> to move the
+          highlighted method up and down in the list, respectively.</li>
+
+      </ul>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Adding or editing methods</h2>
+      
+      <p class="p">Adding or editing the method will display the <span class="keyword wintitle">Edit Method</span> dialog box.
+        Provide information about the method you selected in the fields in the Edit Method dialog
+        box.</p>
+
+      
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Method</span></dt>
+
+          <dd class="dd">Choose the method you want to map from the drop-down menu. The menu is populate from
+            methods defined in the WSDL.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Return Variable</span></dt>
+
+          <dd class="dd">This field is enabled if the method selected returns a value. Use this field to define
+            a variable to store the result of the method call. Variable names must start and end
+            with <samp class="ph codeph">%</samp>. The type of the return data is displayed in parentheses
+            following the Return Variable label. This variable can be used as a parameter input to a
+            subsequent method call.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Success Expression</span></dt>
+
+          <dd class="dd">An optional expression that, if specified and true, will deem the method call
+            successful. If the expression is false, the call is considered an error and subsequent
+            calls are aborted. See <a class="xref" href="t_ws_expressions.html">WS Expressions</a> for information about specifying
+            an expression.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Parameters</span></dt>
+
+          <dd class="dd">A table that contains the parameters for the selected method as defined by the
+            WSDL. Each line in the table represents one parameter and contains the parameter's name
+            and type, indicates whether the parameter is part of a choice, whether the parameter is
+            required, whether the parameter field is a password field, and the parameter value.
+              <p class="p">If the WSDL specifies that the parameter part of a choice, no more than one of the
+              choices can be used. If the WSDL has a choice of three items, the
+                <span class="ph uicontrol">Choice</span> column will display <kbd class="ph userinput">1/3</kbd>,
+                <kbd class="ph userinput">2/3</kbd>, and <kbd class="ph userinput">3/3</kbd> to indicate each item of
+              the group. If the WSDL specifies that the parameter is required, the
+                <span class="ph uicontrol">Reqd</span> field will be selected and disabled. Otherwise, you can
+              check the <span class="ph uicontrol">Reqd</span> field to ensure that the parameter is defined
+              before the method is called. In the value field you can enter a legal value or
+              previously defined variable. Selecting that cell will provide a drop-down with
+              system-recognized variables that match the parameter type. </p>
+<p class="p">If the parameter is
+              a complex type or array type, a button is displayed and can be used to invoke another
+              dialog to enter the values for the complex type or array values respectively. See
+                <a class="xref" href="t_ws_variables.html">WS Variables</a> for more information about variables. If the field is
+              left blank, then a value can be entered for it at the mailbox and/or action levels. If
+              the field is selected as required then a value must be entered at the mailbox or
+              action levels.</p>
+</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Incoming File</span></dt>
+
+          <dd class="dd">The Incoming File section of the dialog box is displayed when the methods are being
+            defined for the <span class="keyword cmdname">GET</span> command.  The <span class="ph uicontrol">File Name</span> is
+            used to define the resulting filename for the file to get. This can be an actual file
+            name value or a variable that stores the file name result. The <span class="ph uicontrol">File Data
+              Variable</span> should specify the resulting variable that holds the data to
+            get. System-recognized values will appear in a drop-down box when selecting that field.
+            See <a class="xref" href="t_ws_variables.html">WS Variables</a> for more information on specifying variable values. The
+              <span class="ph uicontrol">Continue Expression</span> is an expression which, if specified and
+            true, determines whether to continue making calls for the same file or for subsequent
+            files. If <span class="ph uicontrol">Get File In Blocks</span> is selected on the
+              <span class="keyword wintitle">Advanced</span> tab, then this condition determines
+            whether to continue calling the same method to continue getting blocks for the same
+            file. If <span class="ph uicontrol">Get File In Blocks</span> is cleared, then this condition
+            determines whether there are more files to get and will repeat calling the same method
+            until the condition returns false.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Incoming Directory</span></dt>
+
+          <dd class="dd">The Incoming Directory field is displayed when the methods are being defined for the
+              <span class="keyword cmdname">DIR</span> command. The <span class="ph uicontrol">%directoryfiles%</span> is used to
+            define the location of the directory file array when the array is not returned at the
+            top-most level. If the array is at the top-most level,
+              <span class="ph uicontrol">%directoryfiles%</span> is defined in the <span class="ph uicontrol">Return
+              Variable</span> and this field will not be used. </dd>
+
+        
+      </dl>
+
+    </div>
+
+    
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WS_Host.html" title="WS Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">WS Host</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

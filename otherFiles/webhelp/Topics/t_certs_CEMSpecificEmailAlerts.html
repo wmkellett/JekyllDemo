@@ -1,0 +1,77 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The following email alerts will be generated and sent to the email address(es) specified in the Admin Email Address field (see System ) on the Other tab in Configure System Options panel when the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="CEM-Specific Email Alerts"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_g15_hyh_f5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>CEM-Specific Email Alerts</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_g15_hyh_f5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html" title="Exchanging Certificates with Your Trading Partner">Exchanging Certificates with Your Trading Partner</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html" title="Exchanging Certificates with Your Trading Partner"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Exchanging Certificates with Your Trading Partner</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">CEM-Specific Email Alerts</h1>
+
+  <div class="body">
+    <p class="p"> The following email alerts will be generated and sent to the email address(es) specified in
+      the <span class="ph uicontrol">Admin Email Address</span> field (see
+        <a class="xref" href="t_WebUI_System.html">System</a>) on the <span class="keyword wintitle">Other</span>
+      tab in <span class="keyword wintitle">Configure System Options</span> panel when the following events occur: </p>
+
+    <ol class="ol" id="topic_g15_hyh_f5__ol_bmf_rkl_gv">
+      <li class="li">An inbound CEM Request message is received by a trading partner and auto-accept has not
+        been enabled. (See <a class="xref" href="t_certs_AutoAcceptInbEDDINTCEMReq.html">Auto-Accepting Inbound EDIINT CEM Requests</a>.) </li>
+
+      <li class="li">An inbound CEM Response message is received by a trading partner.</li>
+
+      <li class="li">An inbound CEM Response message has not been received by the trading partner in response
+        to a previously pending CEM Request before the locally specified 'Respond By' date (from the
+        originally received CEM Request message). <strong class="ph b">Daily email alerts will continue to be sent
+          until the response is received or some other manual intervention is taken. </strong></li>
+
+      <li class="li">An outbound CEM Response message has not been sent in response to a trading partner's
+        previously pending CEM Request before the trading partner's specified 'Respond By' date.
+          <strong class="ph b">Daily email alerts will continue to be sent until the response is sent or some other
+          manual intervention is taken.</strong>
+      </li>
+
+    </ol>
+
+    <p class="p">Additionally, daily email alerts will be sent for the following scenarios:</p>
+
+    <ol class="ol" id="topic_g15_hyh_f5__ol_dzt_skl_gv">
+      <li class="li">An inbound CEM Request message has been received by a trading partner and still requires a
+        response and it is still before the trading partner's specified 'Respond By' date.</li>
+
+      <li class="li">The pending SSL Server Certificate still needs to be sent and/or accepted by some of your
+        trading partners.  Since only one SSL Server Certificate may be active, the pending
+        certificate cannot be installed until all trading partners using the current SSL certificate
+        have received and have accepted the pending SSL certificate.  Once this has occurred, the
+        Local Listener will automatically install (normally within five minutes) and begin using the
+        pending SSL certificate.</li>
+
+      <li class="li">One or more of your trading partners has rejected the pending SSL Server Certificate. 
+        Since the new SSL Server Certificate cannot be activated in the Local Listener while it has
+        a <span class="ph uicontrol">Rejected</span> status for any trading partner relationships, you should
+        contact these trading partners to resolve any issues and then manually set the status to
+          <span class="ph uicontrol">Active</span> by selecting the <span class="ph uicontrol">Set As Active</span>
+        command option in the <span class="keyword wintitle">My Certs</span> panel and then click
+          <span class="ph uicontrol">Proceed...</span></li>
+
+      <li class="li">More than one unique SSL Server Certificate has been accepted by your trading partners.
+        Only one SSL Server Certificate may be defined in the Local Listener for HTTP/s<span class="ph"> or FTP/s
+          (VLTrader and Harmony only)</span>, however different SSL Server Certificates may be
+        specified for the HTTP/s and FTP/s protocols.</li>
+
+    </ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html" title="Exchanging Certificates with Your Trading Partner"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Exchanging Certificates with Your Trading Partner</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

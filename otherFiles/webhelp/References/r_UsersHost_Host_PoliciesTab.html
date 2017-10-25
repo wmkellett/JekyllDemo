@@ -1,0 +1,105 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The following describes the Policy tab. Password Policy The Password Policy defines the requirements and restrictions for passwords for local users.  By default, the Password Policy used by all ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Users: Policy Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_UsersHost_HostConfig.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_z5b_sst_g5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Users: Policy Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_z5b_sst_g5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_UsersHost_HeaderPage.html" title="Users Host">Users Host</a> / <a class="navheader_parent_path" href="../Topics/t_UsersHost_HostConfig.html" title="Users host configuration">Users host configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_UsersHost_HostConfig.html" title="Users host configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users host configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Users: Policy Tab</h1>
+
+  <div class="body refbody">
+    <div class="section"><p class="p">The following describes the <strong class="ph b">Policy</strong> tab.</p>
+
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Password Policy</dt>
+
+        <dd class="dd">The Password Policy defines the requirements and restrictions for passwords for local
+          users.  By default, the Password Policy used by all mailbox users is globally defined
+          using the <strong class="ph b">Enforce Password Policy</strong> option on the <span class="ph menucascade"><span class="ph uicontrol">System Options &gt; Other</span></span> tab. See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_Other.html">Other System Options</a>.</dd>
+
+        <dd class="dd">To specify a different set of password requirements and restrictions for all mailbox
+          users defined for a particular local Users:<ol class="ol" id="reference_z5b_sst_g5__ul_ncs_xjh_fv">
+            <li class="li">Select <span class="ph uicontrol">Override System Settings</span> and click
+                <span class="ph uicontrol">Edit</span> to display the Password Policy dialog box.</li>
+
+            <li class="li">Select <span class="ph uicontrol">Enforce the following password rules</span> to make the
+              fields in the dialog box editable and to activate the password rules you
+              configure.</li>
+
+            <li class="li">Modify the settings as needed, and click <span class="ph uicontrol">OK</span>.  See <a class="xref" href="../Topics/t_enhanced_security.html">Enhanced Security</a> for detailed information about Password Policy
+              options.</li>
+
+          </ol>
+</dd>
+
+      
+      
+        <dt class="dt dlterm">Security Policy</dt>
+
+        <dd class="dd">The Security Policy restricts incoming messages based on certain attributes.</dd>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Require IP filtering</span></dt>
+
+              <dd class="dd">Require all users of this group to log in from one of the whitelist IP addresses,
+                as specified in each user's IP Filter tab. If the <span class="ph uicontrol">Require IP
+                  filtering</span> check box is cleared, whitelist IP addresses are not
+                required for the users of this group, and the users can log in from anywhere. See
+                  <a class="xref" href="../Topics/t_ConfiguringIPFiltering.html">Configuring IP filtering</a> for more information. </dd>
+
+            
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Disallow unsecured FTP</span></dt>
+
+              <dd class="dd">Limits users to SSL connections only. When selected, users can successfully
+                authenticate only when an FTP/s or HTTP/s connection is used. (SSH FTP connections
+                are always secure.)</dd>
+
+            
+            
+              <dt class="dt dlterm"><span class="ph uicontrol">Restrict file patterns</span></dt>
+
+              <dd class="dd">Patterns that files must match to be permitted inbound. Patterns can include
+                wildcards and regular expressions. See <a class="xref" href="../Topics/t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a>. If you
+                specify multiple file patterns, separate them with semi-colons (;) or commas (,).
+                Alternatively, enter them on separate lines.  Examples of valid patterns include:<ul class="ul" id="reference_z5b_sst_g5__ul_qqp_gzh_3r">
+                  <li class="li"><span class="ph filepath">*</span> – any file pattern </li>
+
+                  <li class="li"><span class="ph filepath">*.*</span> – file must have an extension</li>
+
+                  <li class="li"><span class="ph filepath">*.edi;*.xml</span> – only .edi and .xml extensions acceptable
+                    (case sensitive)</li>
+
+                  <li class="li"><span class="ph filepath">[(?i).*\.(edi|xml)]</span> – only .edi and .xml extensions
+                    acceptable (case insensitive)</li>
+
+                </ul>
+</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+    </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_UsersHost_HostConfig.html" title="Users host configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users host configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

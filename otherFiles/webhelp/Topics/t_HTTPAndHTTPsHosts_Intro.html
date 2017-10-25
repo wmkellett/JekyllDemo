@@ -1,0 +1,257 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The generic HTTP and HTTP/s hosts are provided to allow a user to fully specify, from scratch, a client file transfer interface to an HTTP server.  If at all possible, use a pre-configured host ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="HTTP and HTTP/s Hosts"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_http_configuration.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_http_command_reference.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_izh_pgg_fr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>HTTP and HTTP/s Hosts</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_izh_pgg_fr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">HTTP and HTTP/s Hosts</h1>
+
+  <div class="body">
+    <p class="p">The generic HTTP and HTTP/s hosts are
+      provided to allow a user to fully specify, from scratch, a client file transfer interface to
+      an HTTP server.  If at all possible, use a pre-configured host specific to the target server -
+      this will save the effort of having to research, specify, and then debug the interface.</p>
+
+    <p class="p">Not all HTTP servers will support or require the full set of host commands allowed by <span class="ph">Cleo Harmony</span>.  At
+      a minimum, the server must support PUT and/or GET.  The underlying HTTP method that the
+      command uses is dependent on the specific HTTP server.  The following action commands are
+      available in <span class="ph">Cleo Harmony</span>:</p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_izh_pgg_fr__table_kd5_lng_qw" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d199756e52">   </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d199756e55"> Command </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d199756e58"> Purpose </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d199756e61">
+              <strong class="ph b">
+                <span class="ph">Underlying HTTP method</span>
+              </strong>
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 "> Host commands </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> CONNECT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Connect (login) to the host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> Always POST </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> PUT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Send one or more files to the host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> Either POST or PUT </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> GET </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Receive one or more files from the
+              host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> Either POST or GET </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> PUT+GET </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Send one or more files to the host and
+              receive one or files from the host in return </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> Always POST </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> DIR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Get a directory listing of available
+              files from the host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> Either POST or GET </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> CONFIRM </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Confirm, on the host, the receipt of
+              one or more files </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> Always POST </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> DELETE </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Delete one or more files on the host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> Either POST or DELETE </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">
+              <strong class="ph b">
+                <span class="ph">Local commands</span>
+              </strong>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> SET </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Change an action property value </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> CLEAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Clears an action string property value </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> SYSTEM </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Execute a local system command </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> WAIT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Pause </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> LCOPY </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Copy one or more local files </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> LDELETE </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Delete one or more local files </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> LREPLACE </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Replaces bytes in one or more local
+              files </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> CHECK </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Check for a transfer, file, or
+              directory (VLTrader and Harmony only) </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e55 "> SCRIPT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e58 "> Execute a JavaScript File (VLTrader
+              and Harmony only) </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d199756e61 "> - </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_http_configuration.html">HTTP Configuration</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+First activate either a trading partner specific host or the generic HTTP or HTTP/s             pre-configured host (see below).  The generic HTTP host provides an interface over             non-secure HTTP.  If interfacing to a server that requires use of the Secure Socket             Layer (SSL) over HTTP, then the generic HTTP/s host must be used.</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_http_command_reference.html">HTTP Command Reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

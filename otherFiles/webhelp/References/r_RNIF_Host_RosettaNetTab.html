@@ -1,0 +1,110 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="RNIF Version Indicates the version of RosettaNet to use for communications. Select v2.0 or v1.1 . Outbound Transmission protocol. Select HTTP to transmit over the standard HTTP protocol. Select HTTP/s ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="RNIF Host: RosettaNet Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_RNIF_Host.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_t4d_ydk_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>RNIF Host: RosettaNet Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_t4d_ydk_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_rnif_configuration.html" title="RNIF Configuration">RNIF Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_RNIF_Host.html" title="RNIF Host">RNIF Host</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_RNIF_Host.html" title="RNIF Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Host</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">RNIF Host: RosettaNet Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">RNIF Version</span></dt>
+
+          <dd class="dd">Indicates the version of RosettaNet to use for communications. Select
+              <span class="ph uicontrol">v2.0</span> or <span class="ph uicontrol">v1.1</span>.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Outbound</span></dt>
+
+          <dd class="dd">Transmission protocol. Select <span class="ph uicontrol">HTTP</span> to transmit over the
+            standard HTTP protocol. Select <span class="ph uicontrol">HTTP/s</span> to transmit using secure
+            HTTPS protocol. If you select <span class="ph uicontrol">HTTP/s</span>, you can select
+              <span class="ph uicontrol">Check certificate server name</span> to validate the name of the
+            certificate as part of the secure transport.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Inbound</span></dt>
+
+          <dd class="dd">Indicates whether your trading partner is required to use <span class="ph uicontrol">HTTP/s
+              only</span> for inbound file transfers. </dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Resource Path</span></dt>
+
+          <dd class="dd">The address of the connecting RosettaNet server. If necessary, this value includes any
+            URL parameters as well.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Overwrite duplicate file names</span></dt>
+
+          <dd class="dd">Allows for unique naming of stored files. Select the check box to overwrite any files
+            that exist in the specified <span class="ph uicontrol">Inbox</span>. Clear the check box to append
+            incoming files with the same name as one as an existing. Filenames are appended with a
+            unique number beginning with 1 and incremented each time a new file is saved.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Use default file name</span></dt>
+
+          <dd class="dd">Allows the incoming file to be given the name specified in its associated field.  Use
+            this option to override the file name specified by the sender. This feature is useful if
+            the received file name must be something other than its original file name, and is
+            common for iSeries (AS/400) platforms where the file name must be specified with a .mbr
+            extension. You can use any of the supported macros, allowing for the incoming file to be
+            named with a date-time stamp, for example. See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> (Destination
+            File context) for information about applicable macros. </dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Add PIP Directory to Inbox</span></dt>
+
+          <dd class="dd">Allows incoming messages to be sorted based on a PIP-code and PIP version number to a
+            subdirectory (under the <span class="ph uicontrol">Inbox</span> specified on the
+              <span class="keyword wintitle">General</span> tab). The subdirectory name is formatted as
+              <samp class="ph codeph">PIPcode_PIPVersion</samp> and is based on the incoming message.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Incoming Content Format</span></dt>
+
+          <dd class="dd">Indicates the format in which incoming documents are written. The options are
+              <span class="ph uicontrol">Original</span>, <span class="ph uicontrol">Wrapped XML</span>,
+              <span class="ph uicontrol">Wrapped CDATA</span>, and <span class="ph uicontrol">Wrapped BASE64</span>. See
+            the <span class="keyword wintitle">Incoming Documents</span> section in <a class="xref" href="../Topics/t_rnif_overview.html">RNIF Overview</a>.
+          </dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Two-action only</span></dt>
+
+          <dd class="dd">Controls whether <span class="ph uicontrol">Incoming Content Format</span> is used for two-action
+            PIPs only or both one and two-action PIPs. See the <span class="keyword wintitle">Incoming
+              Documents</span> section in <a class="xref" href="../Topics/t_rnif_overview.html">RNIF Overview</a>.</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_RNIF_Host.html" title="RNIF Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Host</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

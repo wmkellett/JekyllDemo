@@ -1,0 +1,935 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="An action is classified as a Commands action or a JavaScript action. Note: JavaScript actions are supported only in the Cleo Harmony application. For JavaScript actions, you can enter statements in a ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Compose an Action"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="compose_an_action"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Compose an Action</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="compose_an_action">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Compose an Action</h1>
+
+   <div class="body taskbody">
+      <div class="section context">
+         <p class="p">An action is classified as a <em class="ph i">Commands</em> action or a
+               <em class="ph i">JavaScript</em> action. </p>
+
+         <div class="note note"><span class="notetitle">Note:</span> JavaScript actions are supported only in the <span class="ph">Cleo Harmony</span>
+            application.</div>
+
+         <p class="p">For JavaScript actions, you can enter statements in a
+            free-form manner. The <span class="ph">Cleo Harmony</span> application uses
+            Rhino (http://www.mozilla.org/rhino), which is an open source, pure Java, JavaScript
+            engine, to interpret and compile JavaScript source files into temporary Java classes for
+            execution. Visit <a class="xref" href="https://developer.mozilla.org/en/Rhino_JavaScript_Compiler" target="_blank">https://developer.mozilla.org/en/Rhino_JavaScript_Compiler</a>.
+            </p>
+
+         
+         <p class="p">See the API javadocs for examples and a description of
+            the methods and functions available from within JavaScript (refer specifically to the
+            ISessionScript class javadoc). The methods include the ability to run other action
+            commands within JavaScript and writing to debug or the system log. These methods, when
+            combined with JavaScript, make it possible to have complex sequences or decisions that
+            would not be possible using Commands actions alone. </p>
+
+         <p class="p">For Commands, an action consists of one or more commands that are to be run sequentially
+            as a group. You can choose to have one action that does ALL sending and receiving, or
+            you can choose to separate sending and receiving into two or more actions, potentially
+            if sends and receives are not to be scheduled at the same intervals.</p>
+
+         <ol class="ol" id="compose_an_action__ol_mzm_nhr_ps">
+            <li class="li">Select the action in the tree
+               pane.</li>
+
+            <li class="li">The potential set of commands depends on the client-to-host protocol.  
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="compose_an_action__table_gtf_qhr_ps" class="table" frame="border" border="1" rules="all">
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     <thead class="thead" align="left">
+                        <tr class="row">
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e91">   </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e94">Command </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e97">FTP </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e100">HTTP<strong class="ph b">*</strong>
+                           </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e106">SSH<p class="p">FTP</p>
+</th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e112">OFTP </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e115">MQ </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e118">SMTP </th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e121">HSP</th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e124">MLLP</th>
+
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d115851e127"> Purpose </th>
+
+                        </tr>
+
+                     </thead>
+
+                     <tbody class="tbody">
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 "><strong class="ph b"><span class="ph">Host commands
+                                 </span></strong></td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">CONNECT</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_htf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_itf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_jtf_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Connect (login) to the
+                              host </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">PUT</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_ktf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_ltf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_mtf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_ntf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_otf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_ptf_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_qqm_zft_3v" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_dgt_zft_3v" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Send one or more files
+                              to the host </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">GET</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_qtf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_rtf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_stf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_ttf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_utf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_hz5_zft_3v" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Receive one or more
+                              files from the host </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">DIR</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_vtf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_wtf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_xtf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_ytf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Get a directory listing
+                              of available files from the host </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 "><span class="keyword cmdname">CD</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_ztf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_ewn_xft_3v" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Changes the current
+                              directory on the host </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">CONFIRM </span></td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_a5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Confirm, on the host,
+                              receipt of one or more files </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">DELETE</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_b5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Delete one or more files
+                              on the host </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">REQUEUE</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_c5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Requeues one or more
+                              previously received files on the host </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">QUOTE</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_d5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_e5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_f5f_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Send a raw command to
+                              the server </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">SITE</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_g5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Send a site specific
+                              command to the server </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">TYPE</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_h5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Sets file data type to
+                              ASCII or BINARY </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">
+                              <strong class="ph b">
+                                 <span class="ph">Local commands</span>
+                              </strong>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 "><span class="keyword cmdname">SET</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_i5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_j5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_k5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_l5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_m5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_n5f_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Change an action
+                              property value </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">CLEAR</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_o5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_p5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_q5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_r5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_s5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_t5f_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Clear an action string
+                              property </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">SYSTEM</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_u5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_v5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_w5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_x5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_y5f_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_z5f_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Execute a local system
+                              command </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">WAIT</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_avf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_bvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_cvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_dvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_evf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_fvf_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Pause </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">LCOPY</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_gvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_hvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_ivf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_jvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_kvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_lvf_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Copy local files
+                           </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">LDELETE</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_mvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_nvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_ovf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_pvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_qvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_rvf_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Delete local files
+                           </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">   </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">LREPLACE</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_svf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_tvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_uvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_vvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_wvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_xvf_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Replace bytes in local
+                              files </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 ">
+                              <strong class="ph b">
+                                 <span class="ph">Extended commands</span>
+                              </strong>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">CHECK</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_yvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_zvf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_awf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_bwf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_cwf_qhr_ps" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_dwf_qhr_ps" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Check for certain events
+                              or non-events. (<span class="ph">Cleo VLTrader</span>
+                              and <span class="ph">Cleo Harmony</span> only) </td>
+
+                        </tr>
+
+                        <tr class="row">
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e91 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e94 ">
+                              <span class="keyword cmdname">SCRIPT</span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e97 ">
+                              <img class="image" id="compose_an_action__image_g2s_lfb_r5" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e100 ">
+                              <img class="image" id="compose_an_action__image_h2s_lfb_r5" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e106 ">
+                              <img class="image" id="compose_an_action__image_i2s_lfb_r5" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e112 ">
+                              <img class="image" id="compose_an_action__image_j2s_lfb_r5" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e115 ">
+                              <img class="image" id="compose_an_action__image_k2s_lfb_r5" src="../Images/image056.jpg"></img>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e118 ">
+                              <span class="ph">
+                                 <img class="image" id="compose_an_action__image_l2s_lfb_r5" src="../Images/image056.jpg"></img>
+                              </span>
+                           </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e121 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e124 "> </td>
+
+                           <td class="entry" rowspan="1" colspan="1" valign="top" headers="d115851e127 ">Run an external
+                              JavaScript command. (<span class="ph">Cleo VLTrader</span>
+                              and <span class="ph">Cleo Harmony</span> only) </td>
+
+                        </tr>
+
+                     </tbody>
+
+                  </table>
+</div>
+
+               <p class="p"><strong class="ph b">*</strong>HTTP derivatives like AS2, EBICS, ebXML, RNIF and WS generally only
+                  support <span class="keyword cmdname">PUT</span>.</p>
+<p class="p">The actual supported set of commands and
+                  their syntax is further dependent on the host type.  For more information, see the
+                  section specific to the host type in question.</p>
+</li>
+
+            <li class="li">Right-click in the empty space or on a command in the <span class="keyword wintitle">Action</span>
+               tab to display a menu. (Note that JavaScript actions will not contain the
+                  <span class="ph uicontrol">Edit</span> or <span class="ph uicontrol">Comment</span> options.)
+                  <ol class="ol" type="a" id="compose_an_action__ol_epm_whr_ps">
+                  <li class="li">Select <span class="ph uicontrol">Edit</span> to edit the current line using the dialog
+                     editor (refer to step 4).</li>
+
+                  <li class="li">Select <span class="ph uicontrol">Insert</span> (or the <img class="image" id="compose_an_action__image_osh_xhr_ps" src="../Images/image554.gif"></img> button) to insert a
+                     new line before the current line using the dialog editor (refer to step
+                     4).</li>
+
+                  <li class="li">Select <span class="ph uicontrol">Move Down</span> or <span class="ph uicontrol">Move Up</span> (or
+                     the <img class="image" id="compose_an_action__image_krg_zhr_ps" src="../Images/image556.gif"></img> and <img class="image" id="compose_an_action__image_lrg_zhr_ps" src="../Images/image558.gif"></img> buttons) to move the
+                     current line down or up.</li>
+
+                  <li class="li">Select <span class="ph uicontrol">Comment</span> (or the <img class="image" id="compose_an_action__image_x2y_13r_ps" src="../Images/image560.gif"></img> button) to change the
+                     current command line to a comment line.</li>
+
+                  <li class="li">Select <span class="ph uicontrol">Delete</span> (or the <img class="image" id="compose_an_action__image_d13_c3r_ps" src="../Images/image562.gif"></img> button) to clear the
+                     current line.</li>
+
+               </ol>
+</li>
+
+            <li class="li">The <span class="keyword wintitle">Action</span> tab is a freeform editor. <span class="ph">For JavaScript actions, type in your JavaScript.
+               </span>For Commands actions, if you are familiar with the supported commands and
+               syntax, you can type commands in directly. Otherwise, you can use a dialog editor
+               that will format commands for you. To open the dialog editor, click the wizard
+               button. <span class="ph">The wizard button is not available for
+                  JavaScript
+                  actions.</span><ol class="ol" type="a" id="compose_an_action__ol_rrf_f3r_ps">
+                  <li class="li">Select the desired command from the list on the left.</li>
+
+                  <li class="li">The dialog box prompts for source and destination paths (and allows for
+                     browsing), when applicable to the command and possible for the host type.</li>
+
+                  <li class="li">Available options for the command are listed.</li>
+
+                  <li class="li">For HTTP, the dialog prompts for any needed or optional parameter and/or
+                     header values for the command.</li>
+
+                  <li class="li">For <span class="keyword cmdname">LCOPY</span> zipping operations, the dialog prompts for any
+                     needed password information if AES encryption is being used.</li>
+
+                  <li class="li">The resultant command text is displayed on the bottom line (native UI
+                     only).</li>
+
+                  <li class="li">Edit as necessary and click <span class="ph uicontrol">OK</span>.</li>
+
+               </ol>
+</li>
+
+         </ol>
+
+      </div>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

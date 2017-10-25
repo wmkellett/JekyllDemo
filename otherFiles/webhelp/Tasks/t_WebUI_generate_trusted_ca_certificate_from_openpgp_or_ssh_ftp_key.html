@@ -1,0 +1,147 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="An OpenPGP public key contains a master key and one or more subkeys. A Trusted CA Certificate can be created from the public key information to verify OpenPGP signatures and encrypt data before it is ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Generating Trusted CA Certificates from OpenPGP or SSH FTP Keys"></meta><meta name="abstract" content="An OpenPGP public key contains a master key and one or more subkeys. A Trusted CA Certificate can be created from the public key information to verify OpenPGP signatures and encrypt data before it is sent to your trading partner. A SSH FTP public key may be used for public key authentication with the SSH FTP server (VLTrader and Harmony only). The following describes how to import an OpenPGP or SSH FTP public key and generate a Trusted CA certificate."></meta><meta name="description" content="An OpenPGP public key contains a master key and one or more subkeys. A Trusted CA Certificate can be created from the public key information to verify OpenPGP signatures and encrypt data before it is sent to your trading partner. A SSH FTP public key may be used for public key authentication with the SSH FTP server (VLTrader and Harmony only). The following describes how to import an OpenPGP or SSH FTP public key and generate a Trusted CA certificate."></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Coverage" content="Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_certificate_manager.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="GenTrustedCACertificateOpenPGPSSHFTPKey"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Generating Trusted CA Certificates from OpenPGP or SSH FTP Keys</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="GenTrustedCACertificateOpenPGPSSHFTPKey">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Generating Trusted CA Certificates from OpenPGP or SSH FTP Keys</h1>
+
+   
+   
+   <div class="body taskbody"><p class="shortdesc">An OpenPGP public key contains a master key and one or more subkeys. A Trusted CA
+      Certificate can be created from the public key information to verify OpenPGP signatures and
+      encrypt data before it is sent to your trading partner. <span class="ph">A SSH FTP public key may be used
+         for public key authentication with the SSH FTP server (VLTrader and Harmony only).</span> The
+      following describes how to import an OpenPGP or SSH FTP public key and generate a Trusted CA
+      certificate.</p>
+
+      <div class="section context"></div>
+
+      <ol class="ol steps" id="GenTrustedCACertificateOpenPGPSSHFTPKey__steps_vhx_dtg_1s"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; Certificate Management &gt; Certificates</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Certificate Manager</span></span> or click the <span class="ph uicontrol">Certificates</span> button in the tool
+               bar. </span>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Import a key. Use one of the following methods.</span>
+            <ul class="ul choices" id="GenTrustedCACertificateOpenPGPSSHFTPKey__substeps_qvd_gtg_1s">
+               <li class="li choice"><strong class="ph b">Choose an OpenPGP Public Key file</strong> - Right-click the <span class="ph uicontrol">Trusted
+                     CAs</span> store and select <span class="ph menucascade"><span class="ph uicontrol">Generate &gt; Trusted CA Certificate from OpenPGP Key</span></span>.</li>
+
+               <li class="li choice"><strong class="ph b">Choose an SSH FTP Public Key file</strong> - Right-click the <span class="ph uicontrol">Trusted
+                     CAs</span> store and select <span class="ph menucascade"><span class="ph uicontrol">Generate &gt; Trusted CA Certificate from SSH FTP Key</span></span>.</li>
+
+            </ul>
+
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter the name of or navigate to the public key file and click
+                  <span class="ph uicontrol">Open</span>.</span>
+            <div class="itemgroup info">The <span class="keyword wintitle">Generate Certificate</span> dialog box appears.</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Enter the required information. See <a class="xref" href="../References/r_GenerateUserCert_Reference.html">User Certificate Reference</a> for information
+               about the fields.</span>
+            
+            <div class="itemgroup info"><dl class="dl">
+               
+                        
+                           <dt class="dt dlterm">User Alias </dt>
+
+                     <dd class="dd"> An arbitrary name for the certificate (for example,
+                           <kbd class="ph userinput">ACME</kbd>) </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">Common Name </dt>
+
+                           <dd class="dd">This value might be provided when importing the public key.
+                        Alternatively, enter a user name for client-style certificates or a fully
+                        qualified computer name (or registered IP address) for server-style
+                        certificates (for example,  <kbd class="ph userinput">acme.com</kbd>). </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">Email </dt>
+
+                           <dd class="dd">This value might be provided when importing the public key.
+                        Otherwise, enter the trading partner administrator email address (for
+                        example, <kbd class="ph userinput">user@acme.com</kbd>). </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">Organization Unit </dt>
+
+                           <dd class="dd">This could be a company department (for example, <kbd class="ph userinput">Acme
+                           Purchasing</kbd> or <kbd class="ph userinput">Acme Production</kbd>) </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">Organization </dt>
+
+                           <dd class="dd">Official company name (for example, <kbd class="ph userinput">Acme,
+                        Inc.</kbd>) </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">City </dt>
+
+                           <dd class="dd">Complete city name (for example, <kbd class="ph userinput">Loves Park</kbd>) </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">State </dt>
+
+                           <dd class="dd">State name (for example, <kbd class="ph userinput">IL</kbd>) </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">Country </dt>
+
+                           <dd class="dd">Two characters only (for example, <kbd class="ph userinput">US</kbd>).  (This
+                        is available through a pull down menu.) </dd>
+
+                        
+                        
+                           <dt class="dt dlterm">Valid For </dt>
+
+                           <dd class="dd">If the chosen key does
+                              not have an expiration date, enter the number of months (1-96) the
+                              certificate should be valid for. If the chosen key has an expiration
+                              date this field is not configurable. </dd>
+
+                        
+            </dl>
+</div>
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">After all the required information is entered, click <span class="ph uicontrol">OK</span>. 
+               After the certificate is created, the certificate is added under <span class="ph uicontrol">Trusted
+                  CAs</span> in the tree pane.</span>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">For OpenPGP, you can view the embedded OpenPGP key fingerprint and usage in the
+                  <span class="keyword wintitle">Certificate Manager</span> (using the right and/or bottom scroll
+               bars, if necessary). Confirm the fingerprint shown matches the fingerprint provided
+               by your trading partner. This ensures the public key has not been altered and the
+               encrypted data you send can only be decrypted by your trading partner.</span>
+            
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

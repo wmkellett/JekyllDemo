@@ -1,0 +1,275 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The generic FTP and FTP/s hosts enable a user to fully specify a client file transfer interface to an FTP server.  If at all possible, use a pre-configured host specific to the target server; this ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="FTP and FTP/s Hosts"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ftp_configuration.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ftp_command_reference.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_fmf_kgg_fr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>FTP and FTP/s Hosts</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_fmf_kgg_fr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">FTP and FTP/s Hosts</h1>
+
+  <div class="body">
+    <p class="p">The generic FTP and FTP/s hosts enable a user to fully specify a client file
+      transfer interface to an FTP server.  If at all possible, use a pre-configured host specific
+      to the target server; this will save the effort of having to research, specify, and then debug
+      the interface.</p>
+
+    <p class="p">The generic FTP host provides an interface over non-secure FTP.  If you or your trading
+      partner requires Secure Socket Layer (SSL) FTP, use the generic FTP/s host.</p>
+
+    <p class="p">Not all FTP servers will support or require the full set of host commands allowed by
+      VersaLex.  At a minimum, the server must support PUT and/or GET.  The following action
+      commands are available on VersaLex:</p>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_fmf_kgg_fr__table_tgj_15l_pw" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d191103e49">   </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d191103e52"> Command </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d191103e55"> Purpose </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d191103e58">
+              <strong class="ph b">
+                <span class="ph">Underlying FTP method</span>
+              </strong>
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">
+              <strong class="ph b">
+                <span class="ph">Host commands</span>
+              </strong>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> PUT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Send one or more files to the host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> STOR </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> GET </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Receive one or more files from the
+              host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> RETR </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> DIR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Get a directory listing of available
+              files from the host </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> LIST </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> CD </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Changes the current directory on the
+              host. </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> CHDIR </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> QUOTE <var class="keyword varname">command</var>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Sends a raw command to the server </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> command </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> SITE </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Sends a site specific command to the
+              server </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> SITE </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> TYPE </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Sets file data type to ASCII or BINARY </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> TYPE </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 ">   </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">
+              <strong class="ph b">
+                <span class="ph">Local commands</span>
+              </strong>
+            </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> SYSTEM </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Execute a local system command </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> WAIT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Pause </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> SET </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Sets a property </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 ">   </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> CLEAR </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Clears a string property </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 ">   </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> LCOPY </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Copy one or more local files </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> LDELETE </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Delete one or more local files </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> LREPLACE </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Replace bytes in one or more local
+              files </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> CHECK </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Check for a transfer, file, or
+              directory (VLTrader and Harmony only) </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> - </td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e49 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e52 "> SCRIPT </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e55 "> Execute a JavaScript File (VLTrader
+              and Harmony only) </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d191103e58 "> - </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_ftp_configuration.html">FTP Configuration</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+Activate either a trading partner-specific host or the generic FTP or FTP/s       pre-configured host and then configure host, mailbox and actions. </li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_ftp_command_reference.html">FTP Command Reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+Descriptions of commands and their options, arguments, and parameters.</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

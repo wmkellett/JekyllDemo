@@ -1,0 +1,114 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The database first needs to be configured in the Applications &gt; Settings tab. See Applications . Once the database has been successfully configured, the application is enabled by selecting Dashboards ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Configure your dashboards"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Dashboards_VLNav.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_ojl_sxp_kr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configure your dashboards</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_ojl_sxp_kr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application">Configuring the Cleo VLNavigator application</a> / <a class="navheader_parent_path" href="../Topics/t_Dashboards_VLNav.html" title="Dashboards">Dashboards</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Dashboards_VLNav.html" title="Dashboards"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Dashboards</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Configure your dashboards</h1>
+
+  <div class="body">
+    <div class="p">The database first needs to be configured in the
+        <span class="keyword wintitle">Applications &gt; Settings</span> tab. See <a class="xref" href="t_Applications_VLNav.html">Applications</a>.
+      Once the database has been successfully configured, the application is enabled by selecting
+        <span class="ph uicontrol">Dashboards</span> under <span class="keyword wintitle">Applications</span> in the tree pane
+      and selecting <span class="ph uicontrol">Application enabled</span> in the <span class="keyword wintitle">Settings</span>
+        tab.<div class="note note"><span class="notetitle">Note:</span> Once the application is enabled, you must restart the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> service/daemon before
+        you use Cleo Dashboards.</div>
+</div>
+
+    
+    <p class="p">Once enabled, general access to <span class="keyword wintitle">Dashboards</span> is granted in the
+        <span class="keyword wintitle">User Group: Application Settings Tab</span>. See <a class="xref" href="t_User_Group_VLNav_Application_Settings.html">User Group Application Settings Tab</a>. Once general access is granted, additional user group
+      configuration is allowed, as described below.</p>
+
+    <div class="note note"><span class="notetitle">Note:</span> The user group configuration panels below refer to reports and components. The initial,
+      default published reports provided by Cleo are all dashboards (.dsh files) that are comprised
+      of library components (.lc files) that link to web reports (.wls files).</div>
+
+    <p class="p">The <span class="keyword wintitle">Privileges</span> sub-tab identifies access and update privileges at the
+      public, custom, and private levels:</p>
+
+    
+    <ul class="ul" id="topic_ojl_sxp_kr__ul_dh4_qgf_gv">
+      <li class="li"><span class="ph uicontrol">Public</span>: Standard reports/components provided by Cleo
+        deployment</li>
+
+      <li class="li"><span class="ph uicontrol">Custom</span>: Customized reports/components optionally available to other
+        users and user groups</li>
+
+      <li class="li"><span class="ph uicontrol">Private</span>: Customized reports/components only available to that
+        user</li>
+
+    </ul>
+
+    <p class="p">User groups will always have read-only access to the public <span class="keyword wintitle">Dashboards</span>
+      area and read-write access to their private <span class="keyword wintitle">Dashboards</span> area. Optionally,
+      a user group can be granted read-only or read-write access to the custom
+        <span class="keyword wintitle">Dashboards</span> reports/components area. With this method, Cleo's standard
+      reports/components are always available, and any customizations to Cleo’s standard
+      reports/components can be either kept private or shared with other users.</p>
+
+    <p class="p">The <span class="keyword wintitle">Reports</span> sub-tab identifies which reports are initially shown when
+      the user first opens the <span class="keyword wintitle">Dashboards</span> web application.</p>
+
+    
+    <p class="p">The report sequence defaults to the Cleo-provided standard <span class="ph uicontrol">Public</span>
+      reports. See <a class="xref" href="t_cleo_dashboards_and_cleo_system_monitor.html">Cleo Dashboards and Cleo System Monitor</a> for information about standard
+      reports.</p>
+
+    <ol class="ol" id="topic_ojl_sxp_kr__ol_mxg_wyl_q5">
+      <li class="li">Use the right-click menu options in the table to <span class="ph uicontrol">Move Up</span> or
+          <span class="ph uicontrol">Move Down</span> the sequence of a report in the list or to
+          <span class="ph uicontrol">Remove</span> a report from the list (this only removes the report from
+        this display list; the report itself still exists).</li>
+
+      <li class="li">Click <span class="ph uicontrol">Add</span> to insert a <span class="ph uicontrol">Public</span> or
+          <span class="ph uicontrol">Custom</span> report to the end of the list.</li>
+
+      <li class="li">Click <span class="ph uicontrol">Reset Defaults</span> to revert the list back to the standard
+        Cleo-provided <span class="ph uicontrol">Public</span> reports.</li>
+
+      <li class="li">Click <span class="ph uicontrol">Delete Report File</span> to permanently remove a
+          <span class="ph uicontrol">Custom</span> report from the report server.</li>
+
+    </ol>
+
+    <p class="p">The report sequence configured at the user group level can be overridden at the user
+      level. If <span class="ph uicontrol">Override User Group settings</span> is selected for a user, the same
+        <span class="keyword wintitle">Reports</span> sub-tab as above is enabled for the user and operates in a
+      similar fashion:</p>
+
+    <ol class="ol" id="topic_ojl_sxp_kr__ol_hcw_xyl_q5">
+      <li class="li">Use the right-click menu options in the table to <span class="ph uicontrol">Move Up</span> or
+          <span class="ph uicontrol">Move Down</span> the sequence of a report in the list or to
+          <span class="ph uicontrol">Remove</span> a report from the list (this only removes the report from
+        this display list; the report itself still exists).</li>
+
+      <li class="li">Click <span class="ph uicontrol">Add</span> to insert a <span class="ph uicontrol">Public</span> or
+          <span class="ph uicontrol">Custom</span> or <span class="ph uicontrol">Private</span> report to the end of the
+        list.</li>
+
+      <li class="li">Click <span class="ph uicontrol">Reset Defaults</span> to revert the list back to the standard
+        Cleo-provided <span class="ph uicontrol">Public</span> reports.</li>
+
+      <li class="li">Click <span class="ph uicontrol">Delete Report File</span> to permanently remove a
+          <span class="ph uicontrol">Private</span> report from the report server.</li>
+
+    </ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Dashboards_VLNav.html" title="Dashboards"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Dashboards</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

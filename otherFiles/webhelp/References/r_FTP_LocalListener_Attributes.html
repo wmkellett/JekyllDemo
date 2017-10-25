@@ -1,0 +1,172 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="FTP Select FTP to allow FTP clients to send requests over clear-text FTP. Specify a Port number. A value of 21 is the default for FTP. You can also use any other unused port value in the range of 1024 ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="FTP Local Listener reference"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_Local_Listener_FTP.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_s2g_2rf_lw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>FTP Local Listener reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_s2g_2rf_lw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_listener_configuration_topc_level.html" title="The Local Listener is automatically activated (on HTTP port 5080) the first time VersaLex is launched. This makes web browser service (supported only on Unix and Windows platforms) available &#34;out-of-the-box&#34; for systems lacking a graphics console. All other services require further user configuration before they are ready and available.">Listener Configuration</a> / <a class="navheader_parent_path" href="../Tasks/t_Configure_Local_Listener_FTP.html" title="The Cleo Harmony and Cleo VLTrader applications contain a full-featured, embedded FTP server for receiving FTP requests.">Configuring a Local Listener for FTP</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_Local_Listener_FTP.html" title="The Cleo Harmony and Cleo VLTrader applications contain a full-featured, embedded FTP server for receiving FTP requests."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring a Local Listener for FTP</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">FTP Local Listener reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <dl class="dl" id="reference_s2g_2rf_lw__dl_u2p_frf_lw">
+        
+          <dt class="dt dlterm">FTP</dt>
+
+          <dd class="dd">Select <span class="ph uicontrol">FTP</span> to allow FTP clients to send requests over
+            clear-text FTP.</dd>
+
+          <dd class="dd">Specify a <span class="ph uicontrol">Port</span> number. A value of <kbd class="ph userinput">21</kbd> is
+            the default for FTP. You can also use any other unused port value in the range of
+              <kbd class="ph userinput">1024</kbd> - <kbd class="ph userinput">65535</kbd>. Using non-standard ports
+            in the range of <kbd class="ph userinput">1</kbd> - <kbd class="ph userinput">1023</kbd> might interfere
+            with port numbers reserved by TCP/IP for other purposes. </dd>
+
+          <dd class="dd">You can configure FTP to listen on multiple ports by separating the field values with
+            commas. For example, suppose you specified port 5021, but you have some trading partners
+            who have outbound firewall restrictions and can only send to port 21. Specifying
+              <kbd class="ph userinput">5021,21</kbd> in the <span class="ph uicontrol">Port</span> field allows the
+            firewall-restricted trading partners to be able to send to your server while allowing
+            you to continue to accept inbound messages from your other trading partners on port
+            5021.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">FTP/s Explicit (AUTH TLS)</dt>
+
+          <dd class="dd">Select <span class="ph uicontrol">FTP/s Explicit (AUTH TLS)</span> to allow FTP clients to send
+            requests over both clear-text, non-secure FTP and encrypted, secure FTP/s.</dd>
+
+          <dd class="dd">Specify a <span class="ph uicontrol">Port</span> number. Port number <kbd class="ph userinput">989</kbd>
+            is standard for implicit FTP/s. You can also use any other unused port value in the
+            range of <kbd class="ph userinput">1024</kbd> - <kbd class="ph userinput">65535</kbd>. Using non-standard
+            HTTP ports in the range of <kbd class="ph userinput">1</kbd> - <kbd class="ph userinput">1023</kbd> might
+            interfere with port numbers reserved by TCP/IP for other purposes. </dd>
+
+          <dd class="dd">Select <span class="ph uicontrol">AUTH Required</span> to allow only encrypted communication on
+            the FTP/s explicit port. This means a client must issue an <span class="keyword cmdname">AUTH</span>
+            command to explicitly request security upon connecting or the server will refuse the
+            connection. However, you can configure FTP/s explicit to allow unencrypted communication
+            as well by clearing the <span class="ph uicontrol">AUTH Required</span> check box. In this
+            configuration, both clear-text, non-secure FTP and encrypted, secure FTP/s are supported
+            on the same port. Note that this setting has no effect on the plain FTP port or the
+            FTP/s implicit port.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">FTP/s Implicit</dt>
+
+          <dd class="dd">Select <span class="ph uicontrol">FTP/s Implicit</span> to allow FTP clients to send requests
+            over both clear-text, non-secure FTP and encrypted, secure FTP/s.</dd>
+
+          <dd class="dd">Specify a <span class="ph uicontrol">Port</span> number. Port number <kbd class="ph userinput">989</kbd>
+            is standard for implicit FTP/s. You can also use any other unused port value in the
+            range of <kbd class="ph userinput">1024</kbd> - <kbd class="ph userinput">65535</kbd>. Using non-standard
+            HTTP ports in the range of <kbd class="ph userinput">1</kbd> - <kbd class="ph userinput">1023</kbd> might
+            interfere with port numbers reserved by TCP/IP for other purposes. </dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">SSL Server Certificate</dt>
+
+          <dd class="dd">If you select <span class="ph uicontrol">FTP/s Explicit (AUTH TLS)</span> or <span class="ph uicontrol">FTP/s
+              Implicit</span>, select a valid <span class="ph uicontrol">SSL Server
+            Certificate</span>. Click <span class="ph uicontrol">Browse...</span> to navigate to and
+            select a certificate. Then, enter the <strong class="ph b">Password</strong> for the SSL Server Certificate's
+            private key. </dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Enable Passive Mode</dt>
+
+          <dd class="dd">Select <span class="ph uicontrol">Enable Passive Mode</span> to configure the FTP server to
+            support both active mode (unlike the command port, the client serves data ports) and
+            passive (or port) mode (like the command port, the server serves data ports). </dd>
+
+          <dd class="dd">If you enable passive mode, specify a passive port range using the <span class="ph uicontrol">Low
+              Port</span> and <span class="ph uicontrol">High Port</span> fields. The FTP server will
+            sequentially cycle through the passive port range while serving data ports during the
+            course of client connections.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Authenticate Client</dt>
+
+          <dd class="dd">If you select <span class="ph uicontrol">HTTP/s</span>, select <span class="ph uicontrol">Authenticate
+              Client</span> to require the SSL client to provide a valid certificate during SSL
+            negotiation.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Authentication Certificates</dt>
+
+          <dd class="dd">By default, all of the Certificate Manager Trusted CA and user certificates are
+            accepted for client authentication. To change this, use the <span class="ph uicontrol">Authentication
+              Certificates</span> button to establish the list of accepted FTP client
+            authentication certificates, which can be: <ul class="ul" id="reference_s2g_2rf_lw__ul_cxz_zff_lw">
+              <li class="li">all or a subset of the trusted CA certificates and/or</li>
+
+              <li class="li">all or a subset of the user certificates.</li>
+
+            </ul>
+This option must be decided and agreed upon between trading partners before sending
+            messages via SSL. After changing this setting, stop and restart the Local Listener to
+            clear cached SSL sessions.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Exchange Certificates</dt>
+
+          <dd class="dd"> Click <span class="ph uicontrol">Exchange Certificates</span> to send the SSL Server Certificate
+            to your trading partner(s). See <a class="xref" href="../Topics/t_WebUI_exchanging_certificates_with_your_trading_partner.html">Exchanging Certificates with Your Trading Partner</a> for further information.</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_Local_Listener_FTP.html" title="The Cleo Harmony and Cleo VLTrader applications contain a full-featured, embedded FTP server for receiving FTP requests."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring a Local Listener for FTP</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

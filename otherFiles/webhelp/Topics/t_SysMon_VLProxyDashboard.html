@@ -1,0 +1,178 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The VLProxy Dashboard provides system information related to the VLProxies configured in the currently selected VersaLex, which can be changed through the top bar . VLProxy Active Connections Table ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="VLProxy Dashboard"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cleo_system_monitor.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_lgk_31r_m5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>VLProxy Dashboard</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_lgk_31r_m5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_cleo_dashboards_and_cleo_system_monitor.html" title="Cleo Dashboards and Cleo System Monitor">Cleo Dashboards and Cleo System Monitor</a> / <a class="navheader_parent_path" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor">Cleo System Monitor</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">VLProxy Dashboard</h1>
+
+  <div class="body">
+    <p class="p">The VLProxy
+      Dashboard provides system information related to the VLProxies configured in the currently
+      selected VersaLex, which can be changed through the <a class="xref" href="t_cleo_dashboards_system_monitor_overview.html">top bar</a>.
+      </p>
+
+    
+    <div class="section"><h2 class="title sectiontitle">VLProxy Active Connections Table</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Active Connections</span> table displays each of the configured
+        VLProxy URLs, when the last communication with the VLProxy occurred, and number of active
+        connections to the VLProxy. If the <span class="keyword wintitle">Last Communication</span> was over three
+        minutes ago, then the table entry will turn red.</p>
+
+      <p class="p">If there are any red entries, that VLProxy is not communicating with this VersaLex. The
+          <span class="keyword wintitle">Last Communication</span> time indicates when it last successfully
+        communicated. The number of connections can be monitored against normal levels.</p>
+
+      <p class="p">Access to the <span class="keyword wintitle">VLProxy Connection Count History</span> sub-report is available
+        by clicking on the underlined value in the table.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy Connection Count History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Connection Count History</span> report displays the number of
+        connections active in VLProxy over time. By default, it will show the last 60 minutes of
+        history. Limit the history displayed to one or more VLProxies by selecting them in the
+          <span class="keyword wintitle">VLProxy</span> filter. Change the <span class="ph uicontrol">Start date/time</span> of
+        the chart and the number of <span class="ph uicontrol">Minutes</span> displayed using the parameter
+        control box. Use the zoom slider at the bottom to zoom in closer to a specific time. Holding
+        the cursor over a specific data point on the chart will display information about that data
+        point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy CPU Usage Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy CPU Usage</span> chart displays the CPU usage of the VLProxy.</p>
+
+      <p class="p">VLProxy does not typically use much CPU. A continuously high CPU load can indicate an
+        issue; another VLProxy should be added to the system to spread out the load.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">VLProxy CPU Usage History</span> sub-report by clicking on a
+        needle in the graph.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy CPU Usage History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy CPU Usage History</span> report displays the CPU load as a
+        percentage of total CPU capacity over time. By default, it will show the last 60 minutes of
+        history. Using the <span class="keyword wintitle">VLProxy</span> filter, you can limit the history displayed
+        to one or more VLProxies. Use the parameter control box to change the <span class="ph uicontrol">Start
+          date/time</span> of the chart and the number of <span class="ph uicontrol">Minutes</span>
+        displayed. Use the zoom slider at the bottom to zoom in closer to a specific time. Holding
+        the cursor over a specific data point on the chart will display information about that data
+        point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy Heap Memory Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Heap Memory</span> chart displays the percentage of the
+        configured heap memory used by the VLProxy.</p>
+
+      <p class="p">Relationships (such as AS2-To / AS2-From), usernames, passwords, certificates, and many
+        other items are stored in memory for use by VLProxy for each of the VersaLexes connected.
+        Heap memory is also used to proxy data between the VersaLexes and trading partners. If the
+        heap memory is nearing 100%, then the maximum heap memory should be increased. If this is
+        due to proxying data and the maximum heap memory cannot be increased, this indicates that
+        another VLProxy should be added to spread out the load.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">VLProxy Heap Memory History</span> sub-report by clicking on a bar
+        or a bar label.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy Heap Memory History</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Heap Memory History</span> report displays the heap memory usage
+        over time. By default, it will show the last 60 minutes of history. Limit the history
+        displayed to one or more VLProxies by selecting them in the <span class="ph uicontrol">VLProxy</span>
+        filter. Use the parameter control box to change the <span class="ph uicontrol">Start date/time</span>
+        of the chart and the number of <span class="ph uicontrol">Minutes</span> displayed. Use the zoom slider
+        at the bottom to zoom in closer to a specific time. Holding the cursor over a specific data
+        point on the chart will display information about that data point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy Perm Gen Memory Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Perm Gen Memory</span> chart displays the percentage of the perm
+        gen memory usage by VLProxy.</p>
+
+      <p class="p">If this is nearing 100%, then the maximum perm gen memory should be increased.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">VLProxy Perm Gen Memory History</span> sub-report by clicking on a
+        bar or a bar label.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy Perm Gen Memory History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Perm Gen Memory History</span> report displays the perm gen
+        memory usage over time. By default, it will show the last 60 minutes of history. Use the
+          <span class="keyword wintitle">VLProxy</span> filter to limit the history displayed to one or more
+        VLProxies. Use the parameter control box to change the <span class="ph uicontrol">Start
+          date/time</span> of the chart and the number of <span class="ph uicontrol">Minutes</span>
+        displayed. The zoom slider at the bottom can zoom in closer to a specific time. Hovering the
+        cursor over a specific data point on the chart will display information about that data
+        point.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy Thread Count Chart</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Thread Count</span> chart displays counts of the active and
+        deadlocked threads in VLProxy. It also displays the peak number of threads used by VLProxy
+        since it was started.</p>
+
+      <p class="p">Any deadlocked threads are indication of a problem, and a thread dump should be obtained
+        from VLProxy and sent to Cleo Support. Otherwise, the number of threads depends on the
+        amount of proxying occurring. An abnormally high number of threads can indicate an issue
+        where trading partner connections are not being closed.</p>
+
+      <p class="p">Access the <span class="keyword wintitle">VLProxy Thread Count History</span> sub-report by clicking on a
+        bar or a bar label.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">VLProxy Thread Count History Report</h2>
+      
+      
+      <p class="p">The <span class="keyword wintitle">VLProxy Thread Count History</span> report displays the number of active
+        threads over time. By default, it will show the last 60 minutes of history. Limit the
+        history displayed to one or more VLProxies by selecting them in the
+          <span class="keyword wintitle">VLProxy</span> filter. Use the parameter control box to change the
+          <span class="ph uicontrol">Start date/time</span> of the chart and the number of
+          <span class="ph uicontrol">Minutes</span> displayed. Use the zoom slider at the bottom to zoom in
+        closer to a specific time. Hovering the cursor over a specific data point on the chart will
+        display information about that data point.</p>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cleo_system_monitor.html" title="Cleo System Monitor"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cleo System Monitor</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

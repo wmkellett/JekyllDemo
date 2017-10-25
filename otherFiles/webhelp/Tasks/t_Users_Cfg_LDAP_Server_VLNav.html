@@ -1,0 +1,118 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the LDAP Server tab to configure the LDAP server to authenticate internal administrators and operators of the Cleo VLNavigator and Cleo Harmony applications. In Cleo VLNavigator , click the Users ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Users LDAP Server"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Users_VLNav.html"></meta><meta name="DC.Relation" scheme="URI" content="../References/r_LDAP_ServerConfig_VLNav_reference.html"></meta><meta name="DC.Relation" scheme="URI" content="../References/r_LDAP_DomainConfig_VLNav_reference.html"></meta><meta name="DC.Relation" scheme="URI" content="../References/r_LDAP_UserConfig_VLNav_reference.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_g5g_ypq_wx"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Users LDAP Server</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_g5g_ypq_wx">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application">Configuring the Cleo VLNavigator application</a> / <a class="navheader_parent_path" href="../Topics/t_Users_VLNav.html" title="Users">Users</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Users_VLNav.html" title="Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Users LDAP Server</h1>
+
+  <div class="body taskbody">
+    <div class="section context">
+      <p class="p">Use the <span class="keyword wintitle">LDAP Server</span> tab to
+        configure the LDAP server to authenticate internal administrators and operators of the <span class="ph">Cleo VLNavigator</span> and <span class="ph">Cleo Harmony</span> applications.</p>
+
+    </div>
+
+    <ol class="ol steps" id="task_g5g_ypq_wx__steps_s12_qpq_wx"><li class="li step stepexpand">
+        <span class="ph cmd">In <span class="ph">Cleo VLNavigator</span>, click the
+            <span class="ph uicontrol">Users</span> node in the tree view. </span>
+        <div class="itemgroup info">The <span class="keyword wintitle">LDAP Server</span> tab appears.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select the <span class="ph uicontrol">Enabled</span> check box to enable the fields on the
+          tab.</span>
+        <div class="itemgroup info">If the LDAP server is disabled (the <span class="ph uicontrol">Enabled</span> check box  is
+          cleared), any LDAP users and the Default LDAP group, if it exists, are displayed in yellow
+          to indicate the LDAP server is currently disabled and, therefore, all LDAP accounts are
+          currently not usable.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Specify values for the fields in the <span class="keyword wintitle">Server Configuration</span>
+          section.</span>
+        <div class="itemgroup info">See <a class="xref" href="../References/r_LDAP_ServerConfig_VLNav_reference.html">Cleo VLNavigator LDAP Server Configuration reference</a>.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Specify values for the fields in the <span class="keyword wintitle">Domain Configuration</span> section. </span>
+        <ol type="a" class="ol substeps" id="task_g5g_ypq_wx__substeps_t12_qpq_wx">
+          <li class="li substep substepexpand">
+            <span class="ph cmd">Add servers to the list of active LDAP servers. Either retrieve LDAP service
+              records or add them manually.</span>
+            <div class="itemgroup info">
+              <ul class="ul" id="task_g5g_ypq_wx__ul_u12_qpq_wx">
+                <li class="li">To retrieve LDAP service records, select the <span class="ph uicontrol">Lookup</span> check
+                  box, specify a value in the <span class="ph uicontrol">Domain</span> field, and click
+                    <span class="ph uicontrol">Refresh</span>. LDAP service records found in the domain you
+                  specify are displayed in a table.</li>
+
+                <li class="li">To add LDAP service records manually, clear the <span class="ph uicontrol">Lookup</span>
+                  check box, and click the <span class="ph uicontrol">New</span> button to display a dialog box
+                  in which you can enter information for a new record. When you are finished
+                  entering the information, click <span class="ph uicontrol">OK</span> to dismiss the dialog
+                  box and display the new record in the table. <p class="p">Click <span class="ph uicontrol">New</span>
+                    to add more new records as necessary.</p>
+<p class="p">While the
+                      <span class="ph uicontrol">Lookup</span> check box is cleared, you can right-click
+                    service records to edit them or remove them from the list.</p>
+</li>
+
+              </ul>
+
+            </div>
+          </li>
+
+          <li class="li substep substepexpand">
+            <span class="ph cmd">Specify values for <span class="ph uicontrol">Base DN</span>, <span class="ph uicontrol">Search
+                Filter</span> and <span class="ph uicontrol">Username Attribute</span>.</span>
+            <div class="itemgroup info">See <a class="xref" href="../References/r_LDAP_DomainConfig_VLNav_reference.html">Cleo VLNavigator LDAP Domain Configuration reference</a> for information about the fields in the
+                <span class="keyword wintitle">Domain Configuration</span> section. </div>
+          </li>
+
+          <li class="li substep substepexpand">
+            <span class="ph cmd">Optional. Click <span class="ph uicontrol">Advanced</span> to specify password expiration
+              settings. The <span class="ph uicontrol">Advanced</span> button is enabled only when you select
+                <kbd class="ph userinput">Active Directory</kbd> from the <span class="ph uicontrol">Directory
+                Type</span> menu. See <a class="xref" href="../References/r_LDAP_ServerConfig_VLNav_reference.html">Cleo VLNavigator LDAP Server Configuration reference</a>.</span>
+          </li>
+
+          <li class="li substep substepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">Test</span> to test changes before they are applied. Enter an
+              LDAP username and password. Changes to the <span class="keyword wintitle">Server Configuration</span>
+              panel are not applied until after a successful test login to the LDAP server.</span>
+          </li>
+
+        </ol>
+
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Specify values for the fields in the <span class="ph uicontrol">User Configuration</span>
+          section.</span>
+        <div class="itemgroup info">See <a class="xref" href="../References/r_LDAP_UserConfig_VLNav_reference.html">Cleo VLNavigator LDAP User Configuration reference</a>.</div>
+      </li>
+</ol>
+
+  </div>
+
+  
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../References/r_LDAP_ServerConfig_VLNav_reference.html">Cleo VLNavigator LDAP Server Configuration reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../References/r_LDAP_DomainConfig_VLNav_reference.html">Cleo VLNavigator LDAP Domain Configuration reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../References/r_LDAP_UserConfig_VLNav_reference.html">Cleo VLNavigator LDAP User Configuration reference</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Users_VLNav.html" title="Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Users</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

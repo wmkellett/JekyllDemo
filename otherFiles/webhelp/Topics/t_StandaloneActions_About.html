@@ -1,0 +1,57 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: Standalone actions are supported only in the Cleo Harmony application. Standalone actions are actions that are not tied to a specific host or user. They exist beside, and not within, hosts or ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Standalone Actions"></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_StandaloneAction_Configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_nxw_3kb_fy"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Standalone Actions</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_nxw_3kb_fy">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Standalone Actions</h1>
+
+  <div class="body">
+    <div class="note note"><span class="notetitle">Note:</span> Standalone actions are supported only in the <span class="ph">Cleo Harmony</span> application. </div>
+
+    <p class="p">Standalone actions are actions that are not tied to a specific host or
+      user. They exist beside, and not within, hosts or users. </p>
+
+    <p class="p">You can use standalone actions for a variety of purposes, such as:</p>
+
+    <ul class="ul" id="topic_nxw_3kb_fy__ul_c44_skb_fy">
+      <li class="li">Filtering incoming payload (for example, the Antivirus Scan action)</li>
+
+      <li class="li">Listening for and acting on log events</li>
+
+      <li class="li">Processing new file arrival or user session end events</li>
+
+      <li class="li">Scheduling periodic maintenance tasks </li>
+
+    </ul>
+
+    <p class="p">A standalone action can access configured hosts and users (and their related incoming payload
+      and events) when they are <em class="ph i">in-scope</em>, which means that relative to the standalone action,
+      the host or user is located in the same host tree resource folder or below, or in the root
+      host tree folder (which is always accessible). A standalone action contains only JavaScript
+      commands.</p>
+
+    <p class="p">Similar to other actions, you can run standalone actions interactively, through the Java API,
+      and through command line operations (for example, <samp class="ph codeph">Harmonyc -r
+        "MyStandaloneAction"</samp>). You can also schedule standalone actions to run
+      periodically, or trigger them to run when a new file arrives or a session ends.</p>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Tasks/t_StandaloneAction_Configuration.html">Standalone Action Configuration</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+A standalone action captures a repeatable logical function you can use with in-scope     hosts and users.</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

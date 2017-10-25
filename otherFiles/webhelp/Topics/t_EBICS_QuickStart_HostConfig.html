@@ -1,0 +1,83 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="On the EBICS Host General tab (see EBICS Host: General Tab ) do the follwing: In the Server Address field, provide the remote-host section of the server's URL. In the Port # field, provide the port ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Host Configuration"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_ebics_quick-start_steps.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_p4z_5wk_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Host Configuration</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_p4z_5wk_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_ebics_hosts.html" title="EBICS Hosts">EBICS Hosts</a> / <a class="navheader_parent_path" href="../Topics/t_ebics_quick-start_steps.html" title="EBICS Quick-Start Steps">EBICS Quick-Start Steps</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_ebics_quick-start_steps.html" title="EBICS Quick-Start Steps"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Quick-Start Steps</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Host Configuration</h1>
+
+  <div class="body">
+    <div class="section">
+      <ol class="ol" id="topic_p4z_5wk_b5__ol_h2j_5kh_cv">
+        <li class="li">On the EBICS Host General tab (see <a class="xref" href="../References/r_EBICS_Host_GeneralTab.html">EBICS Host: General Tab</a>) do the follwing:<ol class="ol" type="a" id="topic_p4z_5wk_b5__ol_gx2_tlh_cv">
+            <li class="li">In the <span class="ph uicontrol">Server Address</span> field, provide the
+                <var class="keyword varname">remote-host</var> section of the server's URL.</li>
+
+            <li class="li">In the <span class="ph uicontrol">Port #</span> field, provide the <var class="keyword varname">port</var>
+              section of the server's URL.</li>
+
+          </ol>
+</li>
+
+        <li class="li">On the EBICS Host EBICS tab (see <a class="xref" href="../References/r_EBICS_Host_EBICSTab.html">EBICS Host: EBICS Tab</a> do the following:<ol class="ol" type="a" id="topic_p4z_5wk_b5__ol_vwf_lmh_cv">
+            <li class="li">In the <span class="ph uicontrol">Host ID</span> field, provide the Host ID provided by your
+              bank server. This identifier is case sensitive.</li>
+
+          </ol>
+</li>
+
+        <li class="li">For the HTTP <span class="keyword cmdname">GET</span> and <span class="keyword cmdname">PUT</span> commands on the EBICS
+          Host HTTP tab (see <a class="xref" href="../References/r_EBICS_Host_HTTPTab.html">EBICS Host: HTTP Tab</a>):<ol class="ol" type="a" id="topic_p4z_5wk_b5__ol_f53_p4h_cv">
+            <li class="li">Since EBICS allows only the POST method, the <span class="ph uicontrol">Method</span> fields
+              will be pre-configured.</li>
+
+            <li class="li">In the <span class="ph uicontrol">Path</span> fields, provide the
+                <var class="keyword varname">resource-path</var> section of your bank server's URL. </li>
+
+            <li class="li">In the <span class="ph uicontrol">Parameters</span> fields, provide the
+                <var class="keyword varname">optional-parameters</var> section of your bank server's URL. </li>
+
+            <li class="li">Since EBICS allows 'text/xml' and 'application/xml', the
+                <span class="ph uicontrol">Headers</span> fields will be preconfigured for you.</li>
+
+          </ol>
+</li>
+
+        <li class="li">On the EBICS Host Advanced tab (see <a class="xref" href="../References/r_EBICS_Host_AdvancedTab.html">EBICS Host: Advanced Tab</a>:<ol class="ol" type="a" id="topic_p4z_5wk_b5__ol_x5h_fph_cv">
+            <li class="li">Select the <span class="ph uicontrol">EBICS Filter Group</span> to view the baseline
+              configurable EBICS properties. The default properties related to SSL should be
+              sufficient to begin. Note that the <span class="ph uicontrol">EBICS Version</span> defaults to
+              EBICS 2.4 and the <span class="ph uicontrol">ES Version</span> defaults to A005. If the server
+              requires a different setting, change these properties appropriately. For detailed
+              information regarding EBICS-specific advanced properties, refer to the <img class="image" id="topic_p4z_5wk_b5__image_hty_dwk_b5" src="../Images/image021.gif"></img> <a class="xref" href="t_ebics_configuration.html">host Advanced </a> tab.</li>
+
+            <li class="li">While performing initial tests, it can be useful to set the <span class="ph uicontrol">Store Raw
+                Sent And Received</span> property. When set, the outgoing requests and
+              corresponding incoming responses will be stored in the
+                <span class="keyword wintitle">EBICS\sent+received</span> folder. These files can be useful in
+              diagnosing problems. However, after initial tests are complete and everything is
+              running smoothly, you can disable this property to conserve disk space.</li>
+
+          </ol>
+</li>
+
+      </ol>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_ebics_quick-start_steps.html" title="EBICS Quick-Start Steps"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">EBICS Quick-Start Steps</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

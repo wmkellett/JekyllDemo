@@ -1,0 +1,181 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Within the VersaLex LCOPY command, it is possible to encrypt and decrypt zip archive files according to the AES encryption standard (128-bit, 192-bit, and 256-bit).  Refer to ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Encryption of Zip Files"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cryptographic_services.html"></meta><meta name="DC.Relation" scheme="URI" content="http://www.winzip.com/aes_info.htm"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="encryption_of_zip_files"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Encryption of Zip Files</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="encryption_of_zip_files">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_cryptographic_services.html" title="Cryptographic Services">Cryptographic Services</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cryptographic_services.html" title="Cryptographic Services"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cryptographic Services</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Encryption of Zip
+                    Files</h1>
+
+   <div class="body">
+      <p class="p">Within the VersaLex LCOPY command,
+         it is possible to encrypt and decrypt zip archive files according to the AES encryption
+         standard (128-bit, 192-bit, and 256-bit).  Refer to <a class="xref" href="http://www.winzip.com/aes_info.htm" target="_blank">http://www.winzip.com/aes_info.htm</a> for further information on the AES-encrypted
+         ZIP files.  Although this link is published by WinZip<sup class="ph sup">®</sup>, many other popular
+         compression packages that conform to the ZIP standard (reference Info-ZIP application note,
+         20040528) also have similar encryption capabilities.  For example, 7-Zip supports the ZIP
+         format, plus the additional encryption syntax.  To encrypt/decrypt, certain parameters must
+         be specified on the <span class="keyword cmdname">LCOPY</span> command.  See the editor dialog for the
+            <span class="keyword cmdname">LCOPY</span> command.</p>
+
+      <p class="p">
+         <img class="image" src="../Images/image1880.jpg"></img>
+      </p>
+
+      
+      <p class="p">Notice the optional [Use-Password] parameter.  When this
+            parameter is set to 'True', a password must be specified.  The length of the password
+            determines the strength of the AES encryption key.  Refer to the following table.</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        Password Length
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        AES Key Strength
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        &lt; 8
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        invalid -- too weak
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        8   &lt;= length &lt; 32
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        128-bit key (weakest)
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        32 &lt;= length &lt; 48
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        192-bit key
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        48 &lt;= length &lt; 64
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top">
+                        256-bit key (strongest)
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">The security of your data depends not only on the strength of the encryption method but
+         also on the strength of your <strong class="ph b">
+            <span class="ph">password</span>
+         </strong>, including factors such as length and composition of the password.  The measures you
+         take to ensure that your password is not disclosed to unauthorized third parties are also
+         vital.  Note that if you type in the <span class="keyword cmdname">LCOPY</span> command directly from the
+         freeform editor of the <span class="keyword wintitle">Action</span> tab, any password data will be shown in
+         clear-text. For security reasons, you should either use the editor dialog (which will not
+         echo the clear-text password); or, if using the freeform editor is still preferred, once
+         the <span class="keyword cmdname">LCOPY</span> command is entered, double-click on the new command to display
+         the editor dialog, and then click <span class="ph uicontrol">OK</span>.  After you click
+            <span class="ph uicontrol">OK</span>, the password is encrypted so it cannot be observed by
+         unauthorized parties. </p>
+
+      
+      <p class="p">
+         <span class="ph">Besides the risk of unwanted password
+                viewing, there is another issue to be aware of when using the freeform editor.  If
+                a password has an embedded space, a '\s' must be used to represent the space within
+                the command (e.g., "Hello\sWorld!" represents "Hello World!").  If this is not
+                done, the command will not be parsed correctly.</span>
+         <span class="ph">  If the editor dialog is used,
+                however, proper handling of embedded spaces is handled automatically for you.   In
+                general, when typing commands without the use of the dialog editor, special escape
+                sequences must be used to identify certain characters:</span>
+      </p>
+
+      <p class="p">\s = space character</p>
+
+      <p class="p">\t = tab character</p>
+
+      <p class="p">\n = newline character</p>
+
+      <p class="p">\r = carriage return character</p>
+
+      <p class="p">\\ = slash character</p>
+
+      
+      <p class="p">To disable zip file encryption, set the [Use-Password]
+            parameter to 'False' or empty.</p>
+
+      
+      <p class="p">
+         <strong class="ph b">Note:</strong>
+            
+         <span class="ph">The extension to the ZIP file format used by WinZip to store
+                AES-encrypted files is not supported by versions of WinZip earlier than version
+                9.0. </span>
+      </p>
+
+      
+   </div>
+
+   <div class="related-links">
+<div class="linklist linklist"><strong>Collected links</strong><br xmlns="http://www.w3.org/1999/xhtml" />
+
+<div class="related_link"><a class="navheader_parent_path" href="http://www.winzip.com/aes_info.htm" target="_blank" title="http://www.winzip.com/aes_info.htm">http://www.winzip.com/aes_info.htm</a></div></div>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cryptographic_services.html" title="Cryptographic Services"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cryptographic Services</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

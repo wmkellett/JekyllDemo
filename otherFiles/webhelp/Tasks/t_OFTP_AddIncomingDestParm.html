@@ -1,0 +1,124 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Add incoming destination information when you need to override the default inbox/filename or if EBCDIC translation or when special end-of-record processing is required. On the OFTP tab in the Incoming ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Adding an incoming destination or parameter"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_OFTP_Host_OFTPTab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_lv2_xzv_xw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Adding an incoming destination or parameter</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_lv2_xzv_xw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_OFTP_Host.html" title="A host's parameters specify its location and how it is reached.">OFTP Host</a> / <a class="navheader_parent_path" href="../Topics/t_OFTP_Host_OFTPTab.html" title="OFTP Host: OFTP Tab">OFTP Host: OFTP Tab</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Host_OFTPTab.html" title="OFTP Host: OFTP Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Host: OFTP Tab</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Adding an incoming destination or parameter</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <div class="section context">
+            <p class="p">Add incoming destination information when you need to override the default
+                inbox/filename or if EBCDIC translation or when special end-of-record processing is
+                required. </p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">On the <span class="keyword wintitle">OFTP</span> tab in the <span class="keyword wintitle">Incoming</span>
+                    section, click <span class="ph uicontrol">New</span> to display the <span class="keyword wintitle">OFTP Incoming
+                        Filter</span> dialog box. </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Indentify incoming files.</span>
+                <div class="itemgroup info">
+                    <ul class="ul" id="task_lv2_xzv_xw__ul_fbb_3tc_yw">
+                        <li class="li">If different incoming files are destined for different
+                            directories/filenames or require different parameters, uniquely identify
+                            the incoming file by specifying either a <span class="ph uicontrol">Virtual
+                                Filename</span>, <span class="ph uicontrol">Originator</span>,
+                                <span class="ph uicontrol">Destination</span>,
+                                <span class="ph uicontrol">Description</span> or <span class="ph uicontrol">File
+                                Format</span>. Additionally, the Virtual Filename, Originator,
+                            Destination, and Description can contain wildcards or regular
+                            expressions if partial or global matching is needed on these fields. See
+                                <a class="xref" href="../Topics/t_using_wildcards_and_regular_expressions.html">Using Wildcards and Regular Expressions</a>. If the <span class="ph uicontrol">File
+                                Identification</span> is left entirely blank, then the
+                                <span class="ph uicontrol">File Destination</span> and/or
+                                <span class="ph uicontrol">Parameters</span> specified below apply to all
+                            incoming files for which the originator and destination match the
+                            mailbox's trading partner ID and your ID respectively. If incoming
+                            originator and/or destination values differ from the mailbox login IDs,
+                            then the originator and/or destination values in the incoming filter
+                            must be set to match (either exactly or via wildcarding or regular
+                            expression) in order for the filter to be applied.</li>
+
+                        <li class="li">If globally allowing incoming originator and/or destination values to
+                            differ from mailbox IDs in the Odette FTP Service, then the filter is
+                            optional. See <a class="xref" href="../Topics/t_Configure_Local_Listener_Odette_FTP_Service.html">Local Listener Odette FTP Service</a>.</li>
+
+                        <li class="li">Otherwise, if not globally allowing differing originator/destination,
+                            then an incoming filter with originator/destination filled in is
+                            required in order to accept the incoming file.</li>
+
+                    </ul>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Specify a destination.</span>
+                <div class="itemgroup info">
+                    <ul class="ul" id="task_lv2_xzv_xw__ul_fn3_htc_yw">
+                        <li class="li">If the <span class="ph uicontrol">Directory</span> is left blank, the host Inbox
+                            directory under the <span class="keyword wintitle">OFTP Host: General Tab</span> is
+                            used. See <a class="xref" href="../Topics/t_OFTP_Host.html" title="A host's parameters specify its location and how it is reached.">OFTP Host</a>. The host Inbox directory can be
+                            further subfoldered by enabling <span class="ph uicontrol">Add Mailbox Alias Directory
+                                to Inbox</span> under the <span class="keyword wintitle">OFTP Host: Advanced
+                                Tab</span>. See <a class="xref" href="../Topics/t_OFTP_Host_AdvancedTab.html">OFTP Host: Advanced Tab</a>.</li>
+
+                        <li class="li">If the <span class="ph uicontrol">Filename</span> is left blank, the Virtual
+                            Filename is used. If the filename already exists, a number is appended
+                            to the filename to ensure uniqueness. This field can also include any of
+                            the supported macros allowing for the inclusion of a date-time stamp in
+                            the name of an incoming file, for example, as shown in the diagram
+                            above. See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> (Destination File context) for
+                            information about all applicable macros.</li>
+
+                    </ul>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Optional.  Specify destination parameters.</span>
+                <div class="itemgroup info">
+                    <ul class="ul" id="task_lv2_xzv_xw__ul_r2f_4tc_yw">
+                        <li class="li"><span class="ph uicontrol">Translate from EBCDIC</span> indicates that incoming
+                            characters should be translated from EBCDIC to ASCII. <span class="ph uicontrol">EBCDIC
+                                Encoding</span> under the <span class="keyword wintitle">OFTP Host: Advanced
+                                Tab</span> specifies the encoding character set. See <a class="xref" href="../Topics/t_OFTP_Host.html" title="A host's parameters specify its location and how it is reached.">OFTP Host</a>.</li>
+
+                        <li class="li"><span class="ph uicontrol">Trim Characters at End-Of-Record</span> applies to the
+                            OFTP Fixed file format only. The character or set of characters will be
+                            trimmed from the end of each incoming record, when present. Use a 0x
+                            prefix to specify hexadecimal character values.</li>
+
+                        <li class="li"><span class="ph uicontrol">Insert End-Of-Record Delimiter</span> applies to the
+                            OFTP Fixed or Variable file format only. The character or set of
+                            characters should be inserted at the end of each incoming record. Use a
+                            0x prefix to specify hexadecimal character values.</li>
+
+                    </ul>
+
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+    
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Host_OFTPTab.html" title="OFTP Host: OFTP Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Host: OFTP Tab</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

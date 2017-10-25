@@ -1,0 +1,2421 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="A macro variable is a string enclosed in a set of percent signs (e.g., %inbox%), used to indicate substitution of other data. You can use macros for many reasons, including, for example, defining a ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Using Macro Variables"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="using_macro_variables"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Using Macro Variables</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="using_macro_variables">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Using Macro
+                Variables</h1>
+
+   <div class="body">
+      <p class="p">A
+            macro variable is a string enclosed in a set of percent signs (e.g., %inbox%), used to
+            indicate substitution of other data. You can use macros for many reasons, including, for
+            example, defining a unique file destination, indirectly referencing directory locations
+            (for inboxes, outboxes, etc.), or passing information to an <span class="keyword cmdname">Execute On
+                Successful Send</span> command.  </p>
+
+        <div class="section"><h2 class="title sectiontitle">Types of macro variables</h2>
+            
+            <p class="p">Macro variables are classified in one of three ways:</p>
+
+            <ul class="ul" id="using_macro_variables__ul_gbc_mvw_ps">
+                <li class="li"><strong class="ph b">Reserved
+                        Macro Variables</strong>: Variables that are predefined within the <span class="ph">Cleo Harmony</span> product. See the table below.</li>
+
+                <li class="li"><strong class="ph b">Custom Directory Macro Variables</strong>:
+                    Directory variables that are defined by the <span class="ph">Cleo Harmony</span> user. See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for more information about the
+                        <span class="keyword wintitle">General</span> tab under <span class="keyword wintitle">Configure System
+                        Options</span>.</li>
+
+                <li class="li"><strong class="ph b">Custom Macro Variables Defined as System Properties</strong>: Variables that are
+                    defined as name=value pairs using the Java ‘–D’ Command Line parameters (see
+                        <a class="xref" href="../Tasks/t_WebUI_configure_application_launcher.html">Command Application Launcher</a> for further
+                    information) or are specified in the conf/system.properties file. Note that
+                    Custom Macro Variables are resolved after Reserved Macro and Custom Directory
+                    Macro Variables and therefore cannot be used to override those variables.</li>
+
+            </ul>
+
+        </div>
+
+      
+      <p class="p">The following table outlines the macro variables (both reserved and custom) and the various
+            contexts in which they can be used.</p>
+
+      
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap">Table 1. Macro Variables and their Contexts</span></caption>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                <thead class="thead" align="left">
+                    <tr class="row">
+                        <th class="entry" rowspan="2" colspan="1" valign="bottom" id="d354454e128">Macro
+                            Variable</th>
+
+                        <th class="entry" rowspan="1" colspan="14" align="center" valign="top" id="d354454e131">Context </th>
+
+                        
+                    </tr>
+
+                    <tr class="row">
+                        
+                        <th class="entry rotated" rowspan="1" colspan="1" valign="top" id="d354454e137">Source File </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e140">Destination Files </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e143">SYSTEM Command </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e146">Default Host Directory </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e149">Default Local User Active
+                            Directory </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e153">Default Root Directory </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e156">Windows/Unix Folders </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e159">Custom Variable </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e162">Execute-On </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e165">Pre/Post Command </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e168">LCOPY Archive </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e172">Accessible through API </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e175">Directories Only </th>
+
+                        <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e178">Banner/Welcome Message </th>
+
+                        
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody">
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%system%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%none% </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%inbox%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 "><em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em></td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "><strong class="ph b"><em class="ph i">
+                                    <u class="ph u">X</u>
+                                </em></strong></td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%outbox%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "><strong class="ph b"><em class="ph i">
+                                    <u class="ph u">X</u>
+                                </em></strong></td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%file%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%sourcefile%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "> </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                     
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%srcfile%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "> </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%sourcefilebase%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "> </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 "> </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%srcfilebase%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "> </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%sourcefileext%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "> </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%srcfileext%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 "> </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">
+                            <p class="p">%destfile%</p>
+
+                            <p class="p">%destfilebase%</p>
+
+                            <p class="p">%destfileext%</p>
+
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">
+                            <p class="p">%date%</p>
+
+                            <p class="p">%time%</p>
+
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">X </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%index%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">
+                            <p class="p">%host%</p>
+
+                            <p class="p">%mailbox%</p>
+
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%status%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 "> </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%crc%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em></td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%filesize%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em></td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%transferid%</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em></td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 "> </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%filesin%<p class="p">%filesout%</p>
+</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%ebms.timestamp.date%<p class="p">%ebms.timestamp.time%</p>
+<p class="p">%ebms.action%</p>
+<p class="p">%ebms.service%</p>
+<p class="p">%ebms.cpaid%</p>
+</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%as2.to%<p class="p">%as2.from%</p>
+<p class="p">%as2.subject%</p>
+</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%oftp.sfiddsn%<p class="p">%oftp.sfidorig%</p>
+<p class="p">%oftp.sfiddest%</p>
+<p class="p">%oftp.sfiddesc%</p>
+</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%as3.to%<p class="p">%as3.from%</p>
+</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">%ebics.ordertype% </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 "> %command% </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">
+                            <em class="ph i"><u class="ph u"><strong class="ph b">X</strong></u></em>
+                        </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 "> X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row" valign="top">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">custom directory variable </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 ">   </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">   </td>
+
+                        
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e128 ">system.properties variable</td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e137 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e140 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e143 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e146 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e149 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e153 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e156 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e159 ">  </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e162 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e165 "> </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e168 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e172 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e175 ">X </td>
+
+                        <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e131 d354454e178 ">  </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+
+        <div class="note note"><span class="notetitle">Note:</span> Cells with a bolded, italicized, underscored <u class="ph u"><strong class="ph b"><em class="ph i">X</em></strong></u> indicate the value
+            might not be known. If the value is not known, the macro name (for example,
+                <samp class="ph codeph">%sourcefile%</samp>) is simply passed through.  Further, if a macro is
+            used that is not supported within a particular context (for example, referencing
+                <samp class="ph codeph">%crc%</samp> within a Destination File context), it will simply be passed
+            through as well.</div>
+
+        <div class="section"><h2 class="title sectiontitle">Using <samp class="ph codeph">system.properties</samp> Variables</h2>
+            
+            <p class="p">It is possible to add general variables to the
+                    <span class="ph filepath">conf/system.properties</span> file and use them within the
+                contexts outlined in the table. To add a general variable to
+                    <span class="ph filepath">conf/system.properties</span>, the syntax is:
+                    <samp class="ph codeph">varName=replacementText</samp>. For example, if
+                    <span class="ph filepath">conf/system.properties</span> has the following:
+                    <samp class="ph codeph">myvar=hello</samp>, the usage would be <samp class="ph codeph">%myvar%</samp> in the
+                desired location. </p>
+
+            <div class="note note"><span class="notetitle">Note:</span> 
+                <ol class="ol" id="using_macro_variables__ol_ny2_dy5_cx">
+                    <li class="li"> Unlike other macro variables that are case-insensitive,
+                            <samp class="ph codeph">system.properties</samp> macros are case-sensitive. </li>
+
+                    <li class="li">After adding a macro to <span class="ph filepath">conf/system.properties</span>, the
+                        service must be cycled before the macro can be processed. </li>
+
+                </ol>
+
+            </div>
+
+            <p class="p"></p>
+
+        </div>
+
+        <div class="section"><h2 class="title sectiontitle">Context Definitions</h2>
+            
+            <p class="p">Macro variables are valid in certain contexts. The following describes the various
+                contexts in which macro variables are valid. Not all macro variables are valid in
+                all contexts. </p>
+
+            <dl class="dl">
+                
+                    <dt class="dt dlterm">Source File</dt>
+
+                    <dd class="dd">Applies to the “source” values of LCOPY, LDELETE, LREPLACE, PUT, and CHECK
+                        commands (VLTrader and Harmony only).  Macros are supported for the “source”
+                        values of the GET commands for FTP, SFTP and HTTP(s) protocols only.  Macros
+                        are not supported for the “source” values of GET commands for other
+                        protocols or the DIR command.</dd>
+
+                
+                
+                    <dt class="dt dlterm">Destination File</dt>
+
+                    <dd class="dd">Applies to the “destination” values of <span class="keyword cmdname">LCOPY</span>,
+                            <span class="keyword cmdname">PUT</span>, <span class="keyword cmdname">GET</span>, and <span class="keyword cmdname">CHECK
+                        </span>commands (VLTrader and Harmony only).  It also applies to default
+                        file names, as specified under the host <span class="keyword wintitle">AS2</span> tab (see
+                            <a class="xref" href="../References/r_AS2_Host_AS2Tab.html">AS2 Host: AS2 Tab</a>), the host <span class="keyword wintitle">ebXML</span>
+                        tab (see <a class="xref" href="../References/r_ebXML_Host_ebXMLTab.html">ebXML Host: ebXML Tab</a>), the host EBICS tab (see <a class="xref" href="../References/r_EBICS_Host_EBICSTab.html">EBICS Host: EBICS Tab</a>), and the Local HTTP Users HTTP tab (see
+                            <a class="xref" href="t_HTTP_Cfg_Access_For_HTTP_User_Host.html">Configure access for HTTP host users</a>). It also applies to the file
+                        destination, as specified under the host <span class="keyword wintitle">OFTP</span> tab (see
+                            <a class="xref" href="t_OFTP_Host_OFTPTab.html">OFTP Host: OFTP Tab</a>).  The Destination File context also
+                        applies to macros that can be included within HTTP parameter/header values,
+                        as defined under the HTTP tabs for HTTP-based protocols (e.g., AS2,
+                        ebXML). Also, this context applies to the <samp class="ph codeph">FileFormat</samp>
+                        parameter on EBICS <span class="keyword cmdname">GET</span> command. See <a class="xref" href="t_ebics_command_reference.html">EBICS Command Reference</a>. The Destination File context macro
+                        variables may also be used within the Subject header of the SMTP tab. </dd>
+
+                
+                
+                    <dt class="dt dlterm">SYSTEM Command</dt>
+
+                    <dd class="dd">Applies to the SYSTEM command that can be run within the host actions (see
+                            <a class="xref" href="t_Use_Operating_System_Commandsin_Actions.html">Use Operating System Commands in Actions</a>).</dd>
+
+                
+                
+                    <dt class="dt dlterm">Default Directories</dt>
+
+                    <dd class="dd">Applies to the default inbox/outbox/sentbox/receivedbox, as specified under
+                        the host General tabs (for an example, see <a class="xref" href="t_ftp_configuration.html" title="Activate either a trading partner-specific host or the generic FTP or FTP/s pre-configured host and then configure host, mailbox and actions. ">FTP Configuration</a>).  The
+                            <samp class="ph codeph">%host%</samp> macro variable is supported, but not
+                            <samp class="ph codeph">%mailbox%</samp>.</dd>
+
+                
+                
+                    <dt class="dt dlterm">Default Local User Archive Directories</dt>
+
+                    <dd class="dd">Applies to the sentbox and receivedbox archive directories as specified
+                        under the local user host General tabs (for an example, refer to <a class="xref" href="t_local_ftp_users_configuration.html">Configuring Local FTP Users</a>).  Both the %host% and %mailbox% macro
+                        variables are supported in this context.</dd>
+
+                
+                
+                    <dt class="dt dlterm">Default Root Directory</dt>
+
+                    <dd class="dd">Applies to the default root directory, as specified under the local user FTP
+                        tab, HTTP tab, and SSH FTP tab (for an example, refer to <a class="xref" href="t_local_ftp_users_configuration.html">Configuring Local FTP Users</a>). It also applies to the user home directory,
+                        as specified under the local user mailbox FTP tab, HTTP tab, and SSH FTP tab
+                        (for an example, see <a class="xref" href="../References/r_FTP_Mailbox_FTPTab.html">FTP Mailbox: FTP Tab</a>).</dd>
+
+                
+                
+                    <dt class="dt dlterm">Windows/Unix Folders</dt>
+
+                    <dd class="dd">Applies to the UNC paths specified when you set up Windows/Unix folder
+                        access.  See <a class="xref" href="t_WebUI_windows_unix_folder_access_setup.html">CIFS Directories</a>. Macros used in
+                        this context should always be UNC paths starting with two backslashes (\\).
+                        No other macros are supported within macros used in this context.</dd>
+
+                
+                
+                    <dt class="dt dlterm">Custom Variables</dt>
+
+                    <dd class="dd">Applies to the values that can be specified under custom directory variables
+                        on the <span class="keyword wintitle">General</span> tab under<span class="keyword wintitle"> Configure System
+                            Options</span>. See <a class="xref" href="t_WebUI_CfgSysOpts_Other.html">Other System Options</a> for more information.</dd>
+
+                
+                
+                    <dt class="dt dlterm">Execute-On</dt>
+
+                    <dd class="dd">Applies to the system commands that can be specified within the ‘Execute On
+                        Successful Send/Receive/Copy/Check’ properties and the ‘Execute On Fail’
+                        property (system, host, or action level). See <a class="xref" href="t_WebUI_CfgSysOpts_Advanced.html">Advanced System Options</a> for information about
+                        the <span class="keyword wintitle">Advanced</span> tab under <span class="keyword wintitle">Configure System
+                            Options</span> for definitions of these properties. With regard to
+                        ‘Execute On Fail’ command, when a command is executed as a result of a
+                        failed transfer (either on the client or the server), then all applicable
+                        macros are supported. When a command is executed as a result of a general
+                        system failure, then only %date%, %time% and %status% are supported. </dd>
+
+                
+                
+                    <dt class="dt dlterm">Post/Pre Command</dt>
+
+                    <dd class="dd">Applies to the FTP properties ‘Post Get Command’, ‘Post Put Command’, ‘Pre
+                        Get Command’, and ‘Pre Put Command’, as specified under the <a class="xref" href="../References/r_FTP_Host_AdvancedTab.html">FTP Host: Advanced Tab</a>. 
+                        This context also applies to the ‘Post Put Command’ and ‘Pre Put Command’
+                        properties as defined in the <a class="xref" href="../References/r_SSH_FTP_Host_AdvancedTab.html" title="Use the Advanced tab to configure certain properties for the SSH FTP host.">SSH FTP Host: Advanced Tab</a>. </dd>
+
+                
+                
+                    <dt class="dt dlterm">LCOPY Archive</dt>
+
+                    <dd class="dd">Applies to the archive directory that can be specified with the ‘LCOPY
+                        Archive’ property (system, host, or action level). See <a class="xref" href="t_WebUI_CfgSysOpts_Advanced.html">Advanced System Options</a> for more information. </dd>
+
+                
+                
+                    <dt class="dt dlterm">Accessible through API</dt>
+
+                    <dd class="dd">Applies to macros that are available through
+                            <samp class="ph codeph">IactionController</samp> interface of the API (if the API is
+                        licensed).  Refer to the API javadocs for a description of this interface
+                        and the method that can be used to obtain a given macro value.</dd>
+
+                
+                
+                    <dt class="dt dlterm">Directories Only</dt>
+
+                    <dd class="dd">Applies in several places where only the custom directories macros or
+                        %inbox%/%outbox% are appropriate.</dd>
+
+                
+                
+                    <dt class="dt dlterm">Banner/Welcome Message</dt>
+
+                    <dd class="dd">Applies to the banner and/or welcome messages for the HTTP, FTP, SMTP, and
+                        SSH FTP servers. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_Responses.html" title="You can configure welcome and banner messages to send as part of the response when a client connects to the corresponding server.">Configuring Local Listener Responses</a>.</dd>
+
+                
+            </dl>
+
+        </div>
+
+      
+      
+      <div class="section"><h2 class="title sectiontitle">Rules Regarding Macro Variable Use</h2>
+         
+            <p class="p">Below are some general rules for macro variable use.  </p>
+
+            <ol class="ol" id="using_macro_variables__ol_qbd_32x_ps">
+                <li class="li">Macros are identified by <samp class="ph codeph">%c%</samp>, where <samp class="ph codeph">c</samp> is
+                    one-to-many characters.</li>
+
+                <li class="li">Macro variables are case insensitive. You can enter them in lowercase or
+                    uppercase.</li>
+
+                <li class="li">You cannot place a <samp class="ph codeph">%</samp> within a macro variable.</li>
+
+                <li class="li">When a string contains macros to be resolved and a <samp class="ph codeph">%</samp> that is
+                    not tied to a macro, you must escape the non-macro <samp class="ph codeph">%</samp> with
+                        <samp class="ph codeph">%%</samp>. After all macro substitution takes place, the software
+                    strips the extra <samp class="ph codeph">%</samp>, yielding the intended character sequence.
+                    For example, <samp class="ph codeph">LCOPY test.edi %%%date%_%index%</samp> is resolved to
+                        <samp class="ph codeph">%20090714_01</samp>. </li>
+
+                <li class="li">The <samp class="ph codeph">*</samp> and <samp class="ph codeph">?</samp> characters are not allowed within
+                    a macro name. Use other special characters with caution.</li>
+
+                <li class="li">When using the <samp class="ph codeph">%date%</samp> and <samp class="ph codeph">%time%</samp> macros, it is
+                    your responsibility to ensure the formats for the date and time do not violate
+                    any file system naming conventions, for example, if the macros are being used to
+                    build a filename or directory.</li>
+
+                <li class="li">Macros are not allowed within a source filename that contains a
+                        <samp class="ph codeph">*</samp>, <samp class="ph codeph">?</samp>, or regular expression. For example,
+                    in <samp class="ph codeph">LCOPY inbox/%mailbox%*</samp>, <samp class="ph codeph">%mailbox%</samp> is not
+                    resolved. However, in <samp class="ph codeph">LCOPY inbox/%mailbox%/*</samp>,
+                        <samp class="ph codeph">%mailbox%</samp> is resolved because it is referenced in the
+                    source directory path and not the source filename. </li>
+
+                <li class="li">You can use macros multiple times within the same command. For
+                        <samp class="ph codeph">%date%</samp>, <samp class="ph codeph">%time%</samp> and
+                        <samp class="ph codeph">%index%</samp>, the same substitution value is used in all
+                    references within the same command. However, when you use either of these macros
+                    within the destination path of an <span class="keyword cmdname">LCOPY</span>, and multiple files
+                    are being copied in one command, the following special rules are enforced:<ol class="ol" type="a" id="using_macro_variables__ol_fbj_52x_ps">
+                        <li class="li">If these macros are used anywhere within the directory path, they are
+                            only resolved once within command.</li>
+
+                        <li class="li">If these macors are used within the file token, they are resolved for
+                            each filename.</li>
+
+                    </ol>
+</li>
+
+                <li class="li">Macros you use within a system command, either within the SYSTEM Command context
+                    or within the Execute-On context, can be used as part of the actual command or
+                    as parameters to a batch file.</li>
+
+                <li class="li">If the absolute path of the any of the files referenced in the macros contain
+                    embedded spaces (for example., <samp class="ph codeph">%file%</samp> resolves to
+                        <samp class="ph codeph">Program Files\LexiCom\inbox\testHost\test.edi</samp>) it might be
+                    necessary to add double quotes to the macro specification(s) in the command in
+                    order for the command to be properly processed by the operating system. For
+                    example, <samp class="ph codeph">copy “%file%” “%file%.bad”</samp>. </li>
+
+                <li class="li">Special rules apply to using directory macro variables for example,
+                        <samp class="ph codeph">%inbox%</samp>, <samp class="ph codeph">%outbox%,</samp> and custom directory
+                        variables.<ul class="ul" id="using_macro_variables__ul_dtw_b3x_ps">
+                        <li class="li"> If you use these macros in a source file, destination file,
+                            custom directory variable definition, or an LCOPY Archive context, and
+                            the path is a non-URI path, they are replaced only at the beginning of
+                            the string. For all other contexts (for example, URI source/destination
+                            paths, SYSTEM commands), they are replaced anywhere in the string.</li>
+
+                        <li class="li">Although allowed, you should not use directory macros should within a
+                            remote destination file context, as they reference local directory paths
+                            and are therefore nonsensical in this context. </li>
+
+                        <li class="li">When preceding a path with a directory macro, you should place a file
+                            separator character (for example, ‘/’or ‘\’ between the macro and the
+                            subsequent path (for example, <samp class="ph codeph">%inbox%/test.edi</samp>). </li>
+
+                        <li class="li">When using directory macros, care should be used so as not to create
+                            circular references (for example, host outbox references %CustomVar% and
+                            %CustomVar% references %outbox%). </li>
+
+                    </ul>
+</li>
+
+                <li class="li">All directory macro variables reference their absolute paths.</li>
+
+            </ol>
+
+      </div>
+
+      
+      <div class="section"><h2 class="title sectiontitle">Reserved Macro
+                    Variables</h2>
+         
+            <p class="p">Below is the table of all reserved macro variables.  </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_oys_ms5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e2266">Macro</th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e2269"> Description </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="2" valign="top" headers="d354454e2266 d354454e2269 "><strong class="ph b">Framework
+                                Macros</strong></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">%system% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the
+                                system-level inbox/outbox/sentbox/receivedbox. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">%none% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> For
+                                sentbox/receivedbox fields where this option is available to select,
+                                this indicates that there should be no associated sent/receivedbox
+                                (rather than defaulting to the system values in the absence of a
+                                selection) </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">%inbox% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the
+                                absolute path of the configured host or local user inbox. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">%outbox% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the
+                                absolute path of the configured host or local user outbox. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">%file% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the local
+                                file (including the absolute path) involved in the current
+                                operation.  For <span class="keyword cmdname">PUT</span> and certain
+                                    <span class="keyword cmdname">CHECK</span> commands, %file% is the source file. 
+                                For <span class="keyword cmdname">GET</span>, <span class="keyword cmdname">LCOPY</span>, and certain
+                                    <span class="keyword cmdname">CHECK</span> commands %file% is the destination
+                                file. See <a class="xref" href="t_check_command.html">CHECK Command</a>.</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">
+                                <p class="p">%sourcefile%</p>
+
+                                <p class="p">%srcfile%</p>
+
+                            </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the source
+                                file name involved in the current operation.  If the source file is
+                                local, and it is referenced in the Execute-On context, then the
+                                absolute path is included. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">
+                                <p class="p">%sourcefilebase%</p>
+
+                                <p class="p">%srcfilebase%</p>
+
+                            </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the source
+                                file name base (everything up to, but not including, the last '‘'’.
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">
+                                <p class="p">%sourcefileext%</p>
+
+                                <p class="p">%srcfileext%</p>
+
+                            </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the source
+                                file name extension (everything from, and including, the last '‘'’. 
+                                If no extension is contained in the source file, blank is returned.
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %destfile% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the
+                                destination file name involved in the current operation.  If the
+                                destination file is local, and it is referenced in the Execute-On
+                                context, then the absolute path is included. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %destfilebase% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the
+                                destination file name base (everything up to, but not including, the
+                                last '‘'’. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %destfileext% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> References the
+                                destination file name extension (everything from, and including, the
+                                last '‘'’.  If no extension is contained in the destination file,
+                                blank is returned. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %date% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 ">
+                                <p class="p">Specifies the current date in the format defined in the</p>
+
+                                <p class="p">'‘Macro Date Format'’setting (system, host, or action level). 
+                                    See <a class="xref" href="t_WebUI_CfgSysOpts_Advanced.html">Advanced System Options</a>
+                                    for more information about this property.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">
+                                %date[+/-#y][+/-#m][+/-#d][,MacroDateFormat=...]% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> Specifies a variant of
+                                the date as a value in either the past or the future.  The '#'
+                                character specifies one or more digit values and the order of the
+                                +/- fields (y=year, m=month, d=day) dictates the order of the
+                                operation, however calendar rules still apply (e.g., if the
+                                operation causes the day to wrap to the next month then the month
+                                value is automatically incremented).  The MacroDateFormat parameter
+                                variable is case-insensitive, however if it is specified with the
+                                +/- field(s), it must be specified as the last parameter.  If it is
+                                not specified, the format defined in the '‘Macro Date
+                                Format'’setting (system, host, or action level) is used.  See <a class="xref" href="t_WebUI_System.html">System</a> for more information
+                                about this property. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %time% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 ">
+                                <p class="p">Specifies the current time in the format defined in the</p>
+
+                                <p class="p">'Macro Time Format' setting (system, host, or action level).  See
+                                        <a class="xref" href="t_WebUI_System.html">System</a> for more
+                                    information about this property.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">
+                                %time[+/-#h][+/-#m][+/-#s][,MacroTimeFormat=...]% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> Specifies a variant of
+                                the time as a value in either the past or the future.  The '#'
+                                character specifies one or more digit values  and the order of the
+                                +/- fields (h=hour, m=minute, s=second) dictates the order of the
+                                operation, however calendar rules still apply (e.g., if the
+                                operation causes the minute to wrap to the next hour then the hour
+                                value is automatically incremented).  The MacroTimeFormat parameter
+                                variable is case-insensitive, however if it is specified with the
+                                +/- field(s), it must be specified as the last parameter.  If it is
+                                not specified, the format defined in the '‘Macro Time
+                                Format'’setting (system, host, or action level) is used.  See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for more
+                                information about this property. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %index% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 ">
+                                <p class="p">Specifies the usage of a daily host index value; often used to
+                                    help guarantee file uniqueness.  Each host's index is reset to 1
+                                    at the beginning of each day.  It is incremented by one every
+                                    time %index% is referenced.</p>
+
+                                <p class="p">The minimum number of digits in the index string is determined by
+                                    the 'Minimum Number Of Macro Index Digits' setting of the of
+                                    Configure System Options. See <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for more
+                                    information.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %host% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The alias of the host
+                                involved in the current operation. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %mailbox% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The alias of the
+                                mailbox involved in the current operation. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %status% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The status of the
+                                current operation.  Returned status values are either "Success" or
+                                "Warning" (both denote a successful transaction) and "Error" or
+                                "Exception" (both denote a failed transaction).  </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %crc% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The value of the
+                                computed CRC-32 associated with a transferred file.  The CRC is
+                                computed only when 'Compute CRC on transfers' is on (see <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for information
+                                about the Messages tab in Configure System Options).  This feature
+                                is available only for VLTrader and Harmony. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %filesize% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The size of a
+                                transferred file in measured in bytes. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %transferid% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The value of the
+                                unique ID assigned to a transferred file.  This feature is available
+                                only for VLTrader and Harmony. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %filesin% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The number of files
+                                received through within an action. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %filesout% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The number of files
+                                sent through within an action. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %command% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The full command
+                                syntax (only available for the Execute-On context of CHECK
+                                commands). </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="2" valign="top" headers="d354454e2266 d354454e2269 "><strong class="ph b">ebMS Macros</strong>
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %ebms.timestamp.date% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The date portion of
+                                the SOAP header's &lt;eb:Timestamp&gt; value.  The format of the
+                                date is determined by the 'Macro Date Format' setting (system, host,
+                                or action level).  See <a class="xref" href="t_WebUI_System.html">System</a> for information about Advanced tab under
+                                Configure System Options for a definition of this property.  This
+                                macro will only be resolved when used in the default file name.
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %ebms.timestamp.time% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The time portion of
+                                the SOAP header's &lt;eb:Timestamp&gt; value.  The format of the
+                                time is determined by the 'Macro Time Format' setting (system, host,
+                                or action level).  See <a class="xref" href="t_WebUI_System.html">System</a> for information about Advanced tab under
+                                Configure System Options for a definition of this property.  This
+                                macro will only be resolved when used in the default file name.
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 ">
+                                <p class="p">%ebms.action%</p>
+
+                                <p class="p">%ebms.service%</p>
+
+                                <p class="p">%ebms.cpaid%</p>
+
+                            </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 ">
+                                <p class="p">%ebms.action% = the SOAP header's &lt;eb:Action&gt; value. </p>
+
+                                <p class="p">%ebms.service% = the SOAP header's &lt;eb:Service&gt; value. </p>
+
+                                <p class="p">%ebms.cpaid% = the SOAP header's &lt;eb:CPAId&gt; value. </p>
+
+                                <p class="p">These macros will only be resolved when used in the default file
+                                    name.</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="2" valign="top" headers="d354454e2266 d354454e2269 ">
+                                <strong class="ph b">AS2 Macros</strong>
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %as2.to% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The current AS2-To
+                                value provided in the received message header. This macro will only
+                                be resolved when used in the default file name. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %as2.from% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The current AS2-From
+                                value provided in the received message header. This macro will only
+                                be resolved when used in the default file name. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %as2.subject% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The current Subject
+                                value provided in the received message header. This macro will only
+                                be resolved when used in the default file name. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="2" valign="top" headers="d354454e2266 d354454e2269 "><strong class="ph b">AS3 Macros
+                                </strong></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %as3.to% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The AS3-To name of a
+                                client. This macro will only be resolved when used in the SITE
+                                command within an action to verify that the AS3 names are properly
+                                configured on the VersaLex AS3 server. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %as3.from% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> The AS3-From name of a
+                                client. This macro will only be resolved when used in the SITE
+                                command within an action to verify that the AS3 names are properly
+                                configured on the VersaLex server. </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="2" valign="top" headers="d354454e2266 d354454e2269 "><strong class="ph b">EBICS Macros</strong>
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2266 "> %ebics.ordertype% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2269 "> For EBICS, this macro
+                                will resolve to the order type of the EBICS transaction. </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+      </div>
+
+      
+      <div class="section"><h2 class="title sectiontitle">Formatting %date%
+                    and %time% Macros</h2>
+         
+            <p class="p">The default <samp class="ph codeph">%date%</samp> setting is <samp class="ph codeph">yyyyMMdd</samp> and the
+                default <samp class="ph codeph">%time%</samp> setting is <samp class="ph codeph">HHmmssSSS</samp>.</p>
+
+            <p class="p">To specify a different <samp class="ph codeph">%date%</samp> or <samp class="ph codeph">%time%</samp> format, use
+                a pattern string in the 'Macro Date Format' and 'Macro Time Format' setting (system,
+                host, or action level).  See <a class="xref" href="t_WebUI_System.html">System</a> for
+                information about the Advanced tab under Configure System Options for definitions of
+                these properties.  Formats may also be specified as part of the macro definition,
+                e.g., <samp class="ph codeph">%date,MacroDateFormat=yyyyMMdd%</samp> and
+                    <samp class="ph codeph">%time,MacroTimeFormat=HHmmssSSS%</samp></p>
+
+            <p class="p"> In the pattern, all ASCII letters are reserved as pattern letters, which are defined
+                as the following:</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_vcf_ps5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e2804"> Symbol </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e2807"> Meaning </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e2810"> Example </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> G </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> era designator </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> AD </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> y </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> year </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 2004 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> M </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> month in year </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> September &amp; 09
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> d </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> day in month </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 15 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> h </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> hour in am/pm (1~12) </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 12 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> H </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> hour in day (0~23) </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 0 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> m </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> minute in hour </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 30 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> s </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> second in minute </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 24 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> S </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> millisecond </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 352 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> E </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> day in week </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> Wednesday </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> D </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> day in year </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 259 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> F </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> day of week in month </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 2 (2<sup class="ph sup">nd</sup> Wed
+                                in September) </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> w </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> week in year </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 35 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> W </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> week in month </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 2 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> a </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> am/pm marker </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> PM </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> k </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> hour in day (1~24) </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 24 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> K </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> hour in am/pm (0~11) </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> 0 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> z </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> time zone </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> Central Standard Time
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> ' </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> escape for text </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> delimiter </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2804 "> " </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2807 "> single quote </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e2810 "> ' </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            <p class="p">Any characters in the pattern that are not in the ranges of ['a'..'z'] and ['A'..'Z']
+                will be treated as quoted text.  For instance, characters like '.', '#' and '@' will
+                appear in the resulting date or time text even if they are not embraced within
+                single quotes.</p>
+
+            <div class="note note"><span class="notetitle">Note:</span> A pattern containing any invalid pattern letter will result in a thrown exception
+                during formatting or parsing.</div>
+
+            <p class="p">
+                <strong class="ph b">Examples Using Pattern Strings:</strong>
+            </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_wcf_ps5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3091">
+                                %date% Format Pattern </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3094">
+                                Result </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3091 ">
+                                MM-dd-yyyy </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3094 ">
+                                09-15-2004 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3091 ">
+                                EEE_MMM_d_yy </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3094 ">
+                                Wed_September_15_04 </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            <p class="p"></p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_xcf_ps5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3136">
+                                %time% Format Pattern </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3139">
+                                Result </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3136 ">
+                                h_mm_a </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3139 ">
+                                12_08_PM </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3136 ">
+                                K_mma-z </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3139 ">
+                                0_00PM-CST </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+      </div>
+
+      <div class="section"><h2 class="title sectiontitle">Macro Variable Usage
+                    Examples</h2>
+         
+            <p class="p"><strong class="ph b">Destination File Examples:</strong>
+            </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_pmw_ps5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3190"> Action Command </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3193"> Destination File
+                                Result </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3190 "><samp class="ph codeph">PUT test.edi
+                                    %date%_%time%.edi</samp></td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3193 ">20090714_131524352.edi</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" colspan="1" valign="top" headers="d354454e3190 "><samp class="ph codeph">PUT test.edi
+                                    %date-1d,MacroDateFormat=MMdd%.edi</samp></td>
+
+                            <td class="entry" colspan="1" valign="top" headers="d354454e3193 ">0713.edi</td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3190 "><samp class="ph codeph">GET test.edi
+                                    %srcfile%%date%-%time%-%index% </samp></td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3193 ">
+                                test.edi20090714-131524352-1 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3190 "><samp class="ph codeph">LCOPY test.edi
+                                    %date%_%time%.%srcfileext%</samp></td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3193 "> 20090714_131524352.edi
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3190 "><samp class="ph codeph">LCOPY test.edi
+                                    %%%date%_%time% </samp></td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3193 "> %20090714_131524352
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            <p class="p"><strong class="ph b">Source File Examples:</strong>
+            </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_qmw_ps5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3270"> Action Command </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3273"> Source File Result
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3270 ">
+                                <p class="p">PUT %inbox%\%date%\test.edi</p>
+
+                                <p class="p">PUT %inbox%\%date,MacroDateFormat=yyyy%</p>
+
+                            </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3273 ">
+                                <p class="p">inbox\20090714\test.edi</p>
+
+                                <p class="p">inbox\2009\test.edi</p>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3270 "> PUT
+                                %outbox%\%mailbox%\* </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3273 "> outbox\myMailbox\*
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            <p class="p">
+                <strong class="ph b">Execute-On Examples:</strong>
+            </p>
+
+            <p class="p">After successful execution of 'LCOPY test.edi test2.edi':</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_rmw_ps5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3335"> Execute On Successful
+                                Copy System Command </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3338"> System Command Result
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3335 "> cmd.exe /c copy
+                                "%destfile%" "c:\temp\%destfilebase%.copy" </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3338 "> cmd.exe /c copy
+                                "c:\LexiCom\inbox\test2.edi" "c:\temp\test2.copy" </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3335 "> cmd.exe /c
+                                ExecuteOnCopy.bat "%destfile%" "c:\temp\%destfilebase%.copy" </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3338 "> cmd.exe /c
+                                ExecuteOnCopy.bat "c:\LexiCom\inbox\test2.edi" "c:\temp\test2.copy"
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            <p class="p"><strong class="ph b">Default Host Directory Examples:</strong>
+            </p>
+
+            <p class="p">Assume the system-level inbox is 'myInbox\' and the custom directory variable,
+                '%custom1%', is set to '\\filsvr01\serverInbox\'.</p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="using_macro_variables__table_smw_ps5_cx" class="table" frame="border" border="1" rules="all">
+                    
+                    
+                    <thead class="thead" align="left">
+                        <tr class="row">
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3386"> Host Default Directory
+                                (Inbox) Setting </th>
+
+                            <th class="entry" rowspan="1" colspan="1" valign="top" id="d354454e3389"> Resolved Location
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3386 "> %custom1% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3389 ">
+                                \\filsvr01\serverInbox\ </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3386 "> %custom1%\inbox1 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3389 ">
+                                \\filsvr01\serverInbox\inbox1 </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3386 "> %system% </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3389 "> myInbox\ </td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3386 "> %system%\inbox1 </td>
+
+                            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d354454e3389 "> myInbox\inbox1
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+      </div>
+
+      
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

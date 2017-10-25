@@ -1,0 +1,135 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The following additional directories are created either during the AS2 installation or as needed by the application: Directory Purpose lostandfound\ Default inbox where incoming payload will be ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="AS2-Specific Directories"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_AS2_Hosts_HeaderPage.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="as2-specific_directories"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS2-Specific Directories</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="as2-specific_directories">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_AS2_Hosts_HeaderPage.html" title="AS2 Hosts">AS2 Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Hosts_HeaderPage.html" title="AS2 Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">AS2-Specific
+                    Directories</h1>
+
+   <div class="body taskbody">
+      <div class="section context">
+         <p class="p">The following additional directories are created either during the AS2 installation or
+            as needed by the application:</p>
+
+         
+         
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+               
+               
+               <thead class="thead" align="left">
+                  <tr class="row">
+                     <th class="entry" rowspan="1" colspan="1" valign="top" id="d153238e29">Directory</th>
+
+                     <th class="entry" rowspan="1" colspan="1" valign="top" id="d153238e32">Purpose</th>
+
+                  </tr>
+
+               </thead>
+
+               <tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d153238e29 ">
+                        <p class="p">lostandfound\</p>
+
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d153238e32 ">
+                        <p class="p">Default inbox where incoming payload will be deposited when the
+                           application can't determine where to put it.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d153238e29 ">
+                        <p class="p">AS2\</p>
+
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d153238e32 ">
+                        <p class="p">Location where raw (unprocessed) incoming and outgoing messages are
+                           stored. Incoming messages are located in the <strong class="ph b">AS2\received</strong>
+                           directory and outgoing messages are located in <strong class="ph b">the AS2\sent</strong>
+                           directory.  These files can be helpful in diagnosing problems. Old files
+                           should be deleted or archived by the user, if necessary. </p>
+
+                        <p class="p">The <strong class="ph b">AS2\unsent</strong> directory contains raw header, data and message
+                           setup information files. These files are used if a message needs to be
+                           retransmitted and are deleted automatically by the application once the
+                           message transfer has either completed successfully or has failed due to
+                           timeouts, exceptions, or the number of retries has been exhausted.</p>
+
+                        <p class="p">The <strong class="ph b">AS2\mdn</strong> directory contains subdirectories for received (and
+                           optionally sent) MDNs. This directory may be changed on the AS2 Service
+                           Panel. MDNs may be automatically archived by the application or manually
+                           archived by the user from the <span class="keyword wintitle">MDNs</span> tab on the
+                           listener panel. Archived MDNs are stored in
+                              <span class="ph filepath">AS2\mdn\received\archive\mdn.zip</span> or
+                              <span class="ph filepath">AS2\mdn\sent\archive\mdn.zip</span>.</p>
+
+                        <p class="p"> The <strong class="ph b">AS2\data</strong> directory contains AS2msgs.txt and AS2files.txt
+                           files used by the application to determine the receipt of duplicate
+                           messages and duplicate file names.  Entries in these files are retained
+                           for the time intervals configured on the <span class="keyword wintitle">AS2 Service</span>
+                           page. See <a class="xref" href="../Topics/t_Configure_AS2_Service.html" title="You configure AS2 service primarily at the parent Local and the trading partner AS2 remote hosts levels.">Local Listener AS2 Service</a>. </p>
+
+                        <p class="p">When a message is received from a trading partner who has enabled the
+                              <span class="ph uicontrol">AS2 Restart</span> feature (i.e., the inbound message
+                           contains a valid Etag header), the <strong class="ph b">AS2\restart</strong> directory will
+                           contain a header file named with the Etag value and a .as2restart
+                           extension and the partially received message file (named with Etag value
+                           and a _rcv extension). These files can be used to resume a transfer from
+                           the previous point of failure. When the entire message has been
+                           successfully received these files are removed; otherwise they will be
+                           retained for 24 hours after the last failure.</p>
+
+                     </td>
+
+                  </tr>
+
+                  <tr class="row">
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d153238e29 ">
+                        <p class="p">temp\</p>
+
+                     </td>
+
+                     <td class="entry" rowspan="1" colspan="1" valign="top" headers="d153238e32 ">
+                        <p class="p">Temporary location where incoming messages can be stored while they are
+                           being processed by the application. By default, they are deleted
+                           automatically once the message has been completely processed; however
+                           these files can be kept for problem diagnosis by using the
+                              <span class="ph uicontrol">Retain Temporary Inbound Message Files</span>
+                           host-level Advanced property. (These temporary files will automatically
+                           be deleted after 7 days.)</p>
+
+                     </td>
+
+                  </tr>
+
+               </tbody>
+
+            </table>
+</div>
+
+         
+      </div>
+
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_AS2_Hosts_HeaderPage.html" title="AS2 Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS2 Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

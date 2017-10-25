@@ -1,0 +1,86 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Cleo products support three different cryptosystems:  S/MIME, XML, and OpenPGP.  S/MIME is supported through AS2 and AS3 (see AS2 Mailbox Configuration .  XML is supported through ebXML (see ebXML ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Cryptographic Services Overview"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_cryptographic_services.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="cryptographic_services_overview"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cryptographic Services Overview</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="cryptographic_services_overview">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_cryptographic_services.html" title="Cryptographic Services">Cryptographic Services</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_cryptographic_services.html" title="Cryptographic Services"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cryptographic Services</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Cryptographic
+                    Services Overview</h1>
+
+   <div class="body">
+      <p class="p">The Cleo products support three different
+         cryptosystems:  S/MIME, XML, and OpenPGP.  S/MIME is supported through AS2 and AS3 (see
+            <a class="xref" href="t_AS2_Mailbox.html">AS2 Mailbox Configuration</a>.  XML is supported through ebXML (see <a class="xref" href="t_ebXML_Mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. ">ebXML Mailbox</a>) and mailbox-level packaging (see <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>).  OpenPGP is supported through mailbox-level
+         packaging (see <a class="xref" href="t_configure_the_mailbox_packaging_tab.html">Configuring Mailbox Packaging</a>).</p>
+
+      
+      <div class="section"><h2 class="title sectiontitle">S/MIME</h2>
+         
+      </div>
+
+      
+      <p class="p">MIME
+         (Multipurpose Internet Mail Extensions) was originally designed for formatting the content
+         of multi-part textual (ASCII) and non-textual (binary) message bodies for email gateways,
+         but has been adapted for use by other transport mechanisms as well.  Internet MIME messages
+         consist of two parts: headers (describing the content) and a body (consisting of the actual
+         data content or payload). MIME was not designed to provide for the application of security
+         services, therefore S/MIME (Secure/Multipurpose Internet Mail Extensions) was created as a
+         format and protocol for applying authentication, message integrity,
+         non-repudiation (through the use of public key cryptography) and confidentiality (using
+         encryption) to the Internet MIME message.</p>
+
+      
+      <p class="p">S/MIME is supported by transport mechanisms in one of either two
+            versions:  S/MIME v2 or S/MIME v3; the most notable difference being that S/MIME v3
+            supports a wider variety and more secure set of encryption algorithms. The Cleo products
+            support S/MIME v3; however, it is important to know which algorithms are supported by
+            your trading partners before deciding upon the specific algorithms for both signing and
+            encryption.</p>
+
+      
+      <div class="section"><h2 class="title sectiontitle">XML</h2>
+         
+      </div>
+
+      
+      <p class="p">XML Encryption and XML Signature are published
+         recommendations of the World Wide Web Consortium (W3C).  These recommendations define the
+         syntax and processing rules for encrypting and signing data.  Generally, the encrypted
+         symmetric key is contained within the <var class="keyword varname">EncryptedKey</var> element and the
+         encrypted data is contained within the <var class="keyword varname">EncryptedData</var> element. See <a class="xref" href="http://www.w3.org/TR/xmlenc-core" target="_blank">http://www.w3.org/TR/xmlenc-core </a> for detailed information regarding XML
+         encryption.  For digital signing, the <var class="keyword varname">Signature</var> element is the primary
+         element for encapsulating the digital signature. See <a class="xref" href="http://www.w3.org/TR/xmldsig-core" target="_blank">http://www.w3.org/TR/xmldsig-core </a> for detailed information regarding XML
+         signatures.  </p>
+
+      
+      <div class="section"><h2 class="title sectiontitle">OpenPGP</h2>
+         
+      </div>
+
+      
+      <p class="p">OpenPGP
+         is a non-proprietary protocol for encrypting using public key cryptography. It is based on
+         PGP as originally developed by Phil Zimmermann. The OpenPGP protocol defines standard
+         formats for encrypted messages, signatures, and certificates for exchanging public keys.
+         See <a class="xref" href="http://www.ietf.org/rfc/rfc2440.txt" target="_blank">RFC
+            2440</a> for detailed information on the OpenPGP Message Format.  </p>
+
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_cryptographic_services.html" title="Cryptographic Services"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Cryptographic Services</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

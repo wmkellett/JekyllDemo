@@ -1,0 +1,112 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Operator Audit Trail Report Filter dialog box is displayed when you select the View Operator Audit Trail option for all users, a User Group or a specific User. Use the Operator Audit Trail Report ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Filtering the Operator Audit Trail"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Operator_Audit_Trail_VLNav.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_p4p_m1q_kr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Filtering the Operator Audit Trail</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_p4p_m1q_kr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_vlnavigator_configuration.html" title="Configuring the Cleo VLNavigator application">Configuring the Cleo VLNavigator application</a> / <a class="navheader_parent_path" href="../Topics/t_Operator_Audit_Trail_VLNav.html" title="Operator Audit Trail">Operator Audit Trail</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Operator_Audit_Trail_VLNav.html" title="Operator Audit Trail"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Operator Audit Trail</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Filtering the Operator Audit Trail</h1>
+
+  <div class="body taskbody">
+    <div class="section context"> The <span class="ph uicontrol">Operator Audit Trail Report
+        Filter</span> dialog box is displayed when you select the <span class="ph uicontrol">View Operator
+        Audit Trail</span> option for all users, a User Group or a specific User.  Use the
+        <span class="ph uicontrol">Operator Audit Trail Report Filter</span> dialog box to filter the report
+      based on a time period and other criteria you specify. </div>
+
+    <ol class="ol steps" id="task_p4p_m1q_kr__steps_ndj_hlf_2z"><li class="li step stepexpand">
+        <span class="ph cmd">Optional - Click <span class="ph uicontrol">Open</span> to read a set of previously saved filter
+          criteria into the fields in the dialog box.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Specify a time period for which you want to see audit trail data. </span>
+        <div class="itemgroup info">Use the <span class="ph uicontrol">From</span> and <span class="ph uicontrol">To</span> fields to specify
+          starting and ending times for the reporting period.</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Select other criteria from the following tabs.</span>
+        <ol type="a" class="ol substeps" id="task_p4p_m1q_kr__substeps_ivy_ydh_2z">
+          <li class="li substep">
+            <span class="ph cmd">Use the <span class="keyword wintitle">Hosts/Mailboxes</span> tab to select hosts and mailboxes for
+              which you want to see audit trail events that have been logged. The <span class="ph uicontrol">Include
+                Folder(s)</span> list controls what is displayed in the <span class="ph uicontrol">Include
+                Host(s)\Mailbox(es)</span> list. The <span class="ph uicontrol">Include
+                Host(s)\Mailbox(es)</span> list also contains a <span class="ph uicontrol">Show
+                Mailboxes</span> option. If selected, the list displays down to the mailbox
+              level. If cleared, it only displays hosts.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Use the <span class="keyword wintitle">Service/Config/Misc</span> tab to select services,
+              configurations, and other miscellaneous items for which you want to see audit trail
+              events.  The <span class="ph uicontrol">Services</span> list contains system-level runnable
+              items. The <span class="ph uicontrol">Configurations</span> list contains system-level
+              configuration items. The <span class="ph uicontrol">Misc Items</span> list contains other
+              miscellaneous items that do not fall into the other categories.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Use the <span class="ph uicontrol">Event</span> tab to select events for which you want to see
+              audit trail information. The <span class="ph uicontrol">Event Types</span> list contains all the
+              different event types saved. <span class="ph uicontrol">CA Cert Events</span> and <span class="ph uicontrol">User
+                Cert Events</span> are special in that they are a series of events
+              themselves.</span>
+          </li>
+
+          <li class="li substep">
+            <span class="ph cmd">Use the <span class="ph uicontrol">Systems</span> tab to select pools and instances of
+              VersaLex for which you want to see audit trail information. Only the pools configured
+              in the <span class="ph">Cleo VLNavigator</span> application
+              are available from this list.</span>
+          </li>
+
+        </ol>
+
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Use the <span class="ph uicontrol">Sort By</span> field to specify the initial sort for the
+          report. </span>
+        <div class="itemgroup info">Choose from the following:<ul class="ul" id="task_p4p_m1q_kr__ul_yyl_nwf_gv">
+            <li class="li"><span class="ph uicontrol">Date/Time only</span></li>
+
+            <li class="li"><span class="ph uicontrol">Item Name</span></li>
+
+            <li class="li"><span class="ph uicontrol">Username then Item Name</span></li>
+
+            <li class="li"><span class="ph uicontrol">Username</span></li>
+
+          </ul>
+<p class="p">All but the first sort options listed also sort by date/time when the other
+            criteria match.</p>
+</div>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Optional - Click <span class="ph uicontrol">Save As</span> to save your filter criteria as an XML
+          file.  Click <span class="ph uicontrol">Close</span> to close the dialog box without saving.</span>
+      </li>
+<li class="li step stepexpand">
+        <span class="ph cmd">Optional -  <span class="ph uicontrol">Open</span> allows the user to read a previously saved
+          Filter into the panel. <span class="ph uicontrol">Save As</span> saves the current filter to an XML
+          file. This file can either be used with <span class="ph uicontrol">Open</span> or as input to the
+          command line reporting. <span class="ph uicontrol">Generate</span> generates the report and displays
+          the report screen. <span class="ph uicontrol">Close</span> closes the filter dialog box.
+            <span class="ph uicontrol">Help</span> displays the part of the user manual associated with the
+          filter dialog.</span>
+      </li>
+</ol>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Operator_Audit_Trail_VLNav.html" title="Operator Audit Trail"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Operator Audit Trail</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

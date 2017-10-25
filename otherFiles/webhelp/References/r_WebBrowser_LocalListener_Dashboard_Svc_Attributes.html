@@ -1,0 +1,108 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Dashboards Resource Path The check box activates and deactivates access to the Dashboards resource. Access is activated by default. The default value of the path is /VLDashboards . Dashboards is a web ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Local Listener Dashboard and System Monitor Web Browser Service reference"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Cfg_Dashboard_Reports_Web_Browser_Svc.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_bjl_3ff_lw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local Listener Dashboard and System Monitor Web Browser Service reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_bjl_3ff_lw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Configure_Local_Listener_Web_Browser_Svc.html" title="Local Listener Web Browser Service">Local Listener Web Browser Service</a> / <a class="navheader_parent_path" href="../Tasks/t_Cfg_Dashboard_Reports_Web_Browser_Svc.html" title="Configuring Dashboards and System Monitor for Web Browser service">Configuring Dashboards and System Monitor for Web Browser service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Cfg_Dashboard_Reports_Web_Browser_Svc.html" title="Configuring Dashboards and System Monitor for Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Dashboards and System Monitor for Web Browser service</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Local Listener Dashboard and System Monitor Web Browser Service reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Dashboards Resource Path</dt>
+
+          <dd class="dd">The check box activates and deactivates access to the Dashboards resource. Access is
+            activated by default.</dd>
+
+          <dd class="dd">The default value of the path is <span class="ph filepath">/VLDashboards</span>. Dashboards is a
+            web UI-only application. You must include this resource path in the URL (for example,
+              <span class="ph filepath">http(s)://<var class="keyword varname">VersaLexComputerIP</var>:<var class="keyword varname">http(s)Port</var>/<var class="keyword varname">DashboardsResourcePath</var></span>)
+            when accessing Dashboards through a browser. You can change this value at any time, but
+            it must begin with a forward slash (/) character. </dd>
+
+          <dd class="dd"><span class="ph uicontrol">Access via VLProxy</span> toggles access to the resource through <span class="ph">Cleo VLProxy</span>. It is selected by
+            default. </dd>
+
+        
+        
+        
+          <dt class="dt dlterm">System Monitor Resource Path</dt>
+
+          <dd class="dd">The check box activates and deactivates access to the Dashboards resource. Access is
+            activated by default.</dd>
+
+          <dd class="dd">The default value of the path is <span class="ph filepath">/VLMonitor</span>. System Monitor is a
+            web UI-only application. You must include this resource path in the URL (for example,
+              <span class="ph filepath">http(s)://<var class="keyword varname">VersaLexComputerIP</var>:<var class="keyword varname">http(s)Port</var>/<var class="keyword varname">SystemMonitorResourcePath</var></span>)
+            when accessing System Monitor through a browser. You can change this value at any time,
+            but it must begin with a forward slash (/) character. </dd>
+
+          <dd class="dd"><span class="ph uicontrol">Access via VLProxy</span> toggles access to the resource through <span class="ph">Cleo VLProxy</span>. It is selected by
+            default. </dd>
+
+        
+        
+          <dt class="dt dlterm">Report Server</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">URL</dt>
+
+                <dt class="dt dlterm">RMI Port</dt>
+
+                <dt class="dt dlterm">Settings</dt>
+
+                <dd class="dd"></dd>
+
+                <dd class="dd">The Report Server is a necessary component to Dashboards and System Monitor and
+                  the report server URL and RMI Port must be configured in order for Dashboards or
+                  System Monitor to function. Currently, Jinfonet’s JReport Server is supported by
+                  the <span class="ph">Cleo Harmony</span> application. The Cleo JReport Server installer must be used,
+                  and the report server must be dedicated to Cleo Dashboards and System Monitor
+                  applications. HTTP-only is supported with the report server. The default server
+                  port is 8888 and the default RMI port is 1129. It is strongly recommended that the
+                  report server not be installed on the same computer as <span class="ph">Cleo Harmony</span>.  Depending on report overhead and number of users, one
+                  report server can be set up to serve multiple instances of <span class="ph">Cleo Harmony</span>, or a separate report server can be dedicated to each <span class="ph">Cleo Harmony</span>. It is not recommended that the same report server be used
+                  across <span class="ph">Cleo Harmony</span> pools, as one report server instance cannot be used to serve
+                  different versions of <span class="ph">Cleo Harmony</span>.</dd>
+
+                <dd class="dd">Click <span class="ph uicontrol">Settings</span> to display the report server log level
+                  setting and version.</dd>
+
+                <dd class="dd">Use the menu in the Options section select a Log Level for your reports.</dd>
+
+                <dd class="dd">Select <span class="ph uicontrol">Normal</span> for everyday operation. Select
+                    <span class="ph uicontrol">Verbose</span> in cases where debug logging has been requested
+                  by Cleo Support.</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Cfg_Dashboard_Reports_Web_Browser_Svc.html" title="Configuring Dashboards and System Monitor for Web Browser service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Dashboards and System Monitor for Web Browser service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

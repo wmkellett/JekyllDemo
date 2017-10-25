@@ -1,0 +1,115 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the General tab to specify default values for local FTP user directories. Specify a Default Root Directory . By default, each FTP user's home directory is a subfolder under the directory you ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Local FTP User directories"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_local_ftp_users_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_kg5_tqd_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Local FTP User directories</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_kg5_tqd_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users">Configuring Local FTP Users</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Configuring Local FTP User directories</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <div class="section context">Use the General tab to specify default values for local FTP user
+            directories.</div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Specify a <span class="ph uicontrol">Default Root
+                        Directory</span>. By default, each FTP user's home directory is a
+                    subfolder under the directory you specify here.  Click the
+                        <span class="ph uicontrol">...</span> button to browse and select a directory.
+                    Alternatively, select a custom macro variable from the drop-down menu.  See
+                        <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> for a list of the
+                    applicable macros (Default Root Directory context).  Once the change is applied,
+                    FTP users that are already configured to use the default root are switched over
+                    to the new default root.</span>
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd"> Specify the paths and names of <strong class="ph b">Local User Subdirectories</strong>.  These
+                    directories are automatically created under each user's home directory.  Each
+                    directory path specified should be a relative path.  </span>
+                <div class="itemgroup info">
+                    <p class="p">The configured inbox and outbox directories can be easily referenced in the
+                        mailbox <span class="keyword cmdname">&lt;collect&gt;</span> and <span class="keyword cmdname">&lt;release&gt;</span>
+                        actions by using the <samp class="ph codeph">%inbox%</samp> and <samp class="ph codeph">%outbox%</samp>
+                        macros, respectively. See <a class="xref" href="../Topics/t_About_Local_FTP_Users_Mailbox_Action_Cmds.html">Action Tab</a> </p>
+
+                    <div class="p">If the sentbox directory is configured, when the user retrieves a file from
+                        the configured outbox, the <span class="ph">Cleo Harmony</span> application places a user-accessible copy of the file in the
+                        sentbox directory.  If the receivedbox directory is configured, when the
+                        user stores a file in the configured inbox (either directly or via
+                        RNFR/RNTO), the <span class="ph">Cleo Harmony</span> application also places a user-accessible copy of the file in
+                        the receivedbox directory.  <div class="note note"><span class="notetitle">Note:</span> Files of the same name are
+                            overwritten.</div>
+
+                    </div>
+
+                    <div class="p">The following are rules that apply to AS3/FTP mailboxes:<ul class="ul" id="task_kg5_tqd_3r__ol_bhc_vth_3r">
+                            <li class="li">The default <span class="ph filepath">inbox\</span> and
+                                    <span class="ph filepath">outbox\payload\</span> subdirectories are always
+                                used, regardless of the settings specified in the <span class="ph menucascade"><span class="ph uicontrol">Host &gt; General</span></span> panel, because vendor AS3 send and receive
+                                "choreographies" are established and published for interoperability
+                                certification and cannot be altered.  </li>
+
+                            <li class="li">Remote AS3 users must place all inbound payload files and MDNs in
+                                the <span class="ph filepath">inbox\</span> subdirectory. Outbound payload files
+                                can only be received from the <span class="ph filepath">outbox\payload</span>
+                                subdirectory; outbound MDNs can only be received from the
+                                    <span class="ph filepath">outbox\mdn</span>subdirectory.</li>
+
+                            <li class="li">Files placed in any other directory or subdirectory are not
+                                accessible by AS3 users and will not appear in any remote directory
+                                listings.</li>
+
+                            <li class="li">The <span class="ph filepath">sentbox</span> and
+                                    <span class="ph filepath">receivedbox</span> subdirectories are not created
+                                or used in AS3/FTP mailboxes regardless of the settings specified in
+                                the <span class="ph menucascade"><span class="ph uicontrol">Host &gt; General</span></span> panel due to the above security restrictions placed
+                                on all AS3 users.</li>
+
+                            <li class="li">In addition to the <strong class="ph b">Inbox</strong>, <strong class="ph b">Outbox</strong>, <strong class="ph b">Sentbox</strong> and
+                                    <strong class="ph b">Receivedbox</strong> folders, additional folders can be specified
+                                in the <span class="ph uicontrol">Others</span> field.  Multiple paths can be added to
+                                    <span class="ph uicontrol">Others</span> separated by commas, semi-colons or carriage
+                                returns.  Note that all paths must be relative and may not include
+                                reserved macro variables (e.g., <samp class="ph codeph">%mailbox%</samp>).</li>
+
+                        </ul>
+</div>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The <strong class="ph b">Archive Directories</strong> allow for a copy of the sent and received files
+                    to be saved in an additional location that, in most cases, is not accessible by
+                    the user.  Unlike the <span class="ph filepath">sentbox</span> and
+                        <span class="ph filepath">receivedbox</span> configured under the <strong class="ph b">Local User
+                        Subdirectories</strong>, you can configure these directories to point to a
+                    network location by clicking the <span class="ph uicontrol">...</span> button; or you can
+                    select a custom macro variable from the drop-down list.  See <a class="xref" href="../Topics/t_using_macro_variables.html">Using Macro Variables</a> for a list of the applicable macros (<strong class="ph b">Default Local
+                        User Archive Directory</strong> context). See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for information about setting
+                    up system-level directories and custom directory macro variables.</span>
+                <div class="itemgroup info">If desired, the <samp class="ph codeph">%mailbox%</samp> macro may be used as part of these
+                    directory definitions to filter files for non-LDAP users into separate
+                    subdirectories. Files written to these directories are retained with unique file
+                    names and will be archived if the Sent/Received Box Archive System Option has
+                    been enabled. See <a class="xref" href="../Topics/t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a></div>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local FTP Users</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

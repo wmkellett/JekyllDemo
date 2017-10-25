@@ -1,0 +1,92 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Security tab contains two sub tabs: Sender and Receiver . While both tabs contain the same fields, the fields on the Receiver tab are not editable by default. Use Sender’s Security Definition ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="MQ Mailbox: Security Tab"></meta><meta name="abstract" content="The Security tab contains two sub tabs: Sender and Receiver. While both tabs contain the same fields, the fields on the Receiver tab are not editable by default."></meta><meta name="description" content="The Security tab contains two sub tabs: Sender and Receiver. While both tabs contain the same fields, the fields on the Receiver tab are not editable by default."></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_MQ_Mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_z31_1jd_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>MQ Mailbox: Security Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_z31_1jd_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_mq_configuration.html" title="Configure an MQ host starting with the generic OFTP pre-configured host.">MQ Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_MQ_Mailbox.html" title="MQ Mailbox">MQ Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_MQ_Mailbox.html" title="MQ Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MQ Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">MQ Mailbox: Security Tab</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">The Security tab contains two sub tabs: <span class="keyword wintitle">Sender</span> and
+      <span class="keyword wintitle">Receiver</span>. While both tabs contain the same fields, the fields on the
+      <span class="keyword wintitle">Receiver</span> tab are not editable by default.   </p>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Use Sender’s Security Definition</dt>
+
+          <dd class="dd">
+            <div class="note note"><span class="notetitle">Note:</span> This field is available only on the <span class="keyword wintitle">Receiver</span> tab and is
+              activated only when you clear the <span class="ph uicontrol">Use Same Channel for Sender and
+                Receiver</span> check box on the mailbox <span class="keyword wintitle">MQSeries</span> panel
+              .</div>
+
+          </dd>
+
+          <dd class="dd">Select the <span class="ph uicontrol">Use Sender’s Security Definition</span> check box to use
+            the same settings as on the <span class="keyword wintitle">Sender</span> tab.  Clear the check box to
+            enable the rest of the fields on the <span class="ph menucascade"><span class="ph uicontrol">Security &gt; Receiver</span></span> tab, where you can specify security setting for the Receiver.</dd>
+
+        
+        
+          <dt class="dt dlterm">Enable Secure Connection</dt>
+
+          <dd class="dd">Enables the rest of the fields in the tab.  Select the check box if the
+            server-connection channel is using SSL message encryption. If you are provided with a
+            server certificate for the MQSeries Queue Manager, copy it to the certs subdirectory of
+            the <span class="ph">Cleo Harmony</span>
+            product. If this is not provided, a dialog box is displayed when you connect to the
+            Queue Manager to allow you to trust the server certificate provided by the Queue Manager
+            per connection session or permanently.</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">MQ SSL Cipher Spec</span></dt>
+
+          <dd class="dd">Select the spec provided to you by the MQSeries Queue Manager administrator. The list
+            of available cipher specs supported by the <span class="ph">Cleo Harmony</span>
+            application requires that the Queue Manager be running with the latest IBM PTF.  It is
+            not guaranteed, however, that all cipher specs in the list will be supported by the
+            version of the Queue Manager to which you are connecting. </dd>
+
+        
+        
+          <dt class="dt dlterm">Authenticate Client</dt>
+
+          <dd class="dd">Enables the <span class="ph uicontrol">Client Certificate</span> fields. Select the check box if
+            the server-connection channel used to transport your messages requires client
+            authentication. In this case, you must also provide a client certificate that will be
+            installed in the Queue Manager's key repository to authenticate your connection. </dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Certificate Alias</span></dt>
+
+          <dt class="dt dlterm"><span class="ph uicontrol">Password</span></dt>
+
+          <dd class="dd">Alias and password for the certificate you created for this server-connection
+            channel. See <a class="xref" href="../Topics/t_certificate_manager.html">Certificate Management</a> for more information on creating a client
+            certificate.</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_MQ_Mailbox.html" title="MQ Mailbox"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">MQ Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

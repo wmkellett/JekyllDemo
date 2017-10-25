@@ -1,0 +1,111 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the ACE (Automatic Certificate Exchange) tab to trade certificates with your partner through the same OFTP channel used to trade payload. ACE exchanges do not themselves use channel security ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="OFTP Mailbox Security: ACE Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_OFTP_Mailbox_SecurityTab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_gmd_hlp_cz"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>OFTP Mailbox Security: ACE Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_gmd_hlp_cz">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_OFTP_Mailbox.html" title="A mailbox's parameters allow access to the host system.">OFTP Mailbox</a> / <a class="navheader_parent_path" href="../Topics/t_OFTP_Mailbox_SecurityTab.html" title="OFTP Mailbox: Security Tab">OFTP Mailbox: Security Tab</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Mailbox_SecurityTab.html" title="OFTP Mailbox: Security Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Mailbox: Security Tab</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">OFTP Mailbox Security: ACE Tab</h1>
+
+  <div class="body">
+    <p class="p">Use the <span class="keyword wintitle">ACE</span> (Automatic Certificate Exchange) tab to trade certificates
+      with your partner through the same OFTP channel used to trade payload. ACE exchanges do not
+      themselves use channel security features, which allows for exchange of initial certificates as
+      well as replacement certificates. ACE is an extension to the OFTP2 specification. Check with
+      your trading partner that their OFTP2 product supports ACE before attempting to use this
+      tab. Your trading partner can also require that you provide your Certificate Logical
+      Identification Data (CLID) values before using ACE.</p>
+
+    <p class="p">The ACE tab shows certificates for both sides of the relationship – <span class="ph uicontrol">My
+        Certs</span> and <span class="ph uicontrol">Trading Partner Certs</span> – and four different uses
+      – <span class="ph uicontrol">Signing</span>, <span class="ph uicontrol">Encryption</span>,
+        <span class="ph uicontrol">Session</span>, and <span class="ph uicontrol">EERP</span>. The currently active
+      certificate is always listed first, followed by the other certificates that have been
+      delivered through ACE.</p>
+
+    <p class="p">Although they can also be exchanged through ACE, TLS certificates are not shown because in
+      general all trusted certificates are accepted for TLS rather than a specific list. If the
+      mailbox is a substation mailbox, session certificates are also not shown because the session
+      certificate is only applicable to the main station mailbox.</p>
+
+    <p class="p"> <img class="image" id="topic_gmd_hlp_cz__image_hnq_y52_jr" src="../Images/image1057.jpg"></img> </p>
+
+    <p class="p">Click<span class="ph uicontrol">Send Certificate</span> to display the <span class="ph uicontrol">Send Certificate to
+        Trading Partner</span> dialog box.  </p>
+
+    <p class="p">
+      <img class="image" id="topic_gmd_hlp_cz__image_unq_y52_jr" src="../Images/image1059.jpg"></img>
+    </p>
+
+    <p class="p">Select the intended usages and then fill in the user certificate alias and password. Click
+        <span class="ph uicontrol">Send</span> to initiate an ACE
+      <samp class="ph codeph">ODETTE_CERTIFICATE_DELIVER</samp>. If your trading partner responds with an EERP,
+      the certificate becomes the active certificate for the selected usages and what was the active
+      certificate is dropped down in the list.</p>
+
+    <ul class="ul" id="topic_gmd_hlp_cz__ul_j5y_dtn_c5">
+      <li class="li">For signing and EERP, the active certificate is in effect the only certificate used (to
+        sign).</li>
+
+      <li class="li">For encryption and session, the active certificate is the first certificate used (to
+        decrypt), but if decryption fails, the other valid certificates in the list are tried
+        one-by-one.</li>
+
+    </ul>
+
+    <p class="p">If <span class="ph uicontrol">Certificate replaces all certificates previously provided to trading
+        partner</span> is selected first, then clicking <span class="ph uicontrol">Send</span> initiates
+      an ACE <samp class="ph codeph">ODETTE_CERTIFICATE_REPLACE</samp>. If your trading partner responds with an
+      EERP, the certificate becomes the active certificate for the selected usages, and all of the
+      user certificates previously listed are automatically cleared.</p>
+
+    <p class="p">To manually remove a certificate in the list (other than the active certificate), right-click
+      on the certificate and select <span class="ph uicontrol">Remove</span>.</p>
+
+    <p class="p">
+      <img class="image" id="topic_gmd_hlp_cz__image_h4q_y52_jr" src="../Images/image1061.jpg"></img>
+    </p>
+
+    <p class="p">The following dialog is shown when <span class="ph uicontrol">Request Certificate(s)</span> is
+      clicked:</p>
+
+    <p class="p">
+      <img class="image" id="topic_gmd_hlp_cz__image_u4q_y52_jr" src="../Images/image1063.jpg"></img>
+    </p>
+
+    <p class="p">Click <span class="ph uicontrol">Request</span> to initiate an ACE ,
+      and if acceptable, queue your trading partner to send one or more ACE
+        <samp class="ph codeph">ODETTE_CERTIFICATE_DELIVER</samp>s back. An
+        <samp class="ph codeph">ODETTE_CERTIFICATE_DELIVER</samp> can also be received unsolicited. Based on your
+      configured CLID, the usage for the certificate within the DELIVER is determined, the
+      certificate becomes the active certificate for its usages, and what was the active certificate
+      is dropped down in the list.</p>
+
+    <ul class="ul" id="topic_gmd_hlp_cz__ul_o4c_ftn_c5">
+      <li class="li">For signing and EERP, the active certificate is the first certificate used (to verify a
+        signature), but if verification fails, the other valid certificates in the list are tried
+        one-by-one.</li>
+
+      <li class="li">For encryption and session, the active certificate is in effect the only certificate used
+        (to encrypt).</li>
+
+    </ul>
+
+    <p class="p">To manually remove a certificate in the list (other than the active certificate), right-click
+      on the certificate and select <span class="ph uicontrol">Remove</span>.</p>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_OFTP_Mailbox_SecurityTab.html" title="OFTP Mailbox: Security Tab"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Mailbox: Security Tab</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

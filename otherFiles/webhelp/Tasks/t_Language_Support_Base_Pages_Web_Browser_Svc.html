@@ -1,0 +1,151 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="To add support for a new language to the base pages: Create a resource file for each language that you want to support. Use the VLPortal.properties file as a template for the desired language.  For ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Add Support for a New Language to the Base Pages"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_I10Ning_your_web_portals_Web_Browser_Svc.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_dwk_cfh_hr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Add Support for a New Language to the Base Pages</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_dwk_cfh_hr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_Configure_VLPortal_Web_Browser_Svc_FTP.html" title="Configuring VLPortal Web Browser service">Configuring VLPortal Web Browser service</a> / <a class="navheader_parent_path" href="../Topics/t_I10Ning_your_web_portals_Web_Browser_Svc.html" title="Internationalizing Your Web Portals">Internationalizing Your Web Portals</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_I10Ning_your_web_portals_Web_Browser_Svc.html" title="Internationalizing Your Web Portals"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Internationalizing Your Web Portals</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Add Support for a New Language to the Base Pages</h1>
+
+    <div class="body taskbody">
+        <div class="section context">To add support for a new language to the base pages:</div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">Create a resource file for each language that you want to support. Use the
+                        <span class="ph filepath">VLPortal.properties</span> file as a template for the desired
+                    language.  For example, if you want to add web portal Spanish language
+                    support (that has the ISO-639-1 language code of ‘es’), you would copy the
+                        <span class="ph filepath">VLPortal.properties</span> file (from the
+                        <span class="ph filepath">webserver\VLPortal\internationalization</span> directory) to
+                        <span class="ph filepath">VLPortal_es.properties</span>. </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Open this newly created properties file in a text editor and translate all the
+                    text after the ‘=’ character into the desired language for each property
+                    provided in this file. In our example, we are translating to Spanish. Do not add
+                    a space after the ‘=’ character. </span>
+                <div class="itemgroup info">
+                    <p class="p"><strong class="ph b">Example</strong>:</p>
+
+                    <p class="p">The original English translation:</p>
+
+                    <p class="p">
+                        <img class="image" id="task_dwk_cfh_hr__image_crx_1fh_hr" src="../Images/image765.jpg"></img>
+                    </p>
+
+                    <p class="p">The same properties translated to Spanish:</p>
+
+                    <p class="p">
+                        <img class="image" id="task_dwk_cfh_hr__image_rrx_1fh_hr" src="../Images/image767.jpg"></img>
+                    </p>
+
+                    <div class="p">
+                        <div class="note note"><span class="notetitle">Note:</span> Any lines preceded by one or more ‘#’ characters is a comment and is
+                            ignored by the <span class="ph">Cleo Harmony</span> application. These lines are not required to be
+                            translated. </div>
+
+                    </div>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Import the translated resource file(s) into the <span class="ph">Cleo Harmony</span> application using the <span class="ph uicontrol">Import…</span>
+                    button in the <a class="xref" href="t_Maintain_Web_Catalog_Web_Browser_Svc.html">Maintaining the Web Page Catalog</a> dialog.  </span>
+                <div class="itemgroup info">
+                    <div class="note note"><span class="notetitle">Note:</span> Do not copy the resource file(s) directly into the
+                            <span class="ph filepath">webserver\VLPortal\internationalization</span>
+                        directory. In order for the resource file(s) to be properly registered in
+                        the <span class="ph">Cleo Harmony</span> application, they must be imported. This applies to
+                        newly created resource files or modified resource file. In all cases, the
+                        files must be imported rather than directly copied. </div>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd"> For each web page listed in the VLPortal Web Page
+                        Catalog, add an entry for the newly configured language. Right-click
+                    each web page entry and select <span class="ph uicontrol">Edit…</span>.</span>
+                <ol type="a" class="ol substeps" id="task_dwk_cfh_hr__substeps_lc5_w3b_3r">
+                    <li class="li substep">
+                        <span class="ph cmd">If a prompt appears showing the associated web portals and asking if
+                            you are sure you want to edit it, select
+                            <span class="ph uicontrol">Yes</span>.</span>
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">From the <strong class="ph b">Language</strong> drop-down selector in the upper-right corner,
+                            choose the newly imported language.  </span>
+                        
+                    </li>
+
+                    <li class="li substep">
+                        <span class="ph cmd">Add the page title content in the appropriate language and click
+                                <span class="ph uicontrol">OK</span>.</span>
+                    </li>
+
+                </ol>
+
+                <div class="itemgroup info">
+                    <div class="p">
+                        <div class="note note"><span class="notetitle">Note:</span> At a minimum, the above steps should be performed for the four
+                            baseline standard web pages (that is, <span class="ph">Cleo Harmony</span> Web Portal, Manual File Transfer, File Transfer
+                            History, and <span class="ph">Cleo Harmony</span> Web Portal Help). If any of these pages are
+                            missing a particular language variant, an asterisk (*) is displayed next
+                            to the language in the<strong class="ph b">Web Portals</strong> table in the
+                                <span class="keyword wintitle">VLPortal</span> tab.</div>
+
+                    </div>
+
+                    
+                    <p class="p">See <a class="xref" href="t_Configure_VLPortal_Web_Browser_Svc_FTP.html">Configuring VLPortal Web Browser service</a>. </p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Additionally, web portal users selecting this language will not be able to view
+                    the missing language variants. Further, if all the pages are missing, users will
+                    not be able to log into the web portal. When missing pages are encountered, a
+                    warning message is logged to the <span class="ph">Cleo Harmony</span> console each time the web portal user logs in.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">If it is necessary to remove a page for a specific language variant and it is
+                    not the only language configured for that page: </span>
+                <ol type="a" class="ol substeps" id="task_dwk_cfh_hr__substeps_lnx_xkb_3r">
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Edit the desired page. </span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Select the language variant from the list. </span>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Clear the <strong class="ph b">Title</strong> text and click <span class="ph uicontrol">OK</span>. 
+                        </span>
+                        <div class="itemgroup info">You are prompted to be sure you want to proceed.  </div>
+                    </li>
+
+                    <li class="li substep substepexpand">
+                        <span class="ph cmd">Click <span class="ph uicontrol">Yes</span> to complete the process. </span>
+                    </li>
+
+                </ol>
+
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_I10Ning_your_web_portals_Web_Browser_Svc.html" title="Internationalizing Your Web Portals"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Internationalizing Your Web Portals</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

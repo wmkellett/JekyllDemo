@@ -1,0 +1,159 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Example wrapper for an outgoing request (single-action or two-action PIP): &lt;w:pip xmlns:w=&#34;http://www.cleo.com/protocols/RosettaNet/wrapper/1.0&#34; pipCode =&#34;3A1&#34; pipVersion =&#34;*&#34;&gt;  &lt;w:serviceContent&gt;     ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Outgoing Documents"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_rnif_overview.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_RNIF_XMLFragment.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_RNIF_CDATASection.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_RNIF_Base64EncodedData.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_dwp_2yk_p5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Outgoing Documents</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_dwp_2yk_p5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_rnif_hosts.html" title="RNIF Hosts">RNIF Hosts</a> / <a class="navheader_parent_path" href="../Topics/t_rnif_overview.html" title="RNIF Overview">RNIF Overview</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_rnif_overview.html" title="RNIF Overview"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Overview</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Outgoing Documents</h1>
+
+  <div class="body">
+    <p class="p">Example wrapper for an outgoing request (single-action or two-action PIP):</p>
+
+    <pre class="pre codeblock">&lt;w:pip xmlns:w="http://www.cleo.com/protocols/RosettaNet/wrapper/1.0" <strong class="ph b">pipCode</strong>="3A1" <strong class="ph b">pipVersion</strong>="*"&gt;  
+&lt;w:serviceContent&gt;
+    ...    
+PIP XML service content request document goes here
+    ...  
+&lt;/w:serviceContent&gt;
+&lt;/w:pip&gt; 
+Example wrapper for an outgoing response (two-action PIPs only): 
+
+&lt;w:pip xmlns:w="http://www.cleo.com/protocols/RosettaNet/wrapper/1.0" <strong class="ph b">pipCode</strong>="3A1" <strong class="ph b">pipVersion</strong>="*" 
+              <strong class="ph b">pipInstanceId</strong>="1234567" <strong class="ph b">actionType</strong>="response"&gt;  
+&lt;w:serviceContent&gt;
+    ...
+    PIP XML service content response document goes here
+    ...
+  &lt;/w:serviceContent&gt;
+&lt;/w:pip&gt;</pre>
+
+    
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="topic_dwp_2yk_p5__table_zpl_2sk_p5" class="table" frame="border" border="1" rules="all">
+        
+        
+        
+        
+        <thead class="thead" align="left">
+          <tr class="row">
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d225923e53"> Element </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d225923e56"> Description </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d225923e59"> Attribute </th>
+
+            <th class="entry" rowspan="1" colspan="1" valign="top" id="d225923e62"> Description </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e53 "> &lt;pip&gt; </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e56 ">Required.<p class="p">Root element.</p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e59 "> pipCode </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e62 ">Required.<p class="p"> The code for a PIP
+                specification. Incoming and outgoing PIPs that can be used with a trading partner
+                are activated and configured in the mailbox <span class="keyword wintitle">PIPs</span> tab. See <a class="xref" href="t_RNIF_Mailbox_PIPsTab.html" title="Use the mailbox PIPs tab to activate and configure the Partner Interface Processes (PIPs) allowed for incoming and outgoing messages. ">RNIF Mailbox: PIPs Tab</a>.</p>
+</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e53 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e56 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e59 "> pipVersion </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e62 ">Optional.<p class="p">The version that matches to
+                a particular version of a PIP. If no version is specified or the version is set to
+                "*", the first occurrence of a configured PIP is used.</p>
+</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e53 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e56 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e59 "> pipInstanceId </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e62 ">Optional.<p class="p">The PIP instance ID
+                uniquely identifies each usage of a PIP when documents are sent and received. This
+                is only necessary for two-action PIPs in order to associate a response document with
+                the original request document. If a PIP instance ID is not specified, then VersaLex
+                automatically generates one.</p>
+</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e53 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e56 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e59 "> actionType </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e62 ">Optional.<p class="p">Specifies the type of
+                message being sent. Valid values are <span class="ph uicontrol">request</span> and
+                  <span class="ph uicontrol">response</span>. If not specified, the default is
+                  <span class="ph uicontrol">request</span>.  Specify <span class="ph uicontrol">response</span> for the
+                response of a two-action PIP.</p>
+</td>
+
+          </tr>
+
+          <tr class="row">
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e53 "> &lt;serviceContent&gt; </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e56 ">Required.<p class="p">PIP XML service content
+                (payload).</p>
+</td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e59 ">   </td>
+
+            <td class="entry" rowspan="1" colspan="1" valign="top" headers="d225923e62 ">   </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+</div>
+
+    <div class="note note"><span class="notetitle">Note:</span> Do not forget the namespace definition on the root &lt;pip&gt; element of the wrapper.</div>
+
+    <p class="p">The service content can be specified three ways: as an XML fragment, text as part of a CDATA
+      section, or as Base64 encoded data.</p>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_RNIF_XMLFragment.html">Content as XML Fragment</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_RNIF_CDATASection.html">Content as CDATA Section</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_RNIF_Base64EncodedData.html">Content as Base64 Encoded Data</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_rnif_overview.html" title="RNIF Overview"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">RNIF Overview</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

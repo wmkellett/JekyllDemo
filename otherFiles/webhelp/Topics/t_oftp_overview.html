@@ -1,0 +1,457 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Odette FTP is a state-driven point-to-point file transfer protocol. The initiator of the connection is the speaker, but speaker and listener roles can be reversed at anytime during the session. All ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="OFTP Overview"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_oftp_hosts.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="oftp_overview"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>OFTP Overview</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="oftp_overview">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_oftp_hosts.html" title="OFTP Hosts">OFTP Hosts</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_oftp_hosts.html" title="OFTP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Hosts</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">OFTP Overview</h1>
+
+   
+   <div class="body">
+      <p class="p">Odette FTP is a state-driven point-to-point file transfer
+            protocol.</p>
+
+      <div class="p">
+            <ul class="ul" id="oftp_overview__ul_ssn_xyc_m5">
+                <li class="li"> The initiator of the connection is the speaker, but speaker and listener roles
+                    can be reversed at anytime during the session.</li>
+
+                <li class="li">All four OFTP file formats are supported –Text, Unstructured, Fixed, and
+                    Variable.</li>
+
+                <li class="li">VersaLex OFTP can be used to perform EBCDIC&lt;-&gt;ASCII translations during
+                    the OFTP transfer.</li>
+
+                <li class="li">OFTP sessions can be over ISDN (Windows users only) or TCP/IP. ISDN equipment
+                    must support the Common ISDN API (CAPI) interface, version 2.0.</li>
+
+                <li class="li">Support for OFTP receipts (End-to-End Responses) is included.</li>
+
+                <li class="li">VersaLex is compatible with Odette FTP versions 1.2, 1.3, 1.4, and 2.0.</li>
+
+                <li class="li">VersaLex supports the OFTP2 specification, including secure transport over TLS,
+                    session authentication, encryption, compression, and document signing.</li>
+
+                <li class="li">VersaLex does not support forwarding OFTP messages – VersaLex must be an
+                    endpoint.</li>
+
+                <li class="li">VersaLex OFTP can receive files, both solicited via an OFTP receive <img class="image" id="oftp_overview__image_yt2_gzc_m5" src="../Images/image146.gif"></img> action or unsolicited
+                    via the <img class="image" id="oftp_overview__image_zt2_gzc_m5" src="../Images/image027.gif"></img> Local
+                    Listener <img class="image" id="oftp_overview__image_a52_gzc_m5" src="../Images/image1026.gif"></img> Odette
+                    FTP service.</li>
+
+                <li class="li">VersaLex OFTP can send files only via an OFTP send <img class="image" id="oftp_overview__image_tlq_hzc_m5" src="../Images/image146.gif"></img> action; files cannot
+                    be sent by the <img class="image" id="oftp_overview__image_ulq_hzc_m5" src="../Images/image027.gif"></img> Local Listener <img class="image" id="oftp_overview__image_vlq_hzc_m5" src="../Images/image1026.gif"></img> Odette FTP service.</li>
+
+            </ul>
+
+        </div>
+
+      <p class="p">The following action commands are available on
+            VersaLex:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+            
+            
+            <thead class="thead" align="left">
+               <tr class="row">
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d338249e101">
+                         
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d338249e104">
+                        Command
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d338249e107">
+                        Purpose
+                    </th>
+
+                    
+                  <th class="entry" rowspan="1" colspan="1" valign="top" id="d338249e110">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Possible underlying OFTP commands</span>
+                     </strong>
+                    
+                  </th>
+
+                
+               </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Host commands</span>
+                     </strong>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        PUT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Send one or more files to the host
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        
+                     <p class="p">SFID (Start File Identification)</p>
+
+                        
+                     <p class="p">DATA (Data exchange buffer)</p>
+
+                        
+                     <p class="p">EFID (End of File Identification)</p>
+
+                        
+                     <p class="p">CD (Change Direction)</p>
+
+                        
+                     <p class="p">RTR (Ready to Receive)</p>
+
+                        
+                     <p class="p">EERP (End to End Response)</p>
+
+                        
+                     <p class="p">NERP (Negative End Response)</p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        GET
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Receive one or more files and receipts from the
+                            host
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        
+                     <p class="p">CD (Change Direction)</p>
+
+                        
+                     <p class="p">SFPA (Start File Positive Answer)</p>
+
+                        
+                     <p class="p">SFNA (Start File Negative Answer)</p>
+
+                        
+                     <p class="p">CDT (Set Credit)</p>
+
+                        
+                     <p class="p">EFPA (End File Positive Answer)</p>
+
+                        
+                     <p class="p">EFNA (End File Negative Answer)</p>
+
+                        
+                     <p class="p">EERP (End to End Response)</p>
+
+                        
+                     <p class="p">NERP (Negative End Response)</p>
+
+                    
+                  </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                        
+                     <strong class="ph b">
+                        <span class="ph">Local commands</span>
+                     </strong>
+                    
+                  </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        SYSTEM
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Execute a local system command
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        WAIT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Pause
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        SET
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Sets a property
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        CLEAR
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Clears a string property
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                         
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        LCOPY
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Copy one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        LDELETE
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Delete one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        LREPLACE
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Replace bytes in one or more local files
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        CHECK
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Check for a transfer, file, or directory (VLTrader
+                            and Harmony only)
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e101 ">
+                         
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e104 ">
+                        SCRIPT
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e107 ">
+                        Execute a JavaScript File (VLTrader and Harmony
+                            only)
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d338249e110 ">
+                        -
+                    </td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      <p class="p"> </p>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_oftp_hosts.html" title="OFTP Hosts"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">OFTP Hosts</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

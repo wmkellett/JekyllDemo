@@ -1,0 +1,76 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Note: This section applies to the Cleo VLTrader and Cleo Harmony applications only. In the web UI, go to Administration &gt; Monitoring &gt; Embedded Database . In the native UI, go to Options &gt; Monitor &gt; ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Embedded database"></meta><meta name="DC.Coverage" content="Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_Monitoring.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_adb_l1k_dr"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Embedded database</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_adb_l1k_dr">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring">Monitoring</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Monitoring</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Embedded database</h1>
+
+  
+  
+  <div class="body">
+    <div class="note note"><span class="notetitle">Note:</span> This section applies to the <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications
+      only.</div>
+
+    <p class="p">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration</span> &gt; <span class="ph uicontrol">Monitoring</span> &gt; <span class="ph uicontrol">Embedded Database</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Monitor</span> &gt; <span class="ph uicontrol">Embedded Database</span></span>. The <span class="keyword wintitle">Embedded Database</span> sub-tab allows for configuration of
+      the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> local embedded H2 (<a class="xref" href="http://www.h2database.com" target="_blank">www.h2database.com</a>)
+      relational database created for and used by the Cleo System Monitor application. See <a class="xref" href="t_cleo_dashboards_and_cleo_system_monitor.html">Cleo Dashboards and Cleo System Monitor</a></p>
+
+    
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Database Port Number</dt>
+
+        <dd class="dd">The standard H2 SQL connection listening port. This is the port connected to by the <span class="ph">Cleo</span> System Monitor
+          application for rendering system status.  </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">9092</kbd></dd>
+
+      
+      
+        <dt class="dt dlterm"><strong class="ph b">Web Server Port Number</strong></dt>
+
+        <dd class="dd">The H2 web server portal.  The H2 web portal can be accessed from a web browser using an
+          URL of the form
+              <span class="ph filepath">http://<var class="keyword varname">CleoProductName</var><var class="keyword varname">ComputerIP</var>:<var class="keyword varname">WebServerPortNumber</var></span>.  </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">8082</kbd></dd>
+
+      
+      
+        <dt class="dt dlterm">View Only User Password</dt>
+
+        <dd class="dd"> corresponds to the embedded database <em class="ph i">viewonly</em> user.  The viewonly user is used
+          by the Cleo System Monitor SQL connection, and can also be used when accessing the H2 web
+          server portal.  Any Cleo System Monitor Dashboards that are open when a password change
+          occurs will enter an error state.  Logging out of the monitor and back in will correct
+          this issue.</dd>
+
+      
+      
+        <dt class="dt dlterm">Purge Data After</dt>
+
+        <dd class="dd">The amount of system status history kept in the database (and available in Cleo System
+          Monitor) </dd>
+
+        <dd class="dd"><strong class="ph b">Default value</strong>: 14 days</dd>
+
+      
+    </dl>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_Monitoring.html" title="Monitoring"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Monitoring</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

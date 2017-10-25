@@ -1,0 +1,72 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Store raw sent Save the contents of the raw MIME payload messages sent to the remote host. The files are stored in the SMTP\sent directory under the Cleo Harmony root path. These files can be useful ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="SMTP Host: SMTP Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_SMTP_Host.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_l4l_v4d_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>SMTP Host: SMTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_l4l_v4d_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_smtp_configuration.html" title="SMTP Configuration">SMTP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_SMTP_Host.html" title="SMTP Host">SMTP Host</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_SMTP_Host.html" title="SMTP Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP Host</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">SMTP Host: SMTP Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Store raw sent</dt>
+
+          <dd class="dd">Save the contents of the raw MIME payload messages sent to the remote host. The files
+            are stored in the <span class="ph filepath">SMTP\sent</span> directory under the <span class="ph">Cleo Harmony</span>
+            root path. These files can be useful in diagnosing problems, but should be disabled if
+            disk space needs to be conserved.</dd>
+
+        
+        
+          <dt class="dt dlterm">Security Modes</dt>
+
+          <dd class="dd">If the SMTP server requires use of the Secure Socket Layer (SSL), select one of two
+            different <span class="ph uicontrol">Security Modes</span>. </dd>
+
+          <dd class="dd"><strong class="ph b">Possible values</strong>: <ul class="ul" id="reference_l4l_v4d_b5__ul_gd3_532_sw">
+              <li class="li"><kbd class="ph userinput">None</kbd> - Indicates non-secure transfers; commands and data
+                are clear-text.</li>
+
+              <li class="li"><kbd class="ph userinput">SSL Implicit</kbd> - For servers that support only SSL
+                connections.</li>
+
+              <li class="li"><kbd class="ph userinput">SSL STARTTLS</kbd> - For servers that support SSL through the use
+                of either the <span class="keyword cmdname">STARTTLS</span> command.</li>
+
+            </ul>
+</dd>
+
+        
+        
+          <dt class="dt dlterm"><span class="ph uicontrol">Acceptable additional incoming sender subdomains</span></dt>
+
+          <dd class="dd">Subdomains from within the <span class="ph uicontrol">Server Address</span> on the
+              <span class="keyword wintitle">General</span> tab from which incoming messages are acceptable. A
+            subdomain can be wildcarded with asterisks (*) or question marks (?) (for example
+              <samp class="ph codeph">*.cleo.com</samp>) and multiple subdomains can be separated by semi-colons
+            (;) or commas (,) or entered on separate lines (for example,
+              <span class="ph filepath">mailsvr01.lan.cleo.com;mailsvr02.lan.cleo.com</span>). <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications
+            only. </dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_SMTP_Host.html" title="SMTP Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">SMTP Host</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

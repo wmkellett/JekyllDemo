@@ -1,0 +1,116 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Preparing a message for the remote AS3 client You can send a message to the remote AS3 client in any of the following S/MIME formats: Unsigned/unencrypted (neither the Encrypted nor Signed check boxes ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Configuring Local AS3 settings"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Cfg_Local_AS3_Users_Mailbox_FTP.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="topic_y42_x5j_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Local AS3 settings</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="topic_y42_x5j_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_local_ftp_users_configuration.html" title="Configuring Local FTP Users">Configuring Local FTP Users</a> / <a class="navheader_parent_path" href="../Topics/t_Cfg_Local_AS3_Users_Mailbox_FTP.html" title="Configuring Local Mailbox AS3">Configuring Local Mailbox AS3</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Cfg_Local_AS3_Users_Mailbox_FTP.html" title="Configuring Local Mailbox AS3"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local Mailbox AS3</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Configuring Local AS3 settings</h1>
+
+  <div class="body">
+    
+    <div class="section"><h2 class="title sectiontitle">Preparing a message for the remote AS3 client </h2>
+      
+      
+      <p class="p">You can send a message to the remote AS3 client in any of the following S/MIME formats:</p>
+
+      <ul class="ul" id="topic_y42_x5j_3r__ul_l3t_mnk_nt">
+        <li class="li">Unsigned/unencrypted (neither the <strong class="ph b">Encrypted</strong> nor <strong class="ph b">Signed</strong> check boxes are
+          selected)</li>
+
+        <li class="li">Signed (only the <strong class="ph b">Signed</strong> check box is selected)</li>
+
+        <li class="li">Encrypted (only the <strong class="ph b">Encrypted</strong> check box is selected)</li>
+
+        <li class="li">Signed / Encrypted (both the <strong class="ph b">Signed</strong> and <strong class="ph b">Encrypted</strong> check boxes are
+          selected)</li>
+
+      </ul>
+
+      <p class="p">When you select the <strong class="ph b">Encrypted</strong> check box, the <strong class="ph b">Encryption Method</strong> field is
+        enabled, allowing you to choose an encryption method for the message to be sent to the
+        remote AS3 client.  The remote AS3 client must be able to decrypt the message using the
+        method you have chosen. For a non-<span class="ph">Cleo Harmony</span> AS3 client, it is important to verify the methods it is capable of handling <strong class="ph b">prior</strong>
+        to sending an encrypted message.  The default (and preferred) encryption method is
+          <strong class="ph b">TripleDES</strong>.  See <a class="xref" href="t_cryptographic_services.html">Cryptographic Services</a> for more information on choosing an
+        encryption algorithm.</p>
+
+      <p class="p">When you select the <span class="ph uicontrol">Compressed</span> check box, the message is compressed
+        using ZLIB compression.  Compression is generally used for large files so that the message
+        may conserve bandwidth and be transferred more efficiently and securely over the
+        Internet.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Requesting an MDN Receipt </h2>
+      
+      <p class="p">When the <span class="ph uicontrol">Receipt</span> check box is selected in the Request panel (above),
+        the fields in an MDN (Message Disposition Notifiaction) Receipt is enabled for editing.
+        Otherwise, these fields will be disabled.</p>
+
+      
+      <ol class="ol" id="topic_y42_x5j_3r__ol_cwj_cqk_nt">
+        <li class="li">You can choose to request a signed MDN by selecting the <span class="ph uicontrol">Signed</span>
+          check box (above). When this option is selected, a hash is computed over the content of
+          the sent message using the specified MIC (Message Integrity Check) algorithm; this value
+          will be remembered.  The recipient will return the MDN with a digital signature and will
+          compute an independent MIC value over the content of the message received (using the same
+          MIC algorithm) and return this value as a Base64-encoded value in the human-readable
+          portion of the MDN.  When the MDN is received, the remembered MIC will be compared against
+          the received MIC.  When the MIC values match, the sender is guaranteed that the message
+          read by the recipient was identical to the message that came from the sender and not
+          modified in any way.</li>
+
+        <li class="li">The <span class="ph">Cleo Harmony</span> application supports the <strong class="ph b">SHA-1,</strong> <strong class="ph b">MD5, SHA-256, SHA-384</strong>
+          and <strong class="ph b">SHA-512</strong> MIC algorithms.  SHA-1 and MD5 are widely supported by all vendors, but
+          the SHA-256, SHA-384 and SHA-512 algorithms are relatively new.  Therefore, you should
+          verify that your trading partner supports the newer SHA MIC algorithms before attempting
+          to use them. </li>
+
+      </ol>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">MDN Delivery Methods</h2>
+      
+      <p class="p">Since an AS3 client must connect to your FTP server to send and receive messages, MDNs for
+        AS3 may only be returned <strong class="ph b">Asynchronously</strong> (as part of a new FTP session).  Depending on
+        whether the user makes a clear or secure connection, MDNs will be returned either via FTP or
+        FTPS. </p>
+
+      
+      <p class="p">An additional feature available in the <span class="ph">Cleo Harmony</span> application is the ability to forward a copy of the received MDN to an email recipient
+        when the <span class="ph uicontrol">Forward MDN to Email</span> option is selected. </p>
+
+    </div>
+
+    
+    <div class="section"><h2 class="title sectiontitle">Setting Inbound Message Security</h2>
+      
+      <p class="p">For each Local FTP User Mailbox, the option is available for selecting the way in which
+        inbound messages should be received.  By selecting the <span class="ph uicontrol">Force
+          Encryption</span>, the <span class="ph uicontrol">Force Signature</span> and/or the
+          <span class="ph uicontrol">Force MDN Signature</span> option(s), all inbound messages will be checked
+        for the desired security level.  An error will be logged (and the message rejected) if the
+        message is not received according to the corresponding message security settings.  If a
+        setting is not selected (which is the default), the message will not be checked for
+        conformance with that security setting.</p>
+
+    </div>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Cfg_Local_AS3_Users_Mailbox_FTP.html" title="Configuring Local Mailbox AS3"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local Mailbox AS3</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

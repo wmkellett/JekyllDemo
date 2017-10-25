@@ -1,0 +1,112 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Use the HTTP tab to provide information about how your HSP host uses HTTP and HTTP/s. Outbound HTTP HTTP/s If the HSP server requires use of the Secure Socket Layer (SSL), select HTTP/s . Otherwise, ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="HSP Host: HTTP Tab"></meta><meta name="abstract" content="Use the HTTP tab to provide information about how your HSP host uses HTTP and HTTP/s."></meta><meta name="description" content="Use the HTTP tab to provide information about how your HSP host uses HTTP and HTTP/s."></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_HSP_HostConfiguration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_ek2_vpz_nt"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>HSP Host: HTTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_ek2_vpz_nt">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_HSP_Configuration.html" title="A host is configured using parameters that specify its location and how it is reached.">HSP Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_HSP_HostConfiguration.html" title="A host is configured using parameters that specify its location and how it is reached.">HSP host configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_HSP_HostConfiguration.html" title="A host is configured using parameters that specify its location and how it is reached."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">HSP host configuration</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">HSP Host: HTTP Tab </h1>
+
+  
+  <div class="body refbody"><p class="shortdesc">Use the <span class="keyword wintitle">HTTP</span> tab to provide information about how your HSP host uses
+    HTTP and HTTP/s.</p>
+
+
+    <div class="section"><dl class="dl">
+      
+        <dt class="dt dlterm">Outbound</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">HTTP</dt>
+
+              <dt class="dt dlterm">HTTP/s</dt>
+
+              <dd class="dd">If the HSP server requires use of the Secure Socket Layer (SSL), select
+                  <span class="ph uicontrol">HTTP/s</span>.  Otherwise, select <span class="ph uicontrol">HTTP</span>.
+              </dd>
+
+            
+            
+              <dt class="dt dlterm">Check certificate server name</dt>
+
+              <dd class="dd">Indicates the system should verify that the server name in the received SSL server
+                certificate matches the server name connected to.</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Inbound</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">HTTP/s only</dt>
+
+              <dd class="dd">Require your trading partner to use Secure Socket Layer (SSL) for inbound file
+                transfers.</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Command</dt>
+
+        <dd class="dd">The commands supported by the server. In this case, the <span class="keyword cmdname">PUT</span> command.
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Method</dt>
+
+        <dd class="dd">The methods unlying the the supported commands.</dd>
+
+      
+      
+        <dt class="dt dlterm">Path</dt>
+
+        <dd class="dd">The server <span class="ph uicontrol">Path</span> for the <span class="keyword cmdname">PUT</span> command. The
+            <span class="ph uicontrol">Path</span> depends on your trading partner's server <span class="ph uicontrol">Resource
+            Path</span> configuration defined in their HSP Service Panel. See <a class="xref" href="t_HSP_Service.html" title="The Cleo Harmony application includes an HSP server that allows HSP clients to send payloads using the HSP protocol.">Local Listener HSP Service</a>.</dd>
+
+      
+      
+        <dt class="dt dlterm">Parameters</dt>
+
+        <dt class="dt dlterm">Headers</dt>
+
+        <dd class="dd">Add custom <span class="ph uicontrol">Parameters</span> and additional
+            <span class="ph uicontrol">Headers</span> as needed. The values for these fields are available on
+          the receiving side either through the properties passed to the
+            <samp class="ph codeph">ILexiComIncoming</samp> Java API OR by accessing
+            <samp class="ph codeph">ISessionScript.getTrigger()</samp> in a JavaScript action scheduled for a new
+          file arrives event.</dd>
+
+      
+    </dl>
+</div>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_HSP_HostConfiguration.html" title="A host is configured using parameters that specify its location and how it is reached."><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">HSP host configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

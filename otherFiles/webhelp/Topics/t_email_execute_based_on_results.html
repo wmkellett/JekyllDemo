@@ -1,0 +1,185 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="You can configure the Cleo Harmony application to generate an email based on the results of an action or a host action: on any type of failure and/or on each successful send of a file and/or on each ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Email/Execute Based on Results"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Basics.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="email_execute_based_on_results"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Email/Execute Based on Results</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="email_execute_based_on_results">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_Basics.html" title="Basics">Basics</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Email/Execute Based on
+                    Results</h1>
+
+   <div class="body">
+      <p class="p">You can configure the <span class="ph">Cleo Harmony</span> application to generate an email based on the results of
+                  an action or a host action: </p>
+
+      <ul class="ul" id="email_execute_based_on_results__ul_a2l_tmf_2r">
+         <li class="li">on any type of failure and/or </li>
+
+         <li class="li">on each successful send of a file and/or </li>
+
+         <li class="li">on each successful receive of a file and/or</li>
+
+         <li class="li">on each successful copy of a file using <span class="keyword cmdname">LCOPY</span> or </li>
+
+         <li class="li">on overall conditions being met for a
+                              <span class="keyword cmdname">CHECK</span> command ( and <span class="ph">Cleo Harmony</span> applications only) or </li>
+
+         <li class="li">on overall conditions not being met for a
+                              <span class="keyword cmdname">CHECK</span> command (VLTrader and Harmony only). </li>
+
+      </ul>
+
+      <p class="p">Similarly, you can also configure the <span class="ph">Cleo Harmony</span> application to execute a program, script, or operating
+                  system command based on the results of an action or a host action. The syntax and
+                  rules for execute-on commands are the same as those for the
+                        <span class="keyword cmdname">SYSTEM</span> commands (see <a class="xref" href="t_Use_Operating_System_Commandsin_Actions.html">Use Operating System Commands in Actions</a>), with the following differences:</p>
+
+      <ul class="ul" id="email_execute_based_on_results__ul_mdg_vmf_2r">
+         <li class="li">The word <span class="keyword cmdname">SYSTEM</span> is not used within the execute-on string.</li>
+
+         <li class="li">When using macro variables, the <span class="keyword cmdname">Execute-On</span> context is used rather
+                        than the <span class="keyword cmdname">SYSTEM</span> command context.</li>
+
+      </ul>
+
+      
+      <p class="p">Below are some <span class="keyword cmdname">Execute-on</span> command examples:</p>
+
+      
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all">
+            
+            
+               <thead class="thead" align="left">
+                     <tr class="row">
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d319183e106">
+                                 Operating System
+                           </th>
+
+                           
+                           <th class="entry" rowspan="1" colspan="1" valign="top" id="d319183e109">
+                                          <span class="ph">Cleo Harmony</span> Execute-On command </th>
+
+                           
+                     </tr>
+
+               </thead>
+
+            <tbody class="tbody">
+              
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e106 "> Windows </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e109 "><span class="keyword cmdname">command.com /c copy x y
+                                          </span></td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e106 "> Windows</td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e109 "><span class="keyword cmdname">cmd.exe /c copy x y
+                                          </span></td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e106 "> Windows</td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e109 "><span class="keyword cmdname">[SuccessCodes=0-1,255]
+                                                cmd.exe /c copy x y </span></td>
+
+                
+               </tr>
+
+               <tr class="row">
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e106 ">
+                        Unix
+                    </td>
+
+                    
+                  <td class="entry" rowspan="1" colspan="1" valign="top" headers="d319183e109 "><span class="keyword cmdname">cp x y
+                                          </span></td>
+
+                
+               </tr>
+
+            </tbody>
+
+         </table>
+</div>
+
+      
+      <p class="p">Additionally, selected action commands can also be used in
+                        <span class="ph uicontrol">Execute-On</span> fields. <span class="keyword cmdname">PUT</span> and
+                        <span class="keyword cmdname">GET</span> action commands are not available for use in
+                  Execute-On. Directory listings (<span class="keyword cmdname">LS</span> and <span class="keyword cmdname">DIR</span>
+                  commands) are not available for use in Execute-On for FTP protocols. To specify an
+                  action command in an Execute-On setting, the command must be preceded with the ‘$’
+                  character. The additional character is to differentiate an action command script
+                  from an existing operating system command with the same name. The <span class="ph uicontrol">Wait
+                        for Execute On</span> Advanced option is ignored when a
+                        <span class="keyword cmdname">SCRIPT</span> command is executed. See <a class="xref" href="t_script_command_command_reference.html">SCRIPT
+                        Command</a>. Execute-On will always wait for the JavaScript to complete.
+                  If needed, new threads may be created within JavaScript which would allow the
+                  executed script to return while further processing continues in the new thread.
+                  This logic also applies to any other action commands allowed in Execute-On. For
+                  instance, to use the local action command <span class="keyword cmdname">LCOPY</span> (instead of the
+                  operating system copy command) use the following syntax in the
+                        <span class="ph uicontrol">Execute-On</span> field:</p>
+
+      <pre class="pre codeblock">$LCOPY x y</pre>
+
+      <p class="p">A list of multiple commands which may be either all operating system commands or the
+                  supported action commands may also be specified. The commands must be separated by
+                  either '&amp;' or '&amp;&amp;’ characters. When '&amp;' is used all commands will
+                  execute sequentially regardless of the status of the previous command. For
+                  example, two <span class="keyword cmdname">LCOPY</span> commands in the Execute-On field could be
+                  specified as:</p>
+
+      <pre class="pre codeblock">$LCOPY x y &amp; LCOPY a b</pre>
+
+      <p class="p">where the second <span class="keyword cmdname">LCOPY</span> executes regardless of the status of the first
+                        <span class="keyword cmdname">LCOPY</span>. When '&amp;&amp;' commands is used a command will
+                  execute if the previous command does not result in an error. For example in:</p>
+
+            <pre class="pre codeblock">$LCOPY x y  &amp;&amp; LCOPY a b</pre>
+
+      <p class="p">the second <span class="keyword cmdname">LCOPY</span> will execute only if the first <span class="keyword cmdname">LCOPY</span>
+                  does not result in an error. For operating system commands, the ‘&amp;’ and
+                  ‘&amp;&amp;’ operator functionality is dependent on the operating system or shell
+                  being used.</p>
+
+      
+      <p class="p">To set the email and execute properties for all hosts at the system level, refer to <a class="xref" href="t_WebUI_CfgSysOpts_Advanced.html">Advanced System Options</a>. </p>
+
+      <p class="p">To set the email and execute properties for a specific host, see <a class="xref" href="../Tasks/t_set_advanced_host_properties.html">Set Advanced Host Properties</a>. </p>
+
+            <div class="note note"><span class="notetitle">Note:</span> A property value given at the host level overrides a system level value.</div>
+
+      
+   </div>
+
+   
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_Basics.html" title="Basics"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Basics</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

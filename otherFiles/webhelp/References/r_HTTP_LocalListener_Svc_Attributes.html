@@ -1,0 +1,82 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Resource Path Defaults to /server . Your trading partners must include this resource path in the URL when sending HTTP messages. You can change it at any time, but it must start with a forward slash ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="Local Listener HTTP Service reference"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_Configure_HTTP_Service_HTTP_Tab.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_bjl_3ff_lw"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Local Listener HTTP Service reference</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_bjl_3ff_lw">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_Configure_Local_Listener_HTTP_Service.html" title="In addition to the AS2 and ebXML message service protocols (which are layered on top of HTTP and are peer-to-peer protocols), the Cleo Harmony and Cleo VLTrader applications also include an HTTP server that allows straight HTTP clients to send and receive payload.">Local Listener HTTP Service</a> / <a class="navheader_parent_path" href="../Tasks/t_Configure_HTTP_Service_HTTP_Tab.html" title="Configuring Local Listener HTTP Service">Configuring Local Listener HTTP Service</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_HTTP_Service_HTTP_Tab.html" title="Configuring Local Listener HTTP Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local Listener HTTP Service</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">Local Listener HTTP Service reference</h1>
+
+  
+  <div class="body refbody"><p class="shortdesc"></p>
+
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">Resource Path</dt>
+
+          <dd class="dd">Defaults to <span class="ph filepath">/server</span>. Your trading partners must include this
+            resource path in the URL when sending HTTP messages. You can change it at any time, but
+            it must start with a forward slash (/) character. </dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Authentication</dt>
+
+          <dd class="dd">HTTP users can be identified to the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span>  applications using
+            either WWW authentication or SSL client authentication. See <a class="xref" href="../Topics/t_HTTP_Cfg_Local_HTTP_Users_Mailbox.html">Configuring Local Mailbox HTTP</a>. WWW authentication is enabled specifically for the
+            HTTP service, while SSL client authentication is enabled for the HTTPs port. See <a class="xref" href="../Tasks/t_Configure_Local_Listener_HTTP.html" title="The Cleo Harmony application contains an embedded web server for receiving HTTP requests and directing them to the appropriate Cleo Harmony service, based on the requested resource path.">Configuring a Local Listener for HTTP</a>.</dd>
+
+          <dd class="dd">The <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications support
+            the <strong class="ph b">Basic</strong> and/or <strong class="ph b">Digest Authentication</strong> schemes and both are enabled by
+            default. Normally, basic authentication is passed using an <samp class="ph codeph">Authorization:
+              header</samp>, but the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> applications also
+            support basic authentication using <samp class="ph codeph">basicauth= parameter</samp>. The parameter
+            value is in the same format as normal basic authentication (username:password), but can
+            be either clear text or base64-encoded. Please note that when <strong class="ph b">Digest
+              Authentication</strong> is enabled, password storage will not be as secure as the <strong class="ph b">Basic
+              Authentication</strong> passwords. With <strong class="ph b">Basic Authentication</strong>, consider using HTTP/s
+            only. When initially enabling <strong class="ph b">Digest Authentication</strong>, you will need to update the
+            passwords of the Local HTTP Users in order for the users to be able to log in.</dd>
+
+          <dd class="dd">Use the <strong class="ph b">Authentication Realm</strong> to identify the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> server/service to
+            the attached client during authentication. The default value is either <kbd class="ph userinput">Cleo
+              VLTrader</kbd> or <kbd class="ph userinput">Cleo Harmony</kbd>, depending on your
+            product.</dd>
+
+          <dd class="dd"></dd>
+
+          <dd class="dd"></dd>
+
+        
+        
+          <dt class="dt dlterm">Detect incoming multipart content</dt>
+
+          <dd class="dd">When you select <strong class="ph b">Detect incoming multipart content</strong> and multiple files are sent
+            to the server, the files are parsed and stored as individual elements. By default, this
+            setting is not enabled and the content is stored as a single entity.</dd>
+
+        
+      </dl>
+
+    </div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_Configure_HTTP_Service_HTTP_Tab.html" title="Configuring Local Listener HTTP Service"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Configuring Local Listener HTTP Service</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

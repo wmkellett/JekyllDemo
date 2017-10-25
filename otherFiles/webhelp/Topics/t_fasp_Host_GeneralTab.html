@@ -1,0 +1,138 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="SSH Connection Server Address Either a fully qualified name (recommended) or an IP address for the host. Port The fasp command port. You can specify either a specific port number or -1 to indicate the ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="fasp Host: General Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_fasp_Host.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_al3_3fk_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>fasp Host: General Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_al3_3fk_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Tasks/t_fasp_configuration.html" title="fasp Configuration">fasp Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_fasp_Host.html" title="fasp Host">fasp Host</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_fasp_Host.html" title="fasp Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">fasp Host</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">fasp Host: General Tab</h1>
+
+  <div class="body refbody">
+    <div class="section">
+      <dl class="dl">
+        
+          <dt class="dt dlterm">SSH Connection</dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Server Address</dt>
+
+                <dd class="dd">Either a fully qualified name (recommended) or an IP address for the host.</dd>
+
+              
+              
+                <dt class="dt dlterm">Port</dt>
+
+                <dd class="dd">The fasp command port. You can specify either a specific port number or
+                    <kbd class="ph userinput">-1</kbd> to indicate the default port for fasp (22).</dd>
+
+              
+              
+                <dt class="dt dlterm">Connection Type</dt>
+
+                <dd class="dd">The kind of connection you want to use for this host.</dd>
+
+                <dd class="dd"><strong class="ph b">Possible values</strong>: <ul class="ul" id="reference_al3_3fk_b5__ul_yvh_1kr_pw">
+                    <li class="li"><kbd class="ph userinput">System Default</kbd> - See  for information about setting the system
+                      default.</li>
+
+                    <li class="li"><kbd class="ph userinput">Direct Internet Access or VPN</kbd> - </li>
+
+                  </ul>
+</dd>
+
+                <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">System Default</kbd></dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">UDP Connection </dt>
+
+          <dd class="dd">
+            <dl class="dl">
+              
+                <dt class="dt dlterm">Port</dt>
+
+                <dd class="dd">Specifies the fasp data port and can be either a specific port number or
+                    <kbd class="ph userinput">-1</kbd> to indicate the default port for fasp (33001).</dd>
+
+              
+            </dl>
+
+          </dd>
+
+        
+        
+          <dt class="dt dlterm">Forward Proxy</dt>
+
+          <dd class="dd">The address of the forward proxy you want to use for this host. </dd>
+
+          <dd class="dd">Select the <span class="ph uicontrol">System Default</span> check box to use the default proxy.
+            See <a class="xref" href="../Tasks/t_configure_for_a_proxy.html">Configure for a Proxy</a> for information about specifying a default
+            proxy.</dd>
+
+        
+        
+          <dt class="dt dlterm">Default Directories</dt>
+
+          <dd class="dd">Modify the default directories, if necessary.  You can use macro variables from the
+            drop-down lists.  See <a class="xref" href="t_using_macro_variables.html">Using Macro Variables</a> for a list
+            of the applicable macros (Default Host Directory context) and example usage.  For the
+              <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo Harmony</span> applications, see
+              <a class="xref" href="t_uri_file_system_interface_overview.html">URI File System Interface Overview</a> for information about you can use a
+            Cleo-provided or custom URI for the Inbox and/or Outbox.  See  and <a class="xref" href="t_WebUI_CfgSysOpts_General.html">Specifying Default Host Directories</a> for information about setting up
+            system-level directories and custom directory macro variables.<div class="note note"><span class="notetitle">Note:</span> If the host has an
+              external association, the default directories might be managed outside of <span class="ph">Cleo Harmony</span>, <span class="ph">Cleo VLTrader</span> and <span class="ph">Cleo LexiCom</span>, and not shown
+              here.</div>
+<dl class="dl">
+              
+                <dt class="dt dlterm">Inbox</dt>
+
+                <dd class="dd">Default directory for incoming files. Enter a value directly or click
+                    <span class="ph uicontrol">…</span> to navigate to and select a directory.</dd>
+
+                <dd class="dd"><strong class="ph b">Possible values</strong>: Any local or shared directory.</dd>
+
+                <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">inbox\</kbd></dd>
+
+              
+              
+                <dt class="dt dlterm">Outbox</dt>
+
+                <dd class="dd">Default directory for outgoing files. Enter a value directly or click
+                    <span class="ph uicontrol">…</span> to navigate to and select a directory.</dd>
+
+                <dd class="dd"><strong class="ph b">Possible values</strong>: Any local or shared directory.</dd>
+
+                <dd class="dd"><strong class="ph b">Default value</strong>: <kbd class="ph userinput">outbox\</kbd></dd>
+
+              
+            </dl>
+</dd>
+
+        
+      </dl>
+
+    </div>
+
+    
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_fasp_Host.html" title="fasp Host"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">fasp Host</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

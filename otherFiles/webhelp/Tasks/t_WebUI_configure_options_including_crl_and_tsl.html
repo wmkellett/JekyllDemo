@@ -1,0 +1,108 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The following describes how to configured certificate manager options. In the web UI, go to Administration &gt; Certificate Management &gt; Certificates . In the native UI, go to Tools &gt; Certificate Manager ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Options including CRL and TSL"></meta><meta name="DC.Coverage" content="Madagascar Admin Web UI"></meta><meta name="DC.Coverage" content="Admin Web UI"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_certificate_manager.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ConfiguringOptionsCRLTSL"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Options including CRL and TSL</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ConfiguringOptionsCRLTSL">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/t_certificate_manager.html" title="Certificate Management">Certificate Management</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1">Configuring Options including CRL and TSL</h1>
+
+   
+   <div class="body taskbody">
+      <div class="section context">
+         <p class="p">The following
+            describes how to configured certificate manager options.</p>
+
+      </div>
+
+      <ol class="ol steps" id="ConfiguringOptionsCRLTSL__steps_abv_zkh_1s"><li class="li step stepexpand">
+            <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">Administration &gt; Certificate Management &gt; Certificates</span></span>. In the native UI, go to <span class="ph menucascade"><span class="ph uicontrol">Tools &gt; Certificate Manager</span></span> or click the <span class="ph uicontrol">Certificates</span> button in the tool
+               bar. </span>
+            <div class="itemgroup info">The <span class="keyword wintitle">Certificate Manager Options</span> dialog box appears.</div>
+            
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Select from the following options and click <span class="ph uicontrol">OK</span>.</span>
+            <ul class="ul choices" id="ConfiguringOptionsCRLTSL__choices_ax1_2lh_1s">
+               <li class="li choice"><span class="ph uicontrol">Check certificate validity period</span> will color
+                  certificates that are expired or within the warning period (15 days) red and
+                  orange, respectively.</li>
+
+               <li class="li choice"><span class="ph uicontrol">Check certificate issuer’s CA signature</span> includes
+                  verification of the issuer’s signature when building the certificate
+                  chain.</li>
+
+               <li class="li choice"><span class="ph uicontrol">Check certificate verification</span> checks the validity of
+                  the certificate’s signature algorithm and that it can be used within the current
+                  environment. When in FIPS mode, this setting is on by default and cannot be
+                  disabled. When not in FIPS mode, this setting defaults to off. If a certificate
+                  fails the verification check, it is marked with <img class="image" id="ConfiguringOptionsCRLTSL__image_vpy_zkh_1s" src="../Images/image1211.gif"></img>.</li>
+
+               <li class="li choice"><span class="ph uicontrol">Check Revoked Certificates</span> checks each user and CA
+                  certificate’s revoked status <span class="ph uicontrol">every [n] hours</span> by using
+                  either the certificate’s OCSP (Online Certificate Status Protocol) URL or CRL
+                  (Certificate Revocation List) URL. If a revoked certificate is found, it is marked
+                  with <img class="image" id="ConfiguringOptionsCRLTSL__image_yqy_zkh_1s" src="../Images/image1211.gif"></img> and cannot be
+                  used during file transfers, whether as a server or client certificate, for signing
+                  or encryption, and so on. If it is a CA certificate, its issued certificates also
+                  cannot be used. Besides checking CRLs actually contained within the certificates
+                  in the store, <span class="ph uicontrol">additional CRL</span> URLs provided by certificate
+                  authorities can be configured and checked, if necessary. </li>
+
+               <li class="li choice"><span class="ph uicontrol">Import Trusted Service (Status) List</span> causes the
+                  configured <span class="ph uicontrol">TSL</span> URLs to be downloaded and imported
+                     <span class="ph uicontrol">every [n] hours</span>. A TSL contains a set of CA certificates
+                  to be automatically trusted. Whether a CA certificate is added or removed from the
+                  TSL, it is likewise added or removed from the local certificate store.  Click
+                     <span class="ph uicontrol">Import Now</span> to start a new import in the
+                  background.</li>
+
+               <li class="li choice"><strong class="ph b">Logging</strong> can be <strong class="ph b">Enabled</strong> to capture <strong class="ph b">Low</strong>, <strong class="ph b">Medium</strong>, or
+                     <strong class="ph b">High</strong> levels of certificate debug. <strong class="ph b">'High'</strong> is recommended while
+                  debugging a problem. The certificate manager debug log file can be found under the
+                  
+                  home directory at 'logs\CertMgrLogfile.txt'. It contains information relative to
+                  security providers, certificate parsing, chaining, and usage, and UI
+                  invocation. Since the debug file will continue to grow, certificate debug logging
+                  should only be turned on while investigating an issue, and should be turned back
+                  off once the investigation is complete.</li>
+
+            </ul>
+
+         </li>
+<li class="li step stepexpand">
+            <span class="ph cmd">Click <span class="ph uicontrol">View Results…</span> to see the status of the certificate
+               revocation checks.</span>
+            
+            <div class="itemgroup info">Each OCSP and CRL URL is listed along with the status result.  Possible results
+               are: <ul class="ul" id="ConfiguringOptionsCRLTSL__ul_xds_yyz_sx">
+                  <li class="li"><samp class="ph msgph">No revoked certificates found</samp></li>
+
+                  <li class="li"><samp class="ph msgph">Revoked certificate(s) found</samp></li>
+
+                  <li class="li"><samp class="ph msgph">Check error: …</samp></li>
+
+               </ul>
+A <samp class="ph msgph">check error</samp> can occur for varying reasons such as the URL being
+               unreachable or the site returning an HTTP error code. Click <span class="ph uicontrol">Check
+                  Now</span> to cause a new check to start in the background. Click
+                  <span class="ph uicontrol">Refresh</span> to update the display if a check has just finished
+               in the background.</div>
+         </li>
+</ol>
+
+   </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_certificate_manager.html" title="Certificate Management"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Certificate Management</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

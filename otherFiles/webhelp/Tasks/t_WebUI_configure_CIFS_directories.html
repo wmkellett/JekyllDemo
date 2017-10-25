@@ -1,0 +1,165 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Follow the instructions below to configure access to files on Windows/Unix (CIFS/SMB) shares. In the web UI, go to File System &gt; CIFS Directories . In the native UI, select Configure &gt; Windows/Unix ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Configuring Windows/Unix Folder Access"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_WebUI_windows_unix_folder_access_setup.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="ConfigWinUnixFolderAccess"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Configuring Windows/Unix Folder Access</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="ConfigWinUnixFolderAccess">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_WebUI_FileSystem.html" title="File System">File System</a> / <a class="navheader_parent_path" href="../Topics/t_WebUI_windows_unix_folder_access_setup.html" title="CIFS Directories">CIFS Directories</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_windows_unix_folder_access_setup.html" title="CIFS Directories"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CIFS Directories</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Configuring Windows/Unix Folder Access</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <div class="section context">
+            <p class="p">Follow the
+                instructions below to configure
+                access
+                to files on Windows/Unix (CIFS/SMB) shares.</p>
+
+        </div>
+
+        <ol class="ol steps"><li class="li step stepexpand">
+                <span class="ph cmd">In the web UI, go to <span class="ph menucascade"><span class="ph uicontrol">File System</span> &gt; <span class="ph uicontrol">CIFS Directories</span></span>. In the native UI, select <span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol">Windows/Unix Folders</span></span> from the menu bar.
+                    </span>
+                <div class="itemgroup info">The <span class="keyword wintitle">CIFS Directories</span> page is displayed in the web UI. The
+                        <span class="keyword wintitle">Windows/Unix Folder Configuration</span> dialog box is
+                    displayed in the native UI. </div>
+                
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Click <span class="ph uicontrol">New</span>.</span>
+                <div class="itemgroup info">The <span class="keyword wintitle">Windows/Unix Inbound/Outbound Folder</span> dialog box
+                    appears.</div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Enter values for the fields as needed.</span>
+                <div class="itemgroup info">
+                    <dl class="dl">
+                        
+                            <dt class="dt dlterm">Domain</dt>
+
+                            <dd class="dd">The name of the Domain for the user. If this is not a domain login,
+                                then leave this field empty.</dd>
+
+                        
+                        
+                            <dt class="dt dlterm">User ID</dt>
+
+                            <dt class="dt dlterm">Password</dt>
+
+                            <dd class="dd">The credentials the
+                                product
+                                will use to connect to the share. </dd>
+
+                        
+                        
+                            <dt class="dt dlterm">UNC Paths</dt>
+
+                            <dd class="dd">A list of UNC-type paths
+                                    (<span class="ph filepath">\\servername\sharedfolder</span>) that can be
+                                accessed through this option. Enter one UNC path per line. <span class="ph">VersaLex</span> will perform a case-insensitive match against these paths to
+                                determine whether it should use this feature to access the
+                                Windows/Unix folder. The paths entered in other places (such as
+                                    <span class="ph uicontrol">Inbox</span>, <span class="ph uicontrol">Outbox</span>,
+                                    <span class="ph uicontrol">Sentbox</span>,
+                                    <span class="ph uicontrol">Receivedbox</span>) will be compared against
+                                this list. If the complete folder name listed in <span class="ph uicontrol">UNC
+                                    Paths</span> matches the beginning folder in the
+                                    <span class="ph uicontrol">Inbox</span> field (as an example), then the
+                                folder will be accessed using the entered domain, username, and
+                                password.</dd>
+
+                        
+                    </dl>
+
+                    
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Optional. Click <strong class="ph b">Validate</strong> to verify the paths can be accessed using the
+                    entered user information. This button will only check read access on the UNC
+                    paths entered. </span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Once all the information has been entered click
+                    <span class="ph uicontrol">OK</span>.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Repeat steps 1 through 5 for each Domain/User pair needed.</span>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The updated <span class="keyword wintitle">Windows/Unix Folder Configuration</span> panel is
+                    displayed. Enter any necessary JCIFS properties in the <span class="ph uicontrol">Custom JCIFS
+                        Properties</span> field (one per line). These properties are described 
+                    at the following website: <a class="xref" href="http://jcifs.samba.org/src/docs/api/overview-summary.html#scp">http://jcifs.samba.org/src/docs/api/overview-summary.html#scp</a> . On
+                    Unix platforms, we have seen increased performance if the following properties
+                    are set:</span>
+                <div class="itemgroup info">
+                    <p class="p"><samp class="ph codeph">jcifs.resolveOrder=DNS</samp></p>
+
+                    <p class="p"><samp class="ph codeph">jcifs.smb.client.dfs.disabled=true</samp></p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">In addition to the properties described on the web page, there are some
+                    additional ones defined by Cleo. These should only be configured at the
+                    direction of Cleo Technical Support. The following are the default values:</span>
+                <div class="itemgroup info">
+                    <p class="p"><samp class="ph codeph">jcifs.cleo.debugOn=false</samp></p>
+
+                    <p class="p"><samp class="ph codeph">jcifs.cleo.max.semaphores=-1</samp></p>
+
+                    <p class="p"><samp class="ph codeph">jcifs.cleo.startOSSmbAccess=false</samp></p>
+
+                </div>
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">The <span class="ph uicontrol">List by</span> choices at the top of the panel chose the
+                    display format for the Domain/User ID/Folder list. The
+                        <span class="ph uicontrol">Domain/UserID</span> choice will order the list by
+                    Domain/User ID. The <span class="ph uicontrol">Folder</span> choice will order the list by
+                    Windows/Unix Inbound/Outbound Folder name.</span>
+                
+            </li>
+<li class="li step stepexpand">
+                <span class="ph cmd">Create links for the Inbound and Outbound Files.</span>
+                <div class="itemgroup info">
+                    <p class="p">The next step is to enter the UNC paths into the fields where they are
+                        required. The following is a list of the locations where the Windows/Unix
+                        Folders (UNC paths) are NOT supported:</p>
+
+                    <ul class="ul" id="ConfigWinUnixFolderAccess__ul_y5l_j3w_ds">
+                        <li class="li"><span class="ph menucascade"><span class="ph uicontrol">Configure</span> &gt; <span class="ph uicontrol">Options</span> &gt; <span class="ph uicontrol">Other</span> &gt; <span class="ph uicontrol">Autorun Directory</span></span></li>
+
+                        <li class="li"><span class="ph menucascade"><span class="ph uicontrol">Tools</span> &gt; <span class="ph uicontrol">Router</span> &gt; <span class="ph uicontrol">Autoroute Directory</span></span></li>
+
+                        <li class="li"><span class="ph menucascade"><span class="ph uicontrol">View</span> &gt; <span class="ph uicontrol">File</span></span></li>
+
+                        <li class="li">Selection of the folder using the <span class="ph uicontrol">File Chooser</span>
+                            anywhere in the
+                            product</li>
+
+                    </ul>
+
+                    
+                </div>
+            </li>
+</ol>
+
+    </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_WebUI_windows_unix_folder_access_setup.html" title="CIFS Directories"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">CIFS Directories</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

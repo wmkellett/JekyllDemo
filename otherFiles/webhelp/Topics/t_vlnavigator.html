@@ -1,0 +1,138 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="The Cleo VLNavigator application is a Cleo Harmony and Cleo VLTrader add-on program for optional multiple Cleo Harmony and Cleo VLTrader user and application management. It facilitates: grouping Cleo ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="topic"></meta><meta name="DC.Title" content="Cleo VLNavigator"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_vlnavigator_configuration.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="vlnavigator"></meta><meta name="DC.Language" content="en-us"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Cleo VLNavigator</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="vlnavigator">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"></td><td><div class="navheader"></div></td></tr></tbody></table>
+
+   <h1 class="title topictitle1"><span class="ph">Cleo VLNavigator</span></h1>
+
+  <div class="body">
+    <p class="p">The <span class="ph">Cleo VLNavigator</span> application is a <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> add-on program for
+      optional multiple <span class="ph">Cleo Harmony</span> and
+        <span class="ph">Cleo VLTrader</span> user and application
+      management. It facilitates:</p>
+
+    <ul class="ul" id="vlnavigator__ul_un4_n44_15">
+      <li class="li">grouping <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> items into
+        <em class="ph i">pools</em></li>
+
+      <li class="li">defining user groups with specific <span class="ph">Cleo VLNavigator</span>, <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> privileges</li>
+
+      <li class="li">creating individual user logins</li>
+
+      <li class="li">configuration of optional applications</li>
+
+    </ul>
+
+    <p class="p">For environments with multiple instances of the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> applications, the <span class="ph">Cleo VLNavigator</span> application can optionally be
+      installed at each instance of <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> software. If the instances
+      of <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> software are connected via
+      synchronization, user groups or both, the <span class="ph">Cleo VLNavigator</span> applications will mirror each
+      other much in the same way that fully-synchronized <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instances mirror one
+      another.</p>
+
+    <p class="p">The <span class="ph">Cleo VLNavigator</span> application is a
+      component of the <span class="ph">Cleo Harmony</span> and
+        <span class="ph">Cleo VLTrader</span> installers. The <span class="ph">Cleo VLNavigator</span> application does not have a
+      corresponding service/daemon. Instead, it relies on the <span class="ph">Cleo Harmony</span> and <span class="ph">Cleo VLTrader</span> service/daemon, which must
+      be running when the <span class="ph">Cleo VLNavigator</span>
+      application is invoked. </p>
+
+    
+    <div class="section"><h2 class="title sectiontitle">Systems</h2>
+      
+      <p class="p">The <span class="ph">Cleo VLNavigator</span> application allows
+        multiple instances of the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> applications to be
+        logically grouped into <em class="ph i">pools</em>. Instances that synchronize at least one configuration
+        item (for example, CA certificates, User certificates, Hosts, Schedule, and so on) must be
+        in the same pool. Otherwise, disjointed <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instances can be placed
+        in separate pools.</p>
+
+      <p class="p">The installed <span class="ph">Cleo Harmony</span> or
+          <span class="ph">Cleo VLTrader</span> instance and
+        instances already synchronizing will automatically be placed in a default
+          <kbd class="ph userinput">mySystem</kbd> home pool when the <span class="ph">Cleo VLNavigator</span> application is first
+        started. Additionally, any instances of the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application reverse
+        proxying through <span class="ph">Cleo VLProxy</span>
+        software will be presented to the <span class="ph">Cleo VLNavigator</span> user for optional inclusion
+        in a pool.</p>
+
+      <p class="p">Synchronization can only be setup in <span class="ph">Cleo VLNavigator</span> for <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instances in the
+          <kbd class="ph userinput">home</kbd> pool, which contains the local <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instance. For instances
+        outside of the home pool, synchronization must either be setup directly on the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instances themselves or
+          <span class="ph">Cleo VLNavigator</span> software must be
+        installed on and invoked from at least one of the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instances. For these
+        additional pools, once the first instance is added, any other instance it is synchronized
+        with will also be automatically added to the pool.</p>
+
+      <p class="p">Pools, including the default <kbd class="ph userinput">mySystem</kbd> home pool, can be named with
+        any alias. The home pool must be renamed before another pool can be added. <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instances must be
+        identified by their serial number, but can also have an additional, optional alias. </p>
+
+      <p class="p">User groups are assigned access to either all instances within a pool or individual
+        instances.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">User groups</h2>
+      
+      <p class="p">User privileges for both <span class="ph">Cleo VLNavigator</span>
+        and <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> applications are
+        established using <em class="ph i">user groups</em>. Within a user group, each privileged item is set to
+        either no access, view-only, or editable. <span class="ph">Cleo VLNavigator</span> access is broken down into
+        three privileges: the <span class="keyword wintitle">Systems</span> tree, the <span class="keyword wintitle">Users</span>
+        tree, and the <span class="keyword wintitle">Applications</span> tree. The <span class="keyword wintitle">System</span>
+        privileges match the list of configurable <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> synchronization items
+          (<span class="ph uicontrol">CA certificates</span>, <span class="ph uicontrol">User certificates</span>,
+          <span class="ph uicontrol">Hosts</span>, <span class="ph uicontrol">Schedule</span>, etc).</p>
+
+      <p class="p">A default <span class="keyword wintitle">Administrators</span> group comes installed with full <span class="ph">Cleo VLNavigator</span> and <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> privileges and cannot be
+        modified. The Administrators group also cannot be renamed or deleted.</p>
+
+      <p class="p">When the <span class="ph">Cleo VLNavigator</span> application is
+        installed, by default the <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> application does not
+        require a login (except for the web UI).  Once at least one user group is assigned to a
+        specific <span class="ph">Cleo Harmony</span> or <span class="ph">Cleo VLTrader</span> instance or its pool, a
+        login to that instance is required (and the existing web UI edit and view-only passwords are
+        deactivated).</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Users</h2>
+      
+      <p class="p">A <em class="ph i">user</em> can be a member of one and only one user group. A user consists of a username
+        and password. It can also have an additional, optional alias.</p>
+
+      <p class="p">A default administrator user within the Administrators user group comes installed. Its
+        initial password is communicated by the installer, and should be modified as soon as
+        possible. The administrator user cannot be renamed or deleted.</p>
+
+    </div>
+
+    <div class="section"><h2 class="title sectiontitle">Optional Applications</h2>
+      
+      <p class="p">Optional applications such as Cleo Dashboards, Operator Audit Trail, and Cleo System
+        Monitor applications can be enabled or disabled at the user-group or user levels. <span class="ph">Cleo VLNavigator</span> software also allows for
+        configuration of the optional applications.</p>
+
+    </div>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_vlnavigator_configuration.html">Configuring the Cleo VLNavigator application</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!----></div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

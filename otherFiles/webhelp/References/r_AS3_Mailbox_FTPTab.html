@@ -1,0 +1,125 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Login User Name Password FTP Account Credentials for authentication to the FTP server. Select No Password Required if there is no password required for authentication. FTP Account is optional. Headers ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="reference"></meta><meta name="DC.Title" content="AS3 Mailbox: FTP Tab"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_as3_mailbox.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="reference_aqw_2kj_b5"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>AS3 Mailbox: FTP Tab</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="reference_aqw_2kj_b5">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Topics/../Topics/t_as3_configuration.html" title="AS3 Configuration">AS3 Configuration</a> / <a class="navheader_parent_path" href="../Topics/t_as3_mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. ">AS3 Mailbox</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Topics/t_as3_mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. "><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS3 Mailbox</span></a></span>  </div></td></tr></tbody></table>
+
+  <h1 class="title topictitle1">AS3 Mailbox: FTP Tab</h1>
+
+  <div class="body refbody">
+    <div class="section"><dl class="dl">
+      
+        <dt class="dt dlterm">Login</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">User Name</dt>
+
+              <dt class="dt dlterm">Password</dt>
+
+              <dt class="dt dlterm">FTP Account</dt>
+
+              <dd class="dd">Credentials for authentication to the FTP server. Select <span class="ph uicontrol">No Password
+                  Required</span> if there is no password required for authentication.</dd>
+
+              <dd class="dd"><span class="ph uicontrol">FTP Account</span> is optional. </dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+      
+        <dt class="dt dlterm">Headers</dt>
+
+        <dd class="dd">
+          <dl class="dl">
+            
+              <dt class="dt dlterm">AS3-From</dt>
+
+              <dt class="dt dlterm">AS3-To</dt>
+
+              <dd class="dd"> Enter the <span class="ph uicontrol">AS3-From</span> and <span class="ph uicontrol">AS3-To</span> names
+                for this trading relationship.<div class="note note"><span class="notetitle">Note:</span> The values in the
+                    <span class="ph uicontrol">AS3-From</span> and <span class="ph uicontrol">AS3-To</span> fields are
+                  determined and agreed upon as part of initially setting up the trading
+                  relationship. These fields can be company-specific, such as DUNS number, or an
+                  agreed-upon identification string. The <span class="ph uicontrol">AS3-From</span> /
+                    <span class="ph uicontrol">AS3-To</span> combination is case-sensitive and must be unique
+                  across all hosts defined in your system because it is used to determine in which
+                  Inbox messages are stored when received from remote hosts. </div>
+</dd>
+
+            
+            
+              <dt class="dt dlterm">Subject</dt>
+
+              <dd class="dd">Identifies the message and is returned in the human-readable section of an MDN, if
+                requested.</dd>
+
+            
+          </dl>
+
+          <dl class="dl">
+            
+              <dt class="dt dlterm">Content-Type</dt>
+
+              <dd class="dd">Optional. The format of the message being sent. Used by the sending and receiving
+                applications to properly assemble and parse the message. Choose from the following:
+                  <ul class="ul" id="reference_aqw_2kj_b5__ul_zb2_35j_tw">
+                  <li class="li">EDIFACT </li>
+
+                  <li class="li">X12 </li>
+
+                  <li class="li">XML </li>
+
+                  <li class="li">Binary </li>
+
+                  <li class="li">Plain Text </li>
+
+                  <li class="li">EDI Consent </li>
+
+                </ul>
+<div class="note note"><span class="notetitle">Note:</span>  If <span class="ph uicontrol">Content-Type</span> is not specified or if multiple
+                  payloads are attached in the message, the <span class="ph uicontrol">Content-Type</span> is
+                  detected based first on file content and then the file extension. Detectable types
+                  include <span class="ph filepath">application/edifact</span>,
+                    <span class="ph filepath">application/edi-x12</span>,
+                    <span class="ph filepath">application/edi-tradacoms</span>,
+                    <span class="ph filepath">application/xml</span> (text/xml),
+                    <span class="ph filepath">application/pdf</span>, <span class="ph filepath">application/msword</span>,
+                    <span class="ph filepath">application/x-msexcel</span>,
+                  <span class="ph filepath">application/rtf</span>, <span class="ph filepath">application/zip</span>,
+                    <span class="ph filepath">image/bmp</span>, <span class="ph filepath">image/gif</span>,
+                    <span class="ph filepath">image/tiff</span>, <span class="ph filepath">image/jpeg</span>,
+                    <span class="ph filepath">text/plain</span>, <span class="ph filepath">text/html</span>, and
+                    <span class="ph filepath">video/mpg</span>. </div>
+</dd>
+
+            
+          </dl>
+
+        </dd>
+
+      
+    </dl>
+</div>
+
+  </div>
+
+<div class="related-links"></div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Topics/t_as3_mailbox.html" title="Mailbox parameters allow you access to the remote host and define the security of files being sent. "><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">AS3 Mailbox</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>

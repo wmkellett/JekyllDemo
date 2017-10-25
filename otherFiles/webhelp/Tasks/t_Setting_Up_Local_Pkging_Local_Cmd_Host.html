@@ -1,0 +1,71 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+<head><meta name="description" content="Prior to setting up the Local section, you must create or acquire an encryption certificate to be used for local storage encryption, decryption, and signing.  The Local section, along with the dialog ..."></meta><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="copyright" content="(C) Copyright 2005"></meta><meta name="DC.rights.owner" content="(C) Copyright 2005"></meta><meta name="DC.Type" content="task"></meta><meta name="DC.Title" content="Setting up Local Packaging for Local Commands Host"></meta><meta name="abstract" content=""></meta><meta name="description" content=""></meta><meta name="DC.Relation" scheme="URI" content="../Tasks/t_local_commands_host_configuration.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Configure_Open_PGP_Local_Packaging.html"></meta><meta name="DC.Relation" scheme="URI" content="../Topics/t_Configure_XML_Encryption_Local_Packaging.html"></meta><meta name="DC.Format" content="XHTML"></meta><meta name="DC.Identifier" content="task_vd2_qyb_3r"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/commonltr.css"><!----></link><title>Setting up Local Packaging for Local Commands Host</title><!--  Generated with Oxygen version 17.1, build number 2015111718.  --><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/css/webhelp_topic.css"><!----></link><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/resources/skins/skin.css"><!----></link><script type="text/javascript"><!--
+          
+          var prefix = "../index.html";
+          
+          --></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-1.8.2.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.cookie.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery-ui.custom.min.js"><!----></script><script type="text/javascript" src="../oxygen-webhelp/resources/js/jquery.highlight-3.js"><!----></script><script type="text/javascript" charset="utf-8" src="../oxygen-webhelp/resources/js/webhelp_topic.js"><!----></script></head>
+<body onload="highlightSearchTerm()" class="frmBody" id="task_vd2_qyb_3r">
+<table class="nav"><tbody><tr><td colspan="2"><div id="printlink"><a href="javascript:window.print();" title="Print this page"></a></div><div id="permalink"><a href="#" title="Link to this page"></a></div></td></tr><tr><td width="75%"><a class="navheader_parent_path" href="../Tasks/../Topics/t_LocalListenerHeadingPage.html" title="The Local Listener receives and handles all inbound requests to Cleo Harmony, Cleo VLTrader, and Cleo LexiCom systems.">Local Listener</a> / <a class="navheader_parent_path" href="../Tasks/t_local_commands_host_configuration.html" title="Local Commands Host Configuration">Local Commands Host Configuration</a></td><td><div class="navheader">
+<span class="navparent"><a class="link" href="../Tasks/t_local_commands_host_configuration.html" title="Local Commands Host Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Commands Host Configuration</span></a></span>  </div></td></tr></tbody></table>
+
+    <h1 class="title topictitle1">Setting up Local Packaging for Local Commands Host</h1>
+
+    
+    <div class="body taskbody"><p class="shortdesc"></p>
+
+        <div class="section context">
+            <p class="p">Prior to setting up the
+                    <span class="keyword wintitle">Local</span> section, you must create or acquire an encryption
+                certificate to be used for local storage encryption, decryption, and signing.  The
+                    <span class="keyword wintitle">Local</span> section, along with the dialog boxes stemming from
+                the <span class="ph uicontrol">Configure</span> button, allows you to associate your
+                signing/encryption certificate with this mailbox for packaging destination files and
+                associate your signing/encryption certificate with this mailbox for un-packaging
+                source files.  Note that the certificates specified on this tab may reference the
+                same certificate or two different certificates; this depends on your
+                application.</p>
+
+            <div class="note note"><span class="notetitle">Note:</span> When you click <span class="ph uicontrol">Configure</span>, either the <span class="keyword wintitle">Configure
+                    OpenPGP Local Packaging</span> or <span class="keyword wintitle">Configure XML Encryption Local
+                    Packaging</span> dialog box is displayed.  It is important to understand
+                that the <span class="ph uicontrol">Encrypt</span>, <span class="ph uicontrol">Decrypt</span>, and the
+                certificate fields are <var class="keyword varname">shared</var> between the two dialogs.  This
+                allows you to set up these fields once, and then simply use the
+                    <span class="ph uicontrol">Packaging</span> selection on the <span class="ph uicontrol">Local</span>
+                section to toggle between packaging schemes.</div>
+
+        </div>
+
+        <div class="li step p">
+                <span class="ph cmd">Select an option from the <span class="ph uicontrol">Packaging</span> drop-down menu.
+                    Choose form the following:</span>
+                <ul class="ul choices" id="task_vd2_qyb_3r__choices_nly_hdc_3r">
+                    <li class="li choice"><strong class="ph b">None</strong>: local packaging is not active.</li>
+
+                    <li class="li choice"><strong class="ph b">OpenPGP</strong>: OpenPGP local packaging is active.  See <a class="xref" href="../Topics/t_Configure_Open_PGP_Local_Packaging.html">Configuring Open PGP Local Packaging for Local Commands Host</a> for information on setting up OpenPGP local packaging.</li>
+
+                    <li class="li choice"><strong class="ph b">XML Encryption</strong>: XML Encryption local packaging is active.  See <a class="xref" href="../Topics/t_Configure_XML_Encryption_Local_Packaging.html">Configuring XML Encryption Local Packaging for Local Commands Host</a> for information on setting up XML Encryption local packaging.</li>
+
+                </ul>
+
+            </div>
+
+    </div>
+
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../Topics/t_Configure_Open_PGP_Local_Packaging.html">Configuring Open PGP Local Packaging for Local Commands Host</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+<li class="link ulchildlink"><strong><a href="../Topics/t_Configure_XML_Encryption_Local_Packaging.html">Configuring XML Encryption Local Packaging for Local Commands Host</a></strong><br xmlns="http://www.w3.org/1999/xhtml" />
+</li>
+</ul>
+</div>
+<div class="navfooter"><!---->
+<span class="navparent"><a class="link" href="../Tasks/t_local_commands_host_configuration.html" title="Local Commands Host Configuration"><span class="navheader_label">Parent topic</span><span class="navheader_separator">: </span><span class="navheader_linktext">Local Commands Host Configuration</span></a></span>  </div><div class="footer"><div style="clear:both;text-align:right;">
+    © 2017 Cleo.  All rights reserved. 
+</div></div>
+</body>
+</html>
