@@ -13,3 +13,5 @@ Reasons:
 ## Other thoughts
 
 This is great.
+[Tables](/tables.md)
+[Other Files](/otherFiles/otherFilesTest.md)
